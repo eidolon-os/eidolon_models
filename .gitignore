@@ -1,0 +1,41 @@
+# OS / editors
+.DS_Store
+._*
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Model and inference caches
+.cache/
+cache/
+**/.cache/
+logs/
+**/logs/
+tmp/
+**/tmp/
+*.log
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+*.local.*
+
+# Partial or temporary downloads
+*.part
+*.partial
+*.download
+*.tmp
