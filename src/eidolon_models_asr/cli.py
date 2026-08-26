@@ -17,7 +17,12 @@ from typing import Any
 from aiohttp import ClientSession, WSMsgType, web
 
 from .artifacts import ArtifactError, verify_artifacts
-from .backend import FunASROnnxBackend, MockStreamingBackend, StreamingBackend
+from .backend import (
+    CTTransformerPunctuationRestorer,
+    FunASROnnxBackend,
+    MockStreamingBackend,
+    StreamingBackend,
+)
 from .benchmark import benchmark_level
 from .config import Settings, detect_host_kind
 from .service import create_app
@@ -31,10 +36,18 @@ def _load_backend(settings: Settings) -> StreamingBackend:
     if settings.resolved_backend == "mock":
         return MockStreamingBackend()
     verify_artifacts(settings.manifest_path, settings.model_dir)
+    punctuation = None
+    if settings.punctuation_enabled:
+        verify_artifacts(settings.punctuation_manifest_path, settings.punctuation_model_dir)
+        punctuation = CTTransformerPunctuationRestorer(
+            settings.punctuation_model_dir,
+            intra_op_threads=settings.intra_op_threads,
+        )
     return FunASROnnxBackend(
         settings.model_dir,
         intra_op_threads=settings.intra_op_threads,
         chunk_size=settings.chunk_size,
+        punctuation=punctuation,
     )
 
 
@@ -46,11 +59,19 @@ def _read_pcm16_wav(path: Path) -> bytes:
 
 
 def command_doctor(settings: Settings) -> int:
-    verification: dict[str, Any]
-    try:
-        verification = verify_artifacts(settings.manifest_path, settings.model_dir)
-    except ArtifactError as exc:
-        verification = {"ok": False, "error": str(exc)}
+    def check(manifest: Path, model_dir: Path) -> dict[str, Any]:
+        try:
+            return verify_artifacts(manifest, model_dir)
+        except ArtifactError as exc:
+            return {"ok": False, "error": str(exc)}
+
+    asr_verification = check(settings.manifest_path, settings.model_dir)
+    punctuation_verification: dict[str, Any] | None = None
+    if settings.punctuation_enabled:
+        punctuation_verification = check(
+            settings.punctuation_manifest_path,
+            settings.punctuation_model_dir,
+        )
     providers: list[str] = []
     try:
         import onnxruntime
@@ -59,7 +80,8 @@ def command_doctor(settings: Settings) -> int:
     except ImportError:
         pass
     value = {
-        "ok": bool(verification.get("ok")),
+        "ok": bool(asr_verification.get("ok"))
+        and (not settings.punctuation_enabled or bool((punctuation_verification or {}).get("ok"))),
         "host_kind": detect_host_kind(),
         "system": platform.system(),
         "machine": platform.machine(),
@@ -69,14 +91,29 @@ def command_doctor(settings: Settings) -> int:
         "resolved_backend": settings.resolved_backend,
         "onnx_providers": providers,
         "model_dir": str(settings.model_dir),
-        "artifacts": verification,
+        "punctuation_enabled": settings.punctuation_enabled,
+        "punctuation_model_dir": str(settings.punctuation_model_dir),
+        "artifacts": {
+            "asr": asr_verification,
+            "punctuation": punctuation_verification,
+        },
     }
     _print(value)
     return 0 if value["ok"] else 1
 
 
 def command_verify(settings: Settings) -> int:
-    _print(verify_artifacts(settings.manifest_path, settings.model_dir))
+    value: dict[str, Any] = {
+        "ok": True,
+        "asr": verify_artifacts(settings.manifest_path, settings.model_dir),
+        "punctuation": None,
+    }
+    if settings.punctuation_enabled:
+        value["punctuation"] = verify_artifacts(
+            settings.punctuation_manifest_path,
+            settings.punctuation_model_dir,
+        )
+    _print(value)
     return 0
 
 
@@ -96,9 +133,13 @@ def command_infer(settings: Settings, audio: Path) -> int:
             "model_id": backend.model_id,
             "interim_count": len(events),
             "text": final.text,
+            "raw_text": final.raw_text,
             "audio_ms": final.audio_ms,
             "decode_ms": final.decode_ms,
             "rtf": final.rtf,
+            "punctuation_ms": final.punctuation_ms,
+            "total_inference_ms": final.total_inference_ms,
+            "total_rtf": final.total_rtf,
         }
     )
     return 0
@@ -159,8 +200,11 @@ def command_probe(url: str, audio: Path) -> int:
                 if event.get("type") == "transcript" and not event.get("is_final")
             ),
             "text": final["text"],
+            "raw_text": final["raw_text"],
             "audio_ms": final["audio_ms"],
             "rtf": final["rtf"],
+            "punctuation_ms": final["punctuation_ms"],
+            "total_rtf": final["total_rtf"],
         }
     )
     return 0
@@ -225,6 +269,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--backend", help="auto, onnx-cpu, or mock")
     parser.add_argument("--model-dir", type=Path)
     parser.add_argument("--manifest", type=Path)
+    parser.add_argument("--punctuation-model-dir", type=Path)
+    parser.add_argument("--punctuation-manifest", type=Path)
+    parser.add_argument(
+        "--no-punctuation",
+        action="store_true",
+        help="disable final punctuation restoration",
+    )
     parser.add_argument("--threads", type=int)
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("doctor", help="show Host, runtime, and artifact readiness")
@@ -254,10 +305,14 @@ def main(argv: list[str] | None = None) -> int:
         ("backend", args.backend),
         ("model_dir", args.model_dir),
         ("manifest_path", args.manifest),
+        ("punctuation_model_dir", args.punctuation_model_dir),
+        ("punctuation_manifest_path", args.punctuation_manifest),
         ("intra_op_threads", args.threads),
     ):
         if argument is not None:
             overrides[field] = argument
+    if args.no_punctuation:
+        overrides["punctuation_enabled"] = False
     if args.command == "serve":
         if args.host is not None:
             overrides["host"] = args.host

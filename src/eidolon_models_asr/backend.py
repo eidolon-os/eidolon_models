@@ -21,6 +21,10 @@ class TranscriptResult:
     audio_ms: int
     decode_ms: float
     rtf: float
+    raw_text: str | None = None
+    punctuation_ms: float = 0.0
+    total_inference_ms: float = 0.0
+    total_rtf: float = 0.0
 
 
 class StreamingSession(Protocol):
@@ -32,6 +36,7 @@ class StreamingSession(Protocol):
 class StreamingBackend(Protocol):
     name: str
     model_id: str
+    punctuation_model_id: str | None
 
     def new_session(self) -> StreamingSession: ...
 
@@ -49,6 +54,7 @@ class MockStreamingBackend:
 
     name = "mock"
     model_id = "mock-streaming-asr"
+    punctuation_model_id = None
 
     def new_session(self) -> MockStreamingSession:
         return MockStreamingSession()
@@ -74,6 +80,9 @@ class MockStreamingSession:
                 audio_ms=self._bytes // 32,
                 decode_ms=0.1,
                 rtf=0.001,
+                raw_text="测试",
+                total_inference_ms=0.1,
+                total_rtf=0.001,
             )
         ]
 
@@ -87,7 +96,43 @@ class MockStreamingSession:
             audio_ms=self._bytes // 32,
             decode_ms=0.1,
             rtf=0.001,
+            raw_text="测试",
+            total_inference_ms=0.1,
+            total_rtf=0.001,
         )
+
+
+class PunctuationRestorer(Protocol):
+    model_id: str
+
+    def restore(self, text: str) -> tuple[str, float]: ...
+
+
+class CTTransformerPunctuationRestorer:
+    """Shared quantized ONNX punctuation model used only for final text."""
+
+    model_id = "iic/punc_ct-transformer_zh-cn-common-vocab272727-onnx@2024-09-25"
+
+    def __init__(self, model_dir: Path, *, intra_op_threads: int = 4) -> None:
+        from funasr_onnx import CT_Transformer
+
+        self.model_dir = model_dir
+        self._model = CT_Transformer(
+            model_dir=model_dir,
+            quantize=True,
+            device_id=-1,
+            intra_op_num_threads=intra_op_threads,
+        )
+        self._lock = threading.Lock()
+
+    def restore(self, text: str) -> tuple[str, float]:
+        if not text:
+            return text, 0.0
+        started = time.perf_counter()
+        with self._lock:
+            punctuated, _ = self._model(text)
+        elapsed_ms = (time.perf_counter() - started) * 1000.0
+        return punctuated, elapsed_ms
 
 
 class FunASROnnxBackend:
@@ -107,6 +152,7 @@ class FunASROnnxBackend:
         *,
         intra_op_threads: int = 4,
         chunk_size: tuple[int, int, int] = (5, 10, 5),
+        punctuation: PunctuationRestorer | None = None,
     ) -> None:
         from funasr_onnx.paraformer_online_bin import Paraformer
         from funasr_onnx.utils.frontend import WavFrontendOnline
@@ -116,6 +162,8 @@ class FunASROnnxBackend:
         self.model_id = "iic/paraformer-zh-streaming-onnx@2.0.5"
         self.chunk_size = chunk_size
         self.chunk_samples = chunk_size[1] * 960
+        self._punctuation = punctuation
+        self.punctuation_model_id = punctuation.model_id if punctuation else None
         config = read_yaml(str(model_dir / "config.yaml"))
         self._frontend_type = WavFrontendOnline
         self._frontend_config = config["frontend_conf"]
@@ -134,6 +182,11 @@ class FunASROnnxBackend:
 
     def new_session(self) -> FunASROnnxSession:
         return FunASROnnxSession(self)
+
+    def restore_punctuation(self, text: str) -> tuple[str, float]:
+        if self._punctuation is None:
+            return text, 0.0
+        return self._punctuation.restore(text)
 
     def infer(self, state: FunASROnnxSession, audio: np.ndarray, *, is_final: bool) -> list[str]:
         started = time.perf_counter()
@@ -173,18 +226,30 @@ class FunASROnnxSession:
         self._total_decode_ms = 0.0
         self._finished = False
 
-    def _result(self, delta: str, *, is_final: bool) -> TranscriptResult:
+    def _result(
+        self,
+        delta: str,
+        *,
+        is_final: bool,
+        text: str | None = None,
+        punctuation_ms: float = 0.0,
+    ) -> TranscriptResult:
         self._revision += 1
         audio_ms = round(self._audio_samples / 16.0)
         audio_duration_ms = max(audio_ms, 1)
+        total_inference_ms = self._total_decode_ms + punctuation_ms
         return TranscriptResult(
-            text=self._text,
+            text=self._text if text is None else text,
             delta=delta,
             is_final=is_final,
             revision=self._revision,
             audio_ms=audio_ms,
             decode_ms=round(self._total_decode_ms, 3),
             rtf=round(self._total_decode_ms / audio_duration_ms, 5),
+            raw_text=self._text,
+            punctuation_ms=round(punctuation_ms, 3),
+            total_inference_ms=round(total_inference_ms, 3),
+            total_rtf=round(total_inference_ms / audio_duration_ms, 5),
         )
 
     def feed_pcm16(self, pcm: bytes) -> list[TranscriptResult]:
@@ -212,7 +277,13 @@ class FunASROnnxSession:
         self._pending = np.empty((0,), dtype=np.float32)
         delta = "".join(deltas)
         self._text += delta
-        return self._result(delta, is_final=True)
+        punctuated, punctuation_ms = self._backend.restore_punctuation(self._text)
+        return self._result(
+            delta,
+            is_final=True,
+            text=punctuated,
+            punctuation_ms=punctuation_ms,
+        )
 
 
 def result_payload(
@@ -232,10 +303,15 @@ def result_payload(
         "is_final": result.is_final,
         "language": "zh",
         "model_id": backend.model_id,
+        "punctuation_model_id": backend.punctuation_model_id,
         "provider": backend.name,
         "audio_ms": result.audio_ms,
         "decode_ms": result.decode_ms,
         "rtf": result.rtf,
+        "raw_text": result.raw_text,
+        "punctuation_ms": result.punctuation_ms,
+        "total_inference_ms": result.total_inference_ms,
+        "total_rtf": result.total_rtf,
     }
 
 

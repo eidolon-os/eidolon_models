@@ -4,16 +4,23 @@ Eidolon OS 私有化语音识别模型与统一推理服务。
 
 ## 当前选型
 
-第一版只部署一个模型：
+第一版部署两个互补模型：
 
 - `paraformer-zh-streaming/2.0.5`：中文流式 Paraformer INT8 ONNX。
+- `punc-ct-transformer-zh-cn/2024-09-25`：中文 CT-Transformer 量化 ONNX，final-only 标点恢复。
 
 刻意不包含：
 
 - offline ASR：先节省约一份 ASR 权重空间，不做第二遍纠错；
 - VAD：由 `eidolon_channel` 统一负责起声、停声、抢话和 EOT；
-- punctuation：当前 EOT 本身没有标点恢复模型，且现有百炼 adapter 实际传递的是 raw text；
 - ITN、LM、speaker model：待自有测试证明需要后再增加。
+
+interim 保持 ASR 原文；只在 `end_utterance` 后对完整 final 执行一次标点恢复。服务同时返回
+`raw_text` 和 `punctuation_ms`，便于 Channel 诊断或按需保留未加标点文本。默认启用；容量对照可用：
+
+```bash
+./scripts/eidolon-asr --no-punctuation serve
+```
 
 ## 统一启动
 

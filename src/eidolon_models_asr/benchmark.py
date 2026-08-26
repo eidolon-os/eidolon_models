@@ -116,6 +116,7 @@ async def benchmark_stream(
         "stream": stream_index,
         "variant": variant.name,
         "text": final["text"],
+        "raw_text": final.get("raw_text", final["text"]),
         "interim_count": interim_count,
         "audio_ms": round(audio_ms, 3),
         "connect_ms": round((connected_at - connect_started) * 1000.0, 3),
@@ -130,6 +131,9 @@ async def benchmark_stream(
         "overhang_ms": round(stream_wall_ms - audio_ms, 3) if realtime else None,
         "decode_ms": float(final["decode_ms"]),
         "rtf": float(final["rtf"]),
+        "punctuation_ms": float(final.get("punctuation_ms", 0.0)),
+        "total_inference_ms": float(final.get("total_inference_ms", final["decode_ms"])),
+        "total_rtf": float(final.get("total_rtf", final["rtf"])),
     }
 
 
@@ -143,6 +147,9 @@ def summarize_streams(streams: list[dict[str, Any]]) -> dict[str, Any]:
         "overhang_ms",
         "decode_ms",
         "rtf",
+        "punctuation_ms",
+        "total_inference_ms",
+        "total_rtf",
     )
     summary: dict[str, Any] = {}
     for metric in metrics:

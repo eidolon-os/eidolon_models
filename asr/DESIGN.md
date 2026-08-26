@@ -4,7 +4,7 @@
 
 ## 1. 边界
 
-首版的唯一模型是中文流式 Paraformer：
+首版由中文流式 Paraformer 和 final-only CT-Transformer 标点模型组成：
 
 ```text
 16 kHz mono PCM16
@@ -16,10 +16,11 @@ eidolon_channel VAD ── START/END_OF_SPEECH、barge-in、EOT
 eidolon-asr WebSocket ── Paraformer streaming INT8 ONNX
         │
         ├── interim transcript
-        └── end_utterance 后 final transcript
+        └── end_utterance ── CT-Transformer punctuation ── final transcript
 ```
 
-ASR 服务不再次执行 VAD。它也不包含 offline ASR、标点、ITN、LM 或说话人模型。
+ASR 服务不再次执行 VAD，也不包含 offline ASR、ITN、LM 或说话人模型。标点只处理 final，
+避免 interim 因标点预测变化而反复改写。
 
 ## 2. Host 模型
 
@@ -66,15 +67,20 @@ ASR 服务不再次执行 VAD。它也不包含 offline ASR、标点、ITN、LM 
   "stream_id": "room-id",
   "utterance_id": "turn-id",
   "revision": 3,
-  "text": "累计识别文本",
+  "text": "累计识别文本。",
+  "raw_text": "累计识别文本",
   "delta": "本次新增文本",
-  "is_final": false,
+  "is_final": true,
   "language": "zh",
   "provider": "onnx-cpu",
   "model_id": "iic/paraformer-zh-streaming-onnx@2.0.5",
+  "punctuation_model_id": "iic/punc_ct-transformer_zh-cn-common-vocab272727-onnx@2024-09-25",
   "audio_ms": 1800,
   "decode_ms": 73.2,
-  "rtf": 0.041
+  "rtf": 0.041,
+  "punctuation_ms": 1.1,
+  "total_inference_ms": 74.3,
+  "total_rtf": 0.0413
 }
 ```
 
@@ -86,8 +92,9 @@ stream 重复加载约 228 MB 权重。
 `onnx-cpu` 为保证 `funasr-onnx` 共享模型对象的状态安全，会把实际推理调用串行化；因此这里的
 “支持并发”是正确性并发，不等于无限吞吐。实测 Pi 5 建议最多 4 路实时流，8 路会开始积压。
 
-`decode_ms` 是该 utterance 截至当前 revision 的累计推理耗时，`rtf = decode_ms / audio_ms`；
-因此 final 事件可以直接用作整段实时性指标，而不是只统计最后一次 flush。
+`text` 是每个 revision 的权威完整文本；final 可能通过标点插入修订已有字符，调用方不能只拼接
+`delta`。`raw_text` 保留 Paraformer 原文。`decode_ms` 与 `rtf` 只计算 ASR，便于和原基准直接
+比较；`punctuation_ms` 单列，`total_inference_ms` / `total_rtf` 包含两者。
 
 ## 4. 健康检查
 
@@ -105,9 +112,9 @@ stream 重复加载约 228 MB 权重。
 2. Host/config：`auto` 的 CPU 基线与未交付 RKNN 的 fail-closed；
 3. Protocol：采样率、声道、PCM 格式、消息顺序和错误关闭；
 4. Lifecycle：同一 WebSocket 连续多 utterance、interim/final revision；
-5. Real model：官方中文 WAV 经真实 ONNX encoder/decoder 输出有效中文；
+5. Real model：官方中文 WAV 经真实 ASR 与标点 ONNX 输出有效中文和句末标点；
 6. Live service：实际启动进程，通过 WebSocket probe 输入完整音频并收到 final；
-7. Raspberry Pi：记录冷启动、峰值 RSS、整段 decode 时间和 RTF。
+7. Raspberry Pi：记录冷启动、峰值 RSS、ASR decode、标点耗时和总 RTF；
 8. Concurrency：生成四种确定性音频流，按 1/2/4/8 路实时发送并记录握手、首 interim、
    EOT-final、overhang 和包含排队的 RTF。
 
@@ -124,15 +131,15 @@ stream 重复加载约 228 MB 权重。
 
 | Host | 测试 | 结果 |
 | --- | --- | --- |
-| Mac Apple Silicon | 全套测试 | 13 passed |
-| Mac Apple Silicon | 5.55 s 样本累计 decode | 约 140 ms，文本正确 |
-| Raspberry Pi 5 / 4 cores / aarch64 | 全套测试 | 13 passed，4.44 s |
-| Raspberry Pi 5 | 5.55 s 样本累计 decode | 960 ms，RTF 0.173，文本正确 |
-| Raspberry Pi 5 | 常驻服务 RSS | 约 428 MiB |
-| Raspberry Pi 5 | HTTP + WebSocket live probe | ready、7 interim、1 final 均通过 |
+| Mac Apple Silicon | 全套测试 | 19 passed，2.10 s |
+| Mac Apple Silicon | 5.55 s 单路 | ASR 346 ms，标点 2.2 ms，文本正确且带句号 |
+| Raspberry Pi 5 / 4 cores / aarch64 | 全套测试 | 19 passed，6.16 s |
+| Raspberry Pi 5 | 5.55 s 单路 | ASR 836 ms，标点 3.1 ms，文本正确且带句号 |
+| Raspberry Pi 5 | 常驻服务 RSS | 无标点约 420 MiB，带标点约 720 MiB |
+| Raspberry Pi 5 | HTTP + WebSocket live probe | ready、7 interim、1 带标点 final 均通过 |
 
-测试文本为“欢迎大家来体验达摩院推出的语音识别模型”。Pi 的命令冷启动总墙钟约 4.4 s，
-其中包括 Python import 和加载约 228 MB ONNX 权重；常驻服务不会为每个 utterance 重复加载。
+测试 final 为“欢迎大家来体验达摩院推出的语音识别模型。”。ASR 与标点权重分别约 227 MiB
+和 274 MiB；常驻服务只在启动时加载一次，不会为每个 utterance 重复加载。
 完整并发结果见 [BENCHMARK.md](BENCHMARK.md)。
 
 CER、噪声、远场、回声和八小时 soak 需要 Eidolon 自有音频集，不能用一个上游样本冒充产品

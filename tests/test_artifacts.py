@@ -5,7 +5,12 @@ import json
 import pytest
 
 from eidolon_models_asr.artifacts import ArtifactError, verify_artifacts
-from eidolon_models_asr.config import DEFAULT_MANIFEST, DEFAULT_MODEL_DIR
+from eidolon_models_asr.config import (
+    DEFAULT_MANIFEST,
+    DEFAULT_MODEL_DIR,
+    DEFAULT_PUNCTUATION_MANIFEST,
+    DEFAULT_PUNCTUATION_MODEL_DIR,
+)
 
 
 def test_pinned_model_artifacts_are_complete() -> None:
@@ -13,6 +18,18 @@ def test_pinned_model_artifacts_are_complete() -> None:
     assert result["ok"] is True
     assert "model_quant.onnx" in result["checked_files"]
     assert "decoder_quant.onnx" in result["checked_files"]
+
+    punctuation = verify_artifacts(
+        DEFAULT_PUNCTUATION_MANIFEST,
+        DEFAULT_PUNCTUATION_MODEL_DIR,
+    )
+    assert punctuation["ok"] is True
+    assert punctuation["checked_files"] == [
+        "config.yaml",
+        "configuration.json",
+        "model_quant.onnx",
+        "tokens.json",
+    ]
 
 
 def test_checksum_mismatch_is_rejected(tmp_path) -> None:

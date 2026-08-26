@@ -1,2 +1,6 @@
 Required Notice: Copyright 2026 Li Jinsong.
 Commercial licensing contact: lijinsong@aimanthor.com
+
+Third-party model artifacts:
+- Paraformer Chinese streaming ONNX, ModelScope iic, Apache-2.0 as declared upstream.
+- CT-Transformer Chinese punctuation ONNX, ModelScope iic, Apache-2.0 as declared upstream.

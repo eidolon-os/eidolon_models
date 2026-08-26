@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "model_id": "iic/punc_ct-transformer_zh-cn-common-vocab272727-onnx",
+  "version": "2024-09-25",
+  "source": {
+    "url": "https://www.modelscope.cn/models/iic/punc_ct-transformer_zh-cn-common-vocab272727-onnx",
+    "git_url": "https://www.modelscope.cn/iic/punc_ct-transformer_zh-cn-common-vocab272727-onnx.git",
+    "revision": "8f239ff78c6267c4d859233e7eb3bbdb68c61824"
+  },
+  "license": {
+    "spdx": "Apache-2.0",
+    "declared_by": "ModelScope model metadata"
+  },
+  "runtime": {
+    "name": "funasr-onnx",
+    "version": "0.4.2",
+    "quantized": true,
+    "input": "text",
+    "application": "final-only"
+  },
+  "files": {
+    "config.yaml": "622db59bfaa5c5a4d1b7ad2e624a8d2493ffa44b2e05427532de6c19daeb01bf",
+    "configuration.json": "16097d3034818080e39331fa08909dffe75189f5c986f74155afd90b5f531ee4",
+    "model_quant.onnx": "e6cd8399bf7d0e75f8d9af4a107310e1968ecab1d50135e765b8f0265b27a83d",
+    "tokens.json": "c960ab87bccea4aa15cf49a59f71973c2c330b46668048cd8da253749ec71ee3"
+  }
+}
