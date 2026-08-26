@@ -77,14 +77,17 @@ async def benchmark_stream(
         first_interim_at: float | None = None
         final_at: float | None = None
         interim_count = 0
+        queue_wait_ms = 0.0
 
         async def receive_transcripts() -> dict[str, Any]:
-            nonlocal final_at, first_interim_at, interim_count
+            nonlocal final_at, first_interim_at, interim_count, queue_wait_ms
             while True:
                 value = await ws.receive_json(timeout=60)
                 if value.get("type") != "transcript":
                     if value.get("type") == "error":
                         raise RuntimeError(value.get("message", "ASR service returned an error"))
+                    if value.get("type") == "utterance_active":
+                        queue_wait_ms = float(value.get("queue_wait_ms", 0.0))
                     continue
                 received_at = time.perf_counter()
                 if value.get("is_final"):
@@ -119,6 +122,9 @@ async def benchmark_stream(
         "raw_text": final.get("raw_text", final["text"]),
         "streaming_text": final.get("streaming_text"),
         "final_revised": bool(final.get("final_revised", False)),
+        "queued_initially": bool(started.get("queued", False)),
+        "queue_position": int(started.get("queue_position", 0)),
+        "queue_wait_ms": queue_wait_ms,
         "interim_count": interim_count,
         "audio_ms": round(audio_ms, 3),
         "connect_ms": round((connected_at - connect_started) * 1000.0, 3),
@@ -145,6 +151,7 @@ def summarize_streams(streams: list[dict[str, Any]]) -> dict[str, Any]:
     metrics = (
         "connect_ms",
         "start_ack_ms",
+        "queue_wait_ms",
         "first_interim_ms",
         "eot_final_ms",
         "stream_wall_ms",

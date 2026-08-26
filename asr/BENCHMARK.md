@@ -1,6 +1,32 @@
 # ASR concurrent streaming benchmark
 
-## 2-pass Mac / Pi 5 复测（2026-08-26）
+## 显式 2+6 FIFO 调度复测（2026-08-26）
+
+当前默认配置为 64 个 WebSocket 连接、2 个实时 utterance 槽、6 个排队位、10 秒最大等待。
+下表取每组最差一路；`queue wait` 是服务端从接受 utterance 到获得实时槽的时间。排队客户端仍
+按实时节奏上传，服务在内存中缓存 PCM，获得槽位后追赶处理。
+
+| Host | 并发 | 初始排队数 | 最大 queue wait ms | first interim ms | EOT-final ms | total RTF | 结果 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Mac Apple Silicon | 1 | 0 | 0 | 1740 | 121 | 0.074 | 成功 |
+| Mac Apple Silicon | 2 | 0 | 0 | 1764 | 291 | 0.153 | 成功 |
+| Mac Apple Silicon | 4 | 2 | 5861 | 6050 | 1308 | 0.156 | 成功 |
+| Mac Apple Silicon | 8 | 6 | 7777 | 7957 | 3124 | 0.159 | 成功 |
+| Raspberry Pi 5 | 1 | 0 | 0 | 1792 | 302 | 0.181 | 成功 |
+| Raspberry Pi 5 | 2 | 0 | 0 | 1928 | 621 | 0.396 | 成功 |
+| Raspberry Pi 5 | 4 | 2 | 6270 | 6741 | 3165 | 0.449 | 成功 |
+| Raspberry Pi 5 | 8 | 6 | >10000 | — | — | — | `capacity_timeout` |
+
+这组数据验证了“2 路实时、其余无感排队”的实现边界：Mac 的 8 路都能在 10 秒内提升；Pi 5
+稳定覆盖 1～4 路，但 8 路时后排请求超过 SLA，服务明确报错且不切换 ASR。64 连接是低成本的
+会话上限，不是 64 路推理吞吐承诺。若 Pi 产品确实要让 8 路全部完成，需要提高
+`max_queue_wait_seconds`；这只改变可等待时间，不提升算力，因而不建议作为默认值。
+
+队列的代价主要是延迟和原始 PCM：60 秒上限下每个 waiter 最多约 1.83 MiB，6 个 waiter 约
+11 MiB。模型权重只加载一份；多一个连接几乎不增加模型内存，多一个 active utterance 会增加
+frontend/decoder cache，并加剧共享 ONNX 锁和 CPU 的争用。
+
+## 历史基线：无显式准入的 2-pass Mac / Pi 5
 
 加入默认启用的 offline Paraformer second pass 后，在同一 Mac、同一 5.547 秒样本和相同四种
 音频变体上复测。first interim 基本不变；新增成本集中在 EOT-final。下表仍取每组最差一路：
@@ -48,6 +74,7 @@ streaming + punctuation 基线，分别增加约 340 MiB 和 291 MiB。
 
 - connect：建立本机 WebSocket 到收到 `connected`；
 - start ack：发送 `start` 到收到 `utterance_started`；
+- queue wait：服务接受排队 utterance 到发送 `utterance_active`；立即准入为 0；
 - first interim：发送首帧音频到收到首个非空 interim；
 - EOT-final：发送 `end_utterance` 到收到 final；
 - overhang：整路完成墙钟时间减去音频时长；
@@ -106,14 +133,15 @@ EOT 会受共享 ASR 锁调度影响，因此判断标点的直接成本应看�
 
 | 并发 | first interim：Mac / Pi 5 / 百炼 ms | EOT-final：Mac / Pi 5 / 百炼 ms |
 | ---: | ---: | ---: |
-| 1 | 1739 / 1790 / 1897 | 128 / 330 / 1255 |
-| 2 | 1764 / 1897 / 1857 | 247 / 622 / 793 |
-| 4 | 1819 / 2251 / 1505 | 474 / 1548 / 883 |
-| 8 | 1947 / 3230 / 2455 | 1013 / 5382 / 1092 |
+| 1 | 1740 / 1792 / 1897 | 121 / 302 / 1255 |
+| 2 | 1764 / 1928 / 1857 | 291 / 621 / 793 |
+| 4 | 6050 / 6741 / 1505 | 1308 / 3165 / 883 |
+| 8 | 7957 / 超时 / 2455 | 3124 / 超时 / 1092 |
 
-Mac 本地在全部并发的 EOT-final 都优于百炼。Pi 5 在 1～2 路也优于百炼；4 路开始落后，
-8 路已明显计算饱和。百炼没有公开服务端 decode 时间，因此不能把它的墙钟完成比例与本地
-compute RTF 直接比较。
+默认 2 槽策略下，本地 Mac 和 Pi 5 的 1～2 路 EOT-final 优于这次百炼样本；超过 2 路后，
+显式 FIFO 把资源控制换成可预测的排队，百炼的墙钟时延更好。Pi 5 的 8 路在 10 秒 SLA 下按
+设计超时。百炼没有公开服务端 decode 时间，因此不能把它的墙钟完成比例与本地 compute RTF
+直接比较。
 
 ## 复现
 

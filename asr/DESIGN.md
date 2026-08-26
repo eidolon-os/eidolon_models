@@ -96,9 +96,36 @@ final，避免 interim 反复改写。完整 utterance 只在内存中保留到 
 和 decoder cache。当前 CPU backend 共享一份流式和一份离线 ONNX 权重，并串行调度两类 ASR
 推理，避免边缘 Host 为每个并发 stream 重复加载权重或让多线程 ONNX session 相互争抢 CPU。
 
-服务支持多个 WebSocket 和多个 utterance 同时存活，每路 frontend/cache 相互隔离。当前
-`onnx-cpu` 为保证 `funasr-onnx` 共享模型对象的状态安全，会把实际推理调用串行化；因此这里的
-“支持并发”是正确性并发，不等于无限吞吐。实测 Pi 5 建议最多 4 路实时流，8 路会开始积压。
+服务支持多个 WebSocket 和多个 utterance 同时存活，每路 frontend/cache 相互隔离。默认最多
+保留 64 个连接，但只有 2 个 utterance 立即进入实时槽，后续 6 个进入 FIFO 队列；第 9 个同时
+存在的 utterance 会被明确拒绝。连接仅表示会话存在，不会预先占用实时槽。
+
+`utterance_started` 明确返回准入状态：
+
+```json
+{
+  "type": "utterance_started",
+  "stream_id": "room-id",
+  "utterance_id": "turn-id",
+  "queued": true,
+  "queue_position": 2
+}
+```
+
+排队期间继续接收并在内存中暂存 PCM16；提升到实时槽后先发送
+`{"type":"utterance_active","queue_wait_ms":6269.6,...}`，再按原始顺序补跑缓存音频和继续
+实时处理。客户端不需要暂停上传，也不需要预先配置“几路”。断开会取消对应 waiter；调度严格
+FIFO，不降级到云端或其他 ASR。
+
+默认限制为 60 秒 utterance、10 秒排队等待。队列已满返回 `capacity_exceeded`，等待超时返回
+`capacity_timeout`，两者均 `retryable: true` 并以 WebSocket 1013 关闭；音频超过 60 秒返回
+`utterance_too_long` 并以 1009 关闭。第 65 个连接在 WebSocket upgrade 前收到 HTTP 503 和
+`Retry-After: 1`。排队的原始 PCM 每路最多约 1.83 MiB，6 路约 11 MiB；约 1 GiB 的三模型
+常驻权重仍是主要内存成本。
+
+当前 `onnx-cpu` 为保证 `funasr-onnx` 共享模型对象的状态安全，会把实际模型调用串行化；2 个
+实时槽表示两路可以交错推进并维持 cache，不表示 CPU 同时执行两次 ONNX。该边界把资源占用与
+尾延迟显式化，超载时由本地队列吸收，而不是让任意数量 stream 一起争抢 CPU。
 
 `text` 是每个 revision 的权威完整文本；final 可能由 offline second pass 替换已有字符，再由
 标点模型插入符号，调用方不能只拼接 `delta`。`streaming_text` 保留第一遍结果，`raw_text` 是
@@ -109,8 +136,8 @@ offline final 的未加标点文本，`final_revised` 仅表示两遍文本不�
 ## 4. 健康检查
 
 - `/healthz`：进程事件循环存活；
-- `/readyz`：模型已通过 checksum、成功加载且可接受请求；
-- `/v1/info`：协议、音频格式、endpoint owner、backend 和模型身份。
+- `/readyz`：模型已通过 checksum、成功加载且可接受请求，并返回当前连接、实时和排队数量；
+- `/v1/info`：协议、音频格式、endpoint owner、backend、模型身份、容量上限与超时配置。
 
 服务在模型 checksum 或加载失败时不进入监听状态。运行时不访问 ModelScope，不允许隐式下载。
 
@@ -125,8 +152,10 @@ offline final 的未加标点文本，`final_revised` 仅表示两遍文本不�
 5. Real model：官方中文 WAV 经流式、离线和标点 ONNX 输出有效中文和句末标点；
 6. Live service：实际启动进程，通过 WebSocket probe 输入完整音频并收到 final；
 7. Raspberry Pi：记录冷启动、峰值 RSS、ASR decode、标点耗时和总 RTF；
-8. Concurrency：生成四种确定性音频流，按 1/2/4/8 路实时发送并记录握手、首 interim、
-   EOT-final、overhang 和包含排队的 RTF。
+8. Concurrency：生成四种确定性音频流，按 1/2/4/8 路实时发送并记录握手、准入状态、FIFO
+   queue wait、首 interim、EOT-final、overhang 和 RTF；
+9. Capacity：连接上限、2+6 队列满、10 秒超时、断线取消、FIFO 提升、缓存音频补跑和运行时
+   指标。
 
 当前 PoC gate：
 
@@ -141,12 +170,12 @@ offline final 的未加标点文本，`final_revised` 仅表示两遍文本不�
 
 | Host | 测试 | 结果 |
 | --- | --- | --- |
-| Mac Apple Silicon | 全套测试 | 22 passed，4.16 s |
+| Mac Apple Silicon | 全套测试 | 38 passed，3.70 s |
 | Mac Apple Silicon | 5.55 s 单路 | 流式 316 ms，offline 91 ms，标点 2.4 ms，文本正确且带句号 |
-| Raspberry Pi 5 / 4 cores / aarch64 | 全套测试 | 22 passed，14.05 s |
+| Raspberry Pi 5 / 4 cores / aarch64 | 全套测试 | 38 passed，9.58 s |
 | Raspberry Pi 5 | 5.55 s 单路 infer | 流式 965 ms，offline 238 ms，标点 6.3 ms，total RTF 0.218 |
 | Raspberry Pi 5 | 5.55 s 暖服务单路 | EOT-final 330 ms，total RTF 0.192，文本正确且带句号 |
-| Raspberry Pi 5 | 2-pass 并发 | 2 路 EOT 622 ms / RTF 0.411；4 路 1548 ms / 0.881；8 路已饱和 |
+| Raspberry Pi 5 | 显式 2+6 调度 | 2 路无排队；4 路最大等待 6.27 s；8 路触发 10 s 超时 |
 | Raspberry Pi 5 | 三模型常驻 RSS | 约 1011 MiB |
 
 测试 final 为“欢迎大家来体验达摩院推出的语音识别模型。”。该干净样本两遍文本一致；截断

@@ -56,6 +56,36 @@ curl http://127.0.0.1:8767/v1/info
 ./scripts/eidolon-asr bench tests/data/asr_example_zh.wav --concurrency 1,2,4,8
 ```
 
+## 容量与排队
+
+默认容量是 **64 个 WebSocket 连接、2 个实时 utterance、6 个 FIFO 排队
+utterance**。连接本身不预占推理槽；收到 `start` 后才申请槽位。排队期间服务在内存中暂存
+PCM16，轮到后补跑已收到的音频，不切换或降级到其他 ASR。
+
+- 最大 utterance：60 秒；
+- 最大排队等待：10 秒；
+- 2 个实时槽和 6 个排队位都满时，返回可重试的 `capacity_exceeded`；
+- 等待超过 10 秒时，返回可重试的 `capacity_timeout`；
+- 第 65 个 WebSocket 在升级前收到 HTTP 503；
+- 客户端断开时自动取消排队或释放槽位。
+
+默认值可通过同名启动参数或环境变量调整：
+
+```bash
+./scripts/eidolon-asr \
+  --max-connections 64 \
+  --realtime-slots 2 \
+  --max-queued-utterances 6 \
+  --max-utterance-seconds 60 \
+  --max-queue-wait-seconds 10 \
+  serve
+```
+
+对应环境变量为 `EIDOLON_ASR_MAX_CONNECTIONS`、`EIDOLON_ASR_REALTIME_SLOTS`、
+`EIDOLON_ASR_MAX_QUEUED_UTTERANCES`、`EIDOLON_ASR_MAX_UTTERANCE_SECONDS` 和
+`EIDOLON_ASR_MAX_QUEUE_WAIT_SECONDS`。Pi 5 实测建议保持 2 个实时槽；提高连接数不会增加模型
+内存，提高实时槽数才会增加并行 cache、CPU 争用和尾延迟。
+
 完整测试：
 
 ```bash

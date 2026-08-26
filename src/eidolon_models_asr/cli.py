@@ -108,6 +108,14 @@ def command_doctor(settings: Settings) -> int:
         "offline_model_dir": str(settings.offline_model_dir),
         "punctuation_enabled": settings.punctuation_enabled,
         "punctuation_model_dir": str(settings.punctuation_model_dir),
+        "capacity": {
+            "max_connections": settings.max_connections,
+            "realtime_slots": settings.realtime_slots,
+            "max_queued_utterances": settings.max_queued_utterances,
+            "max_active_utterances": (settings.realtime_slots + settings.max_queued_utterances),
+            "max_utterance_seconds": settings.max_utterance_seconds,
+            "max_queue_wait_seconds": settings.max_queue_wait_seconds,
+        },
         "artifacts": {
             "asr": asr_verification,
             "offline": offline_verification,
@@ -316,6 +324,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="disable final punctuation restoration",
     )
     parser.add_argument("--threads", type=int)
+    parser.add_argument("--max-connections", type=int)
+    parser.add_argument("--realtime-slots", type=int)
+    parser.add_argument("--max-queued-utterances", type=int)
+    parser.add_argument("--max-utterance-seconds", type=float)
+    parser.add_argument("--max-queue-wait-seconds", type=float)
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("doctor", help="show Host, runtime, and artifact readiness")
     subparsers.add_parser("verify", help="verify pinned model checksums")
@@ -349,6 +362,11 @@ def main(argv: list[str] | None = None) -> int:
         ("punctuation_model_dir", args.punctuation_model_dir),
         ("punctuation_manifest_path", args.punctuation_manifest),
         ("intra_op_threads", args.threads),
+        ("max_connections", args.max_connections),
+        ("realtime_slots", args.realtime_slots),
+        ("max_queued_utterances", args.max_queued_utterances),
+        ("max_utterance_seconds", args.max_utterance_seconds),
+        ("max_queue_wait_seconds", args.max_queue_wait_seconds),
     ):
         if argument is not None:
             overrides[field] = argument

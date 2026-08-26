@@ -83,6 +83,26 @@ class Settings:
     intra_op_threads: int = max(1, min(4, os.cpu_count() or 1))
     chunk_size: tuple[int, int, int] = (5, 10, 5)
     max_binary_message_bytes: int = 1024 * 1024
+    max_connections: int = 64
+    realtime_slots: int = 2
+    max_queued_utterances: int = 6
+    max_utterance_seconds: float = 60.0
+    max_queue_wait_seconds: float = 10.0
+
+    def __post_init__(self) -> None:
+        positive = {
+            "max_connections": self.max_connections,
+            "realtime_slots": self.realtime_slots,
+            "max_utterance_seconds": self.max_utterance_seconds,
+            "max_queue_wait_seconds": self.max_queue_wait_seconds,
+        }
+        for name, value in positive.items():
+            if value <= 0:
+                raise ValueError(f"{name} must be greater than zero")
+        if self.max_queued_utterances < 0:
+            raise ValueError("max_queued_utterances must be at least zero")
+        if self.realtime_slots + self.max_queued_utterances > self.max_connections:
+            raise ValueError("utterance capacity cannot exceed max_connections")
 
     @property
     def resolved_backend(self) -> str:
@@ -125,4 +145,9 @@ class Settings:
             intra_op_threads=int(
                 os.getenv("EIDOLON_ASR_THREADS", str(max(1, min(4, os.cpu_count() or 1))))
             ),
+            max_connections=int(os.getenv("EIDOLON_ASR_MAX_CONNECTIONS", "64")),
+            realtime_slots=int(os.getenv("EIDOLON_ASR_REALTIME_SLOTS", "2")),
+            max_queued_utterances=int(os.getenv("EIDOLON_ASR_MAX_QUEUED_UTTERANCES", "6")),
+            max_utterance_seconds=float(os.getenv("EIDOLON_ASR_MAX_UTTERANCE_SECONDS", "60")),
+            max_queue_wait_seconds=float(os.getenv("EIDOLON_ASR_MAX_QUEUE_WAIT_SECONDS", "10")),
         )
