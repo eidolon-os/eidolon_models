@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+UV_BIN=${EIDOLON_ASR_UV_BIN:-uv}
+UV_CACHE_DIR=${EIDOLON_ASR_UV_CACHE_DIR:-$REPO_ROOT/.cache/uv}
+VENV_BIN=${EIDOLON_ASR_VENV_BIN:-$REPO_ROOT/.venv/bin}
+export UV_CACHE_DIR
+
+if [ "${1:-}" = "test" ]; then
+  shift
+  if [ -x "$VENV_BIN/pytest" ]; then
+    exec "$VENV_BIN/pytest" "$@"
+  fi
+  exec "$UV_BIN" run --project "$REPO_ROOT" --group dev --locked pytest "$@"
+fi
+
+if [ -x "$VENV_BIN/eidolon-asr" ]; then
+  exec "$VENV_BIN/eidolon-asr" "$@"
+fi
+
+exec "$UV_BIN" run --project "$REPO_ROOT" --locked eidolon-asr "$@"

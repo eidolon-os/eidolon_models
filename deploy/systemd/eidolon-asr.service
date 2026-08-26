@@ -1,0 +1,20 @@
+[Unit]
+Description=Eidolon local streaming ASR
+After=network.target
+
+[Service]
+Type=simple
+User=eidolon
+Group=eidolon
+WorkingDirectory=/opt/eidolon/current/eidolon_models
+Environment=EIDOLON_ASR_HOST=127.0.0.1
+Environment=EIDOLON_ASR_PORT=8767
+Environment=EIDOLON_ASR_BACKEND=auto
+Environment=EIDOLON_ASR_UV_CACHE_DIR=/var/cache/eidolon/asr/uv
+ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-asr serve
+Restart=on-failure
+RestartSec=2
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target

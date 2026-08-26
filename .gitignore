@@ -39,3 +39,4 @@ tmp/
 *.partial
 *.download
 *.tmp
+:memory:.ses

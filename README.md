@@ -2,6 +2,9 @@
 
 Eidolon OS 私有化部署模型仓库，用于统一管理、版本化和交付 ASR、LLM、TTS 等运行时模型资产。
 
+当前已包含中文流式 Paraformer INT8 ONNX 模型，以及供 macOS arm64、树莓派 5 arm64 和
+未来 RK3588 共用的 `eidolon-asr` 推理服务与测试入口。详见 [asr/README.md](asr/README.md)。
+
 ## 仓库结构
 
 ```text
@@ -36,6 +39,17 @@ tts/    语音合成模型
    ```
 
 6. 提交前在目标推理运行时中完成加载和最小推理验证。
+
+## ASR 快速开始
+
+```bash
+./scripts/eidolon-asr doctor
+./scripts/eidolon-asr test
+./scripts/eidolon-asr serve
+```
+
+默认健康检查为 `http://127.0.0.1:8767/readyz`，流式接口为
+`ws://127.0.0.1:8767/v1/stream`。
 
 ## 大文件管理
 

@@ -9,6 +9,7 @@
 *.ckpt filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.tflite filter=lfs diff=lfs merge=lfs -text
+*.rknn filter=lfs diff=lfs merge=lfs -text
 *.engine filter=lfs diff=lfs merge=lfs -text
 *.plan filter=lfs diff=lfs merge=lfs -text
 *.mlmodel filter=lfs diff=lfs merge=lfs -text
