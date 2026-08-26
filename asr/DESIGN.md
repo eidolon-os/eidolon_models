@@ -82,6 +82,10 @@ ASR 服务不再次执行 VAD。它也不包含 offline ASR、标点、ITN、LM 
 和 decoder cache。当前 CPU backend 共享一份 ONNX 权重并串行执行推理，避免边缘 Host 为并发
 stream 重复加载约 228 MB 权重。
 
+服务支持多个 WebSocket 和多个 utterance 同时存活，每路 frontend/cache 相互隔离。当前
+`onnx-cpu` 为保证 `funasr-onnx` 共享模型对象的状态安全，会把实际推理调用串行化；因此这里的
+“支持并发”是正确性并发，不等于无限吞吐。实测 Pi 5 建议最多 4 路实时流，8 路会开始积压。
+
 `decode_ms` 是该 utterance 截至当前 revision 的累计推理耗时，`rtf = decode_ms / audio_ms`；
 因此 final 事件可以直接用作整段实时性指标，而不是只统计最后一次 flush。
 
@@ -104,6 +108,8 @@ stream 重复加载约 228 MB 权重。
 5. Real model：官方中文 WAV 经真实 ONNX encoder/decoder 输出有效中文；
 6. Live service：实际启动进程，通过 WebSocket probe 输入完整音频并收到 final；
 7. Raspberry Pi：记录冷启动、峰值 RSS、整段 decode 时间和 RTF。
+8. Concurrency：生成四种确定性音频流，按 1/2/4/8 路实时发送并记录握手、首 interim、
+   EOT-final、overhang 和包含排队的 RTF。
 
 当前 PoC gate：
 
@@ -127,6 +133,7 @@ stream 重复加载约 228 MB 权重。
 
 测试文本为“欢迎大家来体验达摩院推出的语音识别模型”。Pi 的命令冷启动总墙钟约 4.4 s，
 其中包括 Python import 和加载约 228 MB ONNX 权重；常驻服务不会为每个 utterance 重复加载。
+完整并发结果见 [BENCHMARK.md](BENCHMARK.md)。
 
 CER、噪声、远场、回声和八小时 soak 需要 Eidolon 自有音频集，不能用一个上游样本冒充产品
 验收；本仓库先把这些 case 的入口和指标字段固定下来。

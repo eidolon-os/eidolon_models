@@ -40,6 +40,12 @@ curl http://127.0.0.1:8767/v1/info
 ./scripts/eidolon-asr probe tests/data/asr_example_zh.wav
 ```
 
+并发实时流基准：
+
+```bash
+./scripts/eidolon-asr bench tests/data/asr_example_zh.wav --concurrency 1,2,4,8
+```
+
 完整测试：
 
 ```bash
@@ -54,3 +60,4 @@ Python 固定为 3.12，由 `uv.lock` 固定跨平台依赖。Host 不改变服�
 因此部署完成后的启动和重启不会重新解析依赖，也不会下载模型。
 
 详细协议、部署和测试设计见 [DESIGN.md](DESIGN.md)。
+Mac 与 Raspberry Pi 5 的并发时延结果见 [BENCHMARK.md](BENCHMARK.md)。

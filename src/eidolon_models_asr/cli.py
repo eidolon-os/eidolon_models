@@ -18,6 +18,7 @@ from aiohttp import ClientSession, WSMsgType, web
 
 from .artifacts import ArtifactError, verify_artifacts
 from .backend import FunASROnnxBackend, MockStreamingBackend, StreamingBackend
+from .benchmark import benchmark_level
 from .config import Settings, detect_host_kind
 from .service import create_app
 
@@ -165,6 +166,50 @@ def command_probe(url: str, audio: Path) -> int:
     return 0
 
 
+async def _benchmark(
+    url: str,
+    audio: Path,
+    concurrency_levels: list[int],
+    frame_ms: int,
+    realtime: bool,
+) -> list[dict[str, Any]]:
+    pcm = _read_pcm16_wav(audio)
+    results = []
+    for concurrency in concurrency_levels:
+        results.append(
+            await benchmark_level(
+                url=url,
+                pcm=pcm,
+                concurrency=concurrency,
+                frame_ms=frame_ms,
+                realtime=realtime,
+            )
+        )
+    return results
+
+
+def command_bench(
+    url: str,
+    audio: Path,
+    concurrency: str,
+    frame_ms: int,
+    burst: bool,
+) -> int:
+    levels = [int(value) for value in concurrency.split(",") if value.strip()]
+    if not levels:
+        raise ValueError("at least one concurrency level is required")
+    _print(
+        {
+            "ok": True,
+            "url": url,
+            "client_host": detect_host_kind(),
+            "mode": "burst" if burst else "realtime",
+            "results": asyncio.run(_benchmark(url, audio, levels, frame_ms, not burst)),
+        }
+    )
+    return 0
+
+
 def command_serve(settings: Settings) -> int:
     logging.basicConfig(
         level=os.getenv("EIDOLON_ASR_LOG_LEVEL", "INFO").upper(),
@@ -192,6 +237,12 @@ def build_parser() -> argparse.ArgumentParser:
     probe = subparsers.add_parser("probe", help="exercise a running WebSocket service")
     probe.add_argument("audio", type=Path)
     probe.add_argument("--url", default="ws://127.0.0.1:8767/v1/stream")
+    bench = subparsers.add_parser("bench", help="measure concurrent streaming latency")
+    bench.add_argument("audio", type=Path)
+    bench.add_argument("--url", default="ws://127.0.0.1:8767/v1/stream")
+    bench.add_argument("--concurrency", default="1,2,4,8")
+    bench.add_argument("--frame-ms", type=int, default=100)
+    bench.add_argument("--burst", action="store_true", help="send audio without realtime pacing")
     return parser
 
 
@@ -222,6 +273,14 @@ def main(argv: list[str] | None = None) -> int:
             return command_infer(settings, args.audio)
         if args.command == "probe":
             return command_probe(args.url, args.audio)
+        if args.command == "bench":
+            return command_bench(
+                args.url,
+                args.audio,
+                args.concurrency,
+                args.frame_ms,
+                args.burst,
+            )
         if args.command == "serve":
             return command_serve(settings)
     except (ArtifactError, ValueError, RuntimeError) as exc:
