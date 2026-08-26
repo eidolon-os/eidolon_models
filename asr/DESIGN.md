@@ -143,15 +143,16 @@ offline final 的未加标点文本，`final_revised` 仅表示两遍文本不�
 | --- | --- | --- |
 | Mac Apple Silicon | 全套测试 | 22 passed，4.16 s |
 | Mac Apple Silicon | 5.55 s 单路 | 流式 316 ms，offline 91 ms，标点 2.4 ms，文本正确且带句号 |
-| Raspberry Pi 5 / 4 cores / aarch64 | 全套测试 | 19 passed，6.16 s |
-| Raspberry Pi 5 | 5.55 s 单路 | 旧的 streaming + punctuation 基线：ASR 836 ms，标点 3.1 ms |
-| Raspberry Pi 5 | 2-pass 复测 | 当前不可达，加入 offline 后必须重新测量，不能沿用旧数据 |
-| Raspberry Pi 5 | HTTP + WebSocket live probe | ready、7 interim、1 带标点 final 均通过 |
+| Raspberry Pi 5 / 4 cores / aarch64 | 全套测试 | 22 passed，14.05 s |
+| Raspberry Pi 5 | 5.55 s 单路 infer | 流式 965 ms，offline 238 ms，标点 6.3 ms，total RTF 0.218 |
+| Raspberry Pi 5 | 5.55 s 暖服务单路 | EOT-final 330 ms，total RTF 0.192，文本正确且带句号 |
+| Raspberry Pi 5 | 2-pass 并发 | 2 路 EOT 622 ms / RTF 0.411；4 路 1548 ms / 0.881；8 路已饱和 |
+| Raspberry Pi 5 | 三模型常驻 RSS | 约 1011 MiB |
 
 测试 final 为“欢迎大家来体验达摩院推出的语音识别模型。”。该干净样本两遍文本一致；截断
 样本证明 offline 会产生整句 revision，但 revision 可能变好也可能变差，因此产品质量仍需自有
 语料 CER 验证。流式、离线和标点权重分别约 227 MiB、227 MiB 和 274 MiB；Mac 常驻 RSS
-约 1184 MiB。模型只在启动时加载一次，不会为每个 utterance 重复加载。
+约 1184 MiB，Pi 5 约 1011 MiB。模型只在启动时加载一次，不会为每个 utterance 重复加载。
 完整并发结果见 [BENCHMARK.md](BENCHMARK.md)。
 
 CER、噪声、远场、回声和八小时 soak 需要 Eidolon 自有音频集，不能用一个上游样本冒充产品

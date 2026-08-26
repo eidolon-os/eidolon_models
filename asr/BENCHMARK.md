@@ -1,6 +1,6 @@
 # ASR concurrent streaming benchmark
 
-## 2-pass Mac 复测（2026-08-26）
+## 2-pass Mac / Pi 5 复测（2026-08-26）
 
 加入默认启用的 offline Paraformer second pass 后，在同一 Mac、同一 5.547 秒样本和相同四种
 音频变体上复测。first interim 基本不变；新增成本集中在 EOT-final。下表仍取每组最差一路：
@@ -19,9 +19,21 @@
 2.8 秒截断也出现过更差的尾字。因此 `final_revised` 表示发生 revision，不表示质量已提升；是否
 默认开启最终应以 Eidolon 自有完整语句、噪声和远场数据集的 CER 为准。
 
-offline 权重约 227 MiB；三模型服务在 Mac 上实测 RSS 约 1184 MiB，相比原 streaming +
-punctuation 的约 844 MiB 增加约 340 MiB。Pi 5 当次网络不可达，以下 Pi 表格仍是未启用
-offline 的历史基线，不能作为当前默认 2-pass 配置的性能结论。
+Pi 5 使用完全相同的仓库、模型、命令和本机 WebSocket 路径复测；四种完整音频变体同样全部
+返回正确文本，且本次 streaming/offline 文本一致：
+
+| 并发 | first interim ms | EOT-final ms | offline decode ms | total RTF | 旧 EOT-final ms |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 1790 | 330 | 246 | 0.192 | 76 |
+| 2 | 1897 | 622 | 471 | 0.411 | 192 |
+| 4 | 2251 | 1548 | 819 | 0.881 | 733 |
+| 8 | 3230 | 5382 | 1415 | 1.798 | 2892 |
+
+Pi 5 的默认 2-pass 单实例并发预算建议从原来的 4 路下调到 **2 路**。4 路最大 total RTF
+仍小于 1，但余量只剩约 12%，且 EOT-final 已到 1.55 秒；8 路明显超出实时容量。
+
+offline 权重约 227 MiB。三模型服务常驻 RSS：Mac 约 1184 MiB，Pi 5 约 1011 MiB；相对各自
+streaming + punctuation 基线，分别增加约 340 MiB 和 291 MiB。
 
 测试日期：2026-08-26。样本为 5.547 秒、16 kHz mono PCM16 中文语音。基准在内存中确定性
 生成四类音频流：原始、降低 6 dB、约 30 dB SNR 轻噪声、低音量加轻噪声；开启默认标点后
@@ -40,10 +52,11 @@ offline 的历史基线，不能作为当前默认 2-pass 配置的性能结论�
 - EOT-final：发送 `end_utterance` 到收到 final；
 - overhang：整路完成墙钟时间减去音频时长；
 - ASR RTF：服务端累计 decode 时间除以音频时长，包含共享 ASR 模型锁的排队时间；
+- offline decode / RTF：second pass 推理及共享 ASR 锁等待时间；
 - punctuation：final-only 标点恢复耗时，包含共享标点模型锁的排队；
-- total RTF：ASR decode 加 punctuation 后除以音频时长，小于 1 才能持续实时处理。
+- total RTF：streaming、offline 和 punctuation 累计时间除以音频时长，小于 1 才能持续实时处理。
 
-## Mac Apple Silicon
+## 历史基线：Mac Apple Silicon（streaming + punctuation）
 
 | 并发 | connect ms | start ack ms | first interim ms | EOT-final ms | overhang ms | 标点 ms | ASR RTF | total RTF |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -54,7 +67,7 @@ offline 的历史基线，不能作为当前默认 2-pass 配置的性能结论�
 
 8 路仍有足够实时余量，且全部流返回 7 个 interim 和正确 final。
 
-## Raspberry Pi 5
+## 历史基线：Raspberry Pi 5（streaming + punctuation）
 
 | 并发 | connect ms | start ack ms | first interim ms | EOT-final ms | overhang ms | 标点 ms | ASR RTF | total RTF |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -63,8 +76,8 @@ offline 的历史基线，不能作为当前默认 2-pass 配置的性能结论�
 | 4 | 2.8 | 2.0 | 2102 | 733 | 733 | 12.3 | 0.732 | 0.732 |
 | 8 | 10.5 | 10.1 | 2480 | 2892 | 2892 | 12.4 | 1.374 | 1.375 |
 
-Pi 5 建议先把单实例并发预算设为 4 路。8 路协议和状态隔离仍正确，但已超过持续实时容量，
-会累积排队延迟。若产品要求 8 路，应使用多实例/更强 Host，或在 RK3588 上验证 NPU backend。
+该历史配置建议单实例最多 4 路；默认 2-pass 配置已根据新实测下调为 2 路。若产品要求更多
+并发，应使用更强 Host，或在 RK3588 上验证 NPU backend。
 
 ## 标点开关 A/B
 
@@ -89,18 +102,18 @@ EOT 会受共享 ASR 锁调度影响，因此判断标点的直接成本应看�
 ## 与当前 eidolon_channel 百炼 STT 对比
 
 百炼通过 `eidolon_channel` 的实际 `fun-asr-realtime-2026-02-28` WebSocket 路径测试；本地列为
-本页默认启用标点后的结果。三个实现都返回正确且带句末标点的文本。
+本页默认启用 offline second pass 与标点后的结果。三个实现都返回正确且带句末标点的文本。
 
 | 并发 | first interim：Mac / Pi 5 / 百炼 ms | EOT-final：Mac / Pi 5 / 百炼 ms |
 | ---: | ---: | ---: |
-| 1 | 1742 / 1839 / 1897 | 34 / 76 / 1255 |
-| 2 | 1752 / 1888 / 1857 | 61 / 192 / 793 |
-| 4 | 1813 / 2102 / 1505 | 106 / 733 / 883 |
-| 8 | 1928 / 2480 / 2455 | 166 / 2892 / 1092 |
+| 1 | 1739 / 1790 / 1897 | 128 / 330 / 1255 |
+| 2 | 1764 / 1897 / 1857 | 247 / 622 / 793 |
+| 4 | 1819 / 2251 / 1505 | 474 / 1548 / 883 |
+| 8 | 1947 / 3230 / 2455 | 1013 / 5382 / 1092 |
 
-Mac 本地在全部并发的 EOT-final 都明显优于百炼。Pi 5 在 1～4 路的 EOT-final 仍优于百炼，
-但 4 路首 interim 较慢；8 路已计算饱和，EOT-final 明显落后百炼。百炼没有公开服务端
-decode 时间，因此不能把它的墙钟完成比例与本地 compute RTF 直接比较。
+Mac 本地在全部并发的 EOT-final 都优于百炼。Pi 5 在 1～2 路也优于百炼；4 路开始落后，
+8 路已明显计算饱和。百炼没有公开服务端 decode 时间，因此不能把它的墙钟完成比例与本地
+compute RTF 直接比较。
 
 ## 复现
 
