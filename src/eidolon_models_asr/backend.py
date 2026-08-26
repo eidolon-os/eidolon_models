@@ -22,6 +22,10 @@ class TranscriptResult:
     decode_ms: float
     rtf: float
     raw_text: str | None = None
+    streaming_text: str | None = None
+    final_revised: bool = False
+    offline_decode_ms: float = 0.0
+    offline_rtf: float = 0.0
     punctuation_ms: float = 0.0
     total_inference_ms: float = 0.0
     total_rtf: float = 0.0
@@ -36,6 +40,7 @@ class StreamingSession(Protocol):
 class StreamingBackend(Protocol):
     name: str
     model_id: str
+    offline_model_id: str | None
     punctuation_model_id: str | None
 
     def new_session(self) -> StreamingSession: ...
@@ -54,6 +59,7 @@ class MockStreamingBackend:
 
     name = "mock"
     model_id = "mock-streaming-asr"
+    offline_model_id = None
     punctuation_model_id = None
 
     def new_session(self) -> MockStreamingSession:
@@ -108,6 +114,44 @@ class PunctuationRestorer(Protocol):
     def restore(self, text: str) -> tuple[str, float]: ...
 
 
+class OfflineRecognizer(Protocol):
+    model_id: str
+
+    def recognize(self, audio: np.ndarray) -> str: ...
+
+
+class ParaformerOfflineRecognizer:
+    """Shared quantized ONNX model used for the final second pass."""
+
+    model_id = "iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx@2.0.5"
+
+    def __init__(self, model_dir: Path, *, intra_op_threads: int = 4) -> None:
+        from funasr_onnx import Paraformer
+
+        self.model_dir = model_dir
+        self._model = Paraformer(
+            model_dir=model_dir,
+            quantize=True,
+            device_id=-1,
+            intra_op_num_threads=intra_op_threads,
+        )
+
+    def recognize(self, audio: np.ndarray) -> str:
+        if not audio.size:
+            return ""
+        raw = self._model(audio)
+        texts: list[str] = []
+        for item in raw or []:
+            predictions = item.get("preds") if isinstance(item, dict) else None
+            if isinstance(predictions, str):
+                texts.append(predictions)
+            elif isinstance(predictions, (tuple, list)) and predictions:
+                text = predictions[0]
+                if isinstance(text, str):
+                    texts.append(text)
+        return "".join(texts)
+
+
 class CTTransformerPunctuationRestorer:
     """Shared quantized ONNX punctuation model used only for final text."""
 
@@ -152,6 +196,7 @@ class FunASROnnxBackend:
         *,
         intra_op_threads: int = 4,
         chunk_size: tuple[int, int, int] = (5, 10, 5),
+        offline: OfflineRecognizer | None = None,
         punctuation: PunctuationRestorer | None = None,
     ) -> None:
         from funasr_onnx.paraformer_online_bin import Paraformer
@@ -162,6 +207,8 @@ class FunASROnnxBackend:
         self.model_id = "iic/paraformer-zh-streaming-onnx@2.0.5"
         self.chunk_size = chunk_size
         self.chunk_samples = chunk_size[1] * 960
+        self._offline = offline
+        self.offline_model_id = offline.model_id if offline else None
         self._punctuation = punctuation
         self.punctuation_model_id = punctuation.model_id if punctuation else None
         config = read_yaml(str(model_dir / "config.yaml"))
@@ -187,6 +234,17 @@ class FunASROnnxBackend:
         if self._punctuation is None:
             return text, 0.0
         return self._punctuation.restore(text)
+
+    def recognize_offline(self, audio: np.ndarray) -> tuple[str, float]:
+        if self._offline is None:
+            return "", 0.0
+        # Serialize both passes. Each ONNX session already uses multiple CPU
+        # threads, so overlapping them hurts latency on small edge Hosts. Keep
+        # lock wait in the metric, matching streaming decode_ms semantics.
+        started = time.perf_counter()
+        with self._lock:
+            text = self._offline.recognize(audio)
+        return text, (time.perf_counter() - started) * 1000.0
 
     def infer(self, state: FunASROnnxSession, audio: np.ndarray, *, is_final: bool) -> list[str]:
         started = time.perf_counter()
@@ -219,6 +277,7 @@ class FunASROnnxSession:
         self._frontend = backend._new_frontend()
         self._cache: dict[str, Any] = {}
         self._pending = np.empty((0,), dtype=np.float32)
+        self._audio_chunks: list[np.ndarray] = []
         self._text = ""
         self._audio_samples = 0
         self._revision = 0
@@ -233,11 +292,14 @@ class FunASROnnxSession:
         is_final: bool,
         text: str | None = None,
         punctuation_ms: float = 0.0,
+        raw_text: str | None = None,
+        streaming_text: str | None = None,
+        offline_decode_ms: float = 0.0,
     ) -> TranscriptResult:
         self._revision += 1
         audio_ms = round(self._audio_samples / 16.0)
         audio_duration_ms = max(audio_ms, 1)
-        total_inference_ms = self._total_decode_ms + punctuation_ms
+        total_inference_ms = self._total_decode_ms + offline_decode_ms + punctuation_ms
         return TranscriptResult(
             text=self._text if text is None else text,
             delta=delta,
@@ -246,7 +308,13 @@ class FunASROnnxSession:
             audio_ms=audio_ms,
             decode_ms=round(self._total_decode_ms, 3),
             rtf=round(self._total_decode_ms / audio_duration_ms, 5),
-            raw_text=self._text,
+            raw_text=self._text if raw_text is None else raw_text,
+            streaming_text=streaming_text,
+            final_revised=(
+                streaming_text is not None and raw_text is not None and streaming_text != raw_text
+            ),
+            offline_decode_ms=round(offline_decode_ms, 3),
+            offline_rtf=round(offline_decode_ms / audio_duration_ms, 5),
             punctuation_ms=round(punctuation_ms, 3),
             total_inference_ms=round(total_inference_ms, 3),
             total_rtf=round(total_inference_ms / audio_duration_ms, 5),
@@ -258,6 +326,7 @@ class FunASROnnxSession:
         samples = _pcm16_to_float32(pcm)
         self._audio_samples += len(samples)
         if samples.size:
+            self._audio_chunks.append(samples)
             self._pending = np.concatenate((self._pending, samples))
         results: list[TranscriptResult] = []
         while self._pending.size >= self._backend.chunk_samples:
@@ -277,11 +346,22 @@ class FunASROnnxSession:
         self._pending = np.empty((0,), dtype=np.float32)
         delta = "".join(deltas)
         self._text += delta
-        punctuated, punctuation_ms = self._backend.restore_punctuation(self._text)
+        streaming_text = self._text
+        full_audio = (
+            np.concatenate(self._audio_chunks)
+            if self._audio_chunks
+            else np.empty((0,), dtype=np.float32)
+        )
+        offline_text, offline_decode_ms = self._backend.recognize_offline(full_audio)
+        raw_text = offline_text or streaming_text
+        punctuated, punctuation_ms = self._backend.restore_punctuation(raw_text)
         return self._result(
             delta,
             is_final=True,
             text=punctuated,
+            raw_text=raw_text,
+            streaming_text=streaming_text,
+            offline_decode_ms=offline_decode_ms,
             punctuation_ms=punctuation_ms,
         )
 
@@ -303,12 +383,17 @@ def result_payload(
         "is_final": result.is_final,
         "language": "zh",
         "model_id": backend.model_id,
+        "offline_model_id": backend.offline_model_id,
         "punctuation_model_id": backend.punctuation_model_id,
         "provider": backend.name,
         "audio_ms": result.audio_ms,
         "decode_ms": result.decode_ms,
         "rtf": result.rtf,
         "raw_text": result.raw_text,
+        "streaming_text": result.streaming_text,
+        "final_revised": result.final_revised,
+        "offline_decode_ms": result.offline_decode_ms,
+        "offline_rtf": result.offline_rtf,
         "punctuation_ms": result.punctuation_ms,
         "total_inference_ms": result.total_inference_ms,
         "total_rtf": result.total_rtf,

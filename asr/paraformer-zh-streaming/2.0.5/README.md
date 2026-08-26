@@ -5,8 +5,8 @@
 encoder 与 decoder。
 
 本制品只负责流式 ASR：不内嵌离线第二遍、VAD、标点、ITN 或说话人模型。语音端点由
-`eidolon_channel` 的 VAD 统一拥有；收到 `end_utterance` 后，本模型刷新流式缓存并产生 raw
-final，再由同一服务中的独立 CT-Transformer 制品恢复标点。
+`eidolon_channel` 的 VAD 统一拥有；收到 `end_utterance` 后，本模型刷新流式缓存，再由同一
+服务中的独立 offline Paraformer 产生权威 raw final，最后执行 CT-Transformer 标点恢复。
 
 输入为 16 kHz、单声道、signed little-endian PCM16。模型和运行时代码许可证分别按
 `manifest.json` 与仓库 `LICENSING.md` 追踪。

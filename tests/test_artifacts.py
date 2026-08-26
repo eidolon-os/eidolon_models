@@ -8,6 +8,8 @@ from eidolon_models_asr.artifacts import ArtifactError, verify_artifacts
 from eidolon_models_asr.config import (
     DEFAULT_MANIFEST,
     DEFAULT_MODEL_DIR,
+    DEFAULT_OFFLINE_MANIFEST,
+    DEFAULT_OFFLINE_MODEL_DIR,
     DEFAULT_PUNCTUATION_MANIFEST,
     DEFAULT_PUNCTUATION_MODEL_DIR,
 )
@@ -18,6 +20,16 @@ def test_pinned_model_artifacts_are_complete() -> None:
     assert result["ok"] is True
     assert "model_quant.onnx" in result["checked_files"]
     assert "decoder_quant.onnx" in result["checked_files"]
+
+    offline = verify_artifacts(DEFAULT_OFFLINE_MANIFEST, DEFAULT_OFFLINE_MODEL_DIR)
+    assert offline["ok"] is True
+    assert offline["checked_files"] == [
+        "am.mvn",
+        "config.yaml",
+        "configuration.json",
+        "model_quant.onnx",
+        "tokens.json",
+    ]
 
     punctuation = verify_artifacts(
         DEFAULT_PUNCTUATION_MANIFEST,

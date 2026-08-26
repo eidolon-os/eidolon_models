@@ -31,6 +31,7 @@ async def ready(request: web.Request) -> web.Response:
             "service": "eidolon-asr",
             "backend": backend.name,
             "model_id": backend.model_id,
+            "offline_model_id": backend.offline_model_id,
             "punctuation_model_id": backend.punctuation_model_id,
             "host_kind": detect_host_kind(),
             "protocol_version": PROTOCOL_VERSION,
@@ -50,6 +51,8 @@ async def info(request: web.Request) -> web.Response:
             "endpoint_owner": "upstream",
             "backend": backend.name,
             "model_id": backend.model_id,
+            "offline_enabled": backend.offline_model_id is not None,
+            "offline_model_id": backend.offline_model_id,
             "punctuation_enabled": backend.punctuation_model_id is not None,
             "punctuation_model_id": backend.punctuation_model_id,
             "chunk_size": list(settings.chunk_size),
@@ -69,6 +72,7 @@ async def stream(request: web.Request) -> web.WebSocketResponse:
                 "protocol_version": PROTOCOL_VERSION,
                 "backend": backend.name,
                 "model_id": backend.model_id,
+                "offline_model_id": backend.offline_model_id,
                 "punctuation_model_id": backend.punctuation_model_id,
             }
         )

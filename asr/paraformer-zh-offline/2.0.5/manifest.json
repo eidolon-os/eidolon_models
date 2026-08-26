@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "model_id": "iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx",
+  "version": "2.0.5",
+  "source": {
+    "url": "https://www.modelscope.cn/models/iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx",
+    "git_url": "https://www.modelscope.cn/iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx.git",
+    "tag": "v2.0.5",
+    "revision": "7162433de474912574f9d03122263776db5b046a"
+  },
+  "license": {
+    "spdx": "Apache-2.0",
+    "declared_by": "ModelScope model metadata"
+  },
+  "runtime": {
+    "name": "funasr-onnx",
+    "version": "0.4.2",
+    "quantized": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "format": "pcm_s16le",
+    "application": "final-second-pass"
+  },
+  "files": {
+    "am.mvn": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+    "config.yaml": "bfd424b9f61846aac63591e96fe24d66b35f4643bddcb4b9bb759db8f987ab79",
+    "configuration.json": "825265e469592ee4e28911fec85cbccc9ed778b12066b9af0dbdfb0bd65c8453",
+    "model_quant.onnx": "c3a06538f867c8e3d9bb9c9e1b44b126a50d732862f6c428b1b5896ee9be65c5",
+    "tokens.json": "2b20c2b12572d682afff84ce1c8d560f67b8b32a4c1f21567411d141ed352127"
+  }
+}

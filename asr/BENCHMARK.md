@@ -1,5 +1,28 @@
 # ASR concurrent streaming benchmark
 
+## 2-pass Mac 复测（2026-08-26）
+
+加入默认启用的 offline Paraformer second pass 后，在同一 Mac、同一 5.547 秒样本和相同四种
+音频变体上复测。first interim 基本不变；新增成本集中在 EOT-final。下表仍取每组最差一路：
+`offline decode` 与流式 `decode` 一样包含等待共享 ASR 锁的时间，因此并发 2 路的 223 ms
+反映了一路等待另一路完成 second pass，而不是单次模型计算突然变慢。
+
+| 并发 | first interim ms | EOT-final ms | offline decode ms | total RTF | 旧 EOT-final ms |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 1739 | 128 | 98 | 0.075 | 34 |
+| 2 | 1764 | 247 | 223 | 0.120 | 61 |
+| 4 | 1819 | 474 | 91 | 0.254 | 106 |
+| 8 | 1947 | 1013 | 120 | 0.545 | 166 |
+
+四种完整语音变体的 streaming/offline 文本均一致，final 正确且带句号。额外的截断音频测试
+确认 offline 能改写整句，但改写并不天然等于纠错：例如 1.2 秒截断从“欢迎”改为“欢迎你”，
+2.8 秒截断也出现过更差的尾字。因此 `final_revised` 表示发生 revision，不表示质量已提升；是否
+默认开启最终应以 Eidolon 自有完整语句、噪声和远场数据集的 CER 为准。
+
+offline 权重约 227 MiB；三模型服务在 Mac 上实测 RSS 约 1184 MiB，相比原 streaming +
+punctuation 的约 844 MiB 增加约 340 MiB。Pi 5 当次网络不可达，以下 Pi 表格仍是未启用
+offline 的历史基线，不能作为当前默认 2-pass 配置的性能结论。
+
 测试日期：2026-08-26。样本为 5.547 秒、16 kHz mono PCM16 中文语音。基准在内存中确定性
 生成四类音频流：原始、降低 6 dB、约 30 dB SNR 轻噪声、低音量加轻噪声；开启默认标点后
 四种流均识别为：

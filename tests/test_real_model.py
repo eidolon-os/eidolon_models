@@ -5,10 +5,16 @@ import wave
 import pytest
 
 from eidolon_models_asr.artifacts import verify_artifacts
-from eidolon_models_asr.backend import CTTransformerPunctuationRestorer, FunASROnnxBackend
+from eidolon_models_asr.backend import (
+    CTTransformerPunctuationRestorer,
+    FunASROnnxBackend,
+    ParaformerOfflineRecognizer,
+)
 from eidolon_models_asr.config import (
     DEFAULT_MANIFEST,
     DEFAULT_MODEL_DIR,
+    DEFAULT_OFFLINE_MANIFEST,
+    DEFAULT_OFFLINE_MODEL_DIR,
     DEFAULT_PUNCTUATION_MANIFEST,
     DEFAULT_PUNCTUATION_MODEL_DIR,
     PROJECT_ROOT,
@@ -18,14 +24,20 @@ from eidolon_models_asr.config import (
 @pytest.mark.model
 def test_real_chinese_streaming_inference() -> None:
     verify_artifacts(DEFAULT_MANIFEST, DEFAULT_MODEL_DIR)
+    verify_artifacts(DEFAULT_OFFLINE_MANIFEST, DEFAULT_OFFLINE_MODEL_DIR)
     verify_artifacts(DEFAULT_PUNCTUATION_MANIFEST, DEFAULT_PUNCTUATION_MODEL_DIR)
     punctuation = CTTransformerPunctuationRestorer(
         DEFAULT_PUNCTUATION_MODEL_DIR,
         intra_op_threads=2,
     )
+    offline = ParaformerOfflineRecognizer(
+        DEFAULT_OFFLINE_MODEL_DIR,
+        intra_op_threads=2,
+    )
     backend = FunASROnnxBackend(
         DEFAULT_MODEL_DIR,
         intra_op_threads=2,
+        offline=offline,
         punctuation=punctuation,
     )
     session = backend.new_session()
@@ -40,6 +52,7 @@ def test_real_chinese_streaming_inference() -> None:
     assert interims
     assert final.is_final is True
     assert final.raw_text is not None
+    assert final.streaming_text is not None
     assert len(final.text) >= 8
     assert any(fragment in final.text for fragment in ("语音", "识别", "模型", "体验"))
     assert final.audio_ms > 5000
@@ -47,6 +60,8 @@ def test_real_chinese_streaming_inference() -> None:
     assert 0 < final.rtf < 1
     assert final.text.endswith("。")
     assert final.raw_text == final.text[:-1]
+    assert final.offline_decode_ms > 0
+    assert 0 < final.offline_rtf < 1
     assert final.punctuation_ms > 0
     assert final.total_inference_ms > final.decode_ms
     assert final.total_rtf > final.rtf

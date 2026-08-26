@@ -15,7 +15,9 @@ async def test_health_and_readiness(aiohttp_client) -> None:
     ready = await client.get("/readyz")
     assert ready.status == 200
     assert (await ready.json())["backend"] == "mock"
-    assert (await (await client.get("/v1/info")).json())["punctuation_model_id"] is None
+    info = await (await client.get("/v1/info")).json()
+    assert info["offline_model_id"] is None
+    assert info["punctuation_model_id"] is None
 
 
 async def test_streaming_contract_and_multiple_utterances(aiohttp_client) -> None:
@@ -44,6 +46,9 @@ async def test_streaming_contract_and_multiple_utterances(aiohttp_client) -> Non
         assert final["is_final"] is True
         assert final["text"] == "测试"
         assert final["raw_text"] == "测试"
+        assert final["streaming_text"] is None
+        assert final["final_revised"] is False
+        assert final["offline_decode_ms"] == 0.0
         assert final["punctuation_model_id"] is None
         assert final["punctuation_ms"] == 0.0
         assert final["total_inference_ms"] == final["decode_ms"]

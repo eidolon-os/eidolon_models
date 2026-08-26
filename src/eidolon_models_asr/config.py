@@ -10,6 +10,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL_DIR = PROJECT_ROOT / "asr" / "paraformer-zh-streaming" / "2.0.5" / "model"
 DEFAULT_MANIFEST = DEFAULT_MODEL_DIR.parent / "manifest.json"
+DEFAULT_OFFLINE_MODEL_DIR = PROJECT_ROOT / "asr" / "paraformer-zh-offline" / "2.0.5" / "model"
+DEFAULT_OFFLINE_MANIFEST = DEFAULT_OFFLINE_MODEL_DIR.parent / "manifest.json"
 DEFAULT_PUNCTUATION_MODEL_DIR = (
     PROJECT_ROOT / "asr" / "punc-ct-transformer-zh-cn" / "2024-09-25" / "model"
 )
@@ -72,6 +74,9 @@ class Settings:
     backend: str = "auto"
     model_dir: Path = DEFAULT_MODEL_DIR
     manifest_path: Path = DEFAULT_MANIFEST
+    offline_enabled: bool = True
+    offline_model_dir: Path = DEFAULT_OFFLINE_MODEL_DIR
+    offline_manifest_path: Path = DEFAULT_OFFLINE_MANIFEST
     punctuation_enabled: bool = True
     punctuation_model_dir: Path = DEFAULT_PUNCTUATION_MODEL_DIR
     punctuation_manifest_path: Path = DEFAULT_PUNCTUATION_MANIFEST
@@ -87,6 +92,15 @@ class Settings:
     def from_env(cls) -> Settings:
         model_dir = Path(os.getenv("EIDOLON_ASR_MODEL_DIR", str(DEFAULT_MODEL_DIR)))
         manifest = Path(os.getenv("EIDOLON_ASR_MANIFEST", str(model_dir.parent / "manifest.json")))
+        offline_model_dir = Path(
+            os.getenv("EIDOLON_ASR_OFFLINE_MODEL_DIR", str(DEFAULT_OFFLINE_MODEL_DIR))
+        )
+        offline_manifest = Path(
+            os.getenv(
+                "EIDOLON_ASR_OFFLINE_MANIFEST",
+                str(offline_model_dir.parent / "manifest.json"),
+            )
+        )
         punctuation_model_dir = Path(
             os.getenv("EIDOLON_ASR_PUNCTUATION_MODEL_DIR", str(DEFAULT_PUNCTUATION_MODEL_DIR))
         )
@@ -102,6 +116,9 @@ class Settings:
             backend=os.getenv("EIDOLON_ASR_BACKEND", "auto"),
             model_dir=model_dir,
             manifest_path=manifest,
+            offline_enabled=_env_bool("EIDOLON_ASR_OFFLINE_ENABLED", True),
+            offline_model_dir=offline_model_dir,
+            offline_manifest_path=offline_manifest,
             punctuation_enabled=_env_bool("EIDOLON_ASR_PUNCTUATION_ENABLED", True),
             punctuation_model_dir=punctuation_model_dir,
             punctuation_manifest_path=punctuation_manifest,

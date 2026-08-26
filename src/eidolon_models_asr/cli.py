@@ -21,6 +21,7 @@ from .backend import (
     CTTransformerPunctuationRestorer,
     FunASROnnxBackend,
     MockStreamingBackend,
+    ParaformerOfflineRecognizer,
     StreamingBackend,
 )
 from .benchmark import benchmark_level
@@ -36,6 +37,13 @@ def _load_backend(settings: Settings) -> StreamingBackend:
     if settings.resolved_backend == "mock":
         return MockStreamingBackend()
     verify_artifacts(settings.manifest_path, settings.model_dir)
+    offline = None
+    if settings.offline_enabled:
+        verify_artifacts(settings.offline_manifest_path, settings.offline_model_dir)
+        offline = ParaformerOfflineRecognizer(
+            settings.offline_model_dir,
+            intra_op_threads=settings.intra_op_threads,
+        )
     punctuation = None
     if settings.punctuation_enabled:
         verify_artifacts(settings.punctuation_manifest_path, settings.punctuation_model_dir)
@@ -47,6 +55,7 @@ def _load_backend(settings: Settings) -> StreamingBackend:
         settings.model_dir,
         intra_op_threads=settings.intra_op_threads,
         chunk_size=settings.chunk_size,
+        offline=offline,
         punctuation=punctuation,
     )
 
@@ -66,6 +75,9 @@ def command_doctor(settings: Settings) -> int:
             return {"ok": False, "error": str(exc)}
 
     asr_verification = check(settings.manifest_path, settings.model_dir)
+    offline_verification: dict[str, Any] | None = None
+    if settings.offline_enabled:
+        offline_verification = check(settings.offline_manifest_path, settings.offline_model_dir)
     punctuation_verification: dict[str, Any] | None = None
     if settings.punctuation_enabled:
         punctuation_verification = check(
@@ -81,6 +93,7 @@ def command_doctor(settings: Settings) -> int:
         pass
     value = {
         "ok": bool(asr_verification.get("ok"))
+        and (not settings.offline_enabled or bool((offline_verification or {}).get("ok")))
         and (not settings.punctuation_enabled or bool((punctuation_verification or {}).get("ok"))),
         "host_kind": detect_host_kind(),
         "system": platform.system(),
@@ -91,10 +104,13 @@ def command_doctor(settings: Settings) -> int:
         "resolved_backend": settings.resolved_backend,
         "onnx_providers": providers,
         "model_dir": str(settings.model_dir),
+        "offline_enabled": settings.offline_enabled,
+        "offline_model_dir": str(settings.offline_model_dir),
         "punctuation_enabled": settings.punctuation_enabled,
         "punctuation_model_dir": str(settings.punctuation_model_dir),
         "artifacts": {
             "asr": asr_verification,
+            "offline": offline_verification,
             "punctuation": punctuation_verification,
         },
     }
@@ -106,8 +122,14 @@ def command_verify(settings: Settings) -> int:
     value: dict[str, Any] = {
         "ok": True,
         "asr": verify_artifacts(settings.manifest_path, settings.model_dir),
+        "offline": None,
         "punctuation": None,
     }
+    if settings.offline_enabled:
+        value["offline"] = verify_artifacts(
+            settings.offline_manifest_path,
+            settings.offline_model_dir,
+        )
     if settings.punctuation_enabled:
         value["punctuation"] = verify_artifacts(
             settings.punctuation_manifest_path,
@@ -131,12 +153,17 @@ def command_infer(settings: Settings, audio: Path) -> int:
             "ok": True,
             "backend": backend.name,
             "model_id": backend.model_id,
+            "offline_model_id": backend.offline_model_id,
             "interim_count": len(events),
             "text": final.text,
             "raw_text": final.raw_text,
+            "streaming_text": final.streaming_text,
+            "final_revised": final.final_revised,
             "audio_ms": final.audio_ms,
             "decode_ms": final.decode_ms,
             "rtf": final.rtf,
+            "offline_decode_ms": final.offline_decode_ms,
+            "offline_rtf": final.offline_rtf,
             "punctuation_ms": final.punctuation_ms,
             "total_inference_ms": final.total_inference_ms,
             "total_rtf": final.total_rtf,
@@ -194,6 +221,7 @@ def command_probe(url: str, audio: Path) -> int:
             "ok": True,
             "url": url,
             "backend": value["connected"]["backend"],
+            "offline_model_id": value["connected"].get("offline_model_id"),
             "interim_count": sum(
                 1
                 for event in value["events"]
@@ -201,8 +229,12 @@ def command_probe(url: str, audio: Path) -> int:
             ),
             "text": final["text"],
             "raw_text": final["raw_text"],
+            "streaming_text": final.get("streaming_text"),
+            "final_revised": final.get("final_revised", False),
             "audio_ms": final["audio_ms"],
             "rtf": final["rtf"],
+            "offline_decode_ms": final.get("offline_decode_ms", 0.0),
+            "offline_rtf": final.get("offline_rtf", 0.0),
             "punctuation_ms": final["punctuation_ms"],
             "total_rtf": final["total_rtf"],
         }
@@ -269,6 +301,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--backend", help="auto, onnx-cpu, or mock")
     parser.add_argument("--model-dir", type=Path)
     parser.add_argument("--manifest", type=Path)
+    parser.add_argument("--offline-model-dir", type=Path)
+    parser.add_argument("--offline-manifest", type=Path)
+    parser.add_argument(
+        "--no-offline",
+        action="store_true",
+        help="disable offline second-pass final correction",
+    )
     parser.add_argument("--punctuation-model-dir", type=Path)
     parser.add_argument("--punctuation-manifest", type=Path)
     parser.add_argument(
@@ -305,6 +344,8 @@ def main(argv: list[str] | None = None) -> int:
         ("backend", args.backend),
         ("model_dir", args.model_dir),
         ("manifest_path", args.manifest),
+        ("offline_model_dir", args.offline_model_dir),
+        ("offline_manifest_path", args.offline_manifest),
         ("punctuation_model_dir", args.punctuation_model_dir),
         ("punctuation_manifest_path", args.punctuation_manifest),
         ("intra_op_threads", args.threads),
@@ -313,6 +354,8 @@ def main(argv: list[str] | None = None) -> int:
             overrides[field] = argument
     if args.no_punctuation:
         overrides["punctuation_enabled"] = False
+    if args.no_offline:
+        overrides["offline_enabled"] = False
     if args.command == "serve":
         if args.host is not None:
             overrides["host"] = args.host

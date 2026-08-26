@@ -2,8 +2,8 @@
 
 Eidolon OS 私有化部署模型仓库，用于统一管理、版本化和交付 ASR、LLM、TTS 等运行时模型资产。
 
-当前已包含中文流式 Paraformer INT8 ONNX 与 CT-Transformer 标点模型，以及供 macOS arm64、
-树莓派 5 arm64 和未来 RK3588 共用的 `eidolon-asr` 推理服务与测试入口。详见
+当前已包含中文流式/离线 Paraformer INT8 ONNX 与 CT-Transformer 标点模型，以及供 macOS
+arm64、树莓派 5 arm64 和未来 RK3588 共用的 `eidolon-asr` 2-pass 推理服务与测试入口。详见
 [asr/README.md](asr/README.md)。
 
 ## 仓库结构
