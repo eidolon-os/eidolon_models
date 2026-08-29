@@ -3,7 +3,7 @@ name = "eidolon-models-asr"
 version = "0.1.0"
 description = "Host-independent local ASR service for Eidolon OS"
 readme = "README.md"
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.13,<3.14"
 dependencies = [
   "aiohttp>=3.11,<4",
   "funasr-onnx==0.4.2",
@@ -37,7 +37,7 @@ markers = [
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py313"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
