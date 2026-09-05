@@ -1,6 +1,6 @@
 # ASR / TTS / LLM 验证方案（RK3588）
 
-状态：`plan` · 2026-09-04 · 依据 [HARDWARE.md](HARDWARE.md) 的实测基线
+状态：`plan` · 2026-09-04 · 依据 [HOST-RK3588.md](HOST-RK3588.md) 的实测基线
 
 ## 0. 这份方案的三条前提
 
@@ -267,7 +267,7 @@ flow-matching 通常在 4–6 步下质量损失可接受，若成立则不必�
 
 ### 5.1 已完成：Qwen3-1.7B w8a8 实测（2026-09-04）
 
-完整数据见 [HARDWARE.md §2.9](HARDWARE.md)。对照上面的门槛：
+完整数据见 [HOST-RK3588.md §2.9](HOST-RK3588.md)。对照上面的门槛：
 
 | 指标 | 门槛 | 实测 | 判定 |
 | --- | ---: | ---: | --- |
@@ -285,19 +285,28 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
 | EOT → ASR final | 250 ms | 250 ms |
 | ASR final → LLM 首 token | ~4500 ms | **~180–280 ms** |
 | LLM 首 token → TTS 首包 | ≤250 ms（待测） | ≤250 ms |
-| **合计** | **~5 s** ❌ | **~700–780 ms** ✅ |
+| **合计** | **~5 s** ❌ | **~700–780 ms**（当时的预测，见下方更正） |
 
 **修订后的 Gate：带 prompt cache 的 TTFT < 300 ms。** 这是 §7 对话预算能否成立的唯一决定项。
 
 > **已完成（2026-09-05）：达标，且比预期好。** 实测 TTFT **160–170 ms**（同前缀不同话轮，只 prefill 13–16 token）。
 > **RKLLM 1.3.0 自带前缀缓存，无需调用任何 API**；`rkllm_load_prompt_cache` 只用于解决冷启动（首轮 190 ms）。
 > ⚠️ 两条硬规则：**对话循环里不要调 `rkllm_clear_kv_cache`**（实测会导致全量重算）；**前缀必须逐字节稳定**，易变内容排在其后。
-> 详见 [HARDWARE.md §2.10](HARDWARE.md)。对话预算合计 **~665 ms**，低于 900 ms 门槛。
+> 详见 [HOST-RK3588.md §2.10](HOST-RK3588.md)。**但对话预算合计不是 665 ms。**
+> 那个数字里，"EOT → ASR final" 是分量相加推算的、"LLM 首 token → TTS 首包 ≤250 ms"
+> 是未测的臆造值。2026-09-05 联合压测端到端实测：**≈ 4.06 s**
+> （292 ASR + 3 bge + 165 LLM 首 token + 1604 LLM 生成首句 + 1998 TTS 首包）。
+> 本 Gate（TTFT < 300 ms）依然达标，**失守的是它下游的 TTS**——
+> 详见 [HOST-RK3588.md §2.17](HOST-RK3588.md)。
 
 两条必须写进实现的配置：
 
 - `RKLLMInput.enable_thinking = false` —— Qwen3 思考模式会先吐数百 `<think>` token，语音场景不可用
-- `enabled_cpus_mask` —— RKLLM **默认占用 A76 cpu4-7**，与 ASR 直接冲突。挪到 A55 的代价是 LLM 性能 −25~33%，需联合压测定夺
+- `enabled_cpus_mask` —— **不要设。** RKLLM 默认自选 A76 cpu4-7，这就是最优；
+  2026-09-05 实测强制 `mask=0xff, num=8` 会把 decode 从 12.94 打到 5.52 tok/s。
+  另有硬约束 `enabled_cpus_num >= npu_core_num`（本模型为 3），给 2 个 CPU 直接
+  `rkllm_init=-1`。与 ASR 的冲突在真实时序下不存在——ASR 的 offline 突发与
+  LLM/TTS 天然串行，见 [HOST-RK3588.md §2.17](HOST-RK3588.md)
 
 ## 6. 阶段五：联合压测 —— 这才是最终验收
 
@@ -325,7 +334,7 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
 | A76 7 + A55 | memory bge（绑 A76，线程数=核数）、channel、控制面、vision |
 | NPU 三核 | **无法分区** —— RKLLM 无 core mask API，两个 RKLLM 各抓满 3 核 |
 
-> **2026-09-05 联合压测修正**：本表两次被实测推翻，详见 HARDWARE.md §2.17。
+> **2026-09-05 联合压测修正**：本表两次被实测推翻，详见 HOST-RK3588.md §2.17。
 > * 「NPU core0/1/2 分别给 ASR/TTS/LLM」**不成立**。`rkllm.h` 没有任何 NPU
 >   core 接口，RKLLM 用满 3 核；Qwen3 与 CosyVoice2 并发时双方各掉 46%–64%，
 >   NPU 近似串行（§2.15）。**LLM 与 TTS 必须串行，端到端按串行算。**

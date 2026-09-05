@@ -43,9 +43,10 @@ tts/    语音合成模型
 
 ## Host 能力与验证
 
-- [HARDWARE.md](HARDWARE.md)：各 Host 的**实测**能力基线。RK3588 / Orange Pi 5 Max 已于 2026-09-04
-  完成底座验收（NPU driver v0.9.8 + librknnrt 2.3.2 推理通过、内存带宽 19–21 GB/s、
-  NVMe 读 2.4 GB/s）。该文只记录实测数字。
+- [HOST-RK3588.md](HOST-RK3588.md)：**Orange Pi 5 Max（RK3588）的实测档案**。系统与 NPU、
+  内存带宽、funasr 2pass、Qwen3-1.7B、prompt 前缀缓存、CosyVoice2 分组件与端到端、
+  Kokoro 对照、bge，以及 ASR/LLM/TTS/bge 的联合压测与 CPU/NPU 分配方案。开头有结论速查。
+- [HARDWARE.md](HARDWARE.md)：三台 Host 的横向对照表，各机明细分文件。
 - [VERIFICATION.md](VERIFICATION.md)：ASR / TTS / LLM 在 RK3588 上的验证方案，含前置条件、
   分阶段门槛和放弃判据。
 
