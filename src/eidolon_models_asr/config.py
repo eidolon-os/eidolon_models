@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 import platform
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -28,6 +28,19 @@ def _env_bool(name: str, default: bool) -> bool:
     if normalized in {"0", "false", "no", "off"}:
         return False
     raise ValueError(f"{name} must be one of: 1, 0, true, false, yes, no, on, off")
+
+
+def _default_intra_op_threads() -> int:
+    """Size the ONNX intra-op pool to the cores this process may actually use.
+
+    ``os.process_cpu_count()`` respects the CPU affinity mask, unlike
+    ``os.cpu_count()``. A service pinned with ``taskset`` -- how the RK3588
+    board keeps the A55 and A76 clusters apart -- then sizes its pool to the
+    cores it was actually given instead of oversubscribing every core on the
+    machine. On hosts without affinity support (macOS) this falls back to the
+    system CPU count, which is the previous behaviour.
+    """
+    return max(1, min(4, os.process_cpu_count() or 1))
 
 
 def detect_host_kind() -> str:
@@ -80,7 +93,7 @@ class Settings:
     punctuation_enabled: bool = True
     punctuation_model_dir: Path = DEFAULT_PUNCTUATION_MODEL_DIR
     punctuation_manifest_path: Path = DEFAULT_PUNCTUATION_MANIFEST
-    intra_op_threads: int = max(1, min(4, os.cpu_count() or 1))
+    intra_op_threads: int = field(default_factory=_default_intra_op_threads)
     chunk_size: tuple[int, int, int] = (5, 10, 5)
     max_binary_message_bytes: int = 1024 * 1024
     max_connections: int = 64
@@ -143,7 +156,7 @@ class Settings:
             punctuation_model_dir=punctuation_model_dir,
             punctuation_manifest_path=punctuation_manifest,
             intra_op_threads=int(
-                os.getenv("EIDOLON_ASR_THREADS", str(max(1, min(4, os.cpu_count() or 1))))
+                os.getenv("EIDOLON_ASR_THREADS", str(_default_intra_op_threads()))
             ),
             max_connections=int(os.getenv("EIDOLON_ASR_MAX_CONNECTIONS", "64")),
             realtime_slots=int(os.getenv("EIDOLON_ASR_REALTIME_SLOTS", "2")),

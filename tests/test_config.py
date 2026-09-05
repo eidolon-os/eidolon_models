@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+
 import pytest
 
 from eidolon_models_asr.config import Settings, detect_host_kind, resolve_backend
@@ -76,3 +78,34 @@ def test_rknn_cannot_be_selected_without_artifact() -> None:
 
 def test_host_kind_is_diagnostic_string() -> None:
     assert detect_host_kind()
+
+
+def test_default_threads_follow_process_affinity(monkeypatch) -> None:
+    """A service pinned to 2 cores must not size its pool to every core.
+
+    ``os.cpu_count()`` ignores the affinity mask, so a ``taskset``-pinned
+    process used to oversubscribe. ``os.process_cpu_count()`` respects it.
+    """
+    monkeypatch.setattr(os, "cpu_count", lambda: 8)
+    monkeypatch.setattr(os, "process_cpu_count", lambda: 2)
+    assert Settings().intra_op_threads == 2
+    assert Settings.from_env().intra_op_threads == 2
+
+
+def test_default_threads_stay_clamped_to_four(monkeypatch) -> None:
+    monkeypatch.setattr(os, "process_cpu_count", lambda: 16)
+    assert Settings().intra_op_threads == 4
+    assert Settings.from_env().intra_op_threads == 4
+
+
+@pytest.mark.parametrize("reported", [None, 0])
+def test_default_threads_never_drop_below_one(monkeypatch, reported) -> None:
+    monkeypatch.setattr(os, "process_cpu_count", lambda: reported)
+    assert Settings().intra_op_threads == 1
+    assert Settings.from_env().intra_op_threads == 1
+
+
+def test_threads_environment_override_beats_affinity(monkeypatch) -> None:
+    monkeypatch.setattr(os, "process_cpu_count", lambda: 2)
+    monkeypatch.setenv("EIDOLON_ASR_THREADS", "3")
+    assert Settings.from_env().intra_op_threads == 3
