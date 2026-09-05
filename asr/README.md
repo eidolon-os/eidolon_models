@@ -86,6 +86,31 @@ PCM16，轮到后补跑已收到的音频，不切换或降级到其他 ASR。
 `EIDOLON_ASR_MAX_QUEUE_WAIT_SECONDS`。Pi 5 实测建议保持 2 个实时槽；提高连接数不会增加模型
 内存，提高实时槽数才会增加并行 cache、CPU 争用和尾延迟。
 
+### CPU 核绑定
+
+绑核用一个变量控制，**线程数会自动跟随**，不需要再单独设：
+
+```bash
+EIDOLON_ASR_CPU_AFFINITY=4,5 ./scripts/eidolon-asr serve   # 绑 2 个 A76，池自动=2
+```
+
+语法同 `taskset`（`4,5`、`0-3`、`4-7`、`0-3,7`）。**留空=不绑核**，这是当前
+RK3588 上的方案。intra_op 池按 `os.process_cpu_count()` 取数并夹到 4，它遵守
+亲和性掩码——所以绑几个核就开几个线程，不会出现「绑 2 个核却开 4 个线程」的
+超订（那会让 RTF 差 2.5 倍，见 HOST-RK3588.md §2.16 ③）。
+
+`EIDOLON_ASR_THREADS` 仍可手工覆盖线程数，但那会解除上述联动，仅供排查。
+在没有亲和性接口的平台（macOS）设置 `EIDOLON_ASR_CPU_AFFINITY` 会直接报错，
+不会静默忽略——静默的绑核失败正是超订的来源。
+
+部署时不要把值写死在 unit 里：`deploy/systemd/eidolon-asr.service` 通过
+`EnvironmentFile=-/etc/eidolon/cpu-allocation.env` 读取，全板分配集中在
+`deploy/cpu-allocation.env` 一个文件里，改完 `systemctl restart eidolon-asr`
+即可，不需要 `daemon-reload`。
+
+`eidolon-asr doctor` 会报告 `cpu_affinity` / `process_cpu_count` /
+`intra_op_threads` 三项，用来确认实际生效的是什么。
+
 完整测试：
 
 ```bash

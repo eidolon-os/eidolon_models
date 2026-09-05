@@ -4,7 +4,13 @@ import os
 
 import pytest
 
-from eidolon_models_asr.config import Settings, detect_host_kind, resolve_backend
+from eidolon_models_asr.config import (
+    Settings,
+    apply_cpu_affinity,
+    detect_host_kind,
+    parse_cpu_list,
+    resolve_backend,
+)
 
 
 def test_auto_backend_is_portable_cpu_baseline() -> None:
@@ -109,3 +115,69 @@ def test_threads_environment_override_beats_affinity(monkeypatch) -> None:
     monkeypatch.setattr(os, "process_cpu_count", lambda: 2)
     monkeypatch.setenv("EIDOLON_ASR_THREADS", "3")
     assert Settings.from_env().intra_op_threads == 3
+
+
+@pytest.mark.parametrize(
+    ("spec", "expected"),
+    [
+        ("4", {4}),
+        ("4,5", {4, 5}),
+        ("0-3", {0, 1, 2, 3}),
+        ("4-7", {4, 5, 6, 7}),
+        ("0-3,7", {0, 1, 2, 3, 7}),
+        (" 4 , 5 ", {4, 5}),
+        ("4,4,5", {4, 5}),
+    ],
+)
+def test_cpu_list_parses_taskset_syntax(spec, expected) -> None:
+    assert parse_cpu_list(spec) == expected
+
+
+@pytest.mark.parametrize("spec", ["", "  ", ",", "5-4", "-1", "a", "0-b"])
+def test_invalid_cpu_list_is_rejected(spec) -> None:
+    with pytest.raises(ValueError):
+        parse_cpu_list(spec)
+
+
+def test_unset_affinity_leaves_the_process_alone(monkeypatch) -> None:
+    monkeypatch.delenv("EIDOLON_ASR_CPU_AFFINITY", raising=False)
+    assert apply_cpu_affinity() is None
+
+
+def test_blank_affinity_leaves_the_process_alone(monkeypatch) -> None:
+    monkeypatch.setenv("EIDOLON_ASR_CPU_AFFINITY", "   ")
+    assert apply_cpu_affinity() is None
+
+
+def test_affinity_is_applied_and_threads_follow(monkeypatch) -> None:
+    """The whole point: pin the cores, and the pool size follows by itself."""
+    applied: list[frozenset[int]] = []
+    monkeypatch.setattr(
+        os, "sched_setaffinity", lambda pid, cpus: applied.append(frozenset(cpus)), raising=False
+    )
+    monkeypatch.setenv("EIDOLON_ASR_CPU_AFFINITY", "4,5")
+    assert apply_cpu_affinity() == {4, 5}
+    assert applied == [frozenset({4, 5})]
+
+    # after pinning, process_cpu_count() reports the mask, so the pool is 2
+    monkeypatch.setattr(os, "process_cpu_count", lambda: 2)
+    assert Settings.from_env().intra_op_threads == 2
+
+
+def test_affinity_on_a_platform_without_support_is_an_error(monkeypatch) -> None:
+    """A pin that silently does nothing is what oversubscribes the pool."""
+    monkeypatch.delattr(os, "sched_setaffinity", raising=False)
+    monkeypatch.setenv("EIDOLON_ASR_CPU_AFFINITY", "4,5")
+    with pytest.raises(ValueError, match="no CPU affinity support"):
+        apply_cpu_affinity()
+
+
+def test_unusable_cpu_index_reports_the_valid_range(monkeypatch) -> None:
+    def refuse(pid, cpus):
+        raise OSError(22, "Invalid argument")
+
+    monkeypatch.setattr(os, "sched_setaffinity", refuse, raising=False)
+    monkeypatch.setattr(os, "cpu_count", lambda: 8)
+    monkeypatch.setenv("EIDOLON_ASR_CPU_AFFINITY", "99")
+    with pytest.raises(ValueError, match="valid indices are 0-7"):
+        apply_cpu_affinity()

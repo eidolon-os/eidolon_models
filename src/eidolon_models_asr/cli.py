@@ -25,7 +25,12 @@ from .backend import (
     StreamingBackend,
 )
 from .benchmark import benchmark_level
-from .config import Settings, detect_host_kind
+from .config import (
+    Settings,
+    apply_cpu_affinity,
+    detect_host_kind,
+    effective_cpu_affinity,
+)
 from .service import create_app
 
 
@@ -101,6 +106,7 @@ def command_doctor(settings: Settings) -> int:
         "python": platform.python_version(),
         "cpu_count": os.cpu_count(),
         "process_cpu_count": os.process_cpu_count(),
+        "cpu_affinity": effective_cpu_affinity(),
         "intra_op_threads": settings.intra_op_threads,
         "requested_backend": settings.backend,
         "resolved_backend": settings.resolved_backend,
@@ -353,6 +359,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    # Pin before Settings.from_env(): intra_op_threads is derived from the
+    # affinity mask, so this order keeps the pool and the cores in step.
+    apply_cpu_affinity()
     settings = Settings.from_env()
     overrides: dict[str, Any] = {}
     for field, argument in (
