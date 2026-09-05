@@ -1,0 +1,142 @@
+#!/bin/sh
+# Compare ASR core allocations and print the table that settles the choice.
+#
+# The pinning decision in deploy/cpu-allocation.env is data, not code, so it is
+# meant to be re-decided whenever the evidence changes. This is the command that
+# produces the evidence: it runs the same benchmark under each candidate core
+# set and prints a markdown table ready to paste into HOST-RK3588.md.
+#
+#   scripts/asr-affinity-sweep                    # default candidates
+#   scripts/asr-affinity-sweep -r 5 - 4,5         # unpinned vs 2x A76, 5 runs
+#   scripts/asr-affinity-sweep -n "LLM 并发中"     # label the load conditions
+#
+# "-" means unpinned. Every other SPEC is a taskset-style CPU list, passed
+# through EIDOLON_ASR_CPU_AFFINITY; the intra-op pool follows it automatically.
+#
+# The open question this exists for: A76x2 vs unpinned under MIXED load. Run it
+# with LLM/TTS working alongside and -n saying so, then record both rows.
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+VENV_BIN=${EIDOLON_ASR_VENV_BIN:-$REPO_ROOT/.venv/bin}
+ASR="$SCRIPT_DIR/eidolon-asr"
+PORT=${EIDOLON_ASR_PORT:-8767}
+AUDIO=${EIDOLON_ASR_BENCH_AUDIO:-$REPO_ROOT/tests/data/asr_example_zh.wav}
+
+repeat=3
+concurrency=1
+note=""
+while getopts "r:c:n:h" opt; do
+  case "$opt" in
+    r) repeat=$OPTARG ;;
+    c) concurrency=$OPTARG ;;
+    n) note=$OPTARG ;;
+    h) sed -n '2,20p' "$0"; exit 0 ;;
+    *) echo "usage: $0 [-r repeat] [-c concurrency] [-n note] [SPEC...]" >&2; exit 2 ;;
+  esac
+done
+shift $((OPTIND - 1))
+[ "$#" -gt 0 ] || set -- - 4,5 4-7 0-3
+
+PY="$VENV_BIN/python"
+if [ ! -x "$PY" ]; then
+  echo "no venv python at $PY -- create it first (uv sync), or set EIDOLON_ASR_VENV_BIN" >&2
+  exit 1
+fi
+[ -f "$AUDIO" ] || { echo "benchmark audio not found: $AUDIO" >&2; exit 1; }
+
+temps () {
+  for z in /sys/class/thermal/thermal_zone*; do
+    [ -r "$z/temp" ] || continue
+    printf '%s=%sC ' "$(cat "$z/type")" "$(( $(cat "$z/temp") / 1000 ))"
+  done
+}
+
+stop_serve () {
+  pkill -f "eidolon_models_asr.cli serve" >/dev/null 2>&1 || true
+  pkill -f "eidolon-asr serve" >/dev/null 2>&1 || true
+  sleep 2
+}
+
+# Effective mask and pool size, without paying for a model load.
+describe () {
+  EIDOLON_ASR_CPU_AFFINITY=$1 "$PY" - <<'PYEOF'
+import os
+from eidolon_models_asr.config import Settings, apply_cpu_affinity, effective_cpu_affinity
+
+if os.environ.get("EIDOLON_ASR_CPU_AFFINITY"):
+    apply_cpu_affinity()
+cpus = effective_cpu_affinity()
+mask = "unpinned" if cpus is None else ",".join(str(c) for c in cpus)
+print(f"{mask}\t{Settings.from_env().intra_op_threads}")
+PYEOF
+}
+
+# One run: start serve under the mask, bench it unpinned, print total_rtf p50.
+one_run () {
+  spec=$1
+  stop_serve
+  if [ -z "$spec" ]; then
+    unset EIDOLON_ASR_CPU_AFFINITY || true
+  else
+    EIDOLON_ASR_CPU_AFFINITY=$spec; export EIDOLON_ASR_CPU_AFFINITY
+  fi
+  "$ASR" serve >"$REPO_ROOT/.affinity-sweep-serve.log" 2>&1 &
+  serve_pid=$!
+  ready=0
+  i=0
+  while [ "$i" -lt 90 ]; do
+    if curl -sf "http://127.0.0.1:$PORT/readyz" >/dev/null 2>&1; then ready=1; break; fi
+    kill -0 "$serve_pid" 2>/dev/null || break
+    sleep 1
+    i=$((i + 1))
+  done
+  if [ "$ready" -ne 1 ]; then
+    echo "serve failed to become ready; see .affinity-sweep-serve.log" >&2
+    stop_serve
+    return 1
+  fi
+  # The client must not inherit the mask, or it competes for the same cores.
+  unset EIDOLON_ASR_CPU_AFFINITY || true
+  "$ASR" bench "$AUDIO" --concurrency "$concurrency" 2>/dev/null | "$PY" -c '
+import json, sys
+level = json.load(sys.stdin)["results"][0]
+stats = next(v for v in level.values() if isinstance(v, dict) and "total_rtf" in v)
+print("%.3f" % stats["total_rtf"]["p50"])
+'
+  kill "$serve_pid" 2>/dev/null || true
+  wait "$serve_pid" 2>/dev/null || true
+}
+
+trap 'stop_serve' EXIT INT TERM
+
+echo "# ASR affinity sweep"
+echo
+echo "- host: $(uname -srm)"
+echo "- audio: $(basename "$AUDIO"), concurrency $concurrency, $repeat run(s) each"
+[ -n "$note" ] && echo "- conditions: $note"
+echo "- thermal before: $(temps)"
+echo
+echo "| 绑核 | intra_op_threads | total_rtf (p50) | 中位 |"
+echo "| --- | ---: | --- | ---: |"
+
+for spec in "$@"; do
+  [ "$spec" = "-" ] && spec=""
+  threads=$(describe "$spec" | cut -f2)
+  runs=""
+  n=0
+  while [ "$n" -lt "$repeat" ]; do
+    value=$(one_run "$spec") || value="FAIL"
+    runs="${runs:+$runs / }$value"
+    n=$((n + 1))
+  done
+  median=$(printf '%s' "$runs" | tr '/' '\n' | tr -d ' ' | grep -v FAIL | sort -n \
+    | awk '{a[NR]=$1} END {if (NR) printf "%.3f", (NR%2) ? a[(NR+1)/2] : (a[NR/2]+a[NR/2+1])/2; else printf "n/a"}')
+  label=${spec:-（不绑核）}
+  echo "| $label | $threads | $runs | **$median** |"
+done
+
+echo
+echo "- thermal after: $(temps)"
+echo "- unpinned means the mask this host gives by default: $(describe "" | cut -f1)"

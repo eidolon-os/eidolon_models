@@ -378,6 +378,14 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
 > 但这与上方修正块「ASR 不绑核、静态划核多余」的结论冲突——两者都有实测
 > 支撑（不绑核靠 EAS 把 offline 突发放上大核，绑 4–5 则牺牲突发峰值换确定性），
 > **需要在混跑场景下另做一次对比才能定，目前维持不绑核。**
+> 这个对比现在是一条命令，不必再手写脚本：
+>
+> ```bash
+> scripts/asr-affinity-sweep -r 5 -n "LLM+TTS 并发中" - 4,5
+> ```
+>
+> 空载下已复测：不绑核 0.225、A76x2 0.280（governor=ondemand）。
+> 决策本身是数据，改 `deploy/cpu-allocation.env` 一行即可，线程数自动跟随。
 >
 > 「和 channel 抢大核」的顾虑仍未消除，但 09-05 的结论是静态划核在真实
 > 时序下大多多余——ASR 的 offline 突发与 LLM/TTS 天然串行。若后续混跑

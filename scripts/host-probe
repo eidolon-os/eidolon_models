@@ -1,0 +1,64 @@
+#!/bin/sh
+# One-shot hardware inventory for a Host, to run when a board is new or reflashed.
+#
+# Everything here was previously a hand-written script living only on the board,
+# which is exactly what a reflash loses. Output is meant to be pasted into
+# HOST-RK3588.md (or a new HOST-*.md) as the measured record for that machine.
+#
+#   scripts/host-probe
+#
+# Read-only: probes device nodes and sysfs, starts nothing, installs nothing.
+set -eu
+
+section () { printf '\n########## %s ##########\n' "$1"; }
+
+section "identity"
+uname -srm
+[ -r /proc/device-tree/model ] && tr -d '\0' < /proc/device-tree/model && echo
+command -v lsb_release >/dev/null 2>&1 && lsb_release -ds 2>/dev/null || true
+
+section "CPU topology"
+echo "nproc: $(nproc 2>/dev/null || echo '?')"
+if [ -d /sys/devices/system/cpu/cpu0/cpufreq ]; then
+  for c in /sys/devices/system/cpu/cpu[0-9]*; do
+    n=$(basename "$c")
+    max=$(cat "$c/cpufreq/cpuinfo_max_freq" 2>/dev/null || echo '?')
+    gov=$(cat "$c/cpufreq/scaling_governor" 2>/dev/null || echo '?')
+    printf '%s max=%s kHz governor=%s\n' "$n" "$max" "$gov"
+  done
+fi
+
+section "memory"
+free -m 2>/dev/null | head -2 || true
+
+section "thermal"
+for z in /sys/class/thermal/thermal_zone*; do
+  [ -r "$z/temp" ] || continue
+  printf '%s=%sC ' "$(cat "$z/type")" "$(( $(cat "$z/temp") / 1000 ))"
+done
+echo
+
+section "NPU (RKNPU)"
+ls -la /dev/rknpu* 2>/dev/null || echo "  (no /dev/rknpu*)"
+cat /sys/kernel/debug/rknpu/version 2>/dev/null || echo "  (version unreadable; needs root + debugfs)"
+echo "load: $(cat /sys/kernel/debug/rknpu/load 2>/dev/null || echo '(unreadable)')"
+
+section "GPU / OpenCL / Vulkan"
+ls -la /dev/mali0 2>/dev/null | head -1 || echo "  (no /dev/mali0)"
+echo "libmali:"; ls /usr/lib/aarch64-linux-gnu/libmali* /usr/lib/libmali* 2>/dev/null || echo "  (none)"
+echo "OpenCL ICD:"; ls /etc/OpenCL/vendors/ 2>/dev/null || echo "  (no /etc/OpenCL/vendors)"
+echo "libOpenCL:"; ls /usr/lib/aarch64-linux-gnu/libOpenCL* 2>/dev/null || echo "  (none)"
+printf 'clinfo: '; command -v clinfo >/dev/null 2>&1 && clinfo -l 2>&1 | head -5 || echo "(not installed)"
+printf 'vulkaninfo: '; command -v vulkaninfo >/dev/null 2>&1 \
+  && vulkaninfo --summary 2>&1 | grep -iE "deviceName|apiVersion" | head -3 || echo "(not installed)"
+echo "GPU freq: $(cat /sys/class/devfreq/*.gpu/cur_freq 2>/dev/null \
+  || cat /sys/devices/platform/*.gpu/devfreq/*.gpu/cur_freq 2>/dev/null || echo '(unreadable)')"
+
+section "storage"
+lsblk -o NAME,SIZE,TYPE,MOUNTPOINT 2>/dev/null | head -15 || true
+
+section "network"
+ip -brief addr 2>/dev/null || true
+
+echo
+echo HOST_PROBE_DONE

@@ -111,6 +111,17 @@ RK3588 上的方案。intra_op 池按 `os.process_cpu_count()` 取数并夹到 4
 `eidolon-asr doctor` 会报告 `cpu_affinity` / `process_cpu_count` /
 `intra_op_threads` 三项，用来确认实际生效的是什么。
 
+要改这个决策，先重跑证据——不必手写脚本：
+
+```bash
+scripts/asr-affinity-sweep                          # 默认候选：不绑核 / 4,5 / 4-7 / 0-3
+scripts/asr-affinity-sweep -r 5 -n "LLM 并发中" - 4,5   # 只比两个候选
+```
+
+它逐个候选起停 serve、跑同一段音频，输出可直接粘进 HOST-RK3588.md 的表格，
+并记录温度与条件。换新板子时先跑 `scripts/host-probe` 做一次硬件盘点
+（CPU 频率与 governor、NPU/GPU、OpenCL/Vulkan、存储、网络）。
+
 完整测试：
 
 ```bash
