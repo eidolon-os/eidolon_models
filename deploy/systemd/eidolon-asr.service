@@ -1,23 +1,50 @@
 [Unit]
 Description=Eidolon local streaming ASR
-After=network.target
+After=local-fs.target network.target
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
 User=eidolon
 Group=eidolon
-WorkingDirectory=/opt/eidolon/current/eidolon_models
+UMask=0007
+# The Host path contract, the same one every product unit is sealed against.
+EnvironmentFile=/etc/eidolon/host.env
+# Optional: which cores this Host gives the recognizer. Absent on a Host that
+# has not decided, and the service then sizes its pool to whatever it may run
+# on. Measured on RK3588: the two CPU clusters differ by 2.5x on this workload,
+# so where it runs is not a detail. See eidolon_models/HOST-RK3588.md §2.16.
+EnvironmentFile=-/etc/eidolon/cpu-allocation.env
 Environment=EIDOLON_ASR_HOST=127.0.0.1
 Environment=EIDOLON_ASR_PORT=8768
 Environment=EIDOLON_ASR_BACKEND=auto
 Environment=EIDOLON_ASR_UV_CACHE_DIR=/var/cache/eidolon/asr/uv
-# 核分配的唯一可调点，见 deploy/cpu-allocation.env。
-# 前导 '-' = 文件不存在也照常启动（默认不绑核）。
-EnvironmentFile=-/etc/eidolon/cpu-allocation.env
+Environment=PATH=/opt/eidolon/current/eidolon_models/.venv/bin:/usr/local/bin:/usr/bin:/bin
 ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-asr serve
 Restart=on-failure
 RestartSec=2
+# Three ONNX models load before the socket answers; measured at about 1 s on
+# RK3588 and slower on a cold page cache, so the limit is generous on purpose.
 TimeoutStartSec=120
+KillSignal=SIGTERM
+TimeoutStopSec=20s
+CacheDirectory=eidolon/asr
+CacheDirectoryMode=0750
+RuntimeDirectory=eidolon/asr
+RuntimeDirectoryMode=0750
+LogsDirectory=eidolon/asr
+LogsDirectoryMode=0750
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+CapabilityBoundingSet=
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
 
 [Install]
 WantedBy=multi-user.target
