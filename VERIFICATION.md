@@ -18,7 +18,7 @@
 | P0-1 | **有线网络** | ops 的 `require_wired_release_upload = true` 会拒绝在无线上做 release 上传；2.4 GHz WiFi 实测抖动 15 ms 且掉线，不能承载交付 |
 | P0-2 | ~~一台 x86_64 Linux 转换机~~ **已解除** | `rknn-toolkit2` 2.3.2 有 aarch64 wheel，**转换可以在板子上完成**，已于 2026-09-04 端到端验证。见 §2.0 |
 | P0-3 | **自有中文 CER 评测集** | 没有它，"选型"只是"能跑"。当前 BENCHMARK.md 全是时延，一个准确率数字都没有 |
-| P0-4 | **端口注册** | ✅ 已解除（2026-09-05）：`eidolon-asr` 默认改为 **8768**。8767 归 `channel_provider`（`eidolon_ops/.../source_assets.py` 与 `eidolon_channel/config/channel-provider.yaml` 都已占用），本服务未部署过、是后来者，所以让位。端口角色 `asr_stream` 已在 `ops/component.toml` 声明，冲突今后由 ops 的角色注册表在装配时拦截。TTS/LLM 的端口等它们真有 unit 时再申请，先占号等于声明不存在的服务 |
+| P0-4 | **端口注册** | ✅ 已解除（2026-09-05）：`eidolon-asr` 默认改为 **8768**。8767 归 `channel_provider`（`eidolon_ops/.../source_assets.py` 与 `eidolon_channel/config/channel-provider.yaml` 都已占用），本服务未部署过、是后来者，所以让位。端口角色 `asr_stream` 已在 `ops/component.toml` 声明。**但不要以为冲突从此会被自动拦截**（2026-09-05 核实）：ops 的 `_claim` 按**角色名**去重，两个不同角色用同一端口号抓不到；而按端口号对照 `source_assets.PORTS` 的漂移测试，其 fixture 调用 `read_component_contracts(sources)` **不带 capability**，`asr_stream` 是 `requires_capability = "local_asr"` 的，所以那个测试根本看不到它。实测：不带 capability 时 `port_roles` 无 `asr_stream`，带上才有 8768；`source_assets.PORTS` 里也没有 `asr_stream` 这一项。**本次 8767 冲突是人读出来的，不是机器拦下来的**，下一次同样不会被拦。补这个缺口属于 `eidolon_ops`（要么 `_claim` 也按端口号查重，要么让漂移测试带上 capability 并把 `asr_stream` 补进 `source_assets.PORTS`），本仓这边只能保证自己的声明是单一真相来源。TTS/LLM 的端口等它们真有 unit 时再申请，先占号等于声明不存在的服务 |
 
 P0-2 的替代要求（不是阻断项，只是环境细节）：`rknn-toolkit2` / `rknn-toolkit-lite2` 的 wheel 只到 **cp312**，
 而板子系统 Python 是 3.14、仓库 pin 是 3.13。用 `uv venv --python 3.12` 单开一个转换/推理 venv 即可，
