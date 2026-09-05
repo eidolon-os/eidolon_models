@@ -100,6 +100,8 @@ def command_doctor(settings: Settings) -> int:
         "machine": platform.machine(),
         "python": platform.python_version(),
         "cpu_count": os.cpu_count(),
+        "process_cpu_count": os.process_cpu_count(),
+        "intra_op_threads": settings.intra_op_threads,
         "requested_backend": settings.backend,
         "resolved_backend": settings.resolved_backend,
         "onnx_providers": providers,
