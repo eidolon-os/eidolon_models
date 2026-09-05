@@ -1,0 +1,42 @@
+# How eidolon_models is operated, stated by the component that owns it.
+#
+# This component is different from the other eight in one way that shapes the
+# whole file: not every Host runs it. A board with an NPU listens and speaks
+# with its own models; a Host without one reaches a provider for the same two
+# things and should carry none of this. So every unit here states the Host
+# capability it needs, and a Host that does not provide it installs nothing
+# from this component — no unit, no port reserved, no weights carried.
+
+schema_version = 1
+component_id = "eidolon_models"
+contract_version = "1"
+
+[[units]]
+id = "eidolon-asr"
+kind = "service"
+exec = "scripts/eidolon-asr"
+user = "eidolon"
+serves = ["asr_stream"]
+after = ["local-fs.target", "network.target"]
+# Speech recognition on this Host rather than at a provider. Without it the
+# unit is not installed and Channel's stt_provider stays pointed outward.
+requires_capability = "local_asr"
+
+[ports.asr_stream]
+default = 8768
+bind = "loopback"
+purpose = "funasr 2pass streaming recognition, WebSocket at /v1/stream"
+
+# Nothing else is declared yet, deliberately.
+#
+# The ASR weights are not artifacts: they are committed to this repository
+# (asr/*/2.0.5/, ~728 MB, each version carrying a manifest.json with a SHA-256
+# per file), and a release is exact Git commits, so they already ride it. The
+# `artifacts` section exists for what Git does not hold.
+#
+# The RKNN and RKLLM models the NPU path needs — Qwen3-1.7B at 2.3 GB,
+# CosyVoice2 at 1.6 GB — are exactly that, and are not declared here because
+# they are not yet pinned anywhere this file could point at. Declaring them
+# without the digests that make them verifiable would be a promise the release
+# cannot keep. They arrive with `requires_capability = "rknpu2"` when they are
+# pinned, alongside the units that load them.

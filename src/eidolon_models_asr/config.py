@@ -151,7 +151,7 @@ def resolve_backend(requested: str) -> str:
 @dataclass(frozen=True)
 class Settings:
     host: str = "127.0.0.1"
-    port: int = 8767
+    port: int = 8768
     backend: str = "auto"
     model_dir: Path = DEFAULT_MODEL_DIR
     manifest_path: Path = DEFAULT_MANIFEST
@@ -213,7 +213,7 @@ class Settings:
         )
         return cls(
             host=os.getenv("EIDOLON_ASR_HOST", "127.0.0.1"),
-            port=int(os.getenv("EIDOLON_ASR_PORT", "8767")),
+            port=int(os.getenv("EIDOLON_ASR_PORT", "8768")),
             backend=os.getenv("EIDOLON_ASR_BACKEND", "auto"),
             model_dir=model_dir,
             manifest_path=manifest,

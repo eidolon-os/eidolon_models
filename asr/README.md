@@ -35,12 +35,12 @@ Mac Apple Silicon、树莓派 5 和普通 Linux arm64 使用完全相同的命�
 ./scripts/eidolon-asr serve
 ```
 
-默认监听 `127.0.0.1:8767`：
+默认监听 `127.0.0.1:8768`：
 
 ```bash
-curl http://127.0.0.1:8767/healthz
-curl http://127.0.0.1:8767/readyz
-curl http://127.0.0.1:8767/v1/info
+curl http://127.0.0.1:8768/healthz
+curl http://127.0.0.1:8768/readyz
+curl http://127.0.0.1:8768/v1/info
 ```
 
 真实模型推理和在线服务探测：

@@ -8,7 +8,7 @@ User=eidolon
 Group=eidolon
 WorkingDirectory=/opt/eidolon/current/eidolon_models
 Environment=EIDOLON_ASR_HOST=127.0.0.1
-Environment=EIDOLON_ASR_PORT=8767
+Environment=EIDOLON_ASR_PORT=8768
 Environment=EIDOLON_ASR_BACKEND=auto
 Environment=EIDOLON_ASR_UV_CACHE_DIR=/var/cache/eidolon/asr/uv
 # 核分配的唯一可调点，见 deploy/cpu-allocation.env。

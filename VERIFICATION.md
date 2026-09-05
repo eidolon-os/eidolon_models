@@ -18,7 +18,7 @@
 | P0-1 | **有线网络** | ops 的 `require_wired_release_upload = true` 会拒绝在无线上做 release 上传；2.4 GHz WiFi 实测抖动 15 ms 且掉线，不能承载交付 |
 | P0-2 | ~~一台 x86_64 Linux 转换机~~ **已解除** | `rknn-toolkit2` 2.3.2 有 aarch64 wheel，**转换可以在板子上完成**，已于 2026-09-04 端到端验证。见 §2.0 |
 | P0-3 | **自有中文 CER 评测集** | 没有它，"选型"只是"能跑"。当前 BENCHMARK.md 全是时延，一个准确率数字都没有 |
-| P0-4 | **端口注册** | `eidolon-asr` 默认 8767 与 `channel.provider` 冲突（`eidolon_admin/config/ports.yaml`），需申请 `models.{asr,tts,llm}` |
+| P0-4 | **端口注册** | ✅ 已解除（2026-09-05）：`eidolon-asr` 默认改为 **8768**。8767 归 `channel_provider`（`eidolon_ops/.../source_assets.py` 与 `eidolon_channel/config/channel-provider.yaml` 都已占用），本服务未部署过、是后来者，所以让位。端口角色 `asr_stream` 已在 `ops/component.toml` 声明，冲突今后由 ops 的角色注册表在装配时拦截。TTS/LLM 的端口等它们真有 unit 时再申请，先占号等于声明不存在的服务 |
 
 P0-2 的替代要求（不是阻断项，只是环境细节）：`rknn-toolkit2` / `rknn-toolkit-lite2` 的 wheel 只到 **cp312**，
 而板子系统 Python 是 3.14、仓库 pin 是 3.13。用 `uv venv --python 3.12` 单开一个转换/推理 venv 即可，
