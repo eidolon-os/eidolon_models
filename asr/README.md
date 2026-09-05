@@ -128,8 +128,8 @@ scripts/asr-affinity-sweep -r 5 -n "LLM 并发中" - 4,5   # 只比两个候选
 ./scripts/eidolon-asr test
 ```
 
-Python 固定为 3.12，由 `uv.lock` 固定跨平台依赖。Host 不改变服务协议和命令；当前 Mac
-与树莓派 5 都解析为 `onnx-cpu`。将来只有在仓库加入经过校验的 RKNN 制品后，RK3588
+Python 固定为 3.13（`requires-python = ">=3.13,<3.14"`），由 `uv.lock` 固定跨平台依赖。
+Host 不改变服务协议和命令；当前 Mac 与树莓派 5 都解析为 `onnx-cpu`。将来只有在仓库加入经过校验的 RKNN 制品后，RK3588
 才会把 `auto` 解析为 `rknn`，Channel 不需要修改。
 
 启动脚本优先直接使用项目已有的 `.venv`；仅在环境尚未创建时才调用 `uv` 引导安装。
