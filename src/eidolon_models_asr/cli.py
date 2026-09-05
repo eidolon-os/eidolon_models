@@ -210,7 +210,7 @@ async def _probe(url: str, audio: Path) -> dict[str, Any]:
                 while True:
                     try:
                         message = await ws.receive(timeout=0.001)
-                    except asyncio.TimeoutError:
+                    except TimeoutError:
                         break
                     if message.type == WSMsgType.TEXT:
                         transcripts.append(json.loads(message.data))
