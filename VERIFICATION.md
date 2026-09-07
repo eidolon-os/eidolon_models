@@ -157,7 +157,13 @@ P0-3 的最小可用形态：AISHELL-1 test（干净、可对外引用）+ Wenet
 **关键反转：本地 ASR（250 ms）与本地 LLM（165 ms 首 token）都优于云端链路的对应贡献；
 瓶颈完全集中在 TTS。** 若 TTS 能做到云端级别（330 ms），全本地端到端约 1785 ms，**反而优于现状 2799 ms**。
 
-**所以 TTS 是唯一卡点。** 即便拿到 CosyVoice2 的优化版（TTFT 1070–1362 ms），仍是云端 330 ms 的 3–4 倍。
+**所以 TTS 是唯一卡点，而且卡在首包、不卡在实时性。**
+
+> **2026-09-06 更正（HOST-RK3588 §2.21）**：此前"CosyVoice2 稳态追不上播放"是我配错了配置
+> （用了三核 RKLLM 且没做 NPU 核分配）。按上游脚本改成**两核 RKLLM + encoder/flow/hift
+> 钉 NPU 核 2** 后，**steady rtf 0.80–0.94，27 秒回复零断音，缓冲全程不降**——
+> 连续说话没有问题。**剩下的差距只是首包**：TTS 约 2.0 s，云端 330 ms。
+> 而 1070–1362 ms 那个数不是"未开源优化版"，是我读错了 README。
 
 ### 4.0.2 RK3588 上的 TTS 全景（ModelScope + GitHub 调研，2026-09-05）
 
@@ -165,7 +171,7 @@ P0-3 的最小可用形态：AISHELL-1 test（干净、可对外引用）+ Wenet
 
 | 模型 | RK3588 移植 | 最佳已知 RTF | 克隆能力 | 产物是否发布 |
 | --- | --- | ---: | --- | --- |
-| **CosyVoice2** | [Sariel00](https://huggingface.co/Sariel00/cosyvoice2_rknn)（C++ + 一步流蒸馏） | **~1.15**（本板实测） | ✅ 零样本 | ✅ **全部发布** |
+| **CosyVoice2** | [Sariel00](https://huggingface.co/Sariel00/cosyvoice2_rknn)（C++ + 一步流蒸馏） | **0.80–0.94**（本板实测，上游配置；我此前记的 ~1.15 是配错的结果——§2.21） | ✅ 零样本 | ✅ **全部发布** |
 | CosyVoice3 | [MasterVVK](https://github.com/MasterVVK/cosyvoice3-rknn-russian)（纯 Python） | 6.6–13.6× | ✅ | ❌ 需自转 |
 | **Qwen3-TTS** | [MasterVVK](https://github.com/MasterVVK/qwen3-tts-rknn-russian)（Python） | **5.5×** | ✅ 3 秒克隆 + 音色描述 | ❌ 需自转（talker 要 x86） |
 | Kokoro | [marty1885/kokoro-server](https://github.com/marty1885/kokoro-server) ⭐4 | 未知 | ❌ 仅预置多音色 | — |
@@ -328,16 +334,17 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
 
 | 资源 | 分配 |
 | --- | --- |
-| A76 4–6 | CosyVoice2（绑核；与 4–7 实测不可区分，选三核是为把 cpu7 留给 bge 与控制面——HOST-RK3588 §2.20 [E]） |
+| A76 5–7 + **NPU 核 2** | CosyVoice2（上游配置：`--cpu-mask=0xE0`，两核 RKLLM 占 NPU 0–1，encoder/flow/hift 钉 NPU 2——HOST-RK3588 §2.21） |
 | A76 4–7 | Qwen3 RKLLM —— **不传 mask，它默认自选这四个核** |
 | A76（不绑核） | ASR funasr 2pass —— 内核 EAS 会把 offline 突发放上大核 |
 | A76 7 + A55 | memory bge（绑 A76，线程数=核数）、channel、控制面、vision |
-| NPU 三核 | **无法分区** —— RKLLM 无 core mask API，两个 RKLLM 各抓满 3 核 |
+| NPU 三核 | **RKLLM 侧无 core mask API**（核数在模型编译时烧定：c2 占两核、c3 占三核）；**RKNN 侧可分区**（`rknn_set_core_mask`）。TTS 用 c2 + RKNN 钉核 2（§2.21） |
 
 > **2026-09-05 联合压测修正**：本表两次被实测推翻，详见 HOST-RK3588.md §2.17。
-> * 「NPU core0/1/2 分别给 ASR/TTS/LLM」**不成立**。`rkllm.h` 没有任何 NPU
->   core 接口，RKLLM 用满 3 核；Qwen3 与 CosyVoice2 并发时双方各掉 46%–64%，
->   NPU 近似串行（§2.15）。**LLM 与 TTS 必须串行，端到端按串行算。**
+> * 「NPU core0/1/2 分别给 ASR/TTS/LLM」**部分成立**。`rkllm.h` 确实没有 core 接口，
+>   但**核数在模型编译时烧定**——两核模型只占两核；而 RKNN 侧 `rknn_set_core_mask`
+>   一直可用。TTS 内部据此分核后 rtf 从 >1 降到 0.80–0.94（§2.21）。
+>   **§2.15 那次"NPU 近似串行"是因为两侧都在抓三核，Qwen3 与 TTS 的争用需按新配置重测。**
 > * ASR 不该绑到小核。A55 的 eot_final 是 1271 ms，不绑核是 292 ms——
 >   差 0.9 秒，且几乎全在 offline 二遍上（§2.16、§2.17 结论 ④）。
 > * 静态划核在真实时序下大多是多余的：ASR 的 offline 突发与 LLM/TTS 天然串行，
