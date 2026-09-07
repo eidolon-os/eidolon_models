@@ -1360,6 +1360,69 @@ ASR 加 pVAD 加 EOT 加 bge 加十几个服务。**"单机全本地"在完整�
 
 产品侧还有一条：**出厂镜像不该跑 GNOME。**
 
+### 2.25 把 ASR 加进来：最坏一轮仍然过关，但余量只剩 257–703 ms（实测 2026-09-06）
+
+§2.24 只加了 channel 的两个模型。这一节把 ASR 也加进来，测**最坏的那一轮**：
+TTS 正在说话时用户反复打断——pVAD 逐帧、EOT 判轮次、ASR 二遍突发、聊天 LLM 同时在生成。
+
+#### ASR 两个 pass 的实测成本（首次）
+
+板上模型：streaming `model_quant.onnx` 166 MB + `decoder_quant.onnx` 72 MB，
+offline `model_quant.onnx` **227 MB**，标点 ct-transformer **270 MB**。
+
+| 模型 | 输入 | 1 线程 | 2 线程 | 4 线程 |
+| --- | --- | ---: | ---: | ---: |
+| **offline 二遍** | 2 s 语音（33 帧） | 170.5 ms | 100.3 | 73.5 |
+| | **3 s 语音（50 帧）** | **238.8 ms** | **138.1** | **95.2** |
+| | 5 s 语音（83 帧） | 383.5 ms | 238.3 | 141.9 |
+| **标点 punc** | 20 token | 2.3 ms | 2.2 | 1.6 |
+
+* 二遍 3 s 语音单线程 239 ms、四线程 95 ms——**与 §2.16 记的 eot_final 292 ms
+  （其中二遍 222–338）对得上**，是同一件事的两个测法。
+* **标点意外地便宜**：270 MB 的模型只要 1.6–4.2 ms，不是热点。
+* streaming encoder 有 15 组 cache 张量，手工构造输入易错，**本节未测**。
+
+#### 最坏一轮
+
+TTS（NPU + A76 5–7）+ 聊天 LLM（A55 0–3）+ channel 负载（pVAD 100 Hz、EOT 2 Hz，
+单线程，不绑核）+ ASR 二遍每 3 秒一次（模拟反复打断），45 秒窗口：
+
+| 二遍线程 | TTS rtf | 真断音 | 缓冲最低 | LLM | 二遍中位/最大 | VAD 帧迟到 |
+| ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 4 | 1.014 | **0** ✓ | **257 ms** | 5.80 | 219 / 419 ms | 1419/4500 |
+| **2** | 1.004 | **0** ✓ | **525 ms** | 5.78 | **210 / 291 ms** | 1338/4500 |
+| 1 | 0.997 | **0** ✓ | 703 ms | 5.79 | 268 / 309 ms | 1471/4500 |
+
+#### 三条结论
+
+**① 最坏一轮过关，但余量只剩 257–703 ms。** TTS 三档都是零断音，可缓冲最低点从
+单跑的 840 ms 掉到 257–703 ms。**这是 23 秒回复的数字**；更长的回复会把它耗完。
+
+**② ASR 二遍应当只给 1–2 线程，不是 4。** 单独测时四线程 95 ms 明显优于单线程
+239 ms，但**在真实负载下四线程退化到 219 ms**——优势完全消失，却把 TTS 的缓冲从
+703 ms 压到 257 ms。**2 线程是最佳点**（TTS 缓冲 525 ms，二遍中位 210 ms）。
+这条只有在满载下测才看得见，单独测会得出相反的配置。
+
+**③ VAD 有 30% 的帧迟到超过 5 ms**（1338–1471 / 4500），比 §2.24 的 20% 更差。
+其中一部分是复现脚本 `sleep(0.0005)` 的粒度，但趋势是负载抬高了 VAD 的抖动，
+**而打断响应就依赖这个**。真实 channel worker 上要重测。
+
+#### 仍然没算进去的
+
+nats、**livekit-server（WebRTC/SFU，真正在搬 RTP 音频包，可能是剩下最大的一项）**、
+agent、kernel/hub/data/data-workspace 四个 API、memory 的 bge（§2.14：查询 3.1 ms）、
+eidolond 每 5 秒对账、CAMPPlus、以及 9 个 GNOME 进程。
+
+另外发现两个部署侧的事实：
+
+* **`eidolon_models` 组件没有装到板上，`eidolon-asr.service` 不存在**——尽管
+  `config/eidolon-rk3588.toml` 声明了 `capabilities.provides = ["rknpu2", "local_asr"]`，
+  而 `eidolon_ops.config.CAPABILITY_SOURCES["local_asr"] = ("eidolon_models",)` 也在。
+  板上 release.json 的组件列表里确实没有它。**capability 到发布的链路那次没生效。**
+* `/root/eidolon_models/.venv` 的解释器软链断了（指向已被我清理掉的
+  `/root/.local/share/uv/python/cpython-3.13-*`）。本节改用板上 channel 组件的
+  onnxruntime 1.26 直接跑 ONNX，绕开了它。
+
 ## 3. 已知缺陷
 
 | 缺陷 | 证据 | 影响 |
