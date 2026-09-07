@@ -335,7 +335,7 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
 | 资源 | 分配 |
 | --- | --- |
 | A76 5–7 + **NPU 核 2** | CosyVoice2（上游配置：`--cpu-mask=0xE0`，两核 RKLLM 占 NPU 0–1，encoder/flow/hift 钉 NPU 2——HOST-RK3588 §2.21） |
-| A76 4–7 | Qwen3 RKLLM —— **不传 mask，它默认自选这四个核** |
+| A55 0–3 | **聊天 LLM：Qwen3-1.7B Q4_0 / llama.cpp，不碰 NPU**（放 A76 会打断 TTS，即使只给一核——HOST-RK3588 §2.23） |
 | A76（不绑核） | ASR funasr 2pass —— 内核 EAS 会把 offline 突发放上大核 |
 | A76 7 + A55 | memory bge（绑 A76，线程数=核数）、channel、控制面、vision |
 | NPU 三核 | **RKLLM 侧无 core mask API**（核数在模型编译时烧定：c2 占两核、c3 占三核）；**RKNN 侧可分区**（`rknn_set_core_mask`）。TTS 用 c2 + RKNN 钉核 2（§2.21） |
