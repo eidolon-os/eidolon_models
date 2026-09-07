@@ -328,7 +328,7 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
 
 | 资源 | 分配 |
 | --- | --- |
-| A76 4–6 | CosyVoice2（绑核，rtf 0.926；给到 4–7 反而是 1.015） |
+| A76 4–6 | CosyVoice2（绑核；与 4–7 实测不可区分，选三核是为把 cpu7 留给 bge 与控制面——HOST-RK3588 §2.20 [E]） |
 | A76 4–7 | Qwen3 RKLLM —— **不传 mask，它默认自选这四个核** |
 | A76（不绑核） | ASR funasr 2pass —— 内核 EAS 会把 offline 突发放上大核 |
 | A76 7 + A55 | memory bge（绑 A76，线程数=核数）、channel、控制面、vision |
