@@ -7,7 +7,32 @@ import platform
 from dataclasses import dataclass, field
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+#: Where the committed model trees are, told rather than inferred.
+#:
+#: This was `Path(__file__).resolve().parents[2]`, which is the repository root
+#: from a source checkout and something else entirely once the package is
+#: installed: from `.venv/lib/python3.13/site-packages/eidolon_models_asr/`
+#: those same two levels up land on `.venv/lib/python3.13`. A release installs
+#: the package, so the service started, looked for
+#: `.../eidolon_models/.venv/lib/python3.13/asr/paraformer-zh-streaming/...`,
+#: exited 2, and restarted a hundred times while the weights sat in the
+#: component root beside it.
+#:
+#: `scripts/eidolon-asr` already computes that root to find the venv, so it
+#: exports this on the way through and nothing else has to be configured. The
+#: derivation stays as the fallback because it is right for the one case it was
+#: written for — running out of a checkout with no environment at all.
+MODEL_ROOT_ENV = "EIDOLON_ASR_MODEL_ROOT"
+
+
+def _project_root() -> Path:
+    configured = os.getenv(MODEL_ROOT_ENV, "").strip()
+    if configured:
+        return Path(configured).resolve()
+    return Path(__file__).resolve().parents[2]
+
+
+PROJECT_ROOT = _project_root()
 DEFAULT_MODEL_DIR = PROJECT_ROOT / "asr" / "paraformer-zh-streaming" / "2.0.5" / "model"
 DEFAULT_MANIFEST = DEFAULT_MODEL_DIR.parent / "manifest.json"
 DEFAULT_OFFLINE_MODEL_DIR = PROJECT_ROOT / "asr" / "paraformer-zh-offline" / "2.0.5" / "model"

@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from eidolon_models_asr.config import MODEL_ROOT_ENV
+
 
 class ArtifactError(RuntimeError):
     """A required model artifact is missing or has changed."""
@@ -24,7 +26,12 @@ def load_manifest(path: Path) -> dict[str, Any]:
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
     except FileNotFoundError as exc:
-        raise ArtifactError(f"manifest not found: {path}") from exc
+        raise ArtifactError(
+            f"manifest not found: {path}. The model trees are committed under "
+            "the repository root; when this package runs installed, that root "
+            f"comes from ${MODEL_ROOT_ENV} rather than from the package's own "
+            "location."
+        ) from exc
     except json.JSONDecodeError as exc:
         raise ArtifactError(f"invalid manifest JSON: {path}: {exc}") from exc
     if value.get("schema_version") != 1 or not isinstance(value.get("files"), dict):

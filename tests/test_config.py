@@ -181,3 +181,41 @@ def test_unusable_cpu_index_reports_the_valid_range(monkeypatch) -> None:
     monkeypatch.setenv("EIDOLON_ASR_CPU_AFFINITY", "99")
     with pytest.raises(ValueError, match="valid indices are 0-7"):
         apply_cpu_affinity()
+
+
+def test_the_model_root_is_told_rather_than_inferred(monkeypatch, tmp_path) -> None:
+    """Two levels up from this package is the repository root only in a checkout.
+
+    Installed, `site-packages/eidolon_models_asr/config.py` puts those same two
+    levels inside the venv — and a release installs the package. The service
+    started, looked for the weights under `.venv/lib/python3.13/asr/`, exited 2
+    and restarted a hundred times while they sat in the component root beside
+    it, and the release rolled the Host back on the readiness timeout.
+    """
+
+    import importlib
+
+    from eidolon_models_asr import config as config_module
+
+    monkeypatch.setenv(config_module.MODEL_ROOT_ENV, str(tmp_path))
+    reloaded = importlib.reload(config_module)
+    try:
+        assert reloaded.PROJECT_ROOT == tmp_path.resolve()
+        assert reloaded.DEFAULT_MODEL_DIR.is_relative_to(tmp_path.resolve())
+        assert reloaded.DEFAULT_MANIFEST.is_relative_to(tmp_path.resolve())
+    finally:
+        monkeypatch.delenv(config_module.MODEL_ROOT_ENV, raising=False)
+        importlib.reload(config_module)
+
+
+def test_without_the_variable_a_checkout_still_needs_no_configuration() -> None:
+    """The derivation stays as the fallback: it is right for the case it was
+    written for, which is running out of a checkout with nothing set."""
+
+    import importlib
+
+    from eidolon_models_asr import config as config_module
+
+    reloaded = importlib.reload(config_module)
+
+    assert (reloaded.PROJECT_ROOT / "pyproject.toml").is_file()

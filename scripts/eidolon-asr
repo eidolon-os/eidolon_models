@@ -5,6 +5,15 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
 UV_BIN=${EIDOLON_ASR_UV_BIN:-uv}
 UV_CACHE_DIR=${EIDOLON_ASR_UV_CACHE_DIR:-$REPO_ROOT/.cache/uv}
+# Where the committed model trees are. This script already knows: it is the
+# directory above this one, which is how it finds the venv. The package cannot
+# work it out for itself once installed — two levels up from
+# site-packages/eidolon_models_asr lands inside the venv — and a release
+# installs it, so the service looked for the weights under
+# .venv/lib/python3.13/asr, exited 2, and restarted until the release rolled
+# back. Exported rather than forced, so an operator can point it elsewhere.
+EIDOLON_ASR_MODEL_ROOT=${EIDOLON_ASR_MODEL_ROOT:-$REPO_ROOT}
+export EIDOLON_ASR_MODEL_ROOT
 VENV_BIN=${EIDOLON_ASR_VENV_BIN:-$REPO_ROOT/.venv/bin}
 export UV_CACHE_DIR
 
