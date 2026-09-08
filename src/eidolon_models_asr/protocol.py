@@ -41,6 +41,10 @@ PING = "ping"
 CLOSE_STREAM = "close_stream"
 
 # What this service sends.
+#: Unprompted, the moment a stream opens: the version served and which models
+#: are open. A client learns both on the connection it is about to use.
+CONNECTED = "connected"
+PROTOCOL_VERSION_FIELD = "protocol_version"
 UTTERANCE_STARTED = "utterance_started"
 TRANSCRIPT = "transcript"
 PONG = "pong"

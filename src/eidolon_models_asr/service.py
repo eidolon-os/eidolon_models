@@ -240,8 +240,8 @@ async def stream(request: web.Request) -> web.StreamResponse:
         await ws.prepare(request)
         await send(
             {
-                "type": "connected",
-                "protocol_version": PROTOCOL_VERSION,
+                "type": protocol.CONNECTED,
+                protocol.PROTOCOL_VERSION_FIELD: PROTOCOL_VERSION,
                 "backend": backend.name,
                 "model_id": backend.model_id,
                 "offline_model_id": backend.offline_model_id,
