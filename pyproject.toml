@@ -9,6 +9,31 @@ dependencies = [
   "funasr-onnx==0.4.2",
 ]
 
+[tool.uv]
+# funasr-onnx 0.4.2 declares `numpy<=1.26.4`, and numpy 1.26.4 ships no cp313
+# wheel for any platform — it predates Python 3.13. On this Host that is
+# invisible: uv builds numpy from source on aarch64 and it works. It is fatal
+# to a release, because a release prefetches wheels on the operator's
+# workstation for linux/aarch64 and installs them on the Host with no network:
+#
+#   × Failed to download and build `numpy==1.26.4`
+#   ╰─▶ The built wheel `numpy-1.26.4-cp313-cp313-macosx_26_0_arm64.whl` is not
+#       compatible with the target Python 3.13 on Linux aarch64
+#
+# So `eidolon_models` could not be part of a release at all while that pin held,
+# and no newer funasr-onnx exists: 0.4.0, 0.4.1 and 0.4.2 all carry it.
+#
+# The pin is a blanket precaution rather than a real incompatibility, and that
+# was checked rather than assumed — on the board, funasr-onnx 0.4.2 against
+# numpy 2.5.3 and onnxruntime 1.29.0 transcribed tests/data/asr_example_zh.wav
+# correctly ("欢迎大家来体验达摩院推出的语音识别模型"). Overriding it is what
+# makes every dependency wheel-only for cp313 on linux/aarch64; the one
+# remaining sdist is jieba, which is pure Python and builds anywhere.
+#
+# Re-check this if funasr-onnx is upgraded: the override outlives the version
+# that needed it unless someone looks.
+override-dependencies = ["numpy>=2.1,<3"]
+
 [project.scripts]
 eidolon-asr = "eidolon_models_asr.cli:main"
 
