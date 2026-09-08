@@ -11,6 +11,8 @@ from typing import Any, Protocol
 
 import numpy as np
 
+from . import protocol
+
 
 @dataclass(frozen=True)
 class TranscriptResult:
@@ -374,7 +376,7 @@ def result_payload(
     backend: StreamingBackend,
 ) -> dict[str, Any]:
     return {
-        "type": "transcript",
+        "type": protocol.TRANSCRIPT,
         "stream_id": stream_id,
         "utterance_id": utterance_id,
         "revision": result.revision,

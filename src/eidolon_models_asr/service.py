@@ -10,7 +10,7 @@ from typing import Any
 
 from aiohttp import WSMsgType, web
 
-from . import __version__
+from . import __version__, protocol
 from .backend import StreamingBackend, StreamingSession, payload_json, result_payload
 from .capacity import CapacityError, CapacityManager, UtteranceLease
 from .config import Settings, detect_host_kind
@@ -113,7 +113,7 @@ class UtteranceContext:
             self._failure = exc
             await self._send(
                 {
-                    "type": "error",
+                    "type": protocol.ERROR,
                     "code": exc.code,
                     "message": str(exc),
                     "retryable": True,
@@ -216,8 +216,8 @@ async def stream(request: web.Request) -> web.StreamResponse:
     if not await capacity.open_connection():
         return web.json_response(
             {
-                "type": "error",
-                "code": "connection_capacity_exceeded",
+                "type": protocol.ERROR,
+                "code": protocol.ERROR_CAPACITY,
                 "message": f"maximum of {settings.max_connections} connections reached",
                 "retryable": True,
             },
@@ -263,7 +263,7 @@ async def stream(request: web.Request) -> web.StreamResponse:
             except json.JSONDecodeError as exc:
                 raise ProtocolError("text messages must be JSON objects") from exc
             message_type = payload.get("type")
-            if message_type in {"start", "start_utterance"}:
+            if message_type in {protocol.START_UTTERANCE_LEGACY, protocol.START_UTTERANCE}:
                 if context is not None:
                     raise ProtocolError("finish the active utterance before starting another")
                 start = parse_start(payload)
@@ -279,7 +279,7 @@ async def stream(request: web.Request) -> web.StreamResponse:
                 )
                 await send(
                     {
-                        "type": "utterance_started",
+                        "type": protocol.UTTERANCE_STARTED,
                         "stream_id": start.stream_id,
                         "utterance_id": start.utterance_id,
                         "queued": context.queued,
@@ -287,7 +287,7 @@ async def stream(request: web.Request) -> web.StreamResponse:
                     }
                 )
                 context.start_activation()
-            elif message_type == "end_utterance":
+            elif message_type == protocol.END_UTTERANCE:
                 if context is None or start is None:
                     raise ProtocolError("no active utterance")
                 result = await context.finish()
@@ -302,9 +302,9 @@ async def stream(request: web.Request) -> web.StreamResponse:
                 await context.close()
                 context = None
                 start = None
-            elif message_type == "ping":
-                await send({"type": "pong"})
-            elif message_type == "close_stream":
+            elif message_type == protocol.PING:
+                await send({"type": protocol.PONG})
+            elif message_type == protocol.CLOSE_STREAM:
                 await ws.close(code=1000, message=b"normal closure")
             else:
                 raise ProtocolError(f"unsupported message type: {message_type!r}")
@@ -313,7 +313,7 @@ async def stream(request: web.Request) -> web.StreamResponse:
         if not ws.closed:
             await send(
                 {
-                    "type": "error",
+                    "type": protocol.ERROR,
                     "code": exc.code,
                     "message": str(exc),
                     "retryable": True,
@@ -325,8 +325,8 @@ async def stream(request: web.Request) -> web.StreamResponse:
         if not ws.closed:
             await send(
                 {
-                    "type": "error",
-                    "code": "utterance_too_long",
+                    "type": protocol.ERROR,
+                    "code": protocol.ERROR_UTTERANCE_TOO_LONG,
                     "message": str(exc),
                     "retryable": False,
                 }
@@ -335,13 +335,23 @@ async def stream(request: web.Request) -> web.StreamResponse:
     except (ProtocolError, ValueError, RuntimeError) as exc:
         logger.info("ASR stream rejected: %s", exc)
         if not ws.closed:
-            error_payload = {"type": "error", "code": "bad_request", "message": str(exc)}
+            error_payload = {
+                "type": protocol.ERROR,
+                "code": protocol.ERROR_BAD_REQUEST,
+                "message": str(exc),
+            }
             await send(error_payload)
             await ws.close(code=1008, message=b"protocol error")
     except Exception:
         logger.exception("ASR stream failed")
         if not ws.closed:
-            await send({"type": "error", "code": "internal_error", "message": "inference failed"})
+            await send(
+                {
+                    "type": protocol.ERROR,
+                    "code": protocol.ERROR_INTERNAL,
+                    "message": "inference failed",
+                }
+            )
             await ws.close(code=1011, message=b"inference error")
     finally:
         if context is not None:
@@ -362,9 +372,9 @@ def create_app(settings: Settings, backend: StreamingBackend) -> web.Application
     app.add_routes(
         [
             web.get("/healthz", health),
-            web.get("/readyz", ready),
-            web.get("/v1/info", info),
-            web.get("/v1/stream", stream),
+            web.get(protocol.READY_PATH, ready),
+            web.get(protocol.INFO_PATH, info),
+            web.get(protocol.STREAM_PATH, stream),
         ]
     )
     return app
