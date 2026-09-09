@@ -72,3 +72,23 @@ def test_the_engine_source_the_release_carries_is_the_whole_build() -> None:
     assert included, "the pipeline no longer includes translation units textually"
     for name in included:
         assert (_CPP / "src" / name).is_file(), f"{name} is included but not carried"
+
+
+def test_a_changed_source_does_not_reuse_the_previous_build_tree() -> None:
+    """CMake caches every option in the tree, and the tree survives releases.
+
+    `set(... CACHE ...)` does not override an existing entry, so a release that
+    stopped passing an option kept the previous release's value: the vendored
+    headers landed on the Host and the build still looked for them in
+    /usr/include, because that is what the first release had cached. Found on
+    the board, twice.
+    """
+
+    script = (
+        Path(__file__).resolve().parents[1] / "scripts/eidolon-tts-build"
+    ).read_text(encoding="utf-8")
+
+    lines = script.splitlines()
+    discard = next(i for i, line in enumerate(lines) if line.startswith('rm -rf "$BUILD_ROOT/build"'))
+    configure = next(i for i, line in enumerate(lines) if line.startswith("cmake -S "))
+    assert discard < configure, "the stale build tree must go before configuring"

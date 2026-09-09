@@ -48,6 +48,15 @@ for tool in cmake make c++; do
 done
 
 mkdir -p "$BUILD_ROOT"
+# The build tree is discarded rather than reused. It survives releases (it is
+# under StateDirectory), and CMake caches every option in it — including ones
+# whose *default* a later release changed. `set(... CACHE ...)` does not
+# override an existing entry, so a release that stopped passing
+# -DEIDOLON_TTS_RUNTIME_INCLUDE silently kept the previous release's value and
+# failed on the Host with `fatal error: rkllm.h: No such file`. Reaching here
+# at all means the digest changed, which is exactly when a cached
+# configuration from other source must not be trusted.
+rm -rf "$BUILD_ROOT/build"
 set -- -DCMAKE_BUILD_TYPE=Release -DEIDOLON_TTS_RUNTIME_ROOT="$RUNTIME_ROOT"
 if [ -n "$RUNTIME_INCLUDE" ]; then
   set -- "$@" -DEIDOLON_TTS_RUNTIME_INCLUDE="$RUNTIME_INCLUDE"
