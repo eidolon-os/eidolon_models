@@ -1,0 +1,15 @@
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+The model card and the LICENSE file published by Sariel00/cosyvoice2_rknn both
+declare this work as Apache-2.0, as does the base model it converts,
+FunAudioLLM/CosyVoice2-0.5B. The complete license text is available at
+https://www.apache.org/licenses/LICENSE-2.0.
+
+The upstream LICENSE file at the pinned revision is 11676 bytes hashing to
+e6801053b76a1eb5260200db6079f249c709f2d987c861083c0e7f612d0bbff3, recorded here
+so this declaration can be checked rather than taken on trust.
+
+This file records the upstream declaration; it does not replace the pinned
+source URL and revision in manifest.json.

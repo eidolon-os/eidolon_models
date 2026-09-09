@@ -1,0 +1,59 @@
+{
+  "component": "cosyvoice2_text_frontend",
+  "hidden_size": 896,
+  "text_embedding": {
+    "path": "/home/serial/project/nextTTS/models/runtime_data/cosyvoice2/text_frontend/text_embedding.f32.bin",
+    "shape": [
+      151936,
+      896
+    ],
+    "dtype": "float32",
+    "sha256": "298a6f5cb4039f7b1dcf7bca4ba132f710afc949a6dd1bba8b2cf23fa45ebbf3"
+  },
+  "control_embedding": {
+    "path": "/home/serial/project/nextTTS/models/runtime_data/cosyvoice2/text_frontend/control_embedding.f32.bin",
+    "shape": [
+      2,
+      896
+    ],
+    "dtype": "float32",
+    "sha256": "edd849b97257d603c196016d0c5c8789f2883f6f3f3d3027894d1b640b82e336"
+  },
+  "speech_embedding": {
+    "path": "/home/serial/project/nextTTS/models/runtime_data/cosyvoice2/speech_embedding.f32.bin",
+    "shape": [
+      6564,
+      896
+    ],
+    "dtype": "float32",
+    "sha256": "0b0eafc818e5f45139ac002ccf8894ce13ae54022da258bf81348defb639f6a0"
+  },
+  "tokenizer": {
+    "path": "/home/serial/project/nextTTS/models/runtime_data/cosyvoice2/text_frontend/tokenizer.bin",
+    "vocabulary_size": 151663,
+    "merge_count": 134839,
+    "special_tokens": [
+      "[vocalized-noise]",
+      "<|endofprompt|>",
+      "[quick_breath]",
+      "<|endoftext|>",
+      "<|im_start|>",
+      "</laughter>",
+      "<laughter>",
+      "<|im_end|>",
+      "[clucking]",
+      "[laughter]",
+      "[lipsmack]",
+      "</strong>",
+      "[hissing]",
+      "<strong>",
+      "[accent]",
+      "[breath]",
+      "[cough]",
+      "[noise]",
+      "[sigh]",
+      "[mn]"
+    ],
+    "sha256": "b8a5f8f6c8ceb21d12c1c04b013f917e712d873ae5109d1758089ca1b70c5cb6"
+  }
+}

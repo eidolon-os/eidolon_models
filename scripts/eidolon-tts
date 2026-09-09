@@ -14,7 +14,12 @@ UV_CACHE_DIR=${EIDOLON_TTS_UV_CACHE_DIR:-$REPO_ROOT/.cache/uv}
 VENV_BIN=${EIDOLON_TTS_VENV_BIN:-$REPO_ROOT/.venv/bin}
 export UV_CACHE_DIR
 
-EIDOLON_TTS_MODEL_ROOT=${EIDOLON_TTS_MODEL_ROOT:-/var/lib/eidolon/models/cosyvoice2}
+# The committed model package, found the way the ASR launcher finds its own:
+# from the repository root this script already computed to locate the venv. The
+# weights used to be a hand-placed copy under /var/lib/eidolon, so a new board
+# came up mute until somebody remembered; now they are Git content and ride the
+# release. Exported rather than forced, so an operator can point it elsewhere.
+EIDOLON_TTS_MODEL_ROOT=${EIDOLON_TTS_MODEL_ROOT:-$REPO_ROOT/tts/cosyvoice2-rk3588/2026-07-21/model}
 EIDOLON_TTS_ENGINE=${EIDOLON_TTS_ENGINE:-/var/lib/eidolon/tts/engine/cosyvoice2_streaming_pipeline}
 export EIDOLON_TTS_MODEL_ROOT EIDOLON_TTS_ENGINE
 

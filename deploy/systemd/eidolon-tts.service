@@ -17,7 +17,10 @@ EnvironmentFile=/etc/eidolon/host.env
 EnvironmentFile=-/etc/eidolon/cpu-allocation.env
 Environment=EIDOLON_TTS_HOST=127.0.0.1
 Environment=EIDOLON_TTS_PORT=8770
-Environment=EIDOLON_TTS_MODEL_ROOT=/var/lib/eidolon/models/cosyvoice2
+# EIDOLON_TTS_MODEL_ROOT is deliberately not set here: the launcher derives it
+# from the release tree it is running out of, and two places naming the same
+# path is how one of them goes stale. It stays overridable for an operator who
+# has put the weights somewhere else.
 Environment=EIDOLON_TTS_ENGINE=/var/lib/eidolon/tts/engine/cosyvoice2_streaming_pipeline
 Environment=EIDOLON_TTS_UV_CACHE_DIR=/var/cache/eidolon/tts/uv
 Environment=PATH=/opt/eidolon/current/eidolon_models/.venv/bin:/usr/local/bin:/usr/bin:/bin

@@ -105,6 +105,154 @@ sha256 = "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5"
 # to the digest above.
 url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f15126ef60b45a1e1933222/Qwen3-1.7B-Q4_0.gguf"
 
+[[artifacts]]
+id = "cosyvoice2-rk3588-2026-07-21"
+kind = "model"
+install_root = "/var/lib/eidolon/models/cosyvoice2-upstream"
+requires_capability = "local_tts"
+# The upstream pin for the synthesis weights, carried so the bytes the service
+# runs on can be re-fetched and re-checked without going through Git.
+#
+# These are RKNN/RKLLM conversion outputs, which is why the comment at the foot
+# of this file used to say they could not be declared: nothing was pinned that
+# this file could point at. That turned out to be wrong. Sariel00 publishes the
+# conversion outputs, the conversion scripts, and a MANIFEST.sha256 covering all
+# 1785 files at the revision below -- so every digest here was compared, byte for
+# byte, against both that manifest and the copy running on the board.
+#
+# NOT the directory the service reads, and the distinct name is the point.
+# Two files the engine loads are sidecar manifest.json written by the conversion
+# run, and upstream publishes neither; `url` is required, so this declaration
+# carries 24 of the 26 required files and can never be a complete model root.
+# install-component-artifact rmtree's its destination before installing, so
+# aiming this at .../cosyvoice2 would replace a servable tree with an
+# incomplete one. The complete set is committed at
+# tts/cosyvoice2-rk3588/2026-07-21/model and rides the release as Git content,
+# which is what EIDOLON_TTS_MODEL_ROOT points at.
+#
+# tests/test_tts_model_package.py holds the two copies to the same digests, so
+# the committed tree and this pin cannot drift apart quietly.
+
+[[artifacts.files]]
+path = "fixture/flow_prompt_token_50.i32.bin"
+sha256 = "45d579ad02a0b6b936fb73d1e850caa13916fe0e4d260e1cbac656f1af3588ee"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/benchmarks/testwav_offline1_long_nogap_prompt3s/cases/segment-00/runtime_input/flow_prompt_token_50.i32.bin"
+
+[[artifacts.files]]
+path = "fixture/prompt_feat_100.f32.bin"
+sha256 = "83ac61e7a2ead49641c1d732cb37ed54bc3a76e0a0d2b29214247ee8d7631816"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/benchmarks/testwav_offline1_long_nogap_prompt3s/cases/segment-00/runtime_input/prompt_feat_100.f32.bin"
+
+[[artifacts.files]]
+path = "flow/spks.f32.bin"
+sha256 = "d56a95b8fa043de12e77e8780ce9e0a9807faf0c4bf4099f6c9870cc0af2c1dc"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/fixtures/cosyvoice2/streaming_flow/offline1_v3/testwav_segment00_t108/spks.f32.bin"
+
+[[artifacts.files]]
+path = "flow_encoder_chunk25_cache256_fp16.rknn"
+sha256 = "dece5851344fbf34456b3e5d48411e3c187bb4bd72d129703fe7ba5681ca2026"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2_streaming_offline1_v3/flow_encoder_chunk25_cache256_fp16.rknn"
+
+[[artifacts.files]]
+path = "flow_estimator_cache200_fp16.rknn"
+sha256 = "d05b3e529427a91865e6b93cc9bd9e9fff9f13c6e4205538054a52a78460c9ef"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2_streaming_offline1_v3/flow_estimator_cache200_fp16.rknn"
+
+[[artifacts.files]]
+path = "hift_decoder_fp16_mel24.rknn"
+sha256 = "b4386e5cac0e8e89e677ee5cde829efa093978995e5d7a37d84b9a631a1b5e45"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_decoder_fp16_mel24.rknn"
+
+[[artifacts.files]]
+path = "hift_decoder_fp16_mel50.rknn"
+sha256 = "eda3671e267f8a0e40d032ce6c304ee541a65fcc49db646af6c80f1ba3e0b18a"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_decoder_fp16_mel50.rknn"
+
+[[artifacts.files]]
+path = "hift_decoder_fp16_mel54.rknn"
+sha256 = "e23a6a608dcb6081c7af03d339c0483b05cf419c4f81d2d34516464ebf543a9f"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_decoder_fp16_mel54.rknn"
+
+[[artifacts.files]]
+path = "hift_decoder_fp16_mel58.rknn"
+sha256 = "3073e5786b21c65a579a9b4a7fd00d47c97cb67810fb3941550208ce24964702"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_decoder_fp16_mel58.rknn"
+
+[[artifacts.files]]
+path = "hift_f0_fp16_seq24.rknn"
+sha256 = "86aab8e00d5e9fd69dddb8553ea996f7eb5ee866ec7425d901fa1a2c36e4a5df"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_f0_fp16_seq24.rknn"
+
+[[artifacts.files]]
+path = "hift_f0_fp16_seq50.rknn"
+sha256 = "a3985e78bbbfd3e79bb1bfc83265990480739b4ba37b925bf7919852f39d1a17"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_f0_fp16_seq50.rknn"
+
+[[artifacts.files]]
+path = "hift_f0_fp16_seq54.rknn"
+sha256 = "43302f828eeec3e1a9368e87589812c62264900009ae93ebf2ea10444f5706bd"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_f0_fp16_seq54.rknn"
+
+[[artifacts.files]]
+path = "hift_f0_fp16_seq58.rknn"
+sha256 = "46104c4fc189b3822d3f1f5c97eb17772d173938f6edf7691903871d665ecb81"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/hift_f0_fp16_seq58.rknn"
+
+[[artifacts.files]]
+path = "qwen2_body_w8a8_c2_ctx2048.rkllm"
+sha256 = "fbc1f981e910c85e3fd4db29efc7d0e06083ac57d4f5330acc938955fc839523"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/qwen2_body_w8a8_c2_ctx2048.rkllm"
+
+[[artifacts.files]]
+path = "speech_embedding.f32.bin"
+sha256 = "0b0eafc818e5f45139ac002ccf8894ce13ae54022da258bf81348defb639f6a0"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/speech_embedding.f32.bin"
+
+[[artifacts.files]]
+path = "speech_head_fp16.rknn"
+sha256 = "5fe96d4469b2cafeb803a88a6d06ebafda04ac772c74cf0ca7666a29bba8de47"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/speech_head_fp16.rknn"
+
+[[artifacts.files]]
+path = "text_frontend/control_embedding.f32.bin"
+sha256 = "edd849b97257d603c196016d0c5c8789f2883f6f3f3d3027894d1b640b82e336"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/text_frontend/control_embedding.f32.bin"
+
+[[artifacts.files]]
+path = "text_frontend/text_embedding.f32.bin"
+sha256 = "298a6f5cb4039f7b1dcf7bca4ba132f710afc949a6dd1bba8b2cf23fa45ebbf3"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/text_frontend/text_embedding.f32.bin"
+
+[[artifacts.files]]
+path = "text_frontend/tokenizer.bin"
+sha256 = "b8a5f8f6c8ceb21d12c1c04b013f917e712d873ae5109d1758089ca1b70c5cb6"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/text_frontend/tokenizer.bin"
+
+[[artifacts.files]]
+path = "voices/testwav_prompt3s/llm_prompt_speech_token.i32.bin"
+sha256 = "219fd34f578909322540bdae1b850b98369226b2e16db52a254908e52f2be172"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/voices/testwav_prompt3s/llm_prompt_speech_token.i32.bin"
+
+[[artifacts.files]]
+path = "voices/testwav_prompt3s/prompt_text.txt"
+sha256 = "c9f49bd76e2a0dd5bed9b908cf4323413e3189adccdbd151a5d1bc8c90cc925a"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/voices/testwav_prompt3s/prompt_text.txt"
+
+[[artifacts.files]]
+path = "voices/testwav_prompt3s/prompt_text_token.i32.bin"
+sha256 = "3d2b6b2e9983304eede3599b7d7e33a3a3ebb8471dee3d152a1a63e57240778b"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/voices/testwav_prompt3s/prompt_text_token.i32.bin"
+
+[[artifacts.files]]
+path = "voices/testwav_prompt3s/validation_target_text.txt"
+sha256 = "41dc083a62f851047f31ad6d159553a35fea08d9744d00b2a8023db04a24d0e6"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/voices/testwav_prompt3s/validation_target_text.txt"
+
+[[artifacts.files]]
+path = "voices/testwav_prompt3s/validation_target_token.i32.bin"
+sha256 = "f5b4c865bc9e4fdecbaf59edaaea345b688e708f7112ae26bb9b925dfd2425ee"
+url = "https://huggingface.co/Sariel00/cosyvoice2_rknn/resolve/47e9a3ea6724b0a65f8c433c77281258ac393f5a/rknn/models/cosyvoice2/voices/testwav_prompt3s/validation_target_token.i32.bin"
+
 # Nothing else is declared yet, deliberately.
 #
 # The ASR weights are not artifacts: they are committed to this repository
@@ -112,12 +260,15 @@ url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f
 # per file), and a release is exact Git commits, so they already ride it. The
 # `artifacts` section exists for what Git does not hold.
 #
-# The RKNN and RKLLM models the NPU path needs — Qwen3-1.7B at 2.3 GB,
-# CosyVoice2 at 1.6 GB — are exactly that, and are not declared here because
-# they are not yet pinned anywhere this file could point at. Declaring them
-# without the digests that make them verifiable would be a promise the release
-# cannot keep. They arrive with `requires_capability = "rknpu2"` when they are
-# pinned, alongside the units that load them.
+# CosyVoice2's RKNN and RKLLM models used to be listed here as undeclarable,
+# on the grounds that conversion outputs are not pinned anywhere. They are:
+# Sariel00/cosyvoice2_rknn publishes them with a MANIFEST.sha256, and they are
+# declared above and committed under tts/. What is left of that case is the
+# Qwen3-1.7B RKNN conversion at 2.3 GB, which is a local conversion with no
+# published counterpart — declaring it without a digest anything could check
+# would be a promise the release cannot keep. It arrives with
+# `requires_capability = "rknpu2"` when it is pinned, alongside the unit that
+# loads it.
 #
 # The NPU runtime libraries belong with those models rather than with the
 # foundation: librknnrt.so and librkllmrt.so are loaded only by the components

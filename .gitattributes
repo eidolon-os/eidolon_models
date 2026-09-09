@@ -10,6 +10,7 @@
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.tflite filter=lfs diff=lfs merge=lfs -text
 *.rknn filter=lfs diff=lfs merge=lfs -text
+*.rkllm filter=lfs diff=lfs merge=lfs -text
 *.engine filter=lfs diff=lfs merge=lfs -text
 *.plan filter=lfs diff=lfs merge=lfs -text
 *.mlmodel filter=lfs diff=lfs merge=lfs -text
@@ -23,3 +24,6 @@
 
 # Pinned upstream model artifacts are checksum-verified and kept byte-exact.
 asr/**/model/* -diff -text
+# The TTS tree nests (text_frontend/, voices/, fixture/, flow/), so this
+# matches at any depth rather than only the package's top level.
+tts/**/model/** -diff -text
