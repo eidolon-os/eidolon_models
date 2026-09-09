@@ -210,3 +210,36 @@ def test_the_mirrors_agree_on_which_refusals_are_worth_repeating() -> None:
     }
     assert tts_protocol.ERROR_TEXT_TOO_LONG not in tts_protocol.RETRYABLE_ERROR_CODES
     assert tts_protocol.ERROR_BAD_REQUEST not in tts_protocol.RETRYABLE_ERROR_CODES
+
+
+def test_the_contract_says_who_ends_an_utterance() -> None:
+    """Its absence cost a working Host, so its presence is checked.
+
+    The first client of this protocol assumed the recognition framework would
+    tell it the speaker had stopped. No such signal existed, and the failure
+    was not a missing final but a silent one: one utterance stayed open for a
+    whole session and the Host answered every turn with a fallback while
+    looking healthy.
+    """
+
+    text = _SDK_CONTRACT.read_text(encoding="utf-8")
+
+    assert "Who ends an utterance" in text
+    assert "The client does, and nothing else will" in text
+    # And the rate, because the length cap is counted in bytes at it: 24 kHz
+    # sent as 16 kHz reached a 60-second cap in 40 seconds.
+    assert "resampled if its source differs" in text
+
+
+def test_the_service_answers_who_ends_an_utterance_rather_than_implying_it() -> None:
+    """`/v1/info` used to say `endpoint_owner: upstream`, which reads as
+    "somebody else handles endpointing" — and a client believed it."""
+
+    from pathlib import Path
+
+    service = (
+        Path(__file__).resolve().parents[1] / "src/eidolon_models_asr/service.py"
+    ).read_text(encoding="utf-8")
+
+    assert '"utterance_boundary_owner": "client"' in service
+    assert "endpoint_owner" not in service

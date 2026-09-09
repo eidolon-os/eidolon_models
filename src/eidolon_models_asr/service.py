@@ -194,7 +194,15 @@ async def info(request: web.Request) -> web.Response:
             "version": __version__,
             "protocol_version": PROTOCOL_VERSION,
             "audio": {"sample_rate": 16000, "channels": 1, "format": "pcm_s16le"},
-            "endpoint_owner": "upstream",
+            # Who decides an utterance has ended. This service does not: it
+            # segments within one, which is where the interims come from, and
+            # sends the final in answer to `end_utterance` and at no other
+            # time. It said "upstream" before, which read as "somebody else
+            # handles endpointing" — and the first client believed it, never
+            # sent `end_utterance`, and kept one utterance open for a whole
+            # session. Served rather than dropped so a client can check the
+            # answer instead of assuming either way.
+            "utterance_boundary_owner": "client",
             "backend": backend.name,
             "model_id": backend.model_id,
             "offline_enabled": backend.offline_model_id is not None,
