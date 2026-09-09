@@ -42,14 +42,33 @@ set -- "$SERVER" \
   --port "$PORT" \
   --ctx-size "$CONTEXT" \
   --jinja \
-  --reasoning-budget 0
+  --reasoning off
 
-# Qwen3 emits reasoning by default, and `--reasoning-budget 0` above is what
-# turns it off. Without it the model spends the whole completion budget inside
+# Qwen3 emits reasoning by default, and `--reasoning off` above is what turns it
+# off. Without any such flag the model spends the whole completion budget inside
 # its own thinking and returns an **empty string rather than an error** — which
-# reads as a broken model rather than a configuration choice. Disabled here, on
-# the Host, so no client has to learn a second way of asking for it: the one
-# Eidolon already has is DeepSeek's `extra_body`, which llama.cpp does not read.
+# reads as a broken model rather than a configuration choice.
+#
+# `off` and not `--reasoning-budget 0`, which is what this used to pass. The
+# budget flag is the wrong instrument: it lets the template *start* thinking and
+# then cuts it off, so every reply came back beginning with a stray closing tag
+#
+#     "</think>\n\n欢迎体验达摩院..."
+#
+# — measured on the board, 4 out of 4. Downstream that is not cosmetic: the
+# local TTS refuses text containing a line break (its engine reads one utterance
+# per line), so a Host with both local models could not speak its own replies,
+# and anything that did would say the tag out loud. `--reasoning off` tells the
+# template not to enable thinking at all, so there is nothing to close.
+#
+# Checked against the failure the budget flag was there to prevent: five prompts
+# built to provoke thinking — arithmetic, a multi-step word problem, and one
+# that says "think carefully first" — all answered non-empty, tag-free and on a
+# single line. It also got 27 x 43 right.
+#
+# Disabled here, on the Host, so no client has to learn a second way of asking
+# for it: the one Eidolon already has is DeepSeek's `extra_body`, which
+# llama.cpp does not read.
 
 if [ -n "${EIDOLON_LLM_THREADS:-}" ]; then
   set -- "$@" --threads "$EIDOLON_LLM_THREADS"
