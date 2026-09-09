@@ -16,7 +16,10 @@ REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
 SOURCE_DIR=${EIDOLON_TTS_SOURCE_DIR:-$REPO_ROOT/src/eidolon_models_tts/cpp}
 BUILD_ROOT=${EIDOLON_TTS_BUILD_ROOT:-/var/lib/eidolon/tts/engine}
 RUNTIME_ROOT=${EIDOLON_TTS_RUNTIME_ROOT:-/usr/lib}
-RUNTIME_INCLUDE=${EIDOLON_TTS_RUNTIME_INCLUDE:-/usr/include}
+# Empty means "use the vendored headers the source carries" — CMakeLists
+# defaults to them. Set it only for a Host whose NPU runtime is a different
+# version than the one vendor/README.md records.
+RUNTIME_INCLUDE=${EIDOLON_TTS_RUNTIME_INCLUDE:-}
 
 if [ ! -d "$SOURCE_DIR" ]; then
   echo "eidolon-tts-build: no engine source at $SOURCE_DIR" >&2
@@ -27,7 +30,7 @@ fi
 # not do: the engine is built from this repository's working tree on the Host,
 # and two releases can carry different source under the same version.
 STAMP_INPUT=$(cat "$SOURCE_DIR/CMakeLists.txt" "$SOURCE_DIR"/src/*.cpp \
-  "$SOURCE_DIR"/include/*.h | sha256sum | cut -d' ' -f1)
+  "$SOURCE_DIR"/include/*.h "$SOURCE_DIR"/vendor/*.h | sha256sum | cut -d' ' -f1)
 STAMP_FILE="$BUILD_ROOT/.source-sha256"
 BINARY="$BUILD_ROOT/cosyvoice2_streaming_pipeline"
 
@@ -45,10 +48,11 @@ for tool in cmake make c++; do
 done
 
 mkdir -p "$BUILD_ROOT"
-cmake -S "$SOURCE_DIR" -B "$BUILD_ROOT/build" \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DEIDOLON_TTS_RUNTIME_ROOT="$RUNTIME_ROOT" \
-  -DEIDOLON_TTS_RUNTIME_INCLUDE="$RUNTIME_INCLUDE"
+set -- -DCMAKE_BUILD_TYPE=Release -DEIDOLON_TTS_RUNTIME_ROOT="$RUNTIME_ROOT"
+if [ -n "$RUNTIME_INCLUDE" ]; then
+  set -- "$@" -DEIDOLON_TTS_RUNTIME_INCLUDE="$RUNTIME_INCLUDE"
+fi
+cmake -S "$SOURCE_DIR" -B "$BUILD_ROOT/build" "$@"
 cmake --build "$BUILD_ROOT/build" --parallel "$(nproc)"
 cp -f "$BUILD_ROOT/build/cosyvoice2_streaming_pipeline" "$BINARY"
 printf '%s' "$STAMP_INPUT" > "$STAMP_FILE"

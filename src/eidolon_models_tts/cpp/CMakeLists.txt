@@ -16,11 +16,16 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
-# Where librknnrt.so / librkllmrt.so and their headers are on this Host. The
-# launcher passes it; the default is where the board's vendor packages put them.
+# Where librknnrt.so / librkllmrt.so are on this Host. The launcher passes it;
+# the default is where the board's vendor packages put them.
 set(EIDOLON_TTS_RUNTIME_ROOT "/usr/lib" CACHE PATH
     "Directory holding librknnrt.so and librkllmrt.so")
-set(EIDOLON_TTS_RUNTIME_INCLUDE "" CACHE PATH
+# The headers are vendored — see vendor/README.md. They were hand-placed under
+# /root on the board, which the `eidolon` user cannot read, and a release
+# failed on the real Host with `fatal error: rkllm.h: No such file`. An
+# override is kept for a Host whose runtime is a different version, but the
+# default is the copy this release carries and verified against that board.
+set(EIDOLON_TTS_RUNTIME_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/vendor" CACHE PATH
     "Directory holding rknn_api.h and rkllm.h")
 
 find_library(RKNN_RUNTIME NAMES rknnrt HINTS "${EIDOLON_TTS_RUNTIME_ROOT}" REQUIRED)
