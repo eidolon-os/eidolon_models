@@ -16,9 +16,7 @@ from eidolon_models_tts.service import serve
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="eidolon-models-tts")
-    parser.add_argument(
-        "command", choices=("serve",), help="serve this Host's own synthesis"
-    )
+    parser.add_argument("command", choices=("serve",), help="serve this Host's own synthesis")
     parser.add_argument("--log-level", default="INFO")
     arguments = parser.parse_args(argv)
     logging.basicConfig(

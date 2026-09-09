@@ -78,8 +78,9 @@ async def info(request: web.Request) -> web.Response:
     )
 
 
-async def _refuse(socket: web.WebSocketResponse, code: str, message: str,
-                  request_id: str | None = None) -> None:
+async def _refuse(
+    socket: web.WebSocketResponse, code: str, message: str, request_id: str | None = None
+) -> None:
     payload: dict[str, object] = {
         "type": protocol.ERROR,
         "code": code,
@@ -169,9 +170,7 @@ async def stream(request: web.Request) -> web.StreamResponse:
 
     async for message in socket:
         if message.type is WSMsgType.BINARY:
-            await _refuse(
-                socket, protocol.ERROR_BAD_REQUEST, "this stream carries text, not audio"
-            )
+            await _refuse(socket, protocol.ERROR_BAD_REQUEST, "this stream carries text, not audio")
             continue
         if message.type is not WSMsgType.TEXT:
             break
