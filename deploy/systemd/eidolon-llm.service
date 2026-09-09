@@ -1,0 +1,51 @@
+[Unit]
+Description=Eidolon local chat model
+After=local-fs.target network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=eidolon
+Group=eidolon
+UMask=0007
+# The Host path contract, the same one every product unit is sealed against.
+EnvironmentFile=/etc/eidolon/host.env
+# Which cores this Host gives the chat model. Optional in form and decided in
+# fact: on RK3588 this model belongs on the A55 cluster so the NPU is left to
+# TTS, which is the only arrangement where both run in one turn without the
+# speech breaking up. See eidolon_models/HOST-RK3588.md §2.22-2.23 and
+# eidolon_models/deploy/cpu-allocation.env.
+EnvironmentFile=-/etc/eidolon/cpu-allocation.env
+Environment=EIDOLON_LLM_HOST=127.0.0.1
+Environment=EIDOLON_LLM_PORT=8769
+Environment=EIDOLON_LLM_MODEL=/var/lib/eidolon/models/qwen3-1.7b/Qwen3-1.7B-Q4_0.gguf
+Environment=EIDOLON_LLM_CONTEXT_SIZE=2048
+ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-llm
+Restart=on-failure
+RestartSec=2
+# A gigabyte of weights is mapped and the first tokens are decoded before the
+# socket answers; measured at about 12 s on RK3588 from a warm page cache and
+# longer from cold, so the limit is generous on purpose.
+TimeoutStartSec=180
+KillSignal=SIGTERM
+TimeoutStopSec=20s
+RuntimeDirectory=eidolon/llm
+RuntimeDirectoryMode=0750
+LogsDirectory=eidolon/llm
+LogsDirectoryMode=0750
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+# The weights live under the Host's model root, which ProtectSystem=strict makes
+# read-only; the service only ever reads them, so nothing is granted back.
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+CapabilityBoundingSet=
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

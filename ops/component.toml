@@ -27,6 +27,53 @@ default = 8768
 bind = "loopback"
 purpose = "funasr 2pass streaming recognition, WebSocket at /v1/stream"
 
+[[units]]
+id = "eidolon-llm"
+kind = "service"
+exec = "scripts/eidolon-llm"
+user = "eidolon"
+serves = ["llm_api"]
+after = ["local-fs.target", "network.target"]
+# The conversation runs on this Host instead of at a provider. Without it the
+# unit is not installed and whoever asks the model a question keeps asking one
+# outside.
+#
+# Nothing in Eidolon speaks a protocol of ours to it: `llama-server` serves the
+# OpenAI shape, and the Agent already reaches its model through LiteLLM with a
+# name and an `api_base`. So making this Host answer its own questions is an
+# address, not an adapter — which is why this component ships a launcher and no
+# client.
+requires_capability = "local_llm"
+
+[ports.llm_api]
+default = 8769
+bind = "loopback"
+purpose = "chat completions, OpenAI-compatible HTTP at /v1"
+
+[[artifacts]]
+id = "qwen3-1.7b-q4_0"
+kind = "model"
+install_root = "/var/lib/eidolon/models/qwen3-1.7b"
+requires_capability = "local_llm"
+# Declared here because a release is exact Git commits and a gigabyte of
+# weights is in neither. Without this the unit above starts, finds no model,
+# and exits — which is at least loud, unlike the alternative of fetching from a
+# model hub on first use on a Host that may have no route to one.
+#
+# Q4_0 rather than a K-quant, and measured rather than assumed: on this board
+# Q4_0 decodes at 5.83-5.88 tok/s against Q4_K_M's 4.59-4.62, because Q4_0 has
+# the ARM dotprod kernels this SoC can use (asimddp, no i8mm). The threshold is
+# 3.43 tok/s — what it takes for the model to keep ahead of speech being spoken
+# — so the K-quant's margin is 1.34x against Q4_0's 1.7x, and
+# HOST-RK3588.md §2.24-2.25 already spends most of what is there.
+#
+# The upstream digest below is byte-identical to the file §2.23 was measured
+# against, so the number above and the artifact carried here are one thing.
+
+[[artifacts.files]]
+path = "Qwen3-1.7B-Q4_0.gguf"
+sha256 = "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5"
+
 # Nothing else is declared yet, deliberately.
 #
 # The ASR weights are not artifacts: they are committed to this repository

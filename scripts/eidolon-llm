@@ -1,0 +1,65 @@
+#!/bin/sh
+# Start this Host's own chat model, or say why it cannot.
+#
+# A launcher rather than the server itself, for the reason the LiveKit unit has
+# one: `llama-server` is a third-party binary and the arguments it needs are
+# this Host's facts — which cores it may use, which port it was given, where its
+# weights were carried. None of those belong baked into a unit file, and none of
+# them can be read by a binary we do not build.
+#
+# What this does not do: choose. Every value below is decided somewhere that
+# owns it — the core allocation in /etc/eidolon/cpu-allocation.env (the board's
+# single tuning point), the port in the component's ops contract, the weights by
+# the artifact Ops carried. This only assembles them and hands over.
+set -eu
+
+MODEL=${EIDOLON_LLM_MODEL:-}
+PORT=${EIDOLON_LLM_PORT:-}
+HOST=${EIDOLON_LLM_HOST:-127.0.0.1}
+CONTEXT=${EIDOLON_LLM_CONTEXT_SIZE:-2048}
+SERVER=${EIDOLON_LLM_SERVER:-/usr/local/bin/llama-server}
+
+if [ -z "$MODEL" ] || [ -z "$PORT" ]; then
+  echo "eidolon-llm: EIDOLON_LLM_MODEL and EIDOLON_LLM_PORT are required" >&2
+  exit 2
+fi
+if [ ! -f "$MODEL" ]; then
+  # The weights are carried by Ops against a recorded digest, not fetched here:
+  # this Host may have no route to a model hub, and a service that downloaded
+  # on first use would answer its first turn minutes late or not at all.
+  echo "eidolon-llm: model weights are absent: $MODEL" >&2
+  echo "eidolon-llm: they are carried by Ops for a Host declaring local_llm" >&2
+  exit 2
+fi
+if [ ! -x "$SERVER" ]; then
+  echo "eidolon-llm: $SERVER is absent; it is a pinned foundation artifact" >&2
+  exit 2
+fi
+
+set -- "$SERVER" \
+  --model "$MODEL" \
+  --host "$HOST" \
+  --port "$PORT" \
+  --ctx-size "$CONTEXT" \
+  --jinja \
+  --reasoning-budget 0
+
+# Qwen3 emits reasoning by default, and `--reasoning-budget 0` above is what
+# turns it off. Without it the model spends the whole completion budget inside
+# its own thinking and returns an **empty string rather than an error** — which
+# reads as a broken model rather than a configuration choice. Disabled here, on
+# the Host, so no client has to learn a second way of asking for it: the one
+# Eidolon already has is DeepSeek's `extra_body`, which llama.cpp does not read.
+
+if [ -n "${EIDOLON_LLM_THREADS:-}" ]; then
+  set -- "$@" --threads "$EIDOLON_LLM_THREADS"
+fi
+
+AFFINITY=${EIDOLON_LLM_CPU_AFFINITY:-}
+if [ -n "$AFFINITY" ]; then
+  # Measured, not preference: this model on the A55 cluster leaves the NPU free
+  # for TTS, which is the only arrangement where both run in the same turn
+  # without the speech breaking up. See HOST-RK3588.md §2.22-2.23.
+  exec taskset -c "$AFFINITY" "$@"
+fi
+exec "$@"
