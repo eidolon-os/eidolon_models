@@ -69,6 +69,35 @@ DEFAULT_DOWNSTREAM_CORE = "2"
 #: release back: one drop-in and the next restart was correct.
 DEFAULT_MAX_CONTEXT = 2048
 
+#: The longest text this Host synthesizes without the audio breaking up.
+#:
+#: Not the same question as `protocol.MAX_TEXT_CHARACTERS` (400), and the
+#: difference matters: that one is "will the service refuse the request", this
+#: one is "will the listener hear a gap". A request of 200 characters is
+#: accepted and answered, and the audio drops out in the middle of it.
+#:
+#: Measured on the board (HOST-RK3588.md §2.28), by the buffer floor
+#: `minimum_buffer_after_ms` — a chunk arriving late is harmless while the
+#: buffer stays positive, so the floor is the only quantity that says whether
+#: anything was audible:
+#:
+#:    14 ch   4.08 s   +763 ms   rtf 0.97
+#:    20 ch   5.00 s   +737 ms   rtf 0.93
+#:    44 ch   9.80 s   +447 ms   rtf 0.98
+#:    60 ch  13.20 s   +504 ms   rtf 1.01   <- this value, 20 rounds back to back
+#:    80 ch  16.88 s   +209 ms   rtf 1.00-1.02
+#:   126 ch  26.20 s   -246..-372 ms        <- gaps, every run
+#:
+#: The cause is rtf crossing 1: past that the deficit accumulates at about
+#: 43 ms per second of audio, and 26 seconds is where it eats the whole buffer.
+#: 60 was chosen over 80 because 80 leaves only 209 ms — and because 60 is
+#: already what Channel's aggregator sends (`hard_max_chars`), so this states
+#: the property that arrangement was relying on rather than inventing a new one.
+#:
+#: A caller that exceeds this should split on sentence boundaries. Raising this
+#: number requires new measurements of the buffer floor, not an argument.
+SAFE_TEXT_CHARACTERS = 60
+
 
 @dataclass(frozen=True)
 class Settings:

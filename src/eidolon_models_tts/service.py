@@ -15,7 +15,7 @@ import logging
 from aiohttp import WSMsgType, web
 
 from eidolon_models_tts import protocol
-from eidolon_models_tts.config import Settings
+from eidolon_models_tts.config import SAFE_TEXT_CHARACTERS, Settings
 from eidolon_models_tts.engine import Engine, EngineUnavailable, SynthesisFailed, UtteranceReport
 
 logger = logging.getLogger(__name__)
@@ -66,6 +66,10 @@ async def info(request: web.Request) -> web.Response:
             "voice_id": settings.voice,
             "audio": _audio_description(),
             "max_text_characters": protocol.MAX_TEXT_CHARACTERS,
+            # Announced rather than left for the caller to discover by ear.
+            # `max_text_characters` says what is accepted; this says what stays
+            # audible. See config.SAFE_TEXT_CHARACTERS for the measurements.
+            "safe_text_characters": SAFE_TEXT_CHARACTERS,
             "concurrent_requests": 1,
             "init_warmup_ms": engine.init_warmup_ms,
             "npu_cores": {
