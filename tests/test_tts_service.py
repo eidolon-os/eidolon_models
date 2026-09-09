@@ -41,6 +41,7 @@ class FakeEngine:
         self.spoken: list[str] = []
         self.raise_on_next: Exception | None = None
         self.chunks = 3
+        self.report_extra: dict[str, str] = {}
 
     async def start(self) -> None:
         return None
@@ -65,6 +66,7 @@ class FakeEngine:
                 "steady_pcm_rtf": "0.84",
                 "underrun_count": "1",
                 "profile_precompute_ms": "764.0",
+                **self.report_extra,
             }
         )
 
@@ -117,9 +119,9 @@ async def test_one_request_streams_audio_then_says_what_it_said(
     assert finished["type"] == protocol.SYNTHESIS_FINISHED
     assert finished[protocol.REQUEST_ID_FIELD] == "r-1"
     assert audio == finished["pcm_bytes"] == 14400
-    # The engine's own quality numbers reach the client: underruns are the one
-    # thing it cannot observe for itself.
-    assert finished["underruns"] == 1
+    # The engine's own quality numbers reach the client: how close the buffer
+    # came to empty is the one thing it cannot observe for itself.
+    assert finished["late_chunks"] == 1
     assert finished["steady_rtf"] == 0.84
 
 
@@ -240,3 +242,39 @@ async def test_audio_sent_to_this_stream_is_refused(client) -> None:
         refusal = await socket.receive_json()
 
     assert refusal["code"] == protocol.ERROR_BAD_REQUEST
+
+
+async def test_the_finish_report_says_whether_anything_was_audible(
+    client, engine: FakeEngine
+) -> None:
+    """`underrun_count` counts chunks that missed their own deadline, which for
+    a producer near rtf 1 is almost every chunk by construction — it tracks the
+    audio's length, not the listener's experience. A gap is audible only when
+    the buffer goes negative, and that is a different field.
+
+    Forwarding only the first one under the name `underruns` is how this
+    service reported "1-3 dropouts per utterance" for runs whose real count was
+    zero. So the audible one is forwarded, and the other is named for what it
+    counts.
+    """
+
+    engine.report_extra = {"minimum_buffer_after_ms": "412.5", "underrun_count": "3"}
+    async with client.ws_connect(protocol.STREAM_PATH) as socket:
+        await socket.receive_json()
+        await socket.send_json(_ask("r-1", "你好"))
+        while True:
+            message = await socket.receive()
+            if message.type.name == "BINARY":
+                continue
+            payload = json.loads(message.data)
+            # Not the first text frame: that is `synthesis_started`. Breaking on
+            # it is the same reading mistake this whole test is about.
+            if payload["type"] == protocol.SYNTHESIS_STARTED:
+                continue
+            finished = payload
+            break
+
+    assert finished["minimum_buffer_ms"] == 412.5
+    assert finished["late_chunks"] == 3
+    # Not under a name a reader would take for audible dropouts.
+    assert "underruns" not in finished

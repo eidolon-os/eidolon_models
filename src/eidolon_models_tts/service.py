@@ -160,7 +160,18 @@ async def stream(request: web.Request) -> web.StreamResponse:
                 ("audio_seconds", "audio_seconds"),
                 ("ttft_ms", "ttft_first_pcm_ms"),
                 ("steady_rtf", "steady_pcm_rtf"),
-                ("underruns", "underrun_count"),
+                # The one that says whether anything was audible. A chunk is a
+                # second of audio, so a chunk 600 ms late still leaves +400 ms
+                # of buffer and nothing is heard; a gap needs this below zero.
+                ("minimum_buffer_ms", "minimum_buffer_after_ms"),
+                # Kept, but named for what it counts. It is "how many chunks
+                # arrived after their own deadline", which for a producer near
+                # rtf 1 is almost every chunk by construction — it tracks the
+                # audio's length, not the listener's experience. Forwarding it
+                # as `underruns` had this session reporting "1-3 dropouts per
+                # utterance" for months of numbers where the real count was 0;
+                # HOST-RK3588.md 2.20 [B] had already called that a misreading.
+                ("late_chunks", "underrun_count"),
                 ("profile_ms", "profile_precompute_ms"),
             ):
                 value = report.number(key)
