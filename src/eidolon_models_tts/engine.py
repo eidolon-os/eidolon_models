@@ -92,8 +92,10 @@ class Engine:
 
     @property
     def ready(self) -> bool:
-        return self._ready.is_set() and self._process is not None and (
-            self._process.returncode is None
+        return (
+            self._ready.is_set()
+            and self._process is not None
+            and (self._process.returncode is None)
         )
 
     @property
@@ -121,10 +123,10 @@ class Engine:
             f"--encoder-core={settings.encoder_core}",
             f"--flow-core={settings.flow_core}",
             f"--hift-core={settings.hift_core}",
-            # Without this the engine uses its own default of 288 and the
-            # ceiling on an utterance becomes the text length: 44 characters
-            # truncate mid-sentence, 80 refuse to synthesize. See
-            # config.DEFAULT_MAX_CONTEXT.
+            # Passed explicitly, and equal to the engine's own default: the
+            # value is a decision with a known cost on both sides, so it is
+            # stated where it can be read and overridden. See
+            # config.DEFAULT_MAX_CONTEXT before changing it.
             f"--max-context={settings.max_context}",
             "--serve",
             "--pcm-stream=-",
@@ -298,6 +300,4 @@ class Engine:
         # stderr closed: the engine exited. Whoever is waiting on readiness or
         # on a report must not wait forever.
         self._ready.clear()
-        await self._reports.put(
-            UtteranceReport({"status": "FAIL", "error": "the engine exited"})
-        )
+        await self._reports.put(UtteranceReport({"status": "FAIL", "error": "the engine exited"}))

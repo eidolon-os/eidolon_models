@@ -1,13 +1,17 @@
 """The argument vector handed to the engine, held to what it must contain.
 
 This file exists because of what was missing from that vector rather than what
-was wrong in it. The engine defaults `--max-context` to 288; the service never
-passed the flag, so the ceiling on an utterance was its text length instead of
-the model's context. 44 characters truncated mid-sentence every single time, 80
-produced no audio at all, and nothing failed loudly — `/readyz` stayed 200 and
-short sentences were fine. HOST-RK3588.md §2.20 had already recorded that this
-argument must be passed; the hand-run benchmarks passed it and the service did
-not, which is why its long-form behaviour never matched them.
+was wrong in it: the service never passed `--max-context`, so the ceiling on an
+utterance was its text length instead of the model's context, and nothing
+failed loudly — `/readyz` stayed 200 and short sentences were fine.
+
+The flag is passed now, at the value the engine itself defaults to. Raising it
+was tried and reverted: serve mode does not clear the RKLLM KV cache between
+utterances, and a larger context gives that residue room to accumulate — the
+fourth utterance starts reciting the voice prompt. `config.DEFAULT_MAX_CONTEXT`
+carries the measurements and the condition for raising it. What is pinned here
+is that the value is stated rather than inherited, and that it is not raised
+without the cache fix.
 
 An omission cannot be caught by reading the vector's own code, so the whole
 vector is asserted here. Nothing needs an NPU.
@@ -31,24 +35,29 @@ def _command(**overrides: object) -> list[str]:
     return Engine(settings).command()
 
 
-def test_the_context_is_passed_and_is_the_model_s_own() -> None:
-    """The regression this file was written for.
+def test_the_context_is_stated_rather_than_inherited() -> None:
+    """The flag must be in the vector even though its value equals the
+    engine's own default: a value nobody passes is a value nobody can find,
+    and this one has a cost in both directions."""
 
-    2048 rather than a tuned number: the RKLLM body is
-    `qwen2_body_w8a8_c2_ctx2048`, so this is what the weights hold, and the
-    engine's 288 is below what a single sentence needs.
+    assert f"--max-context={DEFAULT_MAX_CONTEXT}" in _command()
+    assert any(argument.startswith("--max-context=") for argument in _command())
+
+
+def test_the_context_is_not_raised_without_the_cross_utterance_fix() -> None:
+    """Raising this alone made output worse, not better.
+
+    Serve mode reuses one RKLLM handle and never clears its KV cache; at 2048
+    the residue accumulates and the fourth utterance recites the voice prompt,
+    with steady rtf going 0.9 -> 1.5. Measured on the board, six utterances
+    from a cold start: 288 gave 6/6 intact, 2048 gave 3/6.
+
+    This assertion is here to be *deliberately* changed: when the engine's
+    serve loop clears the cache per utterance, raise the value and this test
+    together, and not before.
     """
 
-    assert "--max-context=2048" in _command()
-    assert DEFAULT_MAX_CONTEXT == 2048
-
-
-def test_the_engine_default_is_never_what_takes_effect() -> None:
-    """288 is the value that truncated every long utterance. If this vector
-    ever stops carrying the flag, that default silently returns."""
-
-    assert any(argument.startswith("--max-context=") for argument in _command())
-    assert "--max-context=288" not in _command()
+    assert DEFAULT_MAX_CONTEXT == 288
 
 
 def test_an_operator_can_override_the_context() -> None:
@@ -109,7 +118,7 @@ def test_every_argument_the_engine_needs_is_present() -> None:
         "--encoder-core=2",
         "--flow-core=2",
         "--hift-core=2",
-        "--max-context=2048",
+        f"--max-context={DEFAULT_MAX_CONTEXT}",
         "--serve",
         "--pcm-stream=-",
         "--sample",

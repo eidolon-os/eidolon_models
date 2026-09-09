@@ -29,24 +29,43 @@ DEFAULT_DOWNSTREAM_CORE = "2"
 
 #: How much RKLLM context the engine may use, in tokens.
 #:
-#: The engine's own default is 288, which is not a working value: it is below
-#: what this model holds (`qwen2_body_w8a8_c2_ctx2048` — the name says 2048)
-#: and below what an ordinary sentence needs. The engine derives its generation
-#: budget as `min(text_tokens * 20, max_context - prefill_tokens)` and refuses
-#: outright when that lands under `text_tokens * 2`, so with 288 the ceiling is
-#: the text length rather than the model:
+#: 288 is the engine's own default, restated here so it is a decision rather
+#: than an accident — and it is a decision that costs something. The engine
+#: derives its generation budget as
+#: `min(text_tokens * 20, max_context - prefill_tokens)` and refuses outright
+#: when that lands under `text_tokens * 2`, so at 288 the ceiling on an
+#: utterance is its text length rather than the model's context: 44 characters
+#: truncate mid-sentence at 6.04 s every time, 80 produce no audio at all.
 #:
-#:   14 chars -> fits;  44 chars -> capped at 130 tokens, every utterance
-#:   truncated mid-sentence at 6.04 s;  80 chars -> prefill 174 leaves 114
-#:   against a floor of 166, so it raises and produces no audio at all.
+#: **Do not raise this on its own.** It was raised to 2048 (what the weights
+#: hold — `qwen2_body_w8a8_c2_ctx2048`) and that was worse, not better. Serve
+#: mode reuses one RKLLM handle across utterances without clearing its KV
+#: cache, and 288 is small enough that the residue is squeezed out before it
+#: matters. Give it 2048 of room and the residue accumulates instead. Measured
+#: on the board, same sentence six times from a cold start:
 #:
-#: Measured on the board, same text, only this argument changed: 288 gave
-#: "--max-tokens must exceed --min-tokens" and zero bytes; 2048 gave
-#: prefill=174, generated=422, 16.88 s, and a transcript identical to the
-#: input. HOST-RK3588.md §2.20 already recorded that this must be passed —
-#: the hand-run benchmarks did, and this service did not, which is why its
-#: long-form behaviour never matched them.
-DEFAULT_MAX_CONTEXT = 2048
+#:   288:  6/6 intact
+#:   2048: utterances 1-3 intact, then "大妈妈妈之前也这样子，忽来过，今天
+#:         天气不错，我们出去走走吧。" — the voice prompt's own text plus the
+#:         previous utterances, and steady rtf 0.9 -> 1.5-1.6
+#:
+#: So the small context has been hiding a cross-utterance bug rather than
+#: being the whole problem. HOST-RK3588.md §2.26 had already recorded the
+#: behaviour — serve mode prefills with `keep_history = true`, so the KV
+#: history accumulates — but at 288 it only showed up as harmless jitter in the
+#: token count. The fix is one line in the engine,
+#: `cosyvoice2_streaming_pipeline.cpp:2071`: the *first* prefill of each
+#: utterance should pass `false` (the two later call sites pass `true`
+#: correctly, being single-token continuations within one utterance). The two
+#: changes go together the way §2.21's two-core model and NPU core assignment
+#: did. Until that lands, a larger value here trades truncated long sentences
+#: for corrupted ones, which is worse: a truncation is at least the beginning
+#: of this sentence.
+#:
+#: Overridable because that is what made the bad value recoverable without
+#: rolling a release back: one drop-in set it to 288 and the next restart was
+#: correct.
+DEFAULT_MAX_CONTEXT = 288
 
 
 @dataclass(frozen=True)
