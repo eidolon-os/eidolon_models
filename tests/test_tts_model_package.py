@@ -6,9 +6,12 @@ content now, so what can go wrong has moved — the tree can drift from what the
 engine loads, or from the upstream revision it claims to be. Both are checked
 here, and neither needs an NPU.
 
-The same bytes are declared twice on purpose: committed here, and pinned in
-``ops/component.toml`` against the repository that published them. That is only
-safe while the two agree, so the agreement is a test rather than a promise.
+The bytes are committed once, here. They were briefly also declared as an Ops
+artifact pointing at the publishing repository, so a Host could re-fetch and
+re-check them without going through Git — a second 1.5 GB copy on the board
+proving what these tests already prove. That declaration is gone; the property
+it defended is kept below, by holding this manifest's own provenance to
+something a machine can resolve.
 """
 
 from __future__ import annotations
@@ -25,13 +28,8 @@ _PKG = _ROOT / "tts" / "cosyvoice2-rk3588" / "2026-07-21"
 _MODEL = _PKG / "model"
 _MANIFEST = _PKG / "manifest.json"
 
-def _artifact() -> dict:
-    contract = tomllib.loads((_ROOT / "ops" / "component.toml").read_text(encoding="utf-8"))
-    declared = [
-        entry for entry in contract["artifacts"] if entry["id"].startswith("cosyvoice2-rk3588-")
-    ]
-    assert len(declared) == 1, "expected exactly one CosyVoice2 artifact declaration"
-    return declared[0]
+def _manifest() -> dict:
+    return json.loads(_MANIFEST.read_text(encoding="utf-8"))
 
 
 def test_the_committed_package_matches_its_own_manifest() -> None:
@@ -75,20 +73,33 @@ def test_the_package_holds_everything_the_engine_refuses_to_start_without() -> N
     assert missing == [], f"the committed package is missing: {missing}"
 
 
-def test_the_committed_digests_are_the_declared_upstream_pins() -> None:
-    """The two copies of these bytes cannot drift apart quietly.
+def test_the_upstream_pin_resolves_to_a_fetchable_location() -> None:
+    """What the removed Ops declaration was for, kept without the second copy.
 
-    Without this, a re-export committed here would still be carried from
-    upstream by Ops, or the pin would be bumped without the tree following, and
-    the board would hold two sets of weights that disagree about which is right.
+    It carried the same bytes from the publishing repository so they could be
+    re-fetched and re-checked outside Git. The checking is what mattered, and it
+    does not need the fetching: the manifest names the repository, an immutable
+    revision, and each file's path within it, so a URL for any file here is
+    composable — by a person, or by whoever declares this as an artifact later.
+
+    Asserted rather than assumed, because a `file_map` whose entries did not
+    compose would leave the provenance readable and unusable.
     """
 
-    committed = json.loads(_MANIFEST.read_text(encoding="utf-8"))["files"]
-    declared = {entry["path"]: entry["sha256"] for entry in _artifact()["files"]}
+    manifest = _manifest()
+    source = manifest["source"]
 
-    assert set(declared) == set(committed)
-    for path, digest in declared.items():
-        assert committed[path] == digest, path
+    assert source["git_url"].startswith("https://huggingface.co/")
+    assert len(source["revision"]) == 40, "a branch can move under a digest"
+    assert source["url"].rstrip("/") in source["git_url"]
+
+    base = source["git_url"].removesuffix(".git")
+    for name, upstream in source["file_map"].items():
+        url = f"{base}/resolve/{source['revision']}/{upstream}"
+        assert url.startswith(f"{base}/resolve/{source['revision']}/")
+        assert not upstream.startswith("/"), name
+        assert ".." not in upstream, name
+        assert name in manifest["files"], name
 
 
 def test_no_file_here_is_without_an_upstream_to_point_at() -> None:
@@ -111,20 +122,23 @@ def test_no_file_here_is_without_an_upstream_to_point_at() -> None:
     assert set(manifest["source"]["file_map"]) == set(manifest["files"])
 
 
-def test_the_carried_pin_is_not_aimed_at_a_servable_model_root() -> None:
-    """install-component-artifact rmtree's its destination before installing.
+def test_this_component_declares_no_artifact_for_the_synthesis_weights() -> None:
+    """They ride the release as Git content, and declaring them as well put a
+    second 1.5 GB copy on the board proving what these tests already prove.
 
-    The declaration carries 24 of the 26 files the engine loads, so aiming it
-    at the directory a service reads would replace a working model root with an
-    incomplete one — and it would have been aimed there, because that is where
-    the hand-placed copy used to live.
+    The declaration also had to aim at a non-servable path, because
+    `install-component-artifact` rmtree's its destination and the declaration
+    could not carry the complete set. Both halves of that are gone: the two
+    files it could not carry turned out to be ones the engine never reads.
     """
 
-    install_root = _artifact()["install_root"]
+    contract = tomllib.loads((_ROOT / "ops" / "component.toml").read_text(encoding="utf-8"))
+    declared = {entry["id"] for entry in contract.get("artifacts", ())}
 
-    assert install_root == "/var/lib/eidolon/models/cosyvoice2-upstream"
-    assert install_root != "/var/lib/eidolon/models/cosyvoice2"
-    assert len(_artifact()["files"]) == 24
+    assert not {name for name in declared if name.startswith("cosyvoice2")}
+    # The chat model's weights are a different case and stay declared: unsloth
+    # publishes that gguf and Git does not hold it.
+    assert "qwen3-1.7b-q4_0" in declared
 
 
 def test_the_launcher_points_at_the_committed_package() -> None:
