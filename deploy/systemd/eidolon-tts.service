@@ -1,0 +1,65 @@
+[Unit]
+Description=Eidolon local streaming TTS
+After=local-fs.target network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=eidolon
+Group=eidolon
+UMask=0007
+# The Host path contract, the same one every product unit is sealed against.
+EnvironmentFile=/etc/eidolon/host.env
+# Optional: which cores this Host gives its local models. The NPU core masks
+# below are the arrangement HOST-RK3588.md §2.22-2.23 measured — the LLM keeps
+# the A55 cluster, TTS keeps the NPU — so a Host that has decided differently
+# says so there rather than here.
+EnvironmentFile=-/etc/eidolon/cpu-allocation.env
+Environment=EIDOLON_TTS_HOST=127.0.0.1
+Environment=EIDOLON_TTS_PORT=8770
+Environment=EIDOLON_TTS_MODEL_ROOT=/var/lib/eidolon/models/cosyvoice2
+Environment=EIDOLON_TTS_ENGINE=/var/lib/eidolon/tts/engine/cosyvoice2_streaming_pipeline
+Environment=EIDOLON_TTS_UV_CACHE_DIR=/var/cache/eidolon/tts/uv
+Environment=PATH=/opt/eidolon/current/eidolon_models/.venv/bin:/usr/local/bin:/usr/bin:/bin
+# The engine is built on this Host from the source the release carried: it
+# links this board's NPU runtime, so it cannot be a release artifact. Built
+# before the service starts rather than by it, so a build failure is a start
+# failure with the compiler's own message, and not a service that comes up and
+# then refuses every request.
+ExecStartPre=/opt/eidolon/current/eidolon_models/scripts/eidolon-tts-build
+ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-tts serve
+Restart=on-failure
+RestartSec=5
+# The engine loads 700 MB of NPU graphs and warms four of them before the
+# socket answers: measured at 2.9 s on an idle board. The first start also
+# compiles the engine, which is about two minutes on four A55 cores — so this
+# is sized for that start, not the steady one.
+TimeoutStartSec=600
+KillSignal=SIGTERM
+TimeoutStopSec=30s
+# The engine binary and its build tree live here, and the service writes them.
+StateDirectory=eidolon/tts
+StateDirectoryMode=0750
+CacheDirectory=eidolon/tts
+CacheDirectoryMode=0750
+RuntimeDirectory=eidolon/tts
+RuntimeDirectoryMode=0750
+LogsDirectory=eidolon/tts
+LogsDirectoryMode=0750
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+CapabilityBoundingSet=
+RestrictSUIDSGID=yes
+# The NPU is reached through /dev/dri and the rknpu device node, which
+# ProtectSystem=strict does not cover but DevicePolicy would — left at the
+# default so the engine can open them.
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

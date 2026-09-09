@@ -50,6 +50,28 @@ default = 8769
 bind = "loopback"
 purpose = "chat completions, OpenAI-compatible HTTP at /v1"
 
+[[units]]
+id = "eidolon-tts"
+kind = "service"
+exec = "scripts/eidolon-tts"
+user = "eidolon"
+serves = ["tts_stream"]
+after = ["local-fs.target", "network.target"]
+# This Host speaks with its own voice instead of a provider's. Without it the
+# unit is not installed and Channel's tts_provider stays pointed outward.
+#
+# Unlike the LLM beside it, this one ships an engine as well as a launcher:
+# `llama-server` is upstream's own server, while CosyVoice2's streaming
+# pipeline is ours and links this board's NPU runtime — so its source rides
+# the release and the unit builds it here before starting. See
+# src/eidolon_models_tts/cpp/README.md.
+requires_capability = "local_tts"
+
+[ports.tts_stream]
+default = 8770
+bind = "loopback"
+purpose = "CosyVoice2 streaming synthesis, WebSocket at /v1/stream"
+
 [[artifacts]]
 id = "qwen3-1.7b-q4_0"
 kind = "model"

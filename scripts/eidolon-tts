@@ -1,0 +1,39 @@
+#!/bin/sh
+# Start this Host's own speech synthesis, or say why it cannot.
+#
+# Like the ASR launcher beside it, this exports the model root rather than
+# letting the package derive it: two levels up from
+# site-packages/eidolon_models_tts lands inside the venv, and a release
+# installs the package — that mistake cost the ASR service 114 restarts.
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+UV_BIN=${EIDOLON_TTS_UV_BIN:-uv}
+UV_CACHE_DIR=${EIDOLON_TTS_UV_CACHE_DIR:-$REPO_ROOT/.cache/uv}
+VENV_BIN=${EIDOLON_TTS_VENV_BIN:-$REPO_ROOT/.venv/bin}
+export UV_CACHE_DIR
+
+EIDOLON_TTS_MODEL_ROOT=${EIDOLON_TTS_MODEL_ROOT:-/var/lib/eidolon/models/cosyvoice2}
+EIDOLON_TTS_ENGINE=${EIDOLON_TTS_ENGINE:-/var/lib/eidolon/tts/engine/cosyvoice2_streaming_pipeline}
+export EIDOLON_TTS_MODEL_ROOT EIDOLON_TTS_ENGINE
+
+if [ ! -d "$EIDOLON_TTS_MODEL_ROOT" ]; then
+  echo "eidolon-tts: synthesis assets are absent: $EIDOLON_TTS_MODEL_ROOT" >&2
+  echo "eidolon-tts: they ride the release for a Host declaring local_tts" >&2
+  exit 2
+fi
+if [ ! -x "$EIDOLON_TTS_ENGINE" ]; then
+  # Built on the Host by scripts/eidolon-tts-build, which the release runs
+  # before this unit starts. Refused here rather than left to the service so
+  # the reason is the first line in the journal.
+  echo "eidolon-tts: engine is not built: $EIDOLON_TTS_ENGINE" >&2
+  echo "eidolon-tts: run scripts/eidolon-tts-build on this Host" >&2
+  exit 2
+fi
+
+if [ -x "$VENV_BIN/eidolon-models-tts" ]; then
+  exec "$VENV_BIN/eidolon-models-tts" "$@"
+fi
+
+exec "$UV_BIN" run --project "$REPO_ROOT" --locked eidolon-models-tts "$@"

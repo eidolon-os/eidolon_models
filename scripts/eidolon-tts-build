@@ -1,0 +1,55 @@
+#!/bin/sh
+# Build this Host's synthesis engine, once, from the source the release brought.
+#
+# Not a release artifact: the engine links librknnrt and librkllmrt, which are
+# this board's own NPU runtime, and a release is exact Git commits. So the
+# source rides the release and this compiles it here, against the runtime it
+# will actually call.
+#
+# Idempotent by digest: a release that did not change the engine's source finds
+# the binary already built and does nothing, so an update does not cost two
+# minutes of compiling for nothing.
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+SOURCE_DIR=${EIDOLON_TTS_SOURCE_DIR:-$REPO_ROOT/src/eidolon_models_tts/cpp}
+BUILD_ROOT=${EIDOLON_TTS_BUILD_ROOT:-/var/lib/eidolon/tts/engine}
+RUNTIME_ROOT=${EIDOLON_TTS_RUNTIME_ROOT:-/usr/lib}
+RUNTIME_INCLUDE=${EIDOLON_TTS_RUNTIME_INCLUDE:-/usr/include}
+
+if [ ! -d "$SOURCE_DIR" ]; then
+  echo "eidolon-tts-build: no engine source at $SOURCE_DIR" >&2
+  exit 2
+fi
+
+# The digest of every input that can change the binary. A version number would
+# not do: the engine is built from this repository's working tree on the Host,
+# and two releases can carry different source under the same version.
+STAMP_INPUT=$(cat "$SOURCE_DIR/CMakeLists.txt" "$SOURCE_DIR"/src/*.cpp \
+  "$SOURCE_DIR"/include/*.h | sha256sum | cut -d' ' -f1)
+STAMP_FILE="$BUILD_ROOT/.source-sha256"
+BINARY="$BUILD_ROOT/cosyvoice2_streaming_pipeline"
+
+if [ -x "$BINARY" ] && [ -f "$STAMP_FILE" ] &&
+   [ "$(cat "$STAMP_FILE")" = "$STAMP_INPUT" ]; then
+  echo "eidolon-tts-build: already built for this source ($STAMP_INPUT)"
+  exit 0
+fi
+
+for tool in cmake make c++; do
+  command -v "$tool" >/dev/null 2>&1 || {
+    echo "eidolon-tts-build: $tool is required to build the engine" >&2
+    exit 2
+  }
+done
+
+mkdir -p "$BUILD_ROOT"
+cmake -S "$SOURCE_DIR" -B "$BUILD_ROOT/build" \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DEIDOLON_TTS_RUNTIME_ROOT="$RUNTIME_ROOT" \
+  -DEIDOLON_TTS_RUNTIME_INCLUDE="$RUNTIME_INCLUDE"
+cmake --build "$BUILD_ROOT/build" --parallel "$(nproc)"
+cp -f "$BUILD_ROOT/build/cosyvoice2_streaming_pipeline" "$BINARY"
+printf '%s' "$STAMP_INPUT" > "$STAMP_FILE"
+echo "eidolon-tts-build: built $BINARY"

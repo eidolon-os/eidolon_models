@@ -32,6 +32,7 @@ _SDK_CONTRACT = (
     / "contracts"
     / "local_asr.py"
 )
+_SDK_TTS_CONTRACT = _SDK_CONTRACT.with_name("local_tts.py")
 
 #: Mirror name here → contract name there. Written out rather than derived from
 #: a prefix rule: a rule would silently stop covering a constant whose name did
@@ -64,10 +65,10 @@ _MIRRORED = {
 }
 
 
-def _contract_constants() -> dict[str, object]:
-    if not _SDK_CONTRACT.is_file():
+def _contract_constants(path: Path = _SDK_CONTRACT) -> dict[str, object]:
+    if not path.is_file():
         pytest.skip("the contract mirror needs the sibling eidolon_sdk repository")
-    tree = ast.parse(_SDK_CONTRACT.read_text(encoding="utf-8"))
+    tree = ast.parse(path.read_text(encoding="utf-8"))
     values: dict[str, object] = {}
     for node in tree.body:
         target = None
@@ -125,3 +126,87 @@ def test_the_contract_has_not_grown_a_constant_this_mirror_ignores() -> None:
         f"the contract defines {sorted(unmirrored)}, which this service's "
         "protocol module neither mirrors nor names as a client-only concern"
     )
+
+
+# -- synthesis, held to its own contract the same way -----------------------
+
+_TTS_MIRRORED = {
+    "PROTOCOL_VERSION": "LOCAL_TTS_PROTOCOL_VERSION",
+    "CAPABILITY": "LOCAL_TTS_CAPABILITY",
+    "PORT_ROLE": "LOCAL_TTS_PORT_ROLE",
+    "STREAM_PATH": "LOCAL_TTS_STREAM_PATH",
+    "READY_PATH": "LOCAL_TTS_READY_PATH",
+    "INFO_PATH": "LOCAL_TTS_INFO_PATH",
+    "SYNTHESIZE": "SYNTHESIZE",
+    "CANCEL": "CANCEL",
+    "PING": "PING",
+    "CLOSE_STREAM": "CLOSE_STREAM",
+    "CONNECTED": "CONNECTED",
+    "SYNTHESIS_STARTED": "SYNTHESIS_STARTED",
+    "SYNTHESIS_FINISHED": "SYNTHESIS_FINISHED",
+    "SYNTHESIS_CANCELLED": "SYNTHESIS_CANCELLED",
+    "PONG": "PONG",
+    "ERROR": "ERROR",
+    "PROTOCOL_VERSION_FIELD": "PROTOCOL_VERSION_FIELD",
+    "REQUEST_ID_FIELD": "REQUEST_ID_FIELD",
+    "AUDIO_SAMPLE_RATE": "AUDIO_SAMPLE_RATE",
+    "AUDIO_CHANNELS": "AUDIO_CHANNELS",
+    "AUDIO_FORMAT": "AUDIO_FORMAT",
+    "ERROR_BUSY": "ERROR_BUSY",
+    "ERROR_TEXT_TOO_LONG": "ERROR_TEXT_TOO_LONG",
+    "ERROR_BAD_REQUEST": "ERROR_BAD_REQUEST",
+    "ERROR_INTERNAL": "ERROR_INTERNAL",
+    "ERROR_ENGINE_UNAVAILABLE": "ERROR_ENGINE_UNAVAILABLE",
+    "MAX_TEXT_CHARACTERS": "MAX_TEXT_CHARACTERS",
+}
+
+
+def test_every_mirrored_tts_constant_equals_the_contract() -> None:
+    from eidolon_models_tts import protocol as tts_protocol
+
+    contract = _contract_constants(_SDK_TTS_CONTRACT)
+
+    for mine, theirs in _TTS_MIRRORED.items():
+        assert theirs in contract, f"the contract no longer defines {theirs}"
+        assert getattr(tts_protocol, mine) == contract[theirs], (
+            f"protocol.{mine} is {getattr(tts_protocol, mine)!r}; "
+            f"the contract says {theirs} is {contract[theirs]!r}"
+        )
+
+
+def test_the_tts_contract_has_not_grown_a_constant_this_mirror_ignores() -> None:
+    """Same guard as recognition's: a protocol change starts in the SDK, and
+    this is what makes it arrive here rather than being answered with
+    `bad_request` while both sides pass their own tests."""
+
+    contract = _contract_constants(_SDK_TTS_CONTRACT)
+    ignored = {
+        # Sets the SDK derives from the constants this mirror already checks.
+        "CLIENT_MESSAGE_TYPES",
+        "SERVER_MESSAGE_TYPES",
+        "ERROR_CODES",
+        "RETRYABLE_ERROR_CODES",
+    }
+    unmirrored = set(contract) - set(_TTS_MIRRORED.values()) - ignored
+
+    assert not unmirrored, (
+        f"the contract defines {sorted(unmirrored)}, which this service's "
+        "protocol module neither mirrors nor names as a client-only concern"
+    )
+
+
+def test_the_mirrors_agree_on_which_refusals_are_worth_repeating() -> None:
+    """The SDK derives these from constants both mirrors already check, so the
+    values cannot be read out of its source — but a mirror that disagreed about
+    which codes are retryable would make a client give up on a busy Host, or
+    retry a sentence that will never fit."""
+
+    from eidolon_models_tts import protocol as tts_protocol
+
+    assert tts_protocol.RETRYABLE_ERROR_CODES == {
+        tts_protocol.ERROR_BUSY,
+        tts_protocol.ERROR_INTERNAL,
+        tts_protocol.ERROR_ENGINE_UNAVAILABLE,
+    }
+    assert tts_protocol.ERROR_TEXT_TOO_LONG not in tts_protocol.RETRYABLE_ERROR_CODES
+    assert tts_protocol.ERROR_BAD_REQUEST not in tts_protocol.RETRYABLE_ERROR_CODES
