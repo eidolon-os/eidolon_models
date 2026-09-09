@@ -121,6 +121,11 @@ class Engine:
             f"--encoder-core={settings.encoder_core}",
             f"--flow-core={settings.flow_core}",
             f"--hift-core={settings.hift_core}",
+            # Without this the engine uses its own default of 288 and the
+            # ceiling on an utterance becomes the text length: 44 characters
+            # truncate mid-sentence, 80 refuse to synthesize. See
+            # config.DEFAULT_MAX_CONTEXT.
+            f"--max-context={settings.max_context}",
             "--serve",
             "--pcm-stream=-",
             "--sample",
