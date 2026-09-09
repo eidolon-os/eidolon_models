@@ -9,9 +9,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-LAUNCHER = (Path(__file__).resolve().parents[1] / "scripts/eidolon-llm").read_text(
-    encoding="utf-8"
-)
+LAUNCHER = (Path(__file__).resolve().parents[1] / "scripts/eidolon-llm").read_text(encoding="utf-8")
 
 
 def test_reasoning_is_off_and_not_merely_budgeted() -> None:
@@ -52,13 +50,45 @@ def test_absent_weights_and_absent_server_each_say_which() -> None:
     assert "is absent; it is a pinned foundation artifact" in LAUNCHER
 
 
-def test_the_core_allocation_is_applied_when_this_host_states_one() -> None:
-    """The A55 pinning is the arrangement HOST-RK3588.md 2.22-2.23 measured:
-    the LLM keeps the little cores so TTS can keep the NPU. A launcher that
-    ignored it would run on all eight and take the NPU's air."""
+def test_prefill_and_decode_are_given_their_own_cores() -> None:
+    """Two masks, because the two phases do not run at the same moment.
 
-    assert "taskset -c" in LAUNCHER
+    Decode runs while the local TTS speaks the sentence before it, and
+    synthesis has 15% of realtime to spare, so it must stay off the cluster
+    synthesis was given. Prefill runs before there is any text to speak, so it
+    may borrow all eight: 20.2 -> 86.2 tok/s, a production first token at 3.2 s
+    instead of 13.8 (HOST-RK3588.md 2.29).
+
+    `taskset` cannot express that -- it confines the whole process, which is
+    exactly why prefill used to be stuck on four little cores -- so the flags
+    are llama.cpp's own.
+    """
+
+    # The word still appears, naming the syntax the allocation file uses;
+    # what must be gone is the invocation.
+    assert "taskset -c" not in LAUNCHER
+    assert "--cpu-mask" in LAUNCHER
+    assert "--cpu-mask-batch" in LAUNCHER
     assert "EIDOLON_LLM_CPU_AFFINITY" in LAUNCHER
+    assert "EIDOLON_LLM_PREFILL_CPU_AFFINITY" in LAUNCHER
+
+
+def test_a_mask_is_never_passed_without_a_thread_count() -> None:
+    """`--cpu-mask` alone leaves llama.cpp sizing its pool from the machine's
+    core count, so four cores got eight threads and decode collapsed to 1.36
+    tok/s -- slower than either arrangement the mask exists to choose between.
+    Measured on the board. The count is derived from the mask for that reason,
+    and the two are passed together or not at all."""
+
+    assert "--cpu-mask --threads" in LAUNCHER
+    assert "--cpu-mask-batch --threads-batch" in LAUNCHER
+
+
+def test_the_decode_mask_is_strict() -> None:
+    """Without it the kernel may migrate a decode thread onto a core this Host
+    gave to synthesis, which is the one thing the mask is there to prevent."""
+
+    assert "--cpu-strict 1" in LAUNCHER
 
 
 PROBE = (Path(__file__).resolve().parents[1] / "scripts/llm-reasoning-probe").read_text(

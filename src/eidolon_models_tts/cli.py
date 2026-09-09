@@ -10,7 +10,7 @@ import argparse
 import logging
 import sys
 
-from eidolon_models_tts.config import load_settings
+from eidolon_models_tts.config import apply_cpu_affinity, load_settings
 from eidolon_models_tts.service import serve
 
 
@@ -24,6 +24,10 @@ def main(argv: list[str] | None = None) -> int:
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
         stream=sys.stderr,
     )
+    # Pin before the engine is spawned: the child inherits the mask, and
+    # which cores it gets is the difference between rtf 0.94 and an
+    # audible gap when the chat model is decoding (HOST-RK3588.md 2.29).
+    apply_cpu_affinity()
     serve(load_settings())
     return 0
 

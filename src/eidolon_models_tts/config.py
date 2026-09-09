@@ -12,6 +12,8 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+from eidolon_models_host.cpu import apply_cpu_affinity as _apply_cpu_affinity
+
 #: The directory holding every asset the engine loads. Set by the launcher,
 #: which knows where the release put them.
 MODEL_ROOT_ENV = "EIDOLON_TTS_MODEL_ROOT"
@@ -174,6 +176,27 @@ class Settings:
             self.voice_profile_root / "prompt_text_token.i32.bin",
             self.voice_profile_root / "llm_prompt_speech_token.i32.bin",
         )
+
+
+CPU_AFFINITY_ENV = "EIDOLON_TTS_CPU_AFFINITY"
+
+
+def apply_cpu_affinity(spec: str | None = None) -> frozenset[int] | None:
+    """Pin this service to the cores this Host gives synthesis.
+
+    Pinning the service pins the engine: the C++ process is a child, and a
+    child inherits the mask, so there is no core argument to pass down. The
+    engine's own `--head-core` and friends are NPU cores and say nothing about
+    which CPUs it may use.
+
+    Why it matters is measured, not aesthetic. Unpinned, the kernel will place
+    engine threads on the A55 cluster where the chat model decodes, and those
+    threads then wait behind it: synthesis of the same sentence goes from
+    rtf 0.94 to 1.10 and the playback buffer drains to -620 ms -- an audible
+    gap. Confined to the A76 cluster it never lands on a busy core and holds
+    +750 ms. See HOST-RK3588.md 2.29.
+    """
+    return _apply_cpu_affinity(CPU_AFFINITY_ENV, spec)
 
 
 def load_settings() -> Settings:

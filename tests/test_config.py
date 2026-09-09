@@ -8,9 +8,9 @@ from eidolon_models_asr.config import (
     Settings,
     apply_cpu_affinity,
     detect_host_kind,
-    parse_cpu_list,
     resolve_backend,
 )
+from eidolon_models_host.cpu import parse_cpu_list
 
 
 def test_auto_backend_is_portable_cpu_baseline() -> None:

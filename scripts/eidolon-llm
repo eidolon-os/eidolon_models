@@ -70,15 +70,97 @@ set -- "$SERVER" \
 # for it: the one Eidolon already has is DeepSeek's `extra_body`, which
 # llama.cpp does not read.
 
+# Cores. Two masks, because prefill and decode want different ones and
+# llama.cpp is the only layer that can tell them apart: `taskset` confines the
+# whole process, which is why this used to hand decode's four A55 cores to
+# prefill as well and take 13.8 s to read a production-sized prompt.
+#
+#   decode  -- A55 0-3. It runs while the local TTS is speaking the sentence
+#              before it, and synthesis has only 15% of realtime to spare, so
+#              the two must not share a cluster. Measured: 5.2 tok/s here
+#              against 17.5 on the A76 cluster, and the fast one costs an
+#              audible gap.
+#   prefill -- all eight. It runs before there is any text to speak, so the
+#              A76 cores are idle at that moment: 20.2 -> 86.2 tok/s, which is
+#              a production first token at 3.2 s instead of 13.8. The overlap
+#              that does exist (a barge-in, while the previous reply is still
+#              playing) was measured and holds +272 ms of buffer.
+#
+# See HOST-RK3588.md 2.29 and deploy/cpu-allocation.env, which decides both.
+#
+# The thread count is derived, not configured. `--cpu-mask` alone leaves
+# llama.cpp sizing its pool from the machine's core count, so four cores got
+# eight threads and decode collapsed to 1.36 tok/s -- slower than any mask this
+# is meant to choose between. A count without a mask is equally wrong, so
+# neither is separable and neither is optional.
+cpu_mask() {
+  # A taskset-style list -- `4`, `4,5`, `0-3`, `0-3,7` -- as the lowercase hex
+  # llama.cpp wants. Held against the Python parser every service uses by
+  # tests/test_cpu_allocation.py.
+  awk -v spec="$1" '
+    BEGIN {
+      n = split(spec, parts, ",")
+      for (i = 1; i <= n; i++) {
+        chunk = parts[i]
+        gsub(/^[ \t]+|[ \t]+$/, "", chunk)
+        if (chunk == "") continue
+        if (index(chunk, "-") > 0) {
+          split(chunk, ends, "-")
+          lo = ends[1] + 0; hi = ends[2] + 0
+          if (lo > hi) { print "range"; exit 1 }
+          for (c = lo; c <= hi; c++) seen[c] = 1
+        } else {
+          seen[chunk + 0] = 1
+        }
+      }
+      count = 0
+      for (c in seen) { count++; if (c + 0 > top) top = c + 0 }
+      if (count == 0) { print "empty"; exit 1 }
+      # Hex by hand: awk has no arbitrary-width integers and cpu 63 would
+      # overflow a double, so build the digits from the highest nibble down.
+      digits = "0123456789abcdef"
+      out = ""
+      for (nib = int(top / 4); nib >= 0; nib--) {
+        v = 0
+        for (b = 0; b < 4; b++) if (seen[nib * 4 + b]) v += 2 ^ b
+        out = out substr(digits, v + 1, 1)
+      }
+      sub(/^0+/, "", out)
+      if (out == "") out = "0"
+      printf "%s %d\n", out, count
+      exit 0
+    }'
+}
+
+apply_mask() {
+  # $1 = the list, $2/$3 = the flags for the mask and the thread count.
+  spec=$1; mask_flag=$2; threads_flag=$3
+  parsed=$(cpu_mask "$spec") || {
+    echo "eidolon-llm: cannot read a CPU list from '$spec'" >&2
+    exit 2
+  }
+  set -- "$@" "$mask_flag" "${parsed% *}" "$threads_flag" "${parsed#* }"
+  shift 3
+  MASK_ARGS="$*"
+}
+
+DECODE_CPUS=${EIDOLON_LLM_CPU_AFFINITY:-}
+PREFILL_CPUS=${EIDOLON_LLM_PREFILL_CPU_AFFINITY:-}
+
+if [ -n "$DECODE_CPUS" ]; then
+  apply_mask "$DECODE_CPUS" --cpu-mask --threads
+  # Strict, so the kernel does not migrate a decode thread onto a core this
+  # Host gave to something else -- which is the whole point of the mask.
+  set -- "$@" $MASK_ARGS --cpu-strict 1
+fi
+if [ -n "$PREFILL_CPUS" ]; then
+  apply_mask "$PREFILL_CPUS" --cpu-mask-batch --threads-batch
+  set -- "$@" $MASK_ARGS
+fi
+# An explicit count is still allowed, and now means what it says: override the
+# one derived from the decode mask. Kept for probing a single variable.
 if [ -n "${EIDOLON_LLM_THREADS:-}" ]; then
   set -- "$@" --threads "$EIDOLON_LLM_THREADS"
 fi
 
-AFFINITY=${EIDOLON_LLM_CPU_AFFINITY:-}
-if [ -n "$AFFINITY" ]; then
-  # Measured, not preference: this model on the A55 cluster leaves the NPU free
-  # for TTS, which is the only arrangement where both run in the same turn
-  # without the speech breaking up. See HOST-RK3588.md §2.22-2.23.
-  exec taskset -c "$AFFINITY" "$@"
-fi
 exec "$@"

@@ -7,6 +7,8 @@ import platform
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from eidolon_models_host.cpu import apply_cpu_affinity as _apply_cpu_affinity
+
 #: Where the committed model trees are, told rather than inferred.
 #:
 #: This was `Path(__file__).resolve().parents[2]`, which is the repository root
@@ -58,69 +60,14 @@ def _env_bool(name: str, default: bool) -> bool:
 CPU_AFFINITY_ENV = "EIDOLON_ASR_CPU_AFFINITY"
 
 
-def parse_cpu_list(spec: str) -> frozenset[int]:
-    """Parse a taskset-style CPU list: ``4``, ``4,5``, ``0-3``, ``0-3,7``."""
-    cpus: set[int] = set()
-    for part in spec.split(","):
-        chunk = part.strip()
-        if not chunk:
-            continue
-        if "-" in chunk.lstrip("-"):
-            low, _, high = chunk.partition("-")
-            start, stop = int(low), int(high)
-            if start > stop:
-                raise ValueError(f"invalid CPU range {chunk!r}: start is above end")
-            cpus.update(range(start, stop + 1))
-        else:
-            cpus.add(int(chunk))
-    if not cpus:
-        raise ValueError(f"no CPUs in {spec!r}")
-    if any(cpu < 0 for cpu in cpus):
-        raise ValueError(f"negative CPU index in {spec!r}")
-    return frozenset(cpus)
-
-
 def apply_cpu_affinity(spec: str | None = None) -> frozenset[int] | None:
-    """Pin this process before anything derives a thread count from it.
+    """Pin this service to the cores this Host gives ASR.
 
-    Call this once at startup, ahead of ``Settings.from_env()``: the intra-op
-    pool is sized from ``os.process_cpu_count()``, so pinning first makes the
-    pool follow the cores without a second knob to keep in sync.
-
-    Returns the mask applied, or ``None`` when the variable is unset -- in
-    which case whatever the caller inherited (taskset, systemd ``CPUAffinity``,
-    or nothing) is left untouched. Asking to pin on a platform that cannot is
-    an error rather than a silent no-op, because a pin that quietly does
-    nothing is what oversubscribes the pool.
+    The mechanism is the Host's, not ASR's -- TTS pins itself the same way from
+    the same file -- so it lives in `eidolon_models_host.cpu`; only the name of
+    the variable is ours.
     """
-    raw = os.getenv(CPU_AFFINITY_ENV) if spec is None else spec
-    if raw is None or not raw.strip():
-        return None
-    try:
-        cpus = parse_cpu_list(raw)
-    except ValueError as exc:
-        raise ValueError(f"{CPU_AFFINITY_ENV}: {exc}") from exc
-    if not hasattr(os, "sched_setaffinity"):
-        raise ValueError(
-            f"{CPU_AFFINITY_ENV} is set to {raw!r} but this platform has no "
-            "CPU affinity support (Linux only); unset it or run on the target host"
-        )
-    try:
-        os.sched_setaffinity(0, cpus)
-    except OSError as exc:
-        total = os.cpu_count() or 0
-        raise ValueError(
-            f"{CPU_AFFINITY_ENV}={raw!r} could not be applied ({exc}); "
-            f"this host reports {total} CPUs, so valid indices are 0-{max(total - 1, 0)}"
-        ) from exc
-    return cpus
-
-
-def effective_cpu_affinity() -> list[int] | None:
-    """Return the CPUs this process may run on, or None where unsupported."""
-    if not hasattr(os, "sched_getaffinity"):
-        return None
-    return sorted(os.sched_getaffinity(0))
+    return _apply_cpu_affinity(CPU_AFFINITY_ENV, spec)
 
 
 def _default_intra_op_threads() -> int:

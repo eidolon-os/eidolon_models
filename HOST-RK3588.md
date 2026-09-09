@@ -1820,6 +1820,105 @@ prefill 111）、**模式**（手工非服务 vs 服务常驻）、**引擎版�
   契约，由 `tests/test_sdk_contract_mirror.py` 钉着。新的常量放在 `config` 而不是 `protocol`，
   因为它是这台 Host 实测出来的特性，不是线上协议的一部分。
 
+### 2.29 争的是 CPU 簇，不是 NPU；prefill 与 decode 该拿不同的核（实测 2026-09-10）
+
+起因是聊天首字 10 秒超时。§2.23 把 LLM 钉在 A55 0-3，读一遍产品尺寸的提示词
+（278 token）要 13.8 秒，Channel 的 `APIConnectOptions.timeout` 十秒到点就取消，
+于是"思考中"之后没有声音。**结论：TTS 该钉在 A76 4-6（这一行此前一直是注释），
+LLM 的 prefill 该拿全八核、decode 留在 A55 —— 两条都由 llama.cpp 自己的掩码表达，
+外层 taskset 表达不了这个区分。首字 13.8 s → 3.2 s，同时 TTS 的缓冲余量从 −620 ms
+变 +750 ms。**
+
+#### 判据
+
+用 `minimum_buffer_ms`（缓冲最低点）判断真断音，不用 `late_chunks`。§2.20 [B] 已经
+辨明过一次，§2.28 又辨明过一次；本节测量中 `late_chunks` 从 1 到 11 都出现过而缓冲
+仍为正，它数的是"块有没有过自己的截止时间"，不是"人有没有听到停顿"。
+
+#### 核实际落在哪里（先证伪自己的探针）
+
+前两轮测量的结论作废过一次：报出 decode 10.81 tok/s 时我以为掩码生效了，
+而 A55 上的 decode 只该有 5.2。直接读 `/proc/PID/task/*/stat` 的 `processor`
+字段（只统计状态为 R 的线程）才把事实定下来：
+
+| 配置 | 线程实际落核 | decode | prefill |
+| --- | --- | ---: | ---: |
+| `taskset -c 0-3 --threads 4`（当时的生产） | 0,1,2,3 | 5.24 | 20.2 |
+| `--cpu-mask f --cpu-strict 1 --threads 4` | 0,1,2,3 | 5.26 | — |
+| `--cpu-mask f` + `--cpu-mask-batch ff --threads-batch 8` | decode 0-3 / prefill 0-7 | 5.26 | **86.2** |
+| `--threads 4`，不绑核 | **4,5,6,7** | **17.54** | — |
+| `--cpu-mask f`，**不给** `--threads` | 0,1,2,3 | **1.36** | — |
+
+三件事：
+
+* **不绑核时内核把四个线程全放到 A76**，decode 快 3.35 倍。所以"不绑核"从来不是
+  "让内核自由安排"，在这块板上它就等于"钉大核"。
+* `--cpu-mask` 的十六进制形式与 `taskset` 等价，且能表达 `0-3,7` 这种 `--cpu-range lo-hi`
+  表达不了的集合，所以 `deploy/cpu-allocation.env` 的语法不用改。
+* **只给掩码不给线程数是灾难**：llama.cpp 按整机核数取 8 个线程塞进 4 个核，
+  1.36 tok/s，比它本要在两种绑核之间选的哪一种都慢。线程数必须由掩码推出。
+
+#### 共存：产品里重叠的是 decode，不是 prefill
+
+一轮对话的顺序是 prefill →（有文字了）TTS 开口 → decode 继续出后面的句子。
+所以 prefill 跑的时候 TTS 无话可念、A76 空着；TTS 一开口，与它并行的只有 decode。
+按这个顺序分别施压，文本取产品长度（11.92 s 音频）：
+
+| 场景 | TTS 不绑核（当时的生产） | **TTS 钉 A76 4-6** |
+| --- | --- | --- |
+| TTS 独占 | rtf 0.85 / +840 ms | rtf 0.87 / +840 ms |
+| TTS + decode(A55) | rtf 1.10 / **−620 ms 断音** | rtf 0.94 / **+795 ms** |
+| TTS + prefill(八核) | rtf 1.04 / +89 ms | rtf 1.00 / **+272 ms** |
+
+**关键的一行是第二行：TTS + decode 断音，用的 decode 落核和吞吐与当时的生产
+一模一样（0-3、5.2 tok/s）。** 也就是说这不是"放开核"引入的新问题——**当时的生产
+配置在持续 decode 下同样断音**，只是没人按这个判据量过。
+
+根因不在 LLM：**TTS 独占时 rtf 就已经 0.85，只剩 15% 的余量**，谁和它共用一个
+CPU 簇它就过 1.0。不绑核时内核会把引擎线程放到 A55 上（LLM 的 decode 正在那里），
+那些线程就排在后面等。钉到 A76 之后它永远不会落到忙核上。
+
+#### §2.23 的效果对、理由错
+
+§2.23 写"把聊天 LLM 搬出 NPU，TTS 才能独占 NPU"，并据此把 LLM 钉到 A55。
+**A55 和 A76 都是 CPU，NPU 是第三样东西**，钉哪个簇都不改变 NPU 的归属。
+那个决定之所以有效，是上面这条 CPU 簇的原因；写成 NPU 的原因之后，它就没法回答
+"prefill 能不能借大核"（能，因为那一刻 TTS 没在念），于是 prefill 白白在小核上
+慢了 4.3 倍。
+
+#### TTS 的绑核一直没接线
+
+`deploy/cpu-allocation.env` 里 `EIDOLON_TTS_CPU_AFFINITY` 从写下起就是注释，
+旁边一句"以下服务不在本仓——占位，等它们落地时接同样的机制"。TTS 落地之后没人
+接上。**而 §2.24 / §2.25 那两节的整机余量（最坏一轮只剩 257–703 ms）正是在
+"TTS 钉 A76 5–7"的前提下测的**（§2.24 实测段落写着 "TTS 用 §2.21 配置（NPU + A76
+5–7）"），所以生产上跑的一直是那个分配方案里没被测过的组合。现在服务自己
+`sched_setaffinity`，C++ 引擎作为子进程继承，没有第二处要同步；引擎的
+`--head-core` / `--encoder-core` 那几个参数是 **NPU** 核，和 CPU 无关。
+
+取 4-6 而不是 4-7 是照 §2.21 的实测（4-6 rtf 0.926、4-7 反而 1.015），且 cpu7
+要留给 ASR 与控制面。
+
+#### 落到代码
+
+* `deploy/cpu-allocation.env`：`EIDOLON_TTS_CPU_AFFINITY=4-6` 接线，LLM 拆成
+  `EIDOLON_LLM_CPU_AFFINITY=0-3`（decode）与 `EIDOLON_LLM_PREFILL_CPU_AFFINITY=0-7`。
+* `scripts/eidolon-llm`：`taskset` 换成 `--cpu-mask` / `--cpu-mask-batch`，线程数由
+  掩码推出，`--cpu-strict 1`。
+* `src/eidolon_models_host/cpu.py`：核分配是**主机**的事实，ASR 和 TTS 都读它，
+  让其中一个 import 另一个是错的耦合方向。
+* `tests/test_cpu_allocation.py`：shell 的解析器与 Python 的逐例对齐（启动器故意
+  不依赖任何 venv，所以这份语法真的存在两份）；并钉住两件事——**这个文件里的每个
+  赋值都必须有消费者**（TTS 那一行没有消费者，正是上面那个缺口），以及
+  **decode 与 TTS 的核不得相交**。
+
+#### 还没量的
+
+* 三方共存（ASR 也在跑）。本节只测了 LLM 与 TTS 两方，ASR 不绑核（§2.16 的决定），
+  它会去抢 A76。§2.25 的最坏一轮要按新的绑核重测。
+* prefill 与 TTS 的重叠只测了"插话"这一种形状，13 次连续 prefill 期间 TTS 仍有
+  +272 ms；没有测"上一句还很长、插话又立刻来"的叠加。
+
 ## 3. 已知缺陷
 
 | 缺陷 | 证据 | 影响 |

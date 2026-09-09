@@ -16,6 +16,8 @@ from typing import Any
 
 from aiohttp import ClientSession, WSMsgType, web
 
+from eidolon_models_host.cpu import effective_cpu_affinity
+
 from .artifacts import ArtifactError, verify_artifacts
 from .backend import (
     CTTransformerPunctuationRestorer,
@@ -29,7 +31,6 @@ from .config import (
     Settings,
     apply_cpu_affinity,
     detect_host_kind,
-    effective_cpu_affinity,
 )
 from .service import create_app
 
