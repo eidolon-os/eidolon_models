@@ -317,11 +317,9 @@ class StreamingEncoder {
             CheckRknn(rknn_set_io_mem(context_, outputs_[index], &attr),
                       "rknn_set_io_mem(streaming encoder output)");
         }
-        const std::array<size_t, 4> cache_inputs = {3, 4, 5, 6};
-        const std::array<size_t, 4> cache_outputs = {1, 2, 3, 4};
-        for (size_t pair = 0; pair < cache_inputs.size(); ++pair) {
-            if (input_attrs_[cache_inputs[pair]].n_elems !=
-                output_attrs_[cache_outputs[pair]].n_elems) {
+        for (size_t pair = 0; pair < kCacheInputs.size(); ++pair) {
+            if (input_attrs_[kCacheInputs[pair]].n_elems !=
+                output_attrs_[kCacheOutputs[pair]].n_elems) {
                 throw std::runtime_error("streaming encoder cache shape mismatch");
             }
         }
@@ -345,6 +343,53 @@ class StreamingEncoder {
             CheckRknn(rknn_mem_sync(context_, inputs_[index],
                                     RKNN_MEMORY_SYNC_TO_DEVICE),
                       "reset streaming encoder cache");
+        }
+    }
+
+    //: cache 全部住在 rknn_create_mem 给的用户侧缓冲里——virt_addr 上的字节就是
+    //: 状态本身,rknn_mem_sync 只是 cache 维护,不是驱动侧的隐藏状态。所以存一份
+    //: 字节再写回去,和把同样的 token 重喂一遍等价。StreamingFlow 的
+    //: ExportState/ImportState 已经在 steady flow 的交接上这么用了。
+    struct State {
+        std::vector<std::vector<uint8_t>> cache;
+        std::vector<float> cache_valid;
+    };
+
+    State ExportState() {
+        State state;
+        state.cache_valid = cache_valid_;
+        state.cache.reserve(kCacheInputs.size());
+        for (const size_t index : kCacheInputs) {
+            //: 这几个缓冲是上一轮 rknn_run 的输出——NPU 写的,所以 CPU 读之前得
+            //: 先把缓存行失效掉。
+            CheckRknn(rknn_mem_sync(context_, inputs_[index],
+                                    RKNN_MEMORY_SYNC_FROM_DEVICE),
+                      "export streaming encoder cache");
+            const auto* begin =
+                static_cast<const uint8_t*>(inputs_[index]->virt_addr);
+            state.cache.emplace_back(begin, begin + inputs_[index]->size);
+        }
+        return state;
+    }
+
+    void ImportState(const State& state) {
+        if (state.cache.size() != kCacheInputs.size() ||
+            state.cache_valid.size() != kTokenCache) {
+            throw std::runtime_error("invalid streaming encoder state");
+        }
+        //: 输入 2 是 cache_valid 的 fp16 副本,每次 Run 都从 cache_valid_ 重填,
+        //: 所以恢复标量就够,不用碰那块缓冲。
+        cache_valid_ = state.cache_valid;
+        for (size_t offset = 0; offset < kCacheInputs.size(); ++offset) {
+            const size_t index = kCacheInputs[offset];
+            if (state.cache[offset].size() != inputs_[index]->size) {
+                throw std::runtime_error("streaming encoder state size mismatch");
+            }
+            std::memcpy(inputs_[index]->virt_addr, state.cache[offset].data(),
+                        state.cache[offset].size());
+            CheckRknn(rknn_mem_sync(context_, inputs_[index],
+                                    RKNN_MEMORY_SYNC_TO_DEVICE),
+                      "import streaming encoder cache");
         }
     }
 
@@ -385,11 +430,9 @@ class StreamingEncoder {
         timing.readback_ms = Milliseconds(run_end, read_end);
 
         const auto rebind_start = Clock::now();
-        const std::array<size_t, 4> cache_inputs = {3, 4, 5, 6};
-        const std::array<size_t, 4> cache_outputs = {1, 2, 3, 4};
-        for (size_t pair = 0; pair < cache_inputs.size(); ++pair) {
-            const size_t input = cache_inputs[pair];
-            const size_t output = cache_outputs[pair];
+        for (size_t pair = 0; pair < kCacheInputs.size(); ++pair) {
+            const size_t input = kCacheInputs[pair];
+            const size_t output = kCacheOutputs[pair];
             auto* next_input = outputs_[output];
             auto* next_output = inputs_[input];
             CheckRknn(rknn_set_io_mem(context_, next_input, &input_attrs_[input]),
@@ -416,6 +459,10 @@ class StreamingEncoder {
             output[index] = FloatToHalf(values[index]);
         }
     }
+
+    //: 每次 Run 之后 cache 输入和输出对调,所以这两组下标一直成对出现。
+    static constexpr std::array<size_t, 4> kCacheInputs = {3, 4, 5, 6};
+    static constexpr std::array<size_t, 4> kCacheOutputs = {1, 2, 3, 4};
 
     rknn_context context_ = 0;
     std::vector<rknn_tensor_attr> input_attrs_;
@@ -1473,36 +1520,63 @@ int main(int argc, char** argv) {
         }
         const double init_warmup_ms = Milliseconds(init_start, Clock::now());
 
+        //: 音色预计算一个字的文本都不吃,所以它以前每句重算纯属浪费——重算只是
+        //: 因为请求会把 cache 用掉,而当时唯一的复位手段是 Reset(),清零。存一份
+        //: 快照再写回去,同样能还原那个起点,不用重跑那 0.8 秒。音色在进程内固定
+        //: (--voice-profile-root 是启动参数),所以一份就够整个服务用。
+        //:
+        //: 有一处不能含糊:预计算并非**只**依赖音色。encoder 那半只吃 prompt
+        //: token,是纯音色的;Flow 那半还吃两块噪声,而取噪声的生成器跨句共享、
+        //: 故意不复位。所以快照把 prompt 段的噪声钉在了第一句那次抽取上。量过:
+        //: 只改这一处时 mel 余弦 0.999975(MAE 约 mel std 的 1%),和基线自己每句
+        //: 之间的抖动同一量级——钉住它没有引入新的变化来源。见 README。
+        struct VoiceProfile {
+            StreamingEncoder::State encoder;
+            std::vector<std::vector<uint8_t>> flow;
+        };
+        std::unique_ptr<VoiceProfile> voice_profile;
+
         //: 一句话的合成。上面的一切都已加载并预热，这里面是全部随文本变化的
-        //: 部分——音色预计算也在内：请求要消费它留在 encoder / Flow cache 里的
-        //: 状态，所以每句都得重来，不能只做一次。
+        //: 部分。
         auto synthesize = [&](const std::string& target_text) {
-            encoder.Reset();
-            flow.Reset();
             if (steady_flow != nullptr) steady_flow->Reset();
             flow_noise.Reset();
             // Voice-profile cache: the first prompt chunk and its lookahead are known.
             const auto profile_start = Clock::now();
-            std::vector<int32_t> profile_tokens(prompt.begin(), prompt.begin() + 28);
-            EncoderTiming profile_encoder_timing;
-            const auto profile_mu = encoder.Run(
-                profile_tokens, kChunkTokens, kLookaheadTokens,
-                profile_encoder_timing);
-            FlowTiming profile_flow_timing;
-            flow.Run(flow_noise.Next(0), profile_mu,
-                     MakeCond(prompt_feat, 0), spks, kChunkFrames, 0,
-                     profile_flow_timing);
-            if (precompute_full_prompt) {
-                std::vector<int32_t> remaining_prompt(
-                    prompt.begin() + static_cast<ptrdiff_t>(kChunkTokens),
-                    prompt.end());
-                EncoderTiming remaining_encoder_timing;
-                const auto remaining_mu = encoder.Run(
-                    remaining_prompt, kChunkTokens, 0, remaining_encoder_timing);
-                FlowTiming remaining_flow_timing;
-                flow.Run(flow_noise.Next(1), remaining_mu,
-                         MakeCond(prompt_feat, kChunkFrames), spks, kChunkFrames,
-                         kChunkFrames, remaining_flow_timing);
+            if (voice_profile != nullptr) {
+                encoder.ImportState(voice_profile->encoder);
+                flow.ImportState(voice_profile->flow);
+                //: 预计算消费掉的噪声块照样要取走再丢掉。取噪声的生成器是跨句
+                //: 共享的——同一句说两遍得到不同的噪声,这是对的——所以少抽这
+                //: 两次,后面每一块的噪声都会跟着错位,音频就不再是同一段了。
+                flow_noise.Next(0);
+                if (precompute_full_prompt) flow_noise.Next(1);
+            } else {
+                encoder.Reset();
+                flow.Reset();
+                std::vector<int32_t> profile_tokens(prompt.begin(), prompt.begin() + 28);
+                EncoderTiming profile_encoder_timing;
+                const auto profile_mu = encoder.Run(
+                    profile_tokens, kChunkTokens, kLookaheadTokens,
+                    profile_encoder_timing);
+                FlowTiming profile_flow_timing;
+                flow.Run(flow_noise.Next(0), profile_mu,
+                         MakeCond(prompt_feat, 0), spks, kChunkFrames, 0,
+                         profile_flow_timing);
+                if (precompute_full_prompt) {
+                    std::vector<int32_t> remaining_prompt(
+                        prompt.begin() + static_cast<ptrdiff_t>(kChunkTokens),
+                        prompt.end());
+                    EncoderTiming remaining_encoder_timing;
+                    const auto remaining_mu = encoder.Run(
+                        remaining_prompt, kChunkTokens, 0, remaining_encoder_timing);
+                    FlowTiming remaining_flow_timing;
+                    flow.Run(flow_noise.Next(1), remaining_mu,
+                             MakeCond(prompt_feat, kChunkFrames), spks, kChunkFrames,
+                             kChunkFrames, remaining_flow_timing);
+                }
+                voice_profile = std::make_unique<VoiceProfile>(
+                    VoiceProfile{encoder.ExportState(), flow.ExportState()});
             }
             const double profile_ms = Milliseconds(profile_start, Clock::now());
             PcmStreamWriter pcm_stream(pcm_stream_path, audio_fd);

@@ -21,7 +21,7 @@ NVMe 256 GB，RKNPU2 三核（driver v0.9.8 / librknnrt 2.3.2）。
 | LLM Qwen3-1.7B | **CPU A55×4 (Q4_0/llama.cpp)** | decode **6.07** tok/s（与 TTS 共存 5.85，门槛 3.43）✓ | **§2.23** |
 | 同上，若独占 A76 | CPU A76×4 (Q4_0) | decode **18.94** tok/s——比 NPU 快 52%，但会打断 TTS | §2.23 |
 | 同上，NPU 方案 | NPU (RKLLM w8a8) | decode 12.5 tok/s；与 TTS 共存掉到 1.15–1.33 ✗ | §2.9 §2.22 |
-| TTS CosyVoice2 | NPU (RKLLM **两核** + RKNN 钉核 2) | 首包 **~2.0 s**，稳态 rtf **0.80–0.94**；27 s 回复**零断音** ✓ | **§2.21** |
+| TTS CosyVoice2 | NPU (RKLLM **两核** + RKNN 钉核 2) | 首包 **~2.0 s**，稳态 rtf **0.80–0.94**；27 s 回复**零断音** ✓；常驻服务调用方首音稳态 **2.0–2.2 s** | **§2.21** §2.26 |
 | bge-small-zh | CPU (ONNX int8) | 查询 **3.2 ms**，写 10 条 fragment 51 ms | §2.14 |
 
 **CPU/NPU 分配**（§2.17 实测得出）：
@@ -1422,6 +1422,62 @@ eidolond 每 5 秒对账、CAMPPlus、以及 9 个 GNOME 进程。
 * `/root/eidolon_models/.venv` 的解释器软链断了（指向已被我清理掉的
   `/root/.local/share/uv/python/cpython-3.13-*`）。本节改用板上 channel 组件的
   onnxruntime 1.26 直接跑 ONNX，绕开了它。
+
+### 2.26 音色预计算改成快照，稳态首音 2.9 s → 2.0–2.2 s（实测 2026-09-09）
+
+常驻的 `eidolon-tts.service` 模型只加载一次，但每句话还要付一次**音色预计算**
+（约 0.8 s）：把 prompt 的前 28 个 token 喂给 encoder 和 Flow，让状态留在两者的
+RKNN cache 里。它每句重做，只因为请求会把 cache 用掉，而当时唯一的复位手段是
+`Reset()`——清零。
+
+现在两个类都能导出/导入 cache：第一句跑完预计算后存快照，之后每句写回去。
+
+| | 基线 | 快照 |
+| --- | ---: | ---: |
+| `profile_precompute_ms` 第一句 | 776 / 780 / 852 | 806 / 864 |
+| `profile_precompute_ms` 之后每句 | 764–855 | **5.5 / 5.8 / 6.2 / 12.9** |
+| `ttft_first_pcm_ms` | 2018–2223 | 1997–2225 |
+| **调用方看到的首音（稳态）** | **约 2.9 s** | **约 2.0–2.2 s** |
+| `underrun_count`（2×3 句合计） | 5 | **5** |
+| `steady_pcm_rtf` | 0.34–0.87 | 0.41–0.84 |
+
+三句全部 `status=PASS`、`saw_eos=1`，三句的 `audio_seconds` 两边完全一致
+（4.12 / 3.68 / 1.84）。**断音次数没变多**，`minimum_buffer_after_ms` 两边都是 840。
+
+#### 音频有没有变
+
+* **非服务模式逐字节相同。** 固定 `--seed` 时该二进制本身可复现（同一版跑两遍
+  wav / mel / token 三个文件全等），加快照前后也全等。
+* **更强的一遍：** 临时改一版，在预计算之后先 `Reset()` 清空、再从快照恢复，输出
+  仍与基线逐字节相同——恢复重建的就是预计算留下的那份状态，不是靠残留状态蒙混。
+* **服务模式第一句逐字节相同，第二句起不同。** 原因不是脏状态，是预计算**并非
+  只依赖音色**：encoder 那半只吃 prompt token，是纯音色的；Flow 那半还吃两块噪声
+  （`flow_noise.Next(0)` / `Next(1)`），而取噪声的生成器跨句共享、故意不复位。
+  基线每句预计算的噪声都不一样，快照等于把 prompt 段噪声钉在第一句那次抽取上。
+
+量化过这一件事：只改 prompt 段噪声、其余全固定时，mel 余弦 **0.999975**、MAE 0.034
+（mel std 3.23，约 1%）；波形对数谱余弦 0.994、MAE **0.417**。而服务模式基线与新
+实现第二句的差异是对数谱余弦 0.989、MAE **0.428**——同一量级，说明差异全部来自那
+一次噪声抽取。作为尺度参照，两句**不同文本**的对数谱余弦是 0.72。基线本来每句就在
+这个范围内抖，快照只是把它钉住。
+
+那两次 `Next()` 仍然要取走再丢掉：生成器跨句共享，少抽两次会让后面每一块的噪声
+错位，那才是真的把音频改了。
+
+#### 为什么快照拿得到
+
+cache 全都住在 `rknn_create_mem` 给的**用户侧**缓冲里——`virt_addr` 上的字节就是
+状态本身，`rknn_mem_sync` 只做 cache 维护，不是驱动侧的隐藏状态。`StreamingFlow`
+早就有 `ExportState`/`ImportState`（steady flow 的交接在用），这次给
+`StreamingEncoder` 补上同样的一对。encoder 的 cache 每次 `Run` 之后输入输出对调
+（ping-pong），且那几块是 NPU 写的，所以导出前要 `RKNN_MEMORY_SYNC_FROM_DEVICE`
+先失效缓存行；按下标写回则与对调到哪一侧无关。
+
+#### 顺带记下的既有行为（不是这次改的）
+
+服务模式每句的 prefill 都是 `keep_history = true`，rkllm 的 KV 历史跨句累积。所以
+同一句话连说三遍，token 数是 103 / 75 / 88 而不是三次相同——固定 `--seed` 时这是
+可复现的，两个二进制也一致。它与本节的 cache 无关，但会影响任何"连说 N 句"的比对。
 
 ## 3. 已知缺陷
 
