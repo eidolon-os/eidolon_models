@@ -29,43 +29,45 @@ DEFAULT_DOWNSTREAM_CORE = "2"
 
 #: How much RKLLM context the engine may use, in tokens.
 #:
-#: 288 is the engine's own default, restated here so it is a decision rather
-#: than an accident — and it is a decision that costs something. The engine
-#: derives its generation budget as
-#: `min(text_tokens * 20, max_context - prefill_tokens)` and refuses outright
-#: when that lands under `text_tokens * 2`, so at 288 the ceiling on an
-#: utterance is its text length rather than the model's context: 44 characters
-#: truncate mid-sentence at 6.04 s every time, 80 produce no audio at all.
+#: 2048 is what the weights themselves hold (`qwen2_body_w8a8_c2_ctx2048`), and
+#: the engine's own default of 288 is not a working value: it derives the
+#: generation budget as `min(text_tokens * 20, max_context - prefill_tokens)`
+#: and refuses outright when that lands under `text_tokens * 2`, so at 288 the
+#: ceiling on an utterance is its *text length* rather than the model's
+#: context. Measured on the board, 3 s voice, four runs per length:
 #:
-#: **Do not raise this on its own.** It was raised to 2048 (what the weights
-#: hold — `qwen2_body_w8a8_c2_ctx2048`) and that was worse, not better. Serve
-#: mode reuses one RKLLM handle across utterances without clearing its KV
-#: cache, and 288 is small enough that the residue is squeezed out before it
-#: matters. Give it 2048 of room and the residue accumulates instead. Measured
-#: on the board, same sentence six times from a cold start:
+#:            288        2048      audio     rtf(median)
+#:   14 ch    4/4        4/4        4.08 s   0.845
+#:   20 ch    4/4        4/4        5.00 s   0.785
+#:   44 ch    0/4        4/4        9.80 s   0.828   <- truncated at 6.04 s
+#:   80 ch    0/4        4/4       16.88 s   0.860   <- no audio at all
+#:  126 ch    0/4        ok        26.20 s   0.896   <- no audio at all
 #:
-#:   288:  6/6 intact
-#:   2048: utterances 1-3 intact, then "大妈妈妈之前也这样子，忽来过，今天
-#:         天气不错，我们出去走走吧。" — the voice prompt's own text plus the
-#:         previous utterances, and steady rtf 0.9 -> 1.5-1.6
+#: **This value and the engine's per-utterance KV clear are one change, not
+#: two.** Raising it alone was tried and was worse than leaving it low: serve
+#: mode reuses a single RKLLM handle and prefills with `keep_history = true`
+#: (HOST-RK3588.md §2.26 recorded that), so the KV history accumulates across
+#: utterances. 288 is small enough that the residue is squeezed out before it
+#: matters — it only showed up as harmless jitter in the token count. Give it
+#: 2048 of room and the residue accumulates instead: utterances 1-3 came out
+#: intact and then the fourth began reciting the voice prompt's own text,
+#: with steady rtf going 0.9 -> 1.5-1.6.
 #:
-#: So the small context has been hiding a cross-utterance bug rather than
-#: being the whole problem. HOST-RK3588.md §2.26 had already recorded the
-#: behaviour — serve mode prefills with `keep_history = true`, so the KV
-#: history accumulates — but at 288 it only showed up as harmless jitter in the
-#: token count. The fix is one line in the engine,
-#: `cosyvoice2_streaming_pipeline.cpp:2071`: the *first* prefill of each
-#: utterance should pass `false` (the two later call sites pass `true`
-#: correctly, being single-token continuations within one utterance). The two
-#: changes go together the way §2.21's two-core model and NPU core assignment
-#: did. Until that lands, a larger value here trades truncated long sentences
-#: for corrupted ones, which is worse: a truncation is at least the beginning
-#: of this sentence.
+#: So the engine now clears the cache at the top of every utterance
+#: (`rkllm_clear_kv_cache`, two nullptrs = clear all) and proves it with
+#: `rkllm_get_kv_cache_size`. With that in place the same sentence eight times
+#: from a cold start is 8/8 intact at both values, and `audio_seconds` is
+#: identical across all eight — which also made serve mode reproducible, ending
+#: the token-count jitter §2.26 had accepted as a cost.
 #:
-#: Overridable because that is what made the bad value recoverable without
-#: rolling a release back: one drop-in set it to 288 and the next restart was
-#: correct.
-DEFAULT_MAX_CONTEXT = 288
+#: `tests/test_tts_engine_command.py` holds the two together: a value above the
+#: engine's default requires the clear to still be in the engine's source. Do
+#: not raise one without the other; §2.21's two-core model and NPU core
+#: assignment had the same shape.
+#:
+#: Overridable, which is what made the bad value recoverable without rolling a
+#: release back: one drop-in and the next restart was correct.
+DEFAULT_MAX_CONTEXT = 2048
 
 
 @dataclass(frozen=True)
