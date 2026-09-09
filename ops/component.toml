@@ -73,6 +73,15 @@ requires_capability = "local_llm"
 [[artifacts.files]]
 path = "Qwen3-1.7B-Q4_0.gguf"
 sha256 = "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5"
+# unsloth's rather than ggml-org's, and not a matter of taste: ggml-org
+# publishes Q4_K_M for this model and no Q4_0. This digest is byte-identical to
+# the file the numbers above were measured on.
+# The revision is a commit and not `main`, for the same reason every other
+# pinned artifact names something immutable: a branch can be moved under a
+# digest, and then the pin fails rather than the file being wrong. Checked
+# against the hub's own LFS metadata at this commit: 1056782912 bytes hashing
+# to the digest above.
+url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f15126ef60b45a1e1933222/Qwen3-1.7B-Q4_0.gguf"
 
 # Nothing else is declared yet, deliberately.
 #
@@ -103,7 +112,9 @@ sha256 = "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5"
 # The commit is the tag v2.3.2 resolved to an immutable ref, because a tag can
 # be moved and every other pinned artifact names something that cannot be.
 #
-# Note also that `artifacts` states which files must be present and what they
-# hash to, and not where to obtain them: Ops fetches each kind with code of
-# its own (see eidolon_ops/embedding_model.py for the encoder). Declaring these
-# is therefore two pieces of work, not one.
+# Declaring an artifact is now the whole of the work: `artifacts` says which
+# files must be present, what they hash to, and where the bytes come from, and
+# eidolon_ops/component_artifacts.py carries whatever any component declares.
+# The files are fetched on the workstation and carried over the transport a
+# release already uses — never pulled by the Host, which is the case above
+# about a board with no route to a model hub.
