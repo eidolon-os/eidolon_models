@@ -364,10 +364,17 @@ Mac 是本地 Metal 构建，差别在后端不在模板与推理参数解析—
 所以 probe 的敏感腿是裸提问那条，`--expect-leak` 也是对着它设计的——
 把 probe 指向一台用旧开关起的服务，它必须变红，否则它什么也没测。
 
-**给 persona 的一条**：本地 TTS 那条"拒绝换行"是对的，不要在 Channel 或 TTS 侧加清洗层。
-要让这台主机说得出自己的回复，system message 里必须有"回答会被朗读、不要 Markdown/列表/换行"这一句。
-这一句在不在 genome 里，本仓库读不到，也不该读——所以 probe 用一个等价的 system message 做替身，
-并把这个依赖写在这里。
+**这个依赖有多重？比一开始估的轻。** Agent 的 system message 有两半：persona 那半是 genome 数据，
+本仓库读不到；另一半是 `realtime_harness_policy_prompt()`，**是代码，每台 Host 一模一样**。
+把真实的那一半单独发给同一台 llama-server：它通篇没提朗读、语音、Markdown 或换行，只说了
+"能直接回答的问题，直接简洁回答"——**16/16 全部通过 TTS 那道闸门**。
+所以可朗读并不依赖 persona 知道自己会被朗读。probe 现在优先用 Agent 这半真货，
+`eidolon_agent` import 不到时才退回替身，并在输出第一行写明用的是哪个。
+
+**仍然没测到的是"整条"system message**：真实一轮里 persona 正文、召回的记忆、工具 schema 会和
+harness policy 一起进去，那是只有板子能给出的东西。
+
+本地 TTS 那条"拒绝换行"是对的，不要在 Channel 或 TTS 侧加清洗层。
 
 **未做**：上板复测。板子当时被 TTS 断音的排查占着，按约定随统一部署一起验。
 

@@ -21,14 +21,15 @@ owners — which is the finding this probe exists to keep:
     than an error. Both are settled on the Host, for every path at once.
 
   speakable — no line break, not a stump. Owned by whatever instructs the
-    turn. The local TTS refuses a line break because its engine reads one
-    utterance per line, and the flag has no say in it: asked a bare question,
-    this model answers in Markdown and LaTeX across a dozen lines, thinking
-    disabled or not. Asked the same question by a turn that says the answer
-    will be read aloud, it answers in one spoken line. The `bare-no-system` leg
-    below is that contrast, kept as a measurement so nobody re-reads a
-    line break as a reasoning leak — or assumes a persona that never says
-    "you are being read aloud" will be understood anyway.
+    turn, and the flag has no say in it: asked a bare question, this model
+    answers in Markdown and LaTeX across a dozen lines, thinking disabled or
+    not, and the local TTS refuses every one of them because its engine reads
+    one utterance per line. Asked by an instructed turn it answers in one
+    spoken line — and the instruction does not have to mention speech: the
+    Agent's own harness policy only asks for a short direct answer, never says
+    the reply will be read aloud, and that was already enough. The
+    `bare-no-system` leg below is the contrast, kept as a measurement so nobody
+    reads a Markdown answer as a reasoning leak.
 
 The speakable half is not restated here. It is the local TTS's own admission
 rule, so the probe imports `parse_synthesize` and runs each reply through it:
@@ -89,16 +90,47 @@ PROMPTS: tuple[str, ...] = (
     "你好，你是谁？",
 )
 
-#: A stand-in for the persona, not a copy of one: the Agent always sends a
-#: system message, assembled by the context compiler out of persona segments,
-#: and what that message says is genome data rather than code — this repository
-#: cannot read it and does not try. What the probe holds fixed is the one
-#: property the speakable half depends on, so that a Host whose persona omits
-#: it can be told exactly what it omitted.
+#: The fallback system message, used only when the Agent is not importable.
+#: It states outright what the real one only implies, so a run without the
+#: Agent still exercises an instructed turn rather than a bare one.
 SPOKEN_STYLE_SYSTEM = (
     "你是一个语音助手，你的回答会被朗读出来。"
     "用口语化的一到两句话直接回答，不要使用 Markdown、公式、列表或换行。"
 )
+
+
+def system_message() -> tuple[str, str]:
+    """The turn's instructions, preferring the Agent's real ones.
+
+    The Agent's system message has two halves. One is the persona, assembled by
+    the context compiler out of genome data this repository cannot read. The
+    other is `realtime_harness_policy_prompt()` — code, identical on every
+    Host — and measuring it settles more than the stand-in did: it never
+    mentions speech, screens, Markdown or line breaks, and asks only for a
+    short direct answer, yet on the pinned build that alone was enough for 16
+    of 16 replies to pass the local TTS's gate.
+
+    So the speakable half does not rest on a persona that knows it is being
+    read aloud. What is still unmeasured here is the *whole* message — persona
+    text, retrieved memory and tool schemas ride along with this on a real
+    turn, and only a Host can show that. Returned with a label so the output
+    says which of the two was used rather than leaving it to be assumed.
+    """
+
+    try:
+        from eidolon_agent.domain.harness.realtime import realtime_harness_policy_prompt
+    except ImportError:
+        return SPOKEN_STYLE_SYSTEM, "a stand-in (the Agent is not importable here)"
+    # The header the context compiler wraps every system segment in. The
+    # persona and memory segments that would sit beside it on a real turn are
+    # not here, and cannot be: they are this Host's data, not the Agent's code.
+    return (
+        "[SYSTEM INSTRUCTIONS]\n"
+        "authority=instruction; status=active; scope=this_turn_only; "
+        "actionability=may_answer_from\n" + realtime_harness_policy_prompt(),
+        "the Agent's own realtime harness policy (persona and memory absent)",
+    )
+
 
 #: Generous on purpose: a reply cut off by the probe's own budget would be a
 #: truncation the Host is not guilty of.
@@ -536,7 +568,8 @@ def main() -> int:
     )
     args = parser.parse_args()
     base_url = args.base_url.rstrip("/")
-    system = SPOKEN_STYLE_SYSTEM
+    system, system_label = system_message()
+    print(f"instructed legs carry {system_label}\n")
 
     legs: list[Leg] = []
     try:
