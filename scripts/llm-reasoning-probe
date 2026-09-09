@@ -49,15 +49,27 @@ the product path unchecked:
     uv run --project ../eidolon_agent python scripts/llm-reasoning-probe
 
 `--expect-leak` inverts the verdict: it passes only if reasoning does leak.
-That is how the probe was checked against the failure it is for — it has to go
-red against a Host started the old way, or it is not measuring anything. The
-launcher will not start one, so the control is raised by hand, same binary and
-same weights:
+A green check that cannot go red proves nothing, so the probe was run against
+two Hosts that should redden it. The launcher will not start either, so they
+are raised by hand from the same binary and the same weights:
 
+    # the old flag: the tag arrives at the head of the content
     llama-server --model <the .gguf the unit names> --host 127.0.0.1 \
         --port 8770 --ctx-size 2048 --jinja --reasoning-budget 0
-    scripts/llm-reasoning-probe --base-url http://127.0.0.1:8770/v1 \
-        --expect-leak --repeat 8
+
+    # no flag at all: thinking simply on
+    llama-server --model <the .gguf the unit names> --host 127.0.0.1 \
+        --port 8771 --ctx-size 2048 --jinja
+
+    scripts/llm-reasoning-probe --base-url http://127.0.0.1:8770/v1 --expect-leak
+
+The two fail differently, and both were needed. The old flag leaks a `</think>`
+into the text, but only on bare prompts — the instructed legs stayed green
+against it, so on its own it never showed that the *product* legs could fail.
+Thinking simply on shows it: llama.cpp parses the block out into
+`reasoning_content`, so nothing looks wrong in the text while the reply is
+either the remainder of one or empty, and every leg goes red including the two
+that drive the Agent's provider.
 """
 
 from __future__ import annotations
@@ -577,6 +589,23 @@ def main() -> int:
         legs.append(leg_http_plain(base_url, args.model, args.timeout, system, args.repeat))
         legs.append(leg_bare_no_system(base_url, args.model, args.timeout, args.repeat))
         legs.append(leg_http_completions(base_url, args.model, args.timeout))
+    except urllib.error.HTTPError as exc:
+        # Told apart from a dead socket on purpose: a Host that answers 400 is
+        # a Host that refused the request *shape*, which is the kind of thing
+        # this probe exists to notice — a future llama.cpp that rejected the
+        # Agent's unknown `thinking` field would land here, and calling that
+        # "nobody is listening" would send the reader somewhere else entirely.
+        body = ""
+        try:
+            body = exc.read().decode("utf-8", errors="replace")[:400]
+        except Exception:
+            pass
+        print(
+            f"llm-reasoning-probe: the Host at {base_url} refused the request: "
+            f"HTTP {exc.code} {exc.reason}\n  {body}",
+            file=sys.stderr,
+        )
+        return 2
     except (urllib.error.URLError, TimeoutError) as exc:
         print(f"llm-reasoning-probe: no Host answering at {base_url}: {exc}", file=sys.stderr)
         return 2

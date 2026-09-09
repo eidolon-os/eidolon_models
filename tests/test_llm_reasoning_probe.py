@@ -141,3 +141,17 @@ def test_a_leak_on_the_contrast_leg_still_fails_it() -> None:
     probe.judge(leg, [probe.Reply("_", BOARD_LEAK, finish_reason="stop")])
     assert leg.leaked is True
     assert leg.status == "fail"
+
+
+def test_reasoning_that_never_enters_the_text_is_still_caught() -> None:
+    """The failure mode the tag-hunt would miss entirely.
+
+    Left to think, llama.cpp parses the block out into `reasoning_content`, so
+    the text carries no tag and reads as a clean answer — while being the
+    remainder of one, or empty. Measured against a Host started with no
+    reasoning flag at all: `reasoning_content` came back 449 characters long
+    and every leg went red, the two driving the Agent's provider included."""
+
+    reply = probe.Reply("_", "小明现在有 15 个苹果。", reasoning="嗯，让我仔细想想这个问题。")
+    assert probe.speech_faults(reply) == []
+    assert any("remainder" in fault for fault in probe.reasoning_faults(reply))
