@@ -83,6 +83,11 @@ RETRYABLE_ERROR_CODES = frozenset({ERROR_BUSY, ERROR_INTERNAL, ERROR_ENGINE_UNAV
 
 MAX_TEXT_CHARACTERS = 400
 
+#: The longest text that stays audible, as opposed to the longest that is
+#: accepted. Between the two the service answers normally and the listener
+#: hears a gap. Measured by the buffer floor; the contract carries the table.
+SAFE_TEXT_CHARACTERS = 60
+
 
 class ProtocolError(ValueError):
     """A message this protocol does not contain."""
