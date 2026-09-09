@@ -2340,6 +2340,32 @@ int main(int argc, char** argv) {
                 }
                 if (request_text.empty()) continue;
                 try {
+                    // 每句从空的 KV 开始。serve 模式复用同一个 RKLLM handle，而
+                    // 每次 RunHidden 都传 keep_history=1——句内必须保持，否则续推
+                    // 拿不到 prefill 留下的状态——所以上一句的历史会留在里面。
+                    //
+                    // 在 288 的上下文里它很快被挤出去，只表现为「同一句连说三遍
+                    // token 数不同」这种无害抖动（§2.26 记过）。给它 2048 的余量
+                    // 就会累积：第四句起模型开始复述音色 prompt 自己的文本，
+                    // steady rtf 从 0.9 涨到 1.5（§2.27）。所以「清历史」和
+                    // 「放大上下文」是同一件事的两半，必须一起做。
+                    //
+                    // 全清而不是清一个范围：范围形式要求 keep_history==0 且生成
+                    // 已被回调返回 1 暂停（rkllm.h 的 @note），这里两个条件都不
+                    // 成立。keep_history=0 也没有用在这里，它的语义是「这一次不
+                    // 保留历史」，而句内的续推恰恰需要保留。
+                    if (rkllm_clear_kv_cache(llm_handle, 0, nullptr, nullptr) != 0) {
+                        throw std::runtime_error("could not clear the RKLLM KV cache");
+                    }
+                    // 自证，而不是相信。清完应当是 0；从音频上看这件事要到第四句
+                    // 才看得出来，所以这一行是它唯一的即时证据。沉默即正常。
+                    int kv_positions[8] = {0};
+                    if (rkllm_get_kv_cache_size(llm_handle, kv_positions) == 0 &&
+                        kv_positions[0] != 0) {
+                        std::cerr << "kv_cache_not_empty_after_clear="
+                                  << kv_positions[0] << '\n';
+                        std::cerr.flush();
+                    }
                     plan_text(request_text);
                     plan_mel_chunks();
                     synthesize(request_text);
