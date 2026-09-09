@@ -59,3 +59,44 @@ def test_the_core_allocation_is_applied_when_this_host_states_one() -> None:
 
     assert "taskset -c" in LAUNCHER
     assert "EIDOLON_LLM_CPU_AFFINITY" in LAUNCHER
+
+
+PROBE = (Path(__file__).resolve().parents[1] / "scripts/llm-reasoning-probe").read_text(
+    encoding="utf-8"
+)
+
+
+def test_the_flag_has_a_live_probe_behind_it_and_not_only_this_file() -> None:
+    """Everything above reads the launcher as text, which is the right check
+    for a flag and no check at all on the model. `--reasoning off` was first
+    accepted on a hand-run of one path — non-streaming chat — while the product
+    path is the Agent, through LiteLLM, streaming. The script is what closes
+    that; this test is what keeps it committed."""
+
+    assert PROBE
+    assert "--reasoning off" in PROBE
+
+
+def test_the_probe_covers_the_paths_a_turn_can_actually_take() -> None:
+    """Named individually rather than counted, so that dropping one is a
+    deletion someone has to make on purpose. Non-streaming was the only path
+    checked the first time, and that is the whole reason this exists."""
+
+    for leg in (
+        "http-stream",
+        "http-plain",
+        "bare-no-system",
+        "http-completions",
+        "litellm-stream",
+        "litellm-multiturn",
+    ):
+        assert f'"{leg}"' in PROBE, leg
+
+
+def test_the_probe_can_be_pointed_at_the_failure_it_is_for() -> None:
+    """A green check that cannot go red proves nothing. `--expect-leak` runs
+    the probe against a Host started the old way — `--reasoning-budget 0` — and
+    passes only if something leaks. On the Mac build of the pinned llama.cpp it
+    does: 17 of 32 bare replies, against 0 of 32 with the flag as it now is."""
+
+    assert "--expect-leak" in PROBE

@@ -314,6 +314,63 @@ system prompt + Companion genome 是固定前缀，缓存后只对新增话轮�
   `rkllm_init=-1`。与 ASR 的冲突在真实时序下不存在——ASR 的 offline 突发与
   LLM/TTS 天然串行，见 [HOST-RK3588.md §2.17](HOST-RK3588.md)
 
+### 5.2 已完成：thinking 不再泄漏，在每一条真实调用路径上（2026-09-09）
+
+`--reasoning-budget 0` 让模板**开始**思考再切断，闭合标签留在 content 里，板上非流式 4/4 全中；
+`3b1b3c4` 改成 `--reasoning off`。但当时只验了非流式一条路径，而产品路径是 Agent 经 LiteLLM、**流式**。
+补验证的落点是 [`scripts/llm-reasoning-probe`](scripts/llm-reasoning-probe) —— 一个可重复跑的脚本，不是一次 curl。
+
+**怎么跑的**：Mac 上从源码构建 llama.cpp **tag `b10865`**（commit `d4389a4`，与
+`eidolon_ops` 的 `CAPABILITY_FOUNDATION_ARTIFACTS` 同一个 tag；板上是官方 aarch64 release 二进制，
+Mac 是本地 Metal 构建，差别在后端不在模板与推理参数解析——泄漏是模板层的事，两边同源）。
+权重是板子那份的上游 pin（`Qwen3-1.7B-Q4_0.gguf`，`c876f159…`）。
+服务由 `scripts/eidolon-llm` 本身拉起，`--ctx-size 2048` 与 unit 一致。
+
+| 路径 | 结论 |
+| --- | --- |
+| `POST /v1/chat/completions` `stream:true`（含**首个 delta**） | 干净 |
+| 同上 `stream:false` | 干净 |
+| Agent 的 `LiteLLMProvider.stream`，`thinking: disabled` | 干净 |
+| 三轮对话，assistant 回填进上下文 | 干净 |
+| `reasoning_content` | 始终为空，内容没跑到那里去 |
+| `POST /v1/completions` | **Agent 无任何路径调用**；它不过模板，`--reasoning off` 管不到它，实测也确实不可朗读 |
+
+**`thinking: disabled` 到底变成了什么**：`LiteLLMProvider` 把它发成请求体顶层的
+`{"thinking": {"type": "disabled"}}`（DeepSeek 的 `extra_body` 约定）。llama-server 不认识这个字段，
+**静默忽略，不报错**。也就是说本地这条链路上它既不生效也不碍事——真正关掉思考的是 Host 侧的 `--reasoning off`，
+这正是当初把开关放在 Host 而不是客户端的理由。
+
+**判据分成两半，这是这次最值得留下的东西。**
+
+- **不泄漏**（非空、无 `<think>`/`</think>`）由启动开关负责，对所有路径一次性成立。
+- **可朗读**（无换行、不是半句）**不归开关管**。裸问一句，这个模型开不开思考都会用 Markdown +
+  LaTeX 回你十几行，本地 TTS 一律拒绝；同一个问题，只要这一轮的 system message 说了"回答会被朗读出来、
+  不要 Markdown 和换行"，回答就是干净的一行。probe 的 `bare-no-system` 一条腿就是这个对照，
+  故意只按"不泄漏"判定、把换行记成 note——不这么分，一个 Markdown 回答会被读成思考泄漏。
+
+**对照实验**（同一台机、同一份权重、同一个 probe，两台 llama-server 只差这一个开关），
+`--repeat 8`，四道题各 8 次：
+
+| 启动开关 | 裸提问（32 条） | 带朗读风格 system message（每条腿 32 条 + 多轮 24 条） |
+| --- | ---: | ---: |
+| `--reasoning-budget 0`（旧） | **17/32 泄漏** | **0** |
+| `--reasoning off`（现在） | 0/32 | 0 |
+
+裸提问那 17 条按题分布：应用题 8/8、"先仔细想一想"8/8、`27×43` 1/8、问候语 0/8——
+**越像要动脑的题越容易泄漏**，这也解释了为什么当初 4/4 那么容易复现。
+
+右边那一整列 0 是个警告：**system message 会把旧开关的故障完全掩盖掉**。
+当初那次手验若带了 system prompt，就会得出"budget 0 也没问题"的结论。
+所以 probe 的敏感腿是裸提问那条，`--expect-leak` 也是对着它设计的——
+把 probe 指向一台用旧开关起的服务，它必须变红，否则它什么也没测。
+
+**给 persona 的一条**：本地 TTS 那条"拒绝换行"是对的，不要在 Channel 或 TTS 侧加清洗层。
+要让这台主机说得出自己的回复，system message 里必须有"回答会被朗读、不要 Markdown/列表/换行"这一句。
+这一句在不在 genome 里，本仓库读不到，也不该读——所以 probe 用一个等价的 system message 做替身，
+并把这个依赖写在这里。
+
+**未做**：上板复测。板子当时被 TTS 断音的排查占着，按约定随统一部署一起验。
+
 ## 6. 阶段五：联合压测 —— 这才是最终验收
 
 **前四个阶段的单项数字全部作废，除非它们在联合负载下仍成立。**

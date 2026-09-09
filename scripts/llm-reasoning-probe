@@ -1,0 +1,613 @@
+#!/usr/bin/env python3
+"""Ask this Host's chat model on every path a turn can take, and check that
+what comes back is something the Host could say out loud.
+
+Why this exists rather than one more assertion in the launcher's tests: the
+launcher's flags are checked as text, which is the right check for a flag but
+proves nothing about the model. What was proved about the model, when
+`--reasoning off` replaced `--reasoning-budget 0`, was proved by hand and only
+against non-streaming `/v1/chat/completions` — while the product path is the
+Agent, through LiteLLM, streaming. "It was clean when I asked it the other way"
+is the gap this closes, and the reason the probe is a committed script rather
+than a session of curl.
+
+Four things every reply has to be, and they turn out to have two different
+owners — which is the finding this probe exists to keep:
+
+  reasoning — non-empty, and free of `<think>` / `</think>`. Owned by the
+    launcher's flag. `--reasoning-budget 0` let the template start thinking and
+    cut it off, leaving the closing tag at the head of the content; a model
+    left to think freely spends the whole budget in there and returns "" rather
+    than an error. Both are settled on the Host, for every path at once.
+
+  speakable — no line break, not a stump. Owned by whatever instructs the
+    turn. The local TTS refuses a line break because its engine reads one
+    utterance per line, and the flag has no say in it: asked a bare question,
+    this model answers in Markdown and LaTeX across a dozen lines, thinking
+    disabled or not. Asked the same question by a turn that says the answer
+    will be read aloud, it answers in one spoken line. The `bare-no-system` leg
+    below is that contrast, kept as a measurement so nobody re-reads a
+    line break as a reasoning leak — or assumes a persona that never says
+    "you are being read aloud" will be understood anyway.
+
+The speakable half is not restated here. It is the local TTS's own admission
+rule, so the probe imports `parse_synthesize` and runs each reply through it:
+check and checked cannot drift apart, being the same function. The one rule of
+that gate the probe does not enforce is the 400-character cap — Channel's
+aggregator cuts a reply into sentences before the gate sees it, so the cap is
+its business and not a property of the reply. Over-cap replies are reported.
+
+Run it against a Host that is already serving:
+
+    scripts/llm-reasoning-probe --base-url http://127.0.0.1:8769/v1
+
+The LiteLLM legs drive the Agent's own provider, so they need the Agent's
+environment. The probe says so and exits non-zero rather than quietly leaving
+the product path unchecked:
+
+    uv run --project ../eidolon_agent python scripts/llm-reasoning-probe
+
+`--expect-leak` inverts the verdict: it passes only if reasoning does leak.
+That is how the probe was checked against the failure it is for — it has to go
+red against a Host started the old way, or it is not measuring anything. The
+launcher will not start one, so the control is raised by hand, same binary and
+same weights:
+
+    llama-server --model <the .gguf the unit names> --host 127.0.0.1 \
+        --port 8770 --ctx-size 2048 --jinja --reasoning-budget 0
+    scripts/llm-reasoning-probe --base-url http://127.0.0.1:8770/v1 \
+        --expect-leak --repeat 8
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+from dataclasses import dataclass, field
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from eidolon_models_tts.protocol import (  # noqa: E402
+    MAX_TEXT_CHARACTERS,
+    ProtocolError,
+    parse_synthesize,
+)
+
+#: Prompts built to provoke thinking rather than to be answered well: two the
+#: model would ordinarily reason through, one that asks for it in so many
+#: words, and a plain greeting to keep an easy turn in the set.
+PROMPTS: tuple[str, ...] = (
+    "27 乘以 43 等于多少？",
+    "小明有 12 个苹果，给了小红 5 个，又买了 8 个，现在他有几个？",
+    "先仔细想一想，再回答：一年有多少个星期？",
+    "你好，你是谁？",
+)
+
+#: A stand-in for the persona, not a copy of one: the Agent always sends a
+#: system message, assembled by the context compiler out of persona segments,
+#: and what that message says is genome data rather than code — this repository
+#: cannot read it and does not try. What the probe holds fixed is the one
+#: property the speakable half depends on, so that a Host whose persona omits
+#: it can be told exactly what it omitted.
+SPOKEN_STYLE_SYSTEM = (
+    "你是一个语音助手，你的回答会被朗读出来。"
+    "用口语化的一到两句话直接回答，不要使用 Markdown、公式、列表或换行。"
+)
+
+#: Generous on purpose: a reply cut off by the probe's own budget would be a
+#: truncation the Host is not guilty of.
+MAX_TOKENS = 512
+
+#: How many times each prompt is asked. Generation is sampled, so one answer is
+#: one observation: against `--reasoning-budget 0` the bare leg leaked 17 of 32
+#: replies, but the split by prompt was 8/8, 8/8, 1/8, 0/8 — a single round can
+#: miss it. One is still the default because a Host that generates at 5.5
+#: tokens a second pays for every extra turn; raise it when the question is
+#: whether something leaks *sometimes*.
+REPEATS = 1
+
+#: What the Host is asked to call itself — on the board this is the overlay's
+#: `llm.models[0].name`. llama-server serves the weights it was given whatever
+#: name arrives, but sending the production one keeps the request honest.
+DEFAULT_MODEL = "openai/qwen3-1.7b"
+
+
+@dataclass
+class Reply:
+    """One answer, and the parts of the response a verdict is drawn from."""
+
+    prompt: str
+    text: str
+    finish_reason: str | None = None
+    #: Set when the transport exposes a separate reasoning channel. Empty is
+    #: the expected value: text arriving *there* would mean the content this
+    #: Host speaks is the remainder of a reply rather than the whole of one.
+    reasoning: str = ""
+    #: The first non-empty content fragment of a stream. The board's failure
+    #: was at the very head of the reply, so a leg that judged only the joined
+    #: text would be checking the same thing twice and the head not at all.
+    first_delta: str | None = None
+
+
+@dataclass
+class Leg:
+    name: str
+    what: str
+    #: False for the leg that deliberately sends no system message: it is there
+    #: to show what the flag does *not* cover, so holding it to the speakable
+    #: half would be marking the finding down as a failure.
+    speakable_required: bool = True
+    status: str = "pass"
+    notes: list[str] = field(default_factory=list)
+    faults: list[str] = field(default_factory=list)
+    #: Reasoning faults kept apart from the rest, because `--expect-leak` asks
+    #: about these and not about how the model formats prose.
+    leaked: bool = False
+
+
+def reasoning_faults(reply: Reply) -> list[str]:
+    """What the launcher's flag is answerable for."""
+
+    found: list[str] = []
+    for tag in ("<think>", "</think>"):
+        if tag in reply.text:
+            found.append(f"reply contains {tag}")
+        if reply.first_delta and tag in reply.first_delta:
+            found.append(f"first delta contains {tag}")
+    if not reply.text.strip():
+        found.append(
+            "reply is empty — the signature of a model that spent the whole "
+            f"budget thinking (finish_reason={reply.finish_reason})"
+        )
+    if reply.reasoning.strip():
+        found.append(
+            "the response carried reasoning content, so what this Host would "
+            f"speak is a remainder: {reply.reasoning[:80]!r}"
+        )
+    return found
+
+
+def speech_faults(reply: Reply) -> list[str]:
+    """What the local TTS would refuse, asked of the local TTS."""
+
+    found: list[str] = []
+    try:
+        parse_synthesize({"type": "synthesize", "request_id": "probe", "text": reply.text})
+    except ProtocolError as exc:
+        message = str(exc)
+        # Length is Channel's business: its aggregator cuts sentences before
+        # the gate sees them, so an over-cap reply is not a defect of the reply.
+        if not message.startswith("text exceeds"):
+            found.append(f"the local TTS would refuse this reply: {message}")
+    if reply.first_delta is not None and reply.first_delta.strip("\n\r") != reply.first_delta:
+        found.append(f"first delta carries a line break: {reply.first_delta!r}")
+    if reply.finish_reason not in (None, "stop", "tool_calls"):
+        found.append(f"reply was cut off mid-sentence: finish_reason={reply.finish_reason}")
+    return found
+
+
+def judge(leg: Leg, replies: list[Reply]) -> Leg:
+    for reply in replies:
+        leaks = reasoning_faults(reply)
+        speech = speech_faults(reply)
+        if leaks:
+            leg.leaked = True
+        for fault in leaks:
+            leg.faults.append(f"{reply.prompt!r}: {fault}")
+        for fault in speech:
+            if leg.speakable_required:
+                leg.faults.append(f"{reply.prompt!r}: {fault}")
+            else:
+                leg.notes.append(f"{reply.prompt!r}: {fault}")
+        if len(reply.text.strip()) > MAX_TEXT_CHARACTERS:
+            leg.notes.append(
+                f"{reply.prompt!r}: {len(reply.text.strip())} characters, over the TTS gate's "
+                f"{MAX_TEXT_CHARACTERS} — Channel splits before that gate, so it is not counted"
+            )
+    if leg.faults:
+        leg.status = "fail"
+    return leg
+
+
+# -- the raw HTTP legs -------------------------------------------------------
+
+
+def _post(url: str, payload: dict, timeout: float):
+    request = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    # The Host answers on loopback, and a proxy in the environment would be
+    # asked to route to it and fail. An opener with an empty ProxyHandler is
+    # the programmatic form of curl's --noproxy.
+    return urllib.request.build_opener(urllib.request.ProxyHandler({})).open(
+        request, timeout=timeout
+    )
+
+
+def _reasoning_of(delta_or_message: dict) -> str:
+    for key in ("reasoning_content", "reasoning"):
+        value = delta_or_message.get(key)
+        if isinstance(value, str) and value:
+            return value
+    return ""
+
+
+def _messages(system: str | None, prompt: str) -> list[dict]:
+    turn = [{"role": "user", "content": prompt}]
+    return [{"role": "system", "content": system}, *turn] if system else turn
+
+
+def _asked(repeats: int) -> tuple[str, ...]:
+    """Every prompt, each repeated — generation is sampled, so one answer is
+    one observation and not the model's behaviour."""
+
+    return tuple(prompt for prompt in PROMPTS for _ in range(repeats))
+
+
+def leg_http_plain(
+    base_url: str, model: str, timeout: float, system: str | None, repeats: int
+) -> Leg:
+    leg = Leg("http-plain", "POST /v1/chat/completions, stream=false")
+    replies: list[Reply] = []
+    for prompt in _asked(repeats):
+        with _post(
+            f"{base_url}/chat/completions",
+            {
+                "model": model,
+                "stream": False,
+                "max_tokens": MAX_TOKENS,
+                "messages": _messages(system, prompt),
+            },
+            timeout,
+        ) as response:
+            body = json.load(response)
+        choice = body["choices"][0]
+        message = choice.get("message") or {}
+        replies.append(
+            Reply(
+                prompt=prompt,
+                text=message.get("content") or "",
+                finish_reason=choice.get("finish_reason"),
+                reasoning=_reasoning_of(message),
+            )
+        )
+    return judge(leg, replies)
+
+
+def _stream_http(base_url: str, model: str, timeout: float, messages: list[dict]) -> Reply:
+    with _post(
+        f"{base_url}/chat/completions",
+        {"model": model, "stream": True, "max_tokens": MAX_TOKENS, "messages": messages},
+        timeout,
+    ) as response:
+        reply = Reply(prompt=messages[-1]["content"], text="")
+        pieces: list[str] = []
+        for raw in response:
+            line = raw.decode("utf-8").strip()
+            if not line.startswith("data:"):
+                continue
+            payload = line[len("data:") :].strip()
+            if payload == "[DONE]":
+                break
+            for choice in json.loads(payload).get("choices") or []:
+                delta = choice.get("delta") or {}
+                reply.reasoning += _reasoning_of(delta)
+                content = delta.get("content")
+                if content:
+                    if reply.first_delta is None:
+                        reply.first_delta = content
+                    pieces.append(content)
+                if choice.get("finish_reason"):
+                    reply.finish_reason = choice["finish_reason"]
+        reply.text = "".join(pieces)
+    return reply
+
+
+def leg_http_stream(
+    base_url: str, model: str, timeout: float, system: str | None, repeats: int
+) -> Leg:
+    leg = Leg("http-stream", "POST /v1/chat/completions, stream=true")
+    return judge(
+        leg,
+        [_stream_http(base_url, model, timeout, _messages(system, p)) for p in _asked(repeats)],
+    )
+
+
+def leg_bare_no_system(base_url: str, model: str, timeout: float, repeats: int) -> Leg:
+    """The same streaming path with no system message at all.
+
+    Held to the reasoning half only, and deliberately: this is where the model
+    writes Markdown, and the notes it collects are the evidence that a line
+    break is a matter of what the turn asked for rather than of what the
+    launcher started.
+    """
+
+    leg = Leg(
+        "bare-no-system",
+        "stream=true with no system message — the contrast, reasoning half only",
+        speakable_required=False,
+    )
+    judge(
+        leg,
+        [_stream_http(base_url, model, timeout, _messages(None, p)) for p in _asked(repeats)],
+    )
+    if not leg.faults:
+        leg.status = "pass"
+    return leg
+
+
+def leg_http_completions(base_url: str, model: str, timeout: float) -> Leg:
+    """`/v1/completions`, which no Agent path uses — recorded, not required.
+
+    It takes a raw prompt and never applies the chat template, so the reasoning
+    switch has nothing to act on and cannot govern what comes back. The leg is
+    here so that the reason it is ungated is a measurement in the output rather
+    than a claim in a comment.
+    """
+
+    leg = Leg("http-completions", "POST /v1/completions — no Agent path calls this")
+    leg.status = "note"
+    with _post(
+        f"{base_url}/completions",
+        {"model": model, "prompt": PROMPTS[-1], "max_tokens": 80},
+        timeout,
+    ) as response:
+        body = json.load(response)
+    text = body["choices"][0].get("text") or ""
+    verdict = reasoning_faults(Reply(PROMPTS[-1], text)) + speech_faults(Reply(PROMPTS[-1], text))
+    leg.notes.append(
+        "bypasses the chat template, so `--reasoning off` does not reach it; "
+        "nothing in the Agent calls it"
+    )
+    leg.notes.append("clean anyway" if not verdict else "not speakable: " + "; ".join(verdict))
+    return leg
+
+
+# -- the product legs: the Agent's own provider, through LiteLLM -------------
+
+
+def _litellm_provider(base_url: str, model: str, timeout: float, thinking: str):
+    from eidolon_agent.infra.llm.providers import LiteLLMProvider
+
+    return LiteLLMProvider(
+        model=model,
+        # llama-server is started with no API key, but LiteLLM's OpenAI path
+        # will not send a request without one. The Host's real key belongs to
+        # the remote model it would otherwise be talking to.
+        api_key=os.environ.get("EIDOLON_AGENT_LLM_API_KEY") or "local-host-no-key",
+        api_base=base_url,
+        timeout_s=timeout,
+        max_retries=0,
+        shared_http_client=False,
+        thinking=thinking,
+    )
+
+
+def _chat_message(role_name: str, content: str):
+    from datetime import UTC, datetime
+
+    from eidolon_agent.core.types.messages import ChatMessage, MessageRole
+
+    return ChatMessage(
+        id=f"probe-{role_name}-{abs(hash(content)) % 10**8}",
+        role=getattr(MessageRole, role_name.upper()),
+        content=content,
+        created_at=datetime.now(UTC),
+    )
+
+
+async def _stream_provider(provider, messages, request_id: str) -> Reply:
+    from eidolon_agent.core.types.llm import LLMActivityKind
+
+    reply = Reply(prompt=messages[-1].content, text="")
+    pieces: list[str] = []
+    async for delta in provider.stream(
+        messages, temperature=0.7, max_tokens=MAX_TOKENS, request_id=request_id
+    ):
+        if delta.text_delta:
+            if reply.first_delta is None:
+                reply.first_delta = delta.text_delta
+            pieces.append(delta.text_delta)
+        if delta.activity is LLMActivityKind.REASONING:
+            # The provider never surfaces the reasoning text — by design, it
+            # reports only that some arrived. For this Host that report is
+            # already the fault: what went there did not come here.
+            reply.reasoning += "<reasoning activity reported by the provider>"
+        if delta.finish is not None:
+            reply.finish_reason = delta.finish.value
+    reply.text = "".join(pieces)
+    return reply
+
+
+def leg_litellm_stream(
+    base_url: str, model: str, timeout: float, thinking: str, system: str | None, repeats: int
+) -> Leg:
+    import asyncio
+
+    leg = Leg(
+        "litellm-stream",
+        f"eidolon_agent LiteLLMProvider.stream, thinking={thinking!r} — the product path",
+    )
+
+    async def run() -> list[Reply]:
+        provider = _litellm_provider(base_url, model, timeout, thinking)
+        try:
+            replies = []
+            for index, prompt in enumerate(_asked(repeats)):
+                turn = [_chat_message("user", prompt)]
+                if system:
+                    turn.insert(0, _chat_message("system", system))
+                replies.append(await _stream_provider(provider, turn, f"probe-{index}"))
+            return replies
+        finally:
+            await provider.close()
+
+    return judge(leg, asyncio.run(run()))
+
+
+def leg_litellm_multiturn(
+    base_url: str, model: str, timeout: float, thinking: str, system: str | None, repeats: int
+) -> Leg:
+    """Three rounds, each carrying the last answer back into the transcript.
+
+    A template clean on a bare first turn can still be dirty once an assistant
+    message is in the history — Qwen3's own template treats the assistant turn
+    differently when it has to re-open one. Every round is judged, not the last.
+    """
+
+    import asyncio
+
+    leg = Leg("litellm-multiturn", "three rounds with the assistant replies fed back")
+    rounds = (
+        "我们来做个约定：接下来你的回答都要简短。明白了吗？",
+        "那么，27 乘以 43 是多少？",
+        "把刚才那个结果再加上 100 呢？",
+    )
+
+    async def run() -> list[Reply]:
+        provider = _litellm_provider(base_url, model, timeout, thinking)
+        replies: list[Reply] = []
+        try:
+            for attempt in range(repeats):
+                transcript = [_chat_message("system", system)] if system else []
+                for index, prompt in enumerate(rounds):
+                    transcript.append(_chat_message("user", prompt))
+                    reply = await _stream_provider(
+                        provider, list(transcript), f"probe-turn-{attempt}-{index}"
+                    )
+                    transcript.append(_chat_message("assistant", reply.text))
+                    replies.append(reply)
+            return replies
+        finally:
+            await provider.close()
+
+    return judge(leg, asyncio.run(run()))
+
+
+def _tallied(lines: list[str]) -> list[tuple[str, int]]:
+    counts: dict[str, int] = {}
+    for line in lines:
+        counts[line] = counts.get(line, 0) + 1
+    return list(counts.items())
+
+
+# -- driver ------------------------------------------------------------------
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--base-url",
+        default="http://127.0.0.1:8769/v1",
+        help="the Host's llm_api address; 8769 is the port role's assignment",
+    )
+    parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--timeout", type=float, default=120.0)
+    parser.add_argument(
+        "--thinking",
+        default="disabled",
+        choices=("default", "enabled", "disabled"),
+        help="what agent.yaml says for this model; the board says disabled",
+    )
+    parser.add_argument(
+        "--repeat",
+        type=int,
+        default=REPEATS,
+        help="ask every prompt this many times; generation is sampled, so a leak can be rare",
+    )
+    parser.add_argument(
+        "--skip-litellm",
+        action="store_true",
+        help="leave the product path unchecked — for a run that cannot reach the Agent's env",
+    )
+    parser.add_argument(
+        "--expect-leak",
+        action="store_true",
+        help="invert the verdict: pass only if reasoning leaks (checks the probe itself)",
+    )
+    args = parser.parse_args()
+    base_url = args.base_url.rstrip("/")
+    system = SPOKEN_STYLE_SYSTEM
+
+    legs: list[Leg] = []
+    try:
+        legs.append(leg_http_stream(base_url, args.model, args.timeout, system, args.repeat))
+        legs.append(leg_http_plain(base_url, args.model, args.timeout, system, args.repeat))
+        legs.append(leg_bare_no_system(base_url, args.model, args.timeout, args.repeat))
+        legs.append(leg_http_completions(base_url, args.model, args.timeout))
+    except (urllib.error.URLError, TimeoutError) as exc:
+        print(f"llm-reasoning-probe: no Host answering at {base_url}: {exc}", file=sys.stderr)
+        return 2
+
+    if args.skip_litellm:
+        skipped = Leg("litellm-stream", "the product path", status="skipped")
+        skipped.notes.append("asked for with --skip-litellm")
+        legs.append(skipped)
+    else:
+        try:
+            import eidolon_agent.infra.llm.providers  # noqa: F401
+        except ImportError as exc:
+            print(
+                "llm-reasoning-probe: the product path runs the Agent's own provider, which is "
+                f"not importable here ({exc}).\n"
+                "  Run it under the Agent's environment:\n"
+                "    uv run --project ../eidolon_agent python scripts/llm-reasoning-probe\n"
+                "  or pass --skip-litellm to check only the raw HTTP paths.",
+                file=sys.stderr,
+            )
+            return 2
+        legs.append(
+            leg_litellm_stream(
+                base_url, args.model, args.timeout, args.thinking, system, args.repeat
+            )
+        )
+        legs.append(
+            leg_litellm_multiturn(
+                base_url, args.model, args.timeout, args.thinking, system, args.repeat
+            )
+        )
+
+    width = max(len(leg.name) for leg in legs)
+    for leg in legs:
+        print(f"{leg.status.upper():<7} {leg.name:<{width}}  {leg.what}")
+        for mark, lines in (("·", leg.notes), ("✗", leg.faults)):
+            # Repeats say the same thing many times; how many is the
+            # interesting part, so it is counted rather than reprinted.
+            for line, times in _tallied(lines):
+                print(f"        {mark} {line}" + (f"  (×{times})" if times > 1 else ""))
+
+    leaked = any(leg.leaked for leg in legs)
+    failed = any(leg.status == "fail" for leg in legs)
+    unchecked = [leg.name for leg in legs if leg.status == "skipped"]
+
+    if args.expect_leak:
+        if leaked:
+            print("\nexpected a reasoning leak and found one: the probe can see what it is for")
+            return 0
+        print("\nexpected a reasoning leak and found none — the probe is measuring nothing")
+        return 1
+
+    if leaked:
+        print("\nthinking is leaking into what this Host would say")
+        return 1
+    if failed:
+        print("\nno thinking leaked, but a reply came back the local TTS would refuse")
+        return 1
+    print(
+        "no thinking on any path, and every instructed reply is one speakable line"
+        + (f" ({', '.join(unchecked)} left unchecked)" if unchecked else "")
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
