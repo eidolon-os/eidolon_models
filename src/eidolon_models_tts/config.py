@@ -140,8 +140,18 @@ class Settings:
             self.runtime_root / "flow_prompt_token_50.i32.bin",
             self.runtime_root / "prompt_feat_100.f32.bin",
             self.flow_fixture / "spks.f32.bin",
-            self.text_frontend_root / "manifest.json",
-            self.voice_profile_root / "manifest.json",
+            # What the text frontend's constructor opens, and only that. It
+            # used to ask for a `manifest.json` in each of these two roots —
+            # files the engine never reads. Requiring them made two conversion
+            # -run artifacts into a startup precondition, so the package had to
+            # carry them, and they were the one part of it with no upstream to
+            # point at (they also embedded the producing machine's absolute
+            # paths). The gap was in this list, not in the provenance.
+            self.text_frontend_root / "tokenizer.bin",
+            self.text_frontend_root / "text_embedding.f32.bin",
+            self.text_frontend_root / "control_embedding.f32.bin",
+            self.voice_profile_root / "prompt_text_token.i32.bin",
+            self.voice_profile_root / "llm_prompt_speech_token.i32.bin",
         )
 
 

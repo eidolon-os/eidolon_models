@@ -25,15 +25,6 @@ _PKG = _ROOT / "tts" / "cosyvoice2-rk3588" / "2026-07-21"
 _MODEL = _PKG / "model"
 _MANIFEST = _PKG / "manifest.json"
 
-#: The two files upstream does not publish. They are written by the conversion
-#: run, so they have a digest but no URL — which is the whole reason the
-#: artifact declaration cannot be the complete model root.
-_UNPINNED = {
-    "text_frontend/manifest.json",
-    "voices/testwav_prompt3s/manifest.json",
-}
-
-
 def _artifact() -> dict:
     contract = tomllib.loads((_ROOT / "ops" / "component.toml").read_text(encoding="utf-8"))
     declared = [
@@ -57,7 +48,7 @@ def test_the_committed_package_matches_its_own_manifest() -> None:
     assert result["revision"] == "47e9a3ea6724b0a65f8c433c77281258ac393f5a"
     assert "qwen2_body_w8a8_c2_ctx2048.rkllm" in result["checked_files"]
     assert "flow_estimator_cache200_fp16.rknn" in result["checked_files"]
-    assert len(result["checked_files"]) == 26
+    assert len(result["checked_files"]) == 24
 
 
 def test_the_manifest_covers_the_tree_and_nothing_else() -> None:
@@ -95,20 +86,29 @@ def test_the_committed_digests_are_the_declared_upstream_pins() -> None:
     committed = json.loads(_MANIFEST.read_text(encoding="utf-8"))["files"]
     declared = {entry["path"]: entry["sha256"] for entry in _artifact()["files"]}
 
-    assert set(declared) == set(committed) - _UNPINNED
+    assert set(declared) == set(committed)
     for path, digest in declared.items():
         assert committed[path] == digest, path
 
 
-def test_the_unpinned_files_are_only_the_ones_upstream_does_not_publish() -> None:
-    """Named here so a third unpinned file has to be justified rather than
-    quietly accepted: every other file in this package is verifiable against a
-    published digest, and that is the property worth defending."""
+def test_no_file_here_is_without_an_upstream_to_point_at() -> None:
+    """This used to allow exactly two exceptions, recorded in an
+    `unpublished_files` section: the conversion run's own `manifest.json` in the
+    text-frontend and voice roots. Recording a gap honestly was right; having
+    one was not.
+
+    They were carried because `required_paths()` demanded them, and the engine
+    reads neither — `TextFrontend`'s constructor opens five files and no
+    manifest. Dropping that requirement dropped the exception, and adding a
+    voice became a copy from the pinned revision instead of a conversion run.
+
+    So the assertion is now the stronger one: every file is verifiable against
+    a published digest, with no exception list to grow."""
 
     manifest = json.loads(_MANIFEST.read_text(encoding="utf-8"))
 
-    assert set(manifest["source"]["unpublished_files"]) == _UNPINNED
-    assert set(manifest["source"]["file_map"]) == set(manifest["files"]) - _UNPINNED
+    assert "unpublished_files" not in manifest["source"]
+    assert set(manifest["source"]["file_map"]) == set(manifest["files"])
 
 
 def test_the_carried_pin_is_not_aimed_at_a_servable_model_root() -> None:
@@ -124,7 +124,7 @@ def test_the_carried_pin_is_not_aimed_at_a_servable_model_root() -> None:
 
     assert install_root == "/var/lib/eidolon/models/cosyvoice2-upstream"
     assert install_root != "/var/lib/eidolon/models/cosyvoice2"
-    assert len(_artifact()["files"]) == 26 - len(_UNPINNED)
+    assert len(_artifact()["files"]) == 24
 
 
 def test_the_launcher_points_at_the_committed_package() -> None:
