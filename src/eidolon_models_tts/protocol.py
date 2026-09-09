@@ -49,6 +49,22 @@ ERROR = "error"
 PROTOCOL_VERSION_FIELD = "protocol_version"
 REQUEST_ID_FIELD = "request_id"
 
+# -- what `synthesis_finished` reports --------------------------------------
+#
+# `MINIMUM_BUFFER_MS` is the field that says whether anything was audible;
+# `LATE_CHUNKS` counts chunks that missed their own deadline and tracks the
+# audio's length rather than the listener's experience. The contract's module
+# note spells out why the difference matters — it was named `underruns` once,
+# and that name had readers reporting dropouts that never happened.
+
+PCM_BYTES_FIELD = "pcm_bytes"
+AUDIO_SECONDS_FIELD = "audio_seconds"
+MINIMUM_BUFFER_MS_FIELD = "minimum_buffer_ms"
+LATE_CHUNKS_FIELD = "late_chunks"
+TTFT_MS_FIELD = "ttft_ms"
+STEADY_RTF_FIELD = "steady_rtf"
+PROFILE_MS_FIELD = "profile_ms"
+
 # -- the audio this service sends -------------------------------------------
 
 AUDIO_SAMPLE_RATE = 24000

@@ -153,7 +153,7 @@ async def stream(request: web.Request) -> web.StreamResponse:
         finished: dict[str, object] = {
             "type": protocol.SYNTHESIS_FINISHED,
             protocol.REQUEST_ID_FIELD: request_id,
-            "pcm_bytes": report.pcm_bytes if report else 0,
+            protocol.PCM_BYTES_FIELD: report.pcm_bytes if report else 0,
         }
         if report is not None:
             # The engine's own measurements, passed through rather than
@@ -161,13 +161,13 @@ async def stream(request: web.Request) -> web.StreamResponse:
             # Host could not keep ahead of playback, which is the one quality
             # fact it cannot observe for itself.
             for wire, key in (
-                ("audio_seconds", "audio_seconds"),
-                ("ttft_ms", "ttft_first_pcm_ms"),
-                ("steady_rtf", "steady_pcm_rtf"),
+                (protocol.AUDIO_SECONDS_FIELD, "audio_seconds"),
+                (protocol.TTFT_MS_FIELD, "ttft_first_pcm_ms"),
+                (protocol.STEADY_RTF_FIELD, "steady_pcm_rtf"),
                 # The one that says whether anything was audible. A chunk is a
                 # second of audio, so a chunk 600 ms late still leaves +400 ms
                 # of buffer and nothing is heard; a gap needs this below zero.
-                ("minimum_buffer_ms", "minimum_buffer_after_ms"),
+                (protocol.MINIMUM_BUFFER_MS_FIELD, "minimum_buffer_after_ms"),
                 # Kept, but named for what it counts. It is "how many chunks
                 # arrived after their own deadline", which for a producer near
                 # rtf 1 is almost every chunk by construction — it tracks the
@@ -175,8 +175,8 @@ async def stream(request: web.Request) -> web.StreamResponse:
                 # as `underruns` had this session reporting "1-3 dropouts per
                 # utterance" for months of numbers where the real count was 0;
                 # HOST-RK3588.md 2.20 [B] had already called that a misreading.
-                ("late_chunks", "underrun_count"),
-                ("profile_ms", "profile_precompute_ms"),
+                (protocol.LATE_CHUNKS_FIELD, "underrun_count"),
+                (protocol.PROFILE_MS_FIELD, "profile_precompute_ms"),
             ):
                 value = report.number(key)
                 if value is not None:

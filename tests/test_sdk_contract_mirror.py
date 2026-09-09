@@ -149,6 +149,16 @@ _TTS_MIRRORED = {
     "ERROR": "ERROR",
     "PROTOCOL_VERSION_FIELD": "PROTOCOL_VERSION_FIELD",
     "REQUEST_ID_FIELD": "REQUEST_ID_FIELD",
+    # The finish report. Mirrored rather than excused as a client-only
+    # concern: this service is the end that *writes* these names, and a
+    # rename here going unnoticed on the reading end is what happened once.
+    "PCM_BYTES_FIELD": "PCM_BYTES_FIELD",
+    "AUDIO_SECONDS_FIELD": "AUDIO_SECONDS_FIELD",
+    "MINIMUM_BUFFER_MS_FIELD": "MINIMUM_BUFFER_MS_FIELD",
+    "LATE_CHUNKS_FIELD": "LATE_CHUNKS_FIELD",
+    "TTFT_MS_FIELD": "TTFT_MS_FIELD",
+    "STEADY_RTF_FIELD": "STEADY_RTF_FIELD",
+    "PROFILE_MS_FIELD": "PROFILE_MS_FIELD",
     "AUDIO_SAMPLE_RATE": "AUDIO_SAMPLE_RATE",
     "AUDIO_CHANNELS": "AUDIO_CHANNELS",
     "AUDIO_FORMAT": "AUDIO_FORMAT",
