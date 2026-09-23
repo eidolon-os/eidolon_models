@@ -63,6 +63,9 @@ curl -s localhost:8771/v1/systemone -H 'content-type: application/json' \
 
 Python（`examples/`，只用标准库，`LAYA_URL` 指定服务地址，默认 ECS）：
 
+- `demo.py`：**单文件**，客户端 + 客服路由合在一起，拷到任何 Python 3.8+ 上直接跑：
+  `python3 demo.py`、`python3 demo.py "我的账号被锁了"`、`--raw` 打印原始回答、`--url` 换服务
+
 - `laya_client.py`：可直接拷走的 `LayaClient`（503 自动按 `Retry-After` 重试、`LayaError`、
   可选 key、默认绕过本机代理）
 - `python_client.py`：六种请求形状（听话人、多人点名、下一步、打分、打断意图、长历史截断）
