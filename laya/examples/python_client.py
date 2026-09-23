@@ -1,51 +1,18 @@
-"""Calling the laya decision API from Python — standard library only.
+"""Calling the laya decision API from Python: six request shapes, via ``laya_client``.
 
     python examples/python_client.py                       # the ECS demo
     LAYA_URL=http://127.0.0.1:8771 python examples/python_client.py   # a local `serve`
 
 The checkpoint is zero-shot: these show the request shapes, not tuned accuracy.
+See customer_service_router.py for answers turned into a routing decision.
 """
 
 from __future__ import annotations
 
-import json
-import os
-import time
-import urllib.error
-import urllib.request
+from laya_client import LayaClient
 
-BASE = os.environ.get("LAYA_URL", "http://8.141.101.214:8771").rstrip("/")
-API_KEY = os.environ.get("LAYA_API_KEY")  # only if the server has a key configured
-
-# Talk to the server directly: a desktop HTTP proxy (e.g. Clash on 7890) only adds a hop.
-_opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
-
-
-def decide(state, questions: dict, *, truncate_left: bool = False, retries: int = 3) -> dict:
-    """POST /v1/systemone. Retries 503 (queue full) with the server's Retry-After."""
-    body = {"state": state, "questions": questions, "options": {"truncate_left": truncate_left}}
-    headers = {"Content-Type": "application/json"}
-    if API_KEY:
-        headers["Authorization"] = f"Bearer {API_KEY}"
-    request = urllib.request.Request(
-        f"{BASE}/v1/systemone",
-        data=json.dumps(body, ensure_ascii=False).encode(),
-        headers=headers,
-        method="POST",
-    )
-    for attempt in range(retries):
-        try:
-            with _opener.open(request, timeout=60) as resp:
-                return json.load(resp)
-        except urllib.error.HTTPError as err:
-            if err.code == 503 and attempt + 1 < retries:
-                time.sleep(float(err.headers.get("Retry-After", "1")))
-                continue
-            detail = json.loads(err.read() or b"{}").get("error", {})
-            message = f"HTTP {err.code} {detail.get('code')}: {detail.get('message')}"
-            raise RuntimeError(message) from None
-    raise AssertionError("unreachable")
-
+client = LayaClient()
+decide = client.decide
 
 TEAM = {
     "唐僧": "师父，也叫御弟哥哥、玄奘、唐三藏",

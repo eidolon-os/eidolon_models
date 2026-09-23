@@ -61,6 +61,14 @@ curl -s localhost:8771/v1/systemone -H 'content-type: application/json' \
 
 对外监听时带上 key：`-H "Authorization: Bearer $EIDOLON_LAYA_API_KEY"`。
 
+Python（`examples/`，只用标准库，`LAYA_URL` 指定服务地址，默认 ECS）：
+
+- `laya_client.py`：可直接拷走的 `LayaClient`（503 自动按 `Retry-After` 重试、`LayaError`、
+  可选 key、默认绕过本机代理）
+- `python_client.py`：六种请求形状（听话人、多人点名、下一步、打分、打断意图、长历史截断）
+- `customer_service_router.py`：智能客服工单路由——一次问部门/紧急度/退款/流失/人工 5 个问题，
+  再由阈值规则决定队列、优先级、自动派单还是转人工分诊
+
 | 路径 | 鉴权 | 说明 |
 |---|---|---|
 | `GET /healthz` | 否 | 存活 |
