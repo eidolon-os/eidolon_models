@@ -1,0 +1,28 @@
+{
+  "state": {
+    "utterance": "八戒，你刚才说的那户人家在哪儿？",
+    "speaker": "主人",
+    "history": [
+      {"speaker": "猪八戒", "text": "我刚才去化斋，村东头有户人家愿意留我们住一晚。"},
+      {"speaker": "孙悟空", "text": "师父，前面那座山有妖气，今晚最好别上山。"}
+    ]
+  },
+  "questions": {
+    "addressee": {
+      "type": "choice",
+      "instructions": "`utterance` 这句话是说给谁听的？",
+      "criteria": {
+        "唐僧": "师父，也叫御弟哥哥、玄奘、唐三藏",
+        "孙悟空": "大师兄，也叫悟空、猴哥、齐天大圣、弼马温",
+        "猪八戒": "二师兄，也叫八戒、悟能、呆子、天蓬元帅",
+        "沙僧": "三师弟，也叫沙师弟、悟净、卷帘大将",
+        "所有人": "对在场的所有人说，或者没有指定具体的人"
+      }
+    },
+    "needs_reply": {
+      "type": "noul",
+      "instructions": "`utterance` 是否需要被叫到的人回应？"
+    }
+  },
+  "options": {"truncate_left": false}
+}

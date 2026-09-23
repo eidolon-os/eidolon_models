@@ -1,0 +1,5 @@
+# Weights are fetched (torch/) or generated (onnx/), never committed; manifest.json is.
+models/*/*/torch/
+models/*/*/onnx/
+.venv/
+.env

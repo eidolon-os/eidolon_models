@@ -1,0 +1,49 @@
+#!/bin/sh
+# Launcher for the laya decision service, the same on a laptop and on a server.
+#
+#   scripts/eidolon-laya doctor | fetch | export-onnx | serve | predict ...
+#   scripts/eidolon-laya test [pytest args]
+#
+# Reads laya/.env when present (gitignored; see .env.example). Variables already
+# in the environment win, so systemd's EnvironmentFile= and one-off
+# `EIDOLON_LAYA_BACKEND=onnx scripts/eidolon-laya serve` both work.
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+LAYA_HOME=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
+EIDOLON_LAYA_HOME=${EIDOLON_LAYA_HOME:-$LAYA_HOME}
+export EIDOLON_LAYA_HOME
+
+if [ -f "$LAYA_HOME/.env" ]; then
+  # Only set what the caller has not: export each KEY=VALUE line if KEY is unset.
+  while IFS= read -r line || [ -n "$line" ]; do
+    case "$line" in ''|'#'*|*=) continue ;; esac  # KEY= (empty) means "not set"
+    key=${line%%=*}
+    eval "is_set=\${$key+x}"
+    if [ -z "$is_set" ]; then
+      export "$line"
+    fi
+  done < "$LAYA_HOME/.env"
+fi
+
+# Offline at runtime: weights come from models/, never from the network.
+HF_HUB_OFFLINE=${HF_HUB_OFFLINE:-1}
+TRANSFORMERS_OFFLINE=${TRANSFORMERS_OFFLINE:-1}
+case "${1:-}" in fetch) HF_HUB_OFFLINE=0; TRANSFORMERS_OFFLINE=0 ;; esac
+export HF_HUB_OFFLINE TRANSFORMERS_OFFLINE
+
+VENV_BIN=${EIDOLON_LAYA_VENV_BIN:-$LAYA_HOME/.venv/bin}
+UV_BIN=${EIDOLON_LAYA_UV_BIN:-uv}
+
+if [ "${1:-}" = "test" ]; then
+  shift
+  if [ -x "$VENV_BIN/pytest" ]; then
+    exec "$VENV_BIN/pytest" --rootdir "$LAYA_HOME" "$LAYA_HOME/tests" "$@"
+  fi
+  exec "$UV_BIN" run --project "$LAYA_HOME" --all-extras --group dev pytest "$LAYA_HOME/tests" "$@"
+fi
+
+if [ -x "$VENV_BIN/eidolon-laya" ]; then
+  exec "$VENV_BIN/eidolon-laya" "$@"
+fi
+exec "$UV_BIN" run --project "$LAYA_HOME" --all-extras eidolon-laya "$@"

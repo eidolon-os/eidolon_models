@@ -12,6 +12,7 @@ arm64、树莓派 5 arm64 和未来 RK3588 共用的 `eidolon-asr` 2-pass 推理
 asr/    语音识别模型
 llm/    大语言模型
 tts/    语音合成模型
+laya/   laya 决策模型服务（独立 uv 项目：PyTorch / ONNX 两个后端，HTTP API，见 laya/README.md）
 ```
 
 建议每个模型使用以下目录结构：

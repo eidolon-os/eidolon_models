@@ -1,0 +1,129 @@
+# laya 决策模型服务
+
+[laya](https://github.com/NandhaKishorM/laya)（开源的 Jev 仿品，encoder 型、非自回归）的
+`laya-multilingual` checkpoint，包成一个 HTTP 服务，可在 Mac 本地或云服务器上启动。
+
+- **两个后端，配置切换**：`torch`（PyTorch 权重，Mac 上可用 MPS）/ `onnx`（ONNX Runtime，
+  不需要 torch）。两者共用同一份前后处理（`sequence.py`），所以切换后端不改变语义：
+  torch 后端与上游 laya 0.3.7 逐字节一致，onnx 与 torch 的 logit 差 ~2e-5（测试守护）。
+- **接口兼容 Jev / laya**：`POST /v1/systemone`，请求体 `{state, questions}` 不变，
+  回复在原有 `answers`/`usage` 之外多带 `truncated`、`backend`、`timing_ms`。
+- **注意：这是 zero-shot 底座**，中文对话路由必须微调后才可用；这里先把服务跑起来，不耽误联调。
+
+## 目录
+
+```text
+laya/
+├── pyproject.toml / uv.lock      独立 uv 项目；extras: torch / onnx / export
+├── .env.example                  所有配置项（复制成 .env 本地用）
+├── scripts/eidolon-laya          启动器：本地、服务器同一个
+├── src/eidolon_models_laya/
+│   ├── config.py                 EIDOLON_LAYA_* 环境变量 → Settings
+│   ├── artifacts.py              manifest、按 revision 拉取、sha256 校验
+│   ├── sequence.py               不依赖 torch 的拼序列/解码（移植自 laya 0.3.7）
+│   ├── backends.py               TorchBackend / OnnxBackend：只做前向
+│   ├── engine.py                 校验 → 拼序列 → 前向 → 解码
+│   ├── export.py                 PyTorch → ONNX，并与 PyTorch 对数后写 export.json
+│   ├── service.py                aiohttp HTTP API
+│   └── cli.py                    fetch | export-onnx | doctor | serve | predict
+├── models/laya-multilingual/1c5edc17/
+│   ├── manifest.json             提交：来源、revision、每个文件的 sha256
+│   ├── torch/                    fetch 得到（gitignore）
+│   └── onnx/                     export-onnx 生成（gitignore）：model.onnx + model.onnx.data + export.json
+├── examples/xiyouji-addressee.json
+├── deploy/                       systemd unit + 部署到 ECS 的脚本
+└── tests/                        单测（无模型）+ 与上游对拍（需模型）
+```
+
+## 本地（Mac）
+
+```bash
+cd laya
+uv sync --all-extras                 # torch + onnx + 导出工具
+scripts/eidolon-laya fetch           # 644 MB，按 manifest 的 revision，校验 sha256
+scripts/eidolon-laya export-onnx     # 可选：生成 ONNX（约 20 s，自动与 PyTorch 对数）
+scripts/eidolon-laya doctor
+scripts/eidolon-laya serve           # 默认 127.0.0.1:8771，torch 后端，本机无需 key
+```
+
+换后端：`EIDOLON_LAYA_BACKEND=onnx scripts/eidolon-laya serve`，或写进 `laya/.env`
+（见 `.env.example`）。不起服务只跑一次：`scripts/eidolon-laya predict --file examples/xiyouji-addressee.json`。
+
+国内网络拉权重：`scripts/eidolon-laya fetch --endpoint https://hf-mirror.com`
+（走镜像时自动关闭 Xet，否则 Xet 会直连官方 CAS 返回 401）。
+
+## 调用
+
+```bash
+curl -s localhost:8771/v1/systemone -H 'content-type: application/json' \
+  -d @examples/xiyouji-addressee.json
+```
+
+对外监听时带上 key：`-H "Authorization: Bearer $EIDOLON_LAYA_API_KEY"`。
+
+| 路径 | 鉴权 | 说明 |
+|---|---|---|
+| `GET /healthz` | 否 | 存活 |
+| `GET /readyz` | 否 | 模型已加载 |
+| `GET /v1/info` | 是 | 模型、revision、后端、线程、限额 |
+| `POST /v1/systemone` | 是 | `{"state": 任意 JSON, "questions": {...}, "options": {"truncate_left": false}}` |
+
+错误统一为 `{"error": {"code", "message"}}`：400 问题定义/请求体不合法，401 key 不对，
+413 请求体超限，503 `busy`（排队已满，带 `Retry-After`；不会无限排队）。
+
+问题类型：`choice`（单选，`criteria` 为 `{标签: 描述}` 或标签列表）、`score`（有序等级列表）、
+`noul`（是/否概率）。每个问题都会把 `state` 完整编码一次，问题越多越慢。
+
+**截断**：每个问题的 token 预算默认是 checkpoint 训练长度 1024（`EIDOLON_LAYA_MAX_LEN` 可调，
+最高 8192，但 CPU 上成本随长度平方增长）。超长的 `state` 默认**丢掉末尾**——把当前这句话放在
+`state` 最前面，或传 `"options": {"truncate_left": true}` 保留末尾；被截断的问题会列在回复的
+`truncated` 里。
+
+## 服务器（ECS）
+
+```bash
+deploy/ecs/deploy.sh root@eidolon          # 同步代码、装依赖、拉权重、导出 ONNX、装 systemd 并启动
+```
+
+脚本幂等，可重复执行（首次约 3 分钟，之后主要是同步代码）。服务器上：
+
+- 代码 `/opt/eidolon-laya`，Python 装在 `/opt/eidolon-laya/.python`（服务用户读得到）
+- 配置 `/etc/eidolon-laya/eidolon-laya.env`（首次部署生成 API key，600；之后不覆盖）
+- 服务 `systemctl status eidolon-laya`，日志 `journalctl -u eidolon-laya -f`，以
+  `eidolon-laya` 系统用户运行，`MemoryMax=4G`
+- 取 key：`ssh root@eidolon "grep API_KEY /etc/eidolon-laya/eidolon-laya.env"`
+- 切后端：改 env 里的 `EIDOLON_LAYA_BACKEND` 后 `systemctl restart eidolon-laya`
+
+**对外访问**：`http://8.141.101.214:8771`，服务监听 `0.0.0.0:8771`，需在阿里云安全组放行入方向
+TCP 8771（服务器本机没有防火墙）。注意这是明文 HTTP，bearer key 在网络上可见；只给自己用时
+安全组源地址建议填自己的出口 IP。放行前可用隧道：`ssh -N -L 18771:127.0.0.1:8771 root@eidolon`。
+
+可选：走宿主机 nginx 的 443（HTTPS，复用 `*.yangtzeailab.com` 通配证书，需要该子域名的 DNS
+A 记录）——`EIDOLON_LAYA_NGINX_SERVER_NAME=eidolon-laya.yangtzeailab.com deploy/ecs/deploy.sh`。
+脚本装 `conf.d/<name>.conf`（模板 `deploy/nginx/eidolon-laya.conf`），先 `nginx -t`，失败自动回滚。
+本机配了 HTTP 代理时，用 `curl --resolve` 验证要加 `--noproxy '*'`。
+
+依赖默认从阿里云 PyPI 镜像装（仍按 `uv.lock` 的版本和哈希；镜像缺的版本回退 pypi.org），
+`EIDOLON_LAYA_PYPI_MIRROR=` 置空则用 `uv sync` 直连。
+
+ECS（1 物理核 / 7.5 GB，与其它服务共用）实测，示例请求（2 个问题，337 token）：
+
+| 后端 | 单次延迟 | 常驻内存 |
+|---|---|---|
+| torch，1 线程（默认） | 1.15–1.35 s | 1.96 GB |
+| onnx，1 线程 | 1.45–1.64 s | 0.93 GB |
+| 对照：Mac M3 Pro，torch MPS | 38 ms | — |
+
+**别在这台服务器上跑 `scripts/eidolon-laya test` 的模型对拍**：服务已占 2 GB，对拍再加载两份模型
+会触发 OOM。在服务器上用 `scripts/eidolon-laya test -m "not model"`，对拍在本机跑。
+
+## 测试
+
+```bash
+scripts/eidolon-laya test            # 单测 + 对拍；没有权重/ONNX 时对拍测试自动跳过
+```
+
+## 许可
+
+checkpoint：Apache-2.0（convaiinnovations/laya）；基座编码器 mmBERT-base：MIT；
+`sequence.py` 移植自 laya 0.3.7 源码（Apache-2.0，文件头注明改动）。本目录其余代码随仓库许可。
