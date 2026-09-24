@@ -1,0 +1,24 @@
+{
+  "name": "apartment",
+  "description": "两室一厅：客厅、主卧、厨房、卫生间、阳台、玄关。同类设备分布在多个房间（灯、空调），用来测房间消歧。",
+  "devices": [
+    {"name": "客厅主灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "主卧灯", "room": "主卧", "category": "照明", "type": "吸顶灯"},
+    {"name": "床头灯", "room": "主卧", "category": "照明", "type": "台灯"},
+    {"name": "客厅空调", "room": "客厅", "category": "空调温控", "type": "空调"},
+    {"name": "主卧空调", "room": "主卧", "category": "空调温控", "type": "空调"},
+    {"name": "客厅窗帘", "room": "客厅", "category": "窗帘遮阳", "type": "电动窗帘"},
+    {"name": "空气净化器", "room": "客厅", "category": "空气环境", "type": "空气净化器"},
+    {"name": "加湿器", "room": "主卧", "category": "空气环境", "type": "加湿器"},
+    {"name": "电视", "room": "客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "智能音箱", "room": "客厅", "category": "影音娱乐", "type": "音箱"},
+    {"name": "扫地机器人", "room": "全屋", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "洗衣机", "room": "阳台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "电动晾衣架", "room": "阳台", "category": "窗帘遮阳", "type": "晾衣架"},
+    {"name": "电饭煲", "room": "厨房", "category": "厨房电器", "type": "电饭煲"},
+    {"name": "热水器", "room": "卫生间", "category": "热水卫浴", "type": "燃气热水器"},
+    {"name": "智能门锁", "room": "玄关", "category": "安防门禁", "type": "门锁"},
+    {"name": "摄像头", "room": "玄关", "category": "安防门禁", "type": "摄像头"},
+    {"name": "温湿度计", "room": "客厅", "category": "传感器", "type": "温湿度传感器"}
+  ]
+}

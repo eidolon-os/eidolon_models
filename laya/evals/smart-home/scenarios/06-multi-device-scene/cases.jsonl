@@ -1,0 +1,14 @@
+{"id": "06-01", "home": "apartment", "text": "把家里的灯全部关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "06-02", "home": "apartment", "text": "我要睡觉了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "06-03", "home": "apartment", "text": "我出门了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "06-04", "home": "apartment", "text": "我回来了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "06-05", "home": "apartment", "text": "打开客厅的灯和电视", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "06-06", "home": "apartment", "text": "所有的空调都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "06-07", "home": "apartment", "text": "开启观影模式", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "06-08", "home": "apartment", "text": "起床了，把窗帘拉开，灯也打开", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "06-09", "home": "house", "text": "把厨房的电器都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "06-10", "home": "house", "text": "开启离家模式", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "06-11", "home": "house", "text": "把餐厅吊灯和书房灯都打开", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "06-12", "home": "house", "text": "全屋断电，冰箱除外", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "06-13", "home": "house", "text": "晚安模式", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "06-14", "home": "house", "text": "把车库门关上，再把安防打开", "gold": {"intent": "控制", "device": "多个设备或整屋"}}

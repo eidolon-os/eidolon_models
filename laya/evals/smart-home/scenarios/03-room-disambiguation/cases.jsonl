@@ -1,0 +1,16 @@
+{"id": "03-01", "home": "apartment", "text": "关掉卧室的灯", "gold": {"intent": "控制", "device": "主卧灯", "action": "关闭或停止"}}
+{"id": "03-02", "home": "apartment", "text": "打开卧室空调", "gold": {"intent": "控制", "device": "主卧空调", "action": "打开或启动"}}
+{"id": "03-03", "home": "apartment", "text": "客厅空调关了", "gold": {"intent": "控制", "device": "客厅空调", "action": "关闭或停止"}}
+{"id": "03-04", "home": "apartment", "text": "床头那盏灯开一下", "gold": {"intent": "控制", "device": "床头灯", "action": "打开或启动"}}
+{"id": "03-05", "home": "apartment", "text": "把客厅的大灯打开", "gold": {"intent": "控制", "device": "客厅主灯", "action": "打开或启动"}}
+{"id": "03-06", "home": "apartment", "text": "主卧的空调调成睡眠模式", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}}
+{"id": "03-07", "home": "apartment", "text": "客厅温度调低一点", "gold": {"intent": "控制", "device": "客厅空调", "action": "调低或减小"}}
+{"id": "03-08", "home": "apartment", "text": "卧室温度调到24度", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}}
+{"id": "03-09", "home": "apartment", "text": "我在卧室，帮我把灯关了", "gold": {"intent": "控制", "device": "主卧灯", "action": "关闭或停止"}}
+{"id": "03-10", "home": "apartment", "text": "我在客厅看电视，把空调打开", "gold": {"intent": "控制", "device": "客厅空调", "action": "打开或启动"}}
+{"id": "03-11", "home": "apartment", "text": "把睡觉那屋的空调关掉", "gold": {"intent": "控制", "device": "主卧空调", "action": "关闭或停止"}}
+{"id": "03-12", "home": "apartment", "text": "客厅那台空调温度高一点", "gold": {"intent": "控制", "device": "客厅空调", "action": "调高或增大"}}
+{"id": "03-13", "home": "apartment", "text": "卧室的台灯调到最暗", "gold": {"intent": "控制", "device": "床头灯", "action": ["调低或减小", "设为指定的数值或模式"]}}
+{"id": "03-14", "home": "apartment", "text": "客厅的灯别动，只把床头灯关了", "gold": {"intent": "控制", "device": "床头灯", "action": "关闭或停止"}}
+{"id": "03-15", "home": "apartment", "text": "不是客厅的，是卧室的空调，打开", "gold": {"intent": "控制", "device": "主卧空调", "action": "打开或启动"}}
+{"id": "03-16", "home": "apartment", "text": "卧室大灯关了，床头灯留着", "gold": {"intent": "控制", "device": "主卧灯", "action": "关闭或停止"}}

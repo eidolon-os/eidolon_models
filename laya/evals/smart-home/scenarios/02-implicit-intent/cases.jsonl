@@ -1,0 +1,20 @@
+{"id": "02-01", "home": "apartment", "text": "好热啊", "gold": {"intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "02-02", "home": "apartment", "text": "客厅有点太暗了", "gold": {"intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-03", "home": "apartment", "text": "屋里空气好闷，还有股味道", "gold": {"intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-04", "home": "apartment", "text": "卧室太干了，嗓子难受", "gold": {"intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-05", "home": "apartment", "text": "地上好多头发，好脏", "gold": {"intent": "控制", "device": "扫地机器人", "action": "打开或启动"}}
+{"id": "02-06", "home": "apartment", "text": "电视声音太吵了", "gold": {"intent": "控制", "device": "电视", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "02-07", "home": "apartment", "text": "我要洗澡了，水不够热", "gold": {"intent": "控制", "device": "热水器", "action": ["调高或增大", "打开或启动", "设为指定的数值或模式"]}}
+{"id": "02-08", "home": "apartment", "text": "阳光太刺眼了", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}}
+{"id": "02-09", "home": "apartment", "text": "衣服洗好了，要晾一下", "gold": {"intent": "控制", "device": "电动晾衣架", "action": "调低或减小"}}
+{"id": "02-10", "home": "apartment", "text": "主卧好冷", "gold": {"intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "02-11", "home": "house", "text": "书房看书有点暗", "gold": {"intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-12", "home": "house", "text": "脚底下好冰", "gold": {"intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-13", "home": "house", "text": "书房好热，想吹吹风", "gold": {"intent": "控制", "device": "落地扇", "action": "打开或启动"}}
+{"id": "02-14", "home": "house", "text": "厨房油烟好大", "gold": {"intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-15", "home": "house", "text": "猫饿了一直在叫", "gold": {"intent": "控制", "device": "宠物喂食器", "action": "打开或启动"}}
+{"id": "02-16", "home": "house", "text": "花园的花好久没浇水了", "gold": {"intent": "控制", "device": "花园浇水阀", "action": "打开或启动"}}
+{"id": "02-17", "home": "house", "text": "车快没电了", "gold": {"intent": "控制", "device": "充电桩", "action": "打开或启动"}}
+{"id": "02-18", "home": "house", "text": "洗完澡好冷", "gold": {"intent": "控制", "device": "浴霸", "action": "打开或启动"}}
+{"id": "02-19", "home": "house", "text": "屋里闷得慌，二氧化碳有点高", "gold": {"intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "02-20", "home": "house", "text": "我们要出门度假一周，家里得看好", "gold": {"intent": "控制", "device": ["安防警报", "多个设备或整屋"], "action": "打开或启动"}}

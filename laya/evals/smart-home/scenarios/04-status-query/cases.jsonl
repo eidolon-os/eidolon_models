@@ -1,0 +1,20 @@
+{"id": "04-01", "home": "apartment", "text": "门锁锁好了吗", "gold": {"intent": "查询", "device": "智能门锁"}}
+{"id": "04-02", "home": "apartment", "text": "客厅现在多少度", "gold": {"intent": "查询", "device": ["温湿度计", "客厅空调"]}}
+{"id": "04-03", "home": "apartment", "text": "洗衣机还要洗多久", "gold": {"intent": "查询", "device": "洗衣机"}}
+{"id": "04-04", "home": "apartment", "text": "扫地机器人扫完了没有", "gold": {"intent": "查询", "device": "扫地机器人"}}
+{"id": "04-05", "home": "apartment", "text": "空调现在开的是多少度", "gold": {"intent": "查询", "device": ["客厅空调", "主卧空调"]}}
+{"id": "04-06", "home": "apartment", "text": "热水器的水烧热了吗", "gold": {"intent": "查询", "device": "热水器"}}
+{"id": "04-07", "home": "apartment", "text": "家里湿度现在多少", "gold": {"intent": "查询", "device": ["温湿度计", "加湿器"]}}
+{"id": "04-08", "home": "apartment", "text": "电饭煲的饭好了吗", "gold": {"intent": "查询", "device": "电饭煲"}}
+{"id": "04-09", "home": "apartment", "text": "摄像头有没有拍到有人来过", "gold": {"intent": "查询", "device": "摄像头"}}
+{"id": "04-10", "home": "apartment", "text": "空气净化器的滤芯还能用多久", "gold": {"intent": "查询", "device": "空气净化器"}}
+{"id": "04-11", "home": "apartment", "text": "客厅窗帘现在是开着还是关着", "gold": {"intent": "查询", "device": "客厅窗帘"}}
+{"id": "04-12", "home": "house", "text": "车充满电了吗", "gold": {"intent": "查询", "device": "充电桩"}}
+{"id": "04-13", "home": "house", "text": "车库门关了没", "gold": {"intent": "查询", "device": "车库门"}}
+{"id": "04-14", "home": "house", "text": "冰箱冷藏室现在几度", "gold": {"intent": "查询", "device": "冰箱"}}
+{"id": "04-15", "home": "house", "text": "洗碗机洗完了吗", "gold": {"intent": "查询", "device": "洗碗机"}}
+{"id": "04-16", "home": "house", "text": "刚才是谁按的门铃", "gold": {"intent": "查询", "device": "门铃"}}
+{"id": "04-17", "home": "house", "text": "安防系统现在是布防状态吗", "gold": {"intent": "查询", "device": "安防警报"}}
+{"id": "04-18", "home": "house", "text": "喂食器里还剩多少猫粮", "gold": {"intent": "查询", "device": "宠物喂食器"}}
+{"id": "04-19", "home": "house", "text": "烤箱预热好了没有", "gold": {"intent": "查询", "device": "烤箱"}}
+{"id": "04-20", "home": "house", "text": "花园的水阀是不是还开着", "gold": {"intent": "查询", "device": "花园浇水阀"}}

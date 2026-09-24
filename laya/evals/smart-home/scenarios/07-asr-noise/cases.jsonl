@@ -1,0 +1,20 @@
+{"id": "07-01", "home": "apartment", "text": "把可厅的等打开", "gold": {"intent": "控制", "device": "客厅主灯", "action": "打开或启动"}, "note": "客厅的灯"}
+{"id": "07-02", "home": "apartment", "text": "嗯那个主卧空条关一下", "gold": {"intent": "控制", "device": "主卧空调", "action": "关闭或停止"}, "note": "空调"}
+{"id": "07-03", "home": "apartment", "text": "空调调到二十六读", "gold": {"intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "设为指定的数值或模式"}, "note": "二十六度"}
+{"id": "07-04", "home": "apartment", "text": "帮我把窗连拉上", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}, "note": "窗帘"}
+{"id": "07-05", "home": "apartment", "text": "扫地机气人开始打扫", "gold": {"intent": "控制", "device": "扫地机器人", "action": "打开或启动"}, "note": "机器人"}
+{"id": "07-06", "home": "apartment", "text": "电视声音小一点点呃", "gold": {"intent": "控制", "device": "电视", "action": "调低或减小"}}
+{"id": "07-07", "home": "apartment", "text": "把门所上", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}, "note": "锁上"}
+{"id": "07-08", "home": "apartment", "text": "热水器温度调高一点那个", "gold": {"intent": "控制", "device": "热水器", "action": "调高或增大"}}
+{"id": "07-09", "home": "apartment", "text": "床头等关掉", "gold": {"intent": "控制", "device": "床头灯", "action": "关闭或停止"}, "note": "床头灯"}
+{"id": "07-10", "home": "apartment", "text": "加湿气打开", "gold": {"intent": "控制", "device": "加湿器", "action": "打开或启动"}, "note": "加湿器"}
+{"id": "07-11", "home": "apartment", "text": "洗衣几开始吧", "gold": {"intent": "控制", "device": "洗衣机", "action": "打开或启动"}, "note": "洗衣机"}
+{"id": "07-12", "home": "apartment", "text": "晾衣价降下来", "gold": {"intent": "控制", "device": "电动晾衣架", "action": "调低或减小"}, "note": "晾衣架"}
+{"id": "07-13", "home": "house", "text": "书房的登开一下", "gold": {"intent": "控制", "device": "书房灯", "action": "打开或启动"}, "note": "灯"}
+{"id": "07-14", "home": "house", "text": "地暖温度调高两杜", "gold": {"intent": "控制", "device": "地暖", "action": "调高或增大"}, "note": "两度"}
+{"id": "07-15", "home": "house", "text": "油烟基开大一点", "gold": {"intent": "控制", "device": "油烟机", "action": ["调高或增大", "设为指定的数值或模式"]}, "note": "油烟机"}
+{"id": "07-16", "home": "house", "text": "车库门打开吧就是那个", "gold": {"intent": "控制", "device": "车库门", "action": "打开或启动"}}
+{"id": "07-17", "home": "house", "text": "给猫为食", "gold": {"intent": "控制", "device": "宠物喂食器", "action": "打开或启动"}, "note": "喂食"}
+{"id": "07-18", "home": "house", "text": "浴巴打开", "gold": {"intent": "控制", "device": "浴霸", "action": "打开或启动"}, "note": "浴霸"}
+{"id": "07-19", "home": "house", "text": "新风机开一下嗯", "gold": {"intent": "控制", "device": "新风机", "action": "打开或启动"}}
+{"id": "07-20", "home": "house", "text": "冲电桩开始充电", "gold": {"intent": "控制", "device": "充电桩", "action": "打开或启动"}, "note": "充电桩"}

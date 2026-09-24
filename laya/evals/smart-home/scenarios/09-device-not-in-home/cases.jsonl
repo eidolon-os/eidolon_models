@@ -1,0 +1,10 @@
+{"id": "09-01", "home": "apartment", "text": "启动洗碗机", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-02", "home": "apartment", "text": "把地暖打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-03", "home": "apartment", "text": "烤箱预热到180度", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-04", "home": "apartment", "text": "打开风扇", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-05", "home": "apartment", "text": "车库门关上", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-06", "home": "house", "text": "空调调到25度", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-07", "home": "house", "text": "打开电视", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-08", "home": "house", "text": "让扫地机器人打扫一下", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-09", "home": "house", "text": "把门锁上", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "09-10", "home": "house", "text": "洗衣机开始洗吧", "gold": {"intent": "控制", "device": "没有对应的设备"}}

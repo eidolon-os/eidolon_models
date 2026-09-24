@@ -1,0 +1,40 @@
+{"id": "01-01", "home": "apartment", "text": "把客厅的灯打开", "gold": {"intent": "控制", "device": "客厅主灯", "action": "打开或启动"}}
+{"id": "01-02", "home": "apartment", "text": "关一下主卧的灯", "gold": {"intent": "控制", "device": "主卧灯", "action": "关闭或停止"}}
+{"id": "01-03", "home": "apartment", "text": "床头灯调暗一点", "gold": {"intent": "控制", "device": "床头灯", "action": "调低或减小"}}
+{"id": "01-04", "home": "apartment", "text": "客厅空调调到26度", "gold": {"intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式"}}
+{"id": "01-05", "home": "apartment", "text": "打开主卧空调，用制冷模式", "gold": {"intent": "控制", "device": "主卧空调", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "01-06", "home": "apartment", "text": "把客厅窗帘拉上", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}}
+{"id": "01-07", "home": "apartment", "text": "窗帘打开一半", "gold": {"intent": "控制", "device": "客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "01-08", "home": "apartment", "text": "空气净化器开到最大档", "gold": {"intent": "控制", "device": "空气净化器", "action": ["设为指定的数值或模式", "调高或增大"]}}
+{"id": "01-09", "home": "apartment", "text": "加湿器关掉", "gold": {"intent": "控制", "device": "加湿器", "action": "关闭或停止"}}
+{"id": "01-10", "home": "apartment", "text": "电视音量调小一点", "gold": {"intent": "控制", "device": "电视", "action": "调低或减小"}}
+{"id": "01-11", "home": "apartment", "text": "打开电视", "gold": {"intent": "控制", "device": "电视", "action": "打开或启动"}}
+{"id": "01-12", "home": "apartment", "text": "音箱暂停播放", "gold": {"intent": "控制", "device": "智能音箱", "action": "暂停"}}
+{"id": "01-13", "home": "apartment", "text": "让扫地机器人开始打扫", "gold": {"intent": "控制", "device": "扫地机器人", "action": "打开或启动"}}
+{"id": "01-14", "home": "apartment", "text": "扫地机器人回去充电吧", "gold": {"intent": "控制", "device": "扫地机器人", "action": "关闭或停止"}}
+{"id": "01-15", "home": "apartment", "text": "洗衣机开始洗衣服", "gold": {"intent": "控制", "device": "洗衣机", "action": "打开或启动"}}
+{"id": "01-16", "home": "apartment", "text": "把晾衣架降下来", "gold": {"intent": "控制", "device": "电动晾衣架", "action": "调低或减小"}}
+{"id": "01-17", "home": "apartment", "text": "电饭煲开始煮饭", "gold": {"intent": "控制", "device": "电饭煲", "action": "打开或启动"}}
+{"id": "01-18", "home": "apartment", "text": "热水器温度调到50度", "gold": {"intent": "控制", "device": "热水器", "action": "设为指定的数值或模式"}}
+{"id": "01-19", "home": "apartment", "text": "把门锁上", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}}
+{"id": "01-20", "home": "apartment", "text": "打开摄像头", "gold": {"intent": "控制", "device": "摄像头", "action": "打开或启动"}}
+{"id": "01-21", "home": "house", "text": "打开书房的灯", "gold": {"intent": "控制", "device": "书房灯", "action": "打开或启动"}}
+{"id": "01-22", "home": "house", "text": "餐厅吊灯调亮一些", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": "调高或增大"}}
+{"id": "01-23", "home": "house", "text": "落地扇开到二档", "gold": {"intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式"}}
+{"id": "01-24", "home": "house", "text": "把地暖温度调高两度", "gold": {"intent": "控制", "device": "地暖", "action": "调高或增大"}}
+{"id": "01-25", "home": "house", "text": "新风机打开", "gold": {"intent": "控制", "device": "新风机", "action": "打开或启动"}}
+{"id": "01-26", "home": "house", "text": "冰箱冷藏室调到4度", "gold": {"intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式"}}
+{"id": "01-27", "home": "house", "text": "启动洗碗机", "gold": {"intent": "控制", "device": "洗碗机", "action": "打开或启动"}}
+{"id": "01-28", "home": "house", "text": "烤箱预热到200度", "gold": {"intent": "控制", "device": "烤箱", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "01-29", "home": "house", "text": "油烟机开到强档", "gold": {"intent": "控制", "device": "油烟机", "action": ["设为指定的数值或模式", "调高或增大", "打开或启动"]}}
+{"id": "01-30", "home": "house", "text": "浴霸打开", "gold": {"intent": "控制", "device": "浴霸", "action": "打开或启动"}}
+{"id": "01-31", "home": "house", "text": "投影仪关了吧", "gold": {"intent": "控制", "device": "投影仪", "action": "关闭或停止"}}
+{"id": "01-32", "home": "house", "text": "布防，把安防警报打开", "gold": {"intent": "控制", "device": "安防警报", "action": "打开或启动"}}
+{"id": "01-33", "home": "house", "text": "把车库门打开", "gold": {"intent": "控制", "device": "车库门", "action": "打开或启动"}}
+{"id": "01-34", "home": "house", "text": "花园的水阀打开，浇十分钟", "gold": {"intent": "控制", "device": "花园浇水阀", "action": "打开或启动"}}
+{"id": "01-35", "home": "house", "text": "充电桩开始给车充电", "gold": {"intent": "控制", "device": "充电桩", "action": "打开或启动"}}
+{"id": "01-36", "home": "house", "text": "给猫喂一份粮", "gold": {"intent": "控制", "device": "宠物喂食器", "action": "打开或启动"}}
+{"id": "01-37", "home": "house", "text": "把饮水机插座断电", "gold": {"intent": "控制", "device": "饮水机插座", "action": "关闭或停止"}}
+{"id": "01-38", "home": "house", "text": "门铃调成静音", "gold": {"intent": "控制", "device": "门铃", "action": ["设为指定的数值或模式", "关闭或停止"]}}
+{"id": "01-39", "home": "house", "text": "洗碗机先暂停一下", "gold": {"intent": "控制", "device": "洗碗机", "action": "暂停"}}
+{"id": "01-40", "home": "house", "text": "车库门关上", "gold": {"intent": "控制", "device": "车库门", "action": "关闭或停止"}}

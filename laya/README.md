@@ -134,6 +134,11 @@ ECS（1 物理核 / 7.5 GB，与其它服务共用）实测，示例请求（2 �
 scripts/eidolon-laya test            # 单测 + 对拍；没有权重/ONNX 时对拍测试自动跳过
 ```
 
+## 评测
+
+- [`evals/smart-home/`](evals/smart-home/)：智能家居控制决策（是不是命令、控制哪台设备、什么动作），
+  15 类设备、9 个场景、182 条用例，Mac 上各后端的准确率与延迟见 [REPORT.md](evals/smart-home/REPORT.md)。
+
 ## 许可
 
 checkpoint：Apache-2.0（convaiinnovations/laya）；基座编码器 mmBERT-base：MIT；

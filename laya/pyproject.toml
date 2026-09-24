@@ -78,3 +78,5 @@ select = ["E", "F", "I", "UP", "B"]
 # Ported from laya 0.3.7 as written, %-formatting included, so it diffs cleanly
 # against upstream when laya is upgraded.
 "src/eidolon_models_laya/sequence.py" = ["UP031"]
+# Evaluation scripts assemble Chinese report prose; wrapping those strings only hurts reading.
+"evals/**/*.py" = ["E501"]

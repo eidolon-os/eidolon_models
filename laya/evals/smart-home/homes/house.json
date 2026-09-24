@@ -1,0 +1,24 @@
+{
+  "name": "house",
+  "description": "独栋：书房、餐厅、厨房、卫生间、影音室、车库、花园、阳台。与 apartment 的品类互补，两户合起来覆盖全部 15 类。",
+  "devices": [
+    {"name": "书房灯", "room": "书房", "category": "照明", "type": "吸顶灯"},
+    {"name": "餐厅吊灯", "room": "餐厅", "category": "照明", "type": "吊灯"},
+    {"name": "落地扇", "room": "书房", "category": "风扇", "type": "落地扇"},
+    {"name": "地暖", "room": "客厅", "category": "空调温控", "type": "地暖"},
+    {"name": "新风机", "room": "全屋", "category": "空气环境", "type": "新风系统"},
+    {"name": "冰箱", "room": "厨房", "category": "厨房电器", "type": "冰箱"},
+    {"name": "洗碗机", "room": "厨房", "category": "清洁电器", "type": "洗碗机"},
+    {"name": "烤箱", "room": "厨房", "category": "厨房电器", "type": "烤箱"},
+    {"name": "油烟机", "room": "厨房", "category": "厨房电器", "type": "油烟机"},
+    {"name": "浴霸", "room": "卫生间", "category": "热水卫浴", "type": "浴霸"},
+    {"name": "投影仪", "room": "影音室", "category": "影音娱乐", "type": "投影仪"},
+    {"name": "门铃", "room": "大门", "category": "安防门禁", "type": "可视门铃"},
+    {"name": "安防警报", "room": "全屋", "category": "安防门禁", "type": "安防报警系统"},
+    {"name": "车库门", "room": "车库", "category": "安防门禁", "type": "车库门"},
+    {"name": "花园浇水阀", "room": "花园", "category": "园艺水路", "type": "灌溉水阀"},
+    {"name": "充电桩", "room": "车库", "category": "能源", "type": "电动车充电桩"},
+    {"name": "宠物喂食器", "room": "阳台", "category": "宠物", "type": "自动喂食器"},
+    {"name": "饮水机插座", "room": "客厅", "category": "插座开关", "type": "智能插座"}
+  ]
+}
