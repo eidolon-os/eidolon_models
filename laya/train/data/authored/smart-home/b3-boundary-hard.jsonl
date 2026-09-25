@@ -1,0 +1,300 @@
+{"home": "apartment", "text": "今天加班到十点，累得腿都软了，帮我把热水器烧上", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "先把客厅主灯关了吧，我跟你说今天地铁上碰到个怪人", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "我刚才喊它关主卧灯，它愣是没反应", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "昨天我让音箱放歌，它给我放了段相声", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "跟你说个事儿，我下个月要搬家了，先把电视关了", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "饭吃撑了，油烟机关了吧，我去楼下走走", "intent": "控制", "device": "油烟机", "action": "关闭或停止", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "我妈刚打电话说她下周来，对了，洗碗机开一下", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "上次我叫它浇花，结果把院子淹了", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "把窗帘拉开吧，唉今天股票又绿了", "intent": "控制", "device": "客厅窗帘", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "考试终于考完了，空调开到二十五，我要躺平", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "设为指定的数值或模式", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "我老跟同事夸我家扫地机聪明，结果今天它自己钻床底出不来了", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "每次我说开加湿器它都要问我两遍", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "新风机开一下，顺便问你，明天会下雨吗", "intent": "控制", "device": "新风机", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "你知道吗，小区又停水了，浴霸先关了吧", "intent": "控制", "device": "浴霸", "action": "关闭或停止", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "昨晚我说关车库门，它把门铃给关了，笑死", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "今天开了一天的会，脑袋嗡嗡的，客厅主灯调暗一点", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "地暖调高两度，你说今年冬天怎么这么冷啊", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "我跟我老公吵架了，他非说是我忘了锁门", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "孩子今天在学校得了小红花，高兴，放首欢快的歌", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "洗衣机启动一下，里面是我那件新大衣，你说我是不是买贵了", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "前天我让它把晾衣架升上去，它说没听清", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "说起来好久没大扫除了，扫地机器人先去扫一遍", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "烤箱预热一下，今天我要露一手，做个披萨给你看", "intent": "控制", "device": "烤箱", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "我在网上看到有人用语音开车库门，我也试过，没成功", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "唉，猫又把花盆打翻了，给它喂点粮吧，饿了才闹", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "落地扇开大点，我刚跑完五公里，你猜我跑了多久", "intent": "控制", "device": "落地扇", "action": "调高或增大", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "邻居家的狗叫了一晚上，吵得我没睡好，门铃声音调小点", "intent": "控制", "device": "门铃", "action": "调低或减小", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "我昨天梦见让你关全屋的灯，结果你把我锁在门外了", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "电饭煲开始煮吧，我今天在公司被老板表扬了", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "我昨天跟我妈说，我们家窗帘现在喊一声就能开", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "刚跟闺蜜打完电话，聊了俩小时，嗓子都干了，把加湿器开开", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "饮水机插座打开，唉我这周已经喝了八杯咖啡了", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "我老嚷嚷关油烟机关油烟机，每次最后都是我自己走过去按", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "外卖到了我下去拿，床头灯先关了", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "那天我说开投影，它开的是电视，我到现在都没想明白", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "上礼拜我喊了三遍关空调都没反应，后来发现是断网了", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "明天要早起面试，紧张死了，主卧灯关了我睡了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "安防警报开一下，我们出去吃火锅，听说那家要排两小时", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "house", "text": "我跟物业投诉了好几次车库门太吵", "intent": "无关", "tags": ["boundary", "compound"]}
+{"home": "villa", "text": "新风机和净化器都开上吧，今天雾霾爆表，我口罩都忘了戴", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["boundary", "compound"]}
+{"home": "apartment", "text": "不对，我要开的是主卧的空调", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "搞错了，要关的是床头灯，不是主卧灯", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "不是电视，是音箱，声音小一点", "intent": "控制", "device": "智能音箱", "action": "调低或减小", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "算了，窗帘还是开着吧", "intent": "无关", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "开错灯了，主卧的关掉，我要的是客厅的", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "刚才说错了，空调是调到二十七度，不是二十五", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "设为指定的数值或模式", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "灯开错了，关掉吧", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "哦我看错了，空调本来就开着", "intent": "无关", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "不是这个温度，太低了，再调高两度", "intent": "控制", "device": ["客厅空调", "主卧空调", "热水器"], "action": "调高或增大", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "不是这首，换一首", "intent": "控制", "device": "智能音箱", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "等一下，我说反了，加湿器是关掉", "intent": "控制", "device": "加湿器", "action": "关闭或停止", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "哦不对，扫地机器人先别扫了，暂停", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "不对不对，晾衣架是往下降，不是升", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "刚才那个取消，我改主意了", "intent": "无关", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "说错了，是书房灯不是餐厅吊灯，书房的打开", "intent": "控制", "device": "书房灯", "action": "打开或启动", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "我是说地暖调低，你怎么给调高了", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "不对，烤箱是一百六十度，不是一百八", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "不是车库门，我说的是关花园浇水阀", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "算了，洗碗机不用开了", "intent": "无关", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "哎呀我说成新风机了，是落地扇，开一下", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "喂食器刚才是我误喊的，不用喂", "intent": "无关", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "冰箱我刚才说冷藏调低，应该是冷冻调低", "intent": "控制", "device": "冰箱", "action": "调低或减小", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "错了，充电桩先暂停，不是停止", "intent": "控制", "device": "充电桩", "action": "暂停", "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "不对，要关的是主卧的空调，客厅那个不用动", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "刚才说错了，要关的是餐厅吊灯", "intent": "控制", "device": "餐厅吊灯", "action": "关闭或停止", "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "搞反了，电视打开，投影仪关掉", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "关闭或停止"], "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "诶不是，门别开，我说的是锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "我刚才是不是说错了，算了就这样吧", "intent": "无关", "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "刚才那个二十二度是说地暖，不是空调", "intent": "控制", "device": "地暖", "action": "设为指定的数值或模式", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "我说的是调暗，不是关掉，床头灯重新打开调暗一点", "intent": "控制", "device": "床头灯", "action": ["打开或启动", "调低或减小"], "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "你听错了，我说的是净化器不是加湿器，开净化器", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["boundary", "correction"]}
+{"home": "house", "text": "不是投影仪的声音，是门铃的，调小", "intent": "控制", "device": "门铃", "action": "调低或减小", "tags": ["boundary", "correction"]}
+{"home": "villa", "text": "改一下，浇水阀别开太久，十分钟就行", "intent": "控制", "device": "花园浇水阀", "action": "设为指定的数值或模式", "tags": ["boundary", "correction"]}
+{"home": "apartment", "text": "这屋里要是能再暖和一些该多好", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "不知道方不方便把窗帘拉开一点", "intent": "控制", "device": "客厅窗帘", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "我是不是该开个床头灯看会儿书", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "要是咱家也装了地暖该多好", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "如果不太麻烦的话，热水器能先烧着吗", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "冒昧说一句，电视声音能不能稍微小那么一丢丢", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "我也不想打扰你，就是这灯实在有点刺眼", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "调低或减小", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "你看要不咱把空气净化器也开上？", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "要是能有台洗碗机，我天天都不用刷碗了", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "衣服晾得差不多了，你看是不是可以收了", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "真希望夏天永远不要来", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "能不能拜托你，让扫地机器人去卧室扫扫", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "要是书房能亮堂一点，我作业能写快点", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "不好意思啊，厨房的烟好像有点大", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "如果可以的话，地暖稍微降一点点就好", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "我想是不是该给院子的草浇点水了", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "要是家里有台扫地机就好了", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "你说我是不是该把车充上电了", "intent": "控制", "device": "充电桩", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "打扰一下，浴室现在有点凉飕飕的", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "希望以后能换个带烘干的洗碗机", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "要不……新风机开个小档？", "intent": "控制", "device": "新风机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "我寻思着猫是不是该加餐了", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "真想有个管家帮我做饭", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "villa", "text": "要是卧室能凉快一点，我今晚肯定睡得香", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小"], "tags": ["boundary", "politeness"]}
+{"home": "villa", "text": "我不是催你啊，就是车库门还开着呢", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["boundary", "politeness"]}
+{"home": "villa", "text": "麻烦问一下，能不能帮忙把餐厅吊灯调暖一点", "intent": "控制", "device": "餐厅吊灯", "action": "设为指定的数值或模式", "tags": ["boundary", "politeness"]}
+{"home": "villa", "text": "要是我能天天在家躺着就好了", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "villa", "text": "打扰了，门铃那个声音我实在受不了了", "intent": "控制", "device": "门铃", "action": ["调低或减小", "关闭或停止"], "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "如果你有空的话，电饭煲帮我预约一下明早七点", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "我可能需要一点点背景音乐", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "politeness"]}
+{"home": "house", "text": "我是不是该睡了，书房这灯还亮着", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["boundary", "politeness"]}
+{"home": "villa", "text": "要是哪天能不用自己洗衣服就好了", "intent": "无关", "tags": ["boundary", "politeness"]}
+{"home": "apartment", "text": "能帮我开下客厅空调吗", "intent": "控制", "device": "客厅空调", "action": "打开或启动", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "可以把音箱音量调小点吗", "intent": "控制", "device": "智能音箱", "action": "调低或减小", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "帮我关个床头灯行不行", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "主卧空调支持定时关机吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "这个音箱可以连手机蓝牙吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "你能不能让加湿器雾小一点", "intent": "控制", "device": "加湿器", "action": "调低或减小", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "窗帘能不能拉上一半", "intent": "控制", "device": "客厅窗帘", "action": "设为指定的数值或模式", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "窗帘电机一般能用几年", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "把电视关了好吗", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "扫地机器人能不能去扫一下厨房", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "扫地机器人带不带拖地功能", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "热水器帮我调到五十度可以不", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "热水器最高能烧到几度", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "门锁能远程开吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "你能帮我把门锁上吗", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "能开一下油烟机吗，我要炒菜了", "intent": "控制", "device": "油烟机", "action": "打开或启动", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "油烟机能自动清洗吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "书房灯能不能调亮点", "intent": "控制", "device": "书房灯", "action": "调高或增大", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "书房灯是护眼灯吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "地暖可以先关一会儿吗", "intent": "控制", "device": "地暖", "action": "关闭或停止", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "地暖能分房间控制吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "你可以把投影仪打开吗", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "投影仪能接游戏机吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "帮我把车库门关上好不好", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "宠物喂食器可以录主人的声音吗", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "house", "text": "给猫喂点粮行吗", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["boundary", "question-form-command"]}
+{"home": "villa", "text": "能不能把主卧的空调开到二十六", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["boundary", "question-form-command"]}
+{"home": "villa", "text": "浴霸有没有换气功能", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "villa", "text": "浴霸开个换气行吗", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["boundary", "question-form-command"]}
+{"home": "villa", "text": "洗碗机什么时候能洗完", "intent": "查询", "device": "洗碗机", "tags": ["boundary", "question-form-command"]}
+{"home": "villa", "text": "冰箱冷藏帮我调到三度可以吗", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "晾衣架最多能挂多少斤", "intent": "无关", "tags": ["boundary", "question-form-command"]}
+{"home": "apartment", "text": "小易把客厅主灯关一下", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "老公，顺手把客厅灯关了", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "孩子嚷嚷说灯太亮晃眼睛", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "调低或减小", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "让小易把空调关了吧", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "妈，您别动电视了，让小易来关", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "宝贝你去把窗帘拉上", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "老婆说卧室太闷了", "intent": "控制", "device": ["空气净化器", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "我妈说她家空调坏了", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "小易小易，扫地机器人出来干活了", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "爸，你把热水器开一下，我要洗澡", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "闺女一直喊冷", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "邻居上来说我们家电视声音太大了", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "同事说他家加湿器特别好用", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "小易，老公说主卧那边太冷，空调调高两度", "intent": "控制", "device": "主卧空调", "action": "调高或增大", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "小易把车库门打开，我老公要停车", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "儿子，去把书房灯关了", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "老人家说地暖烧得太热了", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "我老公说烤箱他待会儿自己开", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "小易，阿姨说碗洗好了，把洗碗机关了吧", "intent": "控制", "device": "洗碗机", "action": "关闭或停止", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "孩子他爸，饮水机插座你插上没", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "小易帮奶奶把浴霸打开", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "婆婆说厨房油烟太呛了", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "朋友说他家的新风机半夜会响", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "姐姐让我跟你说，落地扇开到二档", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["boundary", "third-person"]}
+{"home": "villa", "text": "老婆，你把主卧灯关一下呗", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "villa", "text": "小易，爸说他要看新闻，把电视打开", "intent": "控制", "device": "电视", "action": "打开或启动", "tags": ["boundary", "third-person"]}
+{"home": "villa", "text": "孩子说他们幼儿园今天装了投影仪", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "villa", "text": "小易你听到没，妈妈让你把门锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["boundary", "third-person"]}
+{"home": "villa", "text": "外婆说花园那边水一直在流", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["boundary", "third-person"]}
+{"home": "villa", "text": "对门大哥说他们家车库门也是这个牌子", "intent": "无关", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "宝宝说睡不着，让音箱放点雨声", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "third-person"]}
+{"home": "house", "text": "小易，客人说有点冷", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "那个智能助手，帮我把加湿器打开", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["boundary", "third-person"]}
+{"home": "apartment", "text": "我今年二十六了，还没谈过恋爱", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "客厅空调连着开了三十个小时了", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "主卧空调开了几个小时了", "intent": "查询", "device": "主卧空调", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "客厅空调二十七", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "两台空调都切成除湿", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "主卧空调再升两度", "intent": "控制", "device": "主卧空调", "action": "调高或增大", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "电视换到十三台", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "我十三岁的时候家里才买了第一台电视", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "热水器用了五年了", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "热水器五十五", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "空调调到二十六度多久能凉下来", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "加湿器开一档", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "一档一档加太慢了，音箱直接开到最大", "intent": "控制", "device": "智能音箱", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "洗衣机洗了三遍还有味", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "洗衣机漂洗两遍", "intent": "控制", "device": "洗衣机", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "七点叫我起床", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "七点把窗帘打开叫我起床", "intent": "控制", "device": "客厅窗帘", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "扫地机器人电量还剩百分之二十", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "扫地机器人扫了多少平米了", "intent": "查询", "device": "扫地机器人", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "音量减五", "intent": "控制", "device": ["电视", "智能音箱"], "action": "调低或减小", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "地暖十九就行", "intent": "控制", "device": "地暖", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "烤箱二百度烤二十分钟", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "这个蛋糕要烤四十分钟吗", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "冰箱冷藏四度", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "给猫放三份粮", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "我家两只猫一只狗", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "充电桩充了八个小时还没满", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "风扇给我换三挡", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "house", "text": "落地扇风力往上加一级", "intent": "控制", "device": "落地扇", "action": "调高或增大", "tags": ["boundary", "number-trap"]}
+{"home": "villa", "text": "五个灯全部关掉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["boundary", "number-trap"]}
+{"home": "villa", "text": "我在这房子住了十八年了", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "villa", "text": "车库门升起来一米就停", "intent": "控制", "device": "车库门", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
+{"home": "villa", "text": "电视和投影仪哪个是4K的", "intent": "无关", "tags": ["boundary", "number-trap"]}
+{"home": "apartment", "text": "灯开这么亮，是要在客厅开演唱会吗", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "空调吹得我都快冻成冰棍了，可真贴心", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["调高或增大", "关闭或停止"], "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "这破扫地机器人又钻床底下出不来了", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "电视声音再大点呗，让整栋楼都听听", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "哇，热水器烧的水可真凉快", "intent": "控制", "device": "热水器", "action": "调高或增大", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "气死我了，老板又让我周末加班", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "你可真行，窗帘大敞着让我怎么睡", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "我谢谢你啊，加湿器喷得跟下雨似的", "intent": "控制", "device": "加湿器", "action": ["调低或减小", "关闭或停止"], "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "烦死了烦死了，什么都不想干", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "这歌难听得我想把音箱砸了", "intent": "控制", "device": "智能音箱", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "这空调是摆设吧，开了半天一点不凉", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "这洗衣机洗得可真干净，袜子都洗没了一只", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "呵，净化器开着屋里还一股味，真是好样的", "intent": "控制", "device": "空气净化器", "action": "调高或增大", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "唉，又是一个人吃饭", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "厨房这烟都能熏腊肉了，油烟机睡着了吗", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "这地暖烧得，我是在蒸桑拿吗", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "什么破落地扇，吹得跟蚊子扇翅膀一样", "intent": "控制", "device": "落地扇", "action": "调高或增大", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "这投影仪画面糊得跟马赛克似的，气人", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "开心！今天的面包烤得太成功了", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "浴霸是装着好看的吗，冻死我了", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "这门铃响得跟防空警报似的，吓死人", "intent": "控制", "device": "门铃", "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "花园都快成沼泽了，浇水阀还在那浇，服了", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "猫又把碗舔干净了，可怜巴巴地看着我", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "这冰箱冷冻得，冰淇淋都化成汤了", "intent": "控制", "device": "冰箱", "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "house", "text": "心累，车又被人刮了", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "villa", "text": "家里没人还开着一屋子灯，电费不要钱是吧", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "villa", "text": "我真是服了这个新风机，吵得跟拖拉机一样", "intent": "控制", "device": "新风机", "action": ["调低或减小", "设为指定的数值或模式"], "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "villa", "text": "哈哈哈笑死我了，这个综艺太搞笑了", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "villa", "text": "你是觉得我不怕冷吗，主卧空调吹十八度", "intent": "控制", "device": "主卧空调", "action": "调高或增大", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "villa", "text": "太感动了，扫地机器人今天居然没撞墙", "intent": "无关", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "又忘关热水器，这个月电费要上天了", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "villa", "text": "呵呵，热水器你是想烫死我吗", "intent": "控制", "device": "热水器", "action": "调低或减小", "tags": ["boundary", "sarcasm-emotion"]}
+{"home": "apartment", "text": "来首周杰伦的晴天", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "周杰伦最近出新专辑了没", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "电视换个频道，这个在放广告", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "这个台的节目真没意思", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "音箱放点睡前故事", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "睡前故事一般讲多久合适", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "下一首", "intent": "控制", "device": "智能音箱", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "这首歌是谁唱的来着", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "暂停一下音乐，我接个电话", "intent": "控制", "device": "智能音箱", "action": "暂停", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "电视上这部剧的女主角好漂亮", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "电视投个屏，我要看手机上的视频", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "这个视频在电视上接着放", "intent": "控制", "device": "电视", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "昨晚那场球赛谁赢了", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "电视上放一下今晚的球赛", "intent": "控制", "device": "电视", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "单曲循环这首", "intent": "控制", "device": "智能音箱", "action": "设为指定的数值或模式", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "这首歌我能单曲循环一整天", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "来点轻音乐", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "投影仪上放个纪录片", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "这部纪录片拍得真好", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "投影仪暂停，我去拿个零食", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "给我放段相声听听", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "郭德纲的相声哪段最经典", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "投影仪声音大点，演员说话听不清", "intent": "控制", "device": "投影仪", "action": "调高或增大", "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "放个电影，一家人一起看", "intent": "控制", "device": ["电视", "投影仪"], "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "最近有什么好看的电影推荐吗", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "音箱里这个主播声音好好听", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "音箱的有声书换到下一章", "intent": "控制", "device": "智能音箱", "action": "设为指定的数值或模式", "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "电视静音", "intent": "控制", "device": "电视", "action": ["调低或减小", "设为指定的数值或模式"], "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "别用投影仪了，换电视看吧", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["boundary", "media-vs-device"]}
+{"home": "villa", "text": "放一首适合做饭听的歌", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "做饭的时候听什么歌比较好", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "把刚才那首歌再放一遍", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
+{"home": "house", "text": "那部电视剧我看到第几集了", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
+{"home": "apartment", "text": "我进屋了，把智能门锁反锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "门口那人说是物业的，让你开下门", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "快递员在门口说让你把门打开", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "我本人到家门口了，门锁开一下", "intent": "控制", "device": "智能门锁", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "门外有个陌生人一直敲门，别给他开", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "摄像头先关了，我要换衣服", "intent": "控制", "device": "摄像头", "action": "关闭或停止", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "摄像头的录像会传到哪里去", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "把摄像头打开，我看看保姆在干嘛", "intent": "控制", "device": "摄像头", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "隔壁让我帮他看看我们家摄像头拍没拍到他的车", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "出门的时候门锁好了吧，我有点不放心", "intent": "查询", "device": "智能门锁", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "有人说我家门锁密码泄露了", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "我朋友在门口，说密码不对，你帮他开一下", "intent": "控制", "device": "智能门锁", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "车库门打开，我车到了", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "送货的师傅说让你把车库门打开放东西", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "我同意了，车库门开一下让送货师傅把箱子放进去", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "安防警报撤一下，我回来了", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "有人跟我说警报可以随便关", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "门口那个人叫你把警报关了", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "我们全家睡了，警报布上防", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "车库门是不是开着没关", "intent": "查询", "device": "车库门", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "外面有人按门铃说是查水表的，要不要开车库门", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "门铃里那个人说他是我同学，让你开门", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "house", "text": "车库门关上，顺便把警报打开", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "刚才门口那个人要我开门，我没理他", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "我在机场，远程把门锁开一下给我妈", "intent": "控制", "device": "智能门锁", "action": "打开或启动", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "有人冒充我的声音让你开门怎么办", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "摄像头别对着客厅了，转到门口", "intent": "控制", "device": "摄像头", "action": "设为指定的数值或模式", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "装修师傅说今天要进来，让你把门一直开着", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "警报响了，赶紧关掉", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "警报刚才为什么响", "intent": "查询", "device": "安防警报", "tags": ["boundary", "privacy-safety"]}
+{"home": "villa", "text": "出门前把门锁和车库门都锁好", "intent": "控制", "device": "多个设备或整屋", "action": ["上锁", "关闭或停止"], "tags": ["boundary", "privacy-safety"]}
+{"home": "apartment", "text": "儿子说他同学在门口，我下去接一下", "intent": "无关", "tags": ["boundary", "privacy-safety"]}
