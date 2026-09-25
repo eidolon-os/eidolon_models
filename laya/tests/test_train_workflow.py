@@ -230,3 +230,20 @@ def test_option_shuffle_keeps_target_aligned():
             r, tok, {"max_len": 256, "head_max_len": 128}, shuffle=random.Random(seed)
         )[0]
         assert it["names"][it["label"]] == "c" and it["target"][it["label"]] == 1.0
+
+
+def test_package_writes_manifest_that_artifacts_can_verify(tmp_path):
+    from eidolon_laya_train.package import package
+    from eidolon_models_laya.artifacts import Manifest, verify_torch
+
+    ck = tmp_path / "ck"
+    (ck / "encoder").mkdir(parents=True)
+    (ck / "tokenizer").mkdir()
+    (ck / "model.safetensors").write_bytes(b"w")
+    (ck / "rl_agent_config.json").write_text(json.dumps({"encoder": "e", "max_len": 8, "head_max_len": 4, "fine_tuned_from": "x"}))
+    (ck / "encoder" / "config.json").write_text("{}")
+    (ck / "tokenizer" / "tokenizer.json").write_text("{}")
+    out = package(ck, tmp_path / "models", "demo", run_id="r1")
+    m = Manifest.load(out)
+    assert m.hub == "local" and verify_torch(m) == [] and out.name == m.revision
+    assert set(m.torch_files) == {"model.safetensors", "rl_agent_config.json", "encoder/config.json", "tokenizer/tokenizer.json"}

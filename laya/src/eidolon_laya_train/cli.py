@@ -1,4 +1,4 @@
-"""``eidolon-laya-train``: gen | label | augment | assemble | train | calibrate | eval | export | run.
+"""``eidolon-laya-train``: gen | label | augment | assemble | train | calibrate | eval | package | export | run.
 
 Every stage reads files and writes files; ``run`` chains them from a pipeline.yaml into
 ``runs/<id>/`` with a manifest per step.
@@ -160,18 +160,31 @@ def cmd_eval(args) -> int:
     return rc
 
 
+def cmd_package(args) -> int:
+    from .package import package
+
+    out = package(
+        Path(args.checkpoint),
+        Path(args.models_root),
+        args.name,
+        run_id=args.run_id,
+        notes=args.notes or "",
+    )
+    _log(f"packaged {args.checkpoint} -> {out} (EIDOLON_LAYA_MODEL_DIR={out})")
+    print(out)
+    return 0
+
+
 def cmd_export(args) -> int:
-    """Hand the checkpoint to ``eidolon-laya export-onnx`` through a temporary manifest-less dir."""
-    cmd = [
-        sys.executable,
-        "-m",
-        "eidolon_models_laya.cli",
-        "export-onnx",
-        "--model-dir",
-        args.checkpoint,
-    ]
-    _log(" ".join(cmd))
-    return subprocess.call(cmd)
+    """ONNX for a packaged model dir, via ``eidolon-laya export-onnx``."""
+    import os
+
+    env = dict(os.environ, EIDOLON_LAYA_MODEL_DIR=str(Path(args.model_dir).resolve()))
+    cmd = [sys.executable, "-m", "eidolon_models_laya.cli", "export-onnx"]
+    if args.force:
+        cmd.append("--force")
+    _log(" ".join(cmd) + f"  (model dir {env['EIDOLON_LAYA_MODEL_DIR']})")
+    return subprocess.call(cmd, env=env)
 
 
 def cmd_run(args) -> int:
@@ -201,6 +214,8 @@ def cmd_run(args) -> int:
 
 
 PATH_KEYS = {
+    "models_root",
+    "model_dir",
     "scenario",
     "config",
     "input",
@@ -309,8 +324,19 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--device")
     p.set_defaults(func=cmd_eval)
 
-    p = sub.add_parser("export", help="ONNX via eidolon-laya export-onnx")
+    p = sub.add_parser(
+        "package", help="checkpoint -> models/<name>/<rev>/ (what serve / export-onnx read)"
+    )
     p.add_argument("--checkpoint", required=True)
+    p.add_argument("--models-root", default="models")
+    p.add_argument("--name", required=True)
+    p.add_argument("--run-id")
+    p.add_argument("--notes")
+    p.set_defaults(func=cmd_package)
+
+    p = sub.add_parser("export", help="ONNX for a packaged model dir via eidolon-laya export-onnx")
+    p.add_argument("--model-dir", required=True)
+    p.add_argument("--force", action="store_true")
     p.set_defaults(func=cmd_export)
 
     p = sub.add_parser("run", help="execute a pipeline.yaml into runs/<id>/")

@@ -17,7 +17,11 @@ scenario.yaml ──gen──▶ cases.jsonl ──label──▶ labeled.jsonl 
                                                             │
                                           eval ──▶ eval/*.json（按场景、题型的准确率 / ECE，与基线的门槛比较）
                                                             │
-                                         export ──▶ onnx/（复用 eidolon-laya export-onnx）
+                                        package ──▶ models/<name>/<rev>/（serve / doctor 直接加载）
+                                                            │
+                                         export ──▶ models/<name>/<rev>/onnx/（复用 eidolon-laya export-onnx）
+                                                            │
+                                   evals/<scenario>/run_all.sh MODEL_DIR=… ──▶ 用原来的服务评测再打一遍
 ```
 
 ## 一条记录长什么样（所有阶段共用）
@@ -55,7 +59,8 @@ scenario.yaml ──gen──▶ cases.jsonl ──label──▶ labeled.jsonl 
 | `train` | `dataset/` + 训练配置 | `checkpoint/` | laya `DecisionModel`（mmBERT / 任意 ModernBERT 图）；损失 soft-CE + w·Brier（+ 可选 proper-scoring RL 项）；选项打乱；解冻最后 N 层；输出 laya 格式（`model.safetensors` + `rl_agent_config.json` + tokenizer/encoder 配置），`eidolon-laya serve` 直接加载 |
 | `calibrate` | `checkpoint/` + `calib.jsonl` | 更新 `rl_agent_config.json` | 按 (题型, 选项数) 分桶拟合温度，夹在 [0.5, 5] |
 | `eval` | `checkpoint/` + 评测集 | `eval/<set>.json` | 逐场景 / 逐题型准确率、ECE、按阈值的覆盖 / 准确；与基线 run 比较，输出门槛结论（不退步才算过） |
-| `export` | `checkpoint/` | `onnx/` | 调 `eidolon-laya export-onnx` |
+| `package` | `checkpoint/` | `models/<name>/<rev>/` | 生成 manifest（`hub: local`，文件 sha256）+ `torch/`：**这就是 serve / export-onnx / doctor 认的目录**，`rev` = 权重 sha256 前 8 位 |
+| `export` | `models/<name>/<rev>/` | 同目录下 `onnx/` | 调 `eidolon-laya export-onnx`（含 torch↔onnx logit parity 检查） |
 | `run` | `pipeline.yaml` | `runs/<id>/` | 按顺序执行上面各步，每步写 manifest；同一 pipeline 改一个参数就是一个新 round |
 
 ## 为什么这样切

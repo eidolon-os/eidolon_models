@@ -41,3 +41,10 @@ steps:
     eval_set:
       - ../scenarios/smart-home/eval/locked-182.jsonl
     out: "{run}/eval"
+
+  # 打包成 models/<name>/<rev>/：之后 eidolon-laya serve / export-onnx / doctor 都直接认它，
+  # evals/smart-home/run_all.sh 也能用 MODEL_DIR= 指向它打服务。
+  - stage: package
+    checkpoint: "{run}/checkpoint"
+    models_root: ../../models
+    name: laya-smart-home
