@@ -1,5 +1,5 @@
 {
- "label": "mac-torch-mps",
+ "label": "laya-multilingual-h1024@mac-torch-mps",
  "url": "http://127.0.0.1:8771",
  "host": "mansondeMacBook-Pro.local",
  "machine": "arm64",
@@ -13,10 +13,10 @@
   "threads": 6,
   "torch": "2.14.0",
   "max_len": 1024,
-  "head_max_len": 256
+  "head_max_len": 1024
  },
  "n_cases": 182,
- "server_rss_mb": 1227,
+ "server_rss_mb": 1236,
  "laya": {
   "intent_ok": {
    "n": 182,
@@ -24,7 +24,7 @@
   },
   "device_ok": {
    "n": 160,
-   "acc": 0.7125
+   "acc": 0.7188
   },
   "action_ok": {
    "n": 123,
@@ -32,7 +32,7 @@
   },
   "e2e_ok": {
    "n": 140,
-   "acc": 0.4143
+   "acc": 0.4214
   },
   "control_detection": {
    "precision": 0.9495,
@@ -408,7 +408,7 @@
     },
     "device_ok": {
      "n": 20,
-     "acc": 0.9
+     "acc": 0.95
     },
     "action_ok": {
      "n": 20,
@@ -416,7 +416,7 @@
     },
     "e2e_ok": {
      "n": 20,
-     "acc": 0.65
+     "acc": 0.7
     },
     "control_detection": {
      "precision": 1.0,
@@ -986,7 +986,7 @@
     },
     "device_ok": {
      "n": 20,
-     "acc": 0.5
+     "acc": 0.55
     },
     "action_ok": {
      "n": 20,
@@ -994,7 +994,7 @@
     },
     "e2e_ok": {
      "n": 20,
-     "acc": 0.45
+     "acc": 0.5
     },
     "control_detection": {
      "precision": 1.0,
@@ -1346,15 +1346,15 @@
   "device": {
    "0.0": {
     "coverage": 1.0,
-    "acc": 0.7125
+    "acc": 0.7188
    },
    "0.5": {
     "coverage": 0.9,
-    "acc": 0.7639
+    "acc": 0.7708
    },
    "0.7": {
     "coverage": 0.8187,
-    "acc": 0.8168
+    "acc": 0.8244
    },
    "0.9": {
     "coverage": 0.7,
@@ -1363,21 +1363,21 @@
   }
  },
  "latency_ms": {
-  "client_p50": 81.9,
-  "client_p95": 90.9,
-  "client_mean": 83.6,
-  "server_p50": 76.0,
-  "forward_p50": 75.4,
+  "client_p50": 82.4,
+  "client_p95": 144.3,
+  "client_mean": 90.0,
+  "server_p50": 76.4,
+  "forward_p50": 75.8,
   "by_device_options": {
    "20": {
     "n": 162,
-    "client_p50": 81.6,
+    "client_p50": 82.0,
     "tokens_mean": 477
    },
    "38": {
     "n": 20,
-    "client_p50": 85.9,
-    "tokens_mean": 485
+    "client_p50": 144.3,
+    "tokens_mean": 659
    }
   }
  }

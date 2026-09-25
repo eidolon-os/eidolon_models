@@ -38,7 +38,12 @@ def load(label: str) -> tuple[dict, list[dict]]:
 
 
 def main() -> int:
-    labels = sorted(p.name for p in (HERE / "results").iterdir() if (p / "summary.json").is_file())
+    # Runs of other checkpoints are named <model>@<run>; they belong in COMPARISON.md.
+    labels = sorted(
+        p.name
+        for p in (HERE / "results").iterdir()
+        if (p / "summary.json").is_file() and "@" not in p.name
+    )
     runs = {lab: load(lab) for lab in labels}
     s, rows = runs[PRIMARY]
     cpu = (

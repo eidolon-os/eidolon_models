@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "name": "macjev-322m-4k",
+  "source": {
+    "hub": "huggingface",
+    "repo_id": "chaoliangUNSW/MacJev-322M-4K-Laya",
+    "subfolder": "",
+    "revision": "92b182e653ebd8facd04ec9bddf6f63c4a7b7c22",
+    "url": "https://huggingface.co/chaoliangUNSW/MacJev-322M-4K-Laya/tree/92b182e653ebd8facd04ec9bddf6f63c4a7b7c22"
+  },
+  "license": {
+    "checkpoint": "Apache-2.0",
+    "base": "convaiinnovations/laya multilingual@1c5edc17 (Apache-2.0); encoder jhu-clsp/mmBERT-base (MIT)",
+    "declared_by": "Hugging Face model card metadata"
+  },
+  "runtime": {
+    "code": "laya==0.3.7 (same DecisionModel; upstream loads it with macjev.py, which never truncates)",
+    "trained_max_len": 4096,
+    "head_max_len": 1024,
+    "notes": "Community Mac-agent decision fine-tune (seed 0): last 6 encoder layers + head, 50k decisions (20k Mac trajectories), 1K->4K staged, per-type temperatures fitted on 6k calibration decisions."
+  },
+  "torch": {
+    "dir": "torch",
+    "files": {
+      "model.safetensors": "a1c8cb93485dc32a499cd221dfc9a534dd4e309f5c3ab908ea13d0190a203750",
+      "rl_agent_config.json": "b51ec5e0626a2d29c38a91c9d1dc642946e73cbd48c41e24c3c9390b32471803",
+      "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+    }
+  },
+  "onnx": {
+    "dir": "onnx",
+    "file": "model.onnx",
+    "opset": 18,
+    "produced_by": "eidolon-laya export-onnx (not exported for this model yet)"
+  }
+}

@@ -22,6 +22,7 @@ def _settings(args: argparse.Namespace) -> Settings:
         device=getattr(args, "device", None),
         threads=getattr(args, "threads", None),
         max_len=getattr(args, "max_len", None),
+        head_max_len=getattr(args, "head_max_len", None),
         model_dir=Path(args.model_dir).resolve() if getattr(args, "model_dir", None) else None,
     )
 
@@ -125,6 +126,9 @@ def _runtime_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--device", choices=DEVICES, help="torch backend only")
     p.add_argument("--threads", type=int, help="intra-op threads (0 = runtime default)")
     p.add_argument("--max-len", type=int, help="token budget per question (default: checkpoint's)")
+    p.add_argument(
+        "--head-max-len", type=int, help="budget for instruction + options (default: checkpoint's)"
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:

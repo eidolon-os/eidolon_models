@@ -1,5 +1,5 @@
 {
- "label": "mac-torch-mps",
+ "label": "macjev-322m-4k@mac-torch-mps",
  "url": "http://127.0.0.1:8771",
  "host": "mansondeMacBook-Pro.local",
  "machine": "arm64",
@@ -12,15 +12,15 @@
   },
   "threads": 6,
   "torch": "2.14.0",
-  "max_len": 1024,
-  "head_max_len": 256
+  "max_len": 4096,
+  "head_max_len": 1024
  },
  "n_cases": 182,
- "server_rss_mb": 1227,
+ "server_rss_mb": 1226,
  "laya": {
   "intent_ok": {
    "n": 182,
-   "acc": 0.6593
+   "acc": 0.7308
   },
   "device_ok": {
    "n": 160,
@@ -32,12 +32,12 @@
   },
   "e2e_ok": {
    "n": 140,
-   "acc": 0.4143
+   "acc": 0.4571
   },
   "control_detection": {
-   "precision": 0.9495,
-   "recall": 0.6714,
-   "f1": 0.7866
+   "precision": 0.9016,
+   "recall": 0.7857,
+   "f1": 0.8397
   }
  },
  "baseline": {
@@ -68,7 +68,7 @@
    "laya": {
     "intent_ok": {
      "n": 40,
-     "acc": 0.825
+     "acc": 0.925
     },
     "device_ok": {
      "n": 40,
@@ -80,12 +80,12 @@
     },
     "e2e_ok": {
      "n": 40,
-     "acc": 0.675
+     "acc": 0.75
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.825,
-     "f1": 0.9041
+     "recall": 0.925,
+     "f1": 0.961
     }
    },
    "baseline": {
@@ -116,7 +116,7 @@
    "laya": {
     "intent_ok": {
      "n": 20,
-     "acc": 0.1
+     "acc": 0.35
     },
     "device_ok": {
      "n": 20,
@@ -132,8 +132,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.1,
-     "f1": 0.1818
+     "recall": 0.35,
+     "f1": 0.5185
     }
    },
    "baseline": {
@@ -164,11 +164,11 @@
    "laya": {
     "intent_ok": {
      "n": 16,
-     "acc": 0.75
+     "acc": 0.9375
     },
     "device_ok": {
      "n": 16,
-     "acc": 0.6875
+     "acc": 0.625
     },
     "action_ok": {
      "n": 16,
@@ -176,12 +176,12 @@
     },
     "e2e_ok": {
      "n": 16,
-     "acc": 0.5625
+     "acc": 0.5
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.75,
-     "f1": 0.8571
+     "recall": 0.9375,
+     "f1": 0.9677
     }
    },
    "baseline": {
@@ -212,7 +212,7 @@
    "laya": {
     "intent_ok": {
      "n": 20,
-     "acc": 0.4
+     "acc": 0.5
     },
     "device_ok": {
      "n": 20,
@@ -260,7 +260,7 @@
    "laya": {
     "intent_ok": {
      "n": 22,
-     "acc": 0.8182
+     "acc": 0.5909
     },
     "device_ok": {
      "n": 0,
@@ -308,7 +308,7 @@
    "laya": {
     "intent_ok": {
      "n": 14,
-     "acc": 0.5
+     "acc": 0.5714
     },
     "device_ok": {
      "n": 14,
@@ -324,8 +324,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.5,
-     "f1": 0.6667
+     "recall": 0.5714,
+     "f1": 0.7273
     }
    },
    "baseline": {
@@ -356,7 +356,7 @@
    "laya": {
     "intent_ok": {
      "n": 20,
-     "acc": 0.7
+     "acc": 0.8
     },
     "device_ok": {
      "n": 20,
@@ -368,12 +368,12 @@
     },
     "e2e_ok": {
      "n": 20,
-     "acc": 0.45
+     "acc": 0.55
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.7,
-     "f1": 0.8235
+     "recall": 0.8,
+     "f1": 0.8889
     }
    },
    "baseline": {
@@ -404,11 +404,11 @@
    "laya": {
     "intent_ok": {
      "n": 20,
-     "acc": 0.85
+     "acc": 0.9
     },
     "device_ok": {
      "n": 20,
-     "acc": 0.9
+     "acc": 0.95
     },
     "action_ok": {
      "n": 20,
@@ -416,12 +416,12 @@
     },
     "e2e_ok": {
      "n": 20,
-     "acc": 0.65
+     "acc": 0.75
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.85,
-     "f1": 0.9189
+     "recall": 0.9,
+     "f1": 0.9474
     }
    },
    "baseline": {
@@ -517,9 +517,9 @@
      "acc": 0.2857
     },
     "control_detection": {
-     "precision": 1.0,
+     "precision": 0.6667,
      "recall": 0.2857,
-     "f1": 0.4444
+     "f1": 0.4
     }
    },
    "baseline": {
@@ -565,9 +565,9 @@
      "acc": 0.0
     },
     "control_detection": {
-     "precision": 1.0,
+     "precision": 0.5,
      "recall": 0.5,
-     "f1": 0.6667
+     "f1": 0.5
     }
    },
    "baseline": {
@@ -598,11 +598,11 @@
    "laya": {
     "intent_ok": {
      "n": 15,
-     "acc": 0.5333
+     "acc": 0.6
     },
     "device_ok": {
      "n": 15,
-     "acc": 0.0667
+     "acc": 0.0
     },
     "action_ok": {
      "n": 8,
@@ -614,8 +614,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.5333,
-     "f1": 0.6957
+     "recall": 0.6,
+     "f1": 0.75
     }
    },
    "baseline": {
@@ -646,7 +646,7 @@
    "laya": {
     "intent_ok": {
      "n": 15,
-     "acc": 0.6
+     "acc": 0.8
     },
     "device_ok": {
      "n": 15,
@@ -658,12 +658,12 @@
     },
     "e2e_ok": {
      "n": 10,
-     "acc": 0.7
+     "acc": 0.9
     },
     "control_detection": {
-     "precision": 1.0,
-     "recall": 0.8,
-     "f1": 0.8889
+     "precision": 0.9091,
+     "recall": 1.0,
+     "f1": 0.9524
     }
    },
    "baseline": {
@@ -790,7 +790,7 @@
    "laya": {
     "intent_ok": {
      "n": 8,
-     "acc": 0.75
+     "acc": 0.875
     },
     "device_ok": {
      "n": 8,
@@ -806,8 +806,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.75,
-     "f1": 0.8571
+     "recall": 0.875,
+     "f1": 0.9333
     }
    },
    "baseline": {
@@ -886,7 +886,7 @@
    "laya": {
     "intent_ok": {
      "n": 13,
-     "acc": 0.5385
+     "acc": 0.6923
     },
     "device_ok": {
      "n": 13,
@@ -898,12 +898,12 @@
     },
     "e2e_ok": {
      "n": 10,
-     "acc": 0.6
+     "acc": 0.7
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.7,
-     "f1": 0.8235
+     "recall": 0.9,
+     "f1": 0.9474
     }
    },
    "baseline": {
@@ -934,7 +934,7 @@
    "laya": {
     "intent_ok": {
      "n": 8,
-     "acc": 0.75
+     "acc": 0.875
     },
     "device_ok": {
      "n": 8,
@@ -950,8 +950,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.7143,
-     "f1": 0.8333
+     "recall": 0.8571,
+     "f1": 0.9231
     }
    },
    "baseline": {
@@ -982,7 +982,7 @@
    "laya": {
     "intent_ok": {
      "n": 20,
-     "acc": 0.85
+     "acc": 0.9
     },
     "device_ok": {
      "n": 20,
@@ -998,8 +998,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.85,
-     "f1": 0.9189
+     "recall": 0.9,
+     "f1": 0.9474
     }
    },
    "baseline": {
@@ -1030,7 +1030,7 @@
    "laya": {
     "intent_ok": {
      "n": 11,
-     "acc": 0.5455
+     "acc": 0.8182
     },
     "device_ok": {
      "n": 11,
@@ -1042,12 +1042,12 @@
     },
     "e2e_ok": {
      "n": 9,
-     "acc": 0.4444
+     "acc": 0.5556
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.5556,
-     "f1": 0.7143
+     "recall": 0.7778,
+     "f1": 0.875
     }
    },
    "baseline": {
@@ -1078,11 +1078,11 @@
    "laya": {
     "intent_ok": {
      "n": 23,
-     "acc": 0.7391
+     "acc": 0.8261
     },
     "device_ok": {
      "n": 23,
-     "acc": 0.8261
+     "acc": 0.8696
     },
     "action_ok": {
      "n": 21,
@@ -1094,8 +1094,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.7143,
-     "f1": 0.8333
+     "recall": 0.8095,
+     "f1": 0.8947
     }
    },
    "baseline": {
@@ -1126,7 +1126,7 @@
    "laya": {
     "intent_ok": {
      "n": 9,
-     "acc": 0.5556
+     "acc": 0.6667
     },
     "device_ok": {
      "n": 9,
@@ -1138,12 +1138,12 @@
     },
     "e2e_ok": {
      "n": 8,
-     "acc": 0.125
+     "acc": 0.25
     },
     "control_detection": {
-     "precision": 0.8333,
-     "recall": 0.625,
-     "f1": 0.7143
+     "precision": 0.8571,
+     "recall": 0.75,
+     "f1": 0.8
     }
    },
    "baseline": {
@@ -1174,7 +1174,7 @@
    "laya": {
     "intent_ok": {
      "n": 5,
-     "acc": 0.2
+     "acc": 0.6
     },
     "device_ok": {
      "n": 5,
@@ -1186,12 +1186,12 @@
     },
     "e2e_ok": {
      "n": 4,
-     "acc": 0.0
+     "acc": 0.25
     },
     "control_detection": {
-     "precision": 0.0,
-     "recall": 0.0,
-     "f1": 0.0
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6667
     }
    },
    "baseline": {
@@ -1222,7 +1222,7 @@
    "laya": {
     "intent_ok": {
      "n": 22,
-     "acc": 0.8182
+     "acc": 0.5909
     },
     "device_ok": {
      "n": 0,
@@ -1270,7 +1270,7 @@
    "laya": {
     "intent_ok": {
      "n": 3,
-     "acc": 0.6667
+     "acc": 1.0
     },
     "device_ok": {
      "n": 3,
@@ -1286,8 +1286,8 @@
     },
     "control_detection": {
      "precision": 1.0,
-     "recall": 0.6667,
-     "f1": 0.8
+     "recall": 1.0,
+     "f1": 1.0
     }
    },
    "baseline": {
@@ -1316,31 +1316,32 @@
   }
  },
  "intent_confusion": {
-  "控制->控制": 94,
-  "控制->无关": 46,
-  "无关->控制": 4,
-  "无关->无关": 18,
-  "查询->控制": 1,
-  "查询->无关": 11,
-  "查询->查询": 8
+  "控制->控制": 110,
+  "控制->无关": 30,
+  "无关->控制": 8,
+  "无关->无关": 13,
+  "无关->查询": 1,
+  "查询->控制": 4,
+  "查询->无关": 6,
+  "查询->查询": 10
  },
  "calibration": {
   "intent": {
    "0.0": {
     "coverage": 1.0,
-    "acc": 0.6593
+    "acc": 0.7308
    },
    "0.5": {
-    "coverage": 0.956,
-    "acc": 0.6724
+    "coverage": 0.6923,
+    "acc": 0.8413
    },
    "0.7": {
-    "coverage": 0.5714,
-    "acc": 0.7212
+    "coverage": 0.1319,
+    "acc": 1.0
    },
    "0.9": {
-    "coverage": 0.1813,
-    "acc": 0.8485
+    "coverage": 0.0,
+    "acc": 0.0
    }
   },
   "device": {
@@ -1349,35 +1350,35 @@
     "acc": 0.7125
    },
    "0.5": {
-    "coverage": 0.9,
-    "acc": 0.7639
+    "coverage": 0.4938,
+    "acc": 0.9241
    },
    "0.7": {
-    "coverage": 0.8187,
-    "acc": 0.8168
+    "coverage": 0.2125,
+    "acc": 1.0
    },
    "0.9": {
-    "coverage": 0.7,
-    "acc": 0.875
+    "coverage": 0.0187,
+    "acc": 1.0
    }
   }
  },
  "latency_ms": {
-  "client_p50": 81.9,
-  "client_p95": 90.9,
-  "client_mean": 83.6,
-  "server_p50": 76.0,
-  "forward_p50": 75.4,
+  "client_p50": 83.4,
+  "client_p95": 142.2,
+  "client_mean": 90.9,
+  "server_p50": 77.7,
+  "forward_p50": 77.0,
   "by_device_options": {
    "20": {
     "n": 162,
-    "client_p50": 81.6,
+    "client_p50": 83.1,
     "tokens_mean": 477
    },
    "38": {
     "n": 20,
-    "client_p50": 85.9,
-    "tokens_mean": 485
+    "client_p50": 142.2,
+    "tokens_mean": 659
    }
   }
  }

@@ -1,7 +1,8 @@
 # 智能家居控制决策评测
 
 测 laya 在智能家居语音 / 文字指令上的两件事：**是不是控制命令**，**控制哪台设备**（外加做什么动作），
-以及在 Mac 上各后端的延迟与内存。结果与结论见 [REPORT.md](REPORT.md)。
+以及在 Mac 上各后端的延迟与内存。结果与结论见 [REPORT.md](REPORT.md)；
+与社区微调模型（MacJev、laya-cn-a）的对比与后续方案见 [COMPARISON.md](COMPARISON.md)。
 
 ```text
 smart-home/
@@ -19,6 +20,7 @@ smart-home/
 │   └── 09-device-not-in-home    家里没有该设备
 ├── run_eval.py            调 /v1/systemone 跑一遍（含规则基线），写 results/<label>/
 ├── make_report.py         汇总 results/ → REPORT.md（开头放 conclusions.md）
+├── compare_models.py      多个 checkpoint 对比 → COMPARISON.md（开头放 comparison_conclusions.md）
 ├── run_all.sh             起服务并评测：默认 mac-torch-mps；也可指定 mac-torch-cpu / mac-onnx-cpu(-t6)
 ├── conclusions.md         人工撰写的结论
 └── results/               每次运行的 predictions.jsonl 与 summary.json

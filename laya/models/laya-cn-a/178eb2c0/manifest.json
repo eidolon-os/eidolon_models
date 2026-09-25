@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "name": "laya-cn-a",
+  "source": {
+    "hub": "huggingface",
+    "repo_id": "Adkid/laya-cn-a",
+    "subfolder": "",
+    "revision": "178eb2c054e2fb7064a05f17447989309bbe79a8",
+    "url": "https://huggingface.co/Adkid/laya-cn-a/tree/178eb2c054e2fb7064a05f17447989309bbe79a8"
+  },
+  "license": {
+    "checkpoint": "Apache-2.0",
+    "base": "convaiinnovations/laya multilingual@1c5edc17 (Apache-2.0); training data MASSIVE, CrossWOZ, T2Ranking — see upstream DATA_SOURCES.md",
+    "declared_by": "Hugging Face model card metadata"
+  },
+  "runtime": {
+    "code": "laya==0.3.7 (same DecisionModel; upstream loads it with its own predict.py)",
+    "trained_max_len": 1024,
+    "head_max_len": 512,
+    "notes": "Community Chinese intent post-training (V3 seed42): last 8 encoder layers + decision head, 2 epochs on 95,708 human-labelled items. Uncalibrated."
+  },
+  "torch": {
+    "dir": "torch",
+    "files": {
+      "model.safetensors": "f24d658960f88c45497bc71064db57b9046bedd77f1f56c773b5e0041008d6a7",
+      "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+    },
+    "generated": {
+      "rl_agent_config.json": {
+        "encoder": "jhu-clsp/mmBERT-base",
+        "head_layers": 2,
+        "act_costs": {"escalate": 0.5},
+        "max_len": 1024,
+        "head_max_len": 512,
+        "temperature": [1.0, 1.0, 1.0],
+        "temperature_by_options": {},
+        "model_name": "laya-cn-a",
+        "_generated_because": "upstream ships no rl_agent_config.json; values reproduce its predict.py: DecisionModel(encoder, 2, 2), build_sequence(..., 1024, 512), plain softmax without temperature"
+      }
+    }
+  },
+  "onnx": {
+    "dir": "onnx",
+    "file": "model.onnx",
+    "opset": 18,
+    "produced_by": "eidolon-laya export-onnx (not exported for this model yet)"
+  }
+}

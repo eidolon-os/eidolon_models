@@ -49,12 +49,15 @@ class DecisionEngine:
         cfg: ModelConfig,
         *,
         max_len: int | None = None,
+        head_max_len: int | None = None,
         name: str = "laya",
     ):
         self.backend = backend
         self.tokenizer = tokenizer
         self.cfg = cfg
         self.max_len = max_len or cfg.max_len
+        # Budget for instruction + options; raise it for questions with many options.
+        self.head_max_len = head_max_len or cfg.head_max_len
         self.name = name
 
     def predict(
@@ -70,11 +73,11 @@ class DecisionEngine:
             check_question(qid, qdef)
             q = to_internal(qdef)
             seq, markers, cut = build_sequence(
-                self.tokenizer, state, q, self.max_len, self.cfg.head_max_len, truncate_left
+                self.tokenizer, state, q, self.max_len, self.head_max_len, truncate_left
             )
             if len(markers) != len(render_options(q)):
                 raise ValueError(
-                    f"question {qid!r} options exceed head_max_len={self.cfg.head_max_len}"
+                    f"question {qid!r} options exceed head_max_len={self.head_max_len}"
                 )
             ids.append(qid)
             internals.append(q)
@@ -98,7 +101,7 @@ class DecisionEngine:
         return {
             **self.backend.describe(),
             "max_len": self.max_len,
-            "head_max_len": self.cfg.head_max_len,
+            "head_max_len": self.head_max_len,
         }
 
 
@@ -124,6 +127,7 @@ def load_engine(settings: Settings, log=print) -> tuple[DecisionEngine, Manifest
         Tokenizer(manifest.tokenizer_dir),
         ModelConfig.from_dict(manifest.model_config()),
         max_len=settings.max_len,
+        head_max_len=settings.head_max_len,
         name=manifest.name,
     )
     log(
