@@ -1,0 +1,1375 @@
+{
+ "label": "decider-0.8b@mac-mps",
+ "url": "http://127.0.0.1:8773",
+ "host": "mansondeMacBook-Pro.local",
+ "machine": "arm64",
+ "server": {
+  "model": "decider-0.8b@mac-mps"
+ },
+ "n_cases": 182,
+ "server_rss_mb": 537,
+ "laya": {
+  "intent_ok": {
+   "n": 182,
+   "acc": 0.8022
+  },
+  "device_ok": {
+   "n": 160,
+   "acc": 0.8187
+  },
+  "action_ok": {
+   "n": 123,
+   "acc": 0.8537
+  },
+  "e2e_ok": {
+   "n": 140,
+   "acc": 0.6357
+  },
+  "control_detection": {
+   "precision": 0.9828,
+   "recall": 0.8143,
+   "f1": 0.8906
+  }
+ },
+ "baseline": {
+  "intent_ok": {
+   "n": 182,
+   "acc": 0.7637
+  },
+  "device_ok": {
+   "n": 160,
+   "acc": 0.7125
+  },
+  "action_ok": {
+   "n": 123,
+   "acc": 0.7805
+  },
+  "e2e_ok": {
+   "n": 140,
+   "acc": 0.6
+  },
+  "control_detection": {
+   "precision": 0.9717,
+   "recall": 0.7357,
+   "f1": 0.8374
+  }
+ },
+ "by_scenario": {
+  "01-explicit-control": {
+   "laya": {
+    "intent_ok": {
+     "n": 40,
+     "acc": 0.975
+    },
+    "device_ok": {
+     "n": 40,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 40,
+     "acc": 0.975
+    },
+    "e2e_ok": {
+     "n": 40,
+     "acc": 0.95
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.975,
+     "f1": 0.9873
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 40,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 40,
+     "acc": 0.925
+    },
+    "action_ok": {
+     "n": 40,
+     "acc": 0.975
+    },
+    "e2e_ok": {
+     "n": 40,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   }
+  },
+  "02-implicit-intent": {
+   "laya": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.25
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.75
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.25
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.15
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.25,
+     "f1": 0.4
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.05
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.15
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.05
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.05
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.05,
+     "f1": 0.0952
+    }
+   }
+  },
+  "03-room-disambiguation": {
+   "laya": {
+    "intent_ok": {
+     "n": 16,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 16,
+     "acc": 0.9375
+    },
+    "action_ok": {
+     "n": 16,
+     "acc": 0.9375
+    },
+    "e2e_ok": {
+     "n": 16,
+     "acc": 0.875
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 16,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 16,
+     "acc": 0.4375
+    },
+    "action_ok": {
+     "n": 16,
+     "acc": 0.875
+    },
+    "e2e_ok": {
+     "n": 16,
+     "acc": 0.375
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   }
+  },
+  "04-status-query": {
+   "laya": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   }
+  },
+  "05-non-command": {
+   "laya": {
+    "intent_ok": {
+     "n": 22,
+     "acc": 0.5455
+    },
+    "device_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 22,
+     "acc": 0.7727
+    },
+    "device_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   }
+  },
+  "06-multi-device-scene": {
+   "laya": {
+    "intent_ok": {
+     "n": 14,
+     "acc": 0.6429
+    },
+    "device_ok": {
+     "n": 14,
+     "acc": 0.1429
+    },
+    "action_ok": {
+     "n": 7,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 14,
+     "acc": 0.0714
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.6429,
+     "f1": 0.7826
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 14,
+     "acc": 0.7857
+    },
+    "device_ok": {
+     "n": 14,
+     "acc": 0.9286
+    },
+    "action_ok": {
+     "n": 7,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 14,
+     "acc": 0.7143
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.7857,
+     "f1": 0.88
+    }
+   }
+  },
+  "07-asr-noise": {
+   "laya": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.8
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.75
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.8,
+     "f1": 0.8889
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.3
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.35
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.8
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.2
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.3,
+     "f1": 0.4615
+    }
+   }
+  },
+  "08-large-inventory": {
+   "laya": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.95,
+     "f1": 0.9744
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.9
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   }
+  },
+  "09-device-not-in-home": {
+   "laya": {
+    "intent_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 10,
+     "acc": 0.0
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "device_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.9,
+     "f1": 0.9474
+    }
+   }
+  }
+ },
+ "by_category": {
+  "厨房电器": {
+   "laya": {
+    "intent_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "device_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 7,
+     "acc": 0.8571
+    },
+    "e2e_ok": {
+     "n": 7,
+     "acc": 0.8571
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.8571,
+     "f1": 0.9231
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 10,
+     "acc": 0.8
+    },
+    "device_ok": {
+     "n": 10,
+     "acc": 0.8
+    },
+    "action_ok": {
+     "n": 7,
+     "acc": 0.8571
+    },
+    "e2e_ok": {
+     "n": 7,
+     "acc": 0.7143
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.7143,
+     "f1": 0.8333
+    }
+   }
+  },
+  "园艺水路": {
+   "laya": {
+    "intent_ok": {
+     "n": 3,
+     "acc": 0.6667
+    },
+    "device_ok": {
+     "n": 3,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 2,
+     "acc": 0.5
+    },
+    "e2e_ok": {
+     "n": 2,
+     "acc": 0.5
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6667
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 3,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 3,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   }
+  },
+  "多设备/场景": {
+   "laya": {
+    "intent_ok": {
+     "n": 15,
+     "acc": 0.6667
+    },
+    "device_ok": {
+     "n": 15,
+     "acc": 0.1333
+    },
+    "action_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 15,
+     "acc": 0.0667
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.6667,
+     "f1": 0.8
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 15,
+     "acc": 0.7333
+    },
+    "device_ok": {
+     "n": 15,
+     "acc": 0.9333
+    },
+    "action_ok": {
+     "n": 8,
+     "acc": 0.875
+    },
+    "e2e_ok": {
+     "n": 15,
+     "acc": 0.6667
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.7333,
+     "f1": 0.8462
+    }
+   }
+  },
+  "安防门禁": {
+   "laya": {
+    "intent_ok": {
+     "n": 15,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 15,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 15,
+     "acc": 0.9333
+    },
+    "device_ok": {
+     "n": 15,
+     "acc": 0.9333
+    },
+    "action_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.9,
+     "f1": 0.9474
+    }
+   }
+  },
+  "宠物": {
+   "laya": {
+    "intent_ok": {
+     "n": 5,
+     "acc": 0.2
+    },
+    "device_ok": {
+     "n": 5,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 4,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 4,
+     "acc": 0.0
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 5,
+     "acc": 0.6
+    },
+    "device_ok": {
+     "n": 5,
+     "acc": 0.6
+    },
+    "action_ok": {
+     "n": 4,
+     "acc": 0.5
+    },
+    "e2e_ok": {
+     "n": 4,
+     "acc": 0.5
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6667
+    }
+   }
+  },
+  "家中没有": {
+   "laya": {
+    "intent_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 10,
+     "acc": 0.0
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "device_ok": {
+     "n": 10,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.9,
+     "f1": 0.9474
+    }
+   }
+  },
+  "影音娱乐": {
+   "laya": {
+    "intent_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 8,
+     "acc": 0.75
+    },
+    "device_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 8,
+     "acc": 0.875
+    },
+    "e2e_ok": {
+     "n": 8,
+     "acc": 0.75
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.8571
+    }
+   }
+  },
+  "插座开关": {
+   "laya": {
+    "intent_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 2,
+     "acc": 0.0
+    },
+    "action_ok": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "e2e_ok": {
+     "n": 2,
+     "acc": 0.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   }
+  },
+  "清洁电器": {
+   "laya": {
+    "intent_ok": {
+     "n": 13,
+     "acc": 0.9231
+    },
+    "device_ok": {
+     "n": 13,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.9,
+     "f1": 0.9474
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 13,
+     "acc": 0.8462
+    },
+    "device_ok": {
+     "n": 13,
+     "acc": 0.8462
+    },
+    "action_ok": {
+     "n": 10,
+     "acc": 0.9
+    },
+    "e2e_ok": {
+     "n": 10,
+     "acc": 0.8
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.8,
+     "f1": 0.8889
+    }
+   }
+  },
+  "热水卫浴": {
+   "laya": {
+    "intent_ok": {
+     "n": 8,
+     "acc": 0.875
+    },
+    "device_ok": {
+     "n": 8,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 7,
+     "acc": 0.8571
+    },
+    "e2e_ok": {
+     "n": 7,
+     "acc": 0.8571
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.8571,
+     "f1": 0.9231
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 8,
+     "acc": 0.625
+    },
+    "device_ok": {
+     "n": 8,
+     "acc": 0.625
+    },
+    "action_ok": {
+     "n": 7,
+     "acc": 0.5714
+    },
+    "e2e_ok": {
+     "n": 7,
+     "acc": 0.4286
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5714,
+     "f1": 0.7273
+    }
+   }
+  },
+  "照明": {
+   "laya": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.9
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.95
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.85
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.95,
+     "f1": 0.9744
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 20,
+     "acc": 0.75
+    },
+    "device_ok": {
+     "n": 20,
+     "acc": 0.55
+    },
+    "action_ok": {
+     "n": 20,
+     "acc": 0.9
+    },
+    "e2e_ok": {
+     "n": 20,
+     "acc": 0.55
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.8571
+    }
+   }
+  },
+  "空气环境": {
+   "laya": {
+    "intent_ok": {
+     "n": 11,
+     "acc": 0.7273
+    },
+    "device_ok": {
+     "n": 11,
+     "acc": 0.9091
+    },
+    "action_ok": {
+     "n": 9,
+     "acc": 0.6667
+    },
+    "e2e_ok": {
+     "n": 9,
+     "acc": 0.6667
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.6667,
+     "f1": 0.8
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 11,
+     "acc": 0.6364
+    },
+    "device_ok": {
+     "n": 11,
+     "acc": 0.6364
+    },
+    "action_ok": {
+     "n": 9,
+     "acc": 0.6667
+    },
+    "e2e_ok": {
+     "n": 9,
+     "acc": 0.5556
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5556,
+     "f1": 0.7143
+    }
+   }
+  },
+  "空调温控": {
+   "laya": {
+    "intent_ok": {
+     "n": 23,
+     "acc": 0.8261
+    },
+    "device_ok": {
+     "n": 23,
+     "acc": 0.9565
+    },
+    "action_ok": {
+     "n": 21,
+     "acc": 0.8095
+    },
+    "e2e_ok": {
+     "n": 21,
+     "acc": 0.7619
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.8095,
+     "f1": 0.8947
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 23,
+     "acc": 0.8261
+    },
+    "device_ok": {
+     "n": 23,
+     "acc": 0.4783
+    },
+    "action_ok": {
+     "n": 21,
+     "acc": 0.619
+    },
+    "e2e_ok": {
+     "n": 21,
+     "acc": 0.2857
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.8095,
+     "f1": 0.8947
+    }
+   }
+  },
+  "窗帘遮阳": {
+   "laya": {
+    "intent_ok": {
+     "n": 9,
+     "acc": 0.6667
+    },
+    "device_ok": {
+     "n": 9,
+     "acc": 0.7778
+    },
+    "action_ok": {
+     "n": 8,
+     "acc": 0.75
+    },
+    "e2e_ok": {
+     "n": 8,
+     "acc": 0.625
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.625,
+     "f1": 0.7692
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 9,
+     "acc": 0.5556
+    },
+    "device_ok": {
+     "n": 9,
+     "acc": 0.5556
+    },
+    "action_ok": {
+     "n": 8,
+     "acc": 0.75
+    },
+    "e2e_ok": {
+     "n": 8,
+     "acc": 0.5
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6667
+    }
+   }
+  },
+  "能源": {
+   "laya": {
+    "intent_ok": {
+     "n": 5,
+     "acc": 0.6
+    },
+    "device_ok": {
+     "n": 5,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 4,
+     "acc": 0.75
+    },
+    "e2e_ok": {
+     "n": 4,
+     "acc": 0.5
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6667
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 5,
+     "acc": 0.4
+    },
+    "device_ok": {
+     "n": 5,
+     "acc": 0.4
+    },
+    "action_ok": {
+     "n": 4,
+     "acc": 0.75
+    },
+    "e2e_ok": {
+     "n": 4,
+     "acc": 0.5
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6667
+    }
+   }
+  },
+  "非设备": {
+   "laya": {
+    "intent_ok": {
+     "n": 22,
+     "acc": 0.5455
+    },
+    "device_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 22,
+     "acc": 0.7727
+    },
+    "device_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "action_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "e2e_ok": {
+     "n": 0,
+     "acc": null
+    },
+    "control_detection": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   }
+  },
+  "风扇": {
+   "laya": {
+    "intent_ok": {
+     "n": 3,
+     "acc": 1.0
+    },
+    "device_ok": {
+     "n": 3,
+     "acc": 1.0
+    },
+    "action_ok": {
+     "n": 3,
+     "acc": 0.0
+    },
+    "e2e_ok": {
+     "n": 3,
+     "acc": 0.0
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "baseline": {
+    "intent_ok": {
+     "n": 3,
+     "acc": 0.6667
+    },
+    "device_ok": {
+     "n": 3,
+     "acc": 0.6667
+    },
+    "action_ok": {
+     "n": 3,
+     "acc": 0.6667
+    },
+    "e2e_ok": {
+     "n": 3,
+     "acc": 0.6667
+    },
+    "control_detection": {
+     "precision": 1.0,
+     "recall": 0.6667,
+     "f1": 0.8
+    }
+   }
+  }
+ },
+ "intent_confusion": {
+  "控制->控制": 114,
+  "控制->无关": 16,
+  "控制->查询": 10,
+  "无关->控制": 2,
+  "无关->无关": 12,
+  "无关->查询": 8,
+  "查询->查询": 20
+ },
+ "calibration": {
+  "intent": {
+   "0.0": {
+    "coverage": 1.0,
+    "acc": 0.8022
+   },
+   "0.5": {
+    "coverage": 0.9505,
+    "acc": 0.8266
+   },
+   "0.7": {
+    "coverage": 0.7308,
+    "acc": 0.8872
+   },
+   "0.9": {
+    "coverage": 0.4121,
+    "acc": 0.9867
+   }
+  },
+  "device": {
+   "0.0": {
+    "coverage": 1.0,
+    "acc": 0.8187
+   },
+   "0.5": {
+    "coverage": 0.85,
+    "acc": 0.8897
+   },
+   "0.7": {
+    "coverage": 0.8,
+    "acc": 0.8984
+   },
+   "0.9": {
+    "coverage": 0.6375,
+    "acc": 0.9804
+   }
+  }
+ },
+ "latency_ms": {
+  "client_p50": 573.0,
+  "client_p95": 621.9,
+  "client_mean": 579.7,
+  "server_p50": null,
+  "forward_p50": null,
+  "by_device_options": {
+   "20": {
+    "n": 162,
+    "client_p50": 572.3,
+    "tokens_mean": 506
+   },
+   "38": {
+    "n": 20,
+    "client_p50": 621.7,
+    "tokens_mean": 732
+   }
+  }
+ }
+}

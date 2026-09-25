@@ -19,6 +19,7 @@ import platform
 import statistics
 import subprocess
 import time
+import urllib.error
 import urllib.request
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -283,8 +284,10 @@ def metrics(rows: list[dict], score_key: str) -> dict:
     return out
 
 
-def pct(values: list[float], q: float) -> float:
+def pct(values: list[float], q: float) -> float | None:
     s = sorted(values)
+    if not s:  # servers other than ours report no server-side timings
+        return None
     return round(s[min(len(s) - 1, int(round(q * (len(s) - 1))))], 1)
 
 
@@ -298,7 +301,10 @@ def main() -> int:
 
     homes = load_homes()
     cases = load_cases(set(args.scenarios.split(",")) if args.scenarios else None)
-    info = get(args.url, "/v1/info")
+    try:
+        info = get(args.url, "/v1/info")  # our service; other Jev-protocol servers lack it
+    except urllib.error.HTTPError:
+        info = {}
     dq = {name: device_question(h) for name, h in homes.items()}
     for _ in range(3):  # 预热
         post(
@@ -342,10 +348,10 @@ def main() -> int:
                 "n_device_options": len(dq[case["home"]]["criteria"]),
                 "latency_ms": {
                     "client": round(wall, 1),
-                    "server": res["timing_ms"]["total"],
-                    "forward": res["timing_ms"]["forward"],
+                    "server": res.get("timing_ms", {}).get("total"),
+                    "forward": res.get("timing_ms", {}).get("forward"),
                 },
-                "input_tokens": res["usage"]["input_tokens"],
+                "input_tokens": res.get("usage", {}).get("input_tokens"),
             }
         )
 
@@ -381,7 +387,7 @@ def main() -> int:
         "url": args.url,
         "host": platform.node(),
         "machine": platform.machine(),
-        "server": info.get("engine"),
+        "server": info.get("engine") or {"model": args.label},
         "n_cases": len(rows),
         "server_rss_mb": (
             int(subprocess.check_output(["ps", "-o", "rss=", "-p", str(args.server_pid)])) // 1024
@@ -404,8 +410,8 @@ def main() -> int:
             "client_p50": pct(lat, 0.5),
             "client_p95": pct(lat, 0.95),
             "client_mean": round(statistics.mean(lat), 1),
-            "server_p50": pct([r["latency_ms"]["server"] for r in rows], 0.5),
-            "forward_p50": pct([r["latency_ms"]["forward"] for r in rows], 0.5),
+            "server_p50": pct([r["latency_ms"]["server"] for r in rows if r["latency_ms"]["server"]], 0.5),
+            "forward_p50": pct([r["latency_ms"]["forward"] for r in rows if r["latency_ms"]["forward"]], 0.5),
             "by_device_options": {
                 str(k): {
                     "n": len(v),

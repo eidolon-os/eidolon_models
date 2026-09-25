@@ -14,10 +14,13 @@ import hashlib
 import json
 import os
 import shutil
+import urllib.parse
+import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
 EXPORT_RECORD = "export.json"
+MODELSCOPE_ENDPOINT = "https://www.modelscope.cn"
 
 
 def sha256_file(path: Path, chunk: int = 1 << 20) -> str:
@@ -43,6 +46,11 @@ class Manifest:
     @property
     def name(self) -> str:
         return self.raw["name"]
+
+    @property
+    def hub(self) -> str:
+        """``huggingface`` (default) or ``modelscope``: where the pinned revision lives."""
+        return self.raw["source"].get("hub") or "huggingface"
 
     @property
     def repo_id(self) -> str:
@@ -145,9 +153,40 @@ def verify_onnx(manifest: Manifest, *, checksums: bool = True) -> list[str]:
 def fetch_torch(
     manifest: Manifest, *, endpoint: str | None = None, use_xet: bool | None = None, log=print
 ) -> Path:
-    """Download the pinned revision and copy it into ``torch/``, checksum-verified.
+    """Download the pinned revision and copy it into ``torch/``, checksum-verified."""
+    if not verify_torch(manifest):
+        log(f"already present and verified: {manifest.torch_dir}")
+        return manifest.torch_dir
+    for rel, content in manifest.generated_files.items():
+        dst = manifest.torch_dir / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_text(json.dumps(content, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        log(f"  {rel} generated from manifest")
+    if manifest.hub == "modelscope":
+        _fetch_modelscope(manifest, endpoint=endpoint, log=log)
+    elif manifest.hub == "huggingface":
+        _fetch_huggingface(manifest, endpoint=endpoint, use_xet=use_xet, log=log)
+    else:
+        raise ValueError(f"unknown hub {manifest.hub!r} in {manifest.root / 'manifest.json'}")
+    return manifest.torch_dir
 
-    Downloads land in the ordinary Hugging Face cache first, so a machine that
+
+def _install(src: Path, rel: str, expected: str, manifest: Manifest, log) -> None:
+    dst = manifest.torch_dir / rel
+    if dst.is_file() and sha256_file(dst) == expected:
+        return
+    actual = sha256_file(src)
+    if actual != expected:
+        raise RuntimeError(f"{rel}: sha256 {actual} does not match manifest {expected}")
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    part = dst.with_name(dst.name + ".part")
+    shutil.copyfile(src, part)  # the HF cache holds symlinks into blobs; copy the bytes
+    part.replace(dst)
+    log(f"  {rel} ok")
+
+
+def _fetch_huggingface(manifest: Manifest, *, endpoint, use_xet, log) -> None:
+    """Downloads land in the ordinary Hugging Face cache first, so a machine that
     already has the revision does not download it again.
 
     Behind a mirror (e.g. hf-mirror.com) Xet storage still dials Hugging Face's
@@ -165,9 +204,6 @@ def fetch_torch(
         os.environ["HF_ENDPOINT"] = endpoint
     from huggingface_hub import snapshot_download  # after the env is set: read at import
 
-    if not verify_torch(manifest):
-        log(f"already present and verified: {manifest.torch_dir}")
-        return manifest.torch_dir
     log(
         f"fetching {manifest.repo_id}@{manifest.revision[:8]}/{manifest.subfolder} "
         f"via {endpoint or 'https://huggingface.co'} (xet={'on' if use_xet else 'off'})"
@@ -181,21 +217,36 @@ def fetch_torch(
         )
     )
     snapshot = snapshot / sub if sub else snapshot
-    for rel, content in manifest.generated_files.items():
-        dst = manifest.torch_dir / rel
-        dst.parent.mkdir(parents=True, exist_ok=True)
-        dst.write_text(json.dumps(content, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        log(f"  {rel} generated from manifest")
     for rel, expected in manifest.torch_files.items():
-        src, dst = snapshot / rel, manifest.torch_dir / rel
+        _install(snapshot / rel, rel, expected, manifest, log)
+
+
+def _fetch_modelscope(manifest: Manifest, *, endpoint, log) -> None:
+    """Plain HTTP against ModelScope's file API; each file streams straight into ``torch/``.
+
+    No SDK: ``modelscope`` pulls in a lot, and the API is one GET per file pinned to a
+    full commit id (``/api/v1/models/<repo>/repo?Revision=<commit>&FilePath=<path>``).
+    """
+    endpoint = endpoint or os.environ.get("MODELSCOPE_ENDPOINT") or MODELSCOPE_ENDPOINT
+    endpoint = endpoint.rstrip("/")
+    sub = manifest.subfolder
+    log(f"fetching {manifest.repo_id}@{manifest.revision[:8]}/{sub} via {endpoint}")
+    for rel, expected in manifest.torch_files.items():
+        dst = manifest.torch_dir / rel
         if dst.is_file() and sha256_file(dst) == expected:
             continue
-        actual = sha256_file(src)
-        if actual != expected:
-            raise RuntimeError(f"{rel}: sha256 {actual} does not match manifest {expected}")
+        path = f"{sub}/{rel}" if sub else rel
+        url = (
+            f"{endpoint}/api/v1/models/{manifest.repo_id}/repo"
+            f"?Revision={manifest.revision}&FilePath={urllib.parse.quote(path)}"
+        )
         dst.parent.mkdir(parents=True, exist_ok=True)
         part = dst.with_name(dst.name + ".part")
-        shutil.copyfile(src, part)  # the cache holds symlinks into blobs; copy the bytes
+        with urllib.request.urlopen(url, timeout=60) as resp, part.open("wb") as out:
+            shutil.copyfileobj(resp, out, 1 << 20)
+        actual = sha256_file(part)
+        if actual != expected:
+            part.unlink()
+            raise RuntimeError(f"{rel}: sha256 {actual} does not match manifest {expected}")
         part.replace(dst)
         log(f"  {rel} ok")
-    return manifest.torch_dir

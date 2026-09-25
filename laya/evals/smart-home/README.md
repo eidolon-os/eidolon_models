@@ -2,7 +2,7 @@
 
 测 laya 在智能家居语音 / 文字指令上的两件事：**是不是控制命令**，**控制哪台设备**（外加做什么动作），
 以及在 Mac 上各后端的延迟与内存。结果与结论见 [REPORT.md](REPORT.md)；
-与社区微调模型（MacJev、laya-cn-a）的对比与后续方案见 [COMPARISON.md](COMPARISON.md)。
+与社区微调模型（MacJev、laya-cn-a、laya-zh-v2）和两个 Qwen-0.8B 小模型（decider、OpenSparX）的对比与后续方案见 [COMPARISON.md](COMPARISON.md)。
 
 ```text
 smart-home/
@@ -21,6 +21,7 @@ smart-home/
 ├── run_eval.py            调 /v1/systemone 跑一遍（含规则基线），写 results/<label>/
 ├── make_report.py         汇总 results/ → REPORT.md（开头放 conclusions.md）
 ├── compare_models.py      多个 checkpoint 对比 → COMPARISON.md（开头放 comparison_conclusions.md）
+├── adapters/              把不是 laya 的模型包成同一个 Jev 协议（opensparx_serve.py）
 ├── run_all.sh             起服务并评测：默认 mac-torch-mps；也可指定 mac-torch-cpu / mac-onnx-cpu(-t6)
 ├── conclusions.md         人工撰写的结论
 └── results/               每次运行的 predictions.jsonl 与 summary.json

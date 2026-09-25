@@ -1,6 +1,6 @@
 # 智能家居评测：不同 checkpoint 对比
 
-同一套 182 条用例、同样的三道题与问法、同一台 Mac（torch + MPS）。模型：laya-multilingual、laya-multilingual·head1024、laya-cn-a、MacJev-322M-4K。
+同一套 182 条用例、同样的三道题与问法、同一台 Mac（torch + MPS）。模型：laya-multilingual、laya-multilingual·head1024、laya-cn-a、MacJev-322M-4K、laya-zh-v2、decider-0.8B、OpenSparX-cabin-0.8B。
 
 ## 结论
 
@@ -21,10 +21,38 @@
 6. 速度相同：四个模型结构一样，MPS 上每条（3 道题）p50 约 82 ms；头部预算放大后 p95 从 91 ms 升到约 143 ms
    （38 个选项的用例不再被截断、序列变长）。
 
+## 第二轮：中文 laya 微调与两个 Qwen-0.8B 小模型（2026-09-25 晚）
+
+同一套 182 条、同样三道题，再加三个底座：魔搭上的 **laya-zh-v2**（中文分诊 + 客服 RLCD 微调）、
+**decider-0.8B**（Qwen3.5-0.8B-Base，在答案槽读字母 logit，训练数据全英文）、
+**OpenSparX-cabin-0.8B**（Qwen3.5-0.8B + LoRA + pointer head，中文车控合成数据）。后两个不是 laya，
+用各自作者的推理代码接进同一个 Jev 协议（decider 用作者自带的服务；OpenSparX 只有 `inference.py`，
+包成 [adapters/opensparx_serve.py](adapters/opensparx_serve.py)，分支预算从 256 放到 2048 才装得下 38 台设备）。
+
+7. **laya-zh-v2 没有带来质变**：端到端 44%，介于官方（41%）和 MacJev（46%）之间；意图 +18 / −8，
+   隐含意图仍 0%。它的一个好处是意图校准最好：p ≥ 0.9 时覆盖 37%、准确 97%。
+8. **两个 Qwen-0.8B 零样本都超过了规则基线**：decider **64%**、OpenSparX **65%**，比最好的 laya 检查点高 18–19 个点，
+   分房间 88% / 69%、38 个选项的大户型 90% / 90%、状态查询意图 100% / 60%。
+   **decider 是干净的赢**：意图 +38 / −12、设备 +19 / −2；校准最好——设备 p ≥ 0.9 覆盖 64%、准确 98%，意图 41% / 99%。
+   **OpenSparX 的高分有水分**：它把几乎所有话都判成"控制"（非命令场景意图 0%，控制召回 100% 但精确率 84%），
+   隐含意图场景的"100%"只是因为它对什么都说控制；设备题 +18 / −13，弄坏的不少。
+9. **两个出口还是没人会用**：家里没有该设备 0% / 0%，多设备 14% / 21%。换底座不解决这个问题，只能靠数据。
+10. **代价是延迟**：MPS 上 decider fp16 p50 **573 ms**，OpenSparX fp32（transformers 5.8 没有 DeltaNet 快速路径）**1.1 s**，
+    laya 82 ms。0.8B 的 Qwen 在 RK3588 上还没测；按本地 LLM 的经验（见 memory：解码 5.49 tok/s 是更大的模型），
+    约 500 token 的 prefill 大概率在 1–3 s 量级，需要实测 RKLLM 的 prefill 吞吐才能定。
+11. **互补组合**：OpenSparX 意图 + decider 设备 + OpenSparX 动作 = 71%，但 OpenSparX 的"意图优势"来自过度触发，
+    这个组合在真实流量里会把闲聊当命令，不能当方案。
+
+**这轮改变的判断**：零样本下，"小 LLM 读选项 logit"路线在中文上比"编码器 + 决策头"路线强约 20 个点，
+且校准好得多——它是更好的**老师**（给训练数据打软标签、做上限参照），也可能是更好的**底座**，前提是端侧延迟预算放得下。
+编码器路线的优势只剩延迟（快 7–14 倍）和体积（< 1 GB）。
+
 ## 后续方案
 
-1. **起点**：以官方 laya-multilingual 为主线（来源清楚、数据可追溯），同一份训练数据在 MacJev 上也训一次做 A/B，
-   按本评测与其他场景的评测选优。laya-cn-a 不作为起点。
+1. **起点：两条路线各一个底座、同一份数据、同一套评测**——编码器路线用官方 laya-multilingual（MacJev 做 A/B），
+   小 LLM 路线用 decider-0.8B（Kev-0.8B 的微调脚本更完善，可作第二候选）。laya-cn-a、laya-zh-v2、OpenSparX 不作为起点。
+   **先在 RK3588 上实测 decider-0.8B 的延迟**（RKLLM prefill），延迟预算放不下就只剩编码器路线。
+   decider / Kev 无论最终选不选，都先用来给训练数据打软标签（它们零样本已 64%，比人工从零标快）。
 2. **配方**（社区验证过、并被本次对比印证）：解冻最后 6–8 层 + 决策头；软标签交叉熵，score 题加序数损失；
    训练时打乱选项顺序、随机化设备与成员清单；**混入通用决策数据做回放**（MacJev 有、laya-cn-a 没有，这是两者最关键的差别）；
    训练后按题型在留出集上拟合温度。
@@ -54,58 +82,58 @@
 
 ## 总体
 
-| 指标 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K |
-|---|---|---|---|---|
-| 意图（三分类） | 66% | 66% | 51% | 73% |
-| 是否控制：精确率 / 召回率 | 95% / 67% | 95% / 67% | 98% / 44% | 90% / 79% |
-| 设备 | 71% | 72% | 68% | 71% |
-| 动作 | 76% | 76% | 74% | 76% |
-| **控制端到端** | **41%** | **42%** | **26%** | **46%** |
-| 设备 p≥0.9：覆盖 / 准确 | 70% / 88% | 70% / 88% | 35% / 95% | 2% / 100% |
-| 意图 p≥0.9：覆盖 / 准确 | 18% / 85% | 18% / 85% | 36% / 60% | 0% / 0% |
-| 延迟 p50 / p95 | 82 / 91 ms | 82 / 144 ms | 82 / 144 ms | 83 / 142 ms |
-| 头部预算 / 最大长度 | 256 / 1024 | 1024 / 1024 | 512 / 1024 | 1024 / 4096 |
+| 指标 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | laya-zh-v2 | decider-0.8B | OpenSparX-cabin-0.8B |
+|---|---|---|---|---|---|---|---|
+| 意图（三分类） | 66% | 66% | 51% | 73% | 71% | 80% | 84% |
+| 是否控制：精确率 / 召回率 | 95% / 67% | 95% / 67% | 98% / 44% | 90% / 79% | 97% / 71% | 98% / 81% | 84% / 100% |
+| 设备 | 71% | 72% | 68% | 71% | 70% | 82% | 74% |
+| 动作 | 76% | 76% | 74% | 76% | 76% | 85% | 89% |
+| **控制端到端** | **41%** | **42%** | **26%** | **46%** | **44%** | **64%** | **65%** |
+| 设备 p≥0.9：覆盖 / 准确 | 70% / 88% | 70% / 88% | 35% / 95% | 2% / 100% | 0% / 0% | 64% / 98% | 48% / 97% |
+| 意图 p≥0.9：覆盖 / 准确 | 18% / 85% | 18% / 85% | 36% / 60% | 0% / 0% | 37% / 97% | 41% / 99% | 65% / 93% |
+| 延迟 p50 / p95 | 82 / 91 ms | 82 / 144 ms | 82 / 144 ms | 83 / 142 ms | 85 / 99 ms | 573 / 622 ms | 1115 / 1638 ms |
+| 头部预算 / 最大长度 | 256 / 1024 | 1024 / 1024 | 512 / 1024 | 1024 / 4096 | 256 / 512 | — / — | — / — |
 
 规则基线（同一套用例）：意图 76%、设备 71%、控制端到端 60%。
 
 ## 分场景：意图
 
-| 场景 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | 规则基线 |
-|---|---|---|---|---|---|
-| `01-explicit-control` | 82% | 82% | 55% | 92% | 100% |
-| `02-implicit-intent` | 10% | 10% | 5% | 35% | 5% |
-| `03-room-disambiguation` | 75% | 75% | 44% | 94% | 100% |
-| `04-status-query` | 40% | 40% | 75% | 50% | 95% |
-| `05-non-command` | 82% | 82% | 68% | 59% | 77% |
-| `06-multi-device-scene` | 50% | 50% | 43% | 57% | 79% |
-| `07-asr-noise` | 70% | 70% | 65% | 80% | 30% |
-| `08-large-inventory` | 85% | 85% | 40% | 90% | 100% |
-| `09-device-not-in-home` | 90% | 90% | 50% | 90% | 90% |
+| 场景 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | laya-zh-v2 | decider-0.8B | OpenSparX-cabin-0.8B | 规则基线 |
+|---|---|---|---|---|---|---|---|---|
+| `01-explicit-control` | 82% | 82% | 55% | 92% | 88% | 98% | 100% | 100% |
+| `02-implicit-intent` | 10% | 10% | 5% | 35% | 0% | 25% | 100% | 5% |
+| `03-room-disambiguation` | 75% | 75% | 44% | 94% | 100% | 100% | 100% | 100% |
+| `04-status-query` | 40% | 40% | 75% | 50% | 65% | 100% | 60% | 95% |
+| `05-non-command` | 82% | 82% | 68% | 59% | 77% | 55% | 0% | 77% |
+| `06-multi-device-scene` | 50% | 50% | 43% | 57% | 57% | 64% | 100% | 79% |
+| `07-asr-noise` | 70% | 70% | 65% | 80% | 75% | 80% | 100% | 30% |
+| `08-large-inventory` | 85% | 85% | 40% | 90% | 85% | 95% | 100% | 100% |
+| `09-device-not-in-home` | 90% | 90% | 50% | 90% | 90% | 100% | 100% | 90% |
 
 ## 分场景：设备
 
-| 场景 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | 规则基线 |
-|---|---|---|---|---|---|
-| `01-explicit-control` | 98% | 98% | 98% | 98% | 92% |
-| `02-implicit-intent` | 45% | 45% | 45% | 45% | 15% |
-| `03-room-disambiguation` | 69% | 69% | 56% | 62% | 44% |
-| `04-status-query` | 100% | 100% | 85% | 100% | 95% |
-| `06-multi-device-scene` | 0% | 0% | 7% | 0% | 93% |
-| `07-asr-noise` | 85% | 85% | 85% | 85% | 35% |
-| `08-large-inventory` | 90% | 95% | 85% | 95% | 90% |
-| `09-device-not-in-home` | 0% | 0% | 0% | 0% | 100% |
+| 场景 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | laya-zh-v2 | decider-0.8B | OpenSparX-cabin-0.8B | 规则基线 |
+|---|---|---|---|---|---|---|---|---|
+| `01-explicit-control` | 98% | 98% | 98% | 98% | 95% | 100% | 100% | 92% |
+| `02-implicit-intent` | 45% | 45% | 45% | 45% | 40% | 75% | 50% | 15% |
+| `03-room-disambiguation` | 69% | 69% | 56% | 62% | 62% | 94% | 75% | 44% |
+| `04-status-query` | 100% | 100% | 85% | 100% | 100% | 100% | 90% | 95% |
+| `06-multi-device-scene` | 0% | 0% | 7% | 0% | 0% | 14% | 21% | 93% |
+| `07-asr-noise` | 85% | 85% | 85% | 85% | 85% | 95% | 85% | 35% |
+| `08-large-inventory` | 90% | 95% | 85% | 95% | 90% | 100% | 95% | 90% |
+| `09-device-not-in-home` | 0% | 0% | 0% | 0% | 10% | 0% | 0% | 100% |
 
 ## 分场景：控制端到端
 
-| 场景 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | 规则基线 |
-|---|---|---|---|---|---|
-| `01-explicit-control` | 68% | 68% | 40% | 75% | 90% |
-| `02-implicit-intent` | 0% | 0% | 0% | 0% | 5% |
-| `03-room-disambiguation` | 56% | 56% | 31% | 50% | 38% |
-| `06-multi-device-scene` | 0% | 0% | 0% | 0% | 71% |
-| `07-asr-noise` | 45% | 45% | 50% | 55% | 20% |
-| `08-large-inventory` | 65% | 70% | 25% | 75% | 90% |
-| `09-device-not-in-home` | 0% | 0% | 0% | 0% | 90% |
+| 场景 | laya-multilingual | laya-multilingual·head1024 | laya-cn-a | MacJev-322M-4K | laya-zh-v2 | decider-0.8B | OpenSparX-cabin-0.8B | 规则基线 |
+|---|---|---|---|---|---|---|---|---|
+| `01-explicit-control` | 68% | 68% | 40% | 75% | 72% | 95% | 90% | 90% |
+| `02-implicit-intent` | 0% | 0% | 0% | 0% | 0% | 15% | 45% | 5% |
+| `03-room-disambiguation` | 56% | 56% | 31% | 50% | 56% | 88% | 69% | 38% |
+| `06-multi-device-scene` | 0% | 0% | 0% | 0% | 0% | 7% | 21% | 71% |
+| `07-asr-noise` | 45% | 45% | 50% | 55% | 50% | 75% | 70% | 20% |
+| `08-large-inventory` | 65% | 70% | 25% | 75% | 65% | 90% | 90% | 90% |
+| `09-device-not-in-home` | 0% | 0% | 0% | 0% | 10% | 0% | 0% | 90% |
 
 ## 相对 laya-multilingual：修好了多少、弄坏了多少
 
@@ -114,34 +142,37 @@
 | laya-multilingual·head1024 | +0 / −0 | +1 / −0 | +0 / −0 |
 | laya-cn-a | +15 / −43 | +7 / −12 | +4 / −6 |
 | MacJev-322M-4K | +18 / −5 | +2 / −2 | +0 / −0 |
+| laya-zh-v2 | +18 / −8 | +1 / −3 | +1 / −1 |
+| decider-0.8B | +38 / −12 | +19 / −2 | +15 / −3 |
+| OpenSparX-cabin-0.8B | +51 / −19 | +18 / −13 | +20 / −3 |
 
 ## 互补性：三道题各取一个模型的答案组合
 
 | 意图来自 | 设备来自 | 动作来自 | 控制端到端 |
 |---|---|---|---|
-| MacJev-322M-4K | laya-multilingual·head1024 | MacJev-322M-4K | 46% |
-| MacJev-322M-4K | laya-multilingual·head1024 | laya-multilingual·head1024 | 46% |
-| MacJev-322M-4K | laya-multilingual·head1024 | laya-multilingual | 46% |
-| MacJev-322M-4K | MacJev-322M-4K | MacJev-322M-4K | 46% |
-| MacJev-322M-4K | MacJev-322M-4K | laya-multilingual·head1024 | 46% |
+| OpenSparX-cabin-0.8B | decider-0.8B | OpenSparX-cabin-0.8B | 71% |
+| OpenSparX-cabin-0.8B | decider-0.8B | decider-0.8B | 69% |
+| OpenSparX-cabin-0.8B | OpenSparX-cabin-0.8B | decider-0.8B | 66% |
+| OpenSparX-cabin-0.8B | OpenSparX-cabin-0.8B | OpenSparX-cabin-0.8B | 65% |
+| decider-0.8B | decider-0.8B | decider-0.8B | 64% |
 
-（同一模型三道题都用自己的答案：MacJev-322M-4K 46%，laya-multilingual·head1024 42%，laya-multilingual 41%，laya-cn-a 26%）
+（同一模型三道题都用自己的答案：OpenSparX-cabin-0.8B 65%，decider-0.8B 64%，MacJev-322M-4K 46%，laya-zh-v2 44%，laya-multilingual·head1024 42%，laya-multilingual 41%，laya-cn-a 26%）
 
-逐条取“任一模型答对就算对”的上限：intent 81%，device 76%，action 79%。
+逐条取“任一模型答对就算对”的上限：intent 99%，device 86%，action 97%。
 
 ## 所有模型都答错的用例（新数据必须覆盖的“硬骨头”）
 
 | 场景 | 意图全错 | 设备全错 | 例子 |
 |---|---|---|---|
-| `01-explicit-control` | 3 | 0 | 电饭煲开始煮饭；烤箱预热到200度；充电桩开始给车充电 |
-| `02-implicit-intent` | 13 | 9 | 好热啊；客厅有点太暗了 |
-| `03-room-disambiguation` | 1 | 4 | 客厅空调关了；客厅温度调低一点；我在客厅看电视，把空调打开 |
-| `04-status-query` | 4 | 0 | 扫地机器人扫完了没有；车库门关了没；刚才是谁按的门铃 |
+| `01-explicit-control` | 0 | 0 |  |
+| `02-implicit-intent` | 0 | 3 | 阳光太刺眼了；衣服洗好了，要晾一下；脚底下好冰 |
+| `03-room-disambiguation` | 0 | 1 | 卧室大灯关了，床头灯留着 |
+| `04-status-query` | 0 | 0 |  |
 | `05-non-command` | 1 | 0 | 空调一般开多少度最省电 |
-| `06-multi-device-scene` | 6 | 13 | 把家里的灯全部关掉；我要睡觉了 |
-| `07-asr-noise` | 3 | 2 | 把可厅的等打开；电视声音小一点点呃；床头等关掉 |
-| `08-large-inventory` | 2 | 1 | 电饭煲开始煮饭；打开书房的灯；充电桩开始给车充电 |
-| `09-device-not-in-home` | 1 | 10 | 启动洗碗机；把地暖打开；烤箱预热到180度 |
+| `06-multi-device-scene` | 0 | 9 | 把家里的灯全部关掉；我要睡觉了；我出门了 |
+| `07-asr-noise` | 0 | 0 |  |
+| `08-large-inventory` | 0 | 0 |  |
+| `09-device-not-in-home` | 0 | 9 | 启动洗碗机；把地暖打开；烤箱预热到180度 |
 
 ## 复现
 
@@ -152,4 +183,17 @@ EIDOLON_LAYA_MODEL_DIR=models/macjev-322m-4k/92b182e6 scripts/eidolon-laya fetch
 HEAD_MAX_LEN=1024 LABEL_PREFIX=laya-multilingual-h1024@ evals/smart-home/run_all.sh
 MODEL_DIR=models/laya-cn-a/178eb2c0 LABEL_PREFIX=laya-cn-a@ evals/smart-home/run_all.sh
 MODEL_DIR=models/macjev-322m-4k/92b182e6 LABEL_PREFIX=macjev-322m-4k@ evals/smart-home/run_all.sh
+EIDOLON_LAYA_MODEL_DIR=models/laya-zh-v2/92ae01f5 scripts/eidolon-laya fetch   # 魔搭
+MODEL_DIR=models/laya-zh-v2/92ae01f5 LABEL_PREFIX=laya-zh-v2@ evals/smart-home/run_all.sh
+```
+
+两个 Qwen 小模型不是 laya，各自在独立的 venv 里起 Jev 协议的服务，再用 run_eval.py 打它：
+
+```bash
+# decider：作者自带的服务（pip install 'decider-ai[serve]'；numpy<2，所以要单独 venv）
+DECIDER_MODEL=<Mapika/decider-0.8b 快照目录> DECIDER_DEVICE=mps uvicorn decider.serve:app --port 8773
+python3 evals/smart-home/run_eval.py --url http://127.0.0.1:8773 --label decider-0.8b@mac-mps
+# OpenSparX：只有 inference.py，用 adapters/opensparx_serve.py 包成服务（钉作者的 transformers==5.8.1、peft==0.19.1）
+python evals/smart-home/adapters/opensparx_serve.py --repo <adapter 快照> --base <Qwen3.5-0.8B 快照> --device mps --port 8772
+python3 evals/smart-home/run_eval.py --url http://127.0.0.1:8772 --label opensparx-cabin-0.8b@mac-mps
 ```

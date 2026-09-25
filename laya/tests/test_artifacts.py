@@ -43,3 +43,43 @@ def test_generated_config_is_verified_by_content(tmp_path):
 def test_head_max_len_override():
     assert Settings.from_env({}).head_max_len is None
     assert Settings.from_env({"EIDOLON_LAYA_HEAD_MAX_LEN": "1024"}).head_max_len == 1024
+
+
+def test_hub_defaults_to_huggingface(tmp_path):
+    assert _manifest(tmp_path, subfolder="").hub == "huggingface"
+    m = Manifest(tmp_path, {"source": {"repo_id": "r", "revision": "x", "hub": "modelscope"}})
+    assert m.hub == "modelscope"
+
+
+def test_modelscope_fetch_streams_each_file_and_checks_sha(tmp_path, monkeypatch):
+    import io
+
+    from eidolon_models_laya import artifacts
+
+    m = _manifest(tmp_path, subfolder="")
+    m.raw["source"]["hub"] = "modelscope"
+    (m.torch_dir / "model.safetensors").unlink()
+    urls = []
+
+    def fake_urlopen(url, timeout):
+        urls.append(url)
+        return io.BytesIO(b"weights")
+
+    monkeypatch.setattr(artifacts.urllib.request, "urlopen", fake_urlopen)
+    artifacts.fetch_torch(m, log=lambda *_: None)
+    assert urls == [
+        "https://www.modelscope.cn/api/v1/models/someone/model/repo?Revision=abc&FilePath=model.safetensors"
+    ]
+    assert verify_torch(m) == []
+    assert not list(m.torch_dir.glob("*.part"))
+
+    (m.torch_dir / "model.safetensors").unlink()
+    monkeypatch.setattr(
+        artifacts.urllib.request, "urlopen", lambda url, timeout: io.BytesIO(b"tampered")
+    )
+    try:
+        artifacts.fetch_torch(m, log=lambda *_: None)
+    except RuntimeError as e:
+        assert "sha256" in str(e)
+    else:
+        raise AssertionError("tampered download was accepted")

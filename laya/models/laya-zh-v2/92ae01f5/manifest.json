@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "name": "laya-zh-v2",
+  "source": {
+    "hub": "modelscope",
+    "repo_id": "zcgnull/laya-zh-v2",
+    "subfolder": "",
+    "revision": "92ae01f5c1595eaf9c4d1ae386817cb728f0948b",
+    "url": "https://www.modelscope.cn/models/zcgnull/laya-zh-v2/files"
+  },
+  "license": {
+    "checkpoint": "Apache-2.0",
+    "base": "convaiinnovations/laya multilingual (Apache-2.0); training data is the author's own synthetic Chinese workplace triage (700) + customer-service tickets (1200)",
+    "declared_by": "ModelScope model card metadata"
+  },
+  "runtime": {
+    "code": "laya==0.3.7 (same DecisionModel; ships rl_agent_config.json with fitted temperatures)",
+    "trained_max_len": 512,
+    "head_max_len": 256,
+    "notes": "RLCD fine-tune of multilingual on Chinese triage + customer service, 2 epochs (~9500 items). Author reports feishu_zh choice 31.2%->51.6%, own customer-service test set 42.8%->90.9%, English probe 79.1%->76.1%. Only on ModelScope."
+  },
+  "torch": {
+    "dir": "torch",
+    "files": {
+      "model.safetensors": "ebbe3917940eec7cd28377c1264256ec4fea8b6d2d28f9cd1862c497f4a58246",
+      "rl_agent_config.json": "99faf323ebbcfadab9612207c0d460b6b7bf56b47e1cdab281b5e316b7788305",
+      "encoder/config.json": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
+    }
+  },
+  "onnx": {
+    "dir": "onnx",
+    "file": "model.onnx",
+    "opset": 18,
+    "produced_by": "eidolon-laya export-onnx (not exported for this model yet)"
+  }
+}

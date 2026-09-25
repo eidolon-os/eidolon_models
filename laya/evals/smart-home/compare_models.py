@@ -6,6 +6,9 @@
   laya-multilingual-h1024@mac-torch-mps 同一权重，头部预算放到 1024（隔离“选项预算”的影响）
   laya-cn-a@mac-torch-mps               Adkid/laya-cn-a（中文意图后训练）
   macjev-322m-4k@mac-torch-mps          chaoliangUNSW/MacJev-322M-4K-Laya（Mac agent 决策）
+  laya-zh-v2@mac-torch-mps              zcgnull/laya-zh-v2（魔搭；中文分诊 + 客服 RLCD 微调）
+  decider-0.8b@mac-mps                  Mapika/decider-0.8b（Qwen3.5-0.8B 小 LLM 路线，作者的 Jev 兼容服务）
+  opensparx-cabin-0.8b@mac-mps          OpenSparX/OAK-Decision-cabin-qwen3.5-0.8b（车控意图）
 人工结论写在 comparison_conclusions.md，生成时放在最前面。
 """
 
@@ -22,6 +25,9 @@ MODELS = [
     ("laya-multilingual·head1024", "laya-multilingual-h1024@mac-torch-mps"),
     ("laya-cn-a", "laya-cn-a@mac-torch-mps"),
     ("MacJev-322M-4K", "macjev-322m-4k@mac-torch-mps"),
+    ("laya-zh-v2", "laya-zh-v2@mac-torch-mps"),
+    ("decider-0.8B", "decider-0.8b@mac-mps"),
+    ("OpenSparX-cabin-0.8B", "opensparx-cabin-0.8b@mac-mps"),
 ]
 DIMS = ("intent", "device", "action")
 
@@ -96,7 +102,7 @@ def main() -> int:
         ),
         (
             "头部预算 / 最大长度",
-            lambda s: f"{s['server']['head_max_len']} / {s['server']['max_len']}",
+            lambda s: f"{s['server'].get('head_max_len', '—')} / {s['server'].get('max_len', '—')}",
         ),
     ]
     for label, fn in rows_spec:
@@ -211,7 +217,16 @@ def main() -> int:
         "EIDOLON_LAYA_MODEL_DIR=models/macjev-322m-4k/92b182e6 scripts/eidolon-laya fetch\n"
         "HEAD_MAX_LEN=1024 LABEL_PREFIX=laya-multilingual-h1024@ evals/smart-home/run_all.sh\n"
         "MODEL_DIR=models/laya-cn-a/178eb2c0 LABEL_PREFIX=laya-cn-a@ evals/smart-home/run_all.sh\n"
-        "MODEL_DIR=models/macjev-322m-4k/92b182e6 LABEL_PREFIX=macjev-322m-4k@ evals/smart-home/run_all.sh\n```\n"
+        "MODEL_DIR=models/macjev-322m-4k/92b182e6 LABEL_PREFIX=macjev-322m-4k@ evals/smart-home/run_all.sh\n"
+        "EIDOLON_LAYA_MODEL_DIR=models/laya-zh-v2/92ae01f5 scripts/eidolon-laya fetch   # 魔搭\n"
+        "MODEL_DIR=models/laya-zh-v2/92ae01f5 LABEL_PREFIX=laya-zh-v2@ evals/smart-home/run_all.sh\n```\n\n"
+        "两个 Qwen 小模型不是 laya，各自在独立的 venv 里起 Jev 协议的服务，再用 run_eval.py 打它：\n\n"
+        "```bash\n# decider：作者自带的服务（pip install 'decider-ai[serve]'；numpy<2，所以要单独 venv）\n"
+        "DECIDER_MODEL=<Mapika/decider-0.8b 快照目录> DECIDER_DEVICE=mps uvicorn decider.serve:app --port 8773\n"
+        "python3 evals/smart-home/run_eval.py --url http://127.0.0.1:8773 --label decider-0.8b@mac-mps\n"
+        "# OpenSparX：只有 inference.py，用 adapters/opensparx_serve.py 包成服务（钉作者的 transformers==5.8.1、peft==0.19.1）\n"
+        "python evals/smart-home/adapters/opensparx_serve.py --repo <adapter 快照> --base <Qwen3.5-0.8B 快照> --device mps --port 8772\n"
+        "python3 evals/smart-home/run_eval.py --url http://127.0.0.1:8772 --label opensparx-cabin-0.8b@mac-mps\n```\n"
     )
     (HERE / "COMPARISON.md").write_text("\n".join(L), "utf-8")
     print(f"wrote {HERE / 'COMPARISON.md'} ({len(runs)} models)")
