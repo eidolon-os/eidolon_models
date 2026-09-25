@@ -1,0 +1,28 @@
+{
+  "name": "duplex",
+  "description": "复式两层：一楼客厅、餐厅、厨房、玄关，二楼主卧、书房、走廊、卫生间、露台，中间是楼梯，22 台设备；名字带楼层，一楼二楼各有一台扫地机，用来测楼层消歧。",
+  "devices": [
+    {"name": "一楼客厅灯", "room": "一楼客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "一楼餐厅灯", "room": "一楼餐厅", "category": "照明", "type": "吊灯"},
+    {"name": "楼梯灯", "room": "楼梯", "category": "照明", "type": "感应灯带"},
+    {"name": "二楼走廊灯", "room": "二楼走廊", "category": "照明", "type": "筒灯"},
+    {"name": "二楼主卧灯", "room": "二楼主卧", "category": "照明", "type": "吸顶灯"},
+    {"name": "二楼书房灯", "room": "二楼书房", "category": "照明", "type": "吸顶灯"},
+    {"name": "一楼客厅空调", "room": "一楼客厅", "category": "空调温控", "type": "风管机"},
+    {"name": "二楼主卧空调", "room": "二楼主卧", "category": "空调温控", "type": "空调"},
+    {"name": "二楼书房空调", "room": "二楼书房", "category": "空调温控", "type": "空调"},
+    {"name": "一楼客厅窗帘", "room": "一楼客厅", "category": "窗帘遮阳", "type": "电动窗帘"},
+    {"name": "二楼主卧窗帘", "room": "二楼主卧", "category": "窗帘遮阳", "type": "电动窗帘"},
+    {"name": "一楼扫地机", "room": "一楼", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "二楼扫地机", "room": "二楼", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "一楼客厅电视", "room": "一楼客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "二楼书房音箱", "room": "二楼书房", "category": "影音娱乐", "type": "音箱"},
+    {"name": "全屋新风", "room": "全屋", "category": "空气环境", "type": "新风系统"},
+    {"name": "二楼除湿机", "room": "二楼走廊", "category": "空气环境", "type": "除湿机"},
+    {"name": "一楼洗碗机", "room": "一楼厨房", "category": "清洁电器", "type": "洗碗机"},
+    {"name": "二楼洗衣机", "room": "二楼露台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "二楼晾衣架", "room": "二楼露台", "category": "窗帘遮阳", "type": "晾衣架"},
+    {"name": "二楼浴霸", "room": "二楼卫生间", "category": "热水卫浴", "type": "浴霸"},
+    {"name": "一楼门锁", "room": "一楼玄关", "category": "安防门禁", "type": "门锁"}
+  ]
+}

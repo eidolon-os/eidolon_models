@@ -1,0 +1,18 @@
+{
+  "name": "rental",
+  "description": "合租房：自己的一间加公共区（客厅、阳台、卫生间、大门），12 台设备，名字带“我房间 / 公共”，用来测自己屋和公共区的区分。",
+  "devices": [
+    {"name": "我房间的灯", "room": "我的房间", "category": "照明", "type": "吸顶灯"},
+    {"name": "我房间的台灯", "room": "我的房间", "category": "照明", "type": "台灯"},
+    {"name": "我房间空调", "room": "我的房间", "category": "空调温控", "type": "空调"},
+    {"name": "我房间加湿器", "room": "我的房间", "category": "空气环境", "type": "加湿器"},
+    {"name": "我房间插座", "room": "我的房间", "category": "插座开关", "type": "智能插座"},
+    {"name": "公共客厅灯", "room": "公共区", "category": "照明", "type": "吸顶灯"},
+    {"name": "公共区空调", "room": "公共区", "category": "空调温控", "type": "空调"},
+    {"name": "客厅公共电视", "room": "公共区", "category": "影音娱乐", "type": "电视"},
+    {"name": "公共区扫地机", "room": "公共区", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "公共洗衣机", "room": "公共阳台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "公共热水器", "room": "公共卫生间", "category": "热水卫浴", "type": "电热水器"},
+    {"name": "公共大门锁", "room": "公共玄关", "category": "安防门禁", "type": "门锁"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "elder",
+  "description": "老人住的两居：设备集中在老人房，有紧急呼叫按钮、电动床、两盏夜灯、智能药盒、燃气报警器和燃气阀门这类适老设备，15 台；次卧没有智能设备，客厅没有空调。",
+  "devices": [
+    {"name": "老人房灯", "room": "老人房", "category": "照明", "type": "吸顶灯"},
+    {"name": "床边夜灯", "room": "老人房", "category": "照明", "type": "感应夜灯"},
+    {"name": "走廊夜灯", "room": "走廊", "category": "照明", "type": "感应夜灯"},
+    {"name": "客厅灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "老人房空调", "room": "老人房", "category": "空调温控", "type": "空调"},
+    {"name": "加湿器", "room": "老人房", "category": "空气环境", "type": "加湿器"},
+    {"name": "电动床", "room": "老人房", "category": "适老看护", "type": "电动护理床"},
+    {"name": "紧急呼叫按钮", "room": "老人房", "category": "适老看护", "type": "一键呼叫按钮"},
+    {"name": "智能药盒", "room": "老人房", "category": "适老看护", "type": "定时提醒药盒"},
+    {"name": "燃气报警器", "room": "厨房", "category": "传感器", "type": "燃气泄漏报警器"},
+    {"name": "燃气阀门", "room": "厨房", "category": "厨房电器", "type": "燃气切断阀"},
+    {"name": "电视", "room": "客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "浴霸", "room": "卫生间", "category": "热水卫浴", "type": "浴霸"},
+    {"name": "客厅摄像头", "room": "客厅", "category": "安防门禁", "type": "摄像头"},
+    {"name": "智能门锁", "room": "玄关", "category": "安防门禁", "type": "门锁"}
+  ]
+}

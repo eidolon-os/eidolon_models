@@ -126,7 +126,17 @@ def _import_authored_cases(scenario: Scenario, config: dict) -> Iterable[Record]
     from .records import target_vector
 
     root = _resolve(scenario, config["path"])
-    homes = _load_homes(_resolve(scenario, config.get("homes", "../../../evals/smart-home")) / "homes")
+    # ``homes``: one or more directories, each holding ``*.json`` homes directly or under ``homes/``
+    # (the eval homes plus training-only layouts, so the model sees many device lists).
+    home_dirs = config.get("homes", "../../../evals/smart-home")
+    homes: dict[str, dict[str, str]] = {}
+    for d in [home_dirs] if isinstance(home_dirs, str) else home_dirs:
+        d = _resolve(scenario, d)
+        loaded = _load_homes(d / "homes" if (d / "homes").is_dir() else d)
+        clash = set(loaded) & set(homes)
+        if clash:
+            raise ValueError(f"home names defined twice: {sorted(clash)}")
+        homes.update(loaded)
     slot = config.get("device_slot", "devices")
     files = sorted(root.glob("*.jsonl")) if root.is_dir() else [root]
     if not files:

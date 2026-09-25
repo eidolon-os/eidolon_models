@@ -1,0 +1,24 @@
+{
+  "name": "brand",
+  "description": "设备按 app 里的默认名（品牌 / 型号）命名的两居，18 台；用户常只说品类或只说品牌，两台空调、两台米家设备用来测品牌与品类的对应。",
+  "devices": [
+    {"name": "易来吸顶灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "米家台灯Pro", "room": "书房", "category": "照明", "type": "台灯"},
+    {"name": "格力云锦空调", "room": "客厅", "category": "空调温控", "type": "空调"},
+    {"name": "美的风尊空调", "room": "卧室", "category": "空调温控", "type": "空调"},
+    {"name": "戴森净化风扇", "room": "卧室", "category": "风扇", "type": "净化风扇"},
+    {"name": "米家净化器4", "room": "客厅", "category": "空气环境", "type": "空气净化器"},
+    {"name": "德尔玛加湿器", "room": "卧室", "category": "空气环境", "type": "加湿器"},
+    {"name": "小米电视", "room": "客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "小度音箱", "room": "客厅", "category": "影音娱乐", "type": "音箱"},
+    {"name": "石头扫地机", "room": "全屋", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "小天鹅洗衣机", "room": "阳台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "好太太晾衣架", "room": "阳台", "category": "窗帘遮阳", "type": "晾衣架"},
+    {"name": "海尔冰箱", "room": "厨房", "category": "厨房电器", "type": "冰箱"},
+    {"name": "方太油烟机", "room": "厨房", "category": "厨房电器", "type": "油烟机"},
+    {"name": "苏泊尔电饭煲", "room": "厨房", "category": "厨房电器", "type": "电饭煲"},
+    {"name": "史密斯热水器", "room": "卫生间", "category": "热水卫浴", "type": "电热水器"},
+    {"name": "鹿客门锁", "room": "玄关", "category": "安防门禁", "type": "门锁"},
+    {"name": "萤石摄像头", "room": "玄关", "category": "安防门禁", "type": "摄像头"}
+  ]
+}

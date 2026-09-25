@@ -1,0 +1,16 @@
+{
+  "name": "studio",
+  "description": "单身公寓：一室（起居、睡觉都在一个房间）加卫生间和门口，10 台设备，每类只有一台，名字最简单；只有一盏灯，用来测没有歧义时直接落到唯一那台。",
+  "devices": [
+    {"name": "顶灯", "room": "房间", "category": "照明", "type": "吸顶灯"},
+    {"name": "空调", "room": "房间", "category": "空调温控", "type": "空调"},
+    {"name": "窗帘", "room": "房间", "category": "窗帘遮阳", "type": "电动窗帘"},
+    {"name": "风扇", "room": "房间", "category": "风扇", "type": "落地扇"},
+    {"name": "投影仪", "room": "房间", "category": "影音娱乐", "type": "投影仪"},
+    {"name": "音箱", "room": "房间", "category": "影音娱乐", "type": "音箱"},
+    {"name": "扫地机", "room": "房间", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "洗衣机", "room": "卫生间", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "热水器", "room": "卫生间", "category": "热水卫浴", "type": "电热水器"},
+    {"name": "门锁", "room": "门口", "category": "安防门禁", "type": "门锁"}
+  ]
+}

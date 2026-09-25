@@ -1,6 +1,10 @@
 # 把 train/data/authored/smart-home/*.jsonl（撰写格式）转成记录，同时校验每条金标。
+# homes：评测用的 3 个户型 + 只用于训练的户型（让模型见到更多种设备清单）。
 generators:
   - kind: import
     adapter: authored_cases
     name: authored
     path: ../../data/authored/smart-home
+    homes:
+      - ../../../evals/smart-home
+      - ../../data/homes/smart-home
