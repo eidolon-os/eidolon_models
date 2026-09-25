@@ -155,11 +155,19 @@ def cmd_eval(args) -> int:
             _log(f"  {scn}: acc {agg['acc']} ece {agg['ece']} n {agg['n']}")
         if args.baseline:
             base = json.loads((Path(args.baseline) / f"{name}.json").read_text(encoding="utf-8"))
-            g = gate(report, base, args.tolerance)
+            g = gate(report, base, args.tolerance, alpha=args.alpha)
             (out_dir / f"{name}.gate.json").write_text(
                 json.dumps(g, ensure_ascii=False, indent=2), encoding="utf-8"
             )
             _log(f"  gate vs {args.baseline}: {'PASS' if g['passed'] else 'FAIL'}")
+            for c in g["checks"]:
+                if not c["ok"] or c.get("broke", 0) + c.get("fixed", 0) >= 3:
+                    flips = (
+                        f" broke {c['broke']} fixed {c['fixed']} p {c['p']}" if "broke" in c else ""
+                    )
+                    _log(
+                        f"    {'FAIL' if not c['ok'] else 'ok  '} {c['slice']}: {c['baseline']} -> {c['candidate']}{flips}"
+                    )
             rc = rc or (0 if g["passed"] else 4)
     return rc
 
@@ -331,6 +339,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", required=True)
     p.add_argument("--baseline", help="directory of a previous eval (same set names)")
     p.add_argument("--tolerance", type=float, default=0.0)
+    p.add_argument(
+        "--alpha",
+        type=float,
+        help="paired gate: a slice fails only if its broke/fixed split is significant at this level (sign test); needs rows in both reports",
+    )
     p.add_argument("--no-rows", action="store_true")
     p.add_argument("--device")
     p.set_defaults(func=cmd_eval)

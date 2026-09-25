@@ -115,26 +115,71 @@ def evaluate(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> dict:
     }
 
 
-def gate(candidate: dict, baseline: dict, tolerance: float = 0.0, min_n: int = 10) -> dict:
+def _sign_test_p(broke: int, fixed: int) -> float:
+    """One-sided exact binomial p that ``broke`` flips out of ``broke + fixed`` arise by chance."""
+    n = broke + fixed
+    if n == 0:
+        return 1.0
+    return sum(math.comb(n, k) for k in range(broke, n + 1)) / 2**n
+
+
+def gate(
+    candidate: dict,
+    baseline: dict,
+    tolerance: float = 0.0,
+    min_n: int = 10,
+    alpha: float | None = None,
+) -> dict:
     """Every scenario, question and tagged slice (with at least ``min_n`` items) must hold its
     accuracy within ``tolerance``. Slices are where regressions hide: a checkpoint can lift the
-    overall number while learning to call every utterance a command."""
+    overall number while learning to call every utterance a command.
+
+    When both reports carry per-question rows the check is paired: each slice reports how many
+    questions the candidate broke and fixed, and with ``alpha`` set a slice only fails if the drop
+    exceeds ``tolerance`` *and* the broke/fixed split is significant (one-sided sign test), so a
+    couple of low-confidence flips on a 20-case slice do not block a release."""
+    paired = "rows" in candidate and "rows" in baseline
+    if paired:
+        base_rows = {(r["record_id"], r["qid"]): r for r in baseline["rows"]}
+        cand_rows = {(r["record_id"], r["qid"]): r for r in candidate["rows"]}
+
+    def members(key: str, name: str):
+        for k, r in base_rows.items():
+            if k not in cand_rows:
+                continue
+            if key == "by_scenario" and r["scenario"] == name:
+                yield r, cand_rows[k]
+            elif key == "by_question" and f"{r['scenario']}/{r['qid']}" == name:
+                yield r, cand_rows[k]
+            elif key == "by_tag" and name in r["tags"]:
+                yield r, cand_rows[k]
+
     checks = []
     for key in ("by_scenario", "by_question", "by_tag"):
         for name, base in baseline.get(key, {}).items():
             cand = candidate.get(key, {}).get(name)
             if not cand or base.get("n", 0) < min_n:
                 continue
-            ok = cand["acc"] >= base["acc"] - tolerance
-            checks.append(
-                {
-                    "slice": f"{key}:{name}",
-                    "baseline": base["acc"],
-                    "candidate": cand["acc"],
-                    "ok": ok,
-                }
-            )
-    return {"passed": all(c["ok"] for c in checks), "tolerance": tolerance, "checks": checks}
+            drop_ok = cand["acc"] >= base["acc"] - tolerance
+            check = {"slice": f"{key}:{name}", "baseline": base["acc"], "candidate": cand["acc"]}
+            if paired:
+                pairs = list(members(key, name))
+                broke = sum(b["correct"] and not c["correct"] for b, c in pairs)
+                fixed = sum(c["correct"] and not b["correct"] for b, c in pairs)
+                p = _sign_test_p(broke, fixed)
+                check.update(broke=broke, fixed=fixed, p=round(p, 4))
+                ok = drop_ok or (alpha is not None and p >= alpha)
+            else:
+                ok = drop_ok
+            check["ok"] = ok
+            checks.append(check)
+    return {
+        "passed": all(c["ok"] for c in checks),
+        "tolerance": tolerance,
+        "alpha": alpha,
+        "paired": paired,
+        "checks": checks,
+    }
 
 
 def write_report(report: dict, path: Path, *, keep_rows: bool = True) -> None:

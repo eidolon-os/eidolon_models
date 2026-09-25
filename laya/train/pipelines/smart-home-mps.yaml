@@ -67,6 +67,10 @@ steps:
     eval_set:
       - ../scenarios/smart-home/eval/locked-182.jsonl
     out: "{run}/eval"
+    baseline: ../runs/r4/eval               # 当前线上版本；换版本后改这里
+    tolerance: 0.03
+    alpha: 0.1                              # 配对符号检验：只拦显著的退步
+    continue_on_error: true                 # 门槛不过也照样 package，方便对比；上线前看 gate.json
 
   # 打包成 models/<name>/<rev>/：之后 eidolon-laya serve / export-onnx / doctor 都直接认它，
   # evals/smart-home/run_all.sh 也能用 MODEL_DIR= 指向它打服务。

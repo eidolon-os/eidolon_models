@@ -12,6 +12,8 @@ Config::
       - ../evals/smart-home
     split: {val: 0.1, calib: 0.1}
     balance: {by: scenario, max_ratio: 3.0}   # cap any group at max_ratio × the smallest
+    tag_weights: {implicit-intent: 1.5}        # multiply the weight of records whose slice (first
+                                               # tag) matches; also allowed per source
     seed: 7
 
 Splits are by id hash, so re-assembling with more data keeps old records in their split.
@@ -84,6 +86,7 @@ def assemble(config: dict, out_dir: Path, base: Path) -> dict:
     for src in config["sources"]:
         path = (base / src["path"]).resolve()
         weight = float(src.get("weight", 1.0))
+        tag_weights = {**(config.get("tag_weights") or {}), **(src.get("tag_weights") or {})}
         for r in read_jsonl(path):
             if src.get("scenario"):
                 r.scenario = src["scenario"]
@@ -99,7 +102,10 @@ def assemble(config: dict, out_dir: Path, base: Path) -> dict:
                 continue
             # deterministic subsample / repeat
             u = int(stable_hash("w:" + r.id)[:8], 16) / 0xFFFFFFFF
-            copies = int(weight) + (1 if u < weight - int(weight) else 0)
+            # per-slice multiplier on the record's first tag (its slice), so a growing slice
+            # elsewhere does not dilute the ones the gate cares about
+            w = weight * float(tag_weights.get(r.tags[0] if r.tags else "", 1.0))
+            copies = int(w) + (1 if u < w - int(w) else 0)
             if copies <= 0:
                 dropped["weighted_out"] += 1
                 continue

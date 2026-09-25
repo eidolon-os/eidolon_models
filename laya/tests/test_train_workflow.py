@@ -279,3 +279,46 @@ def test_llm_teacher_votes_become_distribution_and_disagreements_are_tagged(monk
     assert out.labels["q"]["teacher"] == {"a": 0.75, "b": 0.0, "c": 0.25}
     assert out.labels["q"]["target"] == {"a": 0.375, "b": 0.0, "c": 0.625}
     assert stats["disagreements"] == 1 and "disagree:q" in out.tags
+
+
+def test_paired_gate_ignores_noise_but_catches_consistent_regressions():
+    from eidolon_laya_train.evaluate import gate
+
+    def report(correct):
+        rows = [
+            {"record_id": f"r{i}", "qid": "q", "scenario": "s", "tags": ["slice"], "correct": c}
+            for i, c in enumerate(correct)
+        ]
+        acc = sum(correct) / len(correct)
+        agg = {"n": len(correct), "acc": acc}
+        return {
+            "rows": rows,
+            "by_scenario": {"s": agg},
+            "by_question": {"s/q": agg},
+            "by_tag": {"slice": agg},
+        }
+
+    base = report([True] * 18 + [False] * 2)
+    noisy = report([False, False] + [True] * 16 + [True, False])  # broke 2, fixed 1
+    worse = report([False] * 6 + [True] * 12 + [False, False])  # broke 6, fixed 0
+    assert not gate(noisy, base, 0.03)["passed"]  # unpaired-strict: any drop beyond tolerance fails
+    assert gate(noisy, base, 0.03, alpha=0.1)["passed"]
+    g = gate(worse, base, 0.03, alpha=0.1)
+    assert not g["passed"] and g["checks"][0]["broke"] == 6 and g["checks"][0]["p"] < 0.1
+
+
+def test_assemble_tag_weights(tmp_path):
+    scn = Scenario.load(SMART_HOME)
+    recs = list(
+        generate(
+            scn,
+            {"kind": "template", "module": "generators.rules:generate", "per_slice": 20},
+            seed=5,
+        )
+    )
+    write_jsonl(tmp_path / "g.jsonl", recs)
+    base = {"sources": [{"path": "g.jsonl"}], "split": {"val": 0.0, "calib": 0.0}, "seed": 1}
+    m1 = assemble(base, tmp_path / "a", tmp_path)
+    m2 = assemble({**base, "tag_weights": {"implicit-intent": 2.0}}, tmp_path / "b", tmp_path)
+    n_impl = sum(1 for r in recs if r.tags[0] == "implicit-intent")
+    assert m2["counts"]["train"] == m1["counts"]["train"] + n_impl

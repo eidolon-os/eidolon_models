@@ -5,6 +5,11 @@
 #   external（外部数据集，同域回放，约占 40%）   zhihao 0.15 / scenic 0.1 / massive 0.2
 # 分开存放的好处：每个来源可以单独调权重、审计、下线，门槛退步时能定位到是哪个来源。
 seed: 7
+# 切片加权：r5 里隐含意图被新加的对照组和边界数据稀释（门槛：broke 7 / fixed 0，p 0.008），
+# 其它切片继续变大时按切片保住它们的份额。
+tag_weights:
+  implicit-intent: 1.5
+  multi-device: 1.5
 sources:
   - path: "{run}/authored-augmented.jsonl"
     weight: 1.0
