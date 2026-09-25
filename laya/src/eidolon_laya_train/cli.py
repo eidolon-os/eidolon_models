@@ -54,10 +54,14 @@ def cmd_gen(args) -> int:
 
 
 def cmd_label(args) -> int:
-    from .label import Teacher, label_records
+    from .label import LLMTeacher, Teacher, label_records
 
     stats: dict = {}
-    teacher = Teacher(args.teacher, timeout=args.timeout)
+    if args.teacher_kind == "llm":
+        cfg = {"base_url": args.teacher, "model": args.model} if args.teacher else {}
+        teacher = LLMTeacher(cfg, samples=args.samples, temperature=args.sample_temperature)
+    else:
+        teacher = Teacher(args.teacher, timeout=args.timeout)
     records = read_jsonl(args.input)
     n = write_jsonl(
         args.out,
@@ -273,7 +277,14 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("label", help="soft targets from a /v1/systemone teacher")
     p.add_argument("--input", required=True)
     p.add_argument("--out", required=True)
-    p.add_argument("--teacher", required=True, help="base URL of the teacher service")
+    p.add_argument(
+        "--teacher",
+        help="base URL: /v1/systemone service, or an OpenAI-compatible endpoint for --teacher-kind llm (default: EIDOLON_TRAIN_LLM_BASE_URL)",
+    )
+    p.add_argument("--teacher-kind", choices=["systemone", "llm"], default="systemone")
+    p.add_argument("--model", help="llm teacher: model name (default: EIDOLON_TRAIN_LLM_MODEL)")
+    p.add_argument("--samples", type=int, default=5, help="llm teacher: votes per question")
+    p.add_argument("--sample-temperature", type=float, default=0.7)
     p.add_argument("--teacher-name", default="teacher")
     p.add_argument(
         "--alpha", type=float, default=0.7, help="weight of gold vs teacher when both exist"

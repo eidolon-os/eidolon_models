@@ -240,10 +240,42 @@ def test_package_writes_manifest_that_artifacts_can_verify(tmp_path):
     (ck / "encoder").mkdir(parents=True)
     (ck / "tokenizer").mkdir()
     (ck / "model.safetensors").write_bytes(b"w")
-    (ck / "rl_agent_config.json").write_text(json.dumps({"encoder": "e", "max_len": 8, "head_max_len": 4, "fine_tuned_from": "x"}))
+    (ck / "rl_agent_config.json").write_text(
+        json.dumps({"encoder": "e", "max_len": 8, "head_max_len": 4, "fine_tuned_from": "x"})
+    )
     (ck / "encoder" / "config.json").write_text("{}")
     (ck / "tokenizer" / "tokenizer.json").write_text("{}")
     out = package(ck, tmp_path / "models", "demo", run_id="r1")
     m = Manifest.load(out)
     assert m.hub == "local" and verify_torch(m) == [] and out.name == m.revision
-    assert set(m.torch_files) == {"model.safetensors", "rl_agent_config.json", "encoder/config.json", "tokenizer/tokenizer.json"}
+    assert set(m.torch_files) == {
+        "model.safetensors",
+        "rl_agent_config.json",
+        "encoder/config.json",
+        "tokenizer/tokenizer.json",
+    }
+
+
+def test_llm_teacher_votes_become_distribution_and_disagreements_are_tagged(monkeypatch):
+    from eidolon_laya_train import label as L
+
+    answers = iter(
+        ['{"answer": "a"}', '{"answer": "a"}', "junk", '{"answer": "c"}', '{"answer": "a"}']
+    )
+    monkeypatch.setenv("EIDOLON_TRAIN_LLM_BASE_URL", "http://x")
+    monkeypatch.setenv("EIDOLON_TRAIN_LLM_MODEL", "m")
+    t = L.LLMTeacher({}, samples=5)
+    monkeypatch.setattr(t.client, "complete", lambda prompt, temperature=0.7: next(answers))
+    r = Record(
+        id="s/1",
+        scenario="s",
+        source="t",
+        state={"utterance": "x"},
+        questions={"q": _q()},
+        labels={"q": {"gold": "c"}},
+    )
+    stats = {}
+    out = list(L.label_records([r], t, alpha=0.5, workers=1, stats=stats))[0]
+    assert out.labels["q"]["teacher"] == {"a": 0.75, "b": 0.0, "c": 0.25}
+    assert out.labels["q"]["target"] == {"a": 0.375, "b": 0.0, "c": 0.625}
+    assert stats["disagreements"] == 1 and "disagree:q" in out.tags
