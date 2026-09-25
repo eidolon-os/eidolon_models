@@ -1,0 +1,240 @@
+{"home": "apartment", "text": "客厅光线不够，看手机都费眼", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅昏沉沉的，看报纸看不清", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "晚上客厅黑黢黢的，走路都怕磕着", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卧室黑乎乎的，衣柜里的衣服都分不清颜色", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧里暗得找不着充电线", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "睡房这光线昏得不行", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧冷得我钻被窝都不想出来", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卧室里凉嗖嗖的，胳膊起鸡皮疙瘩了", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧晚上冻得人蜷成一团", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧热得跟火炉一样", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卧室里闷热，枕头都是汗", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧里一股热气，半夜热醒两回", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅温度太高了，沙发都坐出汗了", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅里跟蒸包子似的", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅里热得我直拿本子扇风", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅冷得坐不住，腿都僵了", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅寒气好重", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅冷得我披上了毯子还发抖", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧干得早上醒来嘴唇起皮", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卧室空气太燥了，鼻子发痒", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "睡房里干巴巴的，一点水汽没有", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅里憋闷，坐一会儿就头晕", "intent": "控制", "device": ["空气净化器", "客厅空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅空气不流通，闷乎乎的", "intent": "控制", "device": ["空气净化器", "客厅空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅又闷又热，人都蔫了", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅被太阳晒得睁不开眼", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅这会儿太阳直射，沙发晒得发白", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅亮得晃人，太阳全照进来了", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅地板上全是灰脚印", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅地上碎屑一片", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卧室地板上一层猫毛", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卫生间的淋浴水一点都不热", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "浴室的水温太低了，冲着打冷颤", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "晚上客厅亮得刺眼，想柔和一点", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅这么亮，一点氛围都没有", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "卧室太亮了，一点睡意都没有", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "主卧亮得像白天，怎么睡", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅那边吵得我没法专心", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "客厅里吵吵嚷嚷的，脑门疼", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "阳台上的衣服要被雨淋了", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "阳台晾的床单还没收，外面下起雨来了", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房里热得汗往键盘上滴", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房一点风都没有，热得发慌", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "在书房写东西热得心烦", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房光线昏暗，看资料伤眼", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房黑咕隆咚的，台面上啥也瞧不见", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房里暗沉沉的，书脊上的字看不清", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅冷冰冰的，一家人都缩在沙发上", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅凉得要穿羽绒服", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅里阴冷阴冷的", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "厨房烟太大，呛得眼泪都出来了", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "厨房里油烟味冲鼻子", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "厨房一片烟，灶台那儿看不清锅", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "卫生间冷得脱不下衣服", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "浴室里冰凉，进去就打哆嗦", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "卫生间寒气逼人", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "餐厅这光线昏得看不清碗里是啥", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "餐厅里暗得不像样", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "餐厅那块儿阴沉沉的，没什么光", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "卫生间黑灯瞎火的，找不到牙刷", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "浴室里太暗了，刮胡子看不清", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房憋闷，空气不新鲜", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房里一股浊气", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅人一多就憋得难受", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅里空气沉闷，脑子发木", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房太亮了，眼睛受不了", "intent": "控制", "device": "书房灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "书房亮得发白，眼睛发花", "intent": "控制", "device": "书房灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "餐厅亮得晃眼，想吃顿烛光晚餐", "intent": "控制", "device": "餐厅吊灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "餐厅光太强了，照得人脸发白", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅燥热，地板都热乎乎的", "intent": "控制", "device": "地暖", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "客厅地面烘得人脚心冒汗", "intent": "控制", "device": "地暖", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "厨房里一股焦糊味", "intent": "控制", "device": ["油烟机", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "厨房鱼腥味散不出去", "intent": "控制", "device": ["油烟机", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "影音室声音大得震耳朵", "intent": "控制", "device": "投影仪", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "影音室太吵了，孩子在隔壁睡觉", "intent": "控制", "device": "投影仪", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "house", "text": "卫生间湿漉漉的，墙上全是水珠", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅冷得脚趾头都缩起来", "intent": "控制", "device": ["地暖", "客厅空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅里冷冰冰的，一刻都坐不住", "intent": "控制", "device": ["客厅空调", "地暖"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅热得人一动不想动", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅闷热，汗一直往下淌", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅光线昏暗，打牌看不清牌", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "一楼客厅灰蒙蒙的，太暗了", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "主卧冷得睡不踏实", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "卧室热得直踢被子", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "主卧干燥得鼻子冒火", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "主卧黑得啥也看不见", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "书房热得像闷罐", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "书房热得思路都断了", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "书房暗得写不了字", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "书房空气闷，待久了犯困", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "厨房烟熏火燎的", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "厨房油烟弥漫，嗓子呛得难受", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "卫生间冷得人直跺脚", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "浴室黑得看不清镜子", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "餐厅暗得看不清菜色", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅阳光晒得人发晕", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅吵得脑仁疼", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "客厅空气浑浊，一股烟味", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "卫生间的水冰冷，没法冲澡", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "阳台那排衬衫还挂着，雨点子已经下来了", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "villa", "text": "影音室音量太大，震得人心慌", "intent": "控制", "device": "投影仪", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "room-feeling"]}
+{"home": "apartment", "text": "热死了，汗都擦不完", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "今天热得人发昏", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "屋里热得跟火焰山似的", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "冻死了，手都伸不出袖子", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "冷得牙齿直打架", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "家里冰凉冰凉的，一点热乎气没有", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "屋里怎么这么暗啊", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "黑咕隆咚的，脚下都看不清", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "地上脏死了，一脚一个印", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "孩子剪纸剪得满地碎屑", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "好闷啊，喘不上气", "intent": "控制", "device": ["空气净化器", "客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "空气浑浊得很，憋得慌", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "干得眼睛发涩，隐形眼镜都戴不住", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "好干啊，脸绷得难受", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "花洒出来的水一点热乎气都没有", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "衣服还在外头晾着，看样子要下雨", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "起大风了，晒的衣服要刮跑了", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "灯光晃得我头疼", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "日头毒得很，照进来晃得慌", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "动静太大了，吵得我没法睡", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "屋里潮得墙面发黏", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "一股臭袜子味，熏死了", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "热得汗珠子直往下掉", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "这天热得人心里烦躁", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "热死个人了", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "热得坐立不安", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "冻得我缩着脖子不敢动", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "冷得骨头缝里都发凉", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "屋里寒气往身上钻", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "光着脚不敢下地，太凉了", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "冷得手脚都冻僵了", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "黑得伸手不见五指", "intent": "控制", "device": ["书房灯", "餐厅吊灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "屋里暗得看不清东西", "intent": "控制", "device": ["书房灯", "餐厅吊灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "憋得胸口发紧，喘气都费劲", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "空气太浑了，脑子昏沉沉的", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "满屋子烟味，呛得慌", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "炒菜的油烟呛死人了", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "灯光太亮，刺得眼睛疼", "intent": "控制", "device": ["书房灯", "餐厅吊灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "脱了衣服准备洗澡，冷得直缩", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "刚出浴冻得起鸡皮疙瘩", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "屋里燥热，脚底下烫得慌", "intent": "控制", "device": "地暖", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "house", "text": "闷得要命，空气一点都不流通", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "热得我头昏眼花", "intent": "控制", "device": ["客厅空调", "主卧空调", "落地扇"], "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "热炸了，这温度简直要命", "intent": "控制", "device": ["客厅空调", "主卧空调", "落地扇"], "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "热得喘不过气来", "intent": "控制", "device": ["客厅空调", "主卧空调", "落地扇"], "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "冻得我在屋里来回跺脚", "intent": "控制", "device": ["地暖", "客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "冷得实在扛不住了", "intent": "控制", "device": ["地暖", "客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "家里冷得像冰库", "intent": "控制", "device": ["地暖", "客厅空调", "主卧空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "暗得连路都看不清", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "这么黑怎么待啊", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "地上脏兮兮的，一踩一脚灰", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "地板上黏糊糊的全是饮料渍", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "闷得胸口堵得慌", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "空气里一股怪味", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "干得鼻子里结痂", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "淋浴的水半冷不热的", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "看天色要下暴雨，晒的衣服还在外面", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "阳光直直照进来，晒得人发烫", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "吵得我没法打电话", "intent": "控制", "device": ["电视", "智能音箱", "投影仪"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "villa", "text": "灯光亮得人心烦", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
+{"home": "apartment", "text": "厨房太暗了，切菜看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "厨房黑乎乎的，锅里啥样都看不见", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "卫生间冷得打哆嗦", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "冬天卫生间冰凉，脱衣服都犯难", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "书房热烘烘的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "书房那边暗得看不清桌面", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "阳台黑漆漆的，晾衣服看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "晚上阳台暗得看不见路", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "厨房里油烟散不出去", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "卫生间一股霉味", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "玄关太暗，换鞋看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "厨房热得站不住人", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "次卧冷得孩子直喊", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "儿童房太热了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "主卧太晒了，床上全是太阳", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "卫生间黑得看不见", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "阳台热得像烤炉", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "书房冻得手指头发麻", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "卫生间闷得透不过气", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "次卧那屋黑得啥也瞧不见", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "卧室里热得一宿没睡好", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "主卧冷得不想起床", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "卧室太暗了，找东西全靠摸", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "客厅光线差得看不清人脸", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "客厅里黑咕隆咚的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "厨房冷得手指发僵", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "厨房里冻得慌", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "厨房灶台那边昏暗暗的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "客厅太晒了，阳光直射沙发", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "影音室热得人冒汗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "车库黑得找不到车", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "花园黑灯瞎火的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "餐厅热得吃不下饭", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "书房太干了，嗓子痒", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "阳台太暗，喂猫看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "书房冷得握不住笔", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "客厅干燥得嘴巴发苦", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "house", "text": "餐厅里冷得吃饭都得穿外套", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "厨房光线太差，切肉怕切到手", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "阳台黑乎乎的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "厨房里凉飕飕的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "影音室里热得待不下去", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "车库里暗得看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "主卧晒得睡不了午觉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "儿童房冷冰冰的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "餐厅热得冒汗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "玄关黑得找不到鞋", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "书房里凉得人打颤", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "厨房热得像桑拿", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "villa", "text": "客房里黑得看不见床", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"home": "apartment", "text": "主卧冷得我直打喷嚏", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "卧室凉得脚都焐不热", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "主卧里寒气重，不是干，是冷", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "主卧燥热，一点凉气都没有", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅太吵了，我想静一静", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅闹腾得头疼", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅噪音太大，孩子睡不着", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅有股味儿，不太好闻", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅里一股剩饭的馊味", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅里烟味呛鼻子", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "卧室干燥得不行，冷倒是不冷", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅冷得要命，得暖和暖和", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "客厅太暗，就屏幕那点光", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "apartment", "text": "卧室暗，想靠床上看会儿书", "intent": "控制", "device": ["床头灯", "主卧灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "书房亮得刺眼睛", "intent": "控制", "device": "书房灯", "action": "调低或减小", "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "书房亮过头了，看久了眼睛胀", "intent": "控制", "device": "书房灯", "action": "调低或减小", "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "书房里热得人心浮气躁", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "客厅里冻得手都发紫", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "客厅冷得脚底发凉", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "厨房被油烟熏得睁不开眼", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "厨房烟呼呼往外冒", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "卫生间冷得跟外面一样", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "影音室太吵，耳朵嗡嗡响", "intent": "控制", "device": "投影仪", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "house", "text": "餐厅光线弱，吃饭心情都没了", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "villa", "text": "客厅凉透了，赶紧弄暖和", "intent": "控制", "device": ["客厅空调", "地暖"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "villa", "text": "主卧太干，嗓子发痒", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "villa", "text": "书房待着发闷，是空气的问题，不是热", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "villa", "text": "客厅吵得看不进书", "intent": "控制", "device": ["电视", "智能音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "villa", "text": "客厅狗窝那块儿骚味熏人", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"home": "villa", "text": "书房亮得睁不开眼", "intent": "控制", "device": "书房灯", "action": "调低或减小", "tags": ["implicit-intent", "function-mismatch"]}

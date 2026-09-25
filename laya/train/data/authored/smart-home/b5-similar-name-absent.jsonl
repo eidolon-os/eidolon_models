@@ -1,0 +1,240 @@
+{"home": "apartment", "text": "洗碗机开始工作吧，我去躺会儿", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p001"]}
+{"home": "apartment", "text": "洗衣机开始工作吧，我去躺会儿", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p001"]}
+{"home": "apartment", "text": "洗碗机先暂停，我还要往里放东西", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home", "similar-name", "p002"]}
+{"home": "apartment", "text": "洗衣机先暂停，我还要往里放东西", "intent": "控制", "device": "洗衣机", "action": "暂停", "tags": ["explicit-control", "similar-name", "p002"]}
+{"home": "apartment", "text": "洗碗机选个强力洗", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p003"]}
+{"home": "apartment", "text": "洗衣机选个强力洗", "intent": "控制", "device": "洗衣机", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p003"]}
+{"home": "apartment", "text": "烘干机调成羊毛模式", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p004"]}
+{"home": "apartment", "text": "洗衣机调成羊毛模式", "intent": "控制", "device": "洗衣机", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p004"]}
+{"home": "apartment", "text": "电压力锅给我煮锅粥", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p005"]}
+{"home": "apartment", "text": "电饭煲给我煮锅粥", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p005"]}
+{"home": "apartment", "text": "把电压力锅关了，饭好了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p006"]}
+{"home": "apartment", "text": "把电饭煲关了，饭好了", "intent": "控制", "device": "电饭煲", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p006"]}
+{"home": "apartment", "text": "热水壶先烧起来，一会儿要用", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p007"]}
+{"home": "apartment", "text": "热水器先烧起来，一会儿要用", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p007"]}
+{"home": "apartment", "text": "热水壶温度设成五十五度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p008"]}
+{"home": "apartment", "text": "热水器温度设成五十五度", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p008"]}
+{"home": "apartment", "text": "帮我把净水器开起来", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p009"]}
+{"home": "apartment", "text": "帮我把空气净化器开起来", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p009"]}
+{"home": "apartment", "text": "除湿机给我开到三档去", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p010"]}
+{"home": "apartment", "text": "加湿器给我开到三档去", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p010"]}
+{"home": "apartment", "text": "除湿机歇会儿，关了吧", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p011"]}
+{"home": "apartment", "text": "加湿器歇会儿，关了吧", "intent": "控制", "device": "加湿器", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p011"]}
+{"home": "apartment", "text": "空气炸锅先开着，我马上过去", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p012"]}
+{"home": "apartment", "text": "主卧空调先开着，我马上过去", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p012"]}
+{"home": "apartment", "text": "麻烦开一下空气炸锅", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p013"]}
+{"home": "apartment", "text": "麻烦开一下空气净化器", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p013"]}
+{"home": "apartment", "text": "门铃声音调小点", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p014"]}
+{"home": "apartment", "text": "门锁声音调小点", "intent": "控制", "device": "智能门锁", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p014"]}
+{"home": "apartment", "text": "把门铃的提示音关掉", "intent": "控制", "device": "没有对应的设备", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p015"]}
+{"home": "apartment", "text": "把门锁的提示音关掉", "intent": "控制", "device": "智能门锁", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p015"]}
+{"home": "apartment", "text": "车库门帮我锁一下", "intent": "控制", "device": "没有对应的设备", "action": "上锁", "tags": ["device-not-in-home", "similar-name", "p016"]}
+{"home": "apartment", "text": "智能门锁帮我锁一下", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control", "similar-name", "p016"]}
+{"home": "apartment", "text": "车库门开一下，我朋友到了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p017"]}
+{"home": "apartment", "text": "智能门锁开一下，我朋友到了", "intent": "控制", "device": "智能门锁", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p017"]}
+{"home": "apartment", "text": "电视柜灯亮度调高点", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home", "similar-name", "p018"]}
+{"home": "apartment", "text": "电视亮度调高点", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["explicit-control", "similar-name", "p018"]}
+{"home": "apartment", "text": "电视柜灯关了吧，费电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p019"]}
+{"home": "apartment", "text": "电视关了吧，费电", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p019"]}
+{"home": "apartment", "text": "客厅窗户开条缝", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["device-not-in-home", "similar-name", "p020"]}
+{"home": "apartment", "text": "客厅窗帘开条缝", "intent": "控制", "device": "客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p020"]}
+{"home": "apartment", "text": "睡前把窗户关严实", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p021"]}
+{"home": "apartment", "text": "睡前把窗帘关严实", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p021"]}
+{"home": "apartment", "text": "主卧的窗帘合上吧，太阳晒脸", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p022"]}
+{"home": "apartment", "text": "客厅的窗帘合上吧，太阳晒脸", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p022"]}
+{"home": "apartment", "text": "衣帽架给我升上去一截", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home", "similar-name", "p023"]}
+{"home": "apartment", "text": "晾衣架给我升上去一截", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control", "similar-name", "p023"]}
+{"home": "apartment", "text": "衣帽架的灯开一下，找件外套", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p024"]}
+{"home": "apartment", "text": "晾衣架的灯开一下，找件外套", "intent": "控制", "device": "电动晾衣架", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p024"]}
+{"home": "apartment", "text": "洗地机把厨房拖一遍", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p025"]}
+{"home": "apartment", "text": "扫地机器人把厨房拖一遍", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p025"]}
+{"home": "apartment", "text": "洗地机先停一下，孩子在睡觉", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home", "similar-name", "p026"]}
+{"home": "apartment", "text": "扫地机器人先停一下，孩子在睡觉", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["explicit-control", "similar-name", "p026"]}
+{"home": "apartment", "text": "音响功放大点声，听不清", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home", "similar-name", "p027"]}
+{"home": "apartment", "text": "智能音箱大点声，听不清", "intent": "控制", "device": "智能音箱", "action": "调高或增大", "tags": ["explicit-control", "similar-name", "p027"]}
+{"home": "apartment", "text": "猫眼打开，我看看门口", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p028"]}
+{"home": "apartment", "text": "摄像头打开，我看看门口", "intent": "控制", "device": "摄像头", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p028"]}
+{"home": "apartment", "text": "猫眼的录像关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p029"]}
+{"home": "apartment", "text": "摄像头的录像关掉", "intent": "控制", "device": "摄像头", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p029"]}
+{"home": "apartment", "text": "阳台那个摄像头先关一下，我换衣服", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p030"]}
+{"home": "apartment", "text": "玄关那个摄像头先关一下，我换衣服", "intent": "控制", "device": "摄像头", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p030"]}
+{"home": "apartment", "text": "书房空调给我开到二十四度", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["device-not-in-home", "similar-name", "p031"]}
+{"home": "apartment", "text": "客厅空调给我开到二十四度", "intent": "控制", "device": "客厅空调", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p031"]}
+{"home": "apartment", "text": "次卧空调关掉，那屋没人住", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p032"]}
+{"home": "apartment", "text": "主卧空调关掉，那屋没人住", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p032"]}
+{"home": "apartment", "text": "厨房空调打开，做饭热死了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p033"]}
+{"home": "apartment", "text": "客厅空调打开，做饭热死了", "intent": "控制", "device": "客厅空调", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p033"]}
+{"home": "apartment", "text": "儿童房空调夜里切到睡眠档", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p034"]}
+{"home": "apartment", "text": "主卧空调夜里切到睡眠档", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p034"]}
+{"home": "apartment", "text": "厨房灯开一下，找个东西", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p035"]}
+{"home": "apartment", "text": "客厅主灯开一下，找个东西", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p035"]}
+{"home": "apartment", "text": "卫生间灯关一下，我出来了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p036"]}
+{"home": "apartment", "text": "主卧灯关一下，我出来了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p036"]}
+{"home": "apartment", "text": "阳台灯调到最亮", "intent": "控制", "device": "没有对应的设备", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p037"]}
+{"home": "apartment", "text": "客厅主灯调到最亮", "intent": "控制", "device": "客厅主灯", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p037"]}
+{"home": "apartment", "text": "玄关灯开着，等我回来", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p038"]}
+{"home": "apartment", "text": "床头灯开着，等我回来", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p038"]}
+{"home": "apartment", "text": "次卧的床头灯调暗", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p039"]}
+{"home": "apartment", "text": "主卧的床头灯调暗", "intent": "控制", "device": "床头灯", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p039"]}
+{"home": "apartment", "text": "客厅落地灯开暖光", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["device-not-in-home", "similar-name", "p040"]}
+{"home": "apartment", "text": "客厅主灯开暖光", "intent": "控制", "device": "客厅主灯", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p040"]}
+{"home": "apartment", "text": "主卧那台电视关了吧", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p041"]}
+{"home": "apartment", "text": "客厅那台电视关了吧", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p041"]}
+{"home": "apartment", "text": "客厅灯带换个颜色", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p042"]}
+{"home": "apartment", "text": "客厅主灯换个颜色", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p042"]}
+{"home": "apartment", "text": "洗碗机那边洗好了没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p043", "query"]}
+{"home": "apartment", "text": "洗衣机那边洗好了没", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "similar-name", "p043", "query"]}
+{"home": "apartment", "text": "电压力锅还剩几分钟", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p044", "query"]}
+{"home": "apartment", "text": "电饭煲还剩几分钟", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "similar-name", "p044", "query"]}
+{"home": "apartment", "text": "热水壶现在多少度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p045", "query"]}
+{"home": "apartment", "text": "热水器现在多少度", "intent": "查询", "device": "热水器", "tags": ["status-query", "similar-name", "p045", "query"]}
+{"home": "apartment", "text": "除湿机水箱还有水吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p046", "query"]}
+{"home": "apartment", "text": "加湿器水箱还有水吗", "intent": "查询", "device": "加湿器", "tags": ["status-query", "similar-name", "p046", "query"]}
+{"home": "apartment", "text": "温控器上显示多少度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p047", "query"]}
+{"home": "apartment", "text": "温湿度计上显示多少度", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "similar-name", "p047", "query"]}
+{"home": "apartment", "text": "门铃电量还够不够", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p048", "query"]}
+{"home": "apartment", "text": "门锁电量还够不够", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "similar-name", "p048", "query"]}
+{"home": "apartment", "text": "次卧空调现在开着吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p049", "query"]}
+{"home": "apartment", "text": "主卧空调现在开着吗", "intent": "查询", "device": "主卧空调", "tags": ["status-query", "similar-name", "p049", "query"]}
+{"home": "apartment", "text": "净水器的滤芯该换了吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p050", "query"]}
+{"home": "apartment", "text": "空气净化器的滤芯该换了吗", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "similar-name", "p050", "query"]}
+{"home": "house", "text": "洗衣机可以开了，东西都放好了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p051"]}
+{"home": "house", "text": "洗碗机可以开了，东西都放好了", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p051"]}
+{"home": "house", "text": "洗衣机先停一停，我拿个东西", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home", "similar-name", "p052"]}
+{"home": "house", "text": "洗碗机先停一停，我拿个东西", "intent": "控制", "device": "洗碗机", "action": "暂停", "tags": ["explicit-control", "similar-name", "p052"]}
+{"home": "house", "text": "洗衣机那个节能模式给我换上", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p053"]}
+{"home": "house", "text": "洗碗机那个节能模式给我换上", "intent": "控制", "device": "洗碗机", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p053"]}
+{"home": "house", "text": "洗衣机的烘干开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p054"]}
+{"home": "house", "text": "洗碗机的烘干开一下", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p054"]}
+{"home": "house", "text": "冰柜调到零下二十度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p055"]}
+{"home": "house", "text": "冰箱调到零下二十度", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p055"]}
+{"home": "house", "text": "冰柜开个速冻", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["device-not-in-home", "similar-name", "p056"]}
+{"home": "house", "text": "冰箱开个速冻", "intent": "控制", "device": "冰箱", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p056"]}
+{"home": "house", "text": "进户门锁一下，我要睡了", "intent": "控制", "device": "没有对应的设备", "action": "上锁", "tags": ["device-not-in-home", "similar-name", "p057"]}
+{"home": "house", "text": "车库门锁一下，我要睡了", "intent": "控制", "device": "车库门", "action": ["上锁", "关闭或停止"], "tags": ["explicit-control", "similar-name", "p057"]}
+{"home": "house", "text": "睡前帮我把大门反锁一下", "intent": "控制", "device": "没有对应的设备", "action": "上锁", "tags": ["device-not-in-home", "similar-name", "p058"]}
+{"home": "house", "text": "睡前帮我把车库门反锁一下", "intent": "控制", "device": "车库门", "action": ["上锁", "关闭或停止"], "tags": ["explicit-control", "similar-name", "p058"]}
+{"home": "house", "text": "门锁的提示音关了吧", "intent": "控制", "device": "没有对应的设备", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p059"]}
+{"home": "house", "text": "门铃的提示音关了吧", "intent": "控制", "device": "门铃", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p059"]}
+{"home": "house", "text": "智能门锁音量调低", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p060"]}
+{"home": "house", "text": "门铃音量调低", "intent": "控制", "device": "门铃", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p060"]}
+{"home": "house", "text": "指纹锁开一下，我妈到门口了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p061"]}
+{"home": "house", "text": "车库门开一下，我妈到门口了", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p061"]}
+{"home": "house", "text": "院门帮我开一下，快递来了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p062"]}
+{"home": "house", "text": "车库门帮我开一下，快递来了", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p062"]}
+{"home": "house", "text": "微波炉热两分钟", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p063"]}
+{"home": "house", "text": "烤箱热两分钟", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p063"]}
+{"home": "house", "text": "微波炉先暂停", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home", "similar-name", "p064"]}
+{"home": "house", "text": "烤箱先暂停", "intent": "控制", "device": "烤箱", "action": "暂停", "tags": ["explicit-control", "similar-name", "p064"]}
+{"home": "house", "text": "蒸箱先预热一下，菜马上好", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p065"]}
+{"home": "house", "text": "烤箱先预热一下，菜马上好", "intent": "控制", "device": "烤箱", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p065"]}
+{"home": "house", "text": "空气炸锅开二十分钟", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p066"]}
+{"home": "house", "text": "烤箱开二十分钟", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p066"]}
+{"home": "house", "text": "投影幕布打开，准备看电影", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p067"]}
+{"home": "house", "text": "投影仪打开，准备看电影", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p067"]}
+{"home": "house", "text": "片子看完了，投影幕布断电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p068"]}
+{"home": "house", "text": "片子看完了，投影仪断电", "intent": "控制", "device": "投影仪", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p068"]}
+{"home": "house", "text": "电视音量降两格", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p069"]}
+{"home": "house", "text": "投影仪音量降两格", "intent": "控制", "device": "投影仪", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p069"]}
+{"home": "house", "text": "电视切到HDMI", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p070"]}
+{"home": "house", "text": "投影仪切到HDMI", "intent": "控制", "device": "投影仪", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p070"]}
+{"home": "house", "text": "暖风机再调热乎点", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home", "similar-name", "p071"]}
+{"home": "house", "text": "地暖再调热乎点", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["explicit-control", "similar-name", "p071"]}
+{"home": "house", "text": "暖风机先开上，脚冰凉", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p072"]}
+{"home": "house", "text": "地暖先开上，脚冰凉", "intent": "控制", "device": "地暖", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p072"]}
+{"home": "house", "text": "电暖器关掉吧，屋里够暖了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p073"]}
+{"home": "house", "text": "地暖关掉吧，屋里够暖了", "intent": "控制", "device": "地暖", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p073"]}
+{"home": "house", "text": "吊扇开大一点，闷得慌", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home", "similar-name", "p074"]}
+{"home": "house", "text": "新风机开大一点，闷得慌", "intent": "控制", "device": "新风机", "action": "调高或增大", "tags": ["explicit-control", "similar-name", "p074"]}
+{"home": "house", "text": "地下室抽风机开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p075"]}
+{"home": "house", "text": "厨房油烟机开一下", "intent": "控制", "device": "油烟机", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p075"]}
+{"home": "house", "text": "浴缸的加热功能开起来", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p076"]}
+{"home": "house", "text": "浴霸的加热功能开起来", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p076"]}
+{"home": "house", "text": "浴缸关掉吧，洗完了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p077"]}
+{"home": "house", "text": "浴霸关掉吧，洗完了", "intent": "控制", "device": "浴霸", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p077"]}
+{"home": "house", "text": "充电宝停止充电吧，满了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p078"]}
+{"home": "house", "text": "充电桩停止充电吧，满了", "intent": "控制", "device": "充电桩", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p078"]}
+{"home": "house", "text": "充电宝设成慢充", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p079"]}
+{"home": "house", "text": "充电桩设成慢充", "intent": "控制", "device": "充电桩", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p079"]}
+{"home": "house", "text": "那个宠物饮水机开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p080"]}
+{"home": "house", "text": "那个宠物喂食器开一下", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p080"]}
+{"home": "house", "text": "宠物饮水机定时早上八点", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p081"]}
+{"home": "house", "text": "宠物喂食器定时早上八点", "intent": "控制", "device": "宠物喂食器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p081"]}
+{"home": "house", "text": "热水壶插座给通上电，要烧水", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p082"]}
+{"home": "house", "text": "饮水机插座给通上电，要烧水", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p082"]}
+{"home": "house", "text": "出门了，安防摄像头开起来", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p083"]}
+{"home": "house", "text": "出门了，安防警报开起来", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p083"]}
+{"home": "house", "text": "烟雾报警器静音一下", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "关闭或停止"], "tags": ["device-not-in-home", "similar-name", "p084"]}
+{"home": "house", "text": "安防警报静音一下", "intent": "控制", "device": "安防警报", "action": ["设为指定的数值或模式", "关闭或停止"], "tags": ["explicit-control", "similar-name", "p084"]}
+{"home": "house", "text": "车库灯别亮着了，关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p085"]}
+{"home": "house", "text": "车库门别开着了，关掉", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p085"]}
+{"home": "house", "text": "花园灯开半小时", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p086"]}
+{"home": "house", "text": "花园浇水阀开半小时", "intent": "控制", "device": "花园浇水阀", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p086"]}
+{"home": "house", "text": "花园喷泉关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p087"]}
+{"home": "house", "text": "花园浇水阀关掉", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p087"]}
+{"home": "house", "text": "客厅灯切成暖黄色", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p088"]}
+{"home": "house", "text": "餐厅吊灯切成暖黄色", "intent": "控制", "device": "餐厅吊灯", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p088"]}
+{"home": "house", "text": "卧室灯关一下，要睡了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p089"]}
+{"home": "house", "text": "书房灯关一下，要睡了", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p089"]}
+{"home": "house", "text": "厨房灯开一下，我洗个碗", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p090"]}
+{"home": "house", "text": "餐厅吊灯开一下，我洗个碗", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p090"]}
+{"home": "house", "text": "客厅吊灯亮度往下降一降", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p091"]}
+{"home": "house", "text": "餐厅吊灯亮度往下降一降", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p091"]}
+{"home": "house", "text": "楼梯灯亮度调到一半", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p092"]}
+{"home": "house", "text": "书房灯亮度调到一半", "intent": "控制", "device": "书房灯", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p092"]}
+{"home": "house", "text": "洗衣机这一轮还剩多长时间", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p093", "query"]}
+{"home": "house", "text": "洗碗机这一轮还剩多长时间", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "similar-name", "p093", "query"]}
+{"home": "house", "text": "门锁电池还剩多少", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p094", "query"]}
+{"home": "house", "text": "门铃电池还剩多少", "intent": "查询", "device": "门铃", "tags": ["status-query", "similar-name", "p094", "query"]}
+{"home": "house", "text": "冰柜里现在多少度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p095", "query"]}
+{"home": "house", "text": "冰箱里现在多少度", "intent": "查询", "device": "冰箱", "tags": ["status-query", "similar-name", "p095", "query"]}
+{"home": "house", "text": "投影幕布现在是开着的吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p096", "query"]}
+{"home": "house", "text": "投影仪现在是开着的吗", "intent": "查询", "device": "投影仪", "tags": ["status-query", "similar-name", "p096", "query"]}
+{"home": "house", "text": "暖风机现在开着没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p097", "query"]}
+{"home": "house", "text": "地暖现在开着没", "intent": "查询", "device": "地暖", "tags": ["status-query", "similar-name", "p097", "query"]}
+{"home": "house", "text": "车库灯这会儿是什么状态", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p098", "query"]}
+{"home": "house", "text": "车库门这会儿是什么状态", "intent": "查询", "device": "车库门", "tags": ["status-query", "similar-name", "p098", "query"]}
+{"home": "house", "text": "客厅灯是不是还亮着", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p099", "query"]}
+{"home": "house", "text": "书房灯是不是还亮着", "intent": "查询", "device": "书房灯", "tags": ["status-query", "similar-name", "p099", "query"]}
+{"home": "house", "text": "充电宝充满了没有", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p100", "query"]}
+{"home": "house", "text": "充电桩充满了没有", "intent": "查询", "device": "充电桩", "tags": ["status-query", "similar-name", "p100", "query"]}
+{"home": "villa", "text": "书房空调开到除湿模式", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p101"]}
+{"home": "villa", "text": "主卧空调开到除湿模式", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p101"]}
+{"home": "villa", "text": "厨房灯给我开开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p102"]}
+{"home": "villa", "text": "餐厅吊灯给我开开", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p102"]}
+{"home": "villa", "text": "冰柜温度往下调两度", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p103"]}
+{"home": "villa", "text": "冰箱温度往下调两度", "intent": "控制", "device": "冰箱", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p103"]}
+{"home": "villa", "text": "把浴缸开起来", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p104"]}
+{"home": "villa", "text": "把浴霸开起来", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p104"]}
+{"home": "villa", "text": "洗地机去餐厅那边清一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p105"]}
+{"home": "villa", "text": "扫地机器人去餐厅那边清一下", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p105"]}
+{"home": "villa", "text": "投影幕布先调成待机", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p106"]}
+{"home": "villa", "text": "投影仪先调成待机", "intent": "控制", "device": "投影仪", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p106"]}
+{"home": "villa", "text": "净水器调到自动模式", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p107"]}
+{"home": "villa", "text": "空气净化器调到自动模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p107"]}
+{"home": "villa", "text": "除湿机打开，定两个小时", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p108"]}
+{"home": "villa", "text": "加湿器打开，定两个小时", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p108"]}
+{"home": "villa", "text": "暖风机别那么热，降两度", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p109"]}
+{"home": "villa", "text": "地暖别那么热，降两度", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p109"]}
+{"home": "villa", "text": "猫眼给我打开看一眼", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p110"]}
+{"home": "villa", "text": "摄像头给我打开看一眼", "intent": "控制", "device": "摄像头", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p110"]}
+{"home": "villa", "text": "电压力锅炖个排骨，四十分钟", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p111"]}
+{"home": "villa", "text": "电饭煲炖个排骨，四十分钟", "intent": "控制", "device": "电饭煲", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p111"]}
+{"home": "villa", "text": "空气炸锅温度设成一百九", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p112"]}
+{"home": "villa", "text": "烤箱温度设成一百九", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p112"]}
+{"home": "villa", "text": "衣帽架升到最高", "intent": "控制", "device": "没有对应的设备", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["device-not-in-home", "similar-name", "p113"]}
+{"home": "villa", "text": "晾衣架升到最高", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "similar-name", "p113"]}
+{"home": "villa", "text": "玄关灯可以关掉了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p114"]}
+{"home": "villa", "text": "主卧灯可以关掉了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p114"]}
+{"home": "villa", "text": "宠物饮水机暂停一下", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home", "similar-name", "p115"]}
+{"home": "villa", "text": "宠物喂食器暂停一下", "intent": "控制", "device": "宠物喂食器", "action": "暂停", "tags": ["explicit-control", "similar-name", "p115"]}
+{"home": "villa", "text": "音响功放切到蓝牙输入", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p116"]}
+{"home": "villa", "text": "智能音箱切到蓝牙输入", "intent": "控制", "device": "智能音箱", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p116"]}
+{"home": "villa", "text": "书房空调现在几度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p117", "query"]}
+{"home": "villa", "text": "客厅空调现在几度", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "similar-name", "p117", "query"]}
+{"home": "villa", "text": "洗地机电量还剩多少", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p118", "query"]}
+{"home": "villa", "text": "扫地机器人电量还剩多少", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "similar-name", "p118", "query"]}
+{"home": "villa", "text": "浴缸现在开着吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p119", "query"]}
+{"home": "villa", "text": "浴霸现在开着吗", "intent": "查询", "device": "浴霸", "tags": ["status-query", "similar-name", "p119", "query"]}
+{"home": "villa", "text": "厨房灯关了没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p120", "query"]}
+{"home": "villa", "text": "餐厅吊灯关了没", "intent": "查询", "device": "餐厅吊灯", "tags": ["status-query", "similar-name", "p120", "query"]}
