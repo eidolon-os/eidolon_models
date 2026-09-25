@@ -1,0 +1,233 @@
+{"home": "apartment", "text": "麻烦把客厅主灯调暗一点", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "小易，客厅灯开一下", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "客厅主灯亮度调到50%", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅的灯太暗了，能不能亮一点", "intent": "控制", "device": "客厅主灯", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅灯关了吧，我要睡了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "主卧的灯开一下，谢谢", "intent": "控制", "device": "主卧灯", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "主卧灯调到夜灯模式", "intent": "控制", "device": "主卧灯", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "主卧灯太亮了，帮我调暗点", "intent": "控制", "device": "主卧灯", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "主卧灯关", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "床头灯开一下，我想看会儿书", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "床头灯亮度调到最低", "intent": "控制", "device": "床头灯", "action": ["设为指定的数值或模式", "调低或减小"], "tags": ["explicit-control"]}
+{"home": "apartment", "text": "床头灯亮一点呗", "intent": "控制", "device": "床头灯", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "把床头灯关掉，晚安", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅空调 26", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅空调开一下，热死了", "intent": "控制", "device": "客厅空调", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "客厅空调温度再低两度", "intent": "控制", "device": "客厅空调", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅空调切到除湿", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅空调有点冷，往上调一度", "intent": "控制", "device": "客厅空调", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "主卧空调定时早上七点关", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "villa", "text": "主卧空调开到制热，24度", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
+{"home": "apartment", "text": "主卧空调风速调小点", "intent": "控制", "device": "主卧空调", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "把主卧空调关了，有点凉", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "关窗帘", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "客厅窗帘拉开点，太暗了", "intent": "控制", "device": "客厅窗帘", "action": ["调高或增大", "打开或启动"], "tags": ["explicit-control"]}
+{"home": "villa", "text": "客厅窗帘开到三分之一", "intent": "控制", "device": "客厅窗帘", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "窗帘再合上一点，阳光晃眼", "intent": "控制", "device": "客厅窗帘", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "早上七点自动拉开客厅窗帘", "intent": "控制", "device": "客厅窗帘", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "空气净化器开一下，今天雾霾挺重的", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "净化器调到睡眠模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "空气净化器风量调小点，太吵了", "intent": "控制", "device": "空气净化器", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "空气净化器关了", "intent": "控制", "device": "空气净化器", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "净化器开大点", "intent": "控制", "device": "空气净化器", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "加湿器打开吧，嗓子干", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "加湿器湿度设到55", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "加湿器雾量调大一点", "intent": "控制", "device": "加湿器", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "加湿器调小点，地上都湿了", "intent": "控制", "device": "加湿器", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电视关掉", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电视声音大一点，听不清", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "villa", "text": "电视切到 HDMI 2", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电视暂停一下，我去接个电话", "intent": "控制", "device": "电视", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电视调到央视一套", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "音箱音量调到 30", "intent": "控制", "device": "智能音箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "音箱声音小点，孩子睡了", "intent": "控制", "device": "智能音箱", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "villa", "text": "音箱放歌吧", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "音箱先停一下", "intent": "控制", "device": "智能音箱", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "音箱大声点", "intent": "控制", "device": "智能音箱", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "扫地机器人暂停", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "villa", "text": "扫地机器人开始拖地", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "扫地机吸力调到强力", "intent": "控制", "device": "扫地机器人", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "扫地机器人别扫了，太吵", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "扫地机吸力小一点", "intent": "控制", "device": "扫地机器人", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "洗衣机暂停一下，我还有件衣服要放进去", "intent": "控制", "device": "洗衣机", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "villa", "text": "洗衣机选快洗模式", "intent": "控制", "device": "洗衣机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "洗衣机停了吧", "intent": "控制", "device": "洗衣机", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "洗衣机启动", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "晾衣架升上去", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "villa", "text": "晾衣架放低一点，我够不着", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "晾衣架烘干开一下", "intent": "控制", "device": "电动晾衣架", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "晾衣架停", "intent": "控制", "device": "电动晾衣架", "action": ["关闭或停止", "暂停"], "tags": ["explicit-control"]}
+{"home": "apartment", "text": "外面下雨了，晾衣架收上去吧", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电饭煲暂停一下", "intent": "控制", "device": "电饭煲", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "villa", "text": "电饭煲预约到明早六点半", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电饭煲煮粥模式", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "电饭煲关了，别保温了", "intent": "控制", "device": "电饭煲", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "小易，电饭煲按一下开始", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "热水器打开，我一会儿要洗澡", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "热水器温度高一点，水不够热", "intent": "控制", "device": "热水器", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "热水器设成 42 度就行", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "热水器关了吧，出门了", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "热水器温度低点，烫", "intent": "控制", "device": "热水器", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "帮我把门反锁一下", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control"]}
+{"home": "villa", "text": "小易，锁门", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "门锁打开，我手里拿着东西", "intent": "控制", "device": "智能门锁", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "我出门了，门记得锁好", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "智能门锁切到常开模式", "intent": "控制", "device": "智能门锁", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "摄像头关了，我在家呢", "intent": "控制", "device": "摄像头", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "玄关摄像头打开", "intent": "控制", "device": "摄像头", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "摄像头调成夜视模式", "intent": "控制", "device": "摄像头", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "摄像头灵敏度调低点，老误报", "intent": "控制", "device": "摄像头", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "温湿度计开一下", "intent": "控制", "device": "温湿度计", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "温湿度计关掉", "intent": "控制", "device": "温湿度计", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "温湿度计屏幕亮度调低", "intent": "控制", "device": "温湿度计", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "温湿度计切成华氏度", "intent": "控制", "device": "温湿度计", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "书房灯关了", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "书房灯调亮点，看书费眼", "intent": "控制", "device": "书房灯", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "书房灯亮度 30%", "intent": "控制", "device": "书房灯", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "书房灯暗一点吧", "intent": "控制", "device": "书房灯", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "餐厅吊灯打开，准备吃饭了", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "餐厅吊灯调暗，要点氛围", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "餐厅吊灯关", "intent": "控制", "device": "餐厅吊灯", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "餐厅吊灯切到暖光", "intent": "控制", "device": "餐厅吊灯", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "villa", "text": "今天晚上有客人来，餐厅吊灯开亮一点", "intent": "控制", "device": "餐厅吊灯", "action": ["调高或增大", "打开或启动"], "tags": ["explicit-control"]}
+{"home": "house", "text": "落地扇开一下", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "落地扇风大点", "intent": "控制", "device": "落地扇", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "落地扇开摇头，风量三档", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "落地扇小一档", "intent": "控制", "device": "落地扇", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "风扇关了吧，不热了", "intent": "控制", "device": "落地扇", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "地暖打开，脚冷", "intent": "控制", "device": "地暖", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "地暖设到 22 度", "intent": "控制", "device": "地暖", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "地暖温度低一点，太热了", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "地暖关了，天暖和了", "intent": "控制", "device": "地暖", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "地暖再热一点", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "新风机关掉", "intent": "控制", "device": "新风机", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "新风机开到自动模式", "intent": "控制", "device": "新风机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "新风风量调大点", "intent": "控制", "device": "新风机", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "新风机调小一档，晚上太吵", "intent": "控制", "device": "新风机", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "冰箱开速冻", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "villa", "text": "冰箱冷冻室温度再低点", "intent": "控制", "device": "冰箱", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "冰箱调到节能模式", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "冰箱冷藏温度高一度，菜都冻了", "intent": "控制", "device": "冰箱", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "洗碗机暂停一下，漏了个碗", "intent": "控制", "device": "洗碗机", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "villa", "text": "洗碗机选强力洗", "intent": "控制", "device": "洗碗机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "洗碗机开始吧", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "洗碗机停了", "intent": "控制", "device": "洗碗机", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "烤箱调到 180 度", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "villa", "text": "烤箱温度再高 20 度", "intent": "控制", "device": "烤箱", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "烤箱关了，烤好了", "intent": "控制", "device": "烤箱", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "烤箱先暂停，我翻个面", "intent": "控制", "device": "烤箱", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "house", "text": "烤箱开一下", "intent": "控制", "device": "烤箱", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "油烟机打开，要炒菜了", "intent": "控制", "device": "油烟机", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "油烟机风量调小，太吵了", "intent": "控制", "device": "油烟机", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "油烟机开大点，烟太大", "intent": "控制", "device": "油烟机", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "油烟机关掉", "intent": "控制", "device": "油烟机", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "油烟机延时三分钟关", "intent": "控制", "device": "油烟机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "浴霸关了", "intent": "控制", "device": "浴霸", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "浴霸开暖风", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
+{"home": "house", "text": "浴霸温度调高点", "intent": "控制", "device": "浴霸", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "浴霸开换气模式", "intent": "控制", "device": "浴霸", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "投影仪打开，看电影", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "投影仪亮度调低点", "intent": "控制", "device": "投影仪", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "投影仪暂停", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "house", "text": "投影仪切到 HDMI 1", "intent": "控制", "device": "投影仪", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "投影仪音量大点", "intent": "控制", "device": "投影仪", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "门铃关掉，别响了", "intent": "控制", "device": "门铃", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "门铃打开", "intent": "控制", "device": "门铃", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "门铃音量调小点", "intent": "控制", "device": "门铃", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "门铃铃声换成第二个", "intent": "控制", "device": "门铃", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "安防警报撤防", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "安防警报开在家模式", "intent": "控制", "device": "安防警报", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "警报关了，是我自己", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "出门了，安防打开", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "车库门开", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "车库门关一下，我进来了", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "车库门开到一半就行", "intent": "控制", "device": "车库门", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "车库门先停一下", "intent": "控制", "device": "车库门", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "house", "text": "浇水阀关了", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "villa", "text": "花园浇水阀开一下，草都干了", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "浇水阀定到每天早上六点", "intent": "控制", "device": "花园浇水阀", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "花园浇水时间调短点", "intent": "控制", "device": "花园浇水阀", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "充电桩暂停充电", "intent": "控制", "device": "充电桩", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "villa", "text": "充电桩停了，够用了", "intent": "控制", "device": "充电桩", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "充电桩功率调到 7 千瓦", "intent": "控制", "device": "充电桩", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "充电桩开一下，车没电了", "intent": "控制", "device": "充电桩", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "充电桩功率调低点，晚上别跳闸", "intent": "控制", "device": "充电桩", "action": "调低或减小", "tags": ["explicit-control"]}
+{"home": "house", "text": "喂食器暂停，别喂了", "intent": "控制", "device": "宠物喂食器", "action": "暂停", "tags": ["explicit-control"]}
+{"home": "villa", "text": "喂食器每天定时八点喂", "intent": "控制", "device": "宠物喂食器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "喂食器给狗出一份", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "house", "text": "喂食器份量调大点", "intent": "控制", "device": "宠物喂食器", "action": "调高或增大", "tags": ["explicit-control"]}
+{"home": "house", "text": "喂食器关掉", "intent": "控制", "device": "宠物喂食器", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "饮水机插座通电", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["explicit-control"]}
+{"home": "villa", "text": "饮水机插座关了，出去几天", "intent": "控制", "device": "饮水机插座", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "house", "text": "饮水机插座定时晚上十一点断", "intent": "控制", "device": "饮水机插座", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"home": "house", "text": "饮水机插座关掉吧，睡觉了", "intent": "控制", "device": "饮水机插座", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"home": "apartment", "text": "把客厅那盏大灯关了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室的大灯开一下", "intent": "控制", "device": "主卧灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "床边那盏灯调暗点", "intent": "控制", "device": "床头灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "把灯关了", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "开灯", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "睡觉的地方灯关掉", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "我在客厅，灯打开", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室小灯开一下", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室的灯调亮点", "intent": "控制", "device": "主卧灯", "action": "调高或增大", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "沙发这边的灯太亮了，调暗点", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "床头的灯关掉，大灯留着", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "外面客厅的灯关一下，我在卧室", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "灯调暗点", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室里那盏台灯打开", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "客厅灯亮度调到 30", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室灯亮度调到一半", "intent": "控制", "device": "主卧灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "床头灯换成暖光", "intent": "控制", "device": "床头灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "睡觉那间的灯都关了", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "看电视的地方灯关了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "这边的灯关了", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室灯关了，我要睡了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "帮我把床边的小灯开一下", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "把客厅那个吸顶灯开一下", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "主卧吸顶灯调暗", "intent": "控制", "device": "主卧灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "台灯关了", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室灯全关", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室那台空调开一下", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "客厅这台空调调到 25", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "空调关了", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "空调 26", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "睡觉那屋的空调调高一度，有点冷", "intent": "控制", "device": "主卧空调", "action": "调高或增大", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "沙发这边太热了，空调低点", "intent": "控制", "device": "客厅空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室空调开睡眠模式，我准备睡了", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "我在卧室，空调开一下", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "外面的空调关一下，没人在客厅", "intent": "控制", "device": "客厅空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "床那边的空调风别对着吹，调小点", "intent": "控制", "device": "主卧空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "空调开一下", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "客厅那个空调切换成送风", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室空调定时两小时关", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "把客厅的空调开到 24 度制冷", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "空调温度高一点", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "调高或增大", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "主卧那台空调关了，我去客厅", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "客厅空调开，我在客厅呢", "intent": "控制", "device": "客厅空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "吃饭那儿的灯开一下", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "书房那边的灯关了", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "餐桌上面的灯调暗点", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "把灯都关了", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "工作的地方灯亮一点", "intent": "控制", "device": "书房灯", "action": "调高或增大", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "卧室的灯关了，我在书房", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "灯开一下", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "餐厅的灯亮度调到 60", "intent": "控制", "device": "餐厅吊灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "书房灯调到阅读模式", "intent": "控制", "device": "书房灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "吃饭的地方灯关掉，吃完了", "intent": "控制", "device": "餐厅吊灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "床边的灯开一下，我要看书", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "客厅的灯关了，我去书房了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "书桌那儿的灯打开", "intent": "控制", "device": "书房灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "吊灯关了", "intent": "控制", "device": "餐厅吊灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "睡觉的地方灯调暗点", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "卧室大灯关了，留个床头的", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "我在餐厅，灯开一下", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "客厅大灯调到 80%", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "把空调都关了", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "卧室那边的空调开制热", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "客厅这边空调温度低点", "intent": "控制", "device": "客厅空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "书房不用了，灯关了吧", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "饭厅的灯打开", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "人在卧室呢，灯关了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "客厅的灯别关，把卧室的关了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "大灯关了", "intent": "控制", "device": ["客厅主灯", "主卧灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "看书那边的灯调亮", "intent": "控制", "device": ["书房灯", "床头灯"], "action": "调高或增大", "tags": ["room-disambiguation"]}

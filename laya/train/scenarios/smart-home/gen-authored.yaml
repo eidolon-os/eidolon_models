@@ -1,0 +1,6 @@
+# 把 train/data/authored/smart-home/*.jsonl（撰写格式）转成记录，同时校验每条金标。
+generators:
+  - kind: import
+    adapter: authored_cases
+    name: authored
+    path: ../../data/authored/smart-home

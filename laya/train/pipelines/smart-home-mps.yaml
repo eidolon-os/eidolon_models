@@ -23,6 +23,18 @@ steps:
     input: "{run}/cases.jsonl"              # 没有老师时用 cases.jsonl；有老师改成 labeled.jsonl
     out: "{run}/augmented.jsonl"
 
+  # 撰写数据（train/data/authored/smart-home）：主体来源
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-authored.yaml
+    out: "{run}/authored.jsonl"
+
+  - stage: augment
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/augment.yaml
+    input: "{run}/authored.jsonl"
+    out: "{run}/authored-augmented.jsonl"
+
   - stage: assemble
     config: ../scenarios/smart-home/assemble.yaml
     out: "{run}/dataset"

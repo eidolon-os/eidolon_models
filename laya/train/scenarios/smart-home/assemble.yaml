@@ -1,8 +1,14 @@
-# 路径相对于本文件；{run} 由 pipeline 替换（单独跑时直接写绝对路径）。
+# 路径相对于本文件；{run} 由 pipeline 替换。
+# 组合原则：三类来源分开存放、在这里按权重混合——
+#   authored（大模型 / 人工撰写，金标可信）是主体，权重 1；
+#   template（模板生成，措辞单一）只做覆盖填充，权重 0.3；
+#   external（外部数据集，后续接入）做回放，权重 0.2–0.3。
 seed: 7
 sources:
-  - path: "{run}/augmented.jsonl"
+  - path: "{run}/authored-augmented.jsonl"
     weight: 1.0
+  - path: "{run}/augmented.jsonl"        # 模板 + 增强
+    weight: 0.3
 locked_eval:
   - ../../../evals/smart-home
 split:

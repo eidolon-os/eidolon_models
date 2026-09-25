@@ -62,6 +62,8 @@ def _import(scenario: Scenario, config: dict) -> Iterable[Record]:
         yield from _import_records(scenario, config)
     elif adapter == "evals_cases":
         yield from _import_evals_cases(scenario, config)
+    elif adapter == "authored_cases":
+        yield from _import_authored_cases(scenario, config)
     else:
         raise ValueError(f"unknown import adapter {adapter!r}")
 
@@ -110,6 +112,66 @@ def _import_evals_cases(scenario: Scenario, config: dict) -> Iterable[Record]:
                 labels=labels,
                 tags=[scn_tag, f"home:{c['home']}"],
                 meta={"home": c["home"]},
+            )
+
+
+def _import_authored_cases(scenario: Scenario, config: dict) -> Iterable[Record]:
+    """``train/data/authored/<scenario>/*.jsonl`` in the authoring format (see train/data/README.md):
+    ``{home, text, intent, device?, action?, tags}``. Every gold is checked against the home's
+    options and the line is named on failure, so a typo in a device name cannot train."""
+    from .records import target_vector
+
+    root = _resolve(scenario, config["path"])
+    homes = _load_homes(_resolve(scenario, config.get("homes", "../../../evals/smart-home")) / "homes")
+    slot = config.get("device_slot", "devices")
+    files = sorted(root.glob("*.jsonl")) if root.is_dir() else [root]
+    if not files:
+        raise FileNotFoundError(f"no *.jsonl under {root}")
+    seen: dict[str, str] = {}
+    for f in files:
+        for n, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            where = f"{f.name}:{n}"
+            try:
+                c = json.loads(line)
+            except json.JSONDecodeError as e:
+                raise ValueError(f"{where}: bad json: {e}") from e
+            for key in ("home", "text", "intent"):
+                if key not in c:
+                    raise ValueError(f"{where}: missing {key!r}")
+            if c["home"] not in homes:
+                raise ValueError(f"{where}: unknown home {c['home']!r}")
+            key = f"{c['home']}|{c['text'].strip()}"
+            if key in seen:  # the same sentence in two files: keep the first, say so
+                print(f"authored: {where} duplicates {seen[key]}, skipped", file=sys.stderr)
+                continue
+            seen[key] = where
+            questions = scenario.build_questions({slot: homes[c["home"]]})
+            labels = {"intent": {"gold": c["intent"]}}
+            if c.get("device") is not None:
+                labels["device"] = {"gold": c["device"]}
+            if c.get("action") is not None:
+                labels["action"] = {"gold": c["action"]}
+            if c["intent"] == "控制" and "device" not in labels:
+                raise ValueError(f"{where}: 控制 needs a device (or an exit)")
+            if c["intent"] == "无关" and ("device" in labels or "action" in labels):
+                raise ValueError(f"{where}: 无关 must not carry device/action")
+            for qid, lab in labels.items():
+                try:
+                    target_vector(questions[qid], lab)
+                except ValueError as e:
+                    raise ValueError(f"{where}: {qid}: {e}") from e
+            tags = list(c.get("tags") or [])
+            yield Record(
+                id=record_id(scenario.name, "authored", c["home"], c["text"]),
+                scenario=scenario.name,
+                source=f"authored:{f.stem}",
+                state={"utterance": c["text"]},
+                questions=questions,
+                labels=labels,
+                tags=tags + [f"home:{c['home']}"],
+                meta={"home": c["home"], "file": where},
             )
 
 
