@@ -16,7 +16,7 @@
   "head_max_len": 256
  },
  "n_cases": 182,
- "server_rss_mb": 1227,
+ "server_rss_mb": 1289,
  "laya": {
   "intent_ok": {
    "n": 182,
@@ -1363,20 +1363,20 @@
   }
  },
  "latency_ms": {
-  "client_p50": 81.9,
-  "client_p95": 90.9,
-  "client_mean": 83.6,
-  "server_p50": 76.0,
-  "forward_p50": 75.4,
+  "client_p50": 85.5,
+  "client_p95": 93.0,
+  "client_mean": 87.1,
+  "server_p50": 79.6,
+  "forward_p50": 79.0,
   "by_device_options": {
    "20": {
     "n": 162,
-    "client_p50": 81.6,
+    "client_p50": 85.3,
     "tokens_mean": 477
    },
    "38": {
     "n": 20,
-    "client_p50": 85.9,
+    "client_p50": 90.6,
     "tokens_mean": 485
    }
   }

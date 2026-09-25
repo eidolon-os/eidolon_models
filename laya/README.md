@@ -5,7 +5,7 @@
 
 - **两个后端，配置切换**：`torch`（PyTorch 权重，Mac 上可用 MPS）/ `onnx`（ONNX Runtime，
   不需要 torch）。两者共用同一份前后处理（`sequence.py`），所以切换后端不改变语义：
-  torch 后端与上游 laya 0.3.7 逐字节一致，onnx 与 torch 的 logit 差 ~2e-5（测试守护）。
+  torch 后端与上游 laya（仓库内副本，当前 v0.3.20，见 `src/eidolon_models_laya/vendor/laya/VENDOR_VERSION`）逐字节一致，onnx 与 torch 的 logit 差 ~2e-5（测试守护）。
 - **接口兼容 Jev / laya**：`POST /v1/systemone`，请求体 `{state, questions}` 不变，
   回复在原有 `answers`/`usage` 之外多带 `truncated`、`backend`、`timing_ms`。
 - **注意：这是 zero-shot 底座**，中文对话路由必须微调后才可用；这里先把服务跑起来，不耽误联调。
@@ -20,7 +20,7 @@ laya/
 ├── src/eidolon_models_laya/
 │   ├── config.py                 EIDOLON_LAYA_* 环境变量 → Settings
 │   ├── artifacts.py              manifest、按 revision 拉取、sha256 校验
-│   ├── sequence.py               不依赖 torch 的拼序列/解码（移植自 laya 0.3.7）
+│   ├── sequence.py               不依赖 torch 的拼序列/解码（移植自 laya，随 vendor 副本升级）
 │   ├── backends.py               TorchBackend / OnnxBackend：只做前向
 │   ├── engine.py                 校验 → 拼序列 → 前向 → 解码
 │   ├── export.py                 PyTorch → ONNX，并与 PyTorch 对数后写 export.json
@@ -142,4 +142,4 @@ scripts/eidolon-laya test            # 单测 + 对拍；没有权重/ONNX 时�
 ## 许可
 
 checkpoint：Apache-2.0（convaiinnovations/laya）；基座编码器 mmBERT-base：MIT；
-`sequence.py` 移植自 laya 0.3.7 源码（Apache-2.0，文件头注明改动）。本目录其余代码随仓库许可。
+`sequence.py` 移植自 laya 源码（Apache-2.0，文件头注明改动）；`src/eidolon_models_laya/vendor/laya/` 是上游包按 git tag 的原样副本（上游会从 PyPI 删旧版本，所以不依赖 PyPI），用 `scripts/sync-laya-vendor.py <tag>` 升级，升级门槛是 `tests/test_parity.py` 和 `evals/smart-home/run_all.sh` 的数字不动。本目录其余代码随仓库许可。

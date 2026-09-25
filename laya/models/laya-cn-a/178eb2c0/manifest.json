@@ -14,7 +14,7 @@
     "declared_by": "Hugging Face model card metadata"
   },
   "runtime": {
-    "code": "laya==0.3.7 (same DecisionModel; upstream loads it with its own predict.py)",
+    "code": "laya (vendored; same DecisionModel; upstream loads it with its own predict.py)",
     "trained_max_len": 1024,
     "head_max_len": 512,
     "notes": "Community Chinese intent post-training (V3 seed42): last 8 encoder layers + decision head, 2 epochs on 95,708 human-labelled items. Uncalibrated."

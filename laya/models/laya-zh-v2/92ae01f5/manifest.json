@@ -14,7 +14,7 @@
     "declared_by": "ModelScope model card metadata"
   },
   "runtime": {
-    "code": "laya==0.3.7 (same DecisionModel; ships rl_agent_config.json with fitted temperatures)",
+    "code": "laya (vendored; same DecisionModel; ships rl_agent_config.json with fitted temperatures)",
     "trained_max_len": 512,
     "head_max_len": 256,
     "notes": "RLCD fine-tune of multilingual on Chinese triage + customer service, 2 epochs (~9500 items). Author reports feishu_zh choice 31.2%->51.6%, own customer-service test set 42.8%->90.9%, English probe 79.1%->76.1%. Only on ModelScope."

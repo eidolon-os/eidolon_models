@@ -1,6 +1,6 @@
 """Torch-free sequence building and answer decoding, shared by both backends.
 
-Ported from laya 0.3.7 (``laya/common.py`` and ``Agent.system_one`` in
+Ported from laya 0.3.20 (``laya/common.py`` and ``Agent.system_one`` in
 ``laya/agent.py``), Copyright Convai Innovations, Apache License 2.0. Changes:
 the tokenizer is ``tokenizers`` instead of ``transformers``, batches are numpy
 instead of torch, and ``build_sequence`` also reports whether the state was
@@ -238,6 +238,15 @@ def collate(items: list[dict], pad_id: int) -> dict[str, np.ndarray]:
     return batch
 
 
+def answer_confidence(p: np.ndarray, k: int) -> float:
+    """Probability mass on the reported answer: max(p). laya 0.3.20 reports it next to
+    ``confidence`` because it is the quantity temperature scaling fits (and ECE measures);
+    ``confidence`` below is entropy-based and not comparable against the same threshold."""
+    if k < 1:
+        return 1.0
+    return float(np.clip(np.max(p[:k]), 0.0, 1.0))
+
+
 def confidence_from_probs(p: np.ndarray, k: int) -> float:
     """Normalized Shannon entropy confidence: 1 - H(p) / log(k)."""
     if k < 2:
@@ -279,6 +288,7 @@ def decode_answers(
         p = np.exp(z - z.max())
         p = p / p.sum()
         conf = round(confidence_from_probs(p, k), 4)
+        ans_conf = round(answer_confidence(p, k), 4)
         ext = {"act_probability": round(float(act[r, 0]), 4)}
         if q["t"] == "choice":
             keys = list(q["crit"].keys())
@@ -287,6 +297,7 @@ def decode_answers(
                 "choice": keys[int(p.argmax())],
                 "probabilities": {kk: round(float(v), 4) for kk, v in zip(keys, p, strict=False)},
                 "confidence": conf,
+                "answer_confidence": ans_conf,
                 "action": ext,
             }
         elif q["t"] == "score":
@@ -296,6 +307,7 @@ def decode_answers(
                 "legend": {str(i): c for i, c in enumerate(q["crit"])},
                 "probabilities": {str(i): round(float(v), 4) for i, v in enumerate(p)},
                 "confidence": conf,
+                "answer_confidence": ans_conf,
                 "action": ext,
             }
         else:
@@ -304,6 +316,7 @@ def decode_answers(
                 "type": "noul",
                 "noul": round(p1, 4),
                 "confidence": round(max(p1, 1.0 - p1), 4),
+                "answer_confidence": ans_conf,
                 "action": ext,
             }
     return answers

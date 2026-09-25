@@ -14,7 +14,7 @@
     "declared_by": "Hugging Face model card metadata"
   },
   "runtime": {
-    "code": "laya==0.3.7 (same DecisionModel; upstream loads it with macjev.py, which never truncates)",
+    "code": "laya (vendored; same DecisionModel; upstream loads it with macjev.py, which never truncates)",
     "trained_max_len": 4096,
     "head_max_len": 1024,
     "notes": "Community Mac-agent decision fine-tune (seed 0): last 6 encoder layers + head, 50k decisions (20k Mac trajectories), 1K->4K staged, per-type temperatures fitted on 6k calibration decisions."

@@ -14,7 +14,7 @@
     "declared_by": "Hugging Face model card metadata"
   },
   "runtime": {
-    "code": "laya==0.3.7",
+    "code": "laya (vendored, see src/eidolon_models_laya/vendor/laya/VENDOR_VERSION)",
     "encoder": "jhu-clsp/mmBERT-base (ModernBERT architecture, 22 layers, hidden 768)",
     "trained_max_len": 1024,
     "head_max_len": 256

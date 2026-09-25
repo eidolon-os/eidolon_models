@@ -1,0 +1,4 @@
+repo: https://github.com/NandhaKishorM/laya
+tag: v0.3.20
+commit: 23a17522aa4942da6cce53a995a275760320b691
+synced_by: scripts/sync-laya-vendor.py (absolute self-imports rewritten to relative)
