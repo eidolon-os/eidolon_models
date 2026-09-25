@@ -1,0 +1,18 @@
+# 外部数据集 → 记录（回放用）。下载方式见 train/data/README.md；副本在 train/data/external/（gitignore）。
+generators:
+  - kind: import
+    adapter: zhihao_smarthome
+    name: zhihao
+    path: ../../data/external/zhihao_smarthome
+    files: [train.jsonl, validation.jsonl]
+  - kind: import
+    adapter: scenic
+    name: scenic
+    path: ../../data/external/scenic_repo/examples/data/SCENIC_full_training_dataset.json
+    min_device_count: 3
+  - kind: import
+    adapter: massive_zh
+    name: massive-zh
+    path: ../../data/external/massive_zh
+    negatives_per_scenario: 300
+    # 默认排除 audio / play / music（家里有智能音箱，这些是真命令，不能当"无关"）

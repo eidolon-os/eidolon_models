@@ -1,0 +1,7 @@
+# generated from gen-external.yaml: one source per file so assemble can weight it
+generators:
+- kind: import
+  adapter: massive_zh
+  name: massive-zh
+  path: ../../data/external/massive_zh
+  negatives_per_scenario: 300

@@ -1,0 +1,9 @@
+# generated from gen-external.yaml: one source per file so assemble can weight it
+generators:
+- kind: import
+  adapter: zhihao_smarthome
+  name: zhihao
+  path: ../../data/external/zhihao_smarthome
+  files:
+  - train.jsonl
+  - validation.jsonl

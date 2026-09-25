@@ -1,0 +1,7 @@
+# generated from gen-external.yaml: one source per file so assemble can weight it
+generators:
+- kind: import
+  adapter: scenic
+  name: scenic
+  path: ../../data/external/scenic_repo/examples/data/SCENIC_full_training_dataset.json
+  min_device_count: 3

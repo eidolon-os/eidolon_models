@@ -1,14 +1,21 @@
 # 路径相对于本文件；{run} 由 pipeline 替换。
-# 组合原则：三类来源分开存放、在这里按权重混合——
-#   authored（大模型 / 人工撰写，金标可信）是主体，权重 1；
-#   template（模板生成，措辞单一）只做覆盖填充，权重 0.3；
-#   external（外部数据集，后续接入）做回放，权重 0.2–0.3。
+# 组合原则：来源分开存放（train/data/authored、train/data/external、模板生成），在这里按权重混合。
+#   authored（撰写，金标可信）是主体            weight 1.0
+#   template（模板，措辞单一，只补覆盖）         weight 0.3
+#   external（外部数据集，同域回放，约占 40%）   zhihao 0.15 / scenic 0.1 / massive 0.2
+# 分开存放的好处：每个来源可以单独调权重、审计、下线，门槛退步时能定位到是哪个来源。
 seed: 7
 sources:
   - path: "{run}/authored-augmented.jsonl"
     weight: 1.0
-  - path: "{run}/augmented.jsonl"        # 模板 + 增强
+  - path: "{run}/augmented.jsonl"
     weight: 0.3
+  - path: "{run}/external-zhihao.jsonl"
+    weight: 0.15
+  - path: "{run}/external-scenic.jsonl"
+    weight: 0.1
+  - path: "{run}/external-massive.jsonl"
+    weight: 0.2
 locked_eval:
   - ../../../evals/smart-home
 split:

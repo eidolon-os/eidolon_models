@@ -64,6 +64,10 @@ def _import(scenario: Scenario, config: dict) -> Iterable[Record]:
         yield from _import_evals_cases(scenario, config)
     elif adapter == "authored_cases":
         yield from _import_authored_cases(scenario, config)
+    elif adapter in ("zhihao_smarthome", "scenic", "massive_zh"):
+        from . import external
+
+        yield from getattr(external, f"import_{adapter}")(scenario, config)
     else:
         raise ValueError(f"unknown import adapter {adapter!r}")
 

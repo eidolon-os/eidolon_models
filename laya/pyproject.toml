@@ -97,3 +97,4 @@ select = ["E", "F", "I", "UP", "B"]
 # The workflow's own strings are config keys and Chinese prose; wrapping them only hurts reading.
 "src/eidolon_laya_train/**/*.py" = ["E501"]
 "tests/test_train_workflow.py" = ["E501"]
+"tests/test_external_adapters.py" = ["E501"]

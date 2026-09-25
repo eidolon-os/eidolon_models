@@ -35,6 +35,20 @@ steps:
     input: "{run}/authored.jsonl"
     out: "{run}/authored-augmented.jsonl"
 
+  # 外部数据集（同域回放）：每个来源单独一个文件，assemble 分别给权重
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-external-zhihao.yaml
+    out: "{run}/external-zhihao.jsonl"
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-external-scenic.yaml
+    out: "{run}/external-scenic.jsonl"
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-external-massive.yaml
+    out: "{run}/external-massive.jsonl"
+
   - stage: assemble
     config: ../scenarios/smart-home/assemble.yaml
     out: "{run}/dataset"
