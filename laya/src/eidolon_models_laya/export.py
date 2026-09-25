@@ -59,10 +59,11 @@ def _sample_batch(tok: Tokenizer, cfg: ModelConfig, state_tokens: int) -> dict[s
 
 
 def export_onnx(manifest: Manifest, *, force: bool = False, log=print) -> Path:
-    import laya
     import onnx
     import onnxruntime as ort
     import torch
+
+    from .vendor import laya
 
     out = manifest.onnx_path
     if out.is_file() and manifest.export_record() and not force:

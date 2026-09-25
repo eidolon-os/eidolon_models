@@ -22,9 +22,9 @@ def torch_files(manifest: Manifest) -> Manifest:
 
 @pytest.fixture(scope="session")
 def upstream_agent(torch_files: Manifest):
-    if importlib.util.find_spec("laya") is None or importlib.util.find_spec("torch") is None:
+    if importlib.util.find_spec("torch") is None:
         pytest.skip("torch extra not installed")
-    import laya
+    from eidolon_models_laya.vendor import laya  # noqa: F401
 
     return laya.load(str(torch_files.torch_dir), device="cpu")
 

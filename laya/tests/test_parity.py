@@ -68,7 +68,7 @@ def test_tokenizer_matches_transformers(tok, upstream_agent):
 @pytest.mark.parametrize("n_units", [1, 20, 400])
 @pytest.mark.parametrize("truncate_left", [False, True])
 def test_build_sequence_matches_upstream(tok, upstream_agent, n_units, truncate_left):
-    from laya.common import build_sequence as upstream_build
+    from eidolon_models_laya.vendor.laya.common import build_sequence as upstream_build
 
     for qdef in QUESTIONS.values():
         q = to_internal(qdef)

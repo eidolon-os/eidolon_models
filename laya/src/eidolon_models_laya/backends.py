@@ -29,8 +29,9 @@ class TorchBackend:
     name = "torch"
 
     def __init__(self, torch_dir: Path, *, device: str = "auto", threads: int = 0):
-        import laya
         import torch
+
+        from .vendor import laya
 
         if threads:
             torch.set_num_threads(threads)

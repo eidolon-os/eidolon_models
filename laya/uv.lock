@@ -138,20 +138,29 @@ dependencies = [
 
 [package.optional-dependencies]
 export = [
-    { name = "laya" },
     { name = "onnx" },
     { name = "onnxruntime" },
     { name = "onnxscript" },
+    { name = "safetensors" },
     { name = "torch", version = "2.14.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux'" },
     { name = "torch", version = "2.14.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'linux'" },
+    { name = "transformers" },
 ]
 onnx = [
     { name = "onnxruntime" },
 ]
 torch = [
-    { name = "laya" },
+    { name = "safetensors" },
     { name = "torch", version = "2.14.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux'" },
     { name = "torch", version = "2.14.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'linux'" },
+    { name = "transformers" },
+]
+train = [
+    { name = "pyyaml" },
+    { name = "safetensors" },
+    { name = "torch", version = "2.14.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux'" },
+    { name = "torch", version = "2.14.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'linux'" },
+    { name = "transformers" },
 ]
 
 [package.dev-dependencies]
@@ -166,20 +175,27 @@ dev = [
 requires-dist = [
     { name = "aiohttp", specifier = ">=3.11,<4" },
     { name = "huggingface-hub", specifier = ">=0.30,<2" },
-    { name = "laya", marker = "extra == 'export'", specifier = "==0.3.7" },
-    { name = "laya", marker = "extra == 'torch'", specifier = "==0.3.7" },
     { name = "numpy", specifier = ">=2.1,<3" },
     { name = "onnx", marker = "extra == 'export'", specifier = ">=1.17,<2" },
     { name = "onnxruntime", marker = "extra == 'export'", specifier = ">=1.20,<2" },
     { name = "onnxruntime", marker = "extra == 'onnx'", specifier = ">=1.20,<2" },
     { name = "onnxscript", marker = "extra == 'export'", specifier = ">=0.2" },
+    { name = "pyyaml", marker = "extra == 'train'", specifier = ">=6,<7" },
+    { name = "safetensors", marker = "extra == 'export'", specifier = ">=0.4" },
+    { name = "safetensors", marker = "extra == 'torch'", specifier = ">=0.4" },
+    { name = "safetensors", marker = "extra == 'train'", specifier = ">=0.4" },
     { name = "tokenizers", specifier = ">=0.21,<1" },
     { name = "torch", marker = "sys_platform == 'linux' and extra == 'export'", specifier = ">=2.6,<3", index = "https://download.pytorch.org/whl/cpu" },
     { name = "torch", marker = "sys_platform == 'linux' and extra == 'torch'", specifier = ">=2.6,<3", index = "https://download.pytorch.org/whl/cpu" },
+    { name = "torch", marker = "sys_platform == 'linux' and extra == 'train'", specifier = ">=2.6,<3", index = "https://download.pytorch.org/whl/cpu" },
     { name = "torch", marker = "sys_platform != 'linux' and extra == 'export'", specifier = ">=2.6,<3" },
     { name = "torch", marker = "sys_platform != 'linux' and extra == 'torch'", specifier = ">=2.6,<3" },
+    { name = "torch", marker = "sys_platform != 'linux' and extra == 'train'", specifier = ">=2.6,<3" },
+    { name = "transformers", marker = "extra == 'export'", specifier = ">=4.48" },
+    { name = "transformers", marker = "extra == 'torch'", specifier = ">=4.48" },
+    { name = "transformers", marker = "extra == 'train'", specifier = ">=4.48" },
 ]
-provides-extras = ["torch", "onnx", "export"]
+provides-extras = ["torch", "onnx", "train", "export"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -357,23 +373,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33cef02e048281fec7ecec5f032d4aac52226b/jinja2-3.1.6.tar.gz", hash = "sha256:0137fb05990d35f1275a587e9aee6d56da821fc83491a0fb838183be43f66d6d", size = 245115, upload-time = "2025-03-05T20:05:02.478Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl", hash = "sha256:85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67", size = 134899, upload-time = "2025-03-05T20:05:00.369Z" },
-]
-
-[[package]]
-name = "laya"
-version = "0.3.7"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "huggingface-hub" },
-    { name = "numpy" },
-    { name = "safetensors" },
-    { name = "torch", version = "2.14.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux'" },
-    { name = "torch", version = "2.14.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'linux'" },
-    { name = "transformers" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/b5/fd/dd60f49451ef43af50c3fcd5d5d9b12aea590f5bcb9afb3e5ec5171b6fa6/laya-0.3.7.tar.gz", hash = "sha256:cca6e999f18f8a5c5efb51d7f6870aebbfa95477855634d4ba933063c38d0c3f", size = 128270, upload-time = "2026-09-23T07:25:35.657Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/48/df/e31a236052b5597fa0082468f3a7a14fb9f632100fb72816cd08090de247/laya-0.3.7-py3-none-any.whl", hash = "sha256:370beee36a6962f0daed3f086146b7dc6cc825fee0a1941ec05ea7207989ea8a", size = 58928, upload-time = "2026-09-23T07:25:34.377Z" },
 ]
 
 [[package]]

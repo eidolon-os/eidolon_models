@@ -15,24 +15,35 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# laya 0.3.7 itself is vendored (src/eidolon_models_laya/vendor/laya); these are its runtime deps.
 torch = [
-  "laya==0.3.7",
+  "safetensors>=0.4",
   "torch>=2.6,<3",
+  "transformers>=4.48",
 ]
 onnx = [
   "onnxruntime>=1.20,<2",
 ]
+# The training workflow (laya/train): data generation, labelling, training, calibration, eval.
+train = [
+  "pyyaml>=6,<7",
+  "safetensors>=0.4",
+  "torch>=2.6,<3",
+  "transformers>=4.48",
+]
 # Only needed to produce models/*/onnx/model.onnx from the PyTorch weights.
 export = [
-  "laya==0.3.7",
   "onnx>=1.17,<2",
   "onnxruntime>=1.20,<2",
   "onnxscript>=0.2",
+  "safetensors>=0.4",
   "torch>=2.6,<3",
+  "transformers>=4.48",
 ]
 
 [project.scripts]
 eidolon-laya = "eidolon_models_laya.cli:main"
+eidolon-laya-train = "eidolon_laya_train.cli:main"
 
 [dependency-groups]
 dev = [
@@ -57,7 +68,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/eidolon_models_laya"]
+packages = ["src/eidolon_models_laya", "src/eidolon_laya_train"]
 
 [tool.pytest.ini_options]
 addopts = "-ra"
@@ -70,6 +81,8 @@ markers = [
 [tool.ruff]
 line-length = 100
 target-version = "py313"
+# Vendored upstream code is kept byte-for-byte; lint it upstream, not here.
+extend-exclude = ["src/eidolon_models_laya/vendor"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
@@ -80,3 +93,7 @@ select = ["E", "F", "I", "UP", "B"]
 "src/eidolon_models_laya/sequence.py" = ["UP031"]
 # Evaluation scripts assemble Chinese report prose; wrapping those strings only hurts reading.
 "evals/**/*.py" = ["E501"]
+"train/**/*.py" = ["E501"]
+# The workflow's own strings are config keys and Chinese prose; wrapping them only hurts reading.
+"src/eidolon_laya_train/**/*.py" = ["E501"]
+"tests/test_train_workflow.py" = ["E501"]
