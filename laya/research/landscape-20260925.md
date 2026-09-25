@@ -41,7 +41,7 @@ OpenSparX 车载）已经比 laya 更常被下载，另有免训练（AnyJev）�
 | Dot（getdot.ai） | 原来跑在大模型上的判断负载 | 便宜 10 倍、快 2 倍 | [HN 创始人自述](https://news.ycombinator.com/item?id=49765916) |
 | CodeAlive | Mastra 输入审核：blocking（noul）+ category 一次请求，P≥0.7 拦截 | 58 例：恶意 9/9 拦截、正常 0/49 误拦，0.39–0.44 s | [mastra-jev-moderation](https://github.com/CodeAlive-AI/mastra-jev-moderation) |
 | 匿名 | 实时语音断句（turn-taking） | — | [HN](https://news.ycombinator.com/item?id=49814753)（弱） |
-| PostHog | 生产用**自托管的 JevK5**（Kev 系，沿用 Jev 协议）；TypeSafe 只准用于实验 | — | [posthog egress README](https://github.com/PostHog/posthog/blob/HEAD/posthog/egress/typesafe/README.md) |
+| PostHog | 生产用**自托管的 JevK5 v0.2**（allebee/jevk5：Qwen3.5-4B + 答案字母 logit 读出，从 Qwen3.6-27B / GPT-6 Luna 蒸馏；**不是 Kev 系**——PostHog 曾把 Kev-4B 放进生产镜像，随后弃用换成 JevK5，PR 未说明原因）；TypeSafe 只准用于实验 | — | [posthog egress README](https://github.com/PostHog/posthog/blob/HEAD/posthog/egress/typesafe/README.md) |
 
 厂商口径的规模：Vercel 称上线 24 小时内 AI Gateway 约 13% 的付费团队在用；Almeida 称日用量超过万亿 token（[Latent Space](https://www.latent.space/p/jev)）；$40M 种子轮（媒体）。
 
