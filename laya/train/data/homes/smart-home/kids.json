@@ -1,0 +1,23 @@
+{
+  "name": "kids",
+  "description": "有婴儿的两居：客厅、主卧、婴儿房、厨房、阳台、玄关，17 台设备；婴儿房有空调、顶灯、夜灯、加湿器、遮光窗帘、婴儿监视器和电动摇篮，厨房有温奶器和奶瓶消毒柜，三台空调、四盏灯，用来测母婴设备和“宝宝屋 / 我们屋”这类说法。",
+  "devices": [
+    {"name": "客厅灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "主卧灯", "room": "主卧", "category": "照明", "type": "吸顶灯"},
+    {"name": "婴儿房灯", "room": "婴儿房", "category": "照明", "type": "吸顶灯"},
+    {"name": "婴儿房夜灯", "room": "婴儿房", "category": "照明", "type": "小夜灯"},
+    {"name": "客厅空调", "room": "客厅", "category": "空调温控", "type": "柜式空调"},
+    {"name": "主卧空调", "room": "主卧", "category": "空调温控", "type": "空调"},
+    {"name": "婴儿房空调", "room": "婴儿房", "category": "空调温控", "type": "空调"},
+    {"name": "婴儿房加湿器", "room": "婴儿房", "category": "空气环境", "type": "加湿器"},
+    {"name": "空气净化器", "room": "客厅", "category": "空气环境", "type": "空气净化器"},
+    {"name": "婴儿房窗帘", "room": "婴儿房", "category": "窗帘遮阳", "type": "遮光电动窗帘"},
+    {"name": "婴儿监视器", "room": "婴儿房", "category": "母婴", "type": "婴儿看护器"},
+    {"name": "电动摇篮", "room": "婴儿房", "category": "母婴", "type": "电动摇篮"},
+    {"name": "温奶器", "room": "厨房", "category": "母婴", "type": "温奶器"},
+    {"name": "奶瓶消毒柜", "room": "厨房", "category": "母婴", "type": "奶瓶消毒烘干柜"},
+    {"name": "洗衣机", "room": "阳台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "扫地机器人", "room": "全屋", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "智能门锁", "room": "玄关", "category": "安防门禁", "type": "门锁"}
+  ]
+}

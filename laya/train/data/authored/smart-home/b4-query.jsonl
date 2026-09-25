@@ -1,0 +1,300 @@
+{"home": "apartment", "text": "看一眼客厅的温度", "intent": "查询", "device": ["温湿度计", "客厅空调"], "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "报一下家里的湿度", "intent": "查询", "device": ["温湿度计", "加湿器"], "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "说说门锁现在的状态", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "扫地机器人的清扫进度", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "汇报一下洗衣机剩余时间", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "查查主卧空调现在的设定温度", "intent": "查询", "device": "主卧空调", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "告诉我热水器的水温", "intent": "查询", "device": "热水器", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "客厅窗帘现在的开合情况", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "读一下净化器上的PM2.5", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "看下加湿器的水位", "intent": "查询", "device": "加湿器", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "门锁电量报一下", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "扫地机器人的电量情况", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "电饭煲的倒计时说一下", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "给我看看玄关摄像头的画面", "intent": "查询", "device": "摄像头", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "查一下电视现在在放哪个台", "intent": "查询", "device": "电视", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "音箱正在播的歌名说一下", "intent": "查询", "device": "智能音箱", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "晾衣架的风干模式状态看看", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "主卧那边的温度报给我", "intent": "查询", "device": ["主卧空调", "温湿度计"], "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "温湿度计的读数念一下", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "净化器现在的风量档位说一下", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "床头灯的亮度说一下", "intent": "查询", "device": "床头灯", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "客厅空调现在的运行模式", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "看看今天门锁的开门记录", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "看看加湿器设的目标湿度", "intent": "查询", "device": "加湿器", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "查一下两台空调各自的温度", "intent": "查询", "device": ["客厅空调", "主卧空调"], "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "查查充电桩那边的充电进度", "intent": "查询", "device": "充电桩", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "冰箱门开关记录查一下", "intent": "查询", "device": "冰箱", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "洗碗机的剩余时间", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "烤箱剩余的烘烤时间念给我", "intent": "查询", "device": "烤箱", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "地暖的设定温度说一下", "intent": "查询", "device": "地暖", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "新风机当前的运行模式讲一下", "intent": "查询", "device": "新风机", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "报一下屋里的二氧化碳浓度", "intent": "查询", "device": "新风机", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "安防系统当前状态", "intent": "查询", "device": "安防警报", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "车库门的状态汇报一下", "intent": "查询", "device": "车库门", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "喂食器余粮查一下", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "今天的门铃记录调出来看看", "intent": "查询", "device": "门铃", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "花园浇水阀下一次的浇水时间", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "投影仪当前的输入信号源说一下", "intent": "查询", "device": "投影仪", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "油烟机的清洗提醒查一下", "intent": "查询", "device": "油烟机", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "落地扇现在的风速档", "intent": "查询", "device": "落地扇", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "饮水机插座今天的用电量", "intent": "查询", "device": "饮水机插座", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "浴霸的运行状态说一下", "intent": "查询", "device": "浴霸", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "书房灯的色温查查", "intent": "查询", "device": "书房灯", "tags": ["status-query", "implicit-query"]}
+{"home": "house", "text": "餐厅吊灯亮度报一下", "intent": "查询", "device": "餐厅吊灯", "tags": ["status-query", "implicit-query"]}
+{"home": "villa", "text": "念一下全屋PM2.5", "intent": "查询", "device": ["空气净化器", "新风机"], "tags": ["status-query", "implicit-query"]}
+{"home": "villa", "text": "整屋设备的开关情况汇总一下", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "implicit-query"]}
+{"home": "villa", "text": "看看车库那边，车库门和充电桩的情况", "intent": "查询", "device": ["车库门", "充电桩"], "tags": ["status-query", "implicit-query"]}
+{"home": "villa", "text": "门口那台摄像头的在线状态", "intent": "查询", "device": "摄像头", "tags": ["status-query", "implicit-query"]}
+{"home": "villa", "text": "今天家里各个电器的耗电排行", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "implicit-query"]}
+{"home": "villa", "text": "冰箱冷藏和冷冻的温度都报一下", "intent": "查询", "device": "冰箱", "tags": ["status-query", "implicit-query"]}
+{"home": "apartment", "text": "客厅里温度计上显示几度", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "屋里湿度到百分之几了", "intent": "查询", "device": ["温湿度计", "加湿器"], "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "净化器检测到的甲醛数值是多少", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "扫地机器人的电还够扫完全屋吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "摄像头存储卡还剩多少空间", "intent": "查询", "device": "摄像头", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "洗衣机这次设的转速是多少", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "电饭煲预约的饭几点能好", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "加湿器现在是高档还是低档", "intent": "查询", "device": "加湿器", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "客厅空调风速开在几档", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "电视这会儿亮度设在多少", "intent": "查询", "device": "电视", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "音箱的睡眠定时还剩多久", "intent": "查询", "device": "智能音箱", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "净化器的滤芯还剩百分之几寿命", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "主卧空调今天用了几度电", "intent": "查询", "device": "主卧空调", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "热水器这个月烧了多少方气", "intent": "查询", "device": "热水器", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "温湿度计的电池电量还剩多少", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "客厅主灯现在的色温是多少", "intent": "查询", "device": "客厅主灯", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "晾衣架烘干温度设的多少", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "冰箱变温室现在设在几度", "intent": "查询", "device": "冰箱", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "烤箱内部温度到一百八了吗", "intent": "查询", "device": "烤箱", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "地暖回水温度是多少", "intent": "查询", "device": "地暖", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "新风机的滤网寿命还有百分之多少", "intent": "查询", "device": "新风机", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "新风机显示的室内PM2.5是多少", "intent": "查询", "device": "新风机", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "充电桩这次已经充进去几度电", "intent": "查询", "device": "充电桩", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "车现在电量百分之多少", "intent": "查询", "device": "充电桩", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "洗碗机这次用了多少升水", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "落地扇定时还剩几分钟", "intent": "查询", "device": "落地扇", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "油烟机这会儿风量调在哪档", "intent": "查询", "device": "油烟机", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "投影仪的亮度模式是哪个", "intent": "查询", "device": "投影仪", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "门铃电池还能用几天", "intent": "查询", "device": "门铃", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "喂食器每顿设的出粮量是几份", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "饮水机插座现在功率多少瓦", "intent": "查询", "device": "饮水机插座", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "浴霸暖风现在多少度", "intent": "查询", "device": "浴霸", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "这个月充电桩一共用了多少电", "intent": "查询", "device": "充电桩", "tags": ["status-query", "reading"]}
+{"home": "house", "text": "书房灯亮度调在百分之几", "intent": "查询", "device": "书房灯", "tags": ["status-query", "reading"]}
+{"home": "villa", "text": "客厅和主卧的湿度分别多少", "intent": "查询", "device": ["温湿度计", "加湿器"], "tags": ["status-query", "reading"]}
+{"home": "villa", "text": "家里今天一共用了几度电", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "reading"]}
+{"home": "villa", "text": "餐厅吊灯现在的色温是多少K", "intent": "查询", "device": "餐厅吊灯", "tags": ["status-query", "reading"]}
+{"home": "villa", "text": "扫地机器人的尘盒满了几成", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "reading"]}
+{"home": "villa", "text": "冰箱这一天耗了多少电", "intent": "查询", "device": "冰箱", "tags": ["status-query", "reading"]}
+{"home": "villa", "text": "影音室投影仪的音量值是几", "intent": "查询", "device": "投影仪", "tags": ["status-query", "reading"]}
+{"home": "apartment", "text": "主卧灯的夜灯模式开着吗", "intent": "查询", "device": "主卧灯", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "床头灯是不是一直开着", "intent": "查询", "device": "床头灯", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "客厅空调的睡眠模式开着吗", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "窗帘是不是被卡在半路了", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "门锁是不是只关上没反锁", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "智能门锁现在在线吗", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "摄像头是不是离线了", "intent": "查询", "device": "摄像头", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "扫地机器人现在连得上网吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "净化器的屏幕灯关着吗", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "电视是开着的还是待机", "intent": "查询", "device": "电视", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "音箱的麦克风是关着的吗", "intent": "查询", "device": "智能音箱", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "洗衣机的童锁开着吗", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "晾衣架的照明灯是不是亮着", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "电饭煲现在是不是在待机", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "热水器现在处于关机状态吗", "intent": "查询", "device": "热水器", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "摄像头的隐私遮挡开着吗", "intent": "查询", "device": "摄像头", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "温湿度计还连着网吗", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "加湿器是不是已经停了", "intent": "查询", "device": "加湿器", "tags": ["status-query", "state"]}
+{"home": "house", "text": "安防现在是在家布防还是离家布防", "intent": "查询", "device": "安防警报", "tags": ["status-query", "state"]}
+{"home": "house", "text": "安防警报的门磁都在线吗", "intent": "查询", "device": "安防警报", "tags": ["status-query", "state"]}
+{"home": "house", "text": "车库门现在关严实了吗", "intent": "查询", "device": "车库门", "tags": ["status-query", "state"]}
+{"home": "house", "text": "车库门是不是开了一半卡住了", "intent": "查询", "device": "车库门", "tags": ["status-query", "state"]}
+{"home": "house", "text": "花园水阀现在是关闭的吗", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "state"]}
+{"home": "house", "text": "地暖的防冻模式开着吗", "intent": "查询", "device": "地暖", "tags": ["status-query", "state"]}
+{"home": "house", "text": "新风机是不是断网了", "intent": "查询", "device": "新风机", "tags": ["status-query", "state"]}
+{"home": "house", "text": "冰箱现在是速冻模式吗", "intent": "查询", "device": "冰箱", "tags": ["status-query", "state"]}
+{"home": "house", "text": "洗碗机的门关好了吗", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "state"]}
+{"home": "house", "text": "烤箱是不是还通着电", "intent": "查询", "device": "烤箱", "tags": ["status-query", "state"]}
+{"home": "house", "text": "油烟机的灯还亮着吗", "intent": "查询", "device": "油烟机", "tags": ["status-query", "state"]}
+{"home": "house", "text": "浴霸的照明灯关了吗", "intent": "查询", "device": "浴霸", "tags": ["status-query", "state"]}
+{"home": "house", "text": "投影仪是在待机还是关机了", "intent": "查询", "device": "投影仪", "tags": ["status-query", "state"]}
+{"home": "house", "text": "门铃是不是连不上网了", "intent": "查询", "device": "门铃", "tags": ["status-query", "state"]}
+{"home": "house", "text": "充电桩现在是空闲状态吗", "intent": "查询", "device": "充电桩", "tags": ["status-query", "state"]}
+{"home": "house", "text": "充电枪插好了没", "intent": "查询", "device": "充电桩", "tags": ["status-query", "state"]}
+{"home": "house", "text": "宠物喂食器是不是断电了", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "state"]}
+{"home": "house", "text": "饮水机插座有没有被定时关掉", "intent": "查询", "device": "饮水机插座", "tags": ["status-query", "state"]}
+{"home": "house", "text": "书房灯现在是亮的还是灭的", "intent": "查询", "device": "书房灯", "tags": ["status-query", "state"]}
+{"home": "house", "text": "落地扇是在摇头吗", "intent": "查询", "device": "落地扇", "tags": ["status-query", "state"]}
+{"home": "villa", "text": "家里有哪些设备现在离线", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "state"]}
+{"home": "villa", "text": "摄像头和门铃现在都在线吗", "intent": "查询", "device": ["摄像头", "门铃"], "tags": ["status-query", "state"]}
+{"home": "apartment", "text": "衣服洗好了没有", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "洗衣机现在洗到第几遍漂洗了", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "米饭煮到哪个阶段了", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "扫地机器人客厅扫干净了吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "晾衣架上的被子烘好了吗", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "热水器烧到设定温度了吗", "intent": "查询", "device": "热水器", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "昨天半夜门锁有开锁记录吗", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "今天谁用指纹开的门", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "刚刚玄关摄像头拍到什么了", "intent": "查询", "device": "摄像头", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "下午有没有人在门口停留", "intent": "查询", "device": "摄像头", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "空调昨晚几点自动关的", "intent": "查询", "device": ["客厅空调", "主卧空调"], "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "昨晚窗帘几点合上的", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "加湿器昨晚一直开着到天亮吗", "intent": "查询", "device": "加湿器", "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "昨天那桶衣服是几点洗完的", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "碗筷烘干好了吗", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "洗碗机这轮是几点开始洗的", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "披萨烤完了没", "intent": "查询", "device": "烤箱", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "烤箱还要热多久才到温度", "intent": "查询", "device": "烤箱", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "充电桩那边充过一半没有", "intent": "查询", "device": "充电桩", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "猫今天中午那顿出粮了吗", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "这礼拜喂食器一共出了几次粮", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "半小时前按门铃的是快递吗", "intent": "查询", "device": "门铃", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "昨天有几个人按过门铃", "intent": "查询", "device": "门铃", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "今天花园喷过几轮水", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "我出差这几天警报有被触发吗", "intent": "查询", "device": "安防警报", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "车库门今天最后一次是几点关的", "intent": "查询", "device": "车库门", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "浴霸吹了多久了", "intent": "查询", "device": "浴霸", "tags": ["status-query", "progress-history"]}
+{"home": "house", "text": "地暖烧热了吗", "intent": "查询", "device": "地暖", "tags": ["status-query", "progress-history"]}
+{"home": "villa", "text": "这两天家里有没有什么报警记录", "intent": "查询", "device": ["安防警报", "摄像头"], "tags": ["status-query", "progress-history"]}
+{"home": "villa", "text": "保姆今天几点离开的", "intent": "查询", "device": ["智能门锁", "摄像头"], "tags": ["status-query", "progress-history"]}
+{"home": "apartment", "text": "我想知道屋里现在暖不暖和", "intent": "查询", "device": ["温湿度计", "客厅空调", "主卧空调"], "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "帮我瞄一眼门外", "intent": "查询", "device": "摄像头", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "出门前想确认下窗帘拉上没", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "宝宝在主卧睡，屋里温度合适吗", "intent": "查询", "device": ["主卧空调", "温湿度计"], "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "不知道饭熟了没有", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "我记不清门锁没锁了，帮我看看", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "想知道衣服还得洗多久", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "回家前想先了解下屋里空气怎么样", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "我在公司，想看看家里有没有什么情况", "intent": "查询", "device": "摄像头", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "睡前想确认一下灯是不是都灭了", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "你能告诉我主卧现在干不干吗", "intent": "查询", "device": ["温湿度计", "加湿器"], "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "我好奇扫地机器人现在跑到哪了", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "帮我盯一眼热水器，看水热了没", "intent": "查询", "device": "热水器", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "我忘了空调关没关", "intent": "查询", "device": ["客厅空调", "主卧空调"], "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "不确定晾衣架收起来了没有", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "麻烦看看电视是不是还开着，我在卧室听见声音", "intent": "查询", "device": "电视", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "我想知道净化器的滤芯要不要换了", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "帮我看看门锁电池还撑得住不", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "帮我看一下车库那边关好没", "intent": "查询", "device": "车库门", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "我想知道车能不能开出去了，电够不够", "intent": "查询", "device": "充电桩", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "看看冰箱是不是没关好，老在滴滴响", "intent": "查询", "device": "冰箱", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "你帮我确认一下花园的水关了没有", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "我人在外面，想知道猫有没有吃上饭", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "出门忘了看安防开没开", "intent": "查询", "device": "安防警报", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "帮我瞧瞧门口站着的是谁", "intent": "查询", "device": "门铃", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "临睡前心里不踏实，厨房那几样电器都关了吧", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "冰箱里的冰块冻好了没有，我想做冰饮", "intent": "查询", "device": "冰箱", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "蛋挞还得等多久才能出炉，我饿了", "intent": "查询", "device": "烤箱", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "能告诉我浴室暖和了没", "intent": "查询", "device": "浴霸", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "我想确认饮水机那个插座是不是断了电", "intent": "查询", "device": "饮水机插座", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "书房的灯我走的时候好像没关，你看下", "intent": "查询", "device": "书房灯", "tags": ["status-query", "indirect"]}
+{"home": "house", "text": "心里没底，想知道油烟机关没关", "intent": "查询", "device": "油烟机", "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "明天出差一周，今晚想知道家里哪些东西还通着电", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "快递说放门口了，帮我看看在不在", "intent": "查询", "device": ["摄像头", "门铃"], "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "我有点担心车库门和前门，都看一下", "intent": "查询", "device": ["车库门", "智能门锁"], "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "老人在客厅坐着，我想知道那边温度够不够", "intent": "查询", "device": ["温湿度计", "客厅空调", "地暖"], "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "帮我瞅瞅孩子是不是把投影仪开着没关", "intent": "查询", "device": "投影仪", "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "总觉得车库门今天被人动过，帮我查查", "intent": "查询", "device": "车库门", "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "不太确定出门时地暖关了没有", "intent": "查询", "device": "地暖", "tags": ["status-query", "indirect"]}
+{"home": "villa", "text": "我要回家了，想先知道屋里湿不湿", "intent": "查询", "device": ["温湿度计", "加湿器"], "tags": ["status-query", "indirect"]}
+{"home": "apartment", "text": "室内现在几度了", "intent": "查询", "device": ["温湿度计", "客厅空调", "主卧空调"], "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "室外现在几度了", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "主卧空调此刻设定是几度", "intent": "查询", "device": "主卧空调", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "卧室空调夏天设几度比较健康", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "家里湿度这会儿怎么样", "intent": "查询", "device": ["温湿度计", "加湿器"], "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "我家湿度一向很高，南方就这样", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "客厅PM2.5这会儿超标了吗", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "今天城里PM2.5爆表了，新闻都报了", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "扫地机器人电还剩几成", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "扫地机器人一般能用几年", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "洗衣机这一桶洗完还要多久", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "洗一桶衣服一般要多长时间", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "热水器现在出水几度", "intent": "查询", "device": "热水器", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "洗澡水多少度最合适", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "电饭煲还要焖几分钟", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "煮米饭一般要焖多久", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "冰箱冷冻室眼下零下几度", "intent": "查询", "device": "冰箱", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "冷冻室一般开零下几度合适", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "地暖现在烧到几度了", "intent": "查询", "device": "地暖", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "地暖温度设高了是不是容易口干", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "充电桩这次还要充几个钟头", "intent": "查询", "device": "充电桩", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "电动车从零充满一般要几个钟头", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "书房里二氧化碳这会儿高不高", "intent": "查询", "device": "新风机", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "二氧化碳浓度多高会让人犯困", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "喂食器里的粮够吃几天", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "一只猫一天要吃几两粮", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "烤箱现在炉内几度", "intent": "查询", "device": "烤箱", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "烤戚风蛋糕要几度", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "门铃今天响过几次", "intent": "查询", "device": "门铃", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "house", "text": "这个门铃的铃声挺好听的", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "villa", "text": "空调今天一共开了几个小时", "intent": "查询", "device": ["客厅空调", "主卧空调"], "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "villa", "text": "空调一天开十个小时费不费电", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "villa", "text": "车库门现在还开着一条缝吗", "intent": "查询", "device": "车库门", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "villa", "text": "车库门一般多久保养一次", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "音箱现在音量开的几格", "intent": "查询", "device": "智能音箱", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "音箱音量开太大伤耳朵吧", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "晾衣架上衣服烘了多久了", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "阴天衣服晾多久才能干", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "villa", "text": "花园那边眼下还在喷水吗", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "villa", "text": "夏天草坪一天该浇几次水", "intent": "无关", "tags": ["status-query", "query-vs-chitchat"]}
+{"home": "apartment", "text": "客厅那台空调现在是运行着的吗", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "客厅那台空调能开一下吗", "intent": "控制", "device": "客厅空调", "action": "打开或启动", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "卧室大灯这会儿亮着吗", "intent": "查询", "device": "主卧灯", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "卧室大灯是不是可以关掉了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "窗帘现在拉开了吗", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "窗帘可以拉开点吗", "intent": "控制", "device": "客厅窗帘", "action": ["打开或启动", "调高或增大"], "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "电视音量现在是几", "intent": "查询", "device": "电视", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "电视声音能不能再小点", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["status-query", "query-vs-control"]}
+{"home": "villa", "text": "净化器开的是自动模式吗", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "query-vs-control"]}
+{"home": "villa", "text": "净化器能不能换成自动模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "加湿器的雾现在开得大吗", "intent": "查询", "device": "加湿器", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "加湿器的雾是不是可以开大一点", "intent": "控制", "device": "加湿器", "action": "调高或增大", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "扫地机器人在扫吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "扫地机器人是不是该出来扫扫了", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "热水器现在是五十度吗", "intent": "查询", "device": "热水器", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "热水器能不能调成五十度", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "大门反锁上了没有", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "能不能帮忙把门锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "音箱正在放歌吗", "intent": "查询", "device": "智能音箱", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "音箱能先别放了吗", "intent": "控制", "device": "智能音箱", "action": ["暂停", "关闭或停止"], "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "晾衣架现在在高处吗", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "晾衣架可以降下来吗", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "地暖眼下在加热吗", "intent": "查询", "device": "地暖", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "地暖是不是可以再热一点", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["status-query", "query-vs-control"]}
+{"home": "villa", "text": "油烟机的风机在工作吗", "intent": "查询", "device": "油烟机", "tags": ["status-query", "query-vs-control"]}
+{"home": "villa", "text": "油烟机能不能开一下", "intent": "控制", "device": "油烟机", "action": "打开或启动", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "车库门现在是落下来的吗", "intent": "查询", "device": "车库门", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "车库门能不能先升起来", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "今晚的安防已经开起来了吗", "intent": "查询", "device": "安防警报", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "睡前是不是该把安防开起来", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "落地扇现在是不是三档", "intent": "查询", "device": "落地扇", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "落地扇可不可以调到三档", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "浴霸这会儿在吹暖风吗", "intent": "查询", "device": "浴霸", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "浴霸能先吹会儿暖风吗", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "投影仪是暂停状态吗", "intent": "查询", "device": "投影仪", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "投影仪能先暂停吗", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "饮水机那路插座眼下是断开的吗", "intent": "查询", "device": "饮水机插座", "tags": ["status-query", "query-vs-control"]}
+{"home": "house", "text": "饮水机插座是不是该断电了", "intent": "控制", "device": "饮水机插座", "action": "关闭或停止", "tags": ["status-query", "query-vs-control"]}
+{"home": "villa", "text": "电视和投影仪是不是都开着", "intent": "查询", "device": ["电视", "投影仪"], "tags": ["status-query", "query-vs-control"]}
+{"home": "villa", "text": "电视和投影仪能不能都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["status-query", "query-vs-control"]}
+{"home": "apartment", "text": "门我出门前已经锁好了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "门我出门前锁好了吗", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "扫地机器人已经扫完回座了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "扫地机器人扫完回座了吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "我刚看了，洗衣机还剩十分钟", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "洗衣机是不是还剩十来分钟", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "热水器的水我试过了，已经够热", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "现在去洗澡，热水够热了吗", "intent": "查询", "device": "热水器", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "客厅窗帘我早上就拉开了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "apartment", "text": "客厅窗帘早上自动拉开了吗", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "query-vs-report"]}
+{"home": "house", "text": "车已经充满了，我看了手机", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "house", "text": "车那边已经充满了吧", "intent": "查询", "device": "充电桩", "tags": ["status-query", "query-vs-report"]}
+{"home": "house", "text": "花园刚才浇过水了，地都湿了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "house", "text": "花园刚才自动浇过水了吗", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "query-vs-report"]}
+{"home": "house", "text": "碗我已经从洗碗机里拿出来了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "house", "text": "洗碗机里的碗能拿出来了吗", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "query-vs-report"]}
+{"home": "villa", "text": "车库门我回来时顺手关了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "villa", "text": "车库门我回来时关了没", "intent": "查询", "device": "车库门", "tags": ["status-query", "query-vs-report"]}
+{"home": "villa", "text": "猫粮我早上已经加满了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
+{"home": "villa", "text": "喂食器里的猫粮还是满的吗", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query", "query-vs-report"]}

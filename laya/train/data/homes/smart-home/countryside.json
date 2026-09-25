@@ -1,0 +1,21 @@
+{
+  "name": "countryside",
+  "description": "农村自建房：堂屋、卧室、厨房、卫生间加院子、鸡舍、储物间和楼顶，15 台设备；有院子灯、鸡舍灯、电动大门、储物间卷帘门、水泵、太阳能热水器这类农村常见设备，五盏灯、两扇电动门，用来测乡村用语（堂屋、鸡窝、院门）和门的区分。",
+  "devices": [
+    {"name": "堂屋灯", "room": "堂屋", "category": "照明", "type": "吸顶灯"},
+    {"name": "卧室灯", "room": "卧室", "category": "照明", "type": "吸顶灯"},
+    {"name": "院子灯", "room": "院子", "category": "照明", "type": "投光灯"},
+    {"name": "鸡舍灯", "room": "鸡舍", "category": "照明", "type": "防潮灯"},
+    {"name": "储物间灯", "room": "储物间", "category": "照明", "type": "吸顶灯"},
+    {"name": "堂屋空调", "room": "堂屋", "category": "空调温控", "type": "柜式空调"},
+    {"name": "卧室空调", "room": "卧室", "category": "空调温控", "type": "空调"},
+    {"name": "大门", "room": "院子", "category": "安防门禁", "type": "电动平移门"},
+    {"name": "卷帘门", "room": "储物间", "category": "安防门禁", "type": "电动卷帘门"},
+    {"name": "院子摄像头", "room": "院子", "category": "安防门禁", "type": "摄像头"},
+    {"name": "水泵", "room": "院子", "category": "园艺水路", "type": "抽水泵"},
+    {"name": "太阳能热水器", "room": "楼顶", "category": "热水卫浴", "type": "太阳能热水器"},
+    {"name": "浴霸", "room": "卫生间", "category": "热水卫浴", "type": "浴霸"},
+    {"name": "电视", "room": "堂屋", "category": "影音娱乐", "type": "电视"},
+    {"name": "冰柜", "room": "厨房", "category": "厨房电器", "type": "冰柜"}
+  ]
+}

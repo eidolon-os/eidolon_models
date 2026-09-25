@@ -1,0 +1,21 @@
+{
+  "name": "pets",
+  "description": "养一猫一狗的两居：客厅、卧室、卫生间、阳台、玄关，15 台设备；有智能猫砂盆、宠物饮水机、宠物摄像头、宠物烘干箱，自动喂食器两台（客厅的猫粮喂食器、阳台的狗粮喂食器），用来测按宠物区分喂食器和宠物设备的说法。",
+  "devices": [
+    {"name": "客厅灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "卧室灯", "room": "卧室", "category": "照明", "type": "吸顶灯"},
+    {"name": "客厅空调", "room": "客厅", "category": "空调温控", "type": "空调"},
+    {"name": "卧室空调", "room": "卧室", "category": "空调温控", "type": "空调"},
+    {"name": "空气净化器", "room": "客厅", "category": "空气环境", "type": "空气净化器"},
+    {"name": "扫地机器人", "room": "全屋", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "洗衣机", "room": "阳台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "音箱", "room": "客厅", "category": "影音娱乐", "type": "音箱"},
+    {"name": "智能猫砂盆", "room": "卫生间", "category": "宠物", "type": "智能猫砂盆"},
+    {"name": "宠物饮水机", "room": "客厅", "category": "宠物", "type": "宠物饮水机"},
+    {"name": "宠物摄像头", "room": "客厅", "category": "宠物", "type": "宠物摄像头"},
+    {"name": "猫粮喂食器", "room": "客厅", "category": "宠物", "type": "自动喂食器"},
+    {"name": "狗粮喂食器", "room": "阳台", "category": "宠物", "type": "自动喂食器"},
+    {"name": "宠物烘干箱", "room": "阳台", "category": "宠物", "type": "宠物烘干箱"},
+    {"name": "智能门锁", "room": "玄关", "category": "安防门禁", "type": "门锁"}
+  ]
+}

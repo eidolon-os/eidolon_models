@@ -1,0 +1,18 @@
+{
+  "name": "office",
+  "description": "居家办公的一居：客厅一角是工作区（书桌灯、升降桌、显示器插座、音箱），另有客厅、卧室、厨房、玄关，12 台设备；只有一台空调（在客厅）、一幅窗帘，没有净化器，用来测办公场景的说法和“有新风但没有净化器”这类近邻。",
+  "devices": [
+    {"name": "客厅灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "卧室灯", "room": "卧室", "category": "照明", "type": "吸顶灯"},
+    {"name": "书桌灯", "room": "工作区", "category": "照明", "type": "台灯"},
+    {"name": "升降桌", "room": "工作区", "category": "家具", "type": "电动升降桌"},
+    {"name": "显示器插座", "room": "工作区", "category": "插座开关", "type": "智能插座"},
+    {"name": "音箱", "room": "工作区", "category": "影音娱乐", "type": "音箱"},
+    {"name": "空调", "room": "客厅", "category": "空调温控", "type": "空调"},
+    {"name": "新风机", "room": "全屋", "category": "空气环境", "type": "新风系统"},
+    {"name": "电动窗帘", "room": "客厅", "category": "窗帘遮阳", "type": "电动窗帘"},
+    {"name": "咖啡机", "room": "厨房", "category": "厨房电器", "type": "胶囊咖啡机"},
+    {"name": "扫地机", "room": "全屋", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "门锁", "room": "玄关", "category": "安防门禁", "type": "门锁"}
+  ]
+}
