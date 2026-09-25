@@ -1,0 +1,7 @@
+# 把 evals/smart-home 的 182 条人工用例转成记录格式，作为 locked 评测集（只读，永不进训练）。
+#   eidolon-laya-train gen --scenario train/scenarios/smart-home --config train/scenarios/smart-home/eval-import.yaml --out train/scenarios/smart-home/eval/locked-182.jsonl
+generators:
+  - kind: import
+    adapter: evals_cases
+    name: locked-182
+    path: ../../../evals/smart-home

@@ -1,0 +1,10 @@
+# 路径相对于本文件；{run} 由 pipeline 替换（单独跑时直接写绝对路径）。
+seed: 7
+sources:
+  - path: "{run}/augmented.jsonl"
+    weight: 1.0
+locked_eval:
+  - ../../../evals/smart-home
+split:
+  val: 0.1
+  calib: 0.1

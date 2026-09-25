@@ -1,0 +1,36 @@
+# 智能家居控制决策：题目定义（和 evals/smart-home/run_eval.py 里的三道题一字不差，
+# 这样 locked 评测集和训练数据问的是同一件事）。
+name: smart-home
+
+questions:
+  intent:
+    type: choice
+    instructions: "`utterance` 是在让智能家居做什么？"
+    criteria:
+      控制: 要求改变家里设备的状态：打开、关闭、调节、设定、启动、暂停、上锁
+      查询: 询问家里设备的状态或读数，不改变任何设备
+      无关: 与控制或查询家里的设备无关：闲聊、常识、陈述、购物
+
+  device:
+    type: choice
+    instructions: "`utterance` 说的是家里的哪台设备？"
+    criteria_from: devices          # 生成器按户型给 {设备名: 房间·类型}
+    exits:                          # 固定出口，永远排在设备清单之后
+      多个设备或整屋: 同时涉及多台设备，或整屋的场景模式
+      没有对应的设备: 家里没有能满足这个要求的设备
+
+  action:
+    type: choice
+    instructions: "`utterance` 要对设备做什么操作？"
+    criteria:
+      打开或启动: 开启、启动、开始运行
+      关闭或停止: 关掉、停止、断电、收起
+      调高或增大: 调亮、升温、调大音量或档位
+      调低或减小: 调暗、降温、调小、降下
+      设为指定的数值或模式: 设到具体的温度、档位、百分比或模式
+      暂停: 暂时停下，之后再继续
+      上锁: 锁门、上锁
+
+# 锁定评测集：assemble 永远不让这些 id / 相同 utterance 进训练。
+eval_sets:
+  - ../../../evals/smart-home

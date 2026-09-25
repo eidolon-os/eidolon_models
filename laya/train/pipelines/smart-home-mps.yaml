@@ -1,0 +1,43 @@
+# 智能家居：模板数据 → 增强 → 组装 → 微调 laya-multilingual → 校准 → 对 182 条 locked 评测集打分。
+#   eidolon-laya-train run --pipeline train/pipelines/smart-home-mps.yaml --run-id r1
+# 老师打标（label）默认关着：起一个 decider / laya 服务后把 continue_on_error 去掉、填 teacher。
+runs_dir: ../runs
+
+steps:
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen.yaml
+    out: "{run}/cases.jsonl"
+
+  - stage: label
+    input: "{run}/cases.jsonl"
+    out: "{run}/labeled.jsonl"
+    teacher: http://127.0.0.1:8773          # decider-0.8b 的服务；没起就跳过
+    teacher_name: decider-0.8b
+    alpha: 0.7
+    continue_on_error: true
+
+  - stage: augment
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/augment.yaml
+    input: "{run}/cases.jsonl"              # 没有老师时用 cases.jsonl；有老师改成 labeled.jsonl
+    out: "{run}/augmented.jsonl"
+
+  - stage: assemble
+    config: ../scenarios/smart-home/assemble.yaml
+    out: "{run}/dataset"
+
+  - stage: train
+    config: ../scenarios/smart-home/train.yaml
+    dataset: "{run}/dataset"
+    out: "{run}/checkpoint"
+
+  - stage: calibrate
+    checkpoint: "{run}/checkpoint"
+    calib: "{run}/dataset/calib.jsonl"
+
+  - stage: eval
+    checkpoint: "{run}/checkpoint"
+    eval_set:
+      - ../scenarios/smart-home/eval/locked-182.jsonl
+    out: "{run}/eval"

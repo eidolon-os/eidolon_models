@@ -1,0 +1,14 @@
+init: ../../../models/laya-multilingual/1c5edc17/torch
+model_name: laya-smart-home
+epochs: 3
+batch_size: 16
+lr_encoder: 2.5e-5
+lr_head: 1.0e-4
+unfreeze_layers: 8
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.06
+weight_decay: 0.01
+max_len: 1024
+head_max_len: 512
+seed: 7

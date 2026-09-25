@@ -1,0 +1,13 @@
+# eidolon-laya-train gen --scenario train/scenarios/smart-home --config train/scenarios/smart-home/gen.yaml --out ...
+seed: 7
+generators:
+  - kind: template
+    name: rules
+    module: generators.rules:generate
+    per_slice: 80
+  # - kind: llm                              # 语言多样性：需要 EIDOLON_TRAIN_LLM_BASE_URL / _MODEL / _API_KEY
+  #   name: qwen
+  #   prompt_file: prompts/cases.txt
+  #   contexts_file: prompts/contexts.jsonl
+  #   calls: 20
+  #   per_call: 15

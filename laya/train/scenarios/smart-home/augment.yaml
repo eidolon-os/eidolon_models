@@ -1,0 +1,23 @@
+seed: 7
+transforms:
+  - name: exit_injection        # 把金标设备从清单里删掉 → 答案变成"没有对应的设备"
+    question: device
+    exit: 没有对应的设备
+    rate: 0.25
+  - name: option_subset          # 小户型：金标 + 5 个随机设备 + 出口
+    question: device
+    keep: 5
+    rate: 0.25
+  - name: char_confusion         # 语音识别错字
+    field: utterance
+    rate: 0.2
+    table:
+      灯: [登, 等]
+      空调: [空掉, 空条]
+      窗帘: [床帘, 窗连]
+      打开: [大开, 打卡]
+      关掉: [关到]
+      客厅: [客听]
+      主卧: [主我]
+      扫地: [少地]
+      加湿: [家湿]
