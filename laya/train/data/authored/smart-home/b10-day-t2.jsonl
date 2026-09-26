@@ -1,0 +1,399 @@
+{"home": "townhouse", "text": "浩浩，快起来，闹钟都响三遍了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老公你先下去把车库门打开，我给朵朵穿鞋", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小易，把车库门打开", "intent": "控制", "device": "车库门", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "妈，热水气我开了，您洗脸别用凉水", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "朵朵，别按门铃了，门早开了，快进来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "遮光帘你先别拉开，我再眯五分钟", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "主卧遮光帘拉开一半", "intent": "控制", "device": "主卧遮光帘", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "浩浩，楼梯灯带不用关，人走了它自己会灭", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老婆，蛋我煎好了，油烟机你顺手关一下", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小管家，油烟机关了吧", "intent": "控制", "device": "油烟机", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "一楼客厅怎么冷飕飕的", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "扫地机器人我设好了九点，等咱们都走了它自己扫", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "奶奶，出门不用拿钥匙反锁，门锁关上自己就锁了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "浩浩，昨晚是不是你把二楼浴霸开了一宿", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老公，你看下手机里门锁的记录，我忘了刚才锁没锁", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "都出门了，入户门那把锁到底锁没锁上", "intent": "查询", "device": "入户门锁", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "车库门现在关着没", "intent": "查询", "device": "车库门", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "爸爸开车送你们，今天妈妈要早点去公司", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "朵朵，洗碗机门不能乱开，小手拿出来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "豆包！别在喷灌头那儿刨坑", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "朵朵别去开那个酒柜，里面都是爸爸的宝贝酒", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "喂，师傅吗？我家洗碗机不排水了，您下午能上门看看不", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "朵朵乖，奶奶把灯关了，咱们睡午觉喽", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小易，儿童房灯关掉，孩子要睡午觉", "intent": "控制", "device": "儿童房灯", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "衣服我晾好了，露台晾衣架也升上去了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "这晾衣架该上点油了，回头让孩子他爸弄", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "露台晾衣架降下来，我收衣服", "intent": "控制", "device": "露台晾衣架", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "奶奶，花园喷灌是定时的，您不用再拿水管浇了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "花园喷灌先停一下，朵朵在草地上玩呢", "intent": "控制", "device": "花园喷灌", "action": ["暂停", "关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "朵朵，不许把积木塞进扫地机器人底下", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "扫地机器人今天把一楼扫干净了没", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "浩浩，一进门先洗手，别急着开空调", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "浩浩，写作业把书房台灯打开，别摸黑看", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小易，书房台灯打开", "intent": "控制", "device": "书房台灯", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "妈，客厅窗帘您拉那么严实干嘛呀", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "书房空调我给你开好了，作业写完才能下楼", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "三楼书房热得坐不住", "intent": "控制", "device": "书房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "浩浩，谁让你拿着平板躲在车库里的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "朵朵，哥哥写作业呢，别去三楼捣乱", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老公，油烟机开大档，我要下锅爆炒了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小管家，油烟机开到最大档", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "油烟机我开着呢，你别管了，去陪朵朵搭积木", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "厨房一股油烟味散不掉", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "碗先别往洗碗机里放，等我把锅刷完一块儿洗", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "洗碗机今晚我来开，你去给浩浩检查作业", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小易，洗碗机开始洗吧", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "小易，洗碗机还要洗多久", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "浩浩！吃饭了！下楼的时候把书房空调关了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "餐厅灯这个光拍菜真好看，发个朋友圈", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "餐厅灯再亮一点", "intent": "控制", "device": "餐厅灯", "action": ["调高或增大"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "爸，您尝尝，酒柜里那瓶红的我给开了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "恒温酒柜里现在几度", "intent": "查询", "device": "恒温酒柜", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "朵朵，洗澡喽，爸爸先把浴霸开开暖和暖和", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "助手，二楼浴霸打开", "intent": "控制", "device": "二楼浴霸", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "我去给朵朵洗澡了", "intent": "控制", "device": "燃气热水器", "action": ["打开或启动"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "浩浩，洗澡别磨蹭，燃气热水器烧的都是钱", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "浴霸一开就晃眼，朵朵别抬头看", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老婆，热水器温度是不是你调过了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "燃气热水器调到四十二度", "intent": "控制", "device": "燃气热水器", "action": ["设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "朵朵洗完澡光着身子直打哆嗦", "intent": "控制", "device": "二楼浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "洗完了？我去把浴霸关了，你给她擦干", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "浩浩，几点了还不关灯，明天还上不上学了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "朵朵怕黑，过道夜灯就一直开着吧，别关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "你下楼瞅一眼门锁了没，我老是不放心", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "人都齐了，入户门给我锁上", "intent": "控制", "device": "入户门锁", "action": ["上锁"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "我去把楼下的灯关了，你先哄朵朵睡", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小易，楼下的灯全关了", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "灯我来关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老公，儿童房空调别开那么低，朵朵踢被子", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "儿童房的空调温度改成二十六，别冻着朵朵", "intent": "控制", "device": "儿童房空调", "action": ["设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "小管家，儿童房空调现在开的多少度", "intent": "查询", "device": "儿童房空调", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "小管家，我们要睡了", "intent": "控制", "device": "多个设备或整屋", "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "妈，客厅空调我定了两个小时，到点自己关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老公，花园喷灌那个管子你接一下，我洗个车", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "烧烤架别挡着车库门，等会儿还要开车出去", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "爸，您那瓶茅台我搁酒柜最底下一层了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "地下室除湿机水箱满了停机了，我下去倒一下", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "除湿机那个设置你别乱动，我调好了的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "老婆，干衣机停了，里面那堆衣服你拿出来没有", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "地下室那台干衣机还剩几分钟", "intent": "查询", "device": "干衣机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "洗衣机洗完了，先别急着开干衣机，羊毛衫不能烘", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "衣服洗好了，我上露台晾一下", "intent": "控制", "device": "露台晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "花园灯开着够亮了，那个露营灯就别搬出来了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "小易，花园灯开一下", "intent": "控制", "device": "花园灯", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "townhouse", "text": "花园灯是不是还亮着", "intent": "查询", "device": "花园灯", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "老王，你家也装喷灌啦？我这套是去年弄的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "浩浩，去车库把折叠椅拿出来，车库门我给你开着呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "回南天那阵子，地下室除湿机开一天能倒三桶水", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "妈，地下室除湿机我特意开着的，您别给关了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "地下室潮得墙上都挂水珠了", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "地下室除湿机现在湿度多少", "intent": "查询", "device": "地下室除湿机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "townhouse", "text": "新闻说台风今晚登陆，明天估计要停课", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "遮阳篷我昨天下午就收了，你别操心了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "风这么大，露台遮阳篷别给刮坏了", "intent": "控制", "device": "露台遮阳篷", "action": ["关闭或停止"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "townhouse", "text": "老公，露台那几盆三角梅你搬进来没", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "大年三十姥姥他们几点到？到了我下楼开车库门", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "红包我塞酒柜上面那个抽屉里了，别让朵朵翻出来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "拜年的一按门铃，朵朵就抢着跑去开门", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "放炮的时候拿个东西把门铃挡一下，别崩坏了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "townhouse", "text": "有人按门铃，瞅瞅是谁来了", "intent": "查询", "device": "可视门铃", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子，你去菜地啊？院门锁我给你开了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小易，院门锁打开，我去趟菜地", "intent": "控制", "device": "院门锁", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "电饭煲里有粥，你自己盛，我去喂鸡", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "过道感应灯是闺女装的，半夜起夜不用找开关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老太婆，增氧泵我早上看过了，鱼都好好的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "增氧泵现在开着没", "intent": "查询", "device": "鱼池增氧泵", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "菜地滴灌你别开了，昨晚落过雨", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "菜地滴灌开二十分钟", "intent": "控制", "device": "菜地滴灌", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子，出去买早点顺便把院子灯关了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小易，院子灯关了", "intent": "控制", "device": "院子灯", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "你慢点走，过道灯还没开你就往前冲", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "煲汤的料我泡上了，电饭煲等下再按", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "米下锅了，电饭煲帮我按上煮饭", "intent": "控制", "device": "电饭煲", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "旺财别咬那根滴灌管子！", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老头子，鱼池那个泵是不是该洗洗了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "鱼池里的鱼都浮上来张嘴了", "intent": "控制", "device": "鱼池增氧泵", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "阿芳问我院子摄像头在哪买的，我说是女儿装的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "看一下院子摄像头，鸡是不是又跑出来了", "intent": "查询", "device": "院子摄像头", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "天幕帘我拉上了，阳光房里那几盆兰花晒不着了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "阳光房太阳晒得睁不开眼", "intent": "控制", "device": "阳光房天幕帘", "action": ["关闭或停止"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "儿子打电话说他们单位那空调坏了一礼拜", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老太婆，吊扇你开着吹就行，空调费电", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "排气扇我开了，你炒辣椒尽管炒", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小管家，排气扇开一下，我要炒辣椒了", "intent": "控制", "device": "厨房排气扇", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子，电饭煲跳了没有？跳了就开饭", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小易，电饭煲饭好了没", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "厨房灯开关坏了一个星期了，你倒是找人来修啊", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "电饭煲那个内胆涂层掉了，下回去超市买个新的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "饭好了，阿公快洗手，排气扇我等下关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老太婆，你睡你的，卧室空调我给你开到二十七了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小易，卧室空调开到二十七度", "intent": "控制", "device": "卧室空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子，吊扇开那么大干嘛，报纸都吹飞了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "吊扇调小一档", "intent": "控制", "device": "客厅吊扇", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子嫌客厅热", "intent": "控制", "device": ["客厅空调", "客厅吊扇"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子，晾衣杆上那几件你三点帮我收了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老太婆，驱蚊器那个片子该换了吧", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "阿俊，别在阳光房里踢球，落地扇开着呢，碰倒了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "阿俊说阳光房热得待不住", "intent": "控制", "device": "阳光房落地扇", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "阿俊，玩完了把院子灯关了再进来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "阿俊别对着摄像头做鬼脸，你爸在手机上看着呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "阿公，你教阿俊怎么用手机开院门锁", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "这个晾衣杆是你妈给装的，一按就降下来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小易，电动凉衣杆降下来", "intent": "控制", "device": "电动晾衣杆", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "阿俊，鱼池里的泵不能关，关了鱼会死的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "儿子，你们回去的时候院门锁记得关好", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老太婆，热水器我早就开了，你直接去冲凉", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "我去冲凉了", "intent": "控制", "device": "电热水器", "action": ["打开或启动"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "热水器里的水现在有多少度", "intent": "查询", "device": "电热水器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "昨天卫生间暖风机是你忘了关吧", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "冲完凉出来凉飕飕的", "intent": "控制", "device": "卫生间暖风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "天黑了，老头子你去把院子灯打开，我去收鸡", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "驱蚊器插上了，你别老拿扇子拍来拍去", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "卧室蚊子嗡嗡的，睡不着", "intent": "控制", "device": "卧室驱蚊器", "action": ["打开或启动"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "southyard", "text": "老头子，看完新闻把客厅灯关了，别又睡在沙发上", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "客厅灯关了吧，我们去睡了", "intent": "控制", "device": "客厅灯", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "客厅灯换了节能的，天天开着电费也少了十几块", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "电视里说明天有暴雨，菜地那边你别去了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老头子，睡前院门你去锁好，上回野猫都钻进来了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "小易，院门帮我锁上", "intent": "控制", "device": "院门锁", "action": ["上锁"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "院门锁了没有", "intent": "查询", "device": "院门锁", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "助手，驱蚊器关了吧，天亮了", "intent": "控制", "device": "卧室驱蚊器", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "回南天一来，储藏室那台抽湿机就没停过", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老头子，客厅除湿机停了，水你倒了没", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "客厅那台除湿机的水箱还能装多少", "intent": "查询", "device": "客厅除湿机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "除湿机我开到最大了，你别又给我调回去", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "回南天了，屋里墙上都在淌水", "intent": "控制", "device": ["客厅除湿机", "储藏室抽湿机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"], "note": "屋里没说房间，两台除湿设备都能解决"}
+{"home": "southyard", "text": "隔壁陈婆说回南天衣服晾不干，劝我们买个烘干机", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "抽湿机这个月天天开，电费多了一百多，心疼", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "储藏室那个抽湿机开起来，米都快发霉了", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "southyard", "text": "储藏室湿度现在多少", "intent": "查询", "device": "储藏室抽湿机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "southyard", "text": "台风要来了，老头子你把院子里的花盆都搬进阳光房", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "天幕帘我已经收好了，台风天不敢开着", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "过年儿子回来，卧室那台空调你记得提前清洗一下", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "大年初一不能扫地，吊扇上的灰也别擦了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老头子，驱蚊器你插卧室就行，别插我枕头边上", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "电动晾衣杆遥控器又找不着了，你是不是塞沙发缝里了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "这个落地扇是闺女前年买的，开着摇头还挺安静", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "老头子，增氧泵的插头你别拔，上次拔了死了两条锦鲤", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "院子摄像头拍到那只黄鼠狼了，我拿给你看", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "southyard", "text": "菜地滴灌今天浇过没有", "intent": "查询", "device": "菜地滴灌", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "媳妇儿，小厨宝我给你开了，洗碗别用凉水", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小易，把小厨包打开", "intent": "控制", "device": "小厨宝", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "老公，客厅暖气阀那个旋钮你别老掰，掰坏了没人修", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "客厅暖气阀调小一点", "intent": "控制", "device": "客厅暖气阀", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "电视先别开，吃完饭再看新闻", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小管家，电视打开，调到新闻频道", "intent": "控制", "device": "电视", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "老公，出门前你把净化器关了，家里没人开着浪费", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小易，净化器关了，我们出门了", "intent": "控制", "device": "客厅净化器", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "门锁我锁了，你别再回去看了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小易，家门锁好没有", "intent": "查询", "device": "门锁", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "过道灯的灯泡烧了，开关按了没反应，下班记得买一个", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "闺女，热水器一直开着呢，你随时洗", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "这破雾霾，今儿上班又得戴口罩", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "今天霾这么重，屋里都一股味儿", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "客厅空气现在咋样，PM2.5多少", "intent": "查询", "device": "客厅净化器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "妈，次卧那个电暖器您睡前记得关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小易，次卧电暖器开着没", "intent": "查询", "device": "电暖器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "妈，电暖器开着的时候上面可别搭衣服", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "妈说次卧冷，被窝都焐不热", "intent": "控制", "device": "电暖器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "妈您别动那个加湿器，没水了它自己会停", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "电视遥控器在沙发垫底下，您自己开", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "妈，您看电视声音开这么大，楼下该上来敲门了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "洗衣机甩干就这动静，不是坏了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "阳台晾衣架是电动的，您按这个键它就降下来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，厨房灯你给打开，我手上全是面", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "厨房灯打开，我手上全是面", "intent": "控制", "device": "厨房灯", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "厨房灯我开了，你赶紧过来端菜", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "闺女，饭桌上不看手机也不看电视，关了去", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小管家，电视关了吧，吃饭了", "intent": "控制", "device": "电视", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "电视你们开着看吧，我去刷碗", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，你把落地灯往边上挪挪，挡着插座了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "这落地灯是结婚那年买的，开关都换过两回了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小管家，客厅落地灯打开", "intent": "控制", "device": "客厅落地灯", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "老公，净化器滤芯我网上买好了，明天到", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "闺女，洗完澡把暖风机关了，别开一宿", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "热水器我刚调到五十度了，你们洗吧", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "热水器烧到多少度了", "intent": "查询", "device": "热水器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "我洗澡去了", "intent": "控制", "device": "热水器", "action": ["打开或启动"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "妈，您洗澡前暖风机先开五分钟，不然进去冻透了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "闺女要洗澡，先把卫生间暖风机开起来", "intent": "控制", "device": "卫生间暖风机", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "刚从浴室出来，后背凉嗖嗖的", "intent": "控制", "device": "卫生间暖风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "老公，你那本书还看不看？不看把床头灯关了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "助手，床头灯关了", "intent": "控制", "device": "床头灯", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "媳妇儿，床头灯我给你留着，你看完书自己关", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "加湿器我灌满水开上了，今晚应该不会干醒了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "屋里干得嗓子冒烟", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "主卧里空气有多干，湿度报一下", "intent": "查询", "device": "主卧加湿器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "闺女，睡前把次卧电暖器调小点，别烤得流鼻血", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小易，次卧电暖器调小一档", "intent": "控制", "device": "电暖器", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "老公，门锁你再去拧一下，我心里不踏实", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小易，门反锁一下", "intent": "控制", "device": "门锁", "action": ["上锁"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "闺女说次卧太暗了，看不清书", "intent": "控制", "device": "次卧灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "老公，洗衣机里那桶你拿出来晾上", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "洗衣机我已经开上了，还得四十分钟", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "洗衣机开始洗吧，用快洗", "intent": "控制", "device": "洗衣机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "阳台洗衣机那桶床单还要转多久", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "凉衣架我给降下来了，你把被罩搭上去", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "阳台晾衣架降下来，我晾被罩", "intent": "控制", "device": "阳台晾衣架", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "northflat", "text": "闺女，别躺沙发上玩手机了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "大姐，我家这电视是去年双十一买的，七十五寸的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，客厅灯灯罩里全是小虫子，你拆下来洗洗", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "今年供暖比去年晚，暖气阀我一直没敢开", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，暖气刚来那几天阀门先别开满，管子里有气", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "暖气费今年交了没？两千多呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "客厅热得跟桑拿似的", "intent": "控制", "device": "客厅暖气阀", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "northflat", "text": "客厅暖气阀现在开到几档了", "intent": "查询", "device": "客厅暖气阀", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "雾霾天就别开窗了，净化器开着呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "昨天净化器开了一天，滤网就黑了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，加湿器别对着墙喷，墙皮都鼓起来了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，闺女明天到家，你今晚先把次卧电暖器开上", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "年三十晚上电视就一直开着，春晚得看完", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "我出门前电视关没关来着，你查一下", "intent": "查询", "device": "电视", "tags": ["status-query", "overheard-contrast"]}
+{"home": "northflat", "text": "亲戚来拜年，门锁密码你先别改", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老妹儿，你那屋电暖器是油汀的，摸着不烫手，放心用", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "去年杨絮那阵子，净化器天天开着", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "楼上又在剁馅，咚咚咚的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "小区通知明天停水，热水器里的水省着点用", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "老公，热水器那个插头你别乱拔", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "这门锁是老式的，还得拿钥匙拧两圈", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "northflat", "text": "媳妇儿，电视我关了啊，你那剧明天再追", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "阿杰，热水器你别关，我还没洗呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小易，卫生间那个公共热水器帮我烧上", "intent": "控制", "device": "公共热水器", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "琪琪你洗吧，热水器我早开了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "公共热水器烧热了没", "intent": "查询", "device": "公共热水器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "洗衣机我刚开上，你们晚点再洗", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "助手，公共洗衣机启动", "intent": "控制", "device": "公共洗衣机", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "洗衣机现在有人在用吗", "intent": "查询", "device": "公共洗衣机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "小周，大门锁密码换了，我发群里了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "出门的时候谁最后走谁锁门啊，昨天门就没锁", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小易，大门帮我锁一下", "intent": "控制", "device": "公共大门锁", "action": ["上锁"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "大门锁了没有", "intent": "查询", "device": "公共大门锁", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "我房间插座上那个是烧水壶，别给我拔了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小易，把我房间插座关了", "intent": "控制", "device": "我房间插座", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "兄弟们等我一下，我先把麦开了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "阿杰你小点声，隔壁还睡着呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "阿杰，公共区空调是你开的吧？走的时候关一下", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小管家，公共区空调关了吧，他们都出门了", "intent": "控制", "device": "公共区空调", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "客厅电视我开了投屏，你们要看就一起", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "琪琪，电视你还看不看？不看我要打游戏了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小管家，客厅那台公共电视现在是关着的吗", "intent": "查询", "device": "客厅公共电视", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "我房间的灯坏了一个灯珠，房东说周末来换", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "把我房间的灯关了", "intent": "控制", "device": "我房间的灯", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "公共客厅灯谁最后睡谁关啊", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我房间空调滴水，得找房东", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "外卖小哥说他到楼下了，让我给他开下大门", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我同学到楼下了，小易你给她开下大门", "intent": "控制", "device": "公共大门锁", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "小周，扫地机又卡你门口了，你把拖鞋收一收", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "扫地机别在我门口转了", "intent": "控制", "device": "公共区扫地机", "action": ["关闭或停止", "暂停"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "扫地机我定的每天中午开，你们鞋别乱放", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "公共区扫地机开始扫吧", "intent": "控制", "device": "公共区扫地机", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "小易，扫地机扫到哪了", "intent": "查询", "device": "公共区扫地机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "这扫地机的尘盒谁倒一下，满了一礼拜了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "阿杰，你那洗衣机洗完了吗？洗完我接着用", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "洗衣机里的衣服是谁的？放一晚上都馊了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我房间加湿器是你借走了吗琪琪", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我房间干得嗓子疼", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "rental", "text": "我房间湿度多少", "intent": "查询", "device": "我房间加湿器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "我妈说南方潮，叫我别开加湿器", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "开黑开黑，阿杰上号", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "房东交代热水器用完要关电源，不然老跳闸", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "琪琪，你房间灯开着，我还以为你在家呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "你们看电视声音小点，我明早六点的高铁", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小易，客厅电视音量往下调两格", "intent": "控制", "device": "客厅公共电视", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "我房间的台灯是自己买的，搬家的时候要带走", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "台灯亮一点，我看不清字", "intent": "控制", "device": "我房间的台灯", "action": ["调高或增大"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "阿杰，你打游戏把电视音量开那么大干嘛", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "公共区空调遥控器又被谁拿屋里去了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "公共区空调现在多少度", "intent": "查询", "device": "公共区空调", "tags": ["status-query", "overheard-contrast"]}
+{"home": "rental", "text": "这个月电费四百多，公共区空调得省着点开了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我插座上那个充电器你们别动，在给电瓶充电呢", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我要不要给房间再买个加湿器啊，这个太小了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我屋里热得睡不着", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "rental", "text": "我房间空调调到二十五度", "intent": "控制", "device": "我房间空调", "action": ["设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "轮到我洗澡了", "intent": "控制", "device": "公共热水器", "action": ["打开或启动"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "rental", "text": "小周你把公共客厅灯打开，我找个东西", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "小易，公共客厅灯打开", "intent": "控制", "device": "公共客厅灯", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "rental", "text": "等会儿琪琪一进门，阿杰你负责关灯，我推蛋糕", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "阿杰，别把你那游戏机插我屋插座上", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "谁把我房间门给锁了？钥匙在里面", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "晚上一起看电影吧，电视我来开", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "周末我回家，走之前我自己把空调关了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "我不在的时候，我房间插座上的鱼缸灯别给我断了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "过年我们仨都回家，走之前热水器插头都拔了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "过完年回来，扫地机的电池估计都没电了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "冬天这屋没暖气，全靠我房间那台空调撑着", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "阿杰，我屋空调遥控器借你，你那屋太冷了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "客厅这会儿有点凉", "intent": "控制", "device": "公共区空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "rental", "text": "公共洗衣机排水管又堵了，我跟房东说了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "琪琪，大门锁没电了，你回来得用钥匙", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "rental", "text": "刚才快递员敲门，说放门口了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "橘子，别蹲窗帘上，下来！", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "窗帘又被你抓出一排洞，你个败家猫", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "窗帘拉开一半，让点太阳进来", "intent": "控制", "device": "窗帘", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "妈，我起了起了，热水器开着呢，洗完就走", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "热水器的水温够洗头了没", "intent": "查询", "device": "热水器", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "喂，王姐，我地铁上，九点前肯定到", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "妈你别担心，门锁是密码的，丢不了钥匙", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "橘子，扫地鸡过来了，别扑它", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "上周出差忘关空调，电费多了八十", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小易，把空调关了", "intent": "控制", "device": "空调", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "大家能听到吗？我开一下摄像头", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "不好意思，刚才是我投影仪的声音，已经关了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "刚才走得急，投影仪到底关了没有", "intent": "查询", "device": "投影仪", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "我把音箱关了，刚才回音是我这边的", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "你们那边有回声吗？我自己把音箱调小点", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小管家，音箱声音调小点", "intent": "控制", "device": "音箱", "action": ["调低或减小"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "等一下，我关个窗，外面在修路", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "我先静音了啊，楼下在装修", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "扫地机别扫了，我在开会", "intent": "控制", "device": "扫地机", "action": ["关闭或停止", "暂停"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "屋里闷得透不过气", "intent": "控制", "device": ["空调", "风扇"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "studio", "text": "累死了，今天啥也不想干", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "终于到家了，累瘫", "intent": "控制", "device": "多个设备或整屋", "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "studio", "text": "妈，门早锁好了，你别老操心", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小易，门帮我反锁", "intent": "控制", "device": "门锁", "action": ["上锁"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "都躺下了才想起来，门锁上没", "intent": "查询", "device": "门锁", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "橘子饿了吧？等我换完衣服就给你开罐头", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "外卖放门口就行，我等会儿开门拿", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "喂？对，洗衣机的排水管漏水，您看什么时候能来", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "橘子，风扇开着呢，别用爪子掏", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "风扇我拆了洗洗，叶子上全是灰", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "风扇开到二档", "intent": "控制", "device": "风扇", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "我去把热水器插头插上，今天得洗头", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "热水器开一下，我今天要洗头", "intent": "控制", "device": "热水器", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "身上黏糊糊的，冲个澡先", "intent": "控制", "device": "热水器", "action": ["打开或启动"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "studio", "text": "小林，你坐那个懒人沙发，投影仪我来开", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小林你把窗帘拉上，不然投影看不清", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小易，把窗帘给我合上，投影看不清", "intent": "控制", "device": "窗帘", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "音箱声音你随便调，我这隔音还行", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "音箱放点轻音乐", "intent": "控制", "device": "音箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "你们想看啥？投影仪开了自己挑", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "看电影了，顶灯关掉", "intent": "控制", "device": "顶灯", "action": ["关闭或停止"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "空调遥控器在枕头底下，热了自己开", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小林说有点冷", "intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "studio", "text": "你走的时候门锁会自己锁上，直接带上门就行", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "我这个扫地机声音特别大，你来的时候我就没开", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小林，你看我这灯，是不是换个暖光的好看点", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "下次聚会去你家吧，我这屋太小了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小林，我这投影仪是在二手群收的，才八百", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "窗帘明天再洗吧，今天懒得拆", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "洗衣机里的衣服还没晾，完了完了，明天没衣服穿", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "小管家，洗衣机开始洗", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["explicit-control", "overheard-contrast"]}
+{"home": "studio", "text": "洗衣机洗完没有", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "这热水器怎么越用越慢，是不是该清水垢了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "对着顶灯拍照好丑，我挪到窗边拍", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "太亮了，晃得我眼睛疼", "intent": "控制", "device": ["顶灯", "窗帘"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "overheard-contrast"], "note": "白天刺眼多半是阳光（窗帘拉上），晚上是顶灯；两种都合理"}
+{"home": "studio", "text": "哎呀门锁又提醒低电量了，明天去买电池", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "妈你看，这就是我说的那个投影仪，打开能投满一面墙", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "早上被扫地机吓醒了，它六点就开始扫", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "扫地机那一圈转完没有", "intent": "查询", "device": "扫地机", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "半夜热醒了，后背全是汗", "intent": "控制", "device": ["空调", "风扇"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "overheard-contrast"]}
+{"home": "studio", "text": "小易，空调这会儿设的几度", "intent": "查询", "device": "空调", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "屋里现在温度多少", "intent": "查询", "device": "空调", "tags": ["status-query", "overheard-contrast"]}
+{"home": "studio", "text": "台风天公司通知居家办公，窗户我用胶带贴好了", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "过年回老家前，门锁电池得换一下", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "妈，过年我带橘子回去，扫地机就关着歇几天", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "上个月空调清洗花了一百五，师傅说一年洗一次就行", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "夏天那会儿风扇空调一起开，才勉强睡得着", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "橘子别扒拉音箱的线，咬断了你赔啊", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}
+{"home": "studio", "text": "橘子，扫地机一开你就蹲上去让它驮着转", "intent": "无关", "tags": ["non-command", "overheard", "day-in-life"]}

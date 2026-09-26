@@ -1,0 +1,219 @@
+{"ref": "b10-day-t1:19", "home": "family3", "text": "中午不做饭了，冰箱里还有剩饺子", "intent": "无关"}
+{"ref": "b10-day-t1:51", "home": "family3", "text": "主卧窗帘拆下来洗吧，都一年没洗了", "intent": "无关"}
+{"ref": "b10-day-t1:58", "home": "family3", "text": "出门一个礼拜，热水器的电我已经拔了", "intent": "无关"}
+{"ref": "b10-day-t1:92", "home": "family3", "text": "空气净化器的滤网还剩百分之多少寿命", "intent": "查询", "device": "空气净化器"}
+{"ref": "b10-day-t1:109", "home": "kids", "text": "老公你走的时候门锁好，别像上回那样虚掩着", "intent": "无关"}
+{"ref": "b10-day-t1:111", "home": "kids", "text": "小娟，糯米的衣服我放洗衣机里了，你记得按一下", "intent": "无关"}
+{"ref": "b10-day-t1:129", "home": "kids", "text": "快递到了？妈您别动，我去开门", "intent": "无关"}
+{"ref": "b10-day-t1:134", "home": "kids", "text": "妈，糯米睡了，您把婴儿房窗帘拉上吧", "intent": "无关"}
+{"ref": "b10-day-t1:136", "home": "kids", "text": "摇篮我关了，她睡沉了", "intent": "无关"}
+{"ref": "b10-day-t1:143", "home": "kids", "text": "妈，客厅灯太亮了晃着宝宝，您调暗点", "intent": "无关"}
+{"ref": "b10-day-t1:147", "home": "kids", "text": "妈，您先回屋睡，今晚我来哄", "intent": "无关"}
+{"ref": "b10-day-t1:170", "home": "kids", "text": "婴儿房窗帘拉开吧，太阳都出来了", "intent": "控制", "device": "婴儿房窗帘", "action": "打开或启动"}
+{"ref": "b10-day-t1:179", "home": "kids", "text": "摇篮停了吧，她睡沉了", "intent": "控制", "device": "电动摇篮", "action": "关闭或停止"}
+{"ref": "b10-day-t1:192", "home": "kids", "text": "婴儿房空调现在开的多少度", "intent": "查询", "device": "婴儿房空调"}
+{"ref": "b10-day-t1:199", "home": "elder", "text": "哎呀妈呀，人老了，天不亮就醒", "intent": "无关"}
+{"ref": "b10-day-t1:208", "home": "elder", "text": "老姐妹说她家燃气报警器半夜乱叫，吓死个人", "intent": "无关"}
+{"ref": "b10-day-t1:210", "home": "elder", "text": "张姐，那个紧急呼叫按钮别给碰了，一碰我儿子手机就响", "intent": "无关"}
+{"ref": "b10-day-t1:216", "home": "elder", "text": "这个燃气报警器是社区免费给装的", "intent": "无关"}
+{"ref": "b10-day-t1:239", "home": "elder", "text": "妈，走廊夜灯是感应的，您一过它就亮，不用找开关", "intent": "无关"}
+{"ref": "b10-day-t1:240", "home": "elder", "text": "小军，你炒菜的时候别把燃气报警器熏响了", "intent": "无关"}
+{"ref": "b10-day-t1:244", "home": "elder", "text": "电视开着有点动静，家里不冷清", "intent": "无关"}
+{"ref": "b10-day-t1:258", "home": "elder", "text": "大孙子，电视你们随便看，奶奶去厨房", "intent": "无关"}
+{"ref": "b10-day-t1:259", "home": "elder", "text": "过年那几天客厅灯一直开着，亮堂", "intent": "无关"}
+{"ref": "b10-day-t1:264", "home": "elder", "text": "小管家，床头摇起来点，我要起来", "intent": "控制", "device": "电动床", "action": "调高或增大"}
+{"ref": "b10-day-t1:269", "home": "elder", "text": "客厅灯关了吧，地拖完了", "intent": "控制", "device": "客厅灯", "action": "关闭或停止"}
+{"ref": "b10-day-t1:293", "home": "elder", "text": "电视现在是哪个台", "intent": "查询", "device": "电视"}
+{"ref": "b10-day-t1:318", "home": "duplex", "text": "一楼客厅空调出风口滴水了，我找物业问问", "intent": "无关"}
+{"ref": "b10-day-t1:326", "home": "duplex", "text": "甜甜，作业写完才能开电视，听见没", "intent": "无关"}
+{"ref": "b10-day-t1:346", "home": "duplex", "text": "浴霸的灯泡坏了一个，周末去买", "intent": "无关"}
+{"ref": "b10-day-t1:360", "home": "duplex", "text": "出门十天，二楼除湿机的插头我拔了", "intent": "无关"}
+{"ref": "b10-day-t1:367", "home": "duplex", "text": "二楼扫地机先停一下，我开会呢", "intent": "控制", "device": "二楼扫地机", "action": ["暂停", "关闭或停止"]}
+{"ref": "b10-day-t1:369", "home": "duplex", "text": "小易，外卖到了，开一下门", "intent": "控制", "device": "一楼门锁", "action": "打开或启动"}
+{"ref": "b10-day-t1:373", "home": "duplex", "text": "书房灯关了吧，没人", "intent": "控制", "device": "二楼书房灯", "action": "关闭或停止"}
+{"ref": "b10-day-t1:376", "home": "duplex", "text": "小管家，晾衣架降下来，我晾被子", "intent": "控制", "device": "二楼晾衣架", "action": "调低或减小"}
+{"ref": "b10-day-t1:390", "home": "duplex", "text": "二楼书房空调现在几度", "intent": "查询", "device": "二楼书房空调"}
+{"ref": "b10-day-t2:9", "home": "townhouse", "text": "老婆，蛋我煎好了，油烟机你顺手关一下", "intent": "无关"}
+{"ref": "b10-day-t2:32", "home": "townhouse", "text": "浩浩，一进门先洗手，别急着开空调", "intent": "无关"}
+{"ref": "b10-day-t2:35", "home": "townhouse", "text": "妈，客厅窗帘您拉那么严实干嘛呀", "intent": "无关"}
+{"ref": "b10-day-t2:41", "home": "townhouse", "text": "小管家，油烟机开到最大档", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b10-day-t2:42", "home": "townhouse", "text": "油烟机我开着呢，你别管了，去陪朵朵搭积木", "intent": "无关"}
+{"ref": "b10-day-t2:54", "home": "townhouse", "text": "助手，二楼浴霸打开", "intent": "控制", "device": "二楼浴霸", "action": "打开或启动"}
+{"ref": "b10-day-t2:57", "home": "townhouse", "text": "浴霸一开就晃眼，朵朵别抬头看", "intent": "无关"}
+{"ref": "b10-day-t2:63", "home": "townhouse", "text": "朵朵怕黑，过道夜灯就一直开着吧，别关", "intent": "无关"}
+{"ref": "b10-day-t2:73", "home": "townhouse", "text": "妈，客厅空调我定了两个小时，到点自己关", "intent": "无关"}
+{"ref": "b10-day-t2:78", "home": "townhouse", "text": "除湿机那个设置你别乱动，我调好了的", "intent": "无关"}
+{"ref": "b10-day-t2:110", "home": "southyard", "text": "小易，院子灯关了", "intent": "控制", "device": "院子灯", "action": "关闭或停止"}
+{"ref": "b10-day-t2:122", "home": "southyard", "text": "老太婆，吊扇你开着吹就行，空调费电", "intent": "无关"}
+{"ref": "b10-day-t2:123", "home": "southyard", "text": "排气扇我开了，你炒辣椒尽管炒", "intent": "无关"}
+{"ref": "b10-day-t2:124", "home": "southyard", "text": "小管家，排气扇开一下，我要炒辣椒了", "intent": "控制", "device": "厨房排气扇", "action": "打开或启动"}
+{"ref": "b10-day-t2:126", "home": "southyard", "text": "小易，电饭煲饭好了没", "intent": "查询", "device": "电饭煲"}
+{"ref": "b10-day-t2:149", "home": "southyard", "text": "昨天卫生间暖风机是你忘了关吧", "intent": "无关"}
+{"ref": "b10-day-t2:158", "home": "southyard", "text": "老头子，睡前院门你去锁好，上回野猫都钻进来了", "intent": "无关"}
+{"ref": "b10-day-t2:162", "home": "southyard", "text": "回南天一来，储藏室那台抽湿机就没停过", "intent": "无关"}
+{"ref": "b10-day-t2:169", "home": "southyard", "text": "储藏室那个抽湿机开起来，米都快发霉了", "intent": "控制", "device": "储藏室抽湿机", "action": "打开或启动"}
+{"ref": "b10-day-t2:180", "home": "southyard", "text": "菜地滴灌今天浇过没有", "intent": "查询", "device": "菜地滴灌"}
+{"ref": "b10-day-t2:181", "home": "northflat", "text": "媳妇儿，小厨宝我给你开了，洗碗别用凉水", "intent": "无关"}
+{"ref": "b10-day-t2:188", "home": "northflat", "text": "小易，净化器关了，我们出门了", "intent": "控制", "device": "客厅净化器", "action": "关闭或停止"}
+{"ref": "b10-day-t2:189", "home": "northflat", "text": "门锁我锁了，你别再回去看了", "intent": "无关"}
+{"ref": "b10-day-t2:220", "home": "northflat", "text": "闺女要洗澡，先把卫生间暖风机开起来", "intent": "控制", "device": "卫生间暖风机", "action": "打开或启动"}
+{"ref": "b10-day-t2:235", "home": "northflat", "text": "洗衣机开始洗吧，用快洗", "intent": "控制", "device": "洗衣机", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b10-day-t2:243", "home": "northflat", "text": "老公，暖气刚来那几天阀门先别开满，管子里有气", "intent": "无关"}
+{"ref": "b10-day-t2:275", "home": "rental", "text": "阿杰你小点声，隔壁还睡着呢", "intent": "无关"}
+{"ref": "b10-day-t2:283", "home": "rental", "text": "公共客厅灯谁最后睡谁关啊", "intent": "无关"}
+{"ref": "b10-day-t2:288", "home": "rental", "text": "扫地机别在我门口转了", "intent": "控制", "device": "公共区扫地机", "action": ["关闭或停止", "暂停"]}
+{"ref": "b10-day-t2:332", "home": "studio", "text": "窗帘又被你抓出一排洞，你个败家猫", "intent": "无关"}
+{"ref": "b10-device-t3:2", "home": "mega", "text": "阿姨，你走的时候把客厅灯顺手关一下", "intent": "无关"}
+{"ref": "b10-device-t3:7", "home": "mega", "text": "等下我去把厨房灯关了，你们先吃", "intent": "无关"}
+{"ref": "b10-device-t3:13", "home": "mega", "text": "爸，你看书把书房灯开开，别摸黑看伤眼睛", "intent": "无关"}
+{"ref": "b10-device-t3:16", "home": "mega", "text": "衣帽间灯带有一截不亮了，回头找售后", "intent": "无关"}
+{"ref": "b10-device-t3:20", "home": "mega", "text": "玄关灯感应太灵了，人还没进门它先亮了", "intent": "无关"}
+{"ref": "b10-device-t3:48", "home": "mega", "text": "主卧净化器搬次卧去吧，你妈这两天咳嗽", "intent": "无关"}
+{"ref": "b10-device-t3:64", "home": "mega", "text": "烘干机把我那件羊毛衫烘成童装了", "intent": "无关"}
+{"ref": "b10-device-t3:80", "home": "mega", "text": "菜端上桌了，小易把餐厅灯打开", "intent": "控制", "device": "餐厅灯", "action": "打开或启动"}
+{"ref": "b10-device-t3:83", "home": "mega", "text": "小易，影音室灯关掉，电影要开始了", "intent": "控制", "device": "影音室灯", "action": "关闭或停止"}
+{"ref": "b10-device-t3:92", "home": "mega", "text": "明早七点把主卧窗帘打开", "intent": "控制", "device": "主卧窗帘", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b10-device-t3:105", "home": "mega", "text": "小管家，把门锁上", "intent": "控制", "device": "智能门锁", "action": "上锁"}
+{"ref": "b10-device-t3:113", "home": "mega", "text": "小易，大门我记得反锁了，你帮我确认下", "intent": "查询", "device": "智能门锁"}
+{"ref": "b10-device-t3:114", "home": "mega", "text": "小易，热水器烧好了没", "intent": "查询", "device": "热水器"}
+{"ref": "b10-device-t3:116", "home": "mega", "text": "影音室投影仪是不是还开着", "intent": "查询", "device": "影音室投影仪"}
+{"ref": "b10-device-t3:123", "home": "brand", "text": "老公，客厅灯你出门前顺手关一下", "intent": "无关"}
+{"ref": "b10-device-t3:128", "home": "brand", "text": "格力这台用了五年了，一回毛病没出过", "intent": "无关"}
+{"ref": "b10-device-t3:134", "home": "brand", "text": "戴森这风扇两千多，吹起来跟两百的没差多少", "intent": "无关"}
+{"ref": "b10-device-t3:135", "home": "brand", "text": "戴森那风扇没叶片，孩子老把手往里伸", "intent": "无关"}
+{"ref": "b10-device-t3:143", "home": "brand", "text": "小米电视开机那广告能不能去掉啊，烦死了", "intent": "无关"}
+{"ref": "b10-device-t3:165", "home": "brand", "text": "海尔的售后说明天下午来看冰箱", "intent": "无关"}
+{"ref": "b10-device-t3:170", "home": "brand", "text": "电饭煲我昨晚定好了，今早起来就有粥喝", "intent": "无关"}
+{"ref": "b10-device-t3:177", "home": "brand", "text": "爸，门锁密码后面要加个井号才行", "intent": "无关"}
+{"ref": "b10-device-t3:180", "home": "brand", "text": "萤石的摄像头装在玄关，正好能看到电梯口", "intent": "无关"}
+{"ref": "b10-device-t3:204", "home": "brand", "text": "米淘好放锅里了，煮上吧", "intent": "控制", "device": "苏泊尔电饭煲", "action": "打开或启动"}
+{"ref": "b10-device-t3:216", "home": "brand", "text": "客厅空气现在咋样", "intent": "查询", "device": "米家净化器4", "note": "客厅空气质量：客厅里只有净化器能报空气读数"}
+{"ref": "b10-device-t3:233", "home": "pets", "text": "团子别扒净化器出风口，那不是暖气", "intent": "无关"}
+{"ref": "b10-device-t3:245", "home": "pets", "text": "智能猫砂盆有防夹感应，我拿手试过的", "intent": "无关"}
+{"ref": "b10-device-t3:249", "home": "pets", "text": "团子只喝饮水机里的水，碗里的一口不碰", "intent": "无关"}
+{"ref": "b10-device-t3:253", "home": "pets", "text": "上班摸鱼的时候我就打开摄像头看它俩打架", "intent": "无关"}
+{"ref": "b10-device-t3:264", "home": "pets", "text": "宠物烘干箱说明书上说温度别超过三十八度", "intent": "无关"}
+{"ref": "b10-device-t3:287", "home": "pets", "text": "小易，猫饭加一顿", "intent": "控制", "device": "猫粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b10-device-t3:294", "home": "pets", "text": "狗窝垫子放进去了，洗衣机开始吧", "intent": "控制", "device": "洗衣机", "action": "打开或启动"}
+{"ref": "b10-device-t3:307", "home": "pets", "text": "小易，客厅现在多少度", "intent": "查询", "device": "客厅空调", "note": "pets 没有温湿度计，客厅室温由客厅空调读数回答"}
+{"ref": "b10-device-t3:314", "home": "office", "text": "升降桌升到一半卡住了，客服让我长按下降键十秒重置", "intent": "无关"}
+{"ref": "b10-device-t3:315", "home": "office", "text": "你们公司那种升降桌多少钱？我这个一千二", "intent": "无关"}
+{"ref": "b10-device-t3:318", "home": "office", "text": "我去把显示器插座拔了，打雷呢", "intent": "无关"}
+{"ref": "b10-device-t3:323", "home": "office", "text": "房东说空调清洗得我自己出钱，他不管", "intent": "无关"}
+{"ref": "b10-device-t3:347", "home": "office", "text": "老板说三点开会，我先把音箱连上电脑", "intent": "无关"}
+{"ref": "b10-device-t3:359", "home": "office", "text": "喂，升降桌售后吗？我这个一升就咔咔响", "intent": "无关"}
+{"ref": "b10-device-t3:366", "home": "office", "text": "我同事说他们家扫地机能自己倒垃圾，我这个还得手倒", "intent": "无关"}
+{"ref": "b10-device-t3:375", "home": "office", "text": "小易，空调关了，吹得嗓子干", "intent": "控制", "device": "空调", "action": "关闭或停止"}
+{"ref": "b10-device-t3:384", "home": "office", "text": "朋友到门口了，你帮他开下门，我这走不开", "intent": "控制", "device": "门锁", "action": "打开或启动"}
+{"ref": "b10-device-t3:394", "home": "office", "text": "扫地机这会儿在卧室还是客厅", "intent": "查询", "device": "扫地机"}
+{"ref": "b10-device-t3:398", "home": "office", "text": "书桌灯现在亮度多少", "intent": "查询", "device": "书桌灯"}
+{"ref": "b10-device-t4:1", "home": "countryside", "text": "这堂屋灯还是你爸结婚那年装的，灯罩都黄了", "intent": "无关"}
+{"ref": "b10-device-t4:34", "home": "countryside", "text": "电动门轨道里卡了半块砖，开到一半就不走了", "intent": "无关"}
+{"ref": "b10-device-t4:45", "home": "countryside", "text": "水泵我开了，你去地头看看水过去没", "intent": "无关"}
+{"ref": "b10-device-t4:50", "home": "countryside", "text": "他爹，太阳能上水别光开着不管，上满了从楼顶往下淌", "intent": "无关"}
+{"ref": "b10-device-t4:63", "home": "countryside", "text": "冰柜霜结得老厚，礼拜天拔了电化一化", "intent": "无关"}
+{"ref": "b10-device-t4:73", "home": "countryside", "text": "小易，电视声音小点，奶睡着了", "intent": "控制", "device": "电视", "action": "调低或减小"}
+{"ref": "b10-device-t4:80", "home": "countryside", "text": "小易，冰柜调到零下十八度", "intent": "控制", "device": "冰柜", "action": "设为指定的数值或模式"}
+{"ref": "b10-device-t4:93", "home": "countryside", "text": "助手，太阳能里的水多少度了", "intent": "查询", "device": "太阳能热水器"}
+{"ref": "b10-device-t4:98", "home": "countryside", "text": "卧室空调这会儿开的多少度", "intent": "查询", "device": "卧室空调"}
+{"ref": "b10-device-t4:104", "home": "minimal", "text": "你别老用手机开灯，墙上开关就两步远", "intent": "无关"}
+{"ref": "b10-device-t4:116", "home": "minimal", "text": "这音箱是公司年会抽的，音质一般般", "intent": "无关"}
+{"ref": "b10-device-t4:119", "home": "minimal", "text": "音箱声音我调小了，你要听就戴耳机", "intent": "无关"}
+{"ref": "b10-device-t4:133", "home": "minimal", "text": "门锁我锁了，你别再回去看了", "intent": "无关"}
+{"ref": "b10-device-t4:145", "home": "minimal", "text": "卧室冷飕飕的，被窝都是凉的", "intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b10-device-t4:155", "home": "minimal", "text": "小易，门锁锁上了没", "intent": "查询", "device": "门锁"}
+{"ref": "b10-device-t4:167", "home": "apartment", "text": "客厅空调是挂机，带不动这么大客厅，当初就该买柜机", "intent": "无关"}
+{"ref": "b10-device-t4:182", "home": "apartment", "text": "你别往加湿器里滴精油，那玩意儿伤机器", "intent": "无关"}
+{"ref": "b10-device-t4:189", "home": "apartment", "text": "音箱搁那么高干嘛，拿下来放电视柜上", "intent": "无关"}
+{"ref": "b10-device-t4:194", "home": "apartment", "text": "妈，洗衣机那个快洗十五分钟，您按这个就行", "intent": "无关"}
+{"ref": "b10-device-t4:200", "home": "apartment", "text": "电饭煲内胆涂层都掉了，再用要吃进肚子里了", "intent": "无关"}
+{"ref": "b10-device-t4:222", "home": "apartment", "text": "把阳台晾衣架放低点，这一盆衣服等着挂", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小"}
+{"ref": "b10-device-t4:242", "home": "house", "text": "餐厅吊灯挂太低了，你爸个子高，老撞脑袋", "intent": "无关"}
+{"ref": "b10-device-t4:250", "home": "house", "text": "我把地暖分水器阀门关了一路，次卧反正不住人", "intent": "无关"}
+{"ref": "b10-device-t4:253", "home": "house", "text": "你开冰箱给我拿罐啤酒，要最里头冰的", "intent": "无关"}
+{"ref": "b10-device-t4:265", "home": "house", "text": "清洗油烟机的师傅说一次一百二，要拆开洗", "intent": "无关"}
+{"ref": "b10-device-t4:280", "home": "house", "text": "上回车库门没关，邻居家狗跑进去把轮胎咬了", "intent": "无关"}
+{"ref": "b10-device-t4:281", "home": "house", "text": "花园浇水阀我设的早上六点浇，你别再手动浇了", "intent": "无关"}
+{"ref": "b10-device-t4:282", "home": "house", "text": "你去花园把浇水阀关了，水都漫到路上了", "intent": "无关"}
+{"ref": "b10-device-t4:291", "home": "house", "text": "饮水机插座我关了，出去一礼拜别烧着", "intent": "无关"}
+{"ref": "b10-device-t4:309", "home": "house", "text": "小易，喂食器出一份猫粮", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b10-device-t4:336", "home": "villa", "text": "门铃录像里那个人天天来塞小广告", "intent": "无关"}
+{"ref": "b10-device-t4:338", "home": "villa", "text": "别冲着智能音箱嚷嚷调音量，你小声它也听得见", "intent": "无关"}
+{"ref": "b10-device-t4:344", "home": "villa", "text": "饮水机插座上那个按钮你手动按一下就通电了", "intent": "无关"}
+{"ref": "b10-device-t4:347", "home": "villa", "text": "书房灯和落地扇我都关了，走吧", "intent": "无关"}
+{"ref": "b10-device-t4:368", "home": "villa", "text": "这个安防警报跟物业是联网的吗？你回头问问物业", "intent": "无关"}
+{"ref": "b10-device-t4:391", "home": "villa", "text": "小管家，调出门口摄像头的画面", "intent": "控制", "device": ["摄像头", "门铃"], "action": "打开或启动", "note": "门口画面：玄关摄像头和大门可视门铃都能调出门口画面"}
+{"ref": "b10-device-t4:398", "home": "villa", "text": "加湿器还有水没", "intent": "查询", "device": "加湿器"}
+{"ref": "b10-people-t5:6", "home": "family3", "text": "喂，王姐啊，我在家呢，洗衣机转着听不清，你大点声", "intent": "无关"}
+{"ref": "b10-people-t5:12", "home": "family3", "text": "别哭了别哭了，摄像头就是看看你睡没睡，不是抓你", "intent": "无关"}
+{"ref": "b10-people-t5:13", "home": "family3", "text": "爷爷，你把电视声音关小点嘛，我在写作业", "intent": "无关"}
+{"ref": "b10-people-t5:27", "home": "family3", "text": "喂喂，听得见吗？我这电视开着呢，我去阳台跟你说", "intent": "无关"}
+{"ref": "b10-people-t5:53", "home": "family3", "text": "麻烦你了小管家，帮我把门反锁一下，谢谢谢谢", "intent": "控制", "device": "智能门锁", "action": "上锁"}
+{"ref": "b10-people-t5:72", "home": "elder", "text": "妈，那个紧急按钮不是玩的，您别老按着试", "intent": "无关"}
+{"ref": "b10-people-t5:77", "home": "elder", "text": "老伴儿你看，摄像头那小红点一闪一闪的，准是儿子在那头瞅咱呢", "intent": "无关"}
+{"ref": "b10-people-t5:80", "home": "elder", "text": "唉，人老了，药盒子嘀嘀叫，我还当是电话响", "intent": "无关"}
+{"ref": "b10-people-t5:82", "home": "elder", "text": "奶奶，这是空调遥控器，不是电视的，您拿错了", "intent": "无关"}
+{"ref": "b10-people-t5:106", "home": "elder", "text": "乖孙，把电视开开，奶奶给你找动画片", "intent": "无关"}
+{"ref": "b10-people-t5:112", "home": "elder", "text": "小易啊，电视给我换到戏曲频道", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式"}
+{"ref": "b10-people-t5:126", "home": "elder", "text": "走廊黑乎乎的，起夜怕绊着", "intent": "控制", "device": "走廊夜灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b10-people-t5:128", "home": "elder", "text": "麻烦你啊小易，把浴霸给我开上，我洗个澡", "intent": "控制", "device": "浴霸", "action": "打开或启动"}
+{"ref": "b10-people-t5:129", "home": "elder", "text": "小管家，药盒…今天的药…我吃过没有啊", "intent": "查询", "device": "智能药盒"}
+{"ref": "b10-people-t5:133", "home": "elder", "text": "燃气报警器好着没？没啥动静吧", "intent": "查询", "device": "燃气报警器"}
+{"ref": "b10-people-t5:138", "home": "kids", "text": "我求求你了小祖宗，睡吧，妈妈眼睛都睁不开了", "intent": "无关"}
+{"ref": "b10-people-t5:156", "home": "kids", "text": "隔壁那家孩子天天哭，也没个摇篮哄哄", "intent": "无关"}
+{"ref": "b10-people-t5:167", "home": "kids", "text": "你看你看，他盯着扫地机器人看呢，眼珠子跟着转", "intent": "无关"}
+{"ref": "b10-people-t5:177", "home": "kids", "text": "婆婆，尿布别往洗衣机里扔，得单独手洗", "intent": "无关"}
+{"ref": "b10-people-t5:185", "home": "kids", "text": "小易…我求你了…摇篮开着摇…让我眯十分钟", "intent": "控制", "device": "电动摇篮", "action": "打开或启动"}
+{"ref": "b10-people-t5:190", "home": "kids", "text": "门锁一下，我抱着娃腾不出手", "intent": "控制", "device": "智能门锁", "action": "上锁"}
+{"ref": "b10-people-t5:192", "home": "kids", "text": "Hey 小易，净化器 turn on 一下，我爸刚抽完烟回来", "intent": "控制", "device": "空气净化器", "action": "打开或启动"}
+{"ref": "b10-people-t5:193", "home": "kids", "text": "小易啊，也不是非要怎么样，就是婴儿房大灯是不是稍微有点亮了", "intent": "控制", "device": "婴儿房灯", "action": ["调低或减小", "关闭或停止"]}
+{"ref": "b10-people-t5:206", "home": "rental", "text": "妈，没事，我屋有空调，合租挺好的，你别操心", "intent": "无关"}
+{"ref": "b10-people-t5:215", "home": "rental", "text": "我跟你说，公共热水气就五十升，谁先洗谁有热水", "intent": "无关"}
+{"ref": "b10-people-t5:238", "home": "rental", "text": "姐妹你用我屋插座充吧，这个口是快充", "intent": "无关"}
+{"ref": "b10-people-t5:242", "home": "rental", "text": "我先把洗衣机里的衣服掏出来，你再放", "intent": "无关"}
+{"ref": "b10-people-t5:247", "home": "rental", "text": "小易，我屋台灯开一下，要上号了", "intent": "控制", "device": "我房间的台灯", "action": "打开或启动"}
+{"ref": "b10-people-t5:259", "home": "rental", "text": "室友说客厅太冷了，小易把公共区空调调高点", "intent": "控制", "device": "公共区空调", "action": "调高或增大"}
+{"ref": "b10-people-t5:269", "home": "studio", "text": "喂，我开会呢，等我把音箱关了再说", "intent": "无关"}
+{"ref": "b10-people-t5:284", "home": "studio", "text": "妈你别老说我，空调我天天开是因为这屋西晒", "intent": "无关"}
+{"ref": "b10-people-t5:288", "home": "studio", "text": "这风扇网上买的，才九十九，还能摇头", "intent": "无关"}
+{"ref": "b10-people-t5:295", "home": "studio", "text": "妈，洗衣机洗完我晾了，你别打电话催了", "intent": "无关"}
+{"ref": "b10-people-t5:349", "home": "northflat", "text": "姐，你家暖气发啥牌子的，我家这个老卡", "intent": "无关"}
+{"ref": "b10-people-t5:362", "home": "northflat", "text": "别关别关，小厨宝我还用热水刷锅呢", "intent": "无关"}
+{"ref": "b10-people-t5:363", "home": "northflat", "text": "我寻思给次卧也装个暖气阀，你看咋样", "intent": "无关"}
+{"ref": "b10-people-t5:371", "home": "northflat", "text": "你再开着客厅灯睡觉，电费你交啊", "intent": "无关"}
+{"ref": "b10-people-t5:383", "home": "northflat", "text": "小易，把落地灯开开，他大姨来了", "intent": "控制", "device": "客厅落地灯", "action": "打开或启动"}
+{"ref": "b10-people-t5:385", "home": "northflat", "text": "雾霾都钻屋里来了，客厅一股呛味儿", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b10-people-t5:390", "home": "northflat", "text": "小易，主卧暖气阀调到二十二度", "intent": "控制", "device": "主卧暖气阀", "action": "设为指定的数值或模式"}
+{"ref": "b10-people-t5:397", "home": "northflat", "text": "洗衣机还有多长时间", "intent": "查询", "device": "洗衣机"}
+{"ref": "b10-sounds-t6:13", "home": "duplex", "text": "爸，你别老把空调开到十八度，吹得人脑壳疼", "intent": "无关"}
+{"ref": "b10-sounds-t6:24", "home": "duplex", "text": "老婆，二楼洗衣机是不是该洗洗滚筒了", "intent": "无关"}
+{"ref": "b10-sounds-t6:25", "home": "duplex", "text": "专家提醒，空调长时间开着不通风，容易得空调病", "intent": "无关"}
+{"ref": "b10-sounds-t6:39", "home": "duplex", "text": "孩子在书房上网课，热得一头汗", "intent": "控制", "device": "二楼书房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}
+{"ref": "b10-sounds-t6:74", "home": "townhouse", "text": "我妈说过，车库门遥控器别放车里", "intent": "无关"}
+{"ref": "b10-sounds-t6:93", "home": "townhouse", "text": "这集放完就把客厅空调关了", "intent": "控制", "device": "客厅空调", "action": ["关闭或停止", "设为指定的数值或模式"]}
+{"ref": "b10-sounds-t6:101", "home": "mega", "text": "长官，灯光全部关闭，敌人看不见我们了", "intent": "无关"}
+{"ref": "b10-sounds-t6:104", "home": "mega", "text": "阿姨，保姆房空调要是不制冷，你跟我说，别硬扛", "intent": "无关"}
+{"ref": "b10-sounds-t6:113", "home": "mega", "text": "老公，衣帽间灯你出来的时候关一下", "intent": "无关"}
+{"ref": "b10-sounds-t6:114", "home": "mega", "text": "小米，看电视离远点，眼睛还要不要了", "intent": "无关"}
+{"ref": "b10-sounds-t6:115", "home": "mega", "text": "朵朵，别拿遥控器乱按，窗帘都被你关了三回了", "intent": "无关"}
+{"ref": "b10-sounds-t6:137", "home": "mega", "text": "助手，把投影仪关了，孩子们看完了", "intent": "控制", "device": "影音室投影仪", "action": "关闭或停止"}
+{"ref": "b10-sounds-t6:140", "home": "mega", "text": "小易，书房窗帘拉上，屏幕反光看不清", "intent": "控制", "device": "书房窗帘", "action": "关闭或停止"}
+{"ref": "b10-sounds-t6:157", "home": "pets", "text": "智能饮水机，循环活水，主子爱上喝水", "intent": "无关"}
+{"ref": "b10-sounds-t6:177", "home": "pets", "text": "空气净化器，专除宠物毛发异味，开一整天也安静", "intent": "无关"}
+{"ref": "b10-sounds-t6:184", "home": "pets", "text": "助手，打开宠物摄像头，我瞅瞅猫在干嘛", "intent": "控制", "device": "宠物摄像头", "action": "打开或启动"}
+{"ref": "b10-sounds-t6:222", "home": "office", "text": "王经理，灯光我调好了，您看这个角度行吗", "intent": "无关"}
+{"ref": "b10-sounds-t6:230", "home": "office", "text": "我妈老说我整天对着电脑，书桌灯都不关", "intent": "无关"}
+{"ref": "b10-sounds-t6:232", "home": "office", "text": "同事说他家空调开一晚才两度电，吹牛吧", "intent": "无关"}
+{"ref": "b10-sounds-t6:237", "home": "office", "text": "开会呢，音箱先暂停", "intent": "控制", "device": "音箱", "action": ["暂停", "关闭或停止"]}
+{"ref": "b10-sounds-t6:254", "home": "southyard", "text": "据气象台预报，未来三天有回南天，市民注意防潮", "intent": "无关"}
+{"ref": "b10-sounds-t6:260", "home": "southyard", "text": "奶奶你别关我平板，这局还没打完", "intent": "无关"}
+{"ref": "b10-sounds-t6:267", "home": "southyard", "text": "老头子，排气扇你别老开着，费电", "intent": "无关"}
+{"ref": "b10-sounds-t6:301", "home": "apartment", "text": "小猪回到家，打开台灯，开始写日记", "intent": "无关"}
+{"ref": "b10-sounds-t6:309", "home": "apartment", "text": "姐妹们，米饭好不好吃，关键看电饭煲内胆", "intent": "无关"}
+{"ref": "b10-sounds-t6:316", "home": "apartment", "text": "老公你起来把窗帘拉上呗，晒死了", "intent": "无关"}
+{"ref": "b10-sounds-t6:318", "home": "apartment", "text": "门我锁好了，钥匙放鞋柜上了", "intent": "无关"}
+{"ref": "b10-sounds-t6:326", "home": "apartment", "text": "我妈说过，空气净化器滤网半年得换一次", "intent": "无关"}
+{"ref": "b10-sounds-t6:344", "home": "apartment", "text": "小易，洗衣机还有多久洗好", "intent": "查询", "device": "洗衣机"}
+{"ref": "b10-sounds-t6:372", "home": "house", "text": "老同学你看，餐厅这个吊灯是我自己挑的，好看吧", "intent": "无关"}
+{"ref": "b10-sounds-t6:378", "home": "house", "text": "新风机，给家里装个肺，除甲醛除雾霾", "intent": "无关"}
+{"ref": "b10-sounds-t6:384", "home": "house", "text": "小管家，车库门打开，我老公车到了", "intent": "控制", "device": "车库门", "action": "打开或启动"}
