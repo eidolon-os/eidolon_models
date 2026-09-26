@@ -90,7 +90,7 @@ class SlowSubmitBackend(PickBackend):
 
     def __init__(self, pick: int, slow: float = 0.4):
         super().__init__(pick)
-        self.slow, self.submitted = slow, []
+        self.slow, self.submitted, self.threads = slow, [], []
 
     def submit(self, batch):
         import threading
@@ -108,8 +108,14 @@ class SlowSubmitBackend(PickBackend):
             futs[i].set_result((logits[i, : k[i]], act[i]))
 
         for i in range(n):
-            threading.Thread(target=run, args=(i, 0.02 if i == 0 else self.slow), daemon=True).start()
+            t = threading.Thread(target=run, args=(i, 0.02 if i == 0 else self.slow))
+            t.start()
+            self.threads.append(t)
         return futs
+
+    def join(self):  # dropped items still finish; don't leave them running into interpreter teardown
+        for t in self.threads:
+            t.join()
 
 
 def speculative_engine(pick: int) -> DecisionEngine:
@@ -126,11 +132,14 @@ def test_speculative_returns_after_intent_for_a_non_command():
     assert _time.perf_counter() - t < 0.3  # did not wait for the 0.4 s device / action items
     assert list(p.answers) == ["intent"] and p.skipped == {"device": "intent=无关", "action": "intent=无关"}
     assert e.backend.submitted == [3]  # all three were started at once
+    e.backend.join()
 
 
 def test_speculative_matches_staged_answers():
     for pick in (0, 1, 2):
-        spec = speculative_engine(pick).predict({"utterance": "开灯"}, QUESTIONS, ask_if=SMART_HOME)
+        e = speculative_engine(pick)
+        spec = e.predict({"utterance": "开灯"}, QUESTIONS, ask_if=SMART_HOME)
+        e.backend.join()
         staged = engine(pick).predict({"utterance": "开灯"}, QUESTIONS, ask_if=SMART_HOME)
         assert spec.answers == staged.answers and spec.skipped == staged.skipped
 
