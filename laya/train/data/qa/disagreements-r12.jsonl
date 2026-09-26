@@ -1,0 +1,1 @@
+{"ref": "b9-need-condition:237", "home": "brand", "text": "阳台衣服晒干了，我去收", "gold": {"intent": "控制", "device": "好太太晾衣架", "action": ["调低或减小", "关闭或停止"]}, "second": {"intent": "无关"}}

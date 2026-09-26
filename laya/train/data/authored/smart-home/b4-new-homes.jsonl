@@ -203,7 +203,7 @@
 {"home": "pets", "text": "沙发上地上全是狗毛", "intent": "控制", "device": ["扫地机器人", "空气净化器"], "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "pets", "text": "出差在外，想看看猫在干嘛", "intent": "控制", "device": "宠物摄像头", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "pets", "text": "狗在阳台等开饭呢", "intent": "控制", "device": "狗粮喂食器", "action": "打开或启动", "tags": ["implicit-intent"]}
-{"home": "pets", "text": "狗热得直吐舌头", "intent": "控制", "device": ["客厅空调", "卧室空调"], "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
+{"home": "pets", "text": "狗热得直吐舌头", "intent": "控制", "device": ["客厅空调", "卧室空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "qa-union"]}
 {"home": "pets", "text": "猫最近老不爱喝水，得让水流起来", "intent": "控制", "device": "宠物饮水机", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "pets", "text": "猫今天吃了几顿", "intent": "查询", "device": "猫粮喂食器", "tags": ["status-query"]}
 {"home": "pets", "text": "狗粮喂食器里还剩多少粮", "intent": "查询", "device": "狗粮喂食器", "tags": ["status-query"]}

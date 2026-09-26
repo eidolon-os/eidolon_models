@@ -1,0 +1,109 @@
+{"ref": "b9-need-comfort:2", "home": "northflat", "text": "冻死我了，这屋跟冰窖似的", "intent": "控制", "device": ["客厅暖气阀", "主卧暖气阀", "电暖器"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:17", "home": "mega", "text": "次卧冷得跟冰窖一样", "intent": "控制", "device": "次卧空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:22", "home": "pets", "text": "卧室凉飕飕的，狗都缩成一团了", "intent": "控制", "device": "卧室空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:24", "home": "house", "text": "书房冷得坐不住", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-comfort:35", "home": "southyard", "text": "客厅是不是有点冷啊，你觉不觉得", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:70", "home": "family3", "text": "卫生间墙砖冰凉，进去就起鸡皮疙瘩", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-comfort:79", "home": "house", "text": "洗完澡擦身子冻得直哆嗦", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:89", "home": "countryside", "text": "闷热闷热的，衣服都黏背上了", "intent": "控制", "device": ["堂屋空调", "卧室空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:90", "home": "townhouse", "text": "闷热闷热的，衣服都黏背上了", "intent": "控制", "device": ["客厅空调", "主卧空调", "儿童房空调", "书房空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:91", "home": "office", "text": "开了一上午会，热得脑门冒油", "intent": "控制", "device": "空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:100", "home": "elder", "text": "我妈屋里热，她一直在扇扇子", "intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:122", "home": "southyard", "text": "卫生间暖风机关了没", "intent": "查询", "device": "卫生间暖风机"}
+{"ref": "b9-need-comfort:129", "home": "family3", "text": "这笑话冷得我起一身鸡皮疙瘩", "intent": "无关"}
+{"ref": "b9-need-comfort:147", "home": "countryside", "text": "厨房黑得找不着锅铲", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-comfort:155", "home": "kids", "text": "我们屋有点暗", "intent": "控制", "device": "主卧灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:164", "home": "villa", "text": "吃饭那屋太暗了", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:176", "home": "minimal", "text": "屋里黑咕隆咚的", "intent": "控制", "device": "灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:179", "home": "southyard", "text": "屋里太暗了，眼睛都花了", "intent": "控制", "device": ["客厅灯", "卧室灯", "厨房灯", "过道感应灯"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:181", "home": "southyard", "text": "院子里黑，老伴喂鱼看不见", "intent": "控制", "device": "院子灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:183", "home": "townhouse", "text": "花园里黑灯瞎火的", "intent": "控制", "device": "花园灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:212", "home": "northflat", "text": "卧室找个充电器摸半天", "intent": "控制", "device": ["主卧灯", "床头灯", "次卧灯"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:213", "home": "studio", "text": "窝沙发上看书，暗得费眼", "intent": "控制", "device": "顶灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-comfort:230", "home": "family3", "text": "早上被太阳晃醒了", "intent": "控制", "device": "主卧窗帘", "action": "关闭或停止"}
+{"ref": "b9-need-comfort:240", "home": "office", "text": "阳光直射到键盘上，晃眼", "intent": "控制", "device": "电动窗帘", "action": "关闭或停止"}
+{"ref": "b9-need-comfort:241", "home": "family3", "text": "客厅太阳晒得猫都躲沙发底下了", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}
+{"ref": "b9-need-comfort:255", "home": "rental", "text": "台灯直直照着眼睛", "intent": "控制", "device": "我房间的台灯", "action": ["调低或减小", "关闭或停止"]}
+{"ref": "b9-need-comfort:273", "home": "kids", "text": "婆婆说宝宝屋里夜里要留盏灯", "intent": "无关"}
+{"ref": "b9-need-comfort:277", "home": "pets", "text": "楼下那家的灯亮了一宿", "intent": "无关"}
+{"ref": "b9-need-comfort:279", "home": "apartment", "text": "电视吵得我睡不着", "intent": "控制", "device": "电视", "action": ["关闭或停止", "调低或减小"]}
+{"ref": "b9-need-comfort:280", "home": "countryside", "text": "电视吵得我睡不着", "intent": "控制", "device": "电视", "action": ["关闭或停止", "调低或减小"]}
+{"ref": "b9-need-comfort:281", "home": "kids", "text": "电视吵得我睡不着", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-comfort:282", "home": "elder", "text": "客厅电视太吵，我妈睡不着", "intent": "控制", "device": "电视", "action": ["关闭或停止", "调低或减小"]}
+{"ref": "b9-need-comfort:299", "home": "office", "text": "扫地机在卧室转来转去，睡不了午觉", "intent": "控制", "device": "扫地机", "action": ["关闭或停止", "暂停"]}
+{"ref": "b9-need-comfort:319", "home": "kids", "text": "宝宝刚哄睡，温奶器还滴滴叫", "intent": "控制", "device": "温奶器", "action": ["关闭或停止", "设为指定的数值或模式"]}
+{"ref": "b9-need-comfort:326", "home": "southyard", "text": "外面装修电钻吵得睡不着", "intent": "无关"}
+{"ref": "b9-need-comfort:337", "home": "pets", "text": "猫半夜跑酷，吵得我睡不着", "intent": "无关"}
+{"ref": "b9-need-comfort:338", "home": "office", "text": "楼下工地打桩，震得脑袋嗡嗡的", "intent": "无关"}
+{"ref": "b9-need-condition:4", "home": "brand", "text": "厨房油烟太呛了", "intent": "控制", "device": "方太油烟机", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:24", "home": "townhouse", "text": "负一楼闷得人透不过气", "intent": "控制", "device": ["地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:32", "home": "townhouse", "text": "地下室跟个地窖似的，又闷又霉", "intent": "控制", "device": ["地下室排风扇", "全屋新风", "地下室除湿机"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:40", "home": "southyard", "text": "老伴说卧室有蚊子叮她", "intent": "控制", "device": "卧室驱蚊器", "action": "打开或启动"}
+{"ref": "b9-need-condition:47", "home": "northflat", "text": "楼下有人烧纸，味儿飘进客厅了", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:52", "home": "house", "text": "车库那股汽油味窜到客厅了", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:65", "home": "mega", "text": "茶室点了香，熏得眼睛疼", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:68", "home": "mega", "text": "客厅烟味散不掉", "intent": "控制", "device": ["客厅净化器", "全屋新风"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:74", "home": "kids", "text": "谁在客厅抽烟了，孩子还在呢", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:95", "home": "townhouse", "text": "地下室排风扇开着没", "intent": "查询", "device": "地下室排风扇"}
+{"ref": "b9-need-condition:102", "home": "elder", "text": "嗓子干得冒烟", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:131", "home": "rental", "text": "我屋那盆绿萝叶子都干尖了", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:135", "home": "family3", "text": "儿童房太干，孩子一直咳", "intent": "控制", "device": "儿童房加湿器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:140", "home": "kids", "text": "婴儿房湿度才二十几", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:141", "home": "kids", "text": "婴儿房干，娃睡觉老揉鼻子", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:146", "home": "villa", "text": "地暖开着，嗓子干得难受", "intent": "控制", "device": ["加湿器", "地暖"], "action": ["打开或启动", "调高或增大", "调低或减小", "关闭或停止"]}
+{"ref": "b9-need-condition:153", "home": "townhouse", "text": "地下室柜子里的旧书长霉点了", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:162", "home": "southyard", "text": "储藏室的木箱子长白毛了", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-condition:181", "home": "family3", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b9-need-condition:185", "home": "southyard", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": ["电动晾衣杆", "客厅除湿机"], "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b9-need-condition:193", "home": "duplex", "text": "要下雨了，露台上还晾着衣服", "intent": "控制", "device": "二楼晾衣架", "action": ["调高或增大", "关闭或停止"]}
+{"ref": "b9-need-condition:220", "home": "family3", "text": "阳台晾不下了，还有一盆衣服", "intent": "控制", "device": "烘干机", "action": "打开或启动"}
+{"ref": "b9-need-condition:221", "home": "family3", "text": "孩子说袜子还湿着没法穿", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b9-need-condition:232", "home": "apartment", "text": "晾衣架挡着阳台门，老碰头", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大"}
+{"ref": "b9-need-condition:237", "home": "brand", "text": "阳台衣服晒干了，我去收", "intent": "无关"}
+{"ref": "b9-need-condition:239", "home": "duplex", "text": "二楼晾的衣服摸着还是潮的", "intent": "控制", "device": ["二楼晾衣架", "二楼除湿机"], "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b9-need-condition:248", "home": "studio", "text": "袜子都没有干净的了", "intent": "控制", "device": "洗衣机", "action": "打开或启动"}
+{"ref": "b9-need-condition:254", "home": "office", "text": "毛巾好几天没洗了", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-condition:259", "home": "townhouse", "text": "小时候下雨天都是满屋子挂衣服", "intent": "无关"}
+{"ref": "b9-need-condition:270", "home": "rental", "text": "公共洗衣机现在有人用吗", "intent": "查询", "device": "公共洗衣机"}
+{"ref": "b9-need-condition:276", "home": "southyard", "text": "狗毛掉得满地都是", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-condition:285", "home": "townhouse", "text": "水池里碗都堆成山了", "intent": "控制", "device": "洗碗机", "action": "打开或启动"}
+{"ref": "b9-need-condition:289", "home": "northflat", "text": "水池里碗都堆成山了", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-condition:298", "home": "townhouse", "text": "二楼儿童房地上全是橡皮屑", "intent": "控制", "device": "扫地机器人", "action": "打开或启动"}
+{"ref": "b9-need-condition:311", "home": "office", "text": "工作区地上全是纸屑", "intent": "控制", "device": "扫地机", "action": "打开或启动"}
+{"ref": "b9-need-condition:318", "home": "kids", "text": "客厅地上全是奶粉沫子", "intent": "控制", "device": "扫地机器人", "action": "打开或启动"}
+{"ref": "b9-need-condition:326", "home": "house", "text": "媳妇说厨房一堆碗没刷", "intent": "控制", "device": "洗碗机", "action": "打开或启动"}
+{"ref": "b9-need-life:2", "home": "townhouse", "text": "花园的草皮黄了一大片", "intent": "控制", "device": "花园喷灌", "action": "打开或启动"}
+{"ref": "b9-need-life:8", "home": "house", "text": "阳台那盆兰花叶尖都干了", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-life:11", "home": "southyard", "text": "院里菜地的小白菜都卷边了", "intent": "控制", "device": "菜地滴灌", "action": "打开或启动"}
+{"ref": "b9-need-life:12", "home": "house", "text": "好些天没下雨，花园干巴巴的", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动"}
+{"ref": "b9-need-life:23", "home": "townhouse", "text": "花园里的土晒得烫脚，花都卷了", "intent": "控制", "device": "花园喷灌", "action": "打开或启动"}
+{"ref": "b9-need-life:26", "home": "southyard", "text": "雨下得正大，滴灌就别白费水了", "intent": "控制", "device": "菜地滴灌", "action": "关闭或停止"}
+{"ref": "b9-need-life:27", "home": "house", "text": "刚下完一场透雨，花园还在浇呢", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止"}
+{"ref": "b9-need-life:31", "home": "southyard", "text": "池子里的鱼都浮上来张嘴", "intent": "控制", "device": "鱼池增氧泵", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-life:34", "home": "southyard", "text": "老头子说池子里的鱼憋得慌", "intent": "控制", "device": "鱼池增氧泵", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-life:44", "home": "pets", "text": "猫饿得直扒拉柜门", "intent": "控制", "device": "猫粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b9-need-life:83", "home": "townhouse", "text": "花园的玫瑰开得真艳", "intent": "无关"}
+{"ref": "b9-need-life:97", "home": "office", "text": "晚上想洗个热水澡", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-life:114", "home": "brand", "text": "我去冲个澡，卫生间别冻人", "intent": "控制", "device": "史密斯热水器", "action": "打开或启动"}
+{"ref": "b9-need-life:122", "home": "duplex", "text": "吃完饭碗还没洗", "intent": "控制", "device": "一楼洗碗机", "action": "打开或启动"}
+{"ref": "b9-need-life:131", "home": "northflat", "text": "次卧那屋写作业太暗了", "intent": "控制", "device": "次卧灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-life:132", "home": "family3", "text": "孩子在儿童房做功课，说看不清", "intent": "控制", "device": "儿童房顶灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-life:159", "home": "house", "text": "饭都做完了，油烟机还呼呼转", "intent": "控制", "device": "油烟机", "action": "关闭或停止"}
+{"ref": "b9-need-life:163", "home": "kids", "text": "宝宝快醒了，醒了就得喝奶", "intent": "控制", "device": "温奶器", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b9-need-life:165", "home": "kids", "text": "要给宝宝换尿布，婴儿房有点凉", "intent": "控制", "device": "婴儿房空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b9-need-life:166", "home": "kids", "text": "温奶器热好了没", "intent": "查询", "device": "温奶器"}
+{"ref": "b9-need-life:179", "home": "townhouse", "text": "这就出门了", "intent": "控制", "device": "多个设备或整屋"}
+{"ref": "b9-need-life:212", "home": "elder", "text": "老太太想坐起来看会儿电视", "intent": "控制", "device": ["电动床", "多个设备或整屋"], "action": ["调高或增大", "设为指定的数值或模式", "打开或启动"]}
+{"ref": "b9-need-life:213", "home": "townhouse", "text": "下午要在地下室健身，下面闷得很", "intent": "控制", "device": ["地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"]}
+{"ref": "b9-need-life:223", "home": "duplex", "text": "人都上楼睡下了，楼下门还没反锁", "intent": "控制", "device": "一楼门锁", "action": "上锁"}
+{"ref": "b9-need-life:225", "home": "house", "text": "睡前心里不踏实，怕门没锁", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-life:227", "home": "elder", "text": "老太太睡下了，门还没反锁", "intent": "控制", "device": "智能门锁", "action": "上锁"}
+{"ref": "b9-need-life:229", "home": "pets", "text": "狗老扒拉门，别让它给扒开了", "intent": "控制", "device": "智能门锁", "action": "上锁"}
+{"ref": "b9-need-life:231", "home": "office", "text": "半夜醒了，想起来门没锁", "intent": "控制", "device": "门锁", "action": "上锁"}
+{"ref": "b9-need-life:246", "home": "southyard", "text": "院门外好像有人在喊", "intent": "查询", "device": "院子摄像头"}
+{"ref": "b9-need-life:247", "home": "northflat", "text": "有人敲门，看看是谁", "intent": "查询", "device": "没有对应的设备"}
+{"ref": "b9-need-life:249", "home": "countryside", "text": "院外头有车一个劲按喇叭，谁啊", "intent": "查询", "device": "院子摄像头"}
+{"ref": "b9-need-life:263", "home": "southyard", "text": "院子摄像头还在录吗", "intent": "查询", "device": "院子摄像头"}
+{"ref": "b9-need-life:267", "home": "townhouse", "text": "睡前才发现车库门还敞着", "intent": "控制", "device": "车库门", "action": "关闭或停止"}
+{"ref": "b9-need-life:284", "home": "apartment", "text": "我爸摔倒了，爬不起来", "intent": "控制", "device": "没有对应的设备"}
+{"ref": "b9-need-life:285", "home": "elder", "text": "妈又忘了吃降压药", "intent": "控制", "device": "智能药盒", "action": ["打开或启动", "设为指定的数值或模式"]}

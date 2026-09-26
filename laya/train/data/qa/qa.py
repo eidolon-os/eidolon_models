@@ -17,6 +17,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 AUTHORED = HERE.parent / "authored" / "smart-home"
+EXITS = {"多个设备或整屋", "没有对应的设备"}
 
 
 def as_set(v):
@@ -62,6 +63,10 @@ def cmd_score(args) -> int:
                 ok = gv == bv
             elif gv is None and bv is None:
                 continue
+            elif q == "action" and (gv is None or bv is None) and (
+                (as_set(g.get("device")) or set()) | (as_set(b.get("device")) or set())
+            ) <= EXITS:
+                continue  # 出口行的动作可填可不填（LABELING §4、§8），一方没填不算分歧
             elif gv is None or bv is None:
                 ok = False
             else:

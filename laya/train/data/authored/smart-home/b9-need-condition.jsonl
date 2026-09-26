@@ -1,0 +1,340 @@
+{"home": "house", "text": "厨房油烟太呛了", "intent": "控制", "device": ["油烟机", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "townhouse", "text": "厨房油烟太呛了", "intent": "控制", "device": ["油烟机", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "southyard", "text": "厨房油烟太呛了", "intent": "控制", "device": "厨房排气扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "brand", "text": "厨房油烟太呛了", "intent": "控制", "device": "方太油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "northflat", "text": "厨房油烟太呛了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-body", "absent"]}
+{"home": "elder", "text": "厨房里油烟呛得直咳嗽", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-body", "absent"]}
+{"home": "townhouse", "text": "地下室一股霉味，闻着脑仁疼", "intent": "控制", "device": ["地下室除湿机", "地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "southyard", "text": "储藏室一股子霉味", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "duplex", "text": "二楼走廊有股霉味", "intent": "控制", "device": ["二楼除湿机", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "countryside", "text": "储物间一股子霉味", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect", "absent"]}
+{"home": "northflat", "text": "外头雾霾，屋里也呛嗓子", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "mega", "text": "雾霾这么重，屋里都闻着呛", "intent": "控制", "device": ["客厅净化器", "主卧净化器", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "office", "text": "雾霾天客厅窗户都不敢开", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-blocked"]}
+{"home": "brand", "text": "雾霾天，嗓子一直痒", "intent": "控制", "device": ["米家净化器4", "戴森净化风扇"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "townhouse", "text": "外头雾霾重，屋里也有股呛味", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "kids", "text": "客厅空气灰蒙蒙的，宝宝老咳嗽", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "villa", "text": "这雾霾天憋得胸口发紧", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "southyard", "text": "蚊子咬了我一胳膊包", "intent": "控制", "device": "卧室驱蚊器", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "northflat", "text": "蚊子咬了我一胳膊包", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-body", "absent"]}
+{"home": "family3", "text": "儿童房有蚊子，孩子脸上叮了俩包", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect", "absent"]}
+{"home": "townhouse", "text": "主卧蚊子嗡嗡的，根本睡不着", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-blocked", "absent"]}
+{"home": "office", "text": "工作区蚊子叮得我没法写代码", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-blocked", "absent"]}
+{"home": "office", "text": "工作区开了一下午视频会，闷得脑壳疼", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "townhouse", "text": "负一楼闷得人透不过气", "intent": "控制", "device": ["地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-figurative"]}
+{"home": "duplex", "text": "楼上书房憋得慌", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "house", "text": "书房憋闷，空气不流通", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "townhouse", "text": "厨房炒个辣椒，呛得满屋咳嗽", "intent": "控制", "device": ["油烟机", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "townhouse", "text": "一会儿要煎带鱼了", "intent": "控制", "device": "油烟机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-upcoming"]}
+{"home": "townhouse", "text": "锅里油都冒青烟了", "intent": "控制", "device": ["油烟机", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-object"]}
+{"home": "townhouse", "text": "三楼书房憋闷，待久了头发昏", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "townhouse", "text": "地下室这味儿，是不是有点那个……", "intent": "控制", "device": ["地下室除湿机", "地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-indirect"]}
+{"home": "townhouse", "text": "地下室跟个地窖似的，又闷又霉", "intent": "控制", "device": ["地下室除湿机", "地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-figurative"]}
+{"home": "townhouse", "text": "老公说地下室憋得慌", "intent": "控制", "device": ["地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-third-party"]}
+{"home": "townhouse", "text": "炖了锅羊肉，一楼全是膻味", "intent": "控制", "device": ["油烟机", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "townhouse", "text": "花园那边花粉飘进来，喷嚏打个没完", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "townhouse", "text": "地下室刷了墙漆，味儿还没散", "intent": "控制", "device": ["地下室排风扇", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "townhouse", "text": "二楼过道闻着有点霉味", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "southyard", "text": "储藏室闷得跟罐头似的", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-figurative"]}
+{"home": "southyard", "text": "卧室里蚊子嗡嗡直叫", "intent": "控制", "device": "卧室驱蚊器", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "southyard", "text": "老伴说卧室有蚊子叮她", "intent": "控制", "device": "卧室驱蚊器", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-third-party"]}
+{"home": "southyard", "text": "一会儿要进卧室睡了，怕蚊子", "intent": "控制", "device": "卧室驱蚊器", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-upcoming"]}
+{"home": "southyard", "text": "炸完鱼厨房烟雾缭绕的", "intent": "控制", "device": "厨房排气扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "southyard", "text": "灶台这边熏得眼睛睁不开", "intent": "控制", "device": "厨房排气扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "southyard", "text": "客厅有股霉味儿", "intent": "控制", "device": "客厅除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "northflat", "text": "客厅一股炒菜味儿", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "northflat", "text": "谁在客厅抽烟了，呛死个人", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "northflat", "text": "楼下有人烧纸，味儿飘进客厅了", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "northflat", "text": "PM2.5都爆表了，客厅里雾蒙蒙的", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "northflat", "text": "闺女说客厅闻着呛", "intent": "控制", "device": "客厅净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-third-party"]}
+{"home": "northflat", "text": "主卧有股烟味", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect", "absent"]}
+{"home": "house", "text": "影音室看了三个钟头电影，闷得慌", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "house", "text": "车库那股汽油味窜到客厅了", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "house", "text": "煎完牛排，厨房还一股焦糊味", "intent": "控制", "device": ["油烟机", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "villa", "text": "炒完菜客厅全是味儿", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "villa", "text": "厨房油烟散不掉", "intent": "控制", "device": ["油烟机", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "villa", "text": "客厅谁抽的烟，味儿还没散", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "apartment", "text": "客厅一股烟味儿", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "apartment", "text": "花粉季，客厅待着一直打喷嚏", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "apartment", "text": "客厅吃完火锅满屋子味儿", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "brand", "text": "卧室有股烟味", "intent": "控制", "device": "戴森净化风扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "brand", "text": "客厅空气灰蒙蒙的", "intent": "控制", "device": "米家净化器4", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "brand", "text": "媳妇说卧室花粉过敏又犯了", "intent": "控制", "device": "戴森净化风扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-third-party"]}
+{"home": "brand", "text": "厨房烧糊了，一股焦味", "intent": "控制", "device": "方太油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "mega", "text": "主卧有股烟味", "intent": "控制", "device": "主卧净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "mega", "text": "茶室点了香，熏得眼睛疼", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "mega", "text": "影音室坐了一屋子人，憋得慌", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "mega", "text": "餐厅吃完烤肉一股味儿", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "mega", "text": "客厅烟味散不掉", "intent": "控制", "device": ["客厅净化器", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "office", "text": "工作区有点憋，脑子转不动了", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-blocked"]}
+{"home": "office", "text": "客厅一股外卖味儿", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "duplex", "text": "一楼火锅味儿散不掉", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "duplex", "text": "主卧空气不太新鲜啊", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-indirect"]}
+{"home": "duplex", "text": "二楼卫生间一股味儿", "intent": "控制", "device": ["全屋新风", "二楼浴霸"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-air", "cue-effect"], "note": "浴霸多带换气功能，新风覆盖全屋，两者都合理"}
+{"home": "kids", "text": "谁在客厅抽烟了，孩子还在呢", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "kids", "text": "客厅一股尿不湿的味儿", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "family3", "text": "客厅一股油烟味", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "family3", "text": "客厅花粉多，孩子喷嚏打个不停", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-third-party"]}
+{"home": "family3", "text": "有人在阳台抽烟，烟都飘进客厅了", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "pets", "text": "客厅一股狗味儿", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "pets", "text": "卫生间一股猫尿骚味", "intent": "控制", "device": "智能猫砂盆", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-air", "cue-effect", "qa-union"]}
+{"home": "pets", "text": "客厅猫毛满天飞，鼻子痒痒", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-air", "cue-body"]}
+{"home": "pets", "text": "猫砂盆那边一股味儿，客厅都闻到了", "intent": "控制", "device": ["空气净化器", "智能猫砂盆"], "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect"]}
+{"home": "rental", "text": "隔壁又抽烟了，我屋里全是烟味", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect", "absent"]}
+{"home": "studio", "text": "厕所一股下水道味", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-air", "cue-effect", "absent"]}
+{"home": "office", "text": "公司会议室闷死了，一屋子人", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "northflat", "text": "外面雾霾真大，还好今天不用出门", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "southyard", "text": "邻居家装修，他们家一股油漆味", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "townhouse", "text": "我们公司地下车库一股霉味", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "brand", "text": "这人说话真冲，呛死我了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "house", "text": "心里憋屈得慌", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "apartment", "text": "空气净化器滤芯一般多久换", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "southyard", "text": "小时候在乡下天天被蚊子咬", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "mega", "text": "我妈说过新风开着太费电", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "kids", "text": "地铁上挤得我快憋死了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "townhouse", "text": "地下室排风扇开着没", "intent": "查询", "device": "地下室排风扇", "tags": ["status-query", "need-contrast"]}
+{"home": "southyard", "text": "卧室驱蚊器还在工作吗", "intent": "查询", "device": "卧室驱蚊器", "tags": ["status-query", "need-contrast"]}
+{"home": "northflat", "text": "客厅净化器显示空气咋样", "intent": "查询", "device": "客厅净化器", "tags": ["status-query", "need-contrast"]}
+{"home": "mega", "text": "新风现在开的几档", "intent": "查询", "device": "全屋新风", "tags": ["status-query", "need-contrast"]}
+{"home": "house", "text": "厨房油烟机关了没有", "intent": "查询", "device": "油烟机", "tags": ["status-query", "need-contrast"]}
+{"home": "brand", "text": "卧室那台戴森现在是啥模式", "intent": "查询", "device": "戴森净化风扇", "tags": ["status-query", "need-contrast"]}
+{"home": "northflat", "text": "暖气一烧，嗓子干得冒烟", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "elder", "text": "嗓子干得冒烟", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "rental", "text": "嗓子干得冒烟", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "brand", "text": "卧室干得喉咙发紧", "intent": "控制", "device": "德尔玛加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "townhouse", "text": "嗓子干得冒烟", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-body", "absent"]}
+{"home": "southyard", "text": "嗓子干得冒烟", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-body", "absent"]}
+{"home": "southyard", "text": "回南天，墙上全是水珠", "intent": "控制", "device": ["客厅除湿机", "储藏室抽湿机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "townhouse", "text": "地下室返潮，墙根都湿了", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "duplex", "text": "二楼走廊墙上冒水珠", "intent": "控制", "device": "二楼除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "countryside", "text": "储物间墙根返潮，粮食都生虫了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-effect", "absent"]}
+{"home": "family3", "text": "脱衣服噼里啪啦全是静电", "intent": "控制", "device": ["主卧加湿器", "儿童房加湿器"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "kids", "text": "婴儿房里抱宝宝一下就起静电", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "apartment", "text": "卧室一碰门把手就被电一下", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "northflat", "text": "主卧脱个毛衣噼里啪啦的", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "duplex", "text": "脱毛衣全是静电，电得手疼", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-body", "absent"]}
+{"home": "northflat", "text": "主卧睡一宿，鼻子里干得出血", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "northflat", "text": "主卧干得嘴唇都裂了", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "northflat", "text": "媳妇说主卧干得睡不着", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-third-party"]}
+{"home": "northflat", "text": "屋里是不是有点……干巴巴的", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-indirect"]}
+{"home": "northflat", "text": "待会儿要睡了，主卧干得嗓子疼", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-upcoming"]}
+{"home": "northflat", "text": "主卧木头柜子干得裂了条缝", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "northflat", "text": "主卧空气干得跟砂纸似的", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-figurative"]}
+{"home": "northflat", "text": "次卧干得跟沙漠似的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-figurative", "absent"]}
+{"home": "elder", "text": "老人房干得皮肤直痒", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "elder", "text": "老人房里一摸东西就打静电", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "elder", "text": "老伴嘴唇又裂口子了", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-third-party"]}
+{"home": "elder", "text": "老人房是不是有点……发干", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-indirect"]}
+{"home": "elder", "text": "次卧衣柜里长霉了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-object", "absent"]}
+{"home": "rental", "text": "我屋干得眼睛发涩", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "rental", "text": "我屋睡一晚，嗓子跟砂纸磨过一样", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-figurative"]}
+{"home": "rental", "text": "我屋那盆绿萝叶子都干尖了", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "brand", "text": "卧室睡一觉，嘴巴干得粘一块儿", "intent": "控制", "device": "德尔玛加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "brand", "text": "摸哪儿都电我一下", "intent": "控制", "device": "德尔玛加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "brand", "text": "卧室干得跟撒哈拉似的", "intent": "控制", "device": "德尔玛加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-figurative"]}
+{"home": "family3", "text": "儿童房太干，孩子一直咳", "intent": "控制", "device": "儿童房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-third-party"]}
+{"home": "family3", "text": "主卧干得嘴唇起皮", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "family3", "text": "儿童房待会儿要哄睡，屋里太干", "intent": "控制", "device": "儿童房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-upcoming"]}
+{"home": "family3", "text": "卫生间墙上全是水珠", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-effect", "absent"]}
+{"home": "kids", "text": "宝宝鼻子干得结痂了", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "kids", "text": "婴儿房湿度才二十几", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "kids", "text": "婴儿房干，娃睡觉老揉鼻子", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "apartment", "text": "温湿度计显示湿度才百分之二十", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "apartment", "text": "卧室干得嗓子疼", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "apartment", "text": "主卧开着暖风空调，脸上紧绷绷的", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "villa", "text": "主卧干得鼻子冒火", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "villa", "text": "地暖开着，嗓子干得难受", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "house", "text": "地暖开着，嗓子干得难受", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-body", "absent"]}
+{"home": "mega", "text": "主卧干得嗓子疼", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-humidity", "cue-body", "absent"]}
+{"home": "townhouse", "text": "负一楼湿乎乎的，纸箱都泡软了", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "townhouse", "text": "地下室酒柜那边墙上冒水珠", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "townhouse", "text": "老公说地下室潮得跟水帘洞似的", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-third-party"]}
+{"home": "townhouse", "text": "回南天了，地下室地面都返潮", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-effect"]}
+{"home": "townhouse", "text": "地下室柜子里的旧书长霉点了", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "townhouse", "text": "地下室潮气重得很，进去一身黏", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-body"]}
+{"home": "townhouse", "text": "负一楼墙角长了一片黑霉", "intent": "控制", "device": "地下室除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "southyard", "text": "客厅地砖湿得打滑", "intent": "控制", "device": "客厅除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-blocked"]}
+{"home": "southyard", "text": "储藏室潮得米都要发霉了", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "southyard", "text": "客厅潮得能拧出水来", "intent": "控制", "device": "客厅除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-figurative"]}
+{"home": "southyard", "text": "老头子说储藏室纸箱都泡软了", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-third-party"]}
+{"home": "southyard", "text": "客厅墙皮都鼓包了，潮的", "intent": "控制", "device": "客厅除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "southyard", "text": "这天屋里湿哒哒的，是不是有点……", "intent": "控制", "device": ["客厅除湿机", "储藏室抽湿机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-indirect"]}
+{"home": "southyard", "text": "储藏室的木箱子长白毛了", "intent": "控制", "device": "储藏室抽湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "duplex", "text": "二楼卧室床上被子潮乎乎的", "intent": "控制", "device": "二楼除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "duplex", "text": "楼上跟泡在水里似的", "intent": "控制", "device": "二楼除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-figurative"]}
+{"home": "duplex", "text": "二楼柜子里的衣服一股潮味", "intent": "控制", "device": "二楼除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-object"]}
+{"home": "duplex", "text": "楼上走廊地板返潮，差点滑一跤", "intent": "控制", "device": "二楼除湿机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-humidity", "cue-blocked"]}
+{"home": "southyard", "text": "广东人都知道回南天有多烦", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "mega", "text": "这件卫衣挺潮的", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "house", "text": "去年回南天衣柜长霉，扔了好几件衣服", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "brand", "text": "我姐家墙都返潮了，愁死她了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "apartment", "text": "加湿器能加精油吗", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "northflat", "text": "我妈说过加湿器别天天开", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "kids", "text": "这面包干得咽不下去", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "elder", "text": "这段相声干巴巴的，一点不好笑", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "townhouse", "text": "上回去北京出差，干得嘴都裂了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "apartment", "text": "客厅现在湿度多少", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "need-contrast"]}
+{"home": "southyard", "text": "客厅除湿机水箱满了没", "intent": "查询", "device": "客厅除湿机", "tags": ["status-query", "need-contrast"]}
+{"home": "northflat", "text": "主卧加湿器里还有水吗", "intent": "查询", "device": "主卧加湿器", "tags": ["status-query", "need-contrast"]}
+{"home": "townhouse", "text": "地下室除湿机在转吗", "intent": "查询", "device": "地下室除湿机", "tags": ["status-query", "need-contrast"]}
+{"home": "family3", "text": "儿童房加湿器开着没", "intent": "查询", "device": "儿童房加湿器", "tags": ["status-query", "need-contrast"]}
+{"home": "family3", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "townhouse", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": ["干衣机", "露台晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "mega", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "northflat", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": "阳台晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "southyard", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": "电动晾衣杆", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "pets", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect", "absent"]}
+{"home": "kids", "text": "宝宝的小衣服还没干透", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-object", "absent"]}
+{"home": "townhouse", "text": "明天要穿的衬衫还潮着", "intent": "控制", "device": ["干衣机", "露台晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "family3", "text": "阳台上孩子明天要穿的校服还没干", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "mega", "text": "阳台上明早要穿的西裤还是潮的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "studio", "text": "明天要穿的T恤还湿着", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming", "absent"]}
+{"home": "townhouse", "text": "要下雨了，露台上还晾着衣服", "intent": "控制", "device": "露台晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "duplex", "text": "要下雨了，露台上还晾着衣服", "intent": "控制", "device": "二楼晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "brand", "text": "要下雨了，阳台上还晾着衣服", "intent": "控制", "device": "好太太晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "apartment", "text": "外头打雷了，阳台衣服还挂着", "intent": "控制", "device": "电动晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "southyard", "text": "外头院里晾的被子要淋雨了", "intent": "控制", "device": "没有对应的设备", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming", "absent"]}
+{"home": "pets", "text": "脏衣篮都冒尖了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "rental", "text": "脏衣篮都冒尖了", "intent": "控制", "device": "公共洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "studio", "text": "脏衣篮都冒尖了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "townhouse", "text": "脏衣篮都冒尖了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "northflat", "text": "脏衣篮都冒尖了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "house", "text": "脏衣篮都冒尖了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object", "absent"]}
+{"home": "townhouse", "text": "地下室刚洗出来的衣服湿哒哒的", "intent": "控制", "device": "干衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "townhouse", "text": "负一楼那筐衣服刚甩干，还潮着", "intent": "控制", "device": "干衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "townhouse", "text": "露台上晾的床单还在滴水", "intent": "控制", "device": "露台晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "townhouse", "text": "晾衣架挂不下了，这一筐还湿着", "intent": "控制", "device": "干衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "townhouse", "text": "连着下雨，衣服都捂出味儿了", "intent": "控制", "device": ["干衣机", "露台晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "townhouse", "text": "三楼露台要晾床单了", "intent": "控制", "device": "露台晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "townhouse", "text": "露台晾衣架太低，走过去老撞头", "intent": "控制", "device": "露台晾衣架", "action": ["调高或增大"], "tags": ["implicit-intent", "need-laundry", "cue-body"]}
+{"home": "townhouse", "text": "孩子踢完球那身泥衣服扔地下室了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "townhouse", "text": "天快黑了，露台上衣服还没收", "intent": "控制", "device": "露台晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "northflat", "text": "阳台晾衣服够不着杆子", "intent": "控制", "device": "阳台晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "northflat", "text": "阳台晾衣架低得我脑袋都撞了", "intent": "控制", "device": "阳台晾衣架", "action": ["调高或增大"], "tags": ["implicit-intent", "need-laundry", "cue-body"]}
+{"home": "northflat", "text": "起风了，阳台上的衣服刮得乱飞", "intent": "控制", "device": "阳台晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "northflat", "text": "阳台上的衣服干透了，收一下", "intent": "控制", "device": "阳台晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "southyard", "text": "阳光房晾的衣服三天了还没干", "intent": "控制", "device": "电动晾衣杆", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "southyard", "text": "回南天衣服根本晾不干", "intent": "控制", "device": "电动晾衣杆", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "southyard", "text": "一会儿要在阳光房晒被子", "intent": "控制", "device": "电动晾衣杆", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "southyard", "text": "阳光房的晾衣杆太矮，脑袋老碰", "intent": "控制", "device": "电动晾衣杆", "action": ["调高或增大"], "tags": ["implicit-intent", "need-laundry", "cue-body"]}
+{"home": "family3", "text": "阳台晾不下了，还有一盆衣服", "intent": "控制", "device": "烘干机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "family3", "text": "孩子说袜子还湿着没法穿", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-third-party"]}
+{"home": "family3", "text": "衣服洗好了，我去阳台晾", "intent": "控制", "device": "电动晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "family3", "text": "阳台衣服挂好了，杆子还在下面挡道", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "family3", "text": "床单该洗了，一股汗味", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "family3", "text": "孩子尿床了，床单湿了一大片", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "mega", "text": "阳台晾衣架挂满了，剩下的咋办", "intent": "控制", "device": "烘干机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "mega", "text": "保姆说床单攒了一堆了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-third-party"]}
+{"home": "mega", "text": "雨飘进阳台了，衣服还挂着", "intent": "控制", "device": "电动晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "mega", "text": "阳台上的衣服半干不干的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "apartment", "text": "阳台洗衣机滴滴响了，该晾衣服了", "intent": "控制", "device": "电动晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "apartment", "text": "阳台的衣服还没干，晚上要穿", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "apartment", "text": "晾衣架挡着阳台门，老碰头", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "apartment", "text": "床单攒了一礼拜没洗了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "brand", "text": "阳台衣服晾两天了还潮乎乎的", "intent": "控制", "device": "好太太晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "brand", "text": "阳台晾衣架太高了，踮脚都够不着", "intent": "控制", "device": "好太太晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "brand", "text": "明天要穿的工服还没洗", "intent": "控制", "device": "小天鹅洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "brand", "text": "阳台衣服晒干了，我去收", "intent": "控制", "device": "好太太晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "duplex", "text": "二楼露台的衣服晾两天了还潮", "intent": "控制", "device": "二楼晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
+{"home": "duplex", "text": "二楼晾的衣服摸着还是潮的", "intent": "控制", "device": "二楼晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "duplex", "text": "媳妇说露台晾衣杆太高够不着", "intent": "控制", "device": "二楼晾衣架", "action": ["调低或减小"], "tags": ["implicit-intent", "need-laundry", "cue-third-party"]}
+{"home": "duplex", "text": "被罩都睡出味儿了", "intent": "控制", "device": "二楼洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "duplex", "text": "老婆说露台衣服干了要收", "intent": "控制", "device": "二楼晾衣架", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-laundry", "cue-third-party"]}
+{"home": "kids", "text": "宝宝吐奶把床单弄脏了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "kids", "text": "娃的口水巾全用完了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "kids", "text": "宝宝的小被子尿湿了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "pets", "text": "狗把沙发垫尿了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "pets", "text": "狗洗完澡浑身湿漉漉的", "intent": "控制", "device": "宠物烘干箱", "action": ["打开或启动"], "tags": ["implicit-intent", "need-garden-pet", "cue-object"]}
+{"home": "studio", "text": "袜子都没有干净的了", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "rental", "text": "这周的衣服还堆着没洗", "intent": "控制", "device": "公共洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "villa", "text": "餐布上全是油，得洗洗", "intent": "控制", "device": "洗衣机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object"]}
+{"home": "villa", "text": "阳台衣服老是晾不干", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-blocked"]}
+{"home": "villa", "text": "阳台衣服还在滴水，一会儿要出门", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"home": "elder", "text": "老人尿床了，床单得洗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object", "absent"]}
+{"home": "office", "text": "毛巾好几天没洗了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object", "absent"]}
+{"home": "countryside", "text": "下地干活一身泥，衣服得洗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-laundry", "cue-object", "absent"]}
+{"home": "house", "text": "衣服还湿着呢，没地方晾", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-blocked", "absent"]}
+{"home": "family3", "text": "我妈说过被子得晒太阳才香", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "mega", "text": "干洗店说西装得放三天", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "townhouse", "text": "小时候下雨天都是满屋子挂衣服", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "northflat", "text": "小时候冬天衣服晾外面冻成冰片", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "apartment", "text": "洗衣机和烘干机哪个牌子好", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "southyard", "text": "邻居家晾衣绳上那件红毛衣真好看", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "duplex", "text": "这件毛衣是不是不能机洗", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "pets", "text": "帮我记一下，周六洗床单", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "kids", "text": "老公，宝宝衣服晾好了没", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "townhouse", "text": "干衣机里那几件衬衫烘好没", "intent": "查询", "device": "干衣机", "tags": ["status-query", "need-contrast"]}
+{"home": "family3", "text": "阳台洗衣机还有多久洗完", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "need-contrast"]}
+{"home": "duplex", "text": "二楼晾衣架现在是升着还是降着", "intent": "查询", "device": "二楼晾衣架", "tags": ["status-query", "need-contrast"]}
+{"home": "mega", "text": "烘干机还剩几分钟", "intent": "查询", "device": "烘干机", "tags": ["status-query", "need-contrast"]}
+{"home": "rental", "text": "公共洗衣机现在有人用吗", "intent": "查询", "device": "公共洗衣机", "tags": ["status-query", "need-contrast"]}
+{"home": "pets", "text": "地上全是猫毛", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "minimal", "text": "地上全是猫毛", "intent": "控制", "device": "扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "office", "text": "地上全是猫毛", "intent": "控制", "device": "扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "duplex", "text": "地上全是猫毛", "intent": "控制", "device": ["一楼扫地机", "二楼扫地机"], "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "northflat", "text": "地上全是猫毛", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"home": "southyard", "text": "狗毛掉得满地都是", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"home": "townhouse", "text": "孩子从玄关踩了一路泥脚印", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "studio", "text": "地上全是泥脚印", "intent": "控制", "device": "扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "duplex", "text": "一楼客厅全是泥脚印", "intent": "控制", "device": "一楼扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "house", "text": "地上全是泥脚印", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-effect", "absent"]}
+{"home": "kids", "text": "宝宝在客厅吃饼干掉了一地渣", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "family3", "text": "客厅沙发底下全是饼干渣", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "brand", "text": "客厅地上都是饼干渣", "intent": "控制", "device": "石头扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "elder", "text": "客厅地上都是饼干渣", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"home": "townhouse", "text": "水池里碗都堆成山了", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "house", "text": "水池里碗都堆成山了", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "duplex", "text": "水池里碗都堆成山了", "intent": "控制", "device": "一楼洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "mega", "text": "水池里碗都堆成山了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"home": "northflat", "text": "水池里碗都堆成山了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"home": "pets", "text": "狗从外面回来，客厅全是泥爪印", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "pets", "text": "卫生间猫砂被刨得满地都是", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "pets", "text": "猫砂盆满了，臭烘烘的", "intent": "控制", "device": "智能猫砂盆", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "pets", "text": "狗掉毛掉得客厅地板都白了", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-figurative"]}
+{"home": "mega", "text": "书房地上一层灰", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "mega", "text": "老婆说客厅地上都是渣", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-third-party"]}
+{"home": "mega", "text": "影音室爆米花撒了一地", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "townhouse", "text": "地下室地上一层灰", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "townhouse", "text": "二楼儿童房地上全是橡皮屑", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "townhouse", "text": "明天来客人，一楼地上还没收拾", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-upcoming"]}
+{"home": "townhouse", "text": "碗我都塞进去了，就等着洗", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "townhouse", "text": "餐厅地上撒了一片米", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "apartment", "text": "光脚在主卧踩了一脚底灰", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-body"]}
+{"home": "apartment", "text": "拖鞋底都粘灰了", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "duplex", "text": "楼上卧室全是头发", "intent": "控制", "device": "二楼扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "duplex", "text": "一楼餐厅地上米粒到处是", "intent": "控制", "device": "一楼扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "duplex", "text": "锅碗瓢盆摞了一灶台", "intent": "控制", "device": "一楼洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-figurative"]}
+{"home": "duplex", "text": "二楼书房地上全是纸屑", "intent": "控制", "device": "二楼扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "rental", "text": "公共客厅地上一堆瓜子壳", "intent": "控制", "device": "公共区扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "rental", "text": "我屋地上全是头发", "intent": "控制", "device": ["公共区扫地机", "没有对应的设备"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"], "note": "扫地机登记在公共区，非全屋；按可移动设备看我屋没有，按扫地机能进各屋看可以派过去，两种都合理"}
+{"home": "rental", "text": "室友说客厅地上黏糊糊的", "intent": "控制", "device": "公共区扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-third-party"]}
+{"home": "office", "text": "工作区地上全是纸屑", "intent": "控制", "device": "扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "minimal", "text": "一会儿朋友要来，客厅地上太埋汰了", "intent": "控制", "device": "扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-upcoming"]}
+{"home": "minimal", "text": "客厅地上踩着沙沙响", "intent": "控制", "device": "扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-body"]}
+{"home": "family3", "text": "孩子说儿童房地上扎脚", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-third-party"]}
+{"home": "family3", "text": "儿童房地上全是彩泥渣", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "kids", "text": "宝宝要在客厅地上爬了，地板还脏着", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-upcoming"]}
+{"home": "kids", "text": "婴儿房地上有头发，宝宝老往嘴里塞", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "kids", "text": "客厅地上全是奶粉沫子", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "studio", "text": "屋里地板脏得跟猪圈似的", "intent": "控制", "device": "扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-figurative"]}
+{"home": "studio", "text": "一会儿要做瑜伽，地上全是头发", "intent": "控制", "device": "扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-upcoming"]}
+{"home": "brand", "text": "这地板是不是有点……不太干净", "intent": "控制", "device": "石头扫地机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-indirect"]}
+{"home": "brand", "text": "卧室床底下全是灰", "intent": "控制", "device": "石头扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "villa", "text": "书房地上脏得没法下脚", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-blocked"]}
+{"home": "villa", "text": "吃完火锅一桌子碗", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"home": "villa", "text": "餐厅地上掉的全是菜叶", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
+{"home": "house", "text": "媳妇说厨房一堆碗没刷", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-third-party"]}
+{"home": "townhouse", "text": "一楼餐厅桌上油乎乎的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"home": "family3", "text": "客厅窗户玻璃脏得看不清外面", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-blocked", "absent"]}
+{"home": "family3", "text": "衣柜里乱七八糟的", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "townhouse", "text": "书架上的书乱成一锅粥", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "kids", "text": "孩子玩具扔了一地", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "office", "text": "桌面上文件堆得乱糟糟", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "apartment", "text": "扫地机一般多久换一次边刷", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "mega", "text": "昨天阿姨把地都拖过了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "house", "text": "这人手脚不干净", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "brand", "text": "老公，把地上的袜子捡一下", "intent": "无关", "tags": ["non-command", "need-contrast"]}
+{"home": "pets", "text": "扫地机扫完客厅没", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "need-contrast"]}
+{"home": "townhouse", "text": "厨房洗碗机里的碗洗完没有", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "need-contrast"]}
+{"home": "duplex", "text": "二楼扫地机现在在哪个屋", "intent": "查询", "device": "二楼扫地机", "tags": ["status-query", "need-contrast"]}
+{"home": "office", "text": "扫地机尘盒满没满", "intent": "查询", "device": "扫地机", "tags": ["status-query", "need-contrast"]}

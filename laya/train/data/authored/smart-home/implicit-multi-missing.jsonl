@@ -43,7 +43,7 @@
 {"home": "house", "text": "冰箱里的肉好像化了", "intent": "控制", "device": "冰箱", "action": ["调低或减小", "打开或启动"], "tags": ["implicit-intent"]}
 {"home": "house", "text": "冷冻室结了好厚的霜", "intent": "控制", "device": "冰箱", "action": "调高或增大", "tags": ["implicit-intent"]}
 {"home": "house", "text": "水池里堆满了碗", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["implicit-intent"]}
-{"home": "house", "text": "想烤个蛋糕", "intent": "控制", "device": "烤箱", "action": "打开或启动", "tags": ["implicit-intent"]}
+{"home": "house", "text": "想烤个蛋糕", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "qa-union"]}
 {"home": "house", "text": "炒菜呛得眼睛睁不开", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "house", "text": "菜都炒完了，厨房还嗡嗡响", "intent": "控制", "device": "油烟机", "action": "关闭或停止", "tags": ["implicit-intent"]}
 {"home": "house", "text": "冬天洗澡脱衣服冷得直哆嗦", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["implicit-intent"]}

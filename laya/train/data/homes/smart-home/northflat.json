@@ -1,0 +1,25 @@
+{
+  "name": "northflat",
+  "description": "北方老小区两居：客厅、主卧、次卧、厨房、卫生间、过道、阳台，19 台设备；集中供暖用暖气温控阀（客厅、主卧各一），次卧只有油汀电暖器，厨房有小厨宝、卫生间有暖风机，没有空调；卧室加湿器、客厅净化器，用来测冬季干冷 / 雾霾和没有空调时的温控设备。",
+  "devices": [
+    {"name": "客厅灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "客厅落地灯", "room": "客厅", "category": "照明", "type": "落地灯"},
+    {"name": "客厅暖气阀", "room": "客厅", "category": "空调温控", "type": "暖气温控阀"},
+    {"name": "客厅净化器", "room": "客厅", "category": "空气环境", "type": "空气净化器"},
+    {"name": "电视", "room": "客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "主卧灯", "room": "主卧", "category": "照明", "type": "吸顶灯"},
+    {"name": "床头灯", "room": "主卧", "category": "照明", "type": "床头灯"},
+    {"name": "主卧暖气阀", "room": "主卧", "category": "空调温控", "type": "暖气温控阀"},
+    {"name": "主卧加湿器", "room": "主卧", "category": "空气环境", "type": "加湿器"},
+    {"name": "次卧灯", "room": "次卧", "category": "照明", "type": "吸顶灯"},
+    {"name": "电暖器", "room": "次卧", "category": "空调温控", "type": "油汀电暖器"},
+    {"name": "厨房灯", "room": "厨房", "category": "照明", "type": "吸顶灯"},
+    {"name": "小厨宝", "room": "厨房", "category": "热水卫浴", "type": "厨下热水器"},
+    {"name": "卫生间暖风机", "room": "卫生间", "category": "热水卫浴", "type": "浴室暖风机"},
+    {"name": "热水器", "room": "卫生间", "category": "热水卫浴", "type": "电热水器"},
+    {"name": "过道灯", "room": "过道", "category": "照明", "type": "感应灯"},
+    {"name": "洗衣机", "room": "阳台", "category": "清洁电器", "type": "洗衣机"},
+    {"name": "阳台晾衣架", "room": "阳台", "category": "窗帘遮阳", "type": "电动晾衣架"},
+    {"name": "门锁", "room": "门口", "category": "安防门禁", "type": "门锁"}
+  ]
+}
