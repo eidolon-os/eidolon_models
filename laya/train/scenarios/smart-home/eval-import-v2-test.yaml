@@ -1,0 +1,8 @@
+# v2 的 test 切分（split.json，按 切片 × 户型 分层、按 id 哈希切 1/3 dev、2/3 test）。
+# dev：误差分析、门槛比较；test：只看汇总数字，不逐条看，完成标准以它为准。
+generators:
+  - kind: import
+    adapter: evals_cases
+    name: locked-v2-test
+    path: ../../../evals/smart-home-v2
+    split: test

@@ -92,6 +92,13 @@ def _import_evals_cases(scenario: Scenario, config: dict) -> Iterable[Record]:
     root = _resolve(scenario, config["path"])
     homes = _load_homes(root / "homes")
     slot = config.get("device_slot", "devices")
+    # ``split``: keep only the ids a split file assigns to this split (dev / test of a locked set)
+    keep_ids = None
+    if config.get("split"):
+        split = json.loads(
+            (root / config.get("split_file", "split.json")).read_text(encoding="utf-8")
+        )
+        keep_ids = set(split[config["split"]])
     files = sorted((root / "scenarios").glob("*/cases.jsonl"))
     if not files:
         raise FileNotFoundError(f"no scenarios/*/cases.jsonl under {root}")
@@ -101,6 +108,8 @@ def _import_evals_cases(scenario: Scenario, config: dict) -> Iterable[Record]:
             if not line.strip():
                 continue
             c = json.loads(line)
+            if keep_ids is not None and c["id"] not in keep_ids:
+                continue
             devices = homes[c["home"]]
             questions = scenario.build_questions({slot: devices})
             labels = {}

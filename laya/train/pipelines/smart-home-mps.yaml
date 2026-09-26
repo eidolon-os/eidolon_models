@@ -62,16 +62,25 @@ steps:
     checkpoint: "{run}/checkpoint"
     calib: "{run}/dataset/calib.jsonl"
 
+  # 开发集（v1 全部 + v2-dev）：误差分析、门槛比较都只看它们
   - stage: eval
     checkpoint: "{run}/checkpoint"
     eval_set:
       - ../scenarios/smart-home/eval/locked-182.jsonl
-      - ../scenarios/smart-home/eval/locked-v2-500.jsonl
+      - ../scenarios/smart-home/eval/locked-v2-dev.jsonl
     out: "{run}/eval"
-    baseline: ../runs/r7/eval               # 当前最好的版本；换版本后改这里
+    baseline: ../runs/r8/eval               # 干净的基线（训练数据已去掉与锁定集的近似重复）
     tolerance: 0.03
     alpha: 0.1                              # 配对符号检验：只拦显著的退步
     continue_on_error: true                 # 门槛不过也照样 package，方便对比；上线前看 gate.json
+
+  # 测试集（v2-test）：只报汇总数字，不做门槛、不逐条看，完成标准以它为准
+  - stage: eval
+    checkpoint: "{run}/checkpoint"
+    eval_set:
+      - ../scenarios/smart-home/eval/locked-v2-test.jsonl
+    out: "{run}/eval-test"
+    no_rows: true
 
   # 打包成 models/<name>/<rev>/：之后 eidolon-laya serve / export-onnx / doctor 都直接认它，
   # evals/smart-home/run_all.sh 也能用 MODEL_DIR= 指向它打服务。

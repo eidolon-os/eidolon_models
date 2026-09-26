@@ -151,6 +151,12 @@ def cmd_eval(args) -> int:
         name = Path(path).stem
         write_report(report, out_dir / f"{name}.json", keep_rows=not args.no_rows)
         _log(f"{name}: {json.dumps(report['overall'], ensure_ascii=False)}")
+        d = report["decision"]
+        _log(
+            f"  control e2e {d['control_e2e']['acc']} {d['control_e2e']['ci95']} | auto-execute@{d['auto_execute']['threshold']}"
+            f" precision {d['auto_execute']['precision']} {d['auto_execute']['ci95']} coverage {d['auto_execute']['coverage']}"
+            f" | false trigger 无关 {d['false_trigger_无关']['rate']} 查询 {d['false_trigger_查询']['rate']}"
+        )
         for scn, agg in report["by_scenario"].items():
             _log(f"  {scn}: acc {agg['acc']} ece {agg['ece']} n {agg['n']}")
         if args.baseline and not (Path(args.baseline) / f"{name}.json").exists():
@@ -207,7 +213,23 @@ def cmd_run(args) -> int:
     run_id = args.run_id or time.strftime("%Y%m%dT%H%M%S")
     run_dir = (base / pipeline.get("runs_dir", "../runs")).resolve() / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
-    manifest = {"pipeline": str(args.pipeline), "run_id": run_id, "steps": []}
+
+    def _git(*a: str) -> str:
+        try:
+            return subprocess.check_output(
+                ["git", *a], cwd=base, text=True, stderr=subprocess.DEVNULL
+            ).strip()
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            return ""
+
+    manifest = {
+        "pipeline": str(args.pipeline),
+        "run_id": run_id,
+        "git_commit": _git("rev-parse", "HEAD"),
+        "git_dirty": bool(_git("status", "--porcelain", "--", ".")),
+        "started": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "steps": [],
+    }
     _log(f"run {run_id} -> {run_dir}")
     for step in pipeline["steps"]:
         stage = step["stage"]

@@ -31,6 +31,16 @@ from pathlib import Path
 from .records import Record, read_jsonl, stable_hash, write_jsonl
 
 
+def stable_file_hash(path: Path) -> str:
+    import hashlib
+
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for block in iter(lambda: fh.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
 def _state_key(r: Record) -> str:
     return stable_hash(json.dumps(r.state, ensure_ascii=False, sort_keys=True))
 
@@ -151,6 +161,10 @@ def assemble(config: dict, out_dir: Path, base: Path) -> dict:
         "counts": counts,
         "unique": len(kept),
         "per_source": dict(per_source),
+        "source_sha256": {
+            str((base / src["path"]).resolve()): stable_file_hash((base / src["path"]).resolve())
+            for src in config["sources"]
+        },
         "dropped": dict(dropped),
         "by_scenario": dict(Counter(r.scenario for r in kept.values())),
         "by_qtype": dict(Counter(q["type"] for r in kept.values() for q in r.questions.values())),

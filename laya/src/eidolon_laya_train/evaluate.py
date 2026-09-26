@@ -88,6 +88,70 @@ def _agg(rows: list[dict]) -> dict:
     return out
 
 
+def _bootstrap_ci(values: list[float], n: int = 1000, seed: int = 7) -> list[float]:
+    """95% percentile bootstrap interval of the mean (resampling units, not questions)."""
+    if not values:
+        return [None, None]
+    rng = np.random.default_rng(seed)
+    arr = np.asarray(values, dtype=float)
+    means = arr[rng.integers(0, len(arr), size=(n, len(arr)))].mean(axis=1)
+    return [round(float(np.percentile(means, 2.5)), 4), round(float(np.percentile(means, 97.5)), 4)]
+
+
+def decision_metrics(rows: list[dict], threshold: float = 0.9) -> dict:
+    """Record-level numbers that decide whether the model may act on its own.
+
+    - ``control_e2e``: gold-控制 records with every scored question right.
+    - ``auto_execute``: the record the model would execute without asking — intent predicted
+      控制 and every question's top probability ≥ ``threshold``. ``precision`` = all its answers
+      right; ``coverage`` = share of gold-控制 records executed this way.
+    - ``false_trigger``: gold 无关 (and gold 查询) records predicted 控制.
+    Intervals are 95% bootstrap over records.
+    """
+    by: dict[str, dict] = defaultdict(dict)
+    for r in rows:
+        by[r["record_id"]][r["qid"]] = r
+    recs = [q for q in by.values() if "intent" in q]
+    gold_ctrl = [q for q in recs if q["intent"]["gold"] == ["控制"]]
+    e2e = [float(all(x["correct"] for x in q.values())) for q in gold_ctrl]
+    auto = [
+        q
+        for q in recs
+        if q["intent"]["pred"] == "控制" and min(x["p_top"] for x in q.values()) >= threshold
+    ]
+    auto_ok = [float(all(x["correct"] for x in q.values())) for q in auto]
+    auto_ctrl = [q for q in auto if q["intent"]["gold"] == ["控制"]]
+    out = {
+        "records": len(recs),
+        "control_e2e": {
+            "n": len(gold_ctrl),
+            "acc": round(float(np.mean(e2e)), 4) if e2e else None,
+            "ci95": _bootstrap_ci(e2e),
+        },
+        "auto_execute": {
+            "threshold": threshold,
+            "n": len(auto),
+            "precision": round(float(np.mean(auto_ok)), 4) if auto_ok else None,
+            "ci95": _bootstrap_ci(auto_ok),
+            "coverage": round(len(auto_ctrl) / len(gold_ctrl), 4) if gold_ctrl else None,
+            "wrong": [
+                next(iter(q.values()))["record_id"]
+                for q in auto
+                if not all(x["correct"] for x in q.values())
+            ],
+        },
+    }
+    for g in ("无关", "查询"):
+        gold = [q for q in recs if q["intent"]["gold"] == [g]]
+        ft = [float(q["intent"]["pred"] == "控制") for q in gold]
+        out[f"false_trigger_{g}"] = {
+            "n": len(gold),
+            "rate": round(float(np.mean(ft)), 4) if ft else None,
+            "ci95": _bootstrap_ci(ft),
+        }
+    return out
+
+
 def evaluate(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> dict:
     records = list(read_jsonl(eval_path))
     rows = score_records(loaded, records, batch_size)
@@ -103,10 +167,18 @@ def evaluate(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> dict:
         by_qid[f"{r['scenario']}/{r['qid']}"].append(r)
         for t in r["tags"]:
             by_tag[t].append(r)
+    by_record: dict[str, list[float]] = defaultdict(list)
+    for r in rows:
+        by_record[r["record_id"]].append(float(r["correct"]))
+    overall = _agg(rows)
+    overall["ci95"] = _bootstrap_ci(
+        [float(np.mean(v)) for v in by_record.values()]
+    )  # record-level resampling
     return {
         "eval_set": str(eval_path),
         "n_records": len(records),
-        "overall": _agg(rows),
+        "overall": overall,
+        "decision": decision_metrics(rows),
         "by_scenario": {k: _agg(v) for k, v in sorted(by_scn.items())},
         "by_qtype": {k: _agg(v) for k, v in sorted(by_qt.items())},
         "by_question": {k: _agg(v) for k, v in sorted(by_qid.items())},
