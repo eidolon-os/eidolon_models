@@ -1,0 +1,180 @@
+{"id": "A-001", "home": "threegen", "text": "老头子，你小点声，豆豆还睡着呢", "gold": {"intent": "无关"}}
+{"id": "A-002", "home": "threegen", "text": "天还没亮透呢，灯先不开了", "gold": {"intent": "无关"}}
+{"id": "A-003", "home": "threegen", "text": "小易，老人房灯开一下，我找找袜子", "gold": {"intent": "控制", "device": "老人房灯", "action": "打开或启动"}}
+{"id": "A-004", "home": "threegen", "text": "你开灯找呗，摸黑再给绊一跤", "gold": {"intent": "无关"}}
+{"id": "A-005", "home": "threegen", "text": "我出去溜达一圈，门你别反锁啊", "gold": {"intent": "无关"}, "note": "对老伴说的，出门的只是老人一个、家里还有人，不是离家场景；与第 8 节'我出门了→场景'的界线待裁决"}
+{"id": "A-006", "home": "threegen", "text": "你爸非说门口那摄像头是在偷拍他，哈哈", "gold": {"intent": "无关"}}
+{"id": "A-007", "home": "threegen", "text": "小易，电饭煲那锅粥煮好了没", "gold": {"intent": "查询", "device": "电饭煲"}}
+{"id": "A-008", "home": "threegen", "text": "妈，电饭煲您帮我盯着点，粥好了就拔了", "gold": {"intent": "无关"}}
+{"id": "A-009", "home": "threegen", "text": "电蒸箱蒸包子，二十分钟", "gold": {"intent": "控制", "device": "电蒸箱", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "A-010", "home": "threegen", "text": "老公，蒸箱里的包子你端出来，小心烫", "gold": {"intent": "无关"}}
+{"id": "A-011", "home": "threegen", "text": "豆豆起床了！再不起我可开灯了啊", "gold": {"intent": "无关"}}
+{"id": "A-012", "home": "threegen", "text": "不要开灯嘛，刺眼睛", "gold": {"intent": "无关"}, "note": "孩子对妈妈说；灯还没开，否定不改变设备"}
+{"id": "A-013", "home": "threegen", "text": "儿童房墙角又返潮了，一股霉味儿", "gold": {"intent": "控制", "device": ["除湿机", "儿童房空调"], "action": ["打开或启动", "设为指定的数值或模式", "调高或增大"]}, "note": "除湿机就在儿童房；空调除湿模式也能解决，按第 7 节几台都可能解决取并集", "adjudicated": ["device: union with second annotator", "action: union with second annotator"]}
+{"id": "A-014", "home": "threegen", "text": "客厅电视吵死了，吃口饭都不清静", "gold": {"intent": "控制", "device": "客厅电视", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "A-015", "home": "threegen", "text": "老头子，电视声儿调小点，别震着孩子", "gold": {"intent": "无关"}}
+{"id": "A-016", "home": "threegen", "text": "净水器绿芯还能用多久", "gold": {"intent": "查询", "device": "净水器"}, "note": "绿芯是滤芯的 ASR 错字"}
+{"id": "A-017", "home": "threegen", "text": "净水器滤芯上礼拜刚换的，别又下单了", "gold": {"intent": "无关"}}
+{"id": "A-018", "home": "threegen", "text": "豆豆，鞋穿好，爸爸去开车", "gold": {"intent": "无关"}}
+{"id": "A-019", "home": "threegen", "text": "爸妈，我送豆豆上学去了，中午不回来吃", "gold": {"intent": "无关"}, "note": "对老人告别，老人在家，不是离家场景；与第 8 节'我出门了→场景'的界线待裁决"}
+{"id": "A-020", "home": "threegen", "text": "门反锁一下，我们走了", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}}
+{"id": "A-021", "home": "threegen", "text": "书房空调开到二十六度，我十点要开个视频会，别弄得一身汗", "gold": {"intent": "控制", "device": "书房空调", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "A-022", "home": "threegen", "text": "我这边先把屏幕共享打开，大家看一下", "gold": {"intent": "无关"}}
+{"id": "A-023", "home": "threegen", "text": "这个需求下周能关掉吗？测试那边怎么说", "gold": {"intent": "无关"}}
+{"id": "A-024", "home": "threegen", "text": "台灯晃得屏幕上全是反光", "gold": {"intent": "控制", "device": "书房台灯", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "A-025", "home": "threegen", "text": "你那边声音太小了，能不能大点声", "gold": {"intent": "无关"}}
+{"id": "A-026", "home": "threegen", "text": "你开会呢？那我把电视关小点", "gold": {"intent": "无关"}}
+{"id": "A-027", "home": "threegen", "text": "老人房电视换到戏曲频道", "gold": {"intent": "控制", "device": "老人房电视", "action": "设为指定的数值或模式"}}
+{"id": "A-028", "home": "threegen", "text": "老太婆，给我开下门，钥匙落屋里了", "gold": {"intent": "无关"}}
+{"id": "A-029", "home": "threegen", "text": "小易，把门打开，老头子没带钥匙", "gold": {"intent": "控制", "device": "智能门锁", "action": "打开或启动"}}
+{"id": "A-030", "home": "threegen", "text": "一身汗，我冲个澡去", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "A-031", "home": "threegen", "text": "热水器我早上开过了，你直接洗就行", "gold": {"intent": "无关"}}
+{"id": "A-032", "home": "threegen", "text": "床单被罩都扔洗衣机里，下午我洗", "gold": {"intent": "无关"}}
+{"id": "A-033", "home": "threegen", "text": "这洗衣机按钮一大排，我老记不住哪个是哪个", "gold": {"intent": "无关"}}
+{"id": "A-034", "home": "threegen", "text": "洗完了让烘干机接着烘", "gold": {"intent": "控制", "device": "烘干机", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "A-035", "home": "threegen", "text": "烘干机多费电啊，晒晒太阳多好", "gold": {"intent": "无关"}}
+{"id": "A-036", "home": "threegen", "text": "晾衣架降下来，我晾床单", "gold": {"intent": "控制", "device": "晾衣架", "action": "调低或减小"}}
+{"id": "A-037", "home": "threegen", "text": "你够不着就把晾衣架降下来嘛，费那劲", "gold": {"intent": "无关"}}
+{"id": "A-038", "home": "threegen", "text": "洗衣机响了，老头子你去晾一下", "gold": {"intent": "无关"}}
+{"id": "A-039", "home": "threegen", "text": "挺好的挺好的，你别操心，我跟你爸天天就是做做饭、看看电视", "gold": {"intent": "无关"}}
+{"id": "A-040", "home": "threegen", "text": "蒸箱还剩几分钟", "gold": {"intent": "查询", "device": "电蒸箱"}}
+{"id": "A-041", "home": "threegen", "text": "蒸箱里的鱼你别动，还差一会儿", "gold": {"intent": "无关"}}
+{"id": "A-042", "home": "threegen", "text": "冰箱冷冻那层现在几度", "gold": {"intent": "查询", "device": "没有对应的设备"}, "note": "threegen 没有登记冰箱"}
+{"id": "A-043", "home": "threegen", "text": "窗帘拉上，我眯一会儿", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "关闭或停止"}, "note": "threegen 没有登记窗帘；挡日光的需求灯解决不了，按第 8 节'点名设备不在清单'→ 没有"}
+{"id": "A-044", "home": "threegen", "text": "你别把空调开那么低，睡醒了又喊腿疼", "gold": {"intent": "无关"}}
+{"id": "A-045", "home": "threegen", "text": "我午睡一会儿，主卧空调一个钟头后关", "gold": {"intent": "控制", "device": "主卧空调", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "A-046", "home": "threegen", "text": "老人房冷飕飕的，我妈膝盖受不住", "gold": {"intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式", "关闭或停止"]}, "note": "转述老人当前的冷 → 控制；午睡时空调可能正在制冷，关掉也合理，故在冷类默认列表上加关闭或停止", "adjudicated": ["action: union with second annotator"]}
+{"id": "A-047", "home": "threegen", "text": "提醒我三点起来，别睡过了", "gold": {"intent": "无关"}}
+{"id": "A-048", "home": "threegen", "text": "有人按门铃，看看门口是谁", "gold": {"intent": "查询", "device": "门口摄像头"}}
+{"id": "A-049", "home": "threegen", "text": "您好，快递，麻烦开一下门", "gold": {"intent": "无关"}}
+{"id": "A-050", "home": "threegen", "text": "小易，开门吧，是燃气公司来安检的", "gold": {"intent": "控制", "device": "智能门锁", "action": "打开或启动"}}
+{"id": "A-051", "home": "threegen", "text": "我按一下报警器测试，会响一声，您别害怕", "gold": {"intent": "无关"}}
+{"id": "A-052", "home": "threegen", "text": "阿姨，您家热水器用了几年了？", "gold": {"intent": "无关"}}
+{"id": "A-053", "home": "threegen", "text": "燃气报警器别叫了，人家在测试", "gold": {"intent": "控制", "device": "燃气报警器", "action": ["设为指定的数值或模式", "关闭或停止"]}, "note": "让报警器静音是停掉一个功能而非整台设备（第 7 节），取并集"}
+{"id": "A-054", "home": "threegen", "text": "燃气报警器最近报过警没有", "gold": {"intent": "查询", "device": "燃气报警器"}}
+{"id": "A-055", "home": "threegen", "text": "奶奶，我回来啦！今天老师表扬我了", "gold": {"intent": "无关"}, "note": "孩子对奶奶的回家问候，不是对助手宣布回家；与第 8 节'我回来了→场景'的界线待裁决"}
+{"id": "A-056", "home": "threegen", "text": "奶奶我能看会儿电视吗？就一会儿", "gold": {"intent": "无关"}}
+{"id": "A-057", "home": "threegen", "text": "先写作业，写完了再开电视", "gold": {"intent": "无关"}}
+{"id": "A-058", "home": "threegen", "text": "儿童房好热啊，汗都出来了", "gold": {"intent": "控制", "device": "儿童房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "A-059", "home": "threegen", "text": "热就把空调打开嘛，遥控器在桌上", "gold": {"intent": "无关"}}
+{"id": "A-060", "home": "threegen", "text": "第三题：房间里有八盏灯，小明关掉了三盏，还剩几盏亮着？", "gold": {"intent": "无关"}}
+{"id": "A-061", "home": "threegen", "text": "去书房写，那儿台灯亮，别趴饭桌上", "gold": {"intent": "无关"}}
+{"id": "A-062", "home": "threegen", "text": "小易，今天星期几呀", "gold": {"intent": "无关"}}
+{"id": "A-063", "home": "threegen", "text": "小易，我回来了", "gold": {"intent": "控制", "device": "多个设备或整屋"}, "note": "叫了助手宣布回家 → 场景（第 8 节）；老人在家，但句子是对助手说的"}
+{"id": "A-064", "home": "threegen", "text": "妈，电饭煲里还是早上剩的粥吧", "gold": {"intent": "无关"}}
+{"id": "A-065", "home": "threegen", "text": "厨房黑乎乎的，菜都切不清", "gold": {"intent": "控制", "device": "没有对应的设备"}, "note": "厨房没有灯（第 3 节房间词）"}
+{"id": "A-066", "home": "threegen", "text": "厨房一股煤气味儿", "gold": {"intent": "控制", "device": "没有对应的设备"}, "note": "只有燃气报警器、没有燃气阀门 → 没有对应的设备（第 8 节燃气味）"}
+{"id": "A-067", "home": "threegen", "text": "餐厅灯开开，黑灯瞎火的吃什么饭", "gold": {"intent": "控制", "device": "餐厅灯", "action": "打开或启动"}}
+{"id": "A-068", "home": "threegen", "text": "豆豆，去把餐厅灯打开，喊爷爷吃饭", "gold": {"intent": "无关"}}
+{"id": "A-069", "home": "threegen", "text": "今天这鱼蒸得正好，这蒸箱没白买", "gold": {"intent": "无关"}}
+{"id": "A-070", "home": "threegen", "text": "豆豆，吃饭不许看电视，关了", "gold": {"intent": "无关"}}
+{"id": "A-071", "home": "threegen", "text": "现在打开手机，扫描屏幕下方的二维码", "gold": {"intent": "无关"}}
+{"id": "A-072", "home": "threegen", "text": "今晚最低气温十六度，请关好门窗", "gold": {"intent": "无关"}}
+{"id": "A-073", "home": "threegen", "text": "客厅灯这么亮，电视上一片反光", "gold": {"intent": "控制", "device": "客厅吊灯", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "A-074", "home": "threegen", "text": "电视小点声，豆豆要睡了", "gold": {"intent": "控制", "device": ["客厅电视", "老人房电视"], "action": "调低或减小"}, "note": "没说哪台电视"}
+{"id": "A-075", "home": "threegen", "text": "妈妈，水好烫，我不要洗了", "gold": {"intent": "无关"}, "note": "孩子直接对妈妈说、且说不洗了；与第 2 节'转述家人当前抱怨→控制'的界线待裁决"}
+{"id": "A-076", "home": "threegen", "text": "讲完这个故事就关灯睡觉，拉钩", "gold": {"intent": "无关"}}
+{"id": "A-077", "home": "threegen", "text": "小兔子关上灯，悄悄钻进了被窝", "gold": {"intent": "无关"}}
+{"id": "A-078", "home": "threegen", "text": "儿童房灯关了吧，他睡着了", "gold": {"intent": "控制", "device": "儿童房灯", "action": "关闭或停止"}}
+{"id": "A-079", "home": "threegen", "text": "门锁好了吧？", "gold": {"intent": "查询", "device": "智能门锁"}}
+{"id": "A-080", "home": "threegen", "text": "大门我睡前就反锁了，你别老爬起来看", "gold": {"intent": "无关"}}
+{"id": "A-081", "home": "threegen", "text": "你那电视又开着就睡着了，我给你关了啊", "gold": {"intent": "无关"}}
+{"id": "A-082", "home": "threegen", "text": "小易，晚安", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "A-083", "home": "threegen", "text": "晚安老太婆，明早别喊我起来遛弯", "gold": {"intent": "无关"}, "note": "对老伴道晚安，不是对助手；与'晚安→场景'的界线待裁决"}
+{"id": "A-084", "home": "threegen", "text": "走廊灯别关，豆豆半夜要起来尿尿", "gold": {"intent": "无关"}}
+{"id": "A-085", "home": "threegen", "text": "妈妈，我做噩梦了", "gold": {"intent": "无关"}}
+{"id": "A-086", "home": "threegen", "text": "不怕不怕，妈妈把灯开着陪你", "gold": {"intent": "无关"}}
+{"id": "A-087", "home": "threegen", "text": "儿童房空调是不是还开着", "gold": {"intent": "查询", "device": "儿童房空调"}}
+{"id": "A-088", "home": "threegen", "text": "儿童房有点凉，孩子老踢被子", "gold": {"intent": "控制", "device": "儿童房空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式", "关闭或停止"]}, "note": "冷类默认列表；夜里空调可能正在制冷，关掉也合理", "adjudicated": ["action: union with second annotator"]}
+{"id": "A-089", "home": "threegen", "text": "老婆，我擦吊灯呢，你可别碰开关", "gold": {"intent": "无关"}}
+{"id": "A-090", "home": "threegen", "text": "除湿机水箱满了没", "gold": {"intent": "查询", "device": "除湿机"}}
+{"id": "A-091", "home": "threegen", "text": "除湿机的水你倒一下，满了它就停了", "gold": {"intent": "无关"}}
+{"id": "A-092", "home": "threegen", "text": "哎哟你们家这门锁还能刷脸呢", "gold": {"intent": "无关"}}
+{"id": "A-093", "home": "threegen", "text": "舅妈，我能开你们家电视吗", "gold": {"intent": "无关"}}
+{"id": "A-094", "home": "threegen", "text": "一屋子人，客厅热得慌", "gold": {"intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "A-095", "home": "threegen", "text": "姐，开着空调呢，别让孩子光着膀子对着吹", "gold": {"intent": "无关"}}
+{"id": "A-096", "home": "threegen", "text": "放鞭炮去喽！门别关，一会儿就回来", "gold": {"intent": "无关"}}
+{"id": "A-097", "home": "threegen", "text": "全家明早六点的飞机去三亚，走之前热水器、空调都给关了吧", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "设为指定的数值或模式"]}, "adjudicated": ["action: union with second annotator"]}
+{"id": "A-098", "home": "threegen", "text": "门口摄像头可别关，出门在外我还得看家呢", "gold": {"intent": "无关"}}
+{"id": "A-099", "home": "threegen", "text": "我们不在这几天，门口摄像头拍到有人来过吗", "gold": {"intent": "查询", "device": "门口摄像头"}}
+{"id": "A-100", "home": "smallflat", "text": "再睡五分钟……就五分钟", "gold": {"intent": "无关"}}
+{"id": "A-101", "home": "smallflat", "text": "起床了起床了，窗帘我给你拉开了啊", "gold": {"intent": "无关"}}
+{"id": "A-102", "home": "smallflat", "text": "别拉窗帘，我再眯会儿", "gold": {"intent": "无关"}}
+{"id": "A-103", "home": "smallflat", "text": "窗帘拉开一半就行，太阳太晃了", "gold": {"intent": "控制", "device": "窗帘", "action": ["设为指定的数值或模式", "打开或启动", "关闭或停止"]}, "adjudicated": ["action: union with second annotator"]}
+{"id": "A-104", "home": "smallflat", "text": "镜子前面太暗了，眉毛都画歪了", "gold": {"intent": "控制", "device": ["卧室灯", "客厅灯", "窗帘"], "action": ["打开或启动", "调高或增大"]}, "note": "没说房间，两盏灯都可能；早上拉开窗帘也能解决暗"}
+{"id": "A-105", "home": "smallflat", "text": "热水器烧好了没", "gold": {"intent": "查询", "device": "热水器"}}
+{"id": "A-106", "home": "smallflat", "text": "昨晚我洗完就把热水器关了，你得等会儿", "gold": {"intent": "无关"}}
+{"id": "A-107", "home": "smallflat", "text": "烧壶水，泡个咖啡", "gold": {"intent": "控制", "device": "烧水壶插座", "action": "打开或启动"}}
+{"id": "A-108", "home": "smallflat", "text": "你去烧壶水，顺便把猫粮加上", "gold": {"intent": "无关"}}
+{"id": "A-109", "home": "smallflat", "text": "凯，冰箱里还有鸡蛋没", "gold": {"intent": "无关"}}
+{"id": "A-110", "home": "smallflat", "text": "我走了啊，晚饭想吃啥你微信告诉我", "gold": {"intent": "无关"}, "note": "对留在家的女友告别，不是离家场景；与第 8 节'我出门了→场景'的界线待裁决"}
+{"id": "A-111", "home": "smallflat", "text": "门帮我锁一下，他又没带上", "gold": {"intent": "控制", "device": "门锁", "action": "上锁"}}
+{"id": "A-112", "home": "smallflat", "text": "我这边网卡了，我先把摄像头关了", "gold": {"intent": "无关"}}
+{"id": "A-113", "home": "smallflat", "text": "大家能听见吗？我开一下麦", "gold": {"intent": "无关"}}
+{"id": "A-114", "home": "smallflat", "text": "这个开关默认是关的，得手动打开", "gold": {"intent": "无关"}}
+{"id": "A-115", "home": "smallflat", "text": "卧室热得我脑子都转不动了", "gold": {"intent": "控制", "device": "空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "A-116", "home": "smallflat", "text": "客厅跟蒸笼似的", "gold": {"intent": "控制", "device": "没有对应的设备"}, "note": "空调登记在卧室，客厅没有能降温的设备（第 3 节隐含意图带房间词）"}
+{"id": "A-117", "home": "smallflat", "text": "妈，我们这空调老得很，开了跟没开一样", "gold": {"intent": "无关"}}
+{"id": "A-118", "home": "smallflat", "text": "王阿姨，热水器又不出热水了，我早上洗一半冻得够呛，您赶紧找人来看看吧", "gold": {"intent": "无关"}}
+{"id": "A-119", "home": "smallflat", "text": "小雨啊，你先把热水器电源拔了，别漏电", "gold": {"intent": "无关"}, "note": "房东电话外放，对住户说的"}
+{"id": "A-120", "home": "smallflat", "text": "房东说热水器先别用了，等师傅来", "gold": {"intent": "无关"}}
+{"id": "A-121", "home": "smallflat", "text": "小易，那先把热水器关了", "gold": {"intent": "控制", "device": "热水器", "action": "关闭或停止"}}
+{"id": "A-122", "home": "smallflat", "text": "修热水器的师傅到了，帮他把门开一下", "gold": {"intent": "控制", "device": "门锁", "action": "打开或启动"}}
+{"id": "A-123", "home": "smallflat", "text": "小姑娘，你把门打开，我搬梯子进来", "gold": {"intent": "无关"}}
+{"id": "A-124", "home": "smallflat", "text": "你这热水器内胆都结构了，得换个新的", "gold": {"intent": "无关"}, "note": "结构是结垢的 ASR 错字"}
+{"id": "A-125", "home": "smallflat", "text": "热水器温度别调太高，六十度就够用了", "gold": {"intent": "无关"}, "note": "维修师傅的建议，第三方建议单独转述 → 无关；带数值但不是参数"}
+{"id": "A-126", "home": "smallflat", "text": "热水器温度设成六十", "gold": {"intent": "控制", "device": "热水器", "action": "设为指定的数值或模式"}}
+{"id": "A-127", "home": "smallflat", "text": "冰箱开个素冻，刚买了两斤排骨", "gold": {"intent": "控制", "device": "冰箱", "action": ["打开或启动", "设为指定的数值或模式"]}, "note": "素冻是速冻的 ASR 错字"}
+{"id": "A-128", "home": "smallflat", "text": "冰箱现在冷藏几度", "gold": {"intent": "查询", "device": "冰箱"}}
+{"id": "A-129", "home": "smallflat", "text": "煤球！别扒冰箱门！", "gold": {"intent": "无关"}}
+{"id": "A-130", "home": "smallflat", "text": "煤球又爬窗帘了，窗帘都被抓烂了", "gold": {"intent": "无关"}}
+{"id": "A-131", "home": "smallflat", "text": "有点困，窗帘拉上，我睡二十分钟", "gold": {"intent": "控制", "device": "窗帘", "action": "关闭或停止"}}
+{"id": "A-132", "home": "smallflat", "text": "太阳正对着床照，被子都晒得烫手", "gold": {"intent": "控制", "device": "窗帘", "action": "关闭或停止"}}
+{"id": "A-133", "home": "smallflat", "text": "这窗帘电机又卡住了，拉到一半就不动", "gold": {"intent": "无关"}, "note": "陈述故障，不是要求继续拉开"}
+{"id": "A-134", "home": "smallflat", "text": "门外好像有人在转悠", "gold": {"intent": "查询", "device": "没有对应的设备"}, "note": "想知道门外情况 → 查询（第 8 节）；smallflat 没有摄像头 / 可视门铃，门锁看不到门外"}
+{"id": "A-135", "home": "smallflat", "text": "宝，我回来了，给你带了奶茶", "gold": {"intent": "无关"}, "note": "对在家的女友说的回家问候；与第 8 节'我回来了→场景'的界线待裁决"}
+{"id": "A-136", "home": "smallflat", "text": "小易，我回来了，开下客厅灯", "gold": {"intent": "控制", "device": "客厅灯", "action": "打开或启动"}}
+{"id": "A-137", "home": "smallflat", "text": "这灯怎么一闪一闪的，是不是灯管要换了", "gold": {"intent": "无关"}}
+{"id": "A-138", "home": "smallflat", "text": "厨房那灯泡早坏了，跟房东说了也不管", "gold": {"intent": "无关"}}
+{"id": "A-139", "home": "smallflat", "text": "烧水壶那个插座还通着电吗", "gold": {"intent": "查询", "device": "烧水壶插座"}}
+{"id": "A-140", "home": "smallflat", "text": "水开了，插座断了吧", "gold": {"intent": "控制", "device": "烧水壶插座", "action": "关闭或停止"}}
+{"id": "A-141", "home": "smallflat", "text": "你别老开着冰箱门找吃的", "gold": {"intent": "无关"}}
+{"id": "A-142", "home": "smallflat", "text": "好，接下来把火关小，盖上锅盖焖二十分钟", "gold": {"intent": "无关"}}
+{"id": "A-143", "home": "smallflat", "text": "电视打开，接着放昨天那个综艺", "gold": {"intent": "控制", "device": "电视", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "A-144", "home": "smallflat", "text": "打开冰箱，拿出一瓶冰爽可乐", "gold": {"intent": "无关"}}
+{"id": "A-145", "home": "smallflat", "text": "你把门锁上，今天谁也别想走！", "gold": {"intent": "无关"}}
+{"id": "A-146", "home": "smallflat", "text": "声音大点，听不清他们说啥", "gold": {"intent": "控制", "device": "电视", "action": "调高或增大"}}
+{"id": "A-147", "home": "smallflat", "text": "关掉手机，多陪陪家人吧", "gold": {"intent": "无关"}}
+{"id": "A-148", "home": "smallflat", "text": "电视先静音，我接个电话", "gold": {"intent": "控制", "device": "电视", "action": ["设为指定的数值或模式", "调低或减小", "关闭或停止"]}, "note": "静音按停掉功能 / 调到最低读，取并集", "adjudicated": ["action: union with second annotator"]}
+{"id": "A-149", "home": "smallflat", "text": "喂妈，在看电视呢，空调开着不热", "gold": {"intent": "无关"}}
+{"id": "A-150", "home": "smallflat", "text": "凯，看完这集就关电视睡觉啊，明天还上班", "gold": {"intent": "无关"}}
+{"id": "A-151", "home": "smallflat", "text": "这集放完就把电视关了", "gold": {"intent": "控制", "device": "电视", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "A-152", "home": "smallflat", "text": "洗衣机里的衣服洗好了吗", "gold": {"intent": "查询", "device": "洗衣机"}}
+{"id": "A-153", "home": "smallflat", "text": "你那件毛衣别扔洗衣机，会缩水", "gold": {"intent": "无关"}}
+{"id": "A-154", "home": "smallflat", "text": "脏衣服攒了一大筐了", "gold": {"intent": "控制", "device": "洗衣机", "action": "打开或启动"}, "note": "需要设备做的家务 → 隐含意图（第 8 节收拾类的反面）；衣服是否已放进洗衣机从句子看不出"}
+{"id": "A-155", "home": "smallflat", "text": "我先去冲个澡啊", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "A-156", "home": "smallflat", "text": "我刚把热水器打开了，等二十分钟再洗", "gold": {"intent": "无关"}}
+{"id": "A-157", "home": "smallflat", "text": "洗完澡出来冷得直哆嗦", "gold": {"intent": "控制", "device": ["没有对应的设备", "空调"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}, "note": "洗澡语境 = 浴室（第 8 节），浴室没有浴霸 / 暖风机；空调在卧室", "adjudicated": ["双标分歧：已出浴室，卧室空调也能解决 → 并集"]}
+{"id": "A-158", "home": "smallflat", "text": "咋又跳闸了，热水器跟空调不能一块儿开", "gold": {"intent": "无关"}}
+{"id": "A-159", "home": "smallflat", "text": "谁让你把空调遥控器藏起来的", "gold": {"intent": "无关"}}
+{"id": "A-160", "home": "smallflat", "text": "小易，门锁上了吗", "gold": {"intent": "查询", "device": "门锁"}}
+{"id": "A-161", "home": "smallflat", "text": "宝，你进门的时候门锁了吧？", "gold": {"intent": "无关"}}
+{"id": "A-162", "home": "smallflat", "text": "客厅灯关了没？懒得下床看", "gold": {"intent": "查询", "device": "客厅灯"}}
+{"id": "A-163", "home": "smallflat", "text": "客厅灯忘关了", "gold": {"intent": "控制", "device": "客厅灯", "action": "关闭或停止"}}
+{"id": "A-164", "home": "smallflat", "text": "客厅灯我去关，你别下床了", "gold": {"intent": "无关"}}
+{"id": "A-165", "home": "smallflat", "text": "你每次都不关灯，电费你交啊", "gold": {"intent": "无关"}}
+{"id": "A-166", "home": "smallflat", "text": "小易晚安，都关了吧", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "A-167", "home": "smallflat", "text": "半夜冻醒了，空调开太低了", "gold": {"intent": "控制", "device": "空调", "action": ["调高或增大", "关闭或停止", "设为指定的数值或模式"]}}
+{"id": "A-168", "home": "smallflat", "text": "开门开门，我们到了！", "gold": {"intent": "无关"}}
+{"id": "A-169", "home": "smallflat", "text": "小易，楼下同事上来了，给她开下门", "gold": {"intent": "控制", "device": "门锁", "action": "打开或启动"}}
+{"id": "A-170", "home": "smallflat", "text": "你家这空调制冷挺快啊", "gold": {"intent": "无关"}}
+{"id": "A-171", "home": "smallflat", "text": "哎你家这电视能投屏不", "gold": {"intent": "无关"}}
+{"id": "A-172", "home": "smallflat", "text": "开团开团！关门打狗！", "gold": {"intent": "无关"}}
+{"id": "A-173", "home": "smallflat", "text": "这窗帘得拆下来洗洗了，灰太大", "gold": {"intent": "无关"}}
+{"id": "A-174", "home": "smallflat", "text": "我跟你说，他连洗衣机都不会开", "gold": {"intent": "无关"}}
+{"id": "A-175", "home": "smallflat", "text": "你说咱要不要换个双开门的冰箱", "gold": {"intent": "无关"}}
+{"id": "A-176", "home": "smallflat", "text": "出差三天，冰箱里的菜得赶紧吃掉", "gold": {"intent": "无关"}}
+{"id": "A-177", "home": "smallflat", "text": "房东说走之前记得把门反锁", "gold": {"intent": "无关"}}
+{"id": "A-178", "home": "smallflat", "text": "空调开一晚上得多少电啊", "gold": {"intent": "无关"}, "note": "问的是一般耗电，不是自家这台的实际用量（第 8 节）"}
+{"id": "A-179", "home": "smallflat", "text": "这个月空调用了多少电", "gold": {"intent": "查询", "device": "空调"}}
+{"id": "A-180", "home": "smallflat", "text": "师傅，这门锁密码怎么改啊", "gold": {"intent": "无关"}}

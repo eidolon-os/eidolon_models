@@ -85,7 +85,6 @@
 {"home": "villa", "text": "主卧黑得啥也看不见", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
 {"home": "villa", "text": "书房热得像闷罐", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
 {"home": "villa", "text": "书房热得思路都断了", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
-{"home": "villa", "text": "书房暗得写不了字", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
 {"home": "villa", "text": "书房空气闷，待久了犯困", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
 {"home": "villa", "text": "厨房烟熏火燎的", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
 {"home": "villa", "text": "厨房油烟弥漫，嗓子呛得难受", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-feeling"]}
@@ -158,7 +157,6 @@
 {"home": "villa", "text": "阳光直直照进来，晒得人发烫", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "bare-feeling"]}
 {"home": "villa", "text": "吵得我没法打电话", "intent": "控制", "device": ["电视", "智能音箱", "投影仪"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "bare-feeling"]}
 {"home": "villa", "text": "灯光亮得人心烦", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "bare-feeling"]}
-{"home": "apartment", "text": "厨房太暗了，切菜看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "apartment", "text": "厨房黑乎乎的，锅里啥样都看不见", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "apartment", "text": "卫生间冷得打哆嗦", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "apartment", "text": "冬天卫生间冰凉，脱衣服都犯难", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}

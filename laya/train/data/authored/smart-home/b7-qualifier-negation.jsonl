@@ -79,14 +79,12 @@
 {"home": "rental", "text": "我自己屋顶上的灯开开", "intent": "控制", "device": "我房间的灯", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "brand", "text": "卧室那台空调开到制冷", "intent": "控制", "device": "美的风尊空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "brand", "text": "客厅顶上的灯调暗一点", "intent": "控制", "device": "易来吸顶灯", "action": "调低或减小", "tags": ["room-disambiguation", "qualifier-match"]}
-{"home": "brand", "text": "客厅的空调调低一度", "intent": "控制", "device": "格力云锦空调", "action": "调低或减小", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "brand", "text": "卧室那个带净化的开一下", "intent": "控制", "device": "戴森净化风扇", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "elder", "text": "我屋里的大灯开开", "intent": "控制", "device": "老人房灯", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "elder", "text": "走廊那个小夜灯关了吧", "intent": "控制", "device": "走廊夜灯", "action": "关闭或停止", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "elder", "text": "床边那个夜灯亮点", "intent": "控制", "device": "床边夜灯", "action": "调高或增大", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "pets", "text": "阳台那个喂食器放一份粮", "intent": "控制", "device": "狗粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "pets", "text": "睡觉那屋的空调开一下", "intent": "控制", "device": "卧室空调", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-match"]}
-{"home": "countryside", "text": "睡房的空调调到二十六度", "intent": "控制", "device": "卧室空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "countryside", "text": "鸡窝那边的灯关掉", "intent": "控制", "device": "鸡舍灯", "action": "关闭或停止", "tags": ["room-disambiguation", "qualifier-match"]}
 {"home": "apartment", "text": "客厅那台加湿器开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "apartment", "text": "卧室那台加湿器开一下", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-contrast"]}
@@ -187,7 +185,6 @@
 {"home": "duplex", "text": "楼下卫生间的浴霸开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "duplex", "text": "一楼的晾衣架降下来", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "brand", "text": "卧室的灯打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
-{"home": "brand", "text": "书房的灯打开", "intent": "控制", "device": "米家台灯Pro", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-contrast"]}
 {"home": "brand", "text": "书房的空调开到二十六", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "brand", "text": "卧室的空调开到二十六", "intent": "控制", "device": "美的风尊空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation", "qualifier-contrast"]}
 {"home": "brand", "text": "客厅加湿器帮我打开，嗓子干", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
@@ -215,7 +212,6 @@
 {"home": "countryside", "text": "堂屋的摄像头打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "countryside", "text": "院子的摄像头打开", "intent": "控制", "device": "院子摄像头", "action": "打开或启动", "tags": ["room-disambiguation", "qualifier-contrast"]}
 {"home": "countryside", "text": "储物间的空调开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
-{"home": "office", "text": "卧室空调调到二十五度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "minimal", "text": "卧室的灯关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "studio", "text": "卫生间那边的灯打开，我洗个澡", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "qualifier-mismatch"]}
 {"home": "apartment", "text": "主卧顶上那盏灯关掉，床头的小灯别关", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["explicit-control", "negation-keep"]}

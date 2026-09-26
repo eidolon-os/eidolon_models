@@ -173,7 +173,6 @@
 {"home": "apartment", "text": "主卧空调开了几个小时了", "intent": "查询", "device": "主卧空调", "tags": ["boundary", "number-trap"]}
 {"home": "apartment", "text": "客厅空调二十七", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
 {"home": "apartment", "text": "两台空调都切成除湿", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
-{"home": "apartment", "text": "主卧空调再升两度", "intent": "控制", "device": "主卧空调", "action": "调高或增大", "tags": ["boundary", "number-trap"]}
 {"home": "apartment", "text": "电视换到十三台", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["boundary", "number-trap"]}
 {"home": "apartment", "text": "我十三岁的时候家里才买了第一台电视", "intent": "无关", "tags": ["boundary", "number-trap"]}
 {"home": "apartment", "text": "热水器用了五年了", "intent": "无关", "tags": ["boundary", "number-trap"]}

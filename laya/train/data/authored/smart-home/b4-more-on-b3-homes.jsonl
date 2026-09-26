@@ -18,7 +18,6 @@
 {"home": "studio", "text": "卫生间排风扇关了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "studio", "text": "台灯调暗一点", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "studio", "text": "烘干机把衣服烘一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
-{"home": "studio", "text": "地暖调到二十二度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "studio", "text": "电热毯调到低档", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "studio", "text": "洗碗机洗一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "studio", "text": "饮水机烧壶开水", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
@@ -45,7 +44,6 @@
 {"home": "studio", "text": "音箱是朋友送的生日礼物", "intent": "无关", "tags": ["non-command"]}
 {"home": "studio", "text": "洗衣机甩干的时候整个卫生间都在震", "intent": "无关", "tags": ["non-command"]}
 {"home": "family3", "text": "看看摄像头里孩子睡着没有", "intent": "查询", "device": "儿童房摄像头", "tags": ["status-query"]}
-{"home": "family3", "text": "主卧空调设的多少度", "intent": "查询", "device": "主卧空调", "tags": ["status-query"]}
 {"home": "family3", "text": "儿童房加湿器现在湿度多少", "intent": "查询", "device": "儿童房加湿器", "tags": ["status-query"]}
 {"home": "family3", "text": "扫地机器人今天扫了几次", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "history"]}
 {"home": "family3", "text": "门锁今天下午谁开的", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "history"]}
@@ -71,7 +69,6 @@
 {"home": "family3", "text": "次卧加湿器开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "主卧摄像头打开看看", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "客厅加湿器开到二档", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "near-miss"]}
-{"home": "family3", "text": "厨房的灯打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "门口摄像头现在拍到谁了", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "near-miss", "query"]}
 {"home": "family3", "text": "孩子说屋里太亮睡不着", "intent": "控制", "device": "儿童房顶灯", "action": ["关闭或停止", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "family3", "text": "我们卧室干得早上起来嘴唇都裂了", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
@@ -123,7 +120,6 @@
 {"home": "elder", "text": "哎哟，我摔了一跤，起不来了", "intent": "控制", "device": "紧急呼叫按钮", "action": "打开或启动", "tags": ["implicit-intent", "elder-speech"]}
 {"home": "elder", "text": "屋里干得我鼻子里都出血了", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "elder-speech"]}
 {"home": "elder", "text": "这天热得，我这把老骨头也扛不住，屋里闷得慌", "intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "elder-speech"]}
-{"home": "elder", "text": "电视声音太大了，吵得我脑仁疼", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["implicit-intent", "elder-speech"]}
 {"home": "elder", "text": "天黑了，我要睡了，外头可别让人进来", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["implicit-intent", "elder-speech"]}
 {"home": "elder", "text": "那个药盒子响了半天了，吵死了，我都吃完了", "intent": "控制", "device": "智能药盒", "action": "关闭或停止", "tags": ["implicit-intent", "elder-speech"]}
 {"home": "elder", "text": "小易啊，那个药盒，给我改成晚上七点也提醒一回", "intent": "控制", "device": "智能药盒", "action": "设为指定的数值或模式", "tags": ["explicit-control", "elder-speech"]}
@@ -168,7 +164,6 @@
 {"home": "duplex", "text": "书房窗帘拉上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "duplex", "text": "二楼电视关了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "duplex", "text": "一楼除湿机调到干衣模式", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "near-miss"]}
-{"home": "duplex", "text": "餐厅空调调到二十五度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "duplex", "text": "一楼洗衣机开始洗", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "duplex", "text": "主卧音箱音量调小", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "duplex", "text": "露台的摄像头拍到什么了", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "query"]}
@@ -200,7 +195,6 @@
 {"home": "brand", "text": "鹿客最近一次开门是几点", "intent": "查询", "device": "鹿客门锁", "tags": ["status-query", "brand-only", "history"]}
 {"home": "brand", "text": "石头的尘盒满了没", "intent": "查询", "device": "石头扫地机", "tags": ["status-query", "brand-only"]}
 {"home": "brand", "text": "卧室那台空调开除湿", "intent": "控制", "device": "美的风尊空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
-{"home": "brand", "text": "客厅空调调低一度", "intent": "控制", "device": "格力云锦空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
 {"home": "brand", "text": "米家的灯调亮一点", "intent": "控制", "device": "米家台灯Pro", "action": "调高或增大", "tags": ["room-disambiguation", "brand-only"]}
 {"home": "brand", "text": "卧室的净化器开一下", "intent": "控制", "device": "戴森净化风扇", "action": "打开或启动", "tags": ["room-disambiguation", "category-only"]}
 {"home": "brand", "text": "客厅的净化器调到自动", "intent": "控制", "device": "米家净化器4", "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "category-only"]}
@@ -209,7 +203,6 @@
 {"home": "brand", "text": "我在卧室，这边空调调到二十六", "intent": "控制", "device": "美的风尊空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
 {"home": "brand", "text": "卧室那个吹风的调小点", "intent": "控制", "device": ["戴森净化风扇", "美的风尊空调"], "action": "调低或减小", "tags": ["room-disambiguation", "category-only"]}
 {"home": "brand", "text": "吸顶灯调到阅读模式", "intent": "控制", "device": "易来吸顶灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "category-only"]}
-{"home": "brand", "text": "书房空调开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "brand", "text": "卧室的电视打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "brand", "text": "戴森吸尘器去客厅吸一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss", "brand-only"]}
 {"home": "brand", "text": "方太蒸箱预热到一百度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "near-miss", "brand-only"]}

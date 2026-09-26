@@ -78,16 +78,11 @@
 {"home": "apartment", "text": "客厅落地灯开暖光", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["device-not-in-home", "similar-name", "p040"]}
 {"home": "apartment", "text": "客厅主灯开暖光", "intent": "控制", "device": "客厅主灯", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p040"]}
 {"home": "apartment", "text": "主卧那台电视关了吧", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p041"]}
-{"home": "apartment", "text": "客厅那台电视关了吧", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p041"]}
 {"home": "apartment", "text": "客厅灯带换个颜色", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p042"]}
 {"home": "apartment", "text": "客厅主灯换个颜色", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p042"]}
 {"home": "apartment", "text": "洗碗机那边洗好了没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p043", "query"]}
 {"home": "apartment", "text": "洗衣机那边洗好了没", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "similar-name", "p043", "query"]}
 {"home": "apartment", "text": "电压力锅还剩几分钟", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p044", "query"]}
-{"home": "apartment", "text": "热水壶现在多少度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p045", "query"]}
-{"home": "apartment", "text": "热水器现在多少度", "intent": "查询", "device": "热水器", "tags": ["status-query", "similar-name", "p045", "query"]}
-{"home": "apartment", "text": "除湿机水箱还有水吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p046", "query"]}
-{"home": "apartment", "text": "加湿器水箱还有水吗", "intent": "查询", "device": "加湿器", "tags": ["status-query", "similar-name", "p046", "query"]}
 {"home": "apartment", "text": "温控器上显示多少度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p047", "query"]}
 {"home": "apartment", "text": "温湿度计上显示多少度", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "similar-name", "p047", "query"]}
 {"home": "apartment", "text": "门铃电量还够不够", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p048", "query"]}
@@ -134,7 +129,6 @@
 {"home": "house", "text": "电视音量降两格", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p069"]}
 {"home": "house", "text": "投影仪音量降两格", "intent": "控制", "device": "投影仪", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p069"]}
 {"home": "house", "text": "电视切到HDMI", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p070"]}
-{"home": "house", "text": "投影仪切到HDMI", "intent": "控制", "device": "投影仪", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p070"]}
 {"home": "house", "text": "暖风机再调热乎点", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home", "similar-name", "p071"]}
 {"home": "house", "text": "地暖再调热乎点", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["explicit-control", "similar-name", "p071"]}
 {"home": "house", "text": "暖风机先开上，脚冰凉", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p072"]}
@@ -147,8 +141,6 @@
 {"home": "house", "text": "厨房油烟机开一下", "intent": "控制", "device": "油烟机", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p075"]}
 {"home": "house", "text": "浴缸的加热功能开起来", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p076"]}
 {"home": "house", "text": "浴霸的加热功能开起来", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p076"]}
-{"home": "house", "text": "浴缸关掉吧，洗完了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p077"]}
-{"home": "house", "text": "浴霸关掉吧，洗完了", "intent": "控制", "device": "浴霸", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p077"]}
 {"home": "house", "text": "充电宝停止充电吧，满了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p078"]}
 {"home": "house", "text": "充电桩停止充电吧，满了", "intent": "控制", "device": "充电桩", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p078"]}
 {"home": "house", "text": "充电宝设成慢充", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p079"]}
@@ -177,8 +169,6 @@
 {"home": "house", "text": "餐厅吊灯开一下，我洗个碗", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["explicit-control", "similar-name", "p090"]}
 {"home": "house", "text": "客厅吊灯亮度往下降一降", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "similar-name", "p091"]}
 {"home": "house", "text": "餐厅吊灯亮度往下降一降", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["explicit-control", "similar-name", "p091"]}
-{"home": "house", "text": "楼梯灯亮度调到一半", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p092"]}
-{"home": "house", "text": "书房灯亮度调到一半", "intent": "控制", "device": "书房灯", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p092"]}
 {"home": "house", "text": "洗衣机这一轮还剩多长时间", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p093", "query"]}
 {"home": "house", "text": "洗碗机这一轮还剩多长时间", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "similar-name", "p093", "query"]}
 {"home": "house", "text": "门锁电池还剩多少", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p094", "query"]}
@@ -227,10 +217,7 @@
 {"home": "villa", "text": "宠物喂食器暂停一下", "intent": "控制", "device": "宠物喂食器", "action": "暂停", "tags": ["explicit-control", "similar-name", "p115"]}
 {"home": "villa", "text": "音响功放切到蓝牙输入", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "similar-name", "p116"]}
 {"home": "villa", "text": "智能音箱切到蓝牙输入", "intent": "控制", "device": "智能音箱", "action": "设为指定的数值或模式", "tags": ["explicit-control", "similar-name", "p116"]}
-{"home": "villa", "text": "书房空调现在几度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p117", "query"]}
-{"home": "villa", "text": "客厅空调现在几度", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "similar-name", "p117", "query"]}
 {"home": "villa", "text": "洗地机电量还剩多少", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p118", "query"]}
 {"home": "villa", "text": "浴缸现在开着吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p119", "query"]}
 {"home": "villa", "text": "浴霸现在开着吗", "intent": "查询", "device": "浴霸", "tags": ["status-query", "similar-name", "p119", "query"]}
-{"home": "villa", "text": "厨房灯关了没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p120", "query"]}
 {"home": "villa", "text": "餐厅吊灯关了没", "intent": "查询", "device": "餐厅吊灯", "tags": ["status-query", "similar-name", "p120", "query"]}

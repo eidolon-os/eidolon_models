@@ -256,12 +256,10 @@
 {"home": "office", "text": "看屏幕的时候头顶的灯晃眼", "intent": "控制", "device": "客厅灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-light", "cue-body"]}
 {"home": "southyard", "text": "卧室灯太亮了，老伴要睡了", "intent": "控制", "device": "卧室灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "need-light", "cue-upcoming"]}
 {"home": "elder", "text": "走廊夜灯开着没", "intent": "查询", "device": "走廊夜灯", "tags": ["status-query", "need-contrast"]}
-{"home": "townhouse", "text": "车库灯关了吗", "intent": "查询", "device": "车库灯", "tags": ["status-query", "need-contrast"]}
 {"home": "kids", "text": "婴儿房窗帘拉上了没", "intent": "查询", "device": "婴儿房窗帘", "tags": ["status-query", "need-contrast"]}
 {"home": "southyard", "text": "院子灯是不是还亮着", "intent": "查询", "device": "院子灯", "tags": ["status-query", "need-contrast"]}
 {"home": "family3", "text": "主卧那幅窗帘这会儿拉没拉上", "intent": "查询", "device": "主卧窗帘", "tags": ["status-query", "need-contrast"]}
 {"home": "northflat", "text": "过道灯现在亮着没", "intent": "查询", "device": "过道灯", "tags": ["status-query", "need-contrast"]}
-{"home": "townhouse", "text": "露台遮阳篷收起来了吗", "intent": "查询", "device": "露台遮阳篷", "tags": ["status-query", "need-contrast"]}
 {"home": "southyard", "text": "外面黑灯瞎火的，还好到家了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "townhouse", "text": "今天太阳真毒，开车晃得眼疼", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "northflat", "text": "小时候家里点煤油灯，黑得很", "intent": "无关", "tags": ["non-command", "need-contrast"]}
@@ -317,7 +315,6 @@
 {"home": "kids", "text": "宝宝刚哄睡，温奶器还滴滴叫", "intent": "控制", "device": "温奶器", "action": ["关闭或停止"], "tags": ["implicit-intent", "need-sleep-noise", "cue-object"]}
 {"home": "studio", "text": "太安静了睡不着，想听点雨声", "intent": "控制", "device": "音箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-sleep-noise", "cue-indirect"]}
 {"home": "rental", "text": "太安静了睡不着，想听点雨声", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-sleep-noise", "cue-indirect", "absent"]}
-{"home": "apartment", "text": "洗衣机还要多久洗完", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "need-contrast"]}
 {"home": "townhouse", "text": "扫地机还要扫多久", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "need-contrast"]}
 {"home": "kids", "text": "婴儿监视器那边宝宝有动静没", "intent": "查询", "device": "婴儿监视器", "tags": ["status-query", "need-contrast"]}
 {"home": "family3", "text": "烘干机还得转多久", "intent": "查询", "device": "烘干机", "tags": ["status-query", "need-contrast"]}

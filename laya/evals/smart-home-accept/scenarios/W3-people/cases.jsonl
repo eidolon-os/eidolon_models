@@ -1,0 +1,300 @@
+{"id": "W3-0001", "home": "acc-senior", "text": "小易啊，那个灯，客厅那个灯，给我开开", "gold": {"intent": "控制", "device": "客厅灯", "action": "打开或启动"}}
+{"id": "W3-0002", "home": "acc-senior", "text": "电视机声音大点儿，我耳朵背，听不清", "gold": {"intent": "控制", "device": "电视", "action": "调高或增大"}}
+{"id": "W3-0003", "home": "acc-senior", "text": "烧壶水", "gold": {"intent": "控制", "device": "电热水壶", "action": "打开或启动"}}
+{"id": "W3-0004", "home": "acc-senior", "text": "那个烧水的，烧水那个壶，你给开一下", "gold": {"intent": "控制", "device": "电热水壶", "action": "打开或启动"}}
+{"id": "W3-0005", "home": "acc-senior", "text": "小易，我要洗澡，热水给我烧上", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "W3-0006", "home": "acc-senior", "text": "闺女，空调我会开，你甭操心了", "gold": {"intent": "无关"}}
+{"id": "W3-0007", "home": "acc-senior", "text": "儿子你放心，热水器我洗完就关", "gold": {"intent": "无关"}}
+{"id": "W3-0008", "home": "acc-senior", "text": "乖孙，那个红按钮可不能乱按啊", "gold": {"intent": "无关"}}
+{"id": "W3-0009", "home": "acc-senior", "text": "宝儿，把电视声音关小点，奶奶眯一会儿", "gold": {"intent": "无关"}}
+{"id": "W3-0010", "home": "acc-senior", "text": "那个冷气机，这会儿是几度啊", "gold": {"intent": "查询", "device": "空调"}}
+{"id": "W3-0011", "home": "acc-senior", "text": "我摔了一跤，起不来了，快叫人啊", "gold": {"intent": "控制", "device": "紧急呼叫按钮", "action": "打开或启动"}}
+{"id": "W3-0012", "home": "acc-senior", "text": "小易……心口疼得厉害……帮我按那个呼叫", "gold": {"intent": "控制", "device": "紧急呼叫按钮", "action": "打开或启动"}}
+{"id": "W3-0013", "home": "acc-senior", "text": "卧室的大灯太晃眼了", "gold": {"intent": "控制", "device": "卧室灯", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "W3-0014", "home": "acc-senior", "text": "床边那个小灯，起夜用的那个，关了吧", "gold": {"intent": "控制", "device": "床边感应灯", "action": "关闭或停止"}}
+{"id": "W3-0015", "home": "acc-senior", "text": "麻烦你啊，空调给调到二十六度，谢谢你了", "gold": {"intent": "控制", "device": "空调", "action": "设为指定的数值或模式"}}
+{"id": "W3-0016", "home": "acc-senior", "text": "提醒我晚上八点吃药", "gold": {"intent": "无关"}}
+{"id": "W3-0017", "home": "acc-senior", "text": "晚上睡前提醒我关热水器", "gold": {"intent": "无关"}}
+{"id": "W3-0018", "home": "acc-senior", "text": "这空调有没有那个睡眠的功能啊", "gold": {"intent": "无关"}}
+{"id": "W3-0019", "home": "acc-senior", "text": "人老了，空调到底开多少度才不伤身子", "gold": {"intent": "无关"}}
+{"id": "W3-0020", "home": "acc-senior", "text": "小易，水开了没", "gold": {"intent": "查询", "device": "电热水壶"}}
+{"id": "W3-0021", "home": "acc-senior", "text": "给我调到那个唱戏的台，京剧那个", "gold": {"intent": "控制", "device": "电视", "action": "设为指定的数值或模式"}}
+{"id": "W3-0022", "home": "acc-senior", "text": "困了，我要睡了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0023", "home": "acc-senior", "text": "我出门遛弯去了啊", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0024", "home": "acc-senior", "text": "卧室热得睡不着", "gold": {"intent": "控制", "device": "空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "W3-0025", "home": "acc-senior", "text": "客厅黑咕隆咚的，脚底下都看不清", "gold": {"intent": "控制", "device": "客厅灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0026", "home": "acc-senior", "text": "上礼拜那个热水器坏了，开都开不开，修了两回", "gold": {"intent": "无关"}}
+{"id": "W3-0027", "home": "acc-senior", "text": "灯我刚关了，你别管了", "gold": {"intent": "无关"}}
+{"id": "W3-0028", "home": "acc-senior", "text": "社区医生说空调别对着人吹", "gold": {"intent": "无关"}}
+{"id": "W3-0029", "home": "acc-senior", "text": "我自个儿去把水壶插上", "gold": {"intent": "无关"}}
+{"id": "W3-0030", "home": "acc-senior", "text": "洗澡水热乎了没有啊", "gold": {"intent": "查询", "device": "热水器"}}
+{"id": "W3-0031", "home": "acc-senior", "text": "水壶别烧了，我不喝了", "gold": {"intent": "控制", "device": "电热水壶", "action": "关闭或停止"}}
+{"id": "W3-0032", "home": "acc-senior", "text": "热水器温度再调高点，水不够热", "gold": {"intent": "控制", "device": "热水器", "action": "调高或增大"}}
+{"id": "W3-0033", "home": "acc-senior", "text": "咳咳……空调风太大了，吹得我头疼", "gold": {"intent": "控制", "device": "空调", "action": ["调低或减小", "关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0034", "home": "acc-senior", "text": "嗯……几点了……开下灯", "gold": {"intent": "控制", "device": ["客厅灯", "卧室灯", "床边感应灯"], "action": "打开或启动"}}
+{"id": "W3-0035", "home": "acc-senior", "text": "把灯给我整亮堂点儿", "gold": {"intent": "控制", "device": ["客厅灯", "卧室灯", "床边感应灯"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0036", "home": "acc-senior", "text": "观众朋友们，欢迎收看今天的健康讲座", "gold": {"intent": "无关"}}
+{"id": "W3-0037", "home": "acc-senior", "text": "老李啊，你家电视能调到戏曲频道不", "gold": {"intent": "无关"}}
+{"id": "W3-0038", "home": "acc-senior", "text": "算了，客厅灯先别关了", "gold": {"intent": "无关"}}
+{"id": "W3-0039", "home": "acc-senior", "text": "我今年七十八了，腿脚不利索了", "gold": {"intent": "无关"}}
+{"id": "W3-0040", "home": "acc-senior", "text": "小易，药盒里今天的药拿了没有", "gold": {"intent": "查询", "device": "智能药盒"}}
+{"id": "W3-0041", "home": "acc-senior", "text": "热死个人咯，空调给我开起", "gold": {"intent": "控制", "device": "空调", "action": "打开或启动"}}
+{"id": "W3-0042", "home": "acc-senior", "text": "帮我把电是关调", "gold": {"intent": "控制", "device": "电视", "action": "关闭或停止"}}
+{"id": "W3-0043", "home": "acc-senior", "text": "小易，我要看动画片，换到少儿频道", "gold": {"intent": "控制", "device": "电视", "action": "设为指定的数值或模式"}}
+{"id": "W3-0044", "home": "acc-senior", "text": "小易，关灯灯", "gold": {"intent": "控制", "device": ["客厅灯", "卧室灯", "床边感应灯"], "action": "关闭或停止"}}
+{"id": "W3-0045", "home": "acc-senior", "text": "小易，把空调 set 到 24 度", "gold": {"intent": "控制", "device": "空调", "action": "设为指定的数值或模式"}}
+{"id": "W3-0046", "home": "acc-senior", "text": "外头日头毒得很，晒得人发晕", "gold": {"intent": "无关"}}
+{"id": "W3-0047", "home": "acc-senior", "text": "年轻时候哪有空调，扇把扇子就过来了", "gold": {"intent": "无关"}}
+{"id": "W3-0048", "home": "acc-senior", "text": "小张，你帮我把水壶灌满烧上", "gold": {"intent": "无关"}}
+{"id": "W3-0049", "home": "acc-senior", "text": "这药盒子到点就叫唤，挺好使", "gold": {"intent": "无关"}}
+{"id": "W3-0050", "home": "acc-senior", "text": "卧室灯关了没有", "gold": {"intent": "查询", "device": "卧室灯"}}
+{"id": "W3-0051", "home": "acc-senior", "text": "劳驾，客厅的灯帮我调暗一点儿", "gold": {"intent": "控制", "device": "客厅灯", "action": "调低或减小"}}
+{"id": "W3-0052", "home": "acc-senior", "text": "我寻思着吧，这电视声音是不是有点太大了，你给弄小点", "gold": {"intent": "控制", "device": "电视", "action": "调低或减小"}}
+{"id": "W3-0053", "home": "acc-senior", "text": "小易！关关关，电视赶紧关了，吵死了", "gold": {"intent": "控制", "device": "电视", "action": "关闭或停止"}}
+{"id": "W3-0054", "home": "acc-senior", "text": "过半个钟头把空调关了", "gold": {"intent": "控制", "device": "空调", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0055", "home": "acc-senior", "text": "我睡着了你就把电视关喽", "gold": {"intent": "控制", "device": "电视", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0056", "home": "acc-senior", "text": "小度小度，放段评书", "gold": {"intent": "无关"}}
+{"id": "W3-0057", "home": "acc-senior", "text": "我那大儿子老说热水器别一直插着电", "gold": {"intent": "无关"}}
+{"id": "W3-0058", "home": "acc-senior", "text": "小张，水烧开了没有", "gold": {"intent": "无关"}}
+{"id": "W3-0059", "home": "acc-senior", "text": "说明书上写着，长按三秒就开机", "gold": {"intent": "无关"}}
+{"id": "W3-0060", "home": "acc-senior", "text": "小易，大门锁好了没", "gold": {"intent": "查询", "device": "没有对应的设备"}}
+{"id": "W3-0061", "home": "acc-senior", "text": "明早六点把水壶烧上", "gold": {"intent": "控制", "device": "电热水壶", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0062", "home": "acc-senior", "text": "不是这个，是卧室灯", "gold": {"intent": "控制", "device": "卧室灯"}}
+{"id": "W3-0063", "home": "acc-senior", "text": "药盒一直叫唤，让它别响了", "gold": {"intent": "控制", "device": "智能药盒", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0064", "home": "acc-senior", "text": "洗澡水太烫了，热水器调低点", "gold": {"intent": "控制", "device": "热水器", "action": "调低或减小"}}
+{"id": "W3-0065", "home": "acc-senior", "text": "电视和灯都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "W3-0066", "home": "acc-senior", "text": "家里空调开着呢，暖和着呢，你那边冷不冷", "gold": {"intent": "无关"}}
+{"id": "W3-0067", "home": "acc-senior", "text": "奶奶，我能开电视吗", "gold": {"intent": "无关"}}
+{"id": "W3-0068", "home": "acc-senior", "text": "奶奶奶奶，这个灯怎么开呀", "gold": {"intent": "无关"}}
+{"id": "W3-0069", "home": "acc-senior", "text": "我眼镜搁哪儿了，找半天了", "gold": {"intent": "无关"}}
+{"id": "W3-0070", "home": "acc-senior", "text": "那个紧急呼叫的按钮，还有电没有", "gold": {"intent": "查询", "device": "紧急呼叫按钮"}}
+{"id": "W3-0071", "home": "acc-senior", "text": "空调开到除湿", "gold": {"intent": "控制", "device": "空调", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0072", "home": "acc-senior", "text": "客厅那个空调给我开开", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}}
+{"id": "W3-0073", "home": "acc-senior", "text": "帮我把门锁上", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "上锁"}}
+{"id": "W3-0074", "home": "acc-senior", "text": "小易，窗帘拉上", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "关闭或停止"}}
+{"id": "W3-0075", "home": "acc-senior", "text": "喝了两盅酒，燥得慌，空调再调低两度", "gold": {"intent": "控制", "device": "空调", "action": "调低或减小"}}
+{"id": "W3-0076", "home": "acc-senior", "text": "这电视遥控器又没电了", "gold": {"intent": "无关"}}
+{"id": "W3-0077", "home": "acc-senior", "text": "得，我自己起来把卧室灯关了吧", "gold": {"intent": "无关"}}
+{"id": "W3-0078", "home": "acc-senior", "text": "大爷，这个紧急呼叫按钮我们每个月来测一回", "gold": {"intent": "无关"}}
+{"id": "W3-0079", "home": "acc-senior", "text": "丫头，把空调遥控器递给我，我调调温度", "gold": {"intent": "无关"}}
+{"id": "W3-0080", "home": "acc-senior", "text": "床边那个小灯是开着的不", "gold": {"intent": "查询", "device": "床边感应灯"}}
+{"id": "W3-0081", "home": "acc-senior", "text": "客厅灯开亮点，药盒上的字看不清", "gold": {"intent": "控制", "device": "客厅灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0082", "home": "acc-senior", "text": "小管家，床头那个感应的小灯开开", "gold": {"intent": "控制", "device": "床边感应灯", "action": "打开或启动"}}
+{"id": "W3-0083", "home": "acc-senior", "text": "电视先停一下，接完电话接着看", "gold": {"intent": "控制", "device": "电视", "action": "暂停"}}
+{"id": "W3-0084", "home": "acc-senior", "text": "哎，回来了，累得够呛", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0085", "home": "acc-senior", "text": "这个……这个……冷气，冷气给我关了，冻得慌", "gold": {"intent": "控制", "device": "空调", "action": "关闭或停止"}}
+{"id": "W3-0086", "home": "acc-senior", "text": "别开电视了，陪奶奶说说话", "gold": {"intent": "无关"}}
+{"id": "W3-0087", "home": "acc-senior", "text": "卧室灯不用关，我一会儿还回来", "gold": {"intent": "无关"}}
+{"id": "W3-0088", "home": "acc-senior", "text": "明天白天多云转晴，最高气温三十一度", "gold": {"intent": "无关"}}
+{"id": "W3-0089", "home": "acc-senior", "text": "喂？喂？听得见不？我这边信号不好", "gold": {"intent": "无关"}}
+{"id": "W3-0090", "home": "acc-senior", "text": "客厅的灯关没关啊", "gold": {"intent": "查询", "device": "客厅灯"}}
+{"id": "W3-0091", "home": "acc-senior", "text": "我这感冒了，屋里待着都发冷", "gold": {"intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "W3-0092", "home": "acc-senior", "text": "黑黢黢的，把灯开起嘛", "gold": {"intent": "控制", "device": ["客厅灯", "卧室灯", "床边感应灯"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0093", "home": "acc-senior", "text": "小易，水壶给坐上", "gold": {"intent": "控制", "device": "电热水壶", "action": "打开或启动"}}
+{"id": "W3-0094", "home": "acc-senior", "text": "小易，麻烦把卧室灯关一下，奶奶要休息了", "gold": {"intent": "控制", "device": "卧室灯", "action": "关闭或停止"}}
+{"id": "W3-0095", "home": "acc-senior", "text": "小易，热水器 turn on 一下，我妈要洗澡", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "W3-0096", "home": "acc-senior", "text": "你们年轻人就爱把空调开得冰凉", "gold": {"intent": "无关"}}
+{"id": "W3-0097", "home": "acc-senior", "text": "小易，你吃饭了没有啊", "gold": {"intent": "无关"}}
+{"id": "W3-0098", "home": "acc-senior", "text": "护士说药盒里的药一天三顿按格子吃", "gold": {"intent": "无关"}}
+{"id": "W3-0099", "home": "acc-senior", "text": "隔壁那家又叮叮当当砸墙，烦死个人", "gold": {"intent": "无关"}}
+{"id": "W3-0100", "home": "acc-senior", "text": "小易，电视是关着的吧", "gold": {"intent": "查询", "device": "电视"}}
+{"id": "W3-0101", "home": "acc-couple", "text": "小易，客厅大灯关了，灯带打开", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0102", "home": "acc-couple", "text": "turn on 一下灯带", "gold": {"intent": "控制", "device": "电视背景灯带", "action": "打开或启动"}}
+{"id": "W3-0103", "home": "acc-couple", "text": "客厅空调 set 到 26 度，thx", "gold": {"intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式"}}
+{"id": "W3-0104", "home": "acc-couple", "text": "唔……小夜灯……关掉……", "gold": {"intent": "控制", "device": "床头小夜灯", "action": "关闭或停止"}}
+{"id": "W3-0105", "home": "acc-couple", "text": "主……主卧大灯，关、关了……嗝", "gold": {"intent": "控制", "device": "主卧灯", "action": "关闭或停止"}}
+{"id": "W3-0106", "home": "acc-couple", "text": "老婆，你把窗帘拉一下", "gold": {"intent": "无关"}}
+{"id": "W3-0107", "home": "acc-couple", "text": "老公，洗烘一体机停了，你去把衣服拿出来", "gold": {"intent": "无关"}}
+{"id": "W3-0108", "home": "acc-couple", "text": "煤球，别扒拉饮水机的开关", "gold": {"intent": "无关"}}
+{"id": "W3-0109", "home": "acc-couple", "text": "咪咪，不许踩遥控器，电视都让你按关了", "gold": {"intent": "无关"}}
+{"id": "W3-0110", "home": "acc-couple", "text": "小易，门锁了没", "gold": {"intent": "查询", "device": "入户门锁"}}
+{"id": "W3-0111", "home": "acc-couple", "text": "嗝……这、这屋里咋这么热……", "gold": {"intent": "控制", "device": ["客厅空调", "主卧空调", "书房空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "W3-0112", "home": "acc-couple", "text": "手上都是油，帮我开下油烟机", "gold": {"intent": "控制", "device": "油烟机", "action": "打开或启动"}}
+{"id": "W3-0113", "home": "acc-couple", "text": "油烟机调大一档，呛死了", "gold": {"intent": "控制", "device": "油烟机", "action": "调高或增大"}}
+{"id": "W3-0114", "home": "acc-couple", "text": "锅里呛得眼睛都睁不开了", "gold": {"intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0115", "home": "acc-couple", "text": "这空气干得我嗓子冒烟", "gold": {"intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0116", "home": "acc-couple", "text": "提醒我明早换猫砂", "gold": {"intent": "无关"}}
+{"id": "W3-0117", "home": "acc-couple", "text": "记一下，洗烘一体机下周该清滤网了", "gold": {"intent": "无关"}}
+{"id": "W3-0118", "home": "acc-couple", "text": "扫地机能拖地吗", "gold": {"intent": "无关"}}
+{"id": "W3-0119", "home": "acc-couple", "text": "燃气热水器开一个月大概费多少气", "gold": {"intent": "无关"}}
+{"id": "W3-0120", "home": "acc-couple", "text": "喂食器今天出了几次粮", "gold": {"intent": "查询", "device": "猫咪喂食器"}}
+{"id": "W3-0121", "home": "acc-couple", "text": "不好意思哈，能麻烦你把书房台灯开一下吗，谢谢", "gold": {"intent": "控制", "device": "书房台灯", "action": "打开或启动"}}
+{"id": "W3-0122", "home": "acc-couple", "text": "我就是觉得吧，看电视的时候那个大灯有点太亮了，你懂我意思吧", "gold": {"intent": "控制", "device": "客厅吸顶灯", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "W3-0123", "home": "acc-couple", "text": "快快快，猫要饿疯了，赶紧放粮", "gold": {"intent": "控制", "device": "猫咪喂食器", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0124", "home": "acc-couple", "text": "饮水机换成间歇模式", "gold": {"intent": "控制", "device": "猫咪饮水机", "action": "设为指定的数值或模式"}}
+{"id": "W3-0125", "home": "acc-couple", "text": "饮水机先停一下，我换个滤芯", "gold": {"intent": "控制", "device": "猫咪饮水机", "action": ["暂停", "关闭或停止"]}}
+{"id": "W3-0126", "home": "acc-couple", "text": "双十一要不要换个大点的电视", "gold": {"intent": "无关"}}
+{"id": "W3-0127", "home": "acc-couple", "text": "妈，我跟你说那个喂食器可好用了，到点自己放粮", "gold": {"intent": "无关"}}
+{"id": "W3-0128", "home": "acc-couple", "text": "喂，外卖放门口就行，我一会儿自己开门拿", "gold": {"intent": "无关"}}
+{"id": "W3-0129", "home": "acc-couple", "text": "猫粮我刚加过了", "gold": {"intent": "无关"}}
+{"id": "W3-0130", "home": "acc-couple", "text": "洗烘一体机还有多久洗完", "gold": {"intent": "查询", "device": "洗烘一体机"}}
+{"id": "W3-0131", "home": "acc-couple", "text": "扫地机，开工", "gold": {"intent": "控制", "device": "扫地机", "action": "打开或启动"}}
+{"id": "W3-0132", "home": "acc-couple", "text": "扫地机别扫了，猫都吓跑了", "gold": {"intent": "控制", "device": "扫地机", "action": ["关闭或停止", "暂停"]}}
+{"id": "W3-0133", "home": "acc-couple", "text": "洗烘一体机启动，洗完直接烘干", "gold": {"intent": "控制", "device": "洗烘一体机", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0134", "home": "acc-couple", "text": "我要冲凉啦，热水帮我搞起", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "W3-0135", "home": "acc-couple", "text": "要洗澡了，卫生间冷飕飕的", "gold": {"intent": "控制", "device": ["热水器", "浴霸"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0136", "home": "acc-couple", "text": "空调我已经关了，你别念叨了", "gold": {"intent": "无关"}}
+{"id": "W3-0137", "home": "acc-couple", "text": "灯带先别关，挺好看的", "gold": {"intent": "无关"}}
+{"id": "W3-0138", "home": "acc-couple", "text": "刚才说开扫地机的，先不用了", "gold": {"intent": "无关"}}
+{"id": "W3-0139", "home": "acc-couple", "text": "浴霸我顺手就开了", "gold": {"intent": "无关"}}
+{"id": "W3-0140", "home": "acc-couple", "text": "那个扫地的小家伙干完活儿没", "gold": {"intent": "查询", "device": "扫地机"}}
+{"id": "W3-0141", "home": "acc-couple", "text": "澡洗好了，头顶那个暖灯关掉", "gold": {"intent": "控制", "device": "浴霸", "action": "关闭或停止"}}
+{"id": "W3-0142", "home": "acc-couple", "text": "热水器水温调到四十二度", "gold": {"intent": "控制", "device": "热水器", "action": "设为指定的数值或模式"}}
+{"id": "W3-0143", "home": "acc-couple", "text": "进屋了，门反锁一下", "gold": {"intent": "控制", "device": "入户门锁", "action": "上锁"}}
+{"id": "W3-0144", "home": "acc-couple", "text": "门口是我妈，给她开下门", "gold": {"intent": "控制", "device": "入户门锁", "action": "打开或启动"}}
+{"id": "W3-0145", "home": "acc-couple", "text": "小易，观影模式走起", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0146", "home": "acc-couple", "text": "这个 app 的 UI 也太丑了吧", "gold": {"intent": "无关"}}
+{"id": "W3-0147", "home": "acc-couple", "text": "老婆……我没喝多……真没喝多", "gold": {"intent": "无关"}}
+{"id": "W3-0148", "home": "acc-couple", "text": "各位观众，本期节目由某某空调特约播出", "gold": {"intent": "无关"}}
+{"id": "W3-0149", "home": "acc-couple", "text": "上次扫地机开着开着把猫毛球卷进去了", "gold": {"intent": "无关"}}
+{"id": "W3-0150", "home": "acc-couple", "text": "我们卧室那台空调现在几度来着", "gold": {"intent": "查询", "device": "主卧空调"}}
+{"id": "W3-0151", "home": "acc-couple", "text": "我睡了啊小易", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0152", "home": "acc-couple", "text": "主卧空调定时一小时关", "gold": {"intent": "控制", "device": "主卧空调", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0153", "home": "acc-couple", "text": "小夜灯等我睡着再关", "gold": {"intent": "控制", "device": "床头小夜灯", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0154", "home": "acc-couple", "text": "不是客厅，我说的是书房空调", "gold": {"intent": "控制", "device": "书房空调"}}
+{"id": "W3-0155", "home": "acc-couple", "text": "书房这光线太暗了，看两页书眼睛就酸", "gold": {"intent": "控制", "device": ["书房台灯", "书房落地灯"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0156", "home": "acc-couple", "text": "物业说燃气热水器用完要把总阀关上", "gold": {"intent": "无关"}}
+{"id": "W3-0157", "home": "acc-couple", "text": "老公，门锁上了没", "gold": {"intent": "无关"}}
+{"id": "W3-0158", "home": "acc-couple", "text": "亲爱的，你把扫地机的尘盒倒一下", "gold": {"intent": "无关"}}
+{"id": "W3-0159", "home": "acc-couple", "text": "这电视买了三年了，开机还是挺快", "gold": {"intent": "无关"}}
+{"id": "W3-0160", "home": "acc-couple", "text": "猫的饮水机水还够不够", "gold": {"intent": "查询", "device": "猫咪饮水机"}}
+{"id": "W3-0161", "home": "acc-couple", "text": "落地灯调成暖光", "gold": {"intent": "控制", "device": "书房落地灯", "action": "设为指定的数值或模式"}}
+{"id": "W3-0162", "home": "acc-couple", "text": "电视声音小一点，隔壁要敲墙了", "gold": {"intent": "控制", "device": "小米电视", "action": "调低或减小"}}
+{"id": "W3-0163", "home": "acc-couple", "text": "电视先暂停，外卖到了我去拿", "gold": {"intent": "控制", "device": "小米电视", "action": "暂停"}}
+{"id": "W3-0164", "home": "acc-couple", "text": "空调开起嘛，热得遭不住", "gold": {"intent": "控制", "device": ["客厅空调", "主卧空调", "书房空调"], "action": "打开或启动"}}
+{"id": "W3-0165", "home": "acc-couple", "text": "客厅这窗帘给我拉上，贼晃眼", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}}
+{"id": "W3-0166", "home": "acc-couple", "text": "外头跟下火似的，走两步汗就出来了", "gold": {"intent": "无关"}}
+{"id": "W3-0167", "home": "acc-couple", "text": "楼上又在打钻，烦死了", "gold": {"intent": "无关"}}
+{"id": "W3-0168", "home": "acc-couple", "text": "天猫精灵，关灯", "gold": {"intent": "无关"}}
+{"id": "W3-0169", "home": "acc-couple", "text": "小易你好笨啊", "gold": {"intent": "无关"}}
+{"id": "W3-0170", "home": "acc-couple", "text": "加湿器水箱还有水吗", "gold": {"intent": "查询", "device": "主卧加湿器"}}
+{"id": "W3-0171", "home": "acc-couple", "text": "帮我把客厅空条打开", "gold": {"intent": "控制", "device": "客厅空调", "action": "打开或启动"}}
+{"id": "W3-0172", "home": "acc-couple", "text": "加湿器开大一点，早上起来嗓子疼", "gold": {"intent": "控制", "device": "主卧加湿器", "action": "调高或增大"}}
+{"id": "W3-0173", "home": "acc-couple", "text": "客厅干得不行", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "W3-0174", "home": "acc-couple", "text": "把洗碗机开了", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}}
+{"id": "W3-0175", "home": "acc-couple", "text": "小易，我好像闻到煤气味了", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "W3-0176", "home": "acc-couple", "text": "今天被老板骂了，心里堵得慌", "gold": {"intent": "无关"}}
+{"id": "W3-0177", "home": "acc-couple", "text": "等会儿我自己调空调，你别动", "gold": {"intent": "无关"}}
+{"id": "W3-0178", "home": "acc-couple", "text": "老公你去把书房灯关了", "gold": {"intent": "无关"}}
+{"id": "W3-0179", "home": "acc-couple", "text": "你们家这个灯带挺好看，哪儿买的", "gold": {"intent": "无关"}}
+{"id": "W3-0180", "home": "acc-couple", "text": "客厅窗帘是关着的吧", "gold": {"intent": "查询", "device": "客厅窗帘"}}
+{"id": "W3-0181", "home": "acc-couple", "text": "客厅的灯，大的小的全给我灭了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "W3-0182", "home": "acc-couple", "text": "我们出门了啊，家里就交给你了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "W3-0183", "home": "acc-couple", "text": "那个客厅的冷气，太凉了，给关了吧", "gold": {"intent": "控制", "device": "客厅空调", "action": "关闭或停止"}}
+{"id": "W3-0184", "home": "acc-couple", "text": "我这切着菜呢，厨房灯开一下", "gold": {"intent": "控制", "device": "厨房灯", "action": "打开或启动"}}
+{"id": "W3-0185", "home": "acc-couple", "text": "我敷着面膜不方便动，帮我把客厅窗帘拉开", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "打开或启动"}}
+{"id": "W3-0186", "home": "acc-couple", "text": "大火烧开，转小火炖二十分钟", "gold": {"intent": "无关"}}
+{"id": "W3-0187", "home": "acc-couple", "text": "猫把喂食器给碰倒了", "gold": {"intent": "无关"}}
+{"id": "W3-0188", "home": "acc-couple", "text": "你说咱家要不要装个洗碗机", "gold": {"intent": "无关"}}
+{"id": "W3-0189", "home": "acc-couple", "text": "我同事说空调最好别开一整夜", "gold": {"intent": "无关"}}
+{"id": "W3-0190", "home": "acc-couple", "text": "书房那两盏灯是不是都关着", "gold": {"intent": "查询", "device": ["书房台灯", "书房落地灯"]}}
+{"id": "W3-0191", "home": "acc-couple", "text": "Could you 把书房空调关一下 please", "gold": {"intent": "控制", "device": "书房空调", "action": "关闭或停止"}}
+{"id": "W3-0192", "home": "acc-couple", "text": "床头灯调暗点，我要睡了", "gold": {"intent": "控制", "device": "床头小夜灯", "action": "调低或减小"}}
+{"id": "W3-0193", "home": "acc-couple", "text": "喂食器今天多加一顿", "gold": {"intent": "控制", "device": "猫咪喂食器", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0194", "home": "acc-couple", "text": "主卧空调往上加两度，有点冻脚", "gold": {"intent": "控制", "device": "主卧空调", "action": "调高或增大"}}
+{"id": "W3-0195", "home": "acc-couple", "text": "小易小易，客厅大灯开一下，谢谢", "gold": {"intent": "控制", "device": "客厅吸顶灯", "action": "打开或启动"}}
+{"id": "W3-0196", "home": "acc-couple", "text": "老公，热水器是不是你关的", "gold": {"intent": "无关"}}
+{"id": "W3-0197", "home": "acc-couple", "text": "这个 lamp 的 design 真的绝了", "gold": {"intent": "无关"}}
+{"id": "W3-0198", "home": "acc-couple", "text": "煤球！不许挠窗帘！", "gold": {"intent": "无关"}}
+{"id": "W3-0199", "home": "acc-couple", "text": "宝宝，客厅空调遥控器你放哪儿了", "gold": {"intent": "无关"}}
+{"id": "W3-0200", "home": "acc-couple", "text": "Hey 小易，客厅空调开的什么 mode", "gold": {"intent": "查询", "device": "客厅空调"}}
+{"id": "W3-0201", "home": "acc-family4", "text": "小易，我作业写完了，把台灯关了", "gold": {"intent": "控制", "device": "大宝台灯", "action": "关闭或停止"}}
+{"id": "W3-0202", "home": "acc-family4", "text": "小易，大宝房间空调调到二十五度", "gold": {"intent": "控制", "device": "大宝房间空调", "action": "设为指定的数值或模式"}}
+{"id": "W3-0203", "home": "acc-family4", "text": "小易，我怕黑，开小夜灯", "gold": {"intent": "控制", "device": "二宝小夜灯", "action": "打开或启动"}}
+{"id": "W3-0204", "home": "acc-family4", "text": "小易，我要看汪汪队", "gold": {"intent": "控制", "device": "客厅电视", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0205", "home": "acc-family4", "text": "小易啊，给孩子放个儿歌，用那个音箱", "gold": {"intent": "控制", "device": "全屋音箱", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0206", "home": "acc-family4", "text": "大宝，写完作业记得把台灯关了", "gold": {"intent": "无关"}}
+{"id": "W3-0207", "home": "acc-family4", "text": "二宝别碰电饭煲，烫手", "gold": {"intent": "无关"}}
+{"id": "W3-0208", "home": "acc-family4", "text": "妈妈，我能开会儿电视吗", "gold": {"intent": "无关"}}
+{"id": "W3-0209", "home": "acc-family4", "text": "爸爸，把灯灯打开嘛", "gold": {"intent": "无关"}}
+{"id": "W3-0210", "home": "acc-family4", "text": "小易，大宝房间空调现在多少度", "gold": {"intent": "查询", "device": "大宝房间空调"}}
+{"id": "W3-0211", "home": "acc-family4", "text": "锅都冒烟了，油烟机开到最大，快", "gold": {"intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "W3-0212", "home": "acc-family4", "text": "电饭煲煮上饭，六点吃", "gold": {"intent": "控制", "device": "电饭煲", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0213", "home": "acc-family4", "text": "洗碗机开一下，碗都放进去了", "gold": {"intent": "控制", "device": "洗碗机", "action": "打开或启动"}}
+{"id": "W3-0214", "home": "acc-family4", "text": "洗碗机暂停一下，还有个锅没放", "gold": {"intent": "控制", "device": "洗碗机", "action": "暂停"}}
+{"id": "W3-0215", "home": "acc-family4", "text": "嗝……热、热水器……给我开开……我要洗澡", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "W3-0216", "home": "acc-family4", "text": "老头子，热水器开了没有", "gold": {"intent": "无关"}}
+{"id": "W3-0217", "home": "acc-family4", "text": "提醒我七点把电饭煲打开", "gold": {"intent": "无关"}}
+{"id": "W3-0218", "home": "acc-family4", "text": "记一下，大宝今天烧到三十八度二", "gold": {"intent": "无关"}}
+{"id": "W3-0219", "home": "acc-family4", "text": "奶瓶放洗碗机里洗靠谱不", "gold": {"intent": "无关"}}
+{"id": "W3-0220", "home": "acc-family4", "text": "洗衣机那边还得转多久啊", "gold": {"intent": "查询", "device": "洗衣机"}}
+{"id": "W3-0221", "home": "acc-family4", "text": "小易啊，那个晾衣服的架子，给我放下来", "gold": {"intent": "控制", "device": "电动晾衣架", "action": "调低或减小"}}
+{"id": "W3-0222", "home": "acc-family4", "text": "小易，衣服晾好了，架子升上去吧", "gold": {"intent": "控制", "device": "电动晾衣架", "action": "调高或增大"}}
+{"id": "W3-0223", "home": "acc-family4", "text": "洗衣机洗一下，用快洗", "gold": {"intent": "控制", "device": "洗衣机", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0224", "home": "acc-family4", "text": "大宝的校服脏得不行，得洗了", "gold": {"intent": "控制", "device": "洗衣机", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0225", "home": "acc-family4", "text": "屋里一股味儿，新风开大点", "gold": {"intent": "控制", "device": "全屋新风", "action": "调高或增大"}}
+{"id": "W3-0226", "home": "acc-family4", "text": "新风一般开多久要换一次滤芯", "gold": {"intent": "无关"}}
+{"id": "W3-0227", "home": "acc-family4", "text": "要不给二宝屋里也买个台灯", "gold": {"intent": "无关"}}
+{"id": "W3-0228", "home": "acc-family4", "text": "上回洗衣机把大宝的红袜子和白衬衫一块儿洗了", "gold": {"intent": "无关"}}
+{"id": "W3-0229", "home": "acc-family4", "text": "晾衣架我已经升上去了", "gold": {"intent": "无关"}}
+{"id": "W3-0230", "home": "acc-family4", "text": "小易，电饭煲那锅饭熟了没", "gold": {"intent": "查询", "device": "电饭煲"}}
+{"id": "W3-0231", "home": "acc-family4", "text": "音箱声音小点，二宝睡了", "gold": {"intent": "控制", "device": "全屋音箱", "action": "调低或减小"}}
+{"id": "W3-0232", "home": "acc-family4", "text": "客厅筒灯 dim 一点", "gold": {"intent": "控制", "device": "客厅筒灯", "action": "调低或减小"}}
+{"id": "W3-0233", "home": "acc-family4", "text": "餐厅吊灯开一下，吃饭了", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": "打开或启动"}}
+{"id": "W3-0234", "home": "acc-family4", "text": "扫地机器人去扫一下餐厅，二宝撒了一地饼干", "gold": {"intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0235", "home": "acc-family4", "text": "扫地的那个机器别响了，吵着孩子写作业", "gold": {"intent": "控制", "device": "扫地机器人", "action": ["关闭或停止", "暂停"]}}
+{"id": "W3-0236", "home": "acc-family4", "text": "老师说写作业的时候台灯要开护眼模式", "gold": {"intent": "无关"}}
+{"id": "W3-0237", "home": "acc-family4", "text": "喂，王姐，我家那个扫地机器人老卡在沙发底下", "gold": {"intent": "无关"}}
+{"id": "W3-0238", "home": "acc-family4", "text": "小朋友们，我们下期再见啦", "gold": {"intent": "无关"}}
+{"id": "W3-0239", "home": "acc-family4", "text": "二宝你别乱按音箱，吵死了", "gold": {"intent": "无关"}}
+{"id": "W3-0240", "home": "acc-family4", "text": "小易，入户门到底锁没锁，心里不踏实", "gold": {"intent": "查询", "device": "入户门锁"}}
+{"id": "W3-0241", "home": "acc-family4", "text": "净水器出一杯温水", "gold": {"intent": "控制", "device": "净水器", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "W3-0242", "home": "acc-family4", "text": "快，主卧窗帘拉开，起床了起床了", "gold": {"intent": "控制", "device": "主卧窗帘", "action": "打开或启动"}}
+{"id": "W3-0243", "home": "acc-family4", "text": "客厅窗帘给我开一半，别全开", "gold": {"intent": "控制", "device": "客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "W3-0244", "home": "acc-family4", "text": "嗯……再睡会儿……主卧窗帘拉上", "gold": {"intent": "控制", "device": "主卧窗帘", "action": "关闭或停止"}}
+{"id": "W3-0245", "home": "acc-family4", "text": "客厅这灯忒亮了，整暗点儿", "gold": {"intent": "控制", "device": ["客厅主灯", "客厅筒灯"], "action": "调低或减小"}}
+{"id": "W3-0246", "home": "acc-family4", "text": "二宝！你干嘛把我台灯关了", "gold": {"intent": "无关"}}
+{"id": "W3-0247", "home": "acc-family4", "text": "我跟你说……老王那人……不地道", "gold": {"intent": "无关"}}
+{"id": "W3-0248", "home": "acc-family4", "text": "现在的小孩，天天开着空调，身子骨都娇气", "gold": {"intent": "无关"}}
+{"id": "W3-0249", "home": "acc-family4", "text": "客厅窗帘先别拉，我晒会儿太阳", "gold": {"intent": "无关"}}
+{"id": "W3-0250", "home": "acc-family4", "text": "小易，洗碗机里的碗洗好没，等着用盘子", "gold": {"intent": "查询", "device": "洗碗机"}}
+{"id": "W3-0251", "home": "acc-family4", "text": "主卧好热哦，空调开起噻", "gold": {"intent": "控制", "device": "主卧空调", "action": "打开或启动"}}
+{"id": "W3-0252", "home": "acc-family4", "text": "把客厅的电视声音调小一滴啦", "gold": {"intent": "控制", "device": "客厅电视", "action": "调低或减小"}}
+{"id": "W3-0253", "home": "acc-family4", "text": "小易，麻烦你帮忙把书房空调打开，辛苦啦", "gold": {"intent": "控制", "device": "书房空调", "action": "打开或启动"}}
+{"id": "W3-0254", "home": "acc-family4", "text": "那个，怎么说呢，二宝那屋是不是有点凉了，你看着办吧", "gold": {"intent": "控制", "device": "二宝房间空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "W3-0255", "home": "acc-family4", "text": "小易门锁上，快迟到了", "gold": {"intent": "控制", "device": "入户门锁", "action": "上锁"}}
+{"id": "W3-0256", "home": "acc-family4", "text": "刚才让你开的洗衣机，先不用了", "gold": {"intent": "无关"}}
+{"id": "W3-0257", "home": "acc-family4", "text": "电饭煲我自己按开始吧，你别管了", "gold": {"intent": "无关"}}
+{"id": "W3-0258", "home": "acc-family4", "text": "二宝今年四岁了，都会自己穿衣服了", "gold": {"intent": "无关"}}
+{"id": "W3-0259", "home": "acc-family4", "text": "外面风好大，树都要刮倒了", "gold": {"intent": "无关"}}
+{"id": "W3-0260", "home": "acc-family4", "text": "二宝那屋的小夜灯还亮着吗", "gold": {"intent": "查询", "device": "二宝小夜灯"}}
+{"id": "W3-0261", "home": "acc-family4", "text": "我们出门了，家里都关了吧", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "W3-0262", "home": "acc-family4", "text": "孩子们都睡了，全屋的灯关了吧", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "W3-0263", "home": "acc-family4", "text": "发着烧呢，屋里冷得直哆嗦", "gold": {"intent": "控制", "device": ["客厅空调", "主卧空调", "大宝房间空调", "二宝房间空调", "书房空调"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "W3-0264", "home": "acc-family4", "text": "咳得厉害，家里空气太差了", "gold": {"intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0265", "home": "acc-family4", "text": "要给二宝洗澡了，主卫凉飕飕的", "gold": {"intent": "控制", "device": ["热水器", "主卫浴霸"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0266", "home": "acc-family4", "text": "楼下广场舞又开始了", "gold": {"intent": "无关"}}
+{"id": "W3-0267", "home": "acc-family4", "text": "小明家有三盏灯，关掉一盏还剩几盏", "gold": {"intent": "无关"}}
+{"id": "W3-0268", "home": "acc-family4", "text": "小兔子轻轻关上门，躲在屋里不出来", "gold": {"intent": "无关"}}
+{"id": "W3-0269", "home": "acc-family4", "text": "Siri，定个七点的闹钟", "gold": {"intent": "无关"}}
+{"id": "W3-0270", "home": "acc-family4", "text": "新风的滤芯还能用多久", "gold": {"intent": "查询", "device": "全屋新风"}}
+{"id": "W3-0271", "home": "acc-family4", "text": "客卫冷得跟冰窖似的", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "W3-0272", "home": "acc-family4", "text": "开一下烤箱", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}}
+{"id": "W3-0273", "home": "acc-family4", "text": "把大宝房间的窗帘拉上", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "关闭或停止"}}
+{"id": "W3-0274", "home": "acc-family4", "text": "小易，把那个加湿的开开，嗓子干", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}}
+{"id": "W3-0275", "home": "acc-family4", "text": "不对不对，是二宝房间灯", "gold": {"intent": "控制", "device": "二宝房间灯"}}
+{"id": "W3-0276", "home": "acc-family4", "text": "小熊不哭，我给你开灯灯", "gold": {"intent": "无关"}}
+{"id": "W3-0277", "home": "acc-family4", "text": "嗯嗯，空调开着呢，孩子们都睡了", "gold": {"intent": "无关"}}
+{"id": "W3-0278", "home": "acc-family4", "text": "老公，你把晾衣架降下来，我够不着", "gold": {"intent": "无关"}}
+{"id": "W3-0279", "home": "acc-family4", "text": "大宝，再看五分钟电视就关了啊", "gold": {"intent": "无关"}}
+{"id": "W3-0280", "home": "acc-family4", "text": "热水器烧好了没，要给孩子洗澡", "gold": {"intent": "查询", "device": "热水器"}}
+{"id": "W3-0281", "home": "acc-family4", "text": "大宝屋的空调，等他睡熟了再关", "gold": {"intent": "控制", "device": "大宝房间空调", "action": ["关闭或停止", "设为指定的数值或模式"]}}
+{"id": "W3-0282", "home": "acc-family4", "text": "等二宝睡着了，小夜灯调暗一点", "gold": {"intent": "控制", "device": "二宝小夜灯", "action": ["调低或减小", "设为指定的数值或模式"]}}
+{"id": "W3-0283", "home": "acc-family4", "text": "动画片先停一下，吃完饭再看", "gold": {"intent": "控制", "device": "客厅电视", "action": "暂停"}}
+{"id": "W3-0284", "home": "acc-family4", "text": "客厅空调调低一度", "gold": {"intent": "控制", "device": "客厅空调", "action": "调低或减小"}}
+{"id": "W3-0285", "home": "acc-family4", "text": "书房灯打开，我要辅导作业", "gold": {"intent": "控制", "device": "书房灯", "action": "打开或启动"}}
+{"id": "W3-0286", "home": "acc-family4", "text": "谢谢小易", "gold": {"intent": "无关"}}
+{"id": "W3-0287", "home": "acc-family4", "text": "小易，你几岁了呀", "gold": {"intent": "无关"}}
+{"id": "W3-0288", "home": "acc-family4", "text": "小易，讲个恐龙的故事", "gold": {"intent": "无关"}}
+{"id": "W3-0289", "home": "acc-family4", "text": "二宝，快去叫爸爸把热水器打开", "gold": {"intent": "无关"}}
+{"id": "W3-0290", "home": "acc-family4", "text": "扫地机器人跑哪屋去了，半天没见着", "gold": {"intent": "查询", "device": "扫地机器人"}}
+{"id": "W3-0291", "home": "acc-family4", "text": "小易……二宝那屋的灯……关了吧……", "gold": {"intent": "控制", "device": ["二宝房间灯", "二宝小夜灯"], "action": "关闭或停止"}}
+{"id": "W3-0292", "home": "acc-family4", "text": "哎呀这厨房暗得，葱和蒜都分不清了", "gold": {"intent": "控制", "device": "厨房灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "W3-0293", "home": "acc-family4", "text": "客厅大吊灯开开", "gold": {"intent": "控制", "device": "客厅主灯", "action": "打开或启动"}}
+{"id": "W3-0294", "home": "acc-family4", "text": "主卧灯关一下，我躺会儿", "gold": {"intent": "控制", "device": "主卧灯", "action": "关闭或停止"}}
+{"id": "W3-0295", "home": "acc-family4", "text": "大宝屋里的大灯开一下，他要写作业", "gold": {"intent": "控制", "device": "大宝房间灯", "action": "打开或启动"}}
+{"id": "W3-0296", "home": "acc-family4", "text": "你们家这新风装下来多少钱", "gold": {"intent": "无关"}}
+{"id": "W3-0297", "home": "acc-family4", "text": "油烟机的油盒满了，你周末洗洗", "gold": {"intent": "无关"}}
+{"id": "W3-0298", "home": "acc-family4", "text": "爸爸说今年夏天空调要少开", "gold": {"intent": "无关"}}
+{"id": "W3-0299", "home": "acc-family4", "text": "对，洗碗机是嵌入式的，你家柜子得量一下", "gold": {"intent": "无关"}}
+{"id": "W3-0300", "home": "acc-family4", "text": "净水器滤芯是不是该换了", "gold": {"intent": "查询", "device": "净水器"}}

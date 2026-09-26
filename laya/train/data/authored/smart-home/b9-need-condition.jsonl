@@ -174,7 +174,6 @@
 {"home": "elder", "text": "这段相声干巴巴的，一点不好笑", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "townhouse", "text": "上回去北京出差，干得嘴都裂了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "apartment", "text": "客厅现在湿度多少", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "need-contrast"]}
-{"home": "northflat", "text": "主卧加湿器里还有水吗", "intent": "查询", "device": "主卧加湿器", "tags": ["status-query", "need-contrast"]}
 {"home": "townhouse", "text": "地下室除湿机在转吗", "intent": "查询", "device": "地下室除湿机", "tags": ["status-query", "need-contrast"]}
 {"home": "family3", "text": "儿童房加湿器开着没", "intent": "查询", "device": "儿童房加湿器", "tags": ["status-query", "need-contrast"]}
 {"home": "family3", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
@@ -262,7 +261,6 @@
 {"home": "pets", "text": "帮我记一下，周六洗床单", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "kids", "text": "老公，宝宝衣服晾好了没", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "townhouse", "text": "干衣机里那几件衬衫烘好没", "intent": "查询", "device": "干衣机", "tags": ["status-query", "need-contrast"]}
-{"home": "family3", "text": "阳台洗衣机还有多久洗完", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "need-contrast"]}
 {"home": "duplex", "text": "二楼晾衣架现在是升着还是降着", "intent": "查询", "device": "二楼晾衣架", "tags": ["status-query", "need-contrast"]}
 {"home": "mega", "text": "烘干机还剩几分钟", "intent": "查询", "device": "烘干机", "tags": ["status-query", "need-contrast"]}
 {"home": "rental", "text": "公共洗衣机现在有人用吗", "intent": "查询", "device": "公共洗衣机", "tags": ["status-query", "need-contrast"]}

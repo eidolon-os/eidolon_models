@@ -157,7 +157,6 @@
 {"home": "apartment", "text": "智能音箱能定闹钟吗", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
 {"home": "apartment", "text": "智能音箱放点轻音乐", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["boundary", "question-vs-control"]}
 {"home": "apartment", "text": "扫地机器人一次能扫多大面积", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
-{"home": "apartment", "text": "扫地机器人把客厅扫一遍", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["boundary", "question-vs-control"]}
 {"home": "apartment", "text": "热水器烧满一箱要多久", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
 {"home": "apartment", "text": "热水器现在就烧", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["boundary", "question-vs-control"]}
 {"home": "apartment", "text": "摄像头晚上能看清吗", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
@@ -175,7 +174,6 @@
 {"home": "house", "text": "浴霸的暖风和灯暖哪个暖和", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "浴霸开暖风", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "投影仪白天看得清吗", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
-{"home": "house", "text": "投影仪亮度调高", "intent": "控制", "device": "投影仪", "action": "调高或增大", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "门铃能换铃声吗", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "门铃换成第二个铃声", "intent": "控制", "device": "门铃", "action": "设为指定的数值或模式", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "安防警报误报怎么办", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
@@ -193,7 +191,6 @@
 {"home": "apartment", "text": "加湿器一直喷着别停", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "扫地机器人回充了吗", "intent": "查询", "device": "扫地机器人", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "扫地机器人自己回充了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
-{"home": "apartment", "text": "电饭煲煮好了没", "intent": "查询", "device": "电饭煲", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电饭煲煮好了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电饭煲保温着", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "热水器水温多少", "intent": "查询", "device": "热水器", "tags": ["boundary", "query-vs-control"]}
@@ -217,7 +214,6 @@
 {"home": "apartment", "text": "别再开着电视了，费电", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["boundary", "negation"]}
 {"home": "apartment", "text": "空调别再吹了，冷死了", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["boundary", "negation"]}
 {"home": "apartment", "text": "空调不用开，开窗就行", "intent": "无关", "tags": ["boundary", "negation"]}
-{"home": "apartment", "text": "灯不用关，我一会儿还回来", "intent": "无关", "tags": ["boundary", "negation"]}
 {"home": "apartment", "text": "音箱别放了，烦", "intent": "控制", "device": "智能音箱", "action": "关闭或停止", "tags": ["boundary", "negation"]}
 {"home": "apartment", "text": "不用了，不听歌了", "intent": "无关", "tags": ["boundary", "negation"]}
 {"home": "apartment", "text": "取消，窗帘不拉了", "intent": "无关", "tags": ["boundary", "negation"]}

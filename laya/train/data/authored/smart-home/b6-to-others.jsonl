@@ -192,7 +192,6 @@
 {"home": "family3", "text": "姥姥，主卧加湿器没水了，您帮我加一点", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
 {"home": "kids", "text": "老公，你去婴儿房看一下，夜灯是不是没开", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
 {"home": "kids", "text": "月嫂，温奶器里的奶您先试一下温度再喂", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
-{"home": "brand", "text": "老公，方太油烟机的油杯满了，你倒一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
 {"home": "brand", "text": "你起来的时候顺手把小天鹅洗衣机里的衣服晾上", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
 {"home": "office", "text": "老婆，我开会呢，你帮我去厨房把咖啡机开了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
 {"home": "office", "text": "你出去的时候把门锁带上，我在开会", "intent": "无关", "tags": ["non-command", "to-others", "family"]}

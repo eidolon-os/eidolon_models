@@ -223,7 +223,6 @@
 {"home": "apartment", "text": "窗帘别动，就这样半拉着", "intent": "无关", "tags": ["boundary", "keep"]}
 {"home": "apartment", "text": "扫地机器人正扫着呢，让它扫完，别叫停", "intent": "无关", "tags": ["boundary", "keep"]}
 {"home": "apartment", "text": "刚才说关电视的那句不算", "intent": "无关", "tags": ["boundary", "keep"]}
-{"home": "apartment", "text": "算了，热水器不用开了，我明天早上再洗", "intent": "无关", "tags": ["boundary", "keep"]}
 {"home": "apartment", "text": "床头灯不用调，这个亮度正好", "intent": "无关", "tags": ["boundary", "keep"]}
 {"home": "apartment", "text": "加湿器别关，让它一直开着", "intent": "无关", "tags": ["boundary", "keep"]}
 {"home": "apartment", "text": "门先别锁，我下楼扔个垃圾马上回来", "intent": "无关", "tags": ["boundary", "keep"]}
@@ -345,7 +344,6 @@
 {"home": "kids", "text": "婴儿房空调风别这么大，对着孩子吹呢", "intent": "控制", "device": "婴儿房空调", "action": ["调低或减小", "设为指定的数值或模式"], "tags": ["boundary", "stop-running"]}
 {"home": "mega", "text": "影音室音响先停一下，门口有人", "intent": "控制", "device": "影音室音响", "action": "暂停", "tags": ["boundary", "stop-running"]}
 {"home": "mega", "text": "厨房空调别吹了，菜都凉了", "intent": "控制", "device": "厨房空调", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}
-{"home": "minimal", "text": "扫地机别转了，猫都吓跑了", "intent": "控制", "device": "扫地机", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}
 {"home": "minimal", "text": "音箱声音别那么大，我在打电话", "intent": "控制", "device": "音箱", "action": "调低或减小", "tags": ["boundary", "stop-running"]}
 {"home": "minimal", "text": "空调别再吹冷风了，我都盖两床被子了", "intent": "控制", "device": "空调", "action": ["关闭或停止", "调高或增大"], "tags": ["boundary", "stop-running"]}
 {"home": "office", "text": "扫地机别扫了，我要开视频会", "intent": "控制", "device": "扫地机", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}

@@ -1,0 +1,19 @@
+{
+ "intent": {
+  "agree": 1.0,
+  "n": 360
+ },
+ "device": {
+  "agree": 1.0,
+  "n": 144
+ },
+ "action": {
+  "agree": 1.0,
+  "n": 102
+ },
+ "strict_same_set": {
+  "device": 0.9792,
+  "action": 0.902
+ },
+ "disagreements": 0
+}

@@ -225,7 +225,6 @@
 {"home": "apartment", "text": "智能门锁没电了从外面怎么打开", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
 {"home": "apartment", "text": "加湿器里能加自来水吗，会不会有白雾", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
 {"home": "house", "text": "地暖整个供暖季的燃气费一般多少", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
-{"home": "house", "text": "洗碗机能洗不粘锅吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
 {"home": "house", "text": "烤箱第一次用要先空烧吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
 {"home": "house", "text": "油烟机的油网用什么泡能洗干净", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
 {"home": "house", "text": "充电桩七千瓦的充满一辆车要几个小时", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}

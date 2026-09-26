@@ -58,7 +58,6 @@
 {"home": "pets", "text": "明天出差两天，猫狗在家没人喂", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-upcoming"], "note": "两台喂食器都要排好"}
 {"home": "pets", "text": "周末回娘家，猫饭得有着落", "intent": "控制", "device": "猫粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-upcoming"]}
 {"home": "pets", "text": "狗热得趴在瓷砖上直喘", "intent": "控制", "device": ["客厅空调", "卧室空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-third-party"]}
-{"home": "pets", "text": "猫粮喂食器今天出了几次粮", "intent": "查询", "device": "猫粮喂食器", "tags": ["status-query", "need-contrast"]}
 {"home": "pets", "text": "喂食器今天喂了几回", "intent": "查询", "device": ["猫粮喂食器", "狗粮喂食器"], "tags": ["status-query", "need-contrast"]}
 {"home": "pets", "text": "猫趴在窗台上晒太阳睡着了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "pets", "text": "狗刚啃完骨头，美得直摇尾巴", "intent": "无关", "tags": ["non-command", "need-contrast"]}
@@ -68,7 +67,6 @@
 {"home": "villa", "text": "猫围着食盆转圈圈", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-indirect"]}
 {"home": "villa", "text": "狗毛在地板上滚成球了", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-garden-pet", "cue-effect"]}
 {"home": "studio", "text": "猫碗都舔干净了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-object", "absent"]}
-{"home": "family3", "text": "狗饿得嗷嗷叫", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-third-party", "absent"]}
 {"home": "kids", "text": "狗盆里一粒粮都不剩了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-garden-pet", "cue-object", "absent"]}
 {"home": "brand", "text": "猫的水碗干了", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-garden-pet", "cue-object", "absent"]}
 {"home": "northflat", "text": "猫冻得在客厅缩成一团", "intent": "控制", "device": "客厅暖气阀", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-garden-pet", "cue-third-party"]}
@@ -237,7 +235,6 @@
 {"home": "kids", "text": "老公到门口了，两手抱着东西腾不出手", "intent": "控制", "device": "智能门锁", "action": ["打开或启动"], "tags": ["implicit-intent", "need-safety-event", "cue-third-party"]}
 {"home": "studio", "text": "快递员在门口说让我开下门", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "townhouse", "text": "心里犯嘀咕，门到底锁没锁", "intent": "查询", "device": "入户门锁", "tags": ["status-query", "need-contrast"]}
-{"home": "minimal", "text": "门锁上了吗", "intent": "查询", "device": "门锁", "tags": ["status-query", "need-contrast"]}
 {"home": "townhouse", "text": "有人在按门铃", "intent": "查询", "device": "可视门铃", "tags": ["status-query", "implicit-query", "need-safety-event", "cue-effect"], "note": "想知道门外 / 屋里的情况、没说\"打开\" → 查询摄像头 / 门铃（v1：刚才是谁按的门铃 → 查询）"}
 {"home": "house", "text": "门口叮咚叮咚响，谁啊", "intent": "查询", "device": "门铃", "tags": ["status-query", "implicit-query", "need-safety-event", "cue-effect"], "note": "想知道门外 / 屋里的情况、没说\"打开\" → 查询摄像头 / 门铃（v1：刚才是谁按的门铃 → 查询）"}
 {"home": "villa", "text": "门铃响了，不知道是谁", "intent": "查询", "device": ["门铃", "摄像头"], "tags": ["status-query", "implicit-query", "need-safety-event", "cue-effect"], "note": "想知道门外 / 屋里的情况、没说\"打开\" → 查询摄像头 / 门铃（v1：刚才是谁按的门铃 → 查询）"}
@@ -283,7 +280,6 @@
 {"home": "elder", "text": "老太太说胸口闷得喘不上气", "intent": "控制", "device": "紧急呼叫按钮", "action": ["打开或启动"], "tags": ["implicit-intent", "need-safety-event", "cue-third-party"]}
 {"home": "apartment", "text": "我爸摔倒了，爬不起来", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"], "note": "没有呼叫按钮这类设备"}
 {"home": "elder", "text": "妈又忘了吃降压药", "intent": "控制", "device": "智能药盒", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-safety-event", "cue-indirect"], "note": "定时提醒药盒响铃提醒；按设备控制读"}
-{"home": "elder", "text": "厨房好像有股煤气味", "intent": "控制", "device": "燃气阀门", "action": ["关闭或停止"], "tags": ["implicit-intent", "need-safety-event", "cue-effect"]}
 {"home": "apartment", "text": "厨房怎么有煤气味", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"], "note": "厨房只有电饭煲"}
 {"home": "studio", "text": "屋里有股燃气味", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"]}
 {"home": "elder", "text": "燃气报警器刚才是不是响了", "intent": "查询", "device": "燃气报警器", "tags": ["status-query", "need-contrast"]}

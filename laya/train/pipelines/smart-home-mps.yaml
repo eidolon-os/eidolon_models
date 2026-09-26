@@ -68,6 +68,7 @@ steps:
     eval_set:
       - ../scenarios/smart-home/eval/locked-182.jsonl
       - ../scenarios/smart-home/eval/locked-v2-dev.jsonl
+      - ../scenarios/smart-home/eval/locked-v3-dev.jsonl    # 开发集 v3（误触发为主，2026-09-26 起）
     out: "{run}/eval"
     baseline: ../runs/r10/eval              # 上一版（通过门槛的最近版本）
     tolerance: 0.03

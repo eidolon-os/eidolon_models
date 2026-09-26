@@ -1,0 +1,59 @@
+{"id": "W1-0020", "home": "acc-family4", "text": "净水器滤芯还能用多久", "gold": {"intent": "查询", "device": "净水器"}, "near": "smart-home-v3:B-180"}
+{"id": "W1-0029", "home": "acc-family4", "text": "书房空调开到二十六度", "gold": {"intent": "控制", "device": "书房空调", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "smart-home-v2:v2-08-018"}
+{"id": "W1-0046", "home": "acc-family4", "text": "主卧窗帘拉上，我眯一会儿", "gold": {"intent": "控制", "device": "主卧窗帘", "action": "关闭或停止"}, "near": "smart-home-v3:A-043"}
+{"id": "W1-0047", "home": "acc-family4", "text": "主卧空调调成睡眠模式", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}, "near": "smart-home:03-06"}
+{"id": "W1-0092", "home": "acc-family4", "text": "洗碗机洗完了没", "gold": {"intent": "查询", "device": "洗碗机"}, "near": "smart-home:04-15"}
+{"id": "W1-0099", "home": "acc-family4", "text": "小易，这集放完就把电视关了", "gold": {"intent": "控制", "device": "客厅电视", "action": ["关闭或停止", "设为指定的数值或模式"]}, "near": "smart-home-v3:A-151"}
+{"id": "W1-0113", "home": "acc-family4", "text": "热水器现在水温多少度", "gold": {"intent": "查询", "device": "热水器"}, "near": "smart-home-v2:v2-04-028"}
+{"id": "W1-0153", "home": "acc-family4", "text": "扫地机器人回去充电", "gold": {"intent": "控制", "device": "扫地机器人", "action": "关闭或停止"}, "near": "smart-home:01-14"}
+{"id": "W1-0223", "home": "acc-senior", "text": "空调现在开的多少度", "gold": {"intent": "查询", "device": "空调"}, "near": "smart-home:04-05"}
+{"id": "W2-0018", "home": "acc-house", "text": "客厅冷飕飕的", "gold": {"intent": "控制", "device": "一楼地暖", "action": ["打开或启动", "调高或增大"]}, "near": "smart-home-v2:v2-02-017"}
+{"id": "W2-0019", "home": "acc-house", "text": "地暖现在设的多少度", "gold": {"intent": "查询", "device": "一楼地暖"}, "near": "smart-home-v3:B-072"}
+{"id": "W2-0026", "home": "acc-house", "text": "投影仪关了没", "gold": {"intent": "查询", "device": "客厅投影仪"}, "near": "smart-home:01-31"}
+{"id": "W2-0047", "home": "acc-house", "text": "厨房黑乎乎的，切菜都看不清", "gold": {"intent": "控制", "device": "厨房灯", "action": ["打开或启动", "调高或增大"]}, "near": "smart-home-v3:A-065"}
+{"id": "W2-0057", "home": "acc-house", "text": "蒸烤箱预热到两百度", "gold": {"intent": "控制", "device": "蒸烤箱", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "smart-home-v3:B-148"}
+{"id": "W2-0060", "home": "acc-house", "text": "蒸烤箱还剩几分钟", "gold": {"intent": "查询", "device": "蒸烤箱"}, "near": "smart-home-v3:A-040"}
+{"id": "W2-0065", "home": "acc-house", "text": "冰箱冷藏室调成五度", "gold": {"intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式"}, "near": "smart-home:01-26"}
+{"id": "W2-0142", "home": "acc-house", "text": "我先去冲个澡", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}, "near": "smart-home-v3:A-155"}
+{"id": "W2-0144", "home": "acc-house", "text": "热水器烧好了没", "gold": {"intent": "查询", "device": "热水器"}, "near": "smart-home-v3:A-105"}
+{"id": "W2-0168", "home": "acc-house", "text": "花园里的草都晒蔫了", "gold": {"intent": "控制", "device": "花园喷淋", "action": "打开或启动"}, "near": "smart-home-v2:v2-02-057"}
+{"id": "W2-0190", "home": "acc-house", "text": "大门锁好了没", "gold": {"intent": "查询", "device": "入户门锁"}, "near": "smart-home-v3:B-173"}
+{"id": "W2-0211", "home": "acc-couple", "text": "客厅空调开到二十六度", "gold": {"intent": "控制", "device": "客厅空调", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "smart-home-v3:B-144"}
+{"id": "W2-0232", "home": "acc-couple", "text": "扫地机回去充电吧", "gold": {"intent": "控制", "device": "扫地机", "action": "关闭或停止"}, "near": "smart-home:01-14"}
+{"id": "W2-0238", "home": "acc-couple", "text": "主卧空调设成睡眠模式", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}, "near": "smart-home:03-06"}
+{"id": "W2-0273", "home": "acc-couple", "text": "卫生间冷得跟冰窖似的", "gold": {"intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"]}, "near": "smart-home-v3:B-059"}
+{"id": "W4-0011", "home": "acc-house", "text": "花园喷淋开二十分钟", "gold": {"intent": "控制", "device": "花园喷淋", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "accept:W2-0166"}
+{"id": "W4-0022", "home": "acc-house", "text": "楼上主卧窗帘拉上", "gold": {"intent": "控制", "device": "二楼主卧窗帘", "action": "关闭或停止"}, "near": "smart-home-v2:v2-03-050"}
+{"id": "W4-0028", "home": "acc-house", "text": "楼下地暖调到二十二度", "gold": {"intent": "控制", "device": "一楼地暖", "action": "设为指定的数值或模式"}, "near": "accept:W2-0017"}
+{"id": "W4-0030", "home": "acc-house", "text": "净化器调成睡眠模式", "gold": {"intent": "控制", "device": "全屋净化器", "action": "设为指定的数值或模式"}, "near": "smart-home-v2:v2-08-024"}
+{"id": "W4-0031", "home": "acc-house", "text": "蒸烤箱预热两百度", "gold": {"intent": "控制", "device": "蒸烤箱", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "smart-home-v3:B-148"}
+{"id": "W4-0032", "home": "acc-house", "text": "冰箱冷藏调到四度", "gold": {"intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式"}, "near": "smart-home:01-26"}
+{"id": "W4-0033", "home": "acc-house", "text": "晚上十点把花园灯关了", "gold": {"intent": "控制", "device": "花园灯", "action": ["关闭或停止", "设为指定的数值或模式"]}, "near": "accept:W2-0161"}
+{"id": "W4-0039", "home": "acc-house", "text": "把一楼的灯全关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}, "near": "accept:W2-0198"}
+{"id": "W4-0056", "home": "acc-house", "text": "客厅空调开一下", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}, "near": "accept:W2-0200"}
+{"id": "W4-0058", "home": "acc-house", "text": "洗衣机开始洗吧", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}, "near": "smart-home:09-10"}
+{"id": "W4-0077", "home": "acc-house", "text": "灯带换成暖黄色", "gold": {"intent": "控制", "device": "一楼客厅灯带", "action": "设为指定的数值或模式"}, "near": "smart-home-v2:v2-01-025"}
+{"id": "W4-0081", "home": "acc-house", "text": "车库门关了没", "gold": {"intent": "查询", "device": "车库门"}, "near": "smart-home:04-13"}
+{"id": "W4-0084", "home": "acc-house", "text": "冰箱冷藏室现在几度", "gold": {"intent": "查询", "device": "冰箱"}, "near": "smart-home:04-14"}
+{"id": "W4-0090", "home": "acc-house", "text": "洗衣机洗完了吗", "gold": {"intent": "查询", "device": "没有对应的设备"}, "near": "smart-home:04-15"}
+{"id": "W4-0106", "home": "acc-family4", "text": "电饭煲预约明早六点煮粥", "gold": {"intent": "控制", "device": "电饭煲", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "smart-home-v2:v2-09-013"}
+{"id": "W4-0107", "home": "acc-family4", "text": "大宝房间空调调到二十六度", "gold": {"intent": "控制", "device": "大宝房间空调", "action": "设为指定的数值或模式"}, "near": "accept:W1-0124"}
+{"id": "W4-0113", "home": "acc-family4", "text": "客厅窗帘拉上", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}, "near": "smart-home:01-06"}
+{"id": "W4-0127", "home": "acc-family4", "text": "扫地机器人回去充电", "gold": {"intent": "控制", "device": "扫地机器人", "action": "关闭或停止"}, "near": "smart-home:01-14"}
+{"id": "W4-0139", "home": "acc-family4", "text": "所有空调都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}, "near": "smart-home:06-06"}
+{"id": "W4-0181", "home": "acc-family4", "text": "洗衣机还有多久洗完", "gold": {"intent": "查询", "device": "洗衣机"}, "near": "accept:W1-0037"}
+{"id": "W4-0185", "home": "acc-family4", "text": "净水器滤芯还能用多久", "gold": {"intent": "查询", "device": "净水器"}, "near": "smart-home-v3:B-180"}
+{"id": "W4-0187", "home": "acc-family4", "text": "扫地机器人扫到哪了", "gold": {"intent": "查询", "device": "扫地机器人"}, "near": "accept:W1-0034"}
+{"id": "W4-0188", "home": "acc-family4", "text": "热水器水烧热了没", "gold": {"intent": "查询", "device": "热水器"}, "near": "smart-home:04-06"}
+{"id": "W4-0189", "home": "acc-family4", "text": "新风显示PM2.5多少", "gold": {"intent": "查询", "device": "全屋新风"}, "near": "accept:W1-0017"}
+{"id": "W4-0204", "home": "acc-couple", "text": "把门锁上", "gold": {"intent": "控制", "device": "入户门锁", "action": "上锁"}, "near": "smart-home:01-19"}
+{"id": "W4-0211", "home": "acc-couple", "text": "床头小夜灯打开", "gold": {"intent": "控制", "device": "床头小夜灯", "action": "打开或启动"}, "near": "accept:W2-0242"}
+{"id": "W4-0217", "home": "acc-couple", "text": "客厅空调开到二十四度", "gold": {"intent": "控制", "device": "客厅空调", "action": ["打开或启动", "设为指定的数值或模式"]}, "near": "smart-home-v3:B-144"}
+{"id": "W4-0222", "home": "acc-couple", "text": "扫地机回去充电吧", "gold": {"intent": "控制", "device": "扫地机", "action": "关闭或停止"}, "near": "smart-home:01-14"}
+{"id": "W4-0254", "home": "acc-couple", "text": "主卧窗帘拉上", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "关闭或停止"}, "near": "smart-home-v3:B-168"}
+{"id": "W4-0257", "home": "acc-couple", "text": "主卧空调调成睡眠模式", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}, "near": "smart-home:03-06"}
+{"id": "W4-0259", "home": "acc-couple", "text": "电视背景灯带换成蓝色", "gold": {"intent": "控制", "device": "电视背景灯带", "action": "设为指定的数值或模式"}, "near": "accept:W2-0206"}
+{"id": "W4-0260", "home": "acc-couple", "text": "客厅吸顶灯亮一点", "gold": {"intent": "控制", "device": "客厅吸顶灯", "action": "调高或增大"}, "near": "accept:W2-0203"}
+{"id": "W4-0285", "home": "acc-couple", "text": "主卧加湿器还有水吗", "gold": {"intent": "查询", "device": "主卧加湿器"}, "near": "accept:W2-0249"}
+{"id": "W4-0287", "home": "acc-couple", "text": "客厅空调现在开的几度", "gold": {"intent": "查询", "device": "客厅空调"}, "near": "accept:W2-0213"}
+{"id": "W4-0288", "home": "acc-couple", "text": "热水器现在多少度", "gold": {"intent": "查询", "device": "热水器"}, "near": "accept:W2-0270"}

@@ -88,16 +88,13 @@
 {"home": "studio", "text": "吹风那个开到二档", "intent": "控制", "device": "风扇", "action": "设为指定的数值或模式", "tags": ["explicit-control", "alias", "function"]}
 {"home": "studio", "text": "往墙上放电影的那个打开", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control", "alias", "function"]}
 {"home": "studio", "text": "洗衣服那台暂停一下，我还有件没放", "intent": "控制", "device": "洗衣机", "action": "暂停", "tags": ["explicit-control", "alias", "function"]}
-{"home": "apartment", "text": "客厅大灯开开", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["room-disambiguation", "alias", "colloquial"]}
 {"home": "apartment", "text": "卧室顶灯调暗点", "intent": "控制", "device": "主卧灯", "action": "调低或减小", "tags": ["room-disambiguation", "alias", "colloquial"]}
 {"home": "apartment", "text": "台灯开一下，我看会儿书", "intent": "控制", "device": "床头灯", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "电饭锅煮上饭", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
-{"home": "apartment", "text": "晾衣杆升上去", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "扫地机出来转一圈", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "空净开到最大", "intent": "控制", "device": "空气净化器", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "电视机声音小点", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "小音箱放首歌", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
-{"home": "apartment", "text": "煤气热水器调到四十五度", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "门禁那个锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "apartment", "text": "监控打开看看门口", "intent": "控制", "device": "摄像头", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "house", "text": "电扇开开，热死了", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
@@ -115,8 +112,6 @@
 {"home": "villa", "text": "电风扇调到三档", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "villa", "text": "暖气关了吧，今天不冷", "intent": "控制", "device": "地暖", "action": "关闭或停止", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "villa", "text": "抽油烟的开大点", "intent": "控制", "device": "油烟机", "action": "调高或增大", "tags": ["explicit-control", "alias", "colloquial"]}
-{"home": "villa", "text": "投影切到HDMI", "intent": "控制", "device": "投影仪", "action": "设为指定的数值或模式", "tags": ["explicit-control", "alias", "colloquial"]}
-{"home": "villa", "text": "客厅吸顶灯亮一点", "intent": "控制", "device": "客厅主灯", "action": "调高或增大", "tags": ["room-disambiguation", "alias", "colloquial"]}
 {"home": "villa", "text": "卧室挂机开制冷", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation", "alias", "colloquial"]}
 {"home": "villa", "text": "烤炉预热二百度", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "villa", "text": "电饭锅保温", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["explicit-control", "alias", "colloquial"]}
@@ -148,11 +143,9 @@
 {"home": "elder", "text": "监控打开，我看看老爷子", "intent": "控制", "device": "客厅摄像头", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "family3", "text": "柜机风速调到自动", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "alias", "colloquial"]}
 {"home": "family3", "text": "干衣机开起来", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
-{"home": "family3", "text": "主卧大灯关了", "intent": "控制", "device": "主卧顶灯", "action": "关闭或停止", "tags": ["room-disambiguation", "alias", "colloquial"]}
 {"home": "family3", "text": "被单晾好了，晾衣竿给我摇上去", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "family3", "text": "燃气热水器开一下", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "kids", "text": "摇床开起来", "intent": "控制", "device": "电动摇篮", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
-{"home": "kids", "text": "暖奶器调到四十五度", "intent": "控制", "device": "温奶器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "kids", "text": "消毒柜开一下", "intent": "控制", "device": "奶瓶消毒柜", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "kids", "text": "宝宝监控打开", "intent": "控制", "device": "婴儿监视器", "action": "打开或启动", "tags": ["explicit-control", "alias", "colloquial"]}
 {"home": "kids", "text": "客厅立式空调调高两度", "intent": "控制", "device": "客厅空调", "action": "调高或增大", "tags": ["room-disambiguation", "alias", "colloquial"]}
@@ -234,7 +227,6 @@
 {"home": "family3", "text": "孩子屋那个加湿的开小点", "intent": "控制", "device": "儿童房加湿器", "action": "调低或减小", "tags": ["room-disambiguation", "alias", "location"]}
 {"home": "family3", "text": "我们屋的加湿器关了", "intent": "控制", "device": "主卧加湿器", "action": "关闭或停止", "tags": ["room-disambiguation", "alias", "location"]}
 {"home": "family3", "text": "大卧室窗帘拉上", "intent": "控制", "device": "主卧窗帘", "action": "关闭或停止", "tags": ["room-disambiguation", "alias", "location"]}
-{"home": "family3", "text": "客房的灯开一下", "intent": "控制", "device": "次卧顶灯", "action": "打开或启动", "tags": ["room-disambiguation", "alias", "location"]}
 {"home": "family3", "text": "沙发那边窗帘打开", "intent": "控制", "device": "客厅窗帘", "action": "打开或启动", "tags": ["room-disambiguation", "alias", "location"]}
 {"home": "family3", "text": "外面客厅那台柜机调到二十五", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "alias", "location"]}
 {"home": "family3", "text": "我们睡的那屋空调开开", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["room-disambiguation", "alias", "location"]}
@@ -267,7 +259,6 @@
 {"home": "apartment", "text": "浇花的那个开十分钟", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "apartment", "text": "给电动车充电那个开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "apartment", "text": "喂猫那个放一把粮", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home", "alias", "contrast-absent"]}
-{"home": "apartment", "text": "书房的灯关了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "house", "text": "洗澡水烧到四十度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "house", "text": "扫地的那个出来扫一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "house", "text": "床边那盏小灯灭了吧", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
@@ -308,7 +299,6 @@
 {"home": "rental", "text": "我屋那台电扇开一下，闷得慌", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "studio", "text": "厨房那盏灯打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
 {"home": "studio", "text": "床头台灯开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "alias", "contrast-absent"]}
-{"home": "apartment", "text": "洗澡水现在多少度了", "intent": "查询", "device": "热水器", "tags": ["status-query", "alias", "query"]}
 {"home": "apartment", "text": "扫地的那个扫完没有", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "alias", "query"]}
 {"home": "apartment", "text": "电饭锅里那锅米饭焖熟了吗", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "alias", "query"]}
 {"home": "apartment", "text": "屋里那个测温度的现在显示几度", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "alias", "query"]}

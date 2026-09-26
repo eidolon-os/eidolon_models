@@ -266,7 +266,6 @@
 {"home": "house", "text": "新风系统开一下", "intent": "控制", "device": "新风机", "action": "打开或启动", "tags": ["action-granularity", "fan-air"]}
 {"home": "house", "text": "新风风小点", "intent": "控制", "device": "新风机", "action": "调低或减小", "tags": ["action-granularity", "fan-air"]}
 {"home": "apartment", "text": "加湿器目标湿度改成六十", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["action-granularity", "fan-air"]}
-{"home": "apartment", "text": "加湿器雾小一点", "intent": "控制", "device": "加湿器", "action": "调低或减小", "tags": ["action-granularity", "fan-air"]}
 {"home": "apartment", "text": "加湿器雾开到最大", "intent": "控制", "device": "加湿器", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["action-granularity", "fan-air"]}
 {"home": "apartment", "text": "音箱这首歌先暂停", "intent": "控制", "device": "智能音箱", "action": "暂停", "tags": ["action-granularity", "media"]}
 {"home": "apartment", "text": "音箱关掉吧，不听了", "intent": "控制", "device": "智能音箱", "action": "关闭或停止", "tags": ["action-granularity", "media"]}

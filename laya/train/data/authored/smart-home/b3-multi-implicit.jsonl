@@ -201,7 +201,6 @@
 {"home": "apartment", "text": "天边乌云压过来了，阳台还晾着被子", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "situation"]}
 {"home": "apartment", "text": "天气预报说半小时后有雨，衣服还挂在阳台", "intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"], "tags": ["implicit-intent", "situation"]}
 {"home": "apartment", "text": "卫生间出来一路都是头发", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "situation"]}
-{"home": "apartment", "text": "猫砂被踢得满地都是", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "situation"]}
 {"home": "apartment", "text": "热水放了五分钟还是温吞的", "intent": "控制", "device": "热水器", "action": ["调高或增大", "打开或启动"], "tags": ["implicit-intent", "situation"]}
 {"home": "apartment", "text": "鞋柜那边臭烘烘的，一屋子味", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "situation"]}
 {"home": "apartment", "text": "家里有人抽过烟，味儿还没散", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "situation"]}

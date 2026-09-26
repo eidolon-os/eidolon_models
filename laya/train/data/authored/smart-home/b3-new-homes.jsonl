@@ -4,13 +4,11 @@
 {"home": "studio", "text": "空调风速小一点", "intent": "控制", "device": "空调", "action": "调低或减小", "tags": ["explicit-control"]}
 {"home": "studio", "text": "空调切成除湿模式", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "studio", "text": "窗帘拉上", "intent": "控制", "device": "窗帘", "action": "关闭或停止", "tags": ["explicit-control", "cross-home"]}
-{"home": "studio", "text": "窗帘开一半就行", "intent": "控制", "device": "窗帘", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "studio", "text": "风扇开到三档", "intent": "控制", "device": "风扇", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "studio", "text": "电扇关了吧，有点凉了", "intent": "控制", "device": "风扇", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "studio", "text": "投影仪打开", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "studio", "text": "音箱大声点", "intent": "控制", "device": "音箱", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "studio", "text": "音乐先停一下，我接个电话", "intent": "控制", "device": "音箱", "action": "暂停", "tags": ["explicit-control"]}
-{"home": "studio", "text": "扫地机开始扫吧", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "studio", "text": "扫地机先别扫了，暂停一下，我在打电话", "intent": "控制", "device": "扫地机", "action": "暂停", "tags": ["explicit-control"]}
 {"home": "studio", "text": "洗衣机开个快洗", "intent": "控制", "device": "洗衣机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "studio", "text": "热水器开一下", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
@@ -52,13 +50,11 @@
 {"home": "studio", "text": "音箱连蓝牙老断", "intent": "无关", "tags": ["non-command"]}
 {"home": "studio", "text": "洗衣机放卫生间里湿气太重了", "intent": "无关", "tags": ["non-command"]}
 {"home": "studio", "text": "门锁的电池一般能用多久啊", "intent": "无关", "tags": ["non-command"]}
-{"home": "family3", "text": "儿童房空调调到二十六度", "intent": "控制", "device": "儿童房空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "family3", "text": "次卧顶灯亮一点", "intent": "控制", "device": "次卧顶灯", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "family3", "text": "主卧顶灯关掉", "intent": "控制", "device": "主卧顶灯", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "family3", "text": "客厅空调开制热", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "family3", "text": "儿童房加湿器调到小档", "intent": "控制", "device": "儿童房加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "family3", "text": "空气净化器开自动模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
-{"home": "family3", "text": "主卧窗帘拉开", "intent": "控制", "device": "主卧窗帘", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "family3", "text": "客厅电视声音小一点，孩子在写作业", "intent": "控制", "device": "客厅电视", "action": "调低或减小", "tags": ["explicit-control"]}
 {"home": "family3", "text": "烘干机开始烘", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "family3", "text": "智能门锁锁一下", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control"]}
@@ -85,8 +81,6 @@
 {"home": "family3", "text": "晚上洗澡水不够热", "intent": "控制", "device": "热水器", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent"]}
 {"home": "family3", "text": "儿童房现在多少度", "intent": "查询", "device": "儿童房空调", "tags": ["status-query"]}
 {"home": "family3", "text": "洗衣机洗完了没有", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
-{"home": "family3", "text": "门锁上了没", "intent": "查询", "device": "智能门锁", "tags": ["status-query"]}
-{"home": "family3", "text": "主卧加湿器还有水吗", "intent": "查询", "device": "主卧加湿器", "tags": ["status-query"]}
 {"home": "family3", "text": "客厅空气怎么样，PM2.5多少", "intent": "查询", "device": "空气净化器", "tags": ["status-query"]}
 {"home": "family3", "text": "孩子屋的灯还开着吗", "intent": "查询", "device": "儿童房顶灯", "tags": ["status-query"]}
 {"home": "family3", "text": "烘干机还要多久", "intent": "查询", "device": "烘干机", "tags": ["status-query"]}
@@ -114,7 +108,6 @@
 {"home": "elder", "text": "走廊夜灯一直亮着吧", "intent": "控制", "device": "走廊夜灯", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "elder", "text": "老人房空调调到二十七度", "intent": "控制", "device": "老人房空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "elder", "text": "电视声音开大点，听不清", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["explicit-control"]}
-{"home": "elder", "text": "电视换到戏曲频道", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "elder", "text": "浴霸开暖风", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "elder", "text": "燃气阀门关上", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "elder", "text": "门帮我锁一下", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control", "cross-home"]}
@@ -148,8 +141,6 @@
 {"home": "elder", "text": "两个夜灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "elder", "text": "我要洗澡了，浴霸和过道的夜灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "elder", "text": "厨房不用了，燃气关了，客厅灯也关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
-{"home": "elder", "text": "客厅空调开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
-{"home": "elder", "text": "扫地机开始扫吧", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
 {"home": "elder", "text": "热水器开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
 {"home": "elder", "text": "窗帘拉上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "cross-home"]}
 {"home": "elder", "text": "次卧的灯打开，闺女今晚过来住", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
@@ -162,7 +153,6 @@
 {"home": "elder", "text": "电视上那个养生节目说的靠不靠谱", "intent": "无关", "tags": ["non-command"]}
 {"home": "elder", "text": "浴霸太费电了，你爸舍不得开", "intent": "无关", "tags": ["non-command"]}
 {"home": "elder", "text": "摄像头装那儿我总觉得有人盯着", "intent": "无关", "tags": ["non-command"]}
-{"home": "duplex", "text": "楼梯灯打开", "intent": "控制", "device": "楼梯灯", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "duplex", "text": "一楼餐厅灯调暗一点", "intent": "控制", "device": "一楼餐厅灯", "action": "调低或减小", "tags": ["explicit-control"]}
 {"home": "duplex", "text": "一楼客厅窗帘关上", "intent": "控制", "device": "一楼客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "duplex", "text": "一楼客厅电视换到HDMI2", "intent": "控制", "device": "一楼客厅电视", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
@@ -174,13 +164,11 @@
 {"home": "duplex", "text": "浴霸开换气", "intent": "控制", "device": "二楼浴霸", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "duplex", "text": "门帮我锁一下", "intent": "控制", "device": "一楼门锁", "action": "上锁", "tags": ["explicit-control", "cross-home"]}
 {"home": "duplex", "text": "把灯关了", "intent": "控制", "device": ["一楼客厅灯", "一楼餐厅灯", "楼梯灯", "二楼走廊灯", "二楼主卧灯", "二楼书房灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "cross-home"]}
-{"home": "duplex", "text": "扫地机开始扫吧", "intent": "控制", "device": ["一楼扫地机", "二楼扫地机"], "action": "打开或启动", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "duplex", "text": "窗帘拉上", "intent": "控制", "device": ["一楼客厅窗帘", "二楼主卧窗帘"], "action": "关闭或停止", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "duplex", "text": "楼上的扫地机扫一下", "intent": "控制", "device": "二楼扫地机", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "duplex", "text": "楼下扫地机先停了", "intent": "控制", "device": "一楼扫地机", "action": ["关闭或停止", "暂停"], "tags": ["room-disambiguation"]}
 {"home": "duplex", "text": "楼上走廊的灯开开", "intent": "控制", "device": "二楼走廊灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "duplex", "text": "楼下客厅空调关了", "intent": "控制", "device": "一楼客厅空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
-{"home": "duplex", "text": "卧室空调调低一度", "intent": "控制", "device": "二楼主卧空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
 {"home": "duplex", "text": "书房的灯亮一些", "intent": "控制", "device": "二楼书房灯", "action": "调高或增大", "tags": ["room-disambiguation"]}
 {"home": "duplex", "text": "楼上卧室窗帘打开", "intent": "控制", "device": "二楼主卧窗帘", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "duplex", "text": "上楼那段的灯打开", "intent": "控制", "device": "楼梯灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
@@ -196,7 +184,6 @@
 {"home": "duplex", "text": "二楼扫地机扫完了没", "intent": "查询", "device": "二楼扫地机", "tags": ["status-query"]}
 {"home": "duplex", "text": "楼下扫地机现在跑到哪儿了", "intent": "查询", "device": "一楼扫地机", "tags": ["status-query"]}
 {"home": "duplex", "text": "书房现在几度", "intent": "查询", "device": "二楼书房空调", "tags": ["status-query"]}
-{"home": "duplex", "text": "洗碗机还有多久洗好", "intent": "查询", "device": "一楼洗碗机", "tags": ["status-query"]}
 {"home": "duplex", "text": "大门锁了吗", "intent": "查询", "device": "一楼门锁", "tags": ["status-query"]}
 {"home": "duplex", "text": "楼梯灯是不是一直亮着", "intent": "查询", "device": "楼梯灯", "tags": ["status-query"]}
 {"home": "duplex", "text": "楼上楼下的灯全关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
@@ -282,14 +269,12 @@
 {"home": "rental", "text": "公共洗衣机先暂停，我忘拿兜里的钥匙了", "intent": "控制", "device": "公共洗衣机", "action": "暂停", "tags": ["explicit-control"]}
 {"home": "rental", "text": "热水器开一下", "intent": "控制", "device": "公共热水器", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "rental", "text": "门帮我锁一下", "intent": "控制", "device": "公共大门锁", "action": "上锁", "tags": ["explicit-control", "cross-home"]}
-{"home": "rental", "text": "扫地机开始扫吧", "intent": "控制", "device": "公共区扫地机", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "rental", "text": "把灯关了", "intent": "控制", "device": ["我房间的灯", "我房间的台灯", "公共客厅灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "rental", "text": "我屋里空调关了", "intent": "控制", "device": "我房间空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "rental", "text": "外面客厅的空调开一下", "intent": "控制", "device": "公共区空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "rental", "text": "客厅的灯关了，室友都睡了", "intent": "控制", "device": "公共客厅灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "rental", "text": "我这屋的大灯打开", "intent": "控制", "device": "我房间的灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "rental", "text": "桌上那个小灯关一下", "intent": "控制", "device": "我房间的台灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
-{"home": "rental", "text": "客厅空调调低两度", "intent": "控制", "device": "公共区空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
 {"home": "rental", "text": "自己屋的灯暗一点", "intent": "控制", "device": ["我房间的灯", "我房间的台灯"], "action": "调低或减小", "tags": ["room-disambiguation"]}
 {"home": "rental", "text": "我这屋闷热得睡不着", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "rental", "text": "没暖气真遭罪，我屋冷得要命", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
@@ -301,8 +286,6 @@
 {"home": "rental", "text": "电热毯插了一晚上，怕不安全", "intent": "控制", "device": "我房间插座", "action": "关闭或停止", "tags": ["implicit-intent"]}
 {"home": "rental", "text": "大门锁上了吗", "intent": "查询", "device": "公共大门锁", "tags": ["status-query"]}
 {"home": "rental", "text": "公共洗衣机现在有人在用吗", "intent": "查询", "device": "公共洗衣机", "tags": ["status-query"]}
-{"home": "rental", "text": "我房间现在多少度", "intent": "查询", "device": "我房间空调", "tags": ["status-query"]}
-{"home": "rental", "text": "客厅灯是不是还开着", "intent": "查询", "device": "公共客厅灯", "tags": ["status-query"]}
 {"home": "rental", "text": "插座现在通着电吗", "intent": "查询", "device": "我房间插座", "tags": ["status-query"]}
 {"home": "rental", "text": "加湿器还剩多少水", "intent": "查询", "device": "我房间加湿器", "tags": ["status-query"]}
 {"home": "rental", "text": "我出门了，我屋里的全关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}

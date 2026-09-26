@@ -50,16 +50,13 @@
 {"home": "apartment", "text": "我想买个新的家湿器", "intent": "无关", "tags": ["asr-noise", "homophone"]}
 {"home": "apartment", "text": "帮我定个闹忠七点", "intent": "无关", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "书房的等关了", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["asr-noise", "homophone"]}
-{"home": "house", "text": "餐厅掉灯打开", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "餐厅吊登暗一点", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "落地伞开一下", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "落地山风大一点", "intent": "控制", "device": "落地扇", "action": "调高或增大", "tags": ["asr-noise", "homophone"]}
-{"home": "house", "text": "地暖开到二十2度", "intent": "控制", "device": "地暖", "action": "设为指定的数值或模式", "tags": ["asr-noise", "digit-mix"]}
 {"home": "house", "text": "帝暖关掉", "intent": "控制", "device": "地暖", "action": "关闭或停止", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "新风几开大点", "intent": "控制", "device": "新风机", "action": "调高或增大", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "冰想调冷一点", "intent": "控制", "device": "冰箱", "action": "调低或减小", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "洗碗几启动", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
-{"home": "house", "text": "烤箱预热到一百8十", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["asr-noise", "digit-mix"]}
 {"home": "house", "text": "油烟机关到", "intent": "控制", "device": "油烟机", "action": "关闭或停止", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "把鱼霸开一下暖风", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
 {"home": "house", "text": "投影一打开", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
@@ -87,7 +84,6 @@
 {"home": "villa", "text": "床帘拉上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["asr-noise", "homophone"]}
 {"home": "villa", "text": "充电装暂停", "intent": "控制", "device": "充电桩", "action": "暂停", "tags": ["asr-noise", "homophone"]}
 {"home": "villa", "text": "呃门所嗯上锁", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["asr-noise", "filler"]}
-{"home": "villa", "text": "洗碗几洗好了没", "intent": "查询", "device": "洗碗机", "tags": ["asr-noise", "homophone"]}
 {"home": "villa", "text": "家湿器该换滤芯了吗", "intent": "无关", "tags": ["asr-noise", "homophone"]}
 {"home": "villa", "text": "少地机器人卡在沙发底下了", "intent": "无关", "tags": ["asr-noise", "homophone"]}
 {"home": "apartment", "text": "空调晚上开多少度睡得舒服", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
@@ -119,10 +115,8 @@
 {"home": "house", "text": "车库门给关了", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "洗衣机洗完了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电视音量是三十吗", "intent": "查询", "device": "电视", "tags": ["boundary", "query-vs-control"]}
-{"home": "apartment", "text": "电视音量调到三十", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "温湿度计显示多少", "intent": "查询", "device": "温湿度计", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "温湿度计显示的准不准", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
-{"home": "apartment", "text": "门锁上了没", "intent": "查询", "device": "智能门锁", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "门锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["boundary", "query-vs-control"]}
 {"home": "house", "text": "花园浇水阀在浇吗", "intent": "查询", "device": "花园浇水阀", "tags": ["boundary", "query-vs-control"]}
 {"home": "house", "text": "花园浇水阀浇一下", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动", "tags": ["boundary", "query-vs-control"]}

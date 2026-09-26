@@ -4,8 +4,6 @@
 {"home": "mega", "text": "扫地机扫一下", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "mega", "text": "烘干机烘一个小时", "intent": "控制", "device": "烘干机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "mega", "text": "把晾衣架升到顶", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control"]}
-{"home": "mega", "text": "主卫浴霸开个暖风", "intent": "控制", "device": "主卫浴霸", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
-{"home": "mega", "text": "电视换到体育频道", "intent": "控制", "device": "客厅电视", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "mega", "text": "热水器烧上", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "mega", "text": "把灯关了", "intent": "控制", "device": ["客厅灯", "餐厅灯", "厨房灯", "主卧灯", "次卧灯", "书房灯", "影音室灯", "衣帽间灯", "保姆房灯", "茶室灯", "玄关灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "mega", "text": "空调开到二十五度", "intent": "控制", "device": ["客厅空调", "餐厅空调", "厨房空调", "主卧空调", "次卧空调", "书房空调", "影音室空调", "衣帽间空调", "保姆房空调", "茶室空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
@@ -18,7 +16,6 @@
 {"home": "mega", "text": "喝茶那间屋的空调开一下", "intent": "控制", "device": "茶室空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "mega", "text": "书房那幅窗帘拉上", "intent": "控制", "device": "书房窗帘", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "mega", "text": "卧室的灯开一下", "intent": "控制", "device": ["主卧灯", "次卧灯"], "action": "打开或启动", "tags": ["room-disambiguation"]}
-{"home": "mega", "text": "厨房空调关了吧", "intent": "控制", "device": "厨房空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "mega", "text": "主卧净化器调到最高档", "intent": "控制", "device": "主卧净化器", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["room-disambiguation"]}
 {"home": "mega", "text": "客房的空调关了", "intent": "控制", "device": "次卧空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "mega", "text": "餐厅灯调暗一点", "intent": "控制", "device": "餐厅灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
@@ -39,7 +36,6 @@
 {"home": "mega", "text": "洗衣机洗完了没", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
 {"home": "mega", "text": "主卧净化器显示空气质量怎么样", "intent": "查询", "device": "主卧净化器", "tags": ["status-query"]}
 {"home": "mega", "text": "书房窗帘关上了吗", "intent": "查询", "device": "书房窗帘", "tags": ["status-query"]}
-{"home": "mega", "text": "扫地机扫到哪个屋了", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
 {"home": "mega", "text": "我要睡了，除了主卧，别的屋灯全关", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "mega", "text": "所有空调都调到二十六度", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式", "tags": ["multi-device"]}
 {"home": "mega", "text": "电影模式：影音室灯关掉，投影仪和音响打开", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["multi-device"]}
@@ -131,7 +127,6 @@
 {"home": "countryside", "text": "屋里的灯开开", "intent": "控制", "device": ["堂屋灯", "卧室灯", "储物间灯"], "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "countryside", "text": "空调开到二十五度", "intent": "控制", "device": ["堂屋空调", "卧室空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "countryside", "text": "睡觉那屋空调关了", "intent": "控制", "device": "卧室空调", "action": "关闭或停止", "tags": ["room-disambiguation"]}
-{"home": "countryside", "text": "客厅空调开一下", "intent": "控制", "device": "堂屋空调", "action": "打开或启动", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "countryside", "text": "门关上", "intent": "控制", "device": ["大门", "卷帘门"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "countryside", "text": "院门打开", "intent": "控制", "device": "大门", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "countryside", "text": "放杂物那间的灯开一下", "intent": "控制", "device": "储物间灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
@@ -162,10 +157,8 @@
 {"home": "countryside", "text": "早上起来，大门打开，水泵也开上", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "countryside", "text": "猪圈的灯打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "countryside", "text": "鸡舍摄像头打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
-{"home": "countryside", "text": "厨房灯开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "countryside", "text": "储物间空调打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "countryside", "text": "扫地机扫一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
-{"home": "countryside", "text": "喂食器放一份粮", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
 {"home": "countryside", "text": "这太阳能热水器装了有十来年了", "intent": "无关", "tags": ["non-command"]}
 {"home": "countryside", "text": "水泵一响，半夜听得清清楚楚", "intent": "无关", "tags": ["non-command"]}
 {"home": "countryside", "text": "老辈人说鸡舍开着灯鸡下蛋多", "intent": "无关", "tags": ["non-command"]}
@@ -187,7 +180,6 @@
 {"home": "pets", "text": "音箱给狗放点白噪音", "intent": "控制", "device": "音箱", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "pets", "text": "洗衣机把狗窝垫子洗一下", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "pets", "text": "门锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control", "cross-home"]}
-{"home": "pets", "text": "喂食器放一份粮", "intent": "控制", "device": ["猫粮喂食器", "狗粮喂食器"], "action": "打开或启动", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "pets", "text": "阳台那个喂食器喂一下", "intent": "控制", "device": "狗粮喂食器", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "pets", "text": "客厅的喂食器出粮", "intent": "控制", "device": "猫粮喂食器", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "pets", "text": "给狗喂点吃的", "intent": "控制", "device": "狗粮喂食器", "action": "打开或启动", "tags": ["room-disambiguation"]}
@@ -202,7 +194,6 @@
 {"home": "pets", "text": "狗在阳台等开饭呢", "intent": "控制", "device": "狗粮喂食器", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "pets", "text": "狗热得直吐舌头", "intent": "控制", "device": ["客厅空调", "卧室空调"], "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "qa-union"]}
 {"home": "pets", "text": "猫最近老不爱喝水，得让水流起来", "intent": "控制", "device": "宠物饮水机", "action": "打开或启动", "tags": ["implicit-intent"]}
-{"home": "pets", "text": "猫今天吃了几顿", "intent": "查询", "device": "猫粮喂食器", "tags": ["status-query"]}
 {"home": "pets", "text": "狗粮喂食器里还剩多少粮", "intent": "查询", "device": "狗粮喂食器", "tags": ["status-query"]}
 {"home": "pets", "text": "猫砂盆满了没", "intent": "查询", "device": "智能猫砂盆", "tags": ["status-query"]}
 {"home": "pets", "text": "猫今天上了几次厕所", "intent": "查询", "device": "智能猫砂盆", "tags": ["status-query"]}
@@ -210,8 +201,6 @@
 {"home": "pets", "text": "烘干箱还要多久", "intent": "查询", "device": "宠物烘干箱", "tags": ["status-query"]}
 {"home": "pets", "text": "摄像头里能看到猫在哪吗", "intent": "查询", "device": "宠物摄像头", "tags": ["status-query"]}
 {"home": "pets", "text": "净化器现在PM2.5多少", "intent": "查询", "device": "空气净化器", "tags": ["status-query"]}
-{"home": "pets", "text": "扫地机扫完了没", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
-{"home": "pets", "text": "客厅空调现在几度", "intent": "查询", "device": "客厅空调", "tags": ["status-query"]}
 {"home": "pets", "text": "上班去了，两个喂食器都定好中午那顿", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式", "tags": ["multi-device"]}
 {"home": "pets", "text": "我走了，灯都关了，宠物摄像头打开", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["multi-device"]}
 {"home": "pets", "text": "两台喂食器都加一顿", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
@@ -271,7 +260,6 @@
 {"home": "kids", "text": "摇篮还在摇吗", "intent": "查询", "device": "电动摇篮", "tags": ["status-query"]}
 {"home": "kids", "text": "夜灯还亮着吗", "intent": "查询", "device": "婴儿房夜灯", "tags": ["status-query"]}
 {"home": "kids", "text": "婴儿监视器刚才报警了吗", "intent": "查询", "device": "婴儿监视器", "tags": ["status-query"]}
-{"home": "kids", "text": "洗衣机还有多久洗完", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
 {"home": "kids", "text": "宝宝睡觉了：大灯关掉，夜灯打开，摇篮摇起来", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["multi-device"]}
 {"home": "kids", "text": "夜里喂奶，夜灯打开，温奶器热上", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "kids", "text": "婴儿房窗帘拉上，空调调到二十六度", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["multi-device"]}
@@ -295,7 +283,6 @@
 {"home": "office", "text": "显示器插座断电", "intent": "控制", "device": "显示器插座", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "office", "text": "显示器插座通电", "intent": "控制", "device": "显示器插座", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "office", "text": "书桌灯调到护眼模式", "intent": "控制", "device": "书桌灯", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
-{"home": "office", "text": "书桌灯亮一点", "intent": "控制", "device": "书桌灯", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "office", "text": "咖啡机做一杯美式", "intent": "控制", "device": "咖啡机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "cross-home"]}
 {"home": "office", "text": "咖啡机来杯浓缩", "intent": "控制", "device": "咖啡机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "office", "text": "空调开到二十五度", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "cross-home"]}
@@ -304,7 +291,6 @@
 {"home": "office", "text": "音乐暂停", "intent": "控制", "device": "音箱", "action": "暂停", "tags": ["explicit-control"]}
 {"home": "office", "text": "窗帘拉开", "intent": "控制", "device": "电动窗帘", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "office", "text": "扫地机现在去扫一遍", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["explicit-control"]}
-{"home": "office", "text": "门锁一下", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["explicit-control"]}
 {"home": "office", "text": "把灯关了", "intent": "控制", "device": ["客厅灯", "卧室灯", "书桌灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "office", "text": "桌上那盏灯打开", "intent": "控制", "device": "书桌灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "office", "text": "客厅大灯关了", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
@@ -327,10 +313,8 @@
 {"home": "office", "text": "咖啡机水箱还有水吗", "intent": "查询", "device": "咖啡机", "tags": ["status-query"]}
 {"home": "office", "text": "咖啡做好了没", "intent": "查询", "device": "咖啡机", "tags": ["status-query"]}
 {"home": "office", "text": "空调开着没", "intent": "查询", "device": "空调", "tags": ["status-query"]}
-{"home": "office", "text": "新风机滤网还能用多久", "intent": "查询", "device": "新风机", "tags": ["status-query"]}
 {"home": "office", "text": "屋里二氧化碳浓度高不高", "intent": "查询", "device": "新风机", "tags": ["status-query"]}
 {"home": "office", "text": "窗帘现在开了多少", "intent": "查询", "device": "电动窗帘", "tags": ["status-query"]}
-{"home": "office", "text": "门锁了没", "intent": "查询", "device": "门锁", "tags": ["status-query"]}
 {"home": "office", "text": "开工了：书桌灯打开，显示器插座通电，咖啡机来一杯", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "office", "text": "下班了，工作区的东西全关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "office", "text": "开会了，音乐停一下，书桌灯调亮点", "intent": "控制", "device": "多个设备或整屋", "action": ["暂停", "调高或增大"], "tags": ["multi-device"]}

@@ -114,7 +114,6 @@
 {"home": "villa", "text": "浴霸给整开，洗澡冻得慌", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "lang:northern"]}
 {"home": "villa", "text": "车库那充电桩充上电没", "intent": "查询", "device": "充电桩", "tags": ["status-query", "lang:northern"]}
 {"home": "apartment", "text": "客厅那盏灯给我打起", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["explicit-control", "lang:southwest"]}
-{"home": "apartment", "text": "空调开起嘛，热得遭不住", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "打开或启动", "tags": ["room-disambiguation", "lang:southwest"]}
 {"home": "apartment", "text": "好热哦，汗都流出来了", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "lang:southwest"]}
 {"home": "apartment", "text": "电视关了嘛，莫看了", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "lang:southwest"]}
 {"home": "apartment", "text": "音箱声音小点噻，吵得脑壳痛", "intent": "控制", "device": "智能音箱", "action": "调低或减小", "tags": ["explicit-control", "lang:southwest"]}
@@ -182,7 +181,6 @@
 {"home": "apartment", "text": "那个出白气的罐子，给它关了吧", "intent": "控制", "device": "加湿器", "action": "关闭或停止", "tags": ["explicit-control", "lang:elderly"]}
 {"home": "apartment", "text": "阳台挂衣服那个杆子，往下放放，我够不着", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["explicit-control", "lang:elderly"]}
 {"home": "apartment", "text": "那个会唱歌的小盒子，放段京剧听听", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["explicit-control", "lang:elderly"]}
-{"home": "apartment", "text": "电视声音大点儿，我耳朵背，听不清楚", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["explicit-control", "lang:elderly"]}
 {"home": "apartment", "text": "小易啊，你帮我看看门锁好了没有，我记性不好", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "lang:elderly"]}
 {"home": "apartment", "text": "那个煮饭的锅，给我煮上饭，孩子们快回来了", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["explicit-control", "lang:elderly"]}
 {"home": "apartment", "text": "客厅那个大灯太晃眼了，暗一点", "intent": "控制", "device": "客厅主灯", "action": "调低或减小", "tags": ["explicit-control", "lang:elderly"]}

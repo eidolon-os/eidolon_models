@@ -286,7 +286,6 @@
 {"home": "apartment", "text": "洗衣机是不是还剩十来分钟", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "query-vs-report"]}
 {"home": "apartment", "text": "热水器的水我试过了，已经够热", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
 {"home": "apartment", "text": "现在去洗澡，热水够热了吗", "intent": "查询", "device": "热水器", "tags": ["status-query", "query-vs-report"]}
-{"home": "apartment", "text": "客厅窗帘我早上就拉开了", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
 {"home": "apartment", "text": "客厅窗帘早上自动拉开了吗", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query", "query-vs-report"]}
 {"home": "house", "text": "车已经充满了，我看了手机", "intent": "无关", "tags": ["status-query", "query-vs-report"]}
 {"home": "house", "text": "车那边已经充满了吧", "intent": "查询", "device": "充电桩", "tags": ["status-query", "query-vs-report"]}
