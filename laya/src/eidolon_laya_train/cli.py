@@ -254,9 +254,13 @@ def cmd_run(args) -> int:
         "started": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "steps": [],
     }
+    if args.train_config:  # a recipe experiment: same pipeline, only the train stage's config differs
+        manifest["train_config_override"] = str(Path(args.train_config).resolve())
     _log(f"run {run_id} -> {run_dir}")
     for step in pipeline["steps"]:
         stage = step["stage"]
+        if stage == "train" and args.train_config:
+            step = dict(step, config=str(Path(args.train_config).resolve()))
         t0 = time.time()
         argv = _step_argv(stage, step, run_dir, base)
         _log(f"[{stage}] {' '.join(argv)}")
@@ -427,6 +431,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("run", help="execute a pipeline.yaml into runs/<id>/")
     p.add_argument("--pipeline", required=True)
     p.add_argument("--run-id")
+    p.add_argument("--train-config", help="use this train config instead of the pipeline's (recipe experiments)")
     p.set_defaults(func=cmd_run)
     return ap
 

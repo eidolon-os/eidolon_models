@@ -5,6 +5,8 @@ Loss per question = soft cross-entropy against the target distribution
 + ``proper_weight`` · (−laya's strictly proper scoring reward: log + spherical + RPS for score)
 + ``pg_weight`` · laya's noisy-logit policy gradient (the official notebook's RLCD term;
   ``pg_weight: 1, brier_weight: 0`` reproduces the notebook, σ annealed pg_sigma_start → pg_sigma_end).
+Optional ``gold_weights: {question: {gold option: w}}`` makes the loss cost-sensitive (e.g. intent 无关 × 2
+so that treating a non-command as a command costs more); the val NLL used to pick the epoch stays unweighted.
 Choice and noul options are shuffled every epoch (score levels keep their order); the last
 ``unfreeze_layers`` encoder layers and the head train, the rest stays frozen (``unfreeze_layers: -1``
 trains the whole encoder, as the notebook does). The act head is never trained (it is unused).
@@ -64,6 +66,7 @@ def question_loss(
     pg_group: int = 4,
     pg_sigma: float = 0.4,
     pg_w_sph: float = 0.75,
+    weight: torch.Tensor | None = None,
 ) -> tuple[torch.Tensor, dict]:
     """soft CE + brier·Brier − proper·(proper score) + pg·(laya's noisy-logit policy gradient).
 
@@ -99,7 +102,15 @@ def question_loss(
         loss_rl = -(adv * logp_z).mean(0)
         loss = loss + pg_weight * loss_rl
         parts["pg_reward"] = r.mean().item()
+    if weight is not None:  # per-item weights, normalised like CrossEntropyLoss(weight=...)
+        return (loss * weight).sum() / weight.sum(), parts
     return loss.mean(), parts
+
+
+def item_weights(chunk: list[dict], gold_weights: dict[str, dict[str, float]]) -> list[float]:
+    """``gold_weights`` = {question id: {gold option: weight}} (e.g. {"intent": {"无关": 2.0}}): cost-sensitive
+    training, where an item counts by the weight of its (argmax) gold option; everything else counts 1."""
+    return [float(gold_weights.get(it["qid"], {}).get(it["names"][it["label"]], 1.0)) for it in chunk]
 
 
 def set_trainable(model, unfreeze_layers: int) -> tuple[list, list]:
@@ -198,6 +209,7 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
     )
     epochs = int(config.get("epochs", 3))
     batch_size = int(config.get("batch_size", 16))
+    gold_weights = config.get("gold_weights") or {}
     brier_w = float(config.get("brier_weight", 0.5))
     proper_w = float(config.get("proper_weight", 0.0))
     pg_w = float(config.get("pg_weight", 0.0))
@@ -256,6 +268,11 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
                 pg_weight=pg_w,
                 pg_group=pg_group,
                 pg_sigma=sigma,
+                weight=(
+                    torch.tensor(item_weights(chunk, gold_weights), device=logits.device)
+                    if gold_weights
+                    else None
+                ),
             )
             (loss / accum).backward()
             running += loss.item()

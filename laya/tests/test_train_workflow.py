@@ -350,3 +350,25 @@ def test_external_logits_are_scored_like_the_model(tmp_path):
         assert abs(row["p_top"] - 1 / (1 + (len(it["markers"]) - 1) * 2.718281828 ** -2)) < 1e-3  # T = 2 applied
     with pytest.raises(ValueError, match="no logits"):
         evaluate(loaded, path, logits={})
+
+
+def test_gold_weights_make_the_loss_cost_sensitive():
+    import torch
+
+    from eidolon_laya_train.train import item_weights, question_loss
+
+    logits = torch.tensor([[2.0, 0.0, -1.0], [0.0, 1.0, 0.5]])
+    target = torch.tensor([[0.0, 0.0, 1.0], [0.0, 1.0, 0.0]])
+    mask = torch.ones(2, 3, dtype=torch.bool)
+    qtype = torch.zeros(2, dtype=torch.long)
+    kw = dict(brier_weight=0.5, proper_weight=0.0)
+    plain, _ = question_loss(logits, target, mask, qtype, **kw)
+    ones, _ = question_loss(logits, target, mask, qtype, weight=torch.ones(2), **kw)
+    assert torch.allclose(plain, ones)
+    per = torch.stack([question_loss(logits[i:i + 1], target[i:i + 1], mask[:1], qtype[:1], **kw)[0] for i in range(2)])
+    heavy, _ = question_loss(logits, target, mask, qtype, weight=torch.tensor([3.0, 1.0]), **kw)
+    assert torch.allclose(heavy, (3 * per[0] + per[1]) / 4)
+    chunk = [{"qid": "intent", "names": ["控制", "查询", "无关"], "label": 2},
+             {"qid": "intent", "names": ["无关", "控制", "查询"], "label": 1},
+             {"qid": "device", "names": ["无关", "灯"], "label": 0}]
+    assert item_weights(chunk, {"intent": {"无关": 2.0}}) == [2.0, 1.0, 1.0]  # device's "无关" is not intent's
