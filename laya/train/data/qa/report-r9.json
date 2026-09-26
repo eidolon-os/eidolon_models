@@ -1,0 +1,18 @@
+{
+ "agreement": {
+  "intent": [
+   1.0,
+   82
+  ],
+  "device": [
+   1.0,
+   25
+  ],
+  "action": [
+   1.0,
+   25
+  ]
+ },
+ "rows": 82,
+ "disagreements": 0
+}

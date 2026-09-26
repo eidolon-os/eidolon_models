@@ -1,0 +1,82 @@
+{"ref": "b6-to-others:2", "home": "apartment", "text": "喵喵，下来！电视柜上不是你睡觉的地方", "intent": "无关"}
+{"ref": "b6-to-others:9", "home": "apartment", "text": "毛毛，空气净化器的出风口不是给你吹毛的", "intent": "无关"}
+{"ref": "b6-to-others:20", "home": "house", "text": "虎仔，唔好咬充电桩条线啊，放低！", "intent": "无关"}
+{"ref": "b6-to-others:29", "home": "pets", "text": "咪咪，猫砂盆刚清完，别往外刨砂子", "intent": "无关"}
+{"ref": "b6-to-others:33", "home": "pets", "text": "来来来，进烘干箱，乖乖的别乱动", "intent": "无关"}
+{"ref": "b6-to-others:41", "home": "pets", "text": "别抓门锁那块了旺财，抓坏了谁都进不来", "intent": "无关"}
+{"ref": "b6-to-others:64", "home": "brand", "text": "肉肉，晾衣架上挂的是袜子，不是给你叼的", "intent": "无关"}
+{"ref": "b6-to-others:67", "home": "mega", "text": "Lucky，不许在影音室音响上磨爪子", "intent": "无关"}
+{"ref": "b6-to-others:70", "home": "office", "text": "橘子，别趴升降桌上，我马上要开会", "intent": "无关"}
+{"ref": "b6-to-others:73", "home": "apartment", "text": "小祖宗，别拿玩具往空调出风口里塞", "intent": "无关"}
+{"ref": "b6-to-others:79", "home": "apartment", "text": "朵朵，别冲着智能音箱喊了，快去刷牙", "intent": "无关"}
+{"ref": "b6-to-others:84", "home": "house", "text": "孩子们，浇水阀开着的时候别去花园踩水", "intent": "无关"}
+{"ref": "b6-to-others:91", "home": "villa", "text": "糖糖，油烟机的按钮别老按，一按就呼呼响", "intent": "无关"}
+{"ref": "b6-to-others:109", "home": "kids", "text": "儿子，加湿器冒的雾别用手去抓", "intent": "无关"}
+{"ref": "b6-to-others:115", "home": "family3", "text": "小石头，烘干机里的衣服还烫，先别掏", "intent": "无关"}
+{"ref": "b6-to-others:118", "home": "family3", "text": "小妹，客厅电视看完这一集就关，说好了的", "intent": "无关"}
+{"ref": "b6-to-others:130", "home": "duplex", "text": "小胖墩，别在二楼除湿机上蹭，那不是滑梯", "intent": "无关"}
+{"ref": "b6-to-others:137", "home": "rental", "text": "小朋友，这是公共洗衣机，别往里扔玩具", "intent": "无关"}
+{"ref": "b6-to-others:138", "home": "countryside", "text": "娃儿，莫去按那个大门开关，夹到手咋个办", "intent": "无关"}
+{"ref": "b6-to-others:145", "home": "apartment", "text": "姐，你走的时候把床头灯关了", "intent": "无关"}
+{"ref": "b6-to-others:152", "home": "house", "text": "媳妇儿，你离得近，帮我瞅一眼烤箱好了没", "intent": "无关", "note": "形式像查询，但是问妻子不是问助手；规范“说给家人的话”的例子都是命令，这里按同一条推到问句"}
+{"ref": "b6-to-others:161", "home": "villa", "text": "亲爱的，你上楼的时候把主卧灯打开", "intent": "无关"}
+{"ref": "b6-to-others:162", "home": "villa", "text": "爷爷，浴霸别开太久，您一会儿又头晕", "intent": "无关"}
+{"ref": "b6-to-others:174", "home": "mega", "text": "阿姨，烘干机里的床单下午您收一下", "intent": "无关"}
+{"ref": "b6-to-others:179", "home": "rental", "text": "你们谁用完公共洗衣机，把门打开晾一晾", "intent": "无关"}
+{"ref": "b6-to-others:180", "home": "rental", "text": "舍友，客厅公共电视你看完了记得关", "intent": "无关"}
+{"ref": "b6-to-others:183", "home": "duplex", "text": "妈，碗我都放进一楼洗碗机了，您按一下开始就行", "intent": "无关"}
+{"ref": "b6-to-others:208", "home": "house", "text": "我得记着给宠物喂食器的粮桶加满", "intent": "无关"}
+{"ref": "b6-to-others:212", "home": "villa", "text": "记住了记住了，热水器年底要除垢", "intent": "无关"}
+{"ref": "b6-to-others:214", "home": "pets", "text": "明天记得自己给猫砂盆换袋新砂", "intent": "无关"}
+{"ref": "b6-to-others:234", "home": "apartment", "text": "加湿器里只能加纯净水，自来水会结水垢", "intent": "无关"}
+{"ref": "b6-to-others:235", "home": "house", "text": "车库门往下落的时候，底下绝对不能站人", "intent": "无关"}
+{"ref": "b6-to-others:240", "home": "villa", "text": "你们都记好了，下雨天别光着手去插充电桩", "intent": "无关"}
+{"ref": "b6-to-others:241", "home": "villa", "text": "油烟机的油网不洗干净，是会着火的", "intent": "无关"}
+{"ref": "b6-to-others:252", "home": "countryside", "text": "卷帘门往下放的时候，娃儿不准在下头钻", "intent": "无关"}
+{"ref": "b6-to-others:253", "home": "pets", "text": "宠物烘干箱温度太高狗会中暑，用的时候旁边得有人", "intent": "无关"}
+{"ref": "b6-to-others:256", "home": "brand", "text": "苏泊尔电饭煲的内胆不能用钢丝球刷", "intent": "无关"}
+{"ref": "b6-to-others:263", "home": "apartment", "text": "糯米别扒了！小易，把客厅窗帘关上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}
+{"ref": "b6-to-others:264", "home": "house", "text": "小易，给狗放一份粮", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "note": "“放一份粮”主要是让喂食器出粮（启动）；“一份”也能看作份量数值，规范没说喂食器出粮归哪个动作，两种都放"}
+{"ref": "b6-to-others:266", "home": "house", "text": "猫又钻车库里去了，小管家把车库门打开让它出来", "intent": "控制", "device": "车库门", "action": "打开或启动"}
+{"ref": "b6-to-others:282", "home": "countryside", "text": "小易，鸡都进窝了，把鸡舍灯关了", "intent": "控制", "device": "鸡舍灯", "action": "关闭或停止"}
+{"ref": "b6-to-others:290", "home": "apartment", "text": "小易，宝宝要午睡了，主卧空调调成睡眠模式", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}
+{"ref": "b6-to-others:308", "home": "family3", "text": "小易，儿童房顶灯关了，孩子该睡了", "intent": "控制", "device": "儿童房顶灯", "action": "关闭或停止"}
+{"ref": "b6-to-others:310", "home": "family3", "text": "小管家，打开儿童房摄像头，我看看俩孩子睡没睡", "intent": "控制", "device": "儿童房摄像头", "action": "打开或启动", "note": "目的是看孩子睡没睡（像查询），但说的是“打开摄像头”，按改变设备状态标控制；规范没写“打开摄像头看一下”这类查看画面的请求归哪边"}
+{"ref": "b6-to-others:320", "home": "house", "text": "我爸快到了，小易把车库门打开", "intent": "控制", "device": "车库门", "action": "打开或启动"}
+{"ref": "b6-outside-keep:3", "home": "apartment", "text": "办公室空调开得太足，冷得我披了两件外套", "intent": "无关"}
+{"ref": "b6-outside-keep:10", "home": "apartment", "text": "学校教室空气太干，孩子嗓子都哑了", "intent": "无关"}
+{"ref": "b6-outside-keep:23", "home": "house", "text": "我哥家的洗碗机洗完碗还一股味儿", "intent": "无关"}
+{"ref": "b6-outside-keep:25", "home": "house", "text": "公司卫生间冷得要命，上个厕所都哆嗦", "intent": "无关"}
+{"ref": "b6-outside-keep:26", "home": "house", "text": "邻居家草坪都枯黄了，干得冒烟", "intent": "无关"}
+{"ref": "b6-outside-keep:63", "home": "duplex", "text": "办公室朝西，下午晒得电脑屏幕都看不清", "intent": "无关"}
+{"ref": "b6-outside-keep:75", "home": "family3", "text": "外婆家次卧晚上黑得啥也看不见", "intent": "无关"}
+{"ref": "b6-outside-keep:78", "home": "family3", "text": "小区健身器材那块地面脏得没法坐", "intent": "无关"}
+{"ref": "b6-outside-keep:84", "home": "kids", "text": "天气预报说明天降温，出门得给宝宝多穿点", "intent": "无关"}
+{"ref": "b6-outside-keep:108", "home": "pets", "text": "我姐家那台猫砂盆老是误报，半夜滴滴响", "intent": "无关"}
+{"ref": "b6-outside-keep:119", "home": "studio", "text": "天气预报说明天有台风，外面风雨大", "intent": "无关", "note": "说的是外面和明天，没提家里什么东西受影响（对比“衣服在外面要下雨了”是控制），按家外面的情况标无关"}
+{"ref": "b6-outside-keep:131", "home": "apartment", "text": "下午客厅西晒，沙发都晒烫了", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "note": "“下午客厅西晒”也可能是在陈述常态（无关）；按“沙发都晒烫了”理解为当前家里的情况，隐含拉窗帘挡太阳；开客厅空调降温也说得通，但挡西晒最直接的是窗帘"}
+{"ref": "b6-outside-keep:162", "home": "brand", "text": "邻居的烟味顺着门缝飘进客厅了，呛得难受", "intent": "控制", "device": "米家净化器4", "action": ["打开或启动", "调高或增大"], "note": "烟是邻居的，但飘进的是自家客厅，算家里的情况；按房间优先选客厅的米家净化器4，卧室的戴森净化风扇不算"}
+{"ref": "b6-outside-keep:176", "home": "elder", "text": "电视那声儿太小，我这耳朵听不清", "intent": "控制", "device": "电视", "action": "调高或增大"}
+{"ref": "b6-outside-keep:185", "home": "family3", "text": "连着下雨，阳台上的衣服一直晾不干", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": "打开或启动", "note": "晾不干→开烘干机最直接；电动晾衣架如果带烘干 / 风干功能也能解决，两者都放；也有人会当成单纯抱怨"}
+{"ref": "b6-outside-keep:187", "home": "kids", "text": "宝宝醒了一直哭，哄都哄不好", "intent": "控制", "device": "电动摇篮", "action": "打开或启动", "note": "婴儿哭闹不是冷热、明暗、脏这类环境问题，也可以理解为纯倾诉（无关）；该户型有电动摇篮，按家里情况的隐含意图标启动摇篮"}
+{"ref": "b6-outside-keep:192", "home": "mega", "text": "影音室音响低音太重，震得我心慌", "intent": "控制", "device": "影音室音响", "action": "调低或减小"}
+{"ref": "b6-outside-keep:201", "home": "office", "text": "开了一上午会，屋里闷得人昏昏欲睡", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "note": "“闷”若理解为闷热也可落到空调；开完会屋里憋闷、犯困更像换气不足，选新风机"}
+{"ref": "b6-outside-keep:202", "home": "office", "text": "书桌这块太暗了，眯着眼才看得清屏幕", "intent": "控制", "device": "书桌灯", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b6-outside-keep:204", "home": "office", "text": "客厅太阳晒得屏幕反光，啥也看不清", "intent": "控制", "device": "电动窗帘", "action": "关闭或停止"}
+{"ref": "b6-outside-keep:207", "home": "pets", "text": "卫生间猫砂盆那块臭烘烘的", "intent": "控制", "device": "智能猫砂盆", "action": "打开或启动", "note": "去味也可以找净化器，但空气净化器在客厅，按房间优先选卫生间的智能猫砂盆（启动清理）；动作也可理解为设为清理 / 除臭模式"}
+{"ref": "b6-outside-keep:211", "home": "rental", "text": "我这屋热得像火炉", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}
+{"ref": "b6-outside-keep:222", "home": "apartment", "text": "客厅空调就这么开着吧，挺舒服的", "intent": "无关"}
+{"ref": "b6-outside-keep:232", "home": "apartment", "text": "晾衣架别收，衣服还没干透", "intent": "无关"}
+{"ref": "b6-outside-keep:250", "home": "villa", "text": "刚才让你开投影仪的，不作数了", "intent": "无关"}
+{"ref": "b6-outside-keep:276", "home": "family3", "text": "主卧空调就这么开着，温度别改", "intent": "无关"}
+{"ref": "b6-outside-keep:282", "home": "kids", "text": "空调不用调，宝宝睡得挺好", "intent": "无关"}
+{"ref": "b6-outside-keep:296", "home": "office", "text": "新风机开着就行，不用管它", "intent": "无关"}
+{"ref": "b6-outside-keep:305", "home": "rental", "text": "刚才说关公共客厅灯那个不算，室友还在客厅", "intent": "无关"}
+{"ref": "b6-outside-keep:325", "home": "villa", "text": "落地扇别摇头了，就对着我吹", "intent": "控制", "device": "落地扇", "action": ["关闭或停止", "设为指定的数值或模式"], "note": "要停的是摇头功能，不是风扇本身；可看作停止摇头，也可看作设为定向送风模式，两种都放"}
+{"ref": "b6-outside-keep:341", "home": "family3", "text": "洗衣机先停下，孩子的手表还在口袋里", "intent": "控制", "device": "洗衣机", "action": "暂停"}
+{"ref": "b6-outside-keep:344", "home": "kids", "text": "扫地机器人先停，那动静快把孩子吵醒了", "intent": "控制", "device": "扫地机器人", "action": ["暂停", "关闭或停止"], "note": "“先停”按规范是暂停；但理由是怕吵醒孩子，未必之后继续，关闭或停止也合理"}
+{"ref": "b6-outside-keep:363", "home": "apartment", "text": "衣服洗好之后把晾衣架降下来", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小"}
+{"ref": "b6-outside-keep:369", "home": "house", "text": "等我洗完澡把浴霸关了", "intent": "控制", "device": "浴霸", "action": "关闭或停止"}
+{"ref": "b6-outside-keep:370", "home": "house", "text": "投影仪先开着，我上个厕所回来接着看", "intent": "无关", "note": "“先开着”是保持现状；“回来接着看”容易让人想成暂停播放，但话里没有要停"}
+{"ref": "b6-outside-keep:375", "home": "villa", "text": "书房灯留着，我收拾完东西自己关", "intent": "无关"}
+{"ref": "b6-outside-keep:377", "home": "brand", "text": "等我洗完澡把史密斯热水器调回节能模式", "intent": "控制", "device": "史密斯热水器", "action": "设为指定的数值或模式"}

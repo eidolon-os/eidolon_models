@@ -1,0 +1,360 @@
+{"home": "apartment", "text": "豆豆，别追着扫地机器人咬了，它又不是耗子", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "喵喵，下来！电视柜上不是你睡觉的地方", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "糯米你又去扒窗帘，爪子给我收回去", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "花花，不许往洗衣机里钻，里面还有水", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "胖虎，离加湿器远点，脸上的毛都打湿了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "小白，电饭煲的盖子烫嘴，别舔", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "二哈你冲着摄像头嚎啥呢，那旮沓又没人", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "咕咕，别啄床头灯那根线，啄断了看你玩啥", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "毛毛，空气净化器的出风口不是给你吹毛的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "来福，不准趴在车库门口，一会儿车要进来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "咪咪你给我从冰箱顶上下来，听见没有", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "大黄，别刨花园浇水阀旁边那块土了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "小灰，不许啄投影仪的镜头！", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "奶茶，别蹲在洗碗机门口等了，里头没有肉", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "黑豆，要睡就在地暖上睡，别把垫子叼走", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "阿福，别冲门铃叫了，是送快递的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "豆包，离落地扇远一点，尾巴要卷进去了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "嘟嘟，别拿脑袋拱宠物喂食器，还没到饭点呢", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "小橘，烤箱刚用过，别往上跳", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "house", "text": "虎仔，唔好咬充电桩条线啊，放低！", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "球球，别跟着扫地机器人转圈了，你不晕吗", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "咪咪，浴霸底下是暖和，但也不能一直赖在卫生间", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "旺旺你又扒车库门，想出去得等人带", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "八哥，别学门铃叫了，听得人心慌", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "奥利奥，你爬到油烟机上面干嘛，快下来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "小七，窗帘的穗子不许啃", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "年糕，电视里的鸟是假的，别扑了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "villa", "text": "妞妞，别老趴在智能门锁那儿，门一开你就想溜", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "咪咪，猫砂盆刚清完，别往外刨砂子", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "旺财，那个是猫粮喂食器，你的在阳台上", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "可乐，别偷喝宠物饮水机的水，你有自己的碗", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "团子，别对着宠物摄像头舔，妈妈在公司都看见了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "来来来，进烘干箱，乖乖的别乱动", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "布丁，脑袋别往狗粮喂食器的出粮口里伸", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "小橘你又坐扫地机器人上面，它都走不动道了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "妹妹，别趴空调出风口底下，要着凉的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "大毛，洗衣机在转，不许去扒门", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "臭臭，音箱的线不能啃，那个不能吃", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "小咪，你是不是又尿猫砂盆外面了，给我出来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "板栗，宠物饮水机不是给你洗爪子的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "别抓门锁那块了旺财，抓坏了谁都进不来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "三花，客厅灯底下那只飞蛾就别扑了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "黑米，净化器上面不能睡觉，下来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "阿黄，老实在阳台待着，别去偷吃猫粮喂食器", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "二狗，在烘干箱里再老实待五分钟就好了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "雪糕，卧室空调开着呢，你别往被窝最里面钻", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "花卷，不许拿爪子拍宠物摄像头", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "毛球，猫砂盆里不是睡觉的地方，脏不脏", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "锅巴乖，趴下，喂食器到点自己会出粮的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "芝麻，别跟扫地机器人打架了，你打不过它的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "狗狗别叫了，是有人在按门锁密码，自己人", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "pets", "text": "灰灰，洗衣机上面不许蹲，下来下来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "countryside", "text": "阿黄，莫往大门外头跑，路上车多得很", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "countryside", "text": "小黑，别往卷帘门底下钻，夹着尾巴咋整", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "countryside", "text": "去去去，都回窝里去，别在鸡舍灯底下扑腾了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "countryside", "text": "大白，别啄水泵那根管子，啄漏了没水浇地", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "countryside", "text": "花猫，冰柜上头凉快也不许睡，下来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "studio", "text": "煤球，别挡着投影仪，墙上全是你的影子", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "studio", "text": "汤圆，别盯着风扇叶子看了，眼珠子都转晕了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "minimal", "text": "小土豆，别蹲在扫地机上当大王", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "minimal", "text": "丢丢，音箱放个歌你跟着嚎什么", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "brand", "text": "喵太，那台戴森是净化风扇不是逗猫棒，别伸爪子", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "brand", "text": "旺仔，别舔石头扫地机的刷子", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "brand", "text": "肉肉，晾衣架上挂的是袜子，不是给你叼的", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "family3", "text": "咪咪，儿童房加湿器不是你的水碗", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "family3", "text": "小乖，烘干机里不能钻，快出来", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "mega", "text": "Lucky，不许在影音室音响上磨爪子", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "mega", "text": "雪球，茶室灯底下那盆兰花别啃了", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "duplex", "text": "奶昔，别追一楼扫地机了，它又不会爬楼梯", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "office", "text": "橘子，别趴升降桌上，我马上要开会", "intent": "无关", "tags": ["non-command", "to-others", "pet"]}
+{"home": "apartment", "text": "丫丫，洗澡的时候不许自己去拧热水器", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "儿子，作业没写完，电视想都别想", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "小祖宗，别拿玩具往空调出风口里塞", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "闺女，床头灯别拿来照着玩，灯泡烫手", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "你们俩别躲在客厅窗帘后面了，窗帘都被扯歪了", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "乖，扫地机器人不是小汽车，不能骑", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "宝宝，洗衣机的按钮不能乱按，一按它就转了", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "小宇站远点，电饭煲在冒热气", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "朵朵，别冲着智能音箱喊了，快去刷牙", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "天天，别蹲在烤箱门口看，里头烫得很", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "小明，投影仪的镜头别拿手指戳", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "阿仔，冰箱门唔好成日开住啊，冷气都走晒", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "航航，车库门的按钮不是玩具，别按着玩", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "孩子们，浇水阀开着的时候别去花园踩水", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "妞妞，洗碗机里的碗还烫，让妈妈来拿", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "小胖，浴霸那个开关别乱按", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "别拿充电桩的枪当水枪玩，放回去！", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "壮壮，门铃按一下就行了，别一直按", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "小鱼，落地扇转着的时候手指头不能往里伸", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "house", "text": "你们俩不准在餐厅吊灯底下扔球", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "糖糖，油烟机的按钮别老按，一按就呼呼响", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "儿子，地暖那块热，别光着屁股在上面趴着", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "小家伙，安防警报的面板不能按，一按全小区都听见", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "囡囡，电视勿要凑介近看，眼睛要看坏脱额", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "宝贝，加湿器里的水不能喝", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "小宝，智能门锁的密码可不能告诉同学哦", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "哥哥，别让妹妹去按新风机的开关", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "villa", "text": "你给我把宠物喂食器里的粮倒回去，那不是给你吃的零食", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "宝宝不哭哦，摇篮摇一摇，妈妈在呢", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "小宝贝，夜灯亮着呢，不怕不怕", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "姐姐，温奶器别去碰，里面的水烫", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "大宝，弟弟在婴儿房睡觉呢，别进去开灯", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "乖乖，监视器的线不能咬", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "果冻，奶瓶消毒柜刚消完毒，不许打开", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "哥哥轻点，别趴在电动摇篮边上晃", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "宝贝儿松手，窗帘不能抓", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "小可爱看妈妈这边，不看扫地机器人了哦", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "大宝，别对着婴儿监视器做鬼脸，妹妹会吓到的", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "儿子，加湿器冒的雾别用手去抓", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "小豆丁，净化器不能推，会倒的", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "姐姐，客厅空调的遥控器你别动，弟弟怕冷", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "kids", "text": "宝，别把袜子塞洗衣机门缝里", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "都几点了还不睡？躺下，别再偷偷开儿童房顶灯看书了", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "闺女，别冲着儿童房摄像头挤眉弄眼的，你爸上班看着呢", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "小石头，烘干机里的衣服还烫，先别掏", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "儿子，空调遥控器还我，不许偷偷调温度", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "宝贝，电动晾衣架往下降的时候别站底下", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "小妹，客厅电视看完这一集就关，说好了的", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "哥哥，别拽主卧窗帘，那是爸妈屋的", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "嘉嘉，别在扫地机器人前面堆积木堵它", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "宝，洗衣机转着的时候不能开门，记住没", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "臭小子，热水器的温度你别乱拧", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "妹妹，别往儿童房加湿器里倒果汁", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "你俩别拿空气净化器当凳子坐", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "family3", "text": "乐宝，门锁的指纹不是录着玩的", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "mega", "text": "少爷，影音室投影仪别天天开着打游戏", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "mega", "text": "小宝别钻衣帽间，衣帽间灯那条灯带会被你扯下来", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "mega", "text": "宝贝，茶室的东西都别碰，茶室空调也不许乱开", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "duplex", "text": "慢点！楼梯灯没亮之前不许往下冲", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "duplex", "text": "小胖墩，别在二楼除湿机上蹭，那不是滑梯", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "duplex", "text": "阳阳，一楼客厅电视别开那么响，爷爷在睡觉", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "brand", "text": "安安，米家台灯Pro别乱按，一闪一闪的晃眼", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "brand", "text": "果果，海尔冰箱门上的贴纸别撕", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "elder", "text": "小孙子，那个紧急呼叫按钮可别按，按了物业就上来了", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "elder", "text": "乖孙，电动床不是蹦床，下来", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "studio", "text": "小侄子，投影仪遥控器给我，别乱按了", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "rental", "text": "小朋友，这是公共洗衣机，别往里扔玩具", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "countryside", "text": "娃儿，莫去按那个大门开关，夹到手咋个办", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "countryside", "text": "二丫，冰柜里的冰棍不许再拿了", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "office", "text": "宝，别摇升降桌，爸爸在开视频会", "intent": "无关", "tags": ["non-command", "to-others", "child"]}
+{"home": "apartment", "text": "老公，你去把客厅窗帘拉上，我要换衣服", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "妈，晚上睡觉您把空调定个时，别吹一宿", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "老婆，你顺手把洗衣机里的衣服拿出来晾一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "你出门的时候记得把智能门锁反锁一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "姐，你走的时候把床头灯关了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "爸，电饭煲您别动，我来弄", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "老公，热水器你上回说要找人修的，今天打个电话", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "你在阳台的话顺便把晾衣架摇下来", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "老公，倒车出去的时候记得把车库门带上", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "阿姨，洗碗机里的碗您等凉了再收", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "爸，您下楼顺带把书房灯关一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "媳妇儿，你离得近，帮我瞅一眼烤箱好了没", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "张姐，油烟机的油网您今天拆下来洗洗", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "你帮我把落地扇搬到书房去，我一个人抬不动", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "哥，你去花园把浇水阀拧上，水都漫出来了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "老婆，门铃响了，你去看看是谁", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "house", "text": "老公，充电桩那边你去把枪拔了吧，充满了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "老妈，热水器我给您调好了，您洗的时候就别再动了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "老公，你那边近，把电视声儿整小点", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "阿姨，扫地机器人的尘盒您帮忙倒一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "亲爱的，你上楼的时候把主卧灯打开", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "爷爷，浴霸别开太久，您一会儿又头晕", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "老李，你去车库把车库门打开，我把车倒进去", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "villa", "text": "老婆，洗衣机好了，你去晾吧，我这边在炒菜", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "elder", "text": "阿姨，晚上您把走廊夜灯留着，老爷子要起夜", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "elder", "text": "妈，您吃完饭记得把燃气阀门关了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "elder", "text": "爸，电动床您按那个往上的键就能坐起来，您试试", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "elder", "text": "小王，药盒里的药您按格子分好", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "elder", "text": "老伴儿，电视声儿你调小点，我耳朵嗡嗡的", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "elder", "text": "妈，洗澡前您先把浴霸开一会儿再进去", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "mega", "text": "阿姨，您屋里的保姆房空调别舍不得开", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "mega", "text": "刘姐，衣帽间灯您出来的时候随手关一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "mega", "text": "老公，你先去影音室把投影仪弄好，我去拿零食", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "mega", "text": "阿姨，烘干机里的床单下午您收一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "mega", "text": "妈，书房窗帘您别老拉着，屋里太闷", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "mega", "text": "你们谁最后睡，谁把玄关灯关了啊", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "rental", "text": "室友，公共热水器你用完了跟我说一声", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "rental", "text": "小张，你出门的时候把公共客厅灯关一下，老是亮一宿", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "rental", "text": "你们谁用完公共洗衣机，把门打开晾一晾", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "rental", "text": "舍友，客厅公共电视你看完了记得关", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "rental", "text": "阿杰，你进来的时候把大门锁带上，昨晚又没关好", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "duplex", "text": "老公，你在二楼的话顺手把二楼走廊灯关了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "duplex", "text": "妈，碗我都放进一楼洗碗机了，您按一下开始就行", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "duplex", "text": "你下楼帮我看看一楼门锁锁好没有", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "duplex", "text": "老婆，二楼晾衣架上的衣服你收一下吧", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "countryside", "text": "他爹，天黑了，你出去把院子灯拉开", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "countryside", "text": "娘，水泵您别自己去弄，等我回来", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "countryside", "text": "二叔，你出门把大门带上，鸡又跑出去了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "countryside", "text": "媳妇，太阳能热水器的水你先放一放，头一截是凉的", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "family3", "text": "老公，你去给孩子把儿童房空调调一下，别太凉", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "family3", "text": "你去阳台的时候把烘干机里的衣服拿出来", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "family3", "text": "姥姥，主卧加湿器没水了，您帮我加一点", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "kids", "text": "老公，你去婴儿房看一下，夜灯是不是没开", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "kids", "text": "月嫂，温奶器里的奶您先试一下温度再喂", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "brand", "text": "老公，方太油烟机的油杯满了，你倒一下", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "brand", "text": "你起来的时候顺手把小天鹅洗衣机里的衣服晾上", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "office", "text": "老婆，我开会呢，你帮我去厨房把咖啡机开了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "office", "text": "你出去的时候把门锁带上，我在开会", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "pets", "text": "老公，下班路上顺便买袋猫砂，猫砂盆快见底了", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "studio", "text": "你走的时候帮我把窗帘拉上就行，我再睡会儿", "intent": "无关", "tags": ["non-command", "to-others", "family"]}
+{"home": "apartment", "text": "我得记着周末把空气净化器的滤网换了", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "apartment", "text": "回头我自己去把洗衣机的过滤网掏一掏", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "apartment", "text": "哎呀，明天出门前得记得给门锁换电池", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "apartment", "text": "我这记性，又忘了给加湿器加水", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "house", "text": "下个月我得找人来看看地暖", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "house", "text": "别忘了，礼拜六自己把油烟机的油网洗了", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "house", "text": "我先自己去车库把车库门关了，顺便拿个快递", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "house", "text": "我得记着给宠物喂食器的粮桶加满", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "villa", "text": "唉，明天得打电话约人来洗空调", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "villa", "text": "等会儿我自己下去看看烤箱，不急", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "villa", "text": "我自己去关电视吧，反正也要起来倒水", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "villa", "text": "记住了记住了，热水器年底要除垢", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "pets", "text": "今晚我得把宠物烘干箱里的毛清一清", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "pets", "text": "明天记得自己给猫砂盆换袋新砂", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "kids", "text": "我得记着晚上把奶瓶消毒柜里的奶瓶收出来", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "kids", "text": "我自己去婴儿房把夜灯关了吧，省得吵醒她", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "family3", "text": "得了，我自己去阳台把晾衣架摇下来", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "family3", "text": "下周我得记着给热水器换根软管", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "mega", "text": "我一会儿自己去茶室把茶室灯关掉，顺手收茶具", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "mega", "text": "我心里记着呢，全屋新风的滤芯下个月到期", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "office", "text": "我得记着开完会把显示器插座上的充电器拔了", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "office", "text": "咖啡机的除垢灯又亮了，周末我自己弄一下", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "rental", "text": "我得记着跟室友平摊这个月公共热水器的电费", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "rental", "text": "睡前我得自己把插座上那个充电器拔了", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "brand", "text": "周末得把石头扫地机的滚刷拆下来洗洗", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "brand", "text": "我得记着问问史密斯热水器的售后能不能上门", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "duplex", "text": "我自己上楼关二楼书房灯吧，正好拿本书", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "elder", "text": "我得记着每周一给智能药盒装药", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "countryside", "text": "明儿个我得自个儿上楼顶瞅瞅太阳能热水器", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "studio", "text": "别忘了别忘了，出门前自己看一眼热水器关没关", "intent": "无关", "tags": ["non-command", "to-others", "self"]}
+{"home": "apartment", "text": "跟你们说过多少遍了，湿手不能去碰热水器开关", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "apartment", "text": "电饭煲煮饭的时候谁都不许掀盖子", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "apartment", "text": "记住啊，洗衣机转起来千万别把手伸进去", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "apartment", "text": "加湿器里只能加纯净水，自来水会结水垢", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "house", "text": "车库门往下落的时候，底下绝对不能站人", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "house", "text": "烤箱刚关还烫着呢，谁都不许摸", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "house", "text": "饮水机插座旁边别放水杯，洒了会漏电", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "house", "text": "浴霸开着的时候别拿湿毛巾往上甩", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "villa", "text": "安防警报不是闹着玩的，没事别乱按", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "villa", "text": "你们都记好了，下雨天别光着手去插充电桩", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "villa", "text": "油烟机的油网不洗干净，是会着火的", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "villa", "text": "花园浇水阀那一片地滑，大人小孩都当心点", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "elder", "text": "燃气报警器一响，头一件事是开窗，千万别开灯", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "elder", "text": "燃气阀门每次用完都得关严实，这是规矩", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "elder", "text": "紧急呼叫按钮是救命用的，可不能当开关乱按", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "kids", "text": "温奶器里的奶喂之前一定要先滴手腕上试温度", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "kids", "text": "婴儿房加湿器得离小床远一点，这是护士交代的", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "kids", "text": "电动摇篮里不能放枕头和毛绒玩具，容易闷着", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "family3", "text": "热水器洗澡洗太久容易缺氧，二十分钟就得出来", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "family3", "text": "电动晾衣架往下降的时候，下面不能有人", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "countryside", "text": "水泵开着的时候莫去摸电线，要出事的", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "countryside", "text": "卷帘门往下放的时候，娃儿不准在下头钻", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "pets", "text": "宠物烘干箱温度太高狗会中暑，用的时候旁边得有人", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "pets", "text": "清猫砂盆不能用消毒水，猫闻了会难受", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "rental", "text": "我房间插座不能插大功率的，一插就跳闸", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "brand", "text": "苏泊尔电饭煲的内胆不能用钢丝球刷", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "duplex", "text": "楼梯灯要是不亮，下楼必须扶着扶手", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "mega", "text": "主卫浴霸开着的时候，不许往上面搭毛巾", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "office", "text": "升降桌升降的时候，桌子底下不能放东西", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "studio", "text": "风扇转着的时候不能拿手指头去戳", "intent": "无关", "tags": ["non-command", "to-others", "warning"]}
+{"home": "apartment", "text": "小易，猫老追着扫地机器人跑，先让它停一下", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "apartment", "text": "狗在沙发上睡着了，把电视关了吧", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "apartment", "text": "糯米别扒了！小易，把客厅窗帘关上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "house", "text": "小易，给狗放一份粮", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "house", "text": "旺财下来！助手，把落地扇关了，别卷着它尾巴", "intent": "控制", "device": "落地扇", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "house", "text": "猫又钻车库里去了，小管家把车库门打开让它出来", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "house", "text": "帮我把花园浇水阀关了，狗在那儿玩泥巴呢", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "house", "text": "小易，只狗怕冻，地暖开高啲", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "villa", "text": "小易，猫被电视吓着了，音量调小点", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "villa", "text": "替我把宠物喂食器暂停一下，猫今天吐了", "intent": "控制", "device": "宠物喂食器", "action": "暂停", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "villa", "text": "小管家，狗一身泥，浴霸打开，我给它洗个澡", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "小易，猫粮喂食器出一份", "intent": "控制", "device": "猫粮喂食器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "助手，狗粮喂食器今天少出点，它最近胖了", "intent": "控制", "device": "狗粮喂食器", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "小管家，旺财刚洗完澡，宠物烘干箱打开", "intent": "控制", "device": "宠物烘干箱", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "咪咪别闹！小易，扫地机器人先回去充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "帮我把宠物饮水机打开，猫碗里没水了", "intent": "控制", "device": "宠物饮水机", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "小易，智能猫砂盆清理一下，猫刚用完", "intent": "控制", "device": "智能猫砂盆", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "猫在卧室睡觉呢，把卧室空调调到二十六度", "intent": "控制", "device": "卧室空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "小管家，狗掉毛掉得满屋都是，空气净化器开大一点", "intent": "控制", "device": "空气净化器", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "替我把宠物摄像头打开，我看看它俩在家干嘛", "intent": "控制", "device": "宠物摄像头", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "pets", "text": "小易，宠物烘干箱温度调低点，狗在里面直喘", "intent": "控制", "device": "宠物烘干箱", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "countryside", "text": "小易，鸡都进窝了，把鸡舍灯关了", "intent": "控制", "device": "鸡舍灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "countryside", "text": "狗儿要出去耍，帮我把大门开一哈", "intent": "控制", "device": "大门", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "brand", "text": "猫老往德尔玛加湿器那儿凑，小易你把加湿器关了", "intent": "控制", "device": "德尔玛加湿器", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "studio", "text": "助手，狗热得直吐舌头，风扇开起来", "intent": "控制", "device": "风扇", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "minimal", "text": "猫在卧室睡觉，小易把空调温度调高一点", "intent": "控制", "device": "空调", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "mega", "text": "小管家，狗关在保姆房里了，保姆房空调打开", "intent": "控制", "device": "保姆房空调", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "family3", "text": "小易，猫毛飘得到处都是，空气净化器开起来", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "apartment", "text": "孩子睡着了，小易把主卧灯关掉", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "apartment", "text": "小易，宝宝要午睡了，主卧空调调成睡眠模式", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "apartment", "text": "儿子要看动画片，替我把电视打开", "intent": "控制", "device": "电视", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "house", "text": "小管家，孩子们要看电影，投影仪打开", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "house", "text": "宝宝要洗澡了，小易先把浴霸开上", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "house", "text": "闺女在书房写作业，帮她把书房灯调亮一点", "intent": "控制", "device": "书房灯", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "house", "text": "小易，孩子在花园玩，浇水阀先停一下", "intent": "控制", "device": "花园浇水阀", "action": "暂停", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "house", "text": "天天别碰！小易，把烤箱关了", "intent": "控制", "device": "烤箱", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "villa", "text": "小易，儿子骑车回来了，车库门开一下", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "villa", "text": "帮我把加湿器开起来，孩子嗓子干", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "villa", "text": "助手，孩子在客厅练琴，智能音箱先暂停", "intent": "控制", "device": "智能音箱", "action": "暂停", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "小易，宝宝哭了，电动摇篮开起来", "intent": "控制", "device": "电动摇篮", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "宝宝要喝奶了，帮我把温奶器打开", "intent": "控制", "device": "温奶器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "小管家，婴儿房窗帘拉上，宝宝要睡午觉", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "小易，把婴儿房夜灯打开，我要去喂奶", "intent": "控制", "device": "婴儿房夜灯", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "替我把奶瓶消毒柜开了，奶瓶都洗好了", "intent": "控制", "device": "奶瓶消毒柜", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "小易，婴儿房空调调高一度，宝宝手脚凉", "intent": "控制", "device": "婴儿房空调", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "助手，宝宝睡着了，电动摇篮摇慢一点", "intent": "控制", "device": "电动摇篮", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "kids", "text": "婴儿监视器打开，我在厨房也得看着宝宝", "intent": "控制", "device": "婴儿监视器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "family3", "text": "小易，儿童房顶灯关了，孩子该睡了", "intent": "控制", "device": "儿童房顶灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "family3", "text": "孩子说冷，帮他把儿童房空调调到二十七度", "intent": "控制", "device": "儿童房空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "family3", "text": "小管家，打开儿童房摄像头，我看看俩孩子睡没睡", "intent": "控制", "device": "儿童房摄像头", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "family3", "text": "助手，孩子写作业呢，客厅电视声音调小", "intent": "控制", "device": "客厅电视", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "family3", "text": "小易，儿童房加湿器开一下，女儿鼻子干", "intent": "控制", "device": "儿童房加湿器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "mega", "text": "小易，孩子在书房上网课，书房窗帘拉开", "intent": "控制", "device": "书房窗帘", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "duplex", "text": "娃要上楼睡觉了，小易把楼梯灯打开", "intent": "控制", "device": "楼梯灯", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "brand", "text": "小易，孩子要写作业，米家台灯Pro打开", "intent": "控制", "device": "米家台灯Pro", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "elder", "text": "孙子来了，小管家把电视打开，给他放动画片", "intent": "控制", "device": "电视", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "child"]}
+{"home": "apartment", "text": "老婆在洗澡，小易把热水器温度调高一点", "intent": "控制", "device": "热水器", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "apartment", "text": "我妈睡了，替我把客厅主灯关了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "apartment", "text": "老公别动！小易，洗衣机先暂停，他裤兜里还有钱", "intent": "控制", "device": "洗衣机", "action": "暂停", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "house", "text": "我爸快到了，小易把车库门打开", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "house", "text": "小管家，我老婆在书房加班，把落地扇打开", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "house", "text": "阿姨在洗碗，助手把油烟机关了吧，饭早做完了", "intent": "控制", "device": "油烟机", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "villa", "text": "奶奶怕冷，小易把地暖调高两度", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "villa", "text": "我老公在影音室看球，帮他把投影仪声音调大", "intent": "控制", "device": "投影仪", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "villa", "text": "妈，您坐着别起来，小易把主卧空调关了", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "elder", "text": "小易，我爸要坐起来，电动床升起来一点", "intent": "控制", "device": "电动床", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "elder", "text": "我妈要回屋睡了，小管家把老人房空调提前打开", "intent": "控制", "device": "老人房空调", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "elder", "text": "阿姨饭做好了，替我把燃气阀门关了", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "mega", "text": "阿姨睡了，小易把保姆房灯关了", "intent": "控制", "device": "保姆房灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "mega", "text": "我爸妈来住客房，帮我把次卧空调开到二十四度", "intent": "控制", "device": "次卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "rental", "text": "室友在客厅看电视，小易把公共区空调打开", "intent": "控制", "device": "公共区空调", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "rental", "text": "室友都上班去了，帮我把公共区扫地机整起来", "intent": "控制", "device": "公共区扫地机", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "duplex", "text": "我老婆在二楼书房看书，小易把二楼书房空调打开", "intent": "控制", "device": "二楼书房空调", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "duplex", "text": "老公你别弄了，小管家，二楼晾衣架降下来", "intent": "控制", "device": "二楼晾衣架", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "countryside", "text": "他爹开三轮回来了，小易把大门打开", "intent": "控制", "device": "大门", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "countryside", "text": "我妈在堂屋坐着，帮她把堂屋空调调到二十六度", "intent": "控制", "device": "堂屋空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "office", "text": "我老婆在卧室睡觉，小易，音箱声音小点", "intent": "控制", "device": "音箱", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "kids", "text": "月嫂在喂奶，助手把婴儿房灯调暗点", "intent": "控制", "device": "婴儿房灯", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "family"]}
+{"home": "apartment", "text": "我懒得起来了，小易把床头灯关了", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "apartment", "text": "我得去洗澡了，帮我把热水器打开", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "house", "text": "我自己去关太麻烦，小管家把车库门关上", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "house", "text": "我这就要烤面包，小易烤箱预热到两百度", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "villa", "text": "差点忘了，小易现在就把电饭煲开了", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "office", "text": "我要开会了，小易，升降桌升起来", "intent": "控制", "device": "升降桌", "action": "调高或增大", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "office", "text": "懒得自己动手了，助手把咖啡机开了", "intent": "控制", "device": "咖啡机", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "studio", "text": "我记性差，小易你现在就把热水器关了", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "minimal", "text": "省得我忘，小易现在就把门锁锁上", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "brand", "text": "我手上全是面粉，帮我把方太油烟机打开", "intent": "控制", "device": "方太油烟机", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "pets", "text": "我不想自己去铲，小易让智能猫砂盆清理一次", "intent": "控制", "device": "智能猫砂盆", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "self"]}
+{"home": "apartment", "text": "湿手不能碰开关，小易帮我把客厅主灯关了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "house", "text": "油网不清要着火的，小易先把油烟机关了，我拆下来洗", "intent": "控制", "device": "油烟机", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "house", "text": "车库门底下不能站人，小易，车库门先停一下", "intent": "控制", "device": "车库门", "action": "暂停", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "villa", "text": "安全第一，小易出门前把安防警报打开", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "elder", "text": "燃气报警器响了，小易赶紧把燃气阀门关上", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "elder", "text": "老人起夜容易摔，小管家把走廊夜灯打开", "intent": "控制", "device": "走廊夜灯", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "kids", "text": "温奶器不能烧太烫，小易把温度调低一点", "intent": "控制", "device": "温奶器", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "kids", "text": "宝宝睡觉不能对着吹，助手把婴儿房空调风调小", "intent": "控制", "device": "婴儿房空调", "action": "调低或减小", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "family3", "text": "洗太久容易缺氧，小易把热水器关了吧", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "countryside", "text": "打雷了水泵不能开着，小易赶紧把水泵关了", "intent": "控制", "device": "水泵", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "warning"]}
+{"home": "rental", "text": "插座插太多要跳闸，助手先把我房间插座断了", "intent": "控制", "device": "我房间插座", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "warning"]}
