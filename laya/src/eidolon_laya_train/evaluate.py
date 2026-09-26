@@ -174,7 +174,7 @@ def dump_items(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> list
     items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
     return [
         {"key": item_key(it), "qtype": it["qtype"], "ids": list(it["ids"]), "markers": list(it["markers"]),
-         "ref_logits": [round(x, 5) for x in it["logits"]]}
+         "names": list(it["names"]), "ref_logits": [round(x, 5) for x in it["logits"]]}
         for it in score_items(loaded, items, batch_size)
     ]
 

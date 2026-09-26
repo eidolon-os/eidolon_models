@@ -7,6 +7,7 @@ mirror ``eidolon_models_laya.export_npu``; ``tests/test_npu.py`` keeps them equa
 
     python laya_npu.py convert <npu_dir>                              # hidden_l<L>.onnx → hidden_l<L>.rknn (fp16)
     python laya_npu.py run <npu_dir> <items_dir> <out_dir> [--core 0|012]
+    python laya_npu.py bench <npu_dir> <set>.items.jsonl [--n 60]    # one decision = all its questions: 3 schedules
 
 ``run`` reads ``<set>.items.jsonl`` (from ``eidolon-laya-train items``) and writes ``<set>.logits.jsonl``
 (score it on the Mac with ``eidolon-laya-train eval --logits <out_dir>``) plus ``run.json``: latency per
@@ -146,6 +147,124 @@ def cmd_run(args) -> int:
     return 0
 
 
+def cmd_bench(args) -> int:
+    """End-to-end latency of one decision (all questions of a record) under three schedules:
+    sequential on core 0, sequential with each model on cores 0-1-2, and one question per core in parallel."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    from rknnlite.api import RKNNLite
+
+    npu_dir = Path(args.npu_dir)
+    emb = np.load(npu_dir / "tok_emb_fp16.npy", mmap_mode="r")
+    type_emb = np.load(npu_dir / "type_emb.npy")
+    sc = dict(np.load(npu_dir / "scorer.npz"))
+    paths = buckets_in(npu_dir, "rknn")
+    items = [json.loads(x) for x in Path(args.items).read_text("utf-8").splitlines() if x.strip()]
+    by_rec: dict[str, list[dict]] = {}
+    for it in items:
+        by_rec.setdefault(it["key"].rsplit("/", 1)[0], []).append(it)
+    recs = [v for v in by_rec.values() if len(v) == 3][: args.n]
+    if args.all:  # early exit is worth most on non-commands, which have no device/action item
+        recs = list(by_rec.values())
+    cores = [RKNNLite.NPU_CORE_0, RKNNLite.NPU_CORE_1, RKNNLite.NPU_CORE_2]
+
+    def runtime(L, mask):
+        r = RKNNLite(verbose=False)
+        assert r.load_rknn(str(paths[L])) == 0 and r.init_runtime(core_mask=mask) == 0
+        for _ in range(2):
+            r.inference(inputs=npu_inputs([0, 1], 0, L, emb, type_emb))
+        return r
+
+    def one(r, it, L):
+        h = np.asarray(r.inference(inputs=npu_inputs(it["ids"], it["qtype"], L, emb, type_emb))[0], np.float32)[0]
+        return score_hidden(h, it["markers"], sc)
+
+    def bucket(it):
+        return next(b for b in paths if len(it["ids"]) <= b)
+
+    out = {}
+    for label, mask in (("seq_core0", RKNNLite.NPU_CORE_0), ("seq_core012", RKNNLite.NPU_CORE_0_1_2)):
+        rt = {L: runtime(L, mask) for L in paths}
+        ts = []
+        for rec in recs:
+            t = time.perf_counter()
+            for it in rec:
+                one(rt[bucket(it)], it, bucket(it))
+            ts.append((time.perf_counter() - t) * 1000)
+        out[label] = ts
+        for r in rt.values():
+            r.release()
+    # Placement used for both parallel schedules (and what a deployment would load): each question id gets
+    # its own core and only the buckets it actually needs — intent on core 0 (128), device on core 1
+    # (all), action on core 2 (≤ 256). One runtime per core per bucket for every bucket OOMs the NPU.
+    qids = sorted({it["key"].rsplit("/", 1)[1] for rec in recs for it in rec}, key=["intent", "device", "action"].index)
+    core_of = {q: cores[n] for n, q in enumerate(qids)}
+    need = {q: sorted({bucket(it) for rec in recs for it in rec if it["key"].endswith("/" + q)}) for q in qids}
+    rt = {(q, L): runtime(L, core_of[q]) for q in qids for L in need[q]}
+    res_place = {q: need[q] for q in qids}
+
+    def run_q(q, it):
+        return one(rt[(q, bucket(it))], it, bucket(it))
+
+    ts = []
+    with ThreadPoolExecutor(3) as pool:
+        for rec in recs:
+            t = time.perf_counter()
+            list(pool.map(lambda it: run_q(it["key"].rsplit("/", 1)[1], it), rec))
+            ts.append((time.perf_counter() - t) * 1000)
+    out["parallel_3cores"] = ts
+    # early exit (what options.ask_if does in the service): intent first; 无关 stops there,
+    # 查询 adds device, 控制 adds device + action in parallel
+    ts, kinds = [], []
+    with ThreadPoolExecutor(2) as pool:
+        for rec in recs:
+            q = {it["key"].rsplit("/", 1)[1]: it for it in rec}
+            t = time.perf_counter()
+            lo = run_q("intent", q["intent"])
+            intent = q["intent"]["names"][int(lo.argmax())]
+            rest = [x for x in {"无关": [], "查询": ["device"], "控制": ["device", "action"]}[intent] if x in q]
+            # (a record whose gold has no device/action — a gold 无关 — cannot time those; rare, underestimates)
+            list(pool.map(lambda x: run_q(x, q[x]), rest))
+            ts.append((time.perf_counter() - t) * 1000)
+            kinds.append(intent)
+    out["early_exit"] = ts
+    # speculative: all questions start at once; the answer is ready as soon as intent says 无关 (the other
+    # two finish in the background and are dropped), otherwise when the needed ones are done
+    ts = []
+    with ThreadPoolExecutor(3) as pool:
+        for rec in recs:
+            q = {it["key"].rsplit("/", 1)[1]: it for it in rec}
+            t = time.perf_counter()
+            fut = {x: pool.submit(run_q, x, it) for x, it in q.items()}
+            intent = q["intent"]["names"][int(fut["intent"].result().argmax())]
+            for x in {"无关": [], "查询": ["device"], "控制": ["device", "action"]}[intent]:
+                if x in fut:
+                    fut[x].result()
+            ts.append((time.perf_counter() - t) * 1000)
+            for f in fut.values():  # let the dropped work finish before the next utterance (not timed)
+                f.result()
+    out["speculative"] = ts
+    for r in rt.values():
+        r.release()
+    longest = [max(bucket(it) for it in rec) for rec in recs]
+    res = {"records": len(recs), "by_longest_bucket": {L: longest.count(L) for L in sorted(set(longest))},
+           "placement_buckets": res_place, "runtimes_loaded_parallel": sum(len(v) for v in res_place.values())}
+    for sched in ("parallel_3cores", "early_exit", "speculative"):
+        for k in ("无关", "查询", "控制"):
+            sub = [t for t, kk in zip(out[sched], kinds) if kk == k]
+            if sub:
+                res[f"{sched}_pred_{k}"] = {"n": len(sub), "p50": round(statistics.median(sub), 1),
+                                            "p95": round(sorted(sub)[int(0.95 * (len(sub) - 1))], 1)}
+    for label, ts in out.items():
+        res[label] = {"p50": round(statistics.median(ts), 1), "p95": round(sorted(ts)[int(0.95 * (len(ts) - 1))], 1)}
+        for L in sorted(set(longest)):
+            sub = [t for t, lb in zip(ts, longest) if lb == L]
+            res[label][f"p50_longest_{L}"] = round(statistics.median(sub), 1)
+    res["peak_rss_mb"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss // 1024
+    print(json.dumps(res, ensure_ascii=False, indent=1))
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(required=True)
@@ -159,6 +278,12 @@ def main() -> int:
     p.add_argument("out_dir")
     p.add_argument("--core", choices=("0", "012", "auto"), default="0")
     p.set_defaults(func=cmd_run)
+    p = sub.add_parser("bench")
+    p.add_argument("npu_dir")
+    p.add_argument("items", help="one <set>.items.jsonl; records with all three questions are timed")
+    p.add_argument("--n", type=int, default=60)
+    p.add_argument("--all", action="store_true", help="every record (incl. 无关 ones with only an intent item)")
+    p.set_defaults(func=cmd_bench)
     args = ap.parse_args()
     return args.func(args)
 

@@ -171,7 +171,7 @@ def build_parser() -> argparse.ArgumentParser:
         help="static-shape ONNX per sequence bucket + CPU-side tables, for NPU converters (export extra)",
     )
     p.add_argument("--force", action="store_true")
-    p.add_argument("--buckets", help="comma-separated sequence lengths (default 128,256,512)")
+    p.add_argument("--buckets", help="comma-separated sequence lengths (default 128,256,384,512)")
     p.set_defaults(func=cmd_export_npu)
 
     p = sub.add_parser("doctor", help="check files, checksums, runtimes and exposure")

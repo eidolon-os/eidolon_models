@@ -23,7 +23,7 @@ import numpy as np
 
 from .artifacts import EXPORT_RECORD, Manifest, sha256_file
 
-BUCKETS = (128, 256, 512)  # smart-home: intent ≤ 107, action ≤ 147, device ≤ 502 tokens
+BUCKETS = (128, 256, 384, 512)  # smart-home: intent ≤ 107, action ≤ 147, device ≤ 502 tokens (p50 317 on v2-dev)
 OPSET = 17  # what rknn-toolkit2 2.3 converts cleanly (the 2026-09-23 spike)
 UNSUPPORTED_OPS = {"IsNaN"}  # rknn runtime 2.3: "Unsupport CPU op: IsNaN"
 PARITY_TOLERANCE = 1e-3  # max |Δlogit| between PyTorch and ONNX Runtime + numpy scorer
