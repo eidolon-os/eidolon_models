@@ -3,7 +3,6 @@
 {"home": "apartment", "text": "晚上睡觉太热，翻来覆去", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "热得睡不着", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "卧室有点凉，盖被子都不管用", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
-{"home": "apartment", "text": "客厅冷飕飕的", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "空调吹得我头疼", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": ["关闭或停止", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "客厅黑漆漆的看不清", "intent": "控制", "device": "客厅主灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "卧室灯太亮了，眼睛疼", "intent": "控制", "device": "主卧灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent"]}
@@ -107,7 +106,6 @@
 {"home": "apartment", "text": "主卧灯和床头灯都调暗一点", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["multi-device"]}
 {"home": "apartment", "text": "家里所有的空调都开到最大", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "调高或增大"], "tags": ["multi-device"]}
 {"home": "apartment", "text": "关掉客厅主灯，打开床头灯", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["multi-device"]}
-{"home": "apartment", "text": "开启回家模式", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "apartment", "text": "我要午睡一会，窗帘拉上灯关掉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "apartment", "text": "晚上出去散步，门锁上摄像头打开", "intent": "控制", "device": "多个设备或整屋", "action": ["上锁", "打开或启动"], "tags": ["multi-device"]}
 {"home": "apartment", "text": "开一下净化器和加湿器", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
@@ -119,11 +117,9 @@
 {"home": "house", "text": "我要休息了，家里灯都灭了吧", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "house", "text": "出门上班，安防打开车库门关上", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "关闭或停止"], "tags": ["multi-device"]}
 {"home": "house", "text": "我到家了，把车库门和灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
-{"home": "house", "text": "早安模式", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "house", "text": "今晚在家看电影，投影仪开一下，餐厅灯关了", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "关闭或停止"], "tags": ["multi-device"]}
 {"home": "house", "text": "家里来了一堆朋友聚会", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "house", "text": "厨房的都开一下，准备做饭", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
-{"home": "house", "text": "一楼的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "house", "text": "全部开起来", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "house", "text": "度假模式打开", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动"], "tags": ["multi-device"]}
 {"home": "house", "text": "省电点，能关的都关", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
@@ -144,7 +140,6 @@
 {"home": "house", "text": "我要出远门了，车库门锁好，警报开上", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "打开或启动", "上锁"], "tags": ["multi-device"]}
 {"home": "villa", "text": "困了，准备上床", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "villa", "text": "出去一趟，门锁上，灯全关", "intent": "控制", "device": "多个设备或整屋", "action": ["上锁", "关闭或停止"], "tags": ["multi-device"]}
-{"home": "villa", "text": "我进门了", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "villa", "text": "起床啦，窗帘和灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
 {"home": "villa", "text": "电影时间，投影仪开，窗帘拉上，灯关掉", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "关闭或停止"], "tags": ["multi-device"]}
 {"home": "villa", "text": "今晚开派对，音箱灯光都整上", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
@@ -177,14 +172,12 @@
 {"home": "apartment", "text": "油烟机关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "浴霸打开暖一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "门铃声音调小", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home"]}
-{"home": "apartment", "text": "充电桩开始充电", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "喂食器投一份猫粮", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "花园浇水阀关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "投影仪打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "书房灯关了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "餐厅吊灯调暗", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "安防警报打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
-{"home": "apartment", "text": "饮水机插座断电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "鱼缸灯开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "马桶加热打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "apartment", "text": "香薰机开到最小档", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["device-not-in-home"]}
@@ -203,16 +196,13 @@
 {"home": "house", "text": "空气净化器开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "加湿器调大", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "音箱放首歌", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
-{"home": "house", "text": "扫地机器人回去充电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "洗衣机暂停一下", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home"]}
-{"home": "house", "text": "晾衣架降下来", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "电饭煲煮饭", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "热水器调到五十度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "智能门锁上锁", "intent": "控制", "device": "没有对应的设备", "action": "上锁", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "摄像头关掉", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "空调关了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "电视声音调小", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home"]}
-{"home": "house", "text": "净化器调到睡眠模式", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "客厅窗帘关上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "洗衣机开始脱水", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "音箱声音调大", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home"]}

@@ -1,0 +1,156 @@
+{
+ "name": "threegen",
+ "description": "三代同堂的大三居（评测专用）：主卧、老人房、儿童房、书房各一，同类设备多，按房间命名。",
+ "devices": [
+  {
+   "name": "客厅吊灯",
+   "room": "客厅",
+   "category": "照明",
+   "type": "吊灯"
+  },
+  {
+   "name": "餐厅灯",
+   "room": "餐厅",
+   "category": "照明",
+   "type": "吊灯"
+  },
+  {
+   "name": "主卧灯",
+   "room": "主卧",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "老人房灯",
+   "room": "老人房",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "儿童房灯",
+   "room": "儿童房",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "书房台灯",
+   "room": "书房",
+   "category": "照明",
+   "type": "台灯"
+  },
+  {
+   "name": "走廊感应灯",
+   "room": "走廊",
+   "category": "照明",
+   "type": "感应灯"
+  },
+  {
+   "name": "客厅空调",
+   "room": "客厅",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "主卧空调",
+   "room": "主卧",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "老人房空调",
+   "room": "老人房",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "儿童房空调",
+   "room": "儿童房",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "书房空调",
+   "room": "书房",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "客厅电视",
+   "room": "客厅",
+   "category": "影音",
+   "type": "电视"
+  },
+  {
+   "name": "老人房电视",
+   "room": "老人房",
+   "category": "影音",
+   "type": "电视"
+  },
+  {
+   "name": "净水器",
+   "room": "厨房",
+   "category": "厨电",
+   "type": "净水器"
+  },
+  {
+   "name": "电饭煲",
+   "room": "厨房",
+   "category": "厨电",
+   "type": "电饭煲"
+  },
+  {
+   "name": "电蒸箱",
+   "room": "厨房",
+   "category": "厨电",
+   "type": "蒸箱"
+  },
+  {
+   "name": "洗衣机",
+   "room": "阳台",
+   "category": "洗护",
+   "type": "洗衣机"
+  },
+  {
+   "name": "烘干机",
+   "room": "阳台",
+   "category": "洗护",
+   "type": "烘干机"
+  },
+  {
+   "name": "晾衣架",
+   "room": "阳台",
+   "category": "洗护",
+   "type": "电动晾衣架"
+  },
+  {
+   "name": "热水器",
+   "room": "卫生间",
+   "category": "热水",
+   "type": "燃气热水器"
+  },
+  {
+   "name": "智能门锁",
+   "room": "玄关",
+   "category": "安防",
+   "type": "门锁"
+  },
+  {
+   "name": "门口摄像头",
+   "room": "玄关",
+   "category": "安防",
+   "type": "摄像头"
+  },
+  {
+   "name": "燃气报警器",
+   "room": "厨房",
+   "category": "安防",
+   "type": "燃气报警器"
+  },
+  {
+   "name": "除湿机",
+   "room": "儿童房",
+   "category": "空气",
+   "type": "除湿机"
+  }
+ ]
+}

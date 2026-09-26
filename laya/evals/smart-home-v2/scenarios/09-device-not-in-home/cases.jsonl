@@ -1,0 +1,50 @@
+{"id": "v2-09-001", "home": "apartment", "text": "次卧那台空调帮我开开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-002", "home": "apartment", "text": "卫生间镜前灯打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-003", "home": "apartment", "text": "把主卧的窗帘合上", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-004", "home": "apartment", "text": "把客厅那台加湿器打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-005", "home": "apartment", "text": "油烟机风力调大", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-006", "home": "apartment", "text": "投影仪打开，放个电影", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-007", "home": "apartment", "text": "客厅吸顶灯关掉", "gold": {"intent": "控制", "device": "客厅主灯", "action": "关闭或停止"}}
+{"id": "v2-09-008", "home": "apartment", "text": "门铃刚才响过吗", "gold": {"intent": "查询", "device": "没有对应的设备"}}
+{"id": "v2-09-009", "home": "house", "text": "大门的锁帮我打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-010", "home": "house", "text": "车库里开下灯", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-011", "home": "house", "text": "热水器先烧上水", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-012", "home": "house", "text": "拉开窗帘让太阳照进来", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-013", "home": "house", "text": "电饭煲定时明早六点煮粥", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-014", "home": "house", "text": "加湿器的水还够不够", "gold": {"intent": "查询", "device": "没有对应的设备"}}
+{"id": "v2-09-015", "home": "villa", "text": "去次卧前先把那边灯开了", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-016", "home": "villa", "text": "书房空调调低一点", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-017", "home": "villa", "text": "进门的玄关灯给我点亮", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-018", "home": "villa", "text": "把除湿机开起来", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-019", "home": "villa", "text": "净水器冲洗一下", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-020", "home": "villa", "text": "书房里的电扇吹起来", "gold": {"intent": "控制", "device": "落地扇", "action": "打开或启动"}}
+{"id": "v2-09-021", "home": "smallflat", "text": "厨房黑乎乎的，开个灯", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-022", "home": "smallflat", "text": "客厅窗帘开一条缝", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-023", "home": "smallflat", "text": "客厅空调给我吹点冷风", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-024", "home": "smallflat", "text": "空气净化器打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-025", "home": "smallflat", "text": "卧室空调切到睡眠模式", "gold": {"intent": "控制", "device": "空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-09-026", "home": "smallflat", "text": "扫地机今天扫过没有", "gold": {"intent": "查询", "device": "没有对应的设备"}}
+{"id": "v2-09-027", "home": "loft", "text": "把客厅那台挂机打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-028", "home": "loft", "text": "卧室柜机开一下", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-029", "home": "loft", "text": "卧室灯带打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-030", "home": "loft", "text": "衣帽间空调开一下", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-031", "home": "loft", "text": "卧室的投影仪打开", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-032", "home": "loft", "text": "客厅那台立式空调启动一下", "gold": {"intent": "控制", "device": "客厅柜机", "action": "打开或启动"}}
+{"id": "v2-09-033", "home": "loft", "text": "卧室那台挂墙的空调停掉", "gold": {"intent": "控制", "device": "卧室挂机", "action": "关闭或停止"}}
+{"id": "v2-09-034", "home": "loft", "text": "卫生间暖风机打开", "gold": {"intent": "控制", "device": "浴室暖风机", "action": "打开或启动"}}
+{"id": "v2-09-035", "home": "loft", "text": "衣服洗到哪一步了", "gold": {"intent": "查询", "device": "没有对应的设备"}}
+{"id": "v2-09-036", "home": "threegen", "text": "打开儿童房的加湿器", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-037", "home": "threegen", "text": "老人房的除湿机开一下", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-038", "home": "threegen", "text": "儿童房电视关掉", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-039", "home": "threegen", "text": "厨房顶上的灯开一下", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-040", "home": "threegen", "text": "让扫地机去客厅扫一圈", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-041", "home": "threegen", "text": "书房那盏灯熄了吧", "gold": {"intent": "控制", "device": "书房台灯", "action": "关闭或停止"}}
+{"id": "v2-09-042", "home": "threegen", "text": "儿童房墙上返潮了，开下除湿机", "gold": {"intent": "控制", "device": "除湿机", "action": "打开或启动"}}
+{"id": "v2-09-043", "home": "bigvilla", "text": "用二楼的洗衣机把床单洗了", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-044", "home": "bigvilla", "text": "二楼次卧窗帘拉上", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-045", "home": "bigvilla", "text": "一楼书房冷气开到24度", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-046", "home": "bigvilla", "text": "负一楼扫地机启动", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-047", "home": "bigvilla", "text": "加湿器开到中档", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-09-048", "home": "bigvilla", "text": "洗衣房的洗衣机启动一下", "gold": {"intent": "控制", "device": "三楼洗衣机", "action": "打开或启动"}}
+{"id": "v2-09-049", "home": "bigvilla", "text": "负一楼抽湿机打开", "gold": {"intent": "控制", "device": "负一楼除湿机", "action": "打开或启动"}}
+{"id": "v2-09-050", "home": "bigvilla", "text": "二楼洗衣机洗好了吗", "gold": {"intent": "查询", "device": "没有对应的设备"}}

@@ -33,7 +33,6 @@
 {"home": "mega", "text": "书房下午太晒，屏幕都看不清了", "intent": "控制", "device": "书房窗帘", "action": "关闭或停止", "tags": ["implicit-intent"]}
 {"home": "mega", "text": "炒个菜热得满头大汗", "intent": "控制", "device": "厨房空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "mega", "text": "马上洗澡，浴室冻得要死", "intent": "控制", "device": "主卫浴霸", "action": "打开或启动", "tags": ["implicit-intent"]}
-{"home": "mega", "text": "明天要穿的衬衫还湿着", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "mega", "text": "衣帽间灯是不是一直开着", "intent": "查询", "device": "衣帽间灯", "tags": ["status-query"]}
 {"home": "mega", "text": "保姆房空调现在几度", "intent": "查询", "device": "保姆房空调", "tags": ["status-query"]}
 {"home": "mega", "text": "影音室空调开着没", "intent": "查询", "device": "影音室空调", "tags": ["status-query"]}
@@ -65,7 +64,6 @@
 {"home": "minimal", "text": "空调开到二十五度", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "cross-home"]}
 {"home": "minimal", "text": "空调关掉", "intent": "控制", "device": "空调", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "minimal", "text": "空调温度再升一度", "intent": "控制", "device": "空调", "action": "调高或增大", "tags": ["explicit-control"]}
-{"home": "minimal", "text": "空调切到睡眠模式", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "minimal", "text": "空调风调大一点", "intent": "控制", "device": "空调", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "minimal", "text": "音箱放点轻音乐", "intent": "控制", "device": "音箱", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "minimal", "text": "音箱声音调小点", "intent": "控制", "device": "音箱", "action": "调低或减小", "tags": ["explicit-control"]}
@@ -79,7 +77,6 @@
 {"home": "minimal", "text": "黑灯瞎火的啥也看不见", "intent": "控制", "device": "灯", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "minimal", "text": "热得翻来覆去睡不着", "intent": "控制", "device": "空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "minimal", "text": "被窝里还是冷飕飕的", "intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
-{"home": "minimal", "text": "屋里太安静了，想听点歌", "intent": "控制", "device": "音箱", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "minimal", "text": "我要开会了，吵死了", "intent": "控制", "device": "音箱", "action": ["暂停", "关闭或停止", "调低或减小"], "tags": ["implicit-intent"]}
 {"home": "minimal", "text": "地板踩着沙沙的，全是灰", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "minimal", "text": "我在门口呢，手里提着菜腾不出手", "intent": "控制", "device": "门锁", "action": "打开或启动", "tags": ["implicit-intent"]}
@@ -122,7 +119,6 @@
 {"home": "countryside", "text": "鸡舍灯关了", "intent": "控制", "device": "鸡舍灯", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "大门关上", "intent": "控制", "device": "大门", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "大门打开，车要进来", "intent": "控制", "device": "大门", "action": "打开或启动", "tags": ["explicit-control"]}
-{"home": "countryside", "text": "大门锁上", "intent": "控制", "device": "大门", "action": ["关闭或停止", "上锁"], "tags": ["explicit-control"]}
 {"home": "countryside", "text": "卷帘门拉下来", "intent": "控制", "device": "卷帘门", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "卷帘门升到一半", "intent": "控制", "device": "卷帘门", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "水泵打开", "intent": "控制", "device": "水泵", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
@@ -189,7 +185,6 @@
 {"home": "pets", "text": "烘干箱开四十度", "intent": "控制", "device": "宠物烘干箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "pets", "text": "烘干箱停了", "intent": "控制", "device": "宠物烘干箱", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "pets", "text": "净化器打开", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
-{"home": "pets", "text": "净化器开到最大档", "intent": "控制", "device": "空气净化器", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control"]}
 {"home": "pets", "text": "扫地机扫一下", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
 {"home": "pets", "text": "音箱给狗放点白噪音", "intent": "控制", "device": "音箱", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "pets", "text": "洗衣机把狗窝垫子洗一下", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["explicit-control"]}

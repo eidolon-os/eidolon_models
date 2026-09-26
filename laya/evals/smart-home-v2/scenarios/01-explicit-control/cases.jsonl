@@ -1,0 +1,60 @@
+{"id": "v2-01-001", "home": "apartment", "text": "管家，净化器往上调一档", "gold": {"intent": "控制", "device": "空气净化器", "action": "调高或增大"}}
+{"id": "v2-01-002", "home": "apartment", "text": "洗衣机先停一停，我再塞件衬衫进去", "gold": {"intent": "控制", "device": "洗衣机", "action": "暂停"}}
+{"id": "v2-01-003", "home": "apartment", "text": "电视声音大点，我这听不清", "gold": {"intent": "控制", "device": "电视", "action": "调高或增大"}}
+{"id": "v2-01-004", "home": "apartment", "text": "出门了，门给我反锁上", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}}
+{"id": "v2-01-005", "home": "apartment", "text": "家里来客人了，摄像头先关掉", "gold": {"intent": "控制", "device": "摄像头", "action": "关闭或停止"}}
+{"id": "v2-01-006", "home": "apartment", "text": "电饭煲换成煮粥模式", "gold": {"intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-007", "home": "apartment", "text": "热水器水温降几度，烫手", "gold": {"intent": "控制", "device": "热水器", "action": "调低或减小"}}
+{"id": "v2-01-008", "home": "apartment", "text": "加湿器湿度定在百分之五十", "gold": {"intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-009", "home": "apartment", "text": "衣服收好了，晾衣架升回去", "gold": {"intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"]}}
+{"id": "v2-01-010", "home": "house", "text": "落地扇风小点，吹得我头疼", "gold": {"intent": "控制", "device": "落地扇", "action": "调低或减小"}}
+{"id": "v2-01-011", "home": "house", "text": "冷冻室再调低两度", "gold": {"intent": "控制", "device": "冰箱", "action": "调低或减小"}}
+{"id": "v2-01-012", "home": "house", "text": "投影仪暂停，我去拿个外卖", "gold": {"intent": "控制", "device": "投影仪", "action": "暂停"}}
+{"id": "v2-01-013", "home": "house", "text": "菜炒完了，油烟机可以关了", "gold": {"intent": "控制", "device": "油烟机", "action": "关闭或停止"}}
+{"id": "v2-01-014", "home": "house", "text": "浴霸切到暖风档", "gold": {"intent": "控制", "device": "浴霸", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-015", "home": "house", "text": "我到家了，安防警报撤防吧", "gold": {"intent": "控制", "device": "安防警报", "action": "关闭或停止"}}
+{"id": "v2-01-016", "home": "house", "text": "充电桩别充了，电够用", "gold": {"intent": "控制", "device": "充电桩", "action": "关闭或停止"}}
+{"id": "v2-01-017", "home": "house", "text": "饮水机那个插座给通上电", "gold": {"intent": "控制", "device": "饮水机插座", "action": "打开或启动"}}
+{"id": "v2-01-018", "home": "house", "text": "书房灯亮度拉满", "gold": {"intent": "控制", "device": "书房灯", "action": ["调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-01-019", "home": "villa", "text": "助手，客厅窗帘拉开吧", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "打开或启动"}}
+{"id": "v2-01-020", "home": "villa", "text": "宠物喂食器现在出一次粮", "gold": {"intent": "控制", "device": "宠物喂食器", "action": "打开或启动"}}
+{"id": "v2-01-021", "home": "villa", "text": "门铃音量调大，老是听不见有人按", "gold": {"intent": "控制", "device": "门铃", "action": "调高或增大"}}
+{"id": "v2-01-022", "home": "villa", "text": "蛋糕烤好了，烤箱关掉", "gold": {"intent": "控制", "device": "烤箱", "action": "关闭或停止"}}
+{"id": "v2-01-023", "home": "villa", "text": "扫地机器人去把地扫一遍", "gold": {"intent": "控制", "device": "扫地机器人", "action": "打开或启动"}}
+{"id": "v2-01-024", "home": "villa", "text": "主卧空调升一度", "gold": {"intent": "控制", "device": "主卧空调", "action": "调高或增大"}}
+{"id": "v2-01-025", "home": "loft", "text": "灯带换成暖黄光", "gold": {"intent": "控制", "device": "客厅灯带", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-026", "home": "loft", "text": "柜机，开除湿", "gold": {"intent": "控制", "device": "客厅柜机", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "v2-01-027", "home": "loft", "text": "马桶圈太凉了，温度调高点", "gold": {"intent": "控制", "device": "智能马桶", "action": "调高或增大"}}
+{"id": "v2-01-028", "home": "loft", "text": "暖风机先开上，我待会儿洗澡", "gold": {"intent": "控制", "device": "浴室暖风机", "action": "打开或启动"}}
+{"id": "v2-01-029", "home": "loft", "text": "扫拖一体机停一下，我把地上的数据线收了", "gold": {"intent": "控制", "device": "扫拖一体机", "action": "暂停"}}
+{"id": "v2-01-030", "home": "loft", "text": "电热水器设到六十度", "gold": {"intent": "控制", "device": "电热水器", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-031", "home": "loft", "text": "我上楼睡了，入户门帮我锁上", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}}
+{"id": "v2-01-032", "home": "threegen", "text": "烘干机暂停，里面有件毛衣得拿出来", "gold": {"intent": "控制", "device": "烘干机", "action": "暂停"}}
+{"id": "v2-01-033", "home": "threegen", "text": "屋里太潮了，除湿机开起来", "gold": {"intent": "控制", "device": "除湿机", "action": "打开或启动"}}
+{"id": "v2-01-034", "home": "threegen", "text": "电蒸箱蒸二十分钟", "gold": {"intent": "控制", "device": "电蒸箱", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "v2-01-035", "home": "threegen", "text": "书房台灯再亮一些", "gold": {"intent": "控制", "device": "书房台灯", "action": "调高或增大"}}
+{"id": "v2-01-036", "home": "threegen", "text": "小管家，老人房电视声音关小点", "gold": {"intent": "控制", "device": "老人房电视", "action": "调低或减小"}}
+{"id": "v2-01-037", "home": "threegen", "text": "晾衣架放下来，我要晒被子", "gold": {"intent": "控制", "device": "晾衣架", "action": "调低或减小"}}
+{"id": "v2-01-038", "home": "threegen", "text": "洗澡水给我设成四十二度", "gold": {"intent": "控制", "device": "热水器", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-039", "home": "threegen", "text": "我们要睡了，把大门锁好", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}}
+{"id": "v2-01-040", "home": "threegen", "text": "客厅吊灯太晃眼，关了吧", "gold": {"intent": "控制", "device": "客厅吊灯", "action": "关闭或停止"}}
+{"id": "v2-01-041", "home": "threegen", "text": "洗衣机用快洗模式", "gold": {"intent": "控制", "device": "洗衣机", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-042", "home": "smallflat", "text": "烧水壶插座打开，我烧点水", "gold": {"intent": "控制", "device": "烧水壶插座", "action": "打开或启动"}}
+{"id": "v2-01-043", "home": "smallflat", "text": "空调风速降一档", "gold": {"intent": "控制", "device": "空调", "action": "调低或减小"}}
+{"id": "v2-01-044", "home": "smallflat", "text": "窗帘拉开一条缝就行", "gold": {"intent": "控制", "device": "窗帘", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "v2-01-045", "home": "smallflat", "text": "帮我锁一下门", "gold": {"intent": "控制", "device": "门锁", "action": "上锁"}}
+{"id": "v2-01-046", "home": "smallflat", "text": "要睡了，电视关了", "gold": {"intent": "控制", "device": "电视", "action": "关闭或停止"}}
+{"id": "v2-01-047", "home": "bigvilla", "text": "负一楼除湿机调成自动", "gold": {"intent": "控制", "device": "负一楼除湿机", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-048", "home": "bigvilla", "text": "酒窖恒温柜设到十四度", "gold": {"intent": "控制", "device": "负一楼酒窖恒温柜", "action": "设为指定的数值或模式"}}
+{"id": "v2-01-049", "home": "bigvilla", "text": "一楼客厅灯带调暗一些", "gold": {"intent": "控制", "device": "一楼客厅灯带", "action": "调低或减小"}}
+{"id": "v2-01-050", "home": "bigvilla", "text": "洗碗机先等会儿，还有口锅没放进去", "gold": {"intent": "控制", "device": "洗碗机", "action": "暂停"}}
+{"id": "v2-01-051", "home": "bigvilla", "text": "蒸烤箱用蒸汽模式蒸半小时", "gold": {"intent": "控制", "device": "蒸烤箱", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "v2-01-052", "home": "bigvilla", "text": "地暖温度往下调点", "gold": {"intent": "控制", "device": "地暖", "action": "调低或减小"}}
+{"id": "v2-01-053", "home": "bigvilla", "text": "我要出车，车库门升起来", "gold": {"intent": "控制", "device": "车库门", "action": "打开或启动"}}
+{"id": "v2-01-054", "home": "bigvilla", "text": "下雨了，花园喷灌停了吧", "gold": {"intent": "控制", "device": "花园喷灌", "action": "关闭或停止"}}
+{"id": "v2-01-055", "home": "bigvilla", "text": "管家，全屋音响先暂停", "gold": {"intent": "控制", "device": "全屋音响", "action": "暂停"}}
+{"id": "v2-01-056", "home": "bigvilla", "text": "大门帮我锁了", "gold": {"intent": "控制", "device": "大门门锁", "action": "上锁"}}
+{"id": "v2-01-057", "home": "bigvilla", "text": "我们出去旅游了，安防系统布防", "gold": {"intent": "控制", "device": "安防系统", "action": "打开或启动"}}
+{"id": "v2-01-058", "home": "bigvilla", "text": "新风系统风量开大", "gold": {"intent": "控制", "device": "新风系统", "action": "调高或增大"}}
+{"id": "v2-01-059", "home": "bigvilla", "text": "要下雨了，三楼阳光房天窗关上", "gold": {"intent": "控制", "device": "三楼阳光房天窗", "action": "关闭或停止"}}
+{"id": "v2-01-060", "home": "bigvilla", "text": "三楼烘干机开始烘衣服", "gold": {"intent": "控制", "device": "三楼烘干机", "action": "打开或启动"}}

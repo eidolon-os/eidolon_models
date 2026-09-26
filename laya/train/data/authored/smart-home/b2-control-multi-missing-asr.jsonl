@@ -11,7 +11,6 @@
 {"home": "villa", "text": "客厅空调风速开到自动", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "apartment", "text": "客厅空调凉一点", "intent": "控制", "device": "客厅空调", "action": "调低或减小", "tags": ["explicit-control"]}
 {"home": "apartment", "text": "客厅空调热一点，冻手", "intent": "控制", "device": "客厅空调", "action": "调高或增大", "tags": ["explicit-control"]}
-{"home": "apartment", "text": "主卧空调温度设成二十七", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "主卧空调开睡眠模式，风量最小", "intent": "控制", "device": "主卧空调", "action": ["设为指定的数值或模式", "调低或减小"], "tags": ["explicit-control"]}
 {"home": "apartment", "text": "主卧空调风大一点", "intent": "控制", "device": "主卧空调", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "apartment", "text": "主卧空调温度再降一度", "intent": "控制", "device": "主卧空调", "action": "调低或减小", "tags": ["explicit-control"]}
@@ -22,7 +21,6 @@
 {"home": "apartment", "text": "空气净化器调到三档", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "净化器高一档", "intent": "控制", "device": "空气净化器", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "apartment", "text": "净化器低一档，风太大了", "intent": "控制", "device": "空气净化器", "action": "调低或减小", "tags": ["explicit-control"]}
-{"home": "apartment", "text": "加湿器开到中档", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "加湿器湿度目标设成百分之五十", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "apartment", "text": "加湿器再大一点点", "intent": "控制", "device": "加湿器", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "apartment", "text": "加湿器暂停一下，我加点水", "intent": "控制", "device": "加湿器", "action": "暂停", "tags": ["explicit-control"]}
@@ -72,7 +70,6 @@
 {"home": "villa", "text": "地暖低一度，有点闷", "intent": "控制", "device": "地暖", "action": "调低或减小", "tags": ["explicit-control"]}
 {"home": "house", "text": "新风机调到二档", "intent": "控制", "device": "新风机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "新风机高一档", "intent": "控制", "device": "新风机", "action": "调高或增大", "tags": ["explicit-control"]}
-{"home": "house", "text": "冰箱冷藏调到五度", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "冰箱冷冻室温度调高一点", "intent": "控制", "device": "冰箱", "action": "调高或增大", "tags": ["explicit-control"]}
 {"home": "house", "text": "冰箱开假日模式", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "house", "text": "洗碗机选快洗，半小时那个", "intent": "控制", "device": "洗碗机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
@@ -111,7 +108,6 @@
 {"home": "apartment", "text": "明天去度假，家里的东西都关好锁好", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "上锁"], "tags": ["multi-device"]}
 {"home": "apartment", "text": "小易晚安，都关了吧", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "apartment", "text": "早安，把家里叫醒", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
-{"home": "apartment", "text": "客厅的几个电器都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "apartment", "text": "所有的灯调暗一半", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["multi-device"]}
 {"home": "apartment", "text": "家里的电器全部断开", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
 {"home": "apartment", "text": "主卧的灯和空调都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
@@ -211,7 +207,6 @@
 {"home": "apartment", "text": "暖风机开到二档", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "电视调到中央五套", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "客厅空调风速调大点", "intent": "控制", "device": "没有对应的设备", "action": "调高或增大", "tags": ["device-not-in-home"]}
-{"home": "house", "text": "窗帘拉开一半", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "空气净化器调到自动", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "加湿器暂停一下", "intent": "控制", "device": "没有对应的设备", "action": "暂停", "tags": ["device-not-in-home"]}
 {"home": "house", "text": "智能音箱声音调小", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home"]}
@@ -271,7 +266,6 @@
 {"home": "house", "text": "落地扇开三当", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
 {"home": "house", "text": "地暖二十1度", "intent": "控制", "device": "地暖", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
 {"home": "house", "text": "新风机呃调低一档", "intent": "控制", "device": "新风机", "action": "调低或减小", "tags": ["asr-noise"]}
-{"home": "house", "text": "冰箱冷藏调到4读", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
 {"home": "house", "text": "烤箱 一百八十 度", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
 {"home": "house", "text": "油烟机开到最大档呃", "intent": "控制", "device": "油烟机", "action": ["设为指定的数值或模式", "调高或增大"], "tags": ["asr-noise"]}
 {"home": "house", "text": "浴巴暖风开二档", "intent": "控制", "device": "浴霸", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
@@ -284,7 +278,6 @@
 {"home": "apartment", "text": "我要睡觉了嗯都关了吧", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["asr-noise"]}
 {"home": "apartment", "text": "灯和电视都关到", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["asr-noise"]}
 {"home": "apartment", "text": "离家模式嗯开一下", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "上锁"], "tags": ["asr-noise"]}
-{"home": "house", "text": "一楼的等都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["asr-noise"]}
 {"home": "house", "text": "厨房那些呃都关掉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["asr-noise"]}
 {"home": "villa", "text": "观影模式呃开一下", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "调低或减小"], "tags": ["asr-noise"]}
 {"home": "apartment", "text": "所有的空掉都开二十六", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}

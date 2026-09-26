@@ -111,7 +111,6 @@
 {"home": "house", "text": "雨下了一天，别再浇了", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "阳台的花蔫了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "house", "text": "厨房烟雾缭绕的", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
-{"home": "house", "text": "爆炒辣椒呛得直咳嗽", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "villa", "text": "厨房这烟熏得烟感都要响了", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "炒菜呛人得很", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "house", "text": "好像有人在外面按铃，谁啊", "intent": "查询", "device": "门铃", "tags": ["implicit-intent"]}
@@ -180,7 +179,6 @@
 {"home": "house", "text": "门铃能换铃声吗", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "门铃换成第二个铃声", "intent": "控制", "device": "门铃", "action": "设为指定的数值或模式", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "安防警报误报怎么办", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
-{"home": "house", "text": "安防警报解除", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "车库门遥控距离有多远", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "车库门开一半", "intent": "控制", "device": "车库门", "action": "设为指定的数值或模式", "tags": ["boundary", "question-vs-control"]}
 {"home": "house", "text": "花园浇水阀冬天要不要关", "intent": "无关", "tags": ["boundary", "question-vs-control"]}
@@ -195,7 +193,6 @@
 {"home": "apartment", "text": "加湿器一直喷着别停", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "扫地机器人回充了吗", "intent": "查询", "device": "扫地机器人", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "扫地机器人自己回充了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
-{"home": "apartment", "text": "扫地机器人回窝充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电饭煲煮好了没", "intent": "查询", "device": "电饭煲", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电饭煲煮好了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电饭煲保温着", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["boundary", "query-vs-control"]}
@@ -214,7 +211,6 @@
 {"home": "house", "text": "安防警报布防了没", "intent": "查询", "device": "安防警报", "tags": ["boundary", "query-vs-control"]}
 {"home": "house", "text": "安防警报已经布防了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
 {"home": "house", "text": "安防警报布防", "intent": "控制", "device": "安防警报", "action": "打开或启动", "tags": ["boundary", "query-vs-control"]}
-{"home": "house", "text": "洗碗机洗完了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
 {"home": "house", "text": "洗碗机再洗一遍", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["boundary", "query-vs-control"]}
 {"home": "apartment", "text": "电视别开了，我要睡", "intent": "无关", "tags": ["boundary", "negation"]}
 {"home": "apartment", "text": "别关电视，我马上回来", "intent": "无关", "tags": ["boundary", "negation"]}

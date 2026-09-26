@@ -185,7 +185,6 @@
 {"home": "apartment", "text": "主卧灯现在是什么状态", "intent": "查询", "device": "主卧灯", "tags": ["status-query"]}
 {"home": "apartment", "text": "床头灯是开的还是关的", "intent": "查询", "device": "床头灯", "tags": ["status-query"]}
 {"home": "apartment", "text": "床头灯现在亮度是多少", "intent": "查询", "device": "床头灯", "tags": ["status-query"]}
-{"home": "apartment", "text": "客厅空调现在是制冷还是制热", "intent": "查询", "device": "客厅空调", "tags": ["status-query"]}
 {"home": "apartment", "text": "客厅空调开着没", "intent": "查询", "device": "客厅空调", "tags": ["status-query"]}
 {"home": "apartment", "text": "主卧空调现在设的是几度", "intent": "查询", "device": "主卧空调", "tags": ["status-query"]}
 {"home": "apartment", "text": "主卧空调是不是还开着", "intent": "查询", "device": "主卧空调", "tags": ["status-query"]}
@@ -199,15 +198,10 @@
 {"home": "apartment", "text": "电视现在开着吗", "intent": "查询", "device": "电视", "tags": ["status-query"]}
 {"home": "apartment", "text": "音箱现在在放什么", "intent": "查询", "device": "智能音箱", "tags": ["status-query"]}
 {"home": "apartment", "text": "智能音箱的音量现在是多少", "intent": "查询", "device": "智能音箱", "tags": ["status-query"]}
-{"home": "apartment", "text": "扫地机器人现在电量还有多少", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
 {"home": "apartment", "text": "扫地机器人回充电座了吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
-{"home": "apartment", "text": "洗衣机洗到哪一步了", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
 {"home": "apartment", "text": "洗衣机的衣服洗完了吗", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
-{"home": "apartment", "text": "晾衣架现在是升上去的还是放下来的", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query"]}
 {"home": "apartment", "text": "晾衣架的烘干还要多久", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query"]}
-{"home": "apartment", "text": "电饭煲还有几分钟煮好", "intent": "查询", "device": "电饭煲", "tags": ["status-query"]}
 {"home": "apartment", "text": "电饭煲现在是在保温吗", "intent": "查询", "device": "电饭煲", "tags": ["status-query"]}
-{"home": "apartment", "text": "热水器现在水温多少度", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
 {"home": "apartment", "text": "热水器是不是开着", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
 {"home": "apartment", "text": "门锁现在是反锁状态吗", "intent": "查询", "device": "智能门锁", "tags": ["status-query"]}
 {"home": "apartment", "text": "今天有谁开过门锁", "intent": "查询", "device": "智能门锁", "tags": ["status-query"]}
@@ -227,7 +221,6 @@
 {"home": "house", "text": "新风机的滤网还能用多久", "intent": "查询", "device": "新风机", "tags": ["status-query"]}
 {"home": "house", "text": "冰箱现在的温度设置是多少", "intent": "查询", "device": "冰箱", "tags": ["status-query"]}
 {"home": "house", "text": "冰箱门是不是没关严", "intent": "查询", "device": "冰箱", "tags": ["status-query"]}
-{"home": "house", "text": "洗碗机还要洗多久", "intent": "查询", "device": "洗碗机", "tags": ["status-query"]}
 {"home": "house", "text": "洗碗机现在到哪个阶段了", "intent": "查询", "device": "洗碗机", "tags": ["status-query"]}
 {"home": "house", "text": "烤箱现在温度多少", "intent": "查询", "device": "烤箱", "tags": ["status-query"]}
 {"home": "house", "text": "烤箱的计时还剩几分钟", "intent": "查询", "device": "烤箱", "tags": ["status-query"]}
@@ -237,7 +230,6 @@
 {"home": "house", "text": "浴霸现在开的是暖风还是换气", "intent": "查询", "device": "浴霸", "tags": ["status-query"]}
 {"home": "house", "text": "投影仪开着吗", "intent": "查询", "device": "投影仪", "tags": ["status-query"]}
 {"home": "house", "text": "投影仪的灯泡用了多少小时了", "intent": "查询", "device": "投影仪", "tags": ["status-query"]}
-{"home": "house", "text": "今天有人按过门铃吗", "intent": "查询", "device": "门铃", "tags": ["status-query"]}
 {"home": "house", "text": "门铃的电量还有多少", "intent": "查询", "device": "门铃", "tags": ["status-query"]}
 {"home": "house", "text": "安防警报现在是撤防了吗", "intent": "查询", "device": "安防警报", "tags": ["status-query"]}
 {"home": "house", "text": "昨晚安防警报有没有响过", "intent": "查询", "device": "安防警报", "tags": ["status-query"]}
@@ -248,8 +240,6 @@
 {"home": "house", "text": "充电桩充了多少电了", "intent": "查询", "device": "充电桩", "tags": ["status-query"]}
 {"home": "house", "text": "车还要充多久才满", "intent": "查询", "device": "充电桩", "tags": ["status-query"]}
 {"home": "house", "text": "猫粮还有没有", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query"]}
-{"home": "house", "text": "喂食器今天喂过几次了", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query"]}
-{"home": "house", "text": "饮水机插座现在通电吗", "intent": "查询", "device": "饮水机插座", "tags": ["status-query"]}
 {"home": "house", "text": "饮水机的插座是不是关了", "intent": "查询", "device": "饮水机插座", "tags": ["status-query"]}
 {"home": "apartment", "text": "灯都关了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query"]}
 {"home": "house", "text": "家里的灯是不是都关了", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query"]}

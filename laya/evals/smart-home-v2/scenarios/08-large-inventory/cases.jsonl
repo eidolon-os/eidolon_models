@@ -1,0 +1,30 @@
+{"id": "v2-08-001", "home": "bigvilla", "text": "主卧空调温度设成二十五", "gold": {"intent": "控制", "device": "二楼主卧空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-08-002", "home": "bigvilla", "text": "电影要开始了，影院的灯调暗点", "gold": {"intent": "控制", "device": "负一楼影院灯", "action": "调低或减小"}}
+{"id": "v2-08-003", "home": "bigvilla", "text": "投影打开，准备看片", "gold": {"intent": "控制", "device": "负一楼影院投影", "action": "打开或启动"}}
+{"id": "v2-08-004", "home": "bigvilla", "text": "酒柜温度再低一度", "gold": {"intent": "控制", "device": "负一楼酒窖恒温柜", "action": "调低或减小"}}
+{"id": "v2-08-005", "home": "bigvilla", "text": "次卧那个灯灭了吧", "gold": {"intent": "控制", "device": "二楼次卧灯", "action": "关闭或停止"}}
+{"id": "v2-08-006", "home": "bigvilla", "text": "书房空调开制冷", "gold": {"intent": "控制", "device": "二楼书房空调", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "v2-08-007", "home": "bigvilla", "text": "走廊灯不用一直亮着，关掉", "gold": {"intent": "控制", "device": "二楼走廊灯", "action": "关闭或停止"}}
+{"id": "v2-08-008", "home": "bigvilla", "text": "露台的灯打开，我上去坐会儿", "gold": {"intent": "控制", "device": "三楼露台灯", "action": "打开或启动"}}
+{"id": "v2-08-009", "home": "bigvilla", "text": "天窗开一下透透气", "gold": {"intent": "控制", "device": "三楼阳光房天窗", "action": "打开或启动"}}
+{"id": "v2-08-010", "home": "bigvilla", "text": "洗衣机暂停，我忘放洗衣液了", "gold": {"intent": "控制", "device": "三楼洗衣机", "action": "暂停"}}
+{"id": "v2-08-011", "home": "bigvilla", "text": "餐厅灯再调亮两档，看不清菜", "gold": {"intent": "控制", "device": "一楼餐厅灯", "action": "调高或增大"}}
+{"id": "v2-08-012", "home": "bigvilla", "text": "做饭看不清，厨房灯打开", "gold": {"intent": "控制", "device": "一楼厨房灯", "action": "打开或启动"}}
+{"id": "v2-08-013", "home": "bigvilla", "text": "客厅电视声音小点", "gold": {"intent": "控制", "device": "一楼客厅电视", "action": "调低或减小"}}
+{"id": "v2-08-014", "home": "bigvilla", "text": "客厅窗帘拉到百分之三十", "gold": {"intent": "控制", "device": "一楼客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "v2-08-015", "home": "bigvilla", "text": "炒辣椒呛得很，抽油烟机风力开到最大", "gold": {"intent": "控制", "device": "油烟机", "action": ["设为指定的数值或模式", "调高或增大", "打开或启动"]}}
+{"id": "v2-08-016", "home": "bigvilla", "text": "衣服干了，烘干机停了吧", "gold": {"intent": "控制", "device": "三楼烘干机", "action": "关闭或停止"}}
+{"id": "v2-08-017", "home": "bigvilla", "text": "地下室墙都返潮了，除湿机打开", "gold": {"intent": "控制", "device": "负一楼除湿机", "action": "打开或启动"}}
+{"id": "v2-08-018", "home": "bigvilla", "text": "阳光房空调开到二十六度", "gold": {"intent": "控制", "device": "三楼阳光房空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-08-019", "home": "bigvilla", "text": "上楼了，主卧开个灯", "gold": {"intent": "控制", "device": "二楼主卧灯", "action": "打开或启动"}}
+{"id": "v2-08-020", "home": "bigvilla", "text": "睡前记得把门锁了", "gold": {"intent": "控制", "device": "大门门锁", "action": "上锁"}}
+{"id": "v2-08-021", "home": "villa", "text": "晾衣架收上去", "gold": {"intent": "控制", "device": "电动晾衣架", "action": ["调高或增大", "关闭或停止"]}}
+{"id": "v2-08-022", "home": "villa", "text": "浇水阀关上，草坪够湿了", "gold": {"intent": "控制", "device": "花园浇水阀", "action": "关闭或停止"}}
+{"id": "v2-08-023", "home": "villa", "text": "新风机风量调小", "gold": {"intent": "控制", "device": "新风机", "action": "调低或减小"}}
+{"id": "v2-08-024", "home": "villa", "text": "净化器开睡眠模式", "gold": {"intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式"}}
+{"id": "v2-08-025", "home": "villa", "text": "音箱声音小一点", "gold": {"intent": "控制", "device": "智能音箱", "action": "调低或减小"}}
+{"id": "v2-08-026", "home": "villa", "text": "要洗澡了，热水器开一下", "gold": {"intent": "控制", "device": "热水器", "action": "打开或启动"}}
+{"id": "v2-08-027", "home": "villa", "text": "烤箱温度设一百九，烤二十分钟", "gold": {"intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式"}}
+{"id": "v2-08-028", "home": "villa", "text": "安防警报解除", "gold": {"intent": "控制", "device": "安防警报", "action": "关闭或停止"}}
+{"id": "v2-08-029", "home": "villa", "text": "床头灯开到最亮", "gold": {"intent": "控制", "device": "床头灯", "action": ["调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-08-030", "home": "villa", "text": "扫地机器人停一下，别把袜子卷进去", "gold": {"intent": "控制", "device": "扫地机器人", "action": "暂停"}}

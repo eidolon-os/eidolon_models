@@ -1,0 +1,108 @@
+{"file": "asr-and-boundary.jsonl:10", "locked": "01-11", "home": "apartment", "text": "打卡电视", "intent": "控制", "device": "电视", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
+{"file": "asr-and-boundary.jsonl:14", "locked": "01-14", "home": "apartment", "text": "少地机器人回去充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["asr-noise", "homophone"]}
+{"file": "asr-and-boundary.jsonl:18", "locked": "01-17", "home": "apartment", "text": "电饭包开始煮饭", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["asr-noise", "homophone"]}
+{"file": "asr-and-boundary.jsonl:37", "locked": "07-03", "home": "apartment", "text": "空调调到二十6度", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "设为指定的数值或模式", "tags": ["asr-noise", "digit-mix"]}
+{"file": "asr-and-boundary.jsonl:73", "locked": "01-40", "home": "house", "text": "车库们关上", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["asr-noise", "homophone"]}
+{"file": "asr-and-boundary.jsonl:81", "locked": "01-33", "home": "house", "text": "车库 门 打开", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["asr-noise", "segmentation"]}
+{"file": "asr-and-boundary.jsonl:85", "locked": "04-13", "home": "house", "text": "车库们关了没", "intent": "查询", "device": "车库门", "tags": ["asr-noise", "homophone"]}
+{"file": "asr-and-boundary.jsonl:95", "locked": "v2-08-021", "home": "villa", "text": "亮衣架收上去", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["asr-noise", "homophone"]}
+{"file": "asr-and-boundary.jsonl:106", "locked": "v2-01-006", "home": "apartment", "text": "电饭煲开煮粥模式", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["boundary", "question-vs-control"]}
+{"file": "asr-and-boundary.jsonl:129", "locked": "04-15", "home": "apartment", "text": "洗衣机洗完了吗", "intent": "查询", "device": "洗衣机", "tags": ["boundary", "query-vs-control"]}
+{"file": "asr-and-boundary.jsonl:182", "locked": "v2-01-045", "home": "apartment", "text": "帮我开一下门", "intent": "控制", "device": "智能门锁", "action": "打开或启动", "tags": ["boundary", "minimal-pair"]}
+{"file": "asr-and-boundary.jsonl:195", "locked": "02-17", "home": "house", "text": "车要没电了", "intent": "控制", "device": "充电桩", "action": "打开或启动", "tags": ["boundary", "minimal-pair"]}
+{"file": "b2-control-multi-missing-asr.jsonl:14", "locked": "v2-08-001", "home": "apartment", "text": "主卧空调温度设成二十七", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "b2-control-multi-missing-asr.jsonl:25", "locked": "v2-09-047", "home": "apartment", "text": "加湿器开到中档", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "b2-control-multi-missing-asr.jsonl:75", "locked": "01-26", "home": "house", "text": "冰箱冷藏调到五度", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "b2-control-multi-missing-asr.jsonl:114", "locked": "v2-06-032", "home": "apartment", "text": "客厅的几个电器都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
+{"file": "b2-control-multi-missing-asr.jsonl:214", "locked": "01-07", "home": "house", "text": "窗帘拉开一半", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
+{"file": "b2-control-multi-missing-asr.jsonl:274", "locked": "01-26", "home": "house", "text": "冰箱冷藏调到4读", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
+{"file": "b2-control-multi-missing-asr.jsonl:287", "locked": "v2-06-042", "home": "house", "text": "一楼的等都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["asr-noise"]}
+{"file": "b2-implicit-boundary.jsonl:114", "locked": "v2-02-009", "home": "house", "text": "爆炒辣椒呛得直咳嗽", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
+{"file": "b2-implicit-boundary.jsonl:183", "locked": "v2-08-028", "home": "house", "text": "安防警报解除", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["boundary", "question-vs-control"]}
+{"file": "b2-implicit-boundary.jsonl:198", "locked": "01-14", "home": "apartment", "text": "扫地机器人回窝充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["boundary", "query-vs-control"]}
+{"file": "b2-implicit-boundary.jsonl:217", "locked": "04-15", "home": "house", "text": "洗碗机洗完了", "intent": "无关", "tags": ["boundary", "query-vs-control"]}
+{"file": "b3-boundary-hard.jsonl:255", "locked": "v2-01-012", "home": "house", "text": "投影仪暂停，我去拿个零食", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["boundary", "media-vs-device"]}
+{"file": "b3-new-homes.jsonl:4", "locked": "07-03", "home": "studio", "text": "空调调到二十六度", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "cross-home"]}
+{"file": "b3-new-homes.jsonl:34", "locked": "v2-04-035", "home": "studio", "text": "洗衣机还剩几分钟", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
+{"file": "b3-new-homes.jsonl:46", "locked": "07-10", "home": "studio", "text": "加湿器打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
+{"file": "b3-new-homes.jsonl:48", "locked": "01-16", "home": "studio", "text": "晾衣架降下来", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home", "cross-home"]}
+{"file": "b3-new-homes.jsonl:69", "locked": "09-08", "home": "family3", "text": "扫地机器人去扫一下", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control"]}
+{"file": "b3-new-homes.jsonl:71", "locked": "v2-08-021", "home": "family3", "text": "晾衣架升上去", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control"]}
+{"file": "b3-new-homes.jsonl:75", "locked": "07-03", "home": "family3", "text": "空调调到二十六度", "intent": "控制", "device": ["客厅空调", "主卧空调", "儿童房空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
+{"file": "b3-new-homes.jsonl:76", "locked": "07-10", "home": "family3", "text": "加湿器打开", "intent": "控制", "device": ["主卧加湿器", "儿童房加湿器"], "action": "打开或启动", "tags": ["room-disambiguation", "cross-home"]}
+{"file": "b3-new-homes.jsonl:94", "locked": "v2-02-001", "home": "family3", "text": "客厅热得坐不住", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent"]}
+{"file": "b3-new-homes.jsonl:127", "locked": "07-03", "home": "elder", "text": "空调调到二十六度", "intent": "控制", "device": "老人房空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "cross-home"]}
+{"file": "b3-new-homes.jsonl:128", "locked": "07-10", "home": "elder", "text": "加湿器打开", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
+{"file": "b3-new-homes.jsonl:155", "locked": "v2-04-045", "home": "elder", "text": "燃气报警器有没有报过警", "intent": "查询", "device": "燃气报警器", "tags": ["status-query"]}
+{"file": "b3-new-homes.jsonl:158", "locked": "04-01", "home": "elder", "text": "门锁好了吗", "intent": "查询", "device": "智能门锁", "tags": ["status-query"]}
+{"file": "b3-new-homes.jsonl:183", "locked": "v2-07-036", "home": "duplex", "text": "二楼书房空调设到二十五度", "intent": "控制", "device": "二楼书房空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "b3-new-homes.jsonl:191", "locked": "01-16", "home": "duplex", "text": "晾衣架降下来", "intent": "控制", "device": "二楼晾衣架", "action": "调低或减小", "tags": ["explicit-control", "cross-home"]}
+{"file": "b3-new-homes.jsonl:196", "locked": "07-03", "home": "duplex", "text": "空调调到二十六度", "intent": "控制", "device": ["一楼客厅空调", "二楼主卧空调", "二楼书房空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
+{"file": "b3-new-homes.jsonl:205", "locked": "v2-03-009", "home": "duplex", "text": "吃饭那儿的灯开一下", "intent": "控制", "device": "一楼餐厅灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"file": "b3-new-homes.jsonl:207", "locked": "v2-03-021", "home": "duplex", "text": "楼上那台空调开一下", "intent": "控制", "device": ["二楼主卧空调", "二楼书房空调"], "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"file": "b3-new-homes.jsonl:221", "locked": "v2-04-044", "home": "duplex", "text": "除湿机水箱满了没有", "intent": "查询", "device": "二楼除湿机", "tags": ["status-query"]}
+{"file": "b3-new-homes.jsonl:225", "locked": "v2-06-046", "home": "duplex", "text": "两台扫地机一起扫", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
+{"file": "b3-new-homes.jsonl:228", "locked": "06-06", "home": "duplex", "text": "二楼的空调都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
+{"file": "b3-new-homes.jsonl:232", "locked": "07-10", "home": "duplex", "text": "加湿器打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
+{"file": "b3-new-homes.jsonl:253", "locked": "01-16", "home": "brand", "text": "晾衣架降下来", "intent": "控制", "device": "好太太晾衣架", "action": "调低或减小", "tags": ["explicit-control", "cross-home"]}
+{"file": "b3-new-homes.jsonl:256", "locked": "07-03", "home": "brand", "text": "空调调到二十六度", "intent": "控制", "device": ["格力云锦空调", "美的风尊空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
+{"file": "b3-new-homes.jsonl:260", "locked": "07-13", "home": "brand", "text": "书房的灯开一下", "intent": "控制", "device": "米家台灯Pro", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"file": "b3-new-homes.jsonl:290", "locked": "v2-09-006", "home": "brand", "text": "投影仪打开，放个电影", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
+{"file": "b3-new-homes.jsonl:305", "locked": "07-10", "home": "rental", "text": "加湿器打开", "intent": "控制", "device": "我房间加湿器", "action": "打开或启动", "tags": ["explicit-control", "cross-home"]}
+{"file": "b3-new-homes.jsonl:317", "locked": "07-03", "home": "rental", "text": "空调调到二十六度", "intent": "控制", "device": ["我房间空调", "公共区空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
+{"file": "b3-new-homes.jsonl:325", "locked": "v2-08-013", "home": "rental", "text": "客厅电视声音关小点", "intent": "控制", "device": "客厅公共电视", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"file": "b3-new-homes.jsonl:336", "locked": "04-06", "home": "rental", "text": "热水器的水热了没", "intent": "查询", "device": "公共热水器", "tags": ["status-query"]}
+{"file": "b3-query-rooms-actions.jsonl:221", "locked": "v2-01-018", "home": "house", "text": "书房灯亮度拉满", "intent": "控制", "device": "书房灯", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["action-granularity", "light"]}
+{"file": "b3-query-rooms-actions.jsonl:241", "locked": "v2-08-014", "home": "apartment", "text": "客厅窗帘拉开百分之五十", "intent": "控制", "device": "客厅窗帘", "action": "设为指定的数值或模式", "tags": ["action-granularity", "curtain"]}
+{"file": "b4-more-on-b3-homes.jsonl:5", "locked": "v2-09-035", "home": "studio", "text": "洗衣机洗到哪一步了", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "progress"]}
+{"file": "b4-more-on-b3-homes.jsonl:23", "locked": "04-14", "home": "studio", "text": "冰箱冷藏现在几度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "query"]}
+{"file": "b4-more-on-b3-homes.jsonl:37", "locked": "v2-01-030", "home": "studio", "text": "热水器调到六十度", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "b4-more-on-b3-homes.jsonl:54", "locked": "04-10", "home": "family3", "text": "空气净化器滤芯还能用多久", "intent": "查询", "device": "空气净化器", "tags": ["status-query"]}
+{"file": "b4-more-on-b3-homes.jsonl:58", "locked": "v2-04-004", "home": "family3", "text": "晾衣架现在是升上去还是降下来的", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query"]}
+{"file": "b4-more-on-b3-homes.jsonl:65", "locked": "v2-03-031", "home": "family3", "text": "闺女房间的灯调暗一点", "intent": "控制", "device": "儿童房顶灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
+{"file": "b4-more-on-b3-homes.jsonl:79", "locked": "v2-09-038", "home": "family3", "text": "儿童房电视关了", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "near-miss"]}
+{"file": "b4-more-on-b3-homes.jsonl:265", "locked": "03-04", "home": "rental", "text": "床头那个台灯开一下", "intent": "控制", "device": "我房间的台灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"file": "b4-new-homes.jsonl:36", "locked": "v2-02-038", "home": "mega", "text": "明天要穿的衬衫还湿着", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["implicit-intent"]}
+{"file": "b4-new-homes.jsonl:68", "locked": "v2-09-025", "home": "minimal", "text": "空调切到睡眠模式", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "b4-new-homes.jsonl:82", "locked": "v2-02-005", "home": "minimal", "text": "屋里太安静了，想听点歌", "intent": "控制", "device": "音箱", "action": "打开或启动", "tags": ["implicit-intent"]}
+{"file": "b4-new-homes.jsonl:125", "locked": "01-19", "home": "countryside", "text": "大门锁上", "intent": "控制", "device": "大门", "action": ["关闭或停止", "上锁"], "tags": ["explicit-control"]}
+{"file": "b4-new-homes.jsonl:192", "locked": "01-08", "home": "pets", "text": "净化器开到最大档", "intent": "控制", "device": "空气净化器", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control"]}
+{"file": "b5-implicit-room.jsonl:185", "locked": "v2-02-046", "home": "house", "text": "客厅里黑咕隆咚的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"file": "b5-implicit-room.jsonl:189", "locked": "v2-02-032", "home": "house", "text": "客厅太晒了，阳光直射沙发", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["implicit-intent", "room-lacks"]}
+{"file": "b5-implicit-room.jsonl:196", "locked": "v2-02-023", "home": "house", "text": "书房冷得握不住笔", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
+{"file": "b5-similar-name-absent.jsonl:40", "locked": "v2-09-022", "home": "apartment", "text": "客厅窗帘开条缝", "intent": "控制", "device": "客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p020"]}
+{"file": "b5-similar-name-absent.jsonl:88", "locked": "v2-04-020", "home": "apartment", "text": "电饭煲还剩几分钟", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "similar-name", "p044", "query"]}
+{"file": "b5-similar-name-absent.jsonl:98", "locked": "v2-04-001", "home": "apartment", "text": "主卧空调现在开着吗", "intent": "查询", "device": "主卧空调", "tags": ["status-query", "similar-name", "p049", "query"]}
+{"file": "b5-similar-name-absent.jsonl:236", "locked": "v2-04-003", "home": "villa", "text": "扫地机器人电量还剩多少", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "similar-name", "p118", "query"]}
+{"file": "explicit-and-rooms.jsonl:29", "locked": "v2-08-024", "home": "villa", "text": "净化器调到睡眠模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "explicit-and-rooms.jsonl:53", "locked": "v2-01-041", "home": "villa", "text": "洗衣机选快洗模式", "intent": "控制", "device": "洗衣机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "explicit-and-rooms.jsonl:56", "locked": "v2-08-021", "home": "apartment", "text": "晾衣架升上去", "intent": "控制", "device": "电动晾衣架", "action": "调高或增大", "tags": ["explicit-control"]}
+{"file": "explicit-and-rooms.jsonl:115", "locked": "09-03", "home": "house", "text": "烤箱调到 180 度", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "explicit-and-rooms.jsonl:129", "locked": "v2-09-006", "home": "house", "text": "投影仪打开，看电影", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control"]}
+{"file": "explicit-and-rooms.jsonl:207", "locked": "v2-03-009", "home": "villa", "text": "吃饭那儿的灯开一下", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
+{"file": "implicit-multi-missing.jsonl:6", "locked": "v2-02-017", "home": "apartment", "text": "客厅冷飕飕的", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
+{"file": "implicit-multi-missing.jsonl:110", "locked": "06-10", "home": "apartment", "text": "开启回家模式", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
+{"file": "implicit-multi-missing.jsonl:122", "locked": "06-13", "home": "house", "text": "早安模式", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
+{"file": "implicit-multi-missing.jsonl:126", "locked": "v2-06-042", "home": "house", "text": "一楼的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
+{"file": "implicit-multi-missing.jsonl:147", "locked": "06-03", "home": "villa", "text": "我进门了", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["multi-device"]}
+{"file": "implicit-multi-missing.jsonl:180", "locked": "07-20", "home": "apartment", "text": "充电桩开始充电", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
+{"file": "implicit-multi-missing.jsonl:187", "locked": "01-37", "home": "apartment", "text": "饮水机插座断电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
+{"file": "implicit-multi-missing.jsonl:206", "locked": "01-14", "home": "house", "text": "扫地机器人回去充电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
+{"file": "implicit-multi-missing.jsonl:208", "locked": "01-16", "home": "house", "text": "晾衣架降下来", "intent": "控制", "device": "没有对应的设备", "action": "调低或减小", "tags": ["device-not-in-home"]}
+{"file": "implicit-multi-missing.jsonl:215", "locked": "v2-08-024", "home": "house", "text": "净化器调到睡眠模式", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
+{"file": "misc-forms.jsonl:47", "locked": "01-14", "home": "villa", "text": "扫地机器人回去充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"file": "misc-forms.jsonl:60", "locked": "v2-08-024", "home": "villa", "text": "净化器切睡眠模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "misc-forms.jsonl:61", "locked": "v2-01-008", "home": "villa", "text": "加湿器湿度定在百分之五十五", "intent": "控制", "device": "加湿器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "misc-forms.jsonl:68", "locked": "04-03", "home": "villa", "text": "洗衣机还要多久", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
+{"file": "misc-forms.jsonl:79", "locked": "05-17", "home": "villa", "text": "冰箱里的牛奶好像过期了", "intent": "无关", "tags": ["non-command"]}
+{"file": "misc-forms.jsonl:119", "locked": "04-13", "home": "house", "text": "车库门关了吗", "intent": "查询", "device": "车库门", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:188", "locked": "v2-04-034", "home": "apartment", "text": "客厅空调现在是制冷还是制热", "intent": "查询", "device": "客厅空调", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:202", "locked": "v2-04-003", "home": "apartment", "text": "扫地机器人现在电量还有多少", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:204", "locked": "v2-09-035", "home": "apartment", "text": "洗衣机洗到哪一步了", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:206", "locked": "v2-04-004", "home": "apartment", "text": "晾衣架现在是升上去的还是放下来的", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:208", "locked": "v2-04-020", "home": "apartment", "text": "电饭煲还有几分钟煮好", "intent": "查询", "device": "电饭煲", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:210", "locked": "v2-04-028", "home": "apartment", "text": "热水器现在水温多少度", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:230", "locked": "04-03", "home": "house", "text": "洗碗机还要洗多久", "intent": "查询", "device": "洗碗机", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:240", "locked": "v2-04-013", "home": "house", "text": "今天有人按过门铃吗", "intent": "查询", "device": "门铃", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:251", "locked": "v2-04-015", "home": "house", "text": "喂食器今天喂过几次了", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:252", "locked": "v2-04-019", "home": "house", "text": "饮水机插座现在通电吗", "intent": "查询", "device": "饮水机插座", "tags": ["status-query"]}

@@ -1,0 +1,108 @@
+{
+ "name": "loft",
+ "description": "LOFT 小复式（评测专用，训练从未见过）：楼下客厅、厨房、卫生间，楼上卧室和衣帽间。设备名用筒灯 / 灯带 / 柜机 / 挂机这类说法。",
+ "devices": [
+  {
+   "name": "客厅筒灯",
+   "room": "客厅",
+   "category": "照明",
+   "type": "筒灯"
+  },
+  {
+   "name": "客厅灯带",
+   "room": "客厅",
+   "category": "照明",
+   "type": "灯带"
+  },
+  {
+   "name": "楼梯灯",
+   "room": "楼梯",
+   "category": "照明",
+   "type": "感应灯"
+  },
+  {
+   "name": "厨房灯",
+   "room": "厨房",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "卧室吸顶灯",
+   "room": "卧室",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "衣帽间灯",
+   "room": "衣帽间",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "客厅柜机",
+   "room": "客厅",
+   "category": "温控",
+   "type": "立式空调"
+  },
+  {
+   "name": "卧室挂机",
+   "room": "卧室",
+   "category": "温控",
+   "type": "壁挂空调"
+  },
+  {
+   "name": "卧室电动窗帘",
+   "room": "卧室",
+   "category": "遮阳",
+   "type": "电动窗帘"
+  },
+  {
+   "name": "客厅投影",
+   "room": "客厅",
+   "category": "影音",
+   "type": "投影仪"
+  },
+  {
+   "name": "冰箱",
+   "room": "厨房",
+   "category": "厨电",
+   "type": "冰箱"
+  },
+  {
+   "name": "电热水器",
+   "room": "卫生间",
+   "category": "热水",
+   "type": "电热水器"
+  },
+  {
+   "name": "智能马桶",
+   "room": "卫生间",
+   "category": "卫浴",
+   "type": "智能马桶"
+  },
+  {
+   "name": "浴室暖风机",
+   "room": "卫生间",
+   "category": "温控",
+   "type": "暖风机"
+  },
+  {
+   "name": "扫拖一体机",
+   "room": "全屋",
+   "category": "清洁",
+   "type": "扫拖机器人"
+  },
+  {
+   "name": "智能门锁",
+   "room": "入户门",
+   "category": "安防",
+   "type": "门锁"
+  },
+  {
+   "name": "可视猫眼",
+   "room": "入户门",
+   "category": "安防",
+   "type": "猫眼摄像头"
+  }
+ ]
+}

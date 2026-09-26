@@ -1,0 +1,60 @@
+{"id": "v2-04-001", "home": "apartment", "text": "主卧空调现在是开着的吗", "gold": {"intent": "查询", "device": "主卧空调"}}
+{"id": "v2-04-002", "home": "apartment", "text": "客厅这会儿湿度有多少", "gold": {"intent": "查询", "device": "温湿度计"}}
+{"id": "v2-04-003", "home": "apartment", "text": "扫地机器人现在电量还剩多少", "gold": {"intent": "查询", "device": "扫地机器人"}}
+{"id": "v2-04-004", "home": "apartment", "text": "晾衣架现在是升上去的还是放下来的", "gold": {"intent": "查询", "device": "电动晾衣架"}}
+{"id": "v2-04-005", "home": "apartment", "text": "今天热水器开过没有", "gold": {"intent": "查询", "device": "热水器"}}
+{"id": "v2-04-006", "home": "apartment", "text": "智能音箱是不是断网了", "gold": {"intent": "查询", "device": "智能音箱"}}
+{"id": "v2-04-007", "home": "apartment", "text": "净化器现在开的几档", "gold": {"intent": "查询", "device": "空气净化器"}}
+{"id": "v2-04-008", "home": "apartment", "text": "看一下玄关摄像头的画面", "gold": {"intent": "查询", "device": "摄像头"}}
+{"id": "v2-04-009", "home": "apartment", "text": "主卧温度给我报一下", "gold": {"intent": "查询", "device": "主卧空调"}}
+{"id": "v2-04-010", "home": "apartment", "text": "能把主卧的加湿器开一下吗", "gold": {"intent": "控制", "device": "加湿器", "action": "打开或启动"}}
+{"id": "v2-04-011", "home": "house", "text": "落地扇这会儿吹的是几档风", "gold": {"intent": "查询", "device": "落地扇"}}
+{"id": "v2-04-012", "home": "house", "text": "充电桩那边还要充多久", "gold": {"intent": "查询", "device": "充电桩"}}
+{"id": "v2-04-013", "home": "house", "text": "今天下午有人按过门铃吗", "gold": {"intent": "查询", "device": "门铃"}}
+{"id": "v2-04-014", "home": "house", "text": "帮我确认一下车库门落下来了没有", "gold": {"intent": "查询", "device": "车库门"}}
+{"id": "v2-04-015", "home": "house", "text": "宠物喂食器今天喂过几次了", "gold": {"intent": "查询", "device": "宠物喂食器"}}
+{"id": "v2-04-016", "home": "house", "text": "查一下地暖的设定温度", "gold": {"intent": "查询", "device": "地暖"}}
+{"id": "v2-04-017", "home": "house", "text": "油烟机多久清洗一次比较好", "gold": {"intent": "无关"}}
+{"id": "v2-04-018", "home": "villa", "text": "空调是不是全都关掉了", "gold": {"intent": "查询", "device": "多个设备或整屋"}}
+{"id": "v2-04-019", "home": "villa", "text": "饮水机插座现在通电吗", "gold": {"intent": "查询", "device": "饮水机插座"}}
+{"id": "v2-04-020", "home": "villa", "text": "电饭煲还有几分钟好", "gold": {"intent": "查询", "device": "电饭煲"}}
+{"id": "v2-04-021", "home": "villa", "text": "你帮我瞧瞧冰箱门关严实没", "gold": {"intent": "查询", "device": "冰箱"}}
+{"id": "v2-04-022", "home": "villa", "text": "客厅有没有超过28度", "gold": {"intent": "查询", "device": ["温湿度计", "客厅空调", "地暖"]}}
+{"id": "v2-04-023", "home": "villa", "text": "看看影音室投影仪的状态", "gold": {"intent": "查询", "device": "投影仪"}}
+{"id": "v2-04-024", "home": "villa", "text": "可以把书房灯关掉吗", "gold": {"intent": "控制", "device": "书房灯", "action": "关闭或停止"}}
+{"id": "v2-04-025", "home": "loft", "text": "楼上卧室现在几度", "gold": {"intent": "查询", "device": "卧室挂机"}}
+{"id": "v2-04-026", "home": "loft", "text": "扫拖一体机拖完地了吗", "gold": {"intent": "查询", "device": "扫拖一体机"}}
+{"id": "v2-04-027", "home": "loft", "text": "猫眼刚才拍到谁在门口", "gold": {"intent": "查询", "device": "可视猫眼"}}
+{"id": "v2-04-028", "home": "loft", "text": "电热水器现在水温多少", "gold": {"intent": "查询", "device": "电热水器"}}
+{"id": "v2-04-029", "home": "loft", "text": "出门前帮我核实一下门有没有反锁", "gold": {"intent": "查询", "device": "智能门锁"}}
+{"id": "v2-04-030", "home": "loft", "text": "楼下的灯都灭了吗", "gold": {"intent": "查询", "device": "多个设备或整屋"}}
+{"id": "v2-04-031", "home": "loft", "text": "瞅一眼门外", "gold": {"intent": "查询", "device": "可视猫眼"}}
+{"id": "v2-04-032", "home": "loft", "text": "说一下客厅灯带现在的亮度", "gold": {"intent": "查询", "device": "客厅灯带"}}
+{"id": "v2-04-033", "home": "loft", "text": "客厅柜机能不能调到24度", "gold": {"intent": "控制", "device": "客厅柜机", "action": "设为指定的数值或模式"}}
+{"id": "v2-04-034", "home": "smallflat", "text": "空调现在是制冷还是制热", "gold": {"intent": "查询", "device": "空调"}}
+{"id": "v2-04-035", "home": "smallflat", "text": "洗衣机那边还剩几分钟", "gold": {"intent": "查询", "device": "洗衣机"}}
+{"id": "v2-04-036", "home": "smallflat", "text": "烧水壶插座现在有电吗", "gold": {"intent": "查询", "device": "烧水壶插座"}}
+{"id": "v2-04-037", "home": "smallflat", "text": "窗帘是拉上的吗", "gold": {"intent": "查询", "device": "窗帘"}}
+{"id": "v2-04-038", "home": "smallflat", "text": "灯是不是都关了", "gold": {"intent": "查询", "device": "多个设备或整屋"}}
+{"id": "v2-04-039", "home": "smallflat", "text": "告诉我屋里现在的温度", "gold": {"intent": "查询", "device": "空调"}}
+{"id": "v2-04-040", "home": "smallflat", "text": "门锁的电池电量", "gold": {"intent": "查询", "device": "门锁"}}
+{"id": "v2-04-041", "home": "smallflat", "text": "空调滤网一般多久洗一次", "gold": {"intent": "无关"}}
+{"id": "v2-04-042", "home": "threegen", "text": "书房空调还在运行吗", "gold": {"intent": "查询", "device": "书房空调"}}
+{"id": "v2-04-043", "home": "threegen", "text": "儿童房这会儿温度高不高", "gold": {"intent": "查询", "device": "儿童房空调"}}
+{"id": "v2-04-044", "home": "threegen", "text": "除湿机水箱满了没有", "gold": {"intent": "查询", "device": "除湿机"}}
+{"id": "v2-04-045", "home": "threegen", "text": "燃气报警器有没有报过警", "gold": {"intent": "查询", "device": "燃气报警器"}}
+{"id": "v2-04-046", "home": "threegen", "text": "电蒸箱蒸好了没", "gold": {"intent": "查询", "device": "电蒸箱"}}
+{"id": "v2-04-047", "home": "threegen", "text": "家里还有哪盏灯亮着", "gold": {"intent": "查询", "device": "多个设备或整屋"}}
+{"id": "v2-04-048", "home": "threegen", "text": "老人房电视今天开了多久", "gold": {"intent": "查询", "device": "老人房电视"}}
+{"id": "v2-04-049", "home": "threegen", "text": "念一下净水器滤芯的剩余寿命", "gold": {"intent": "查询", "device": "净水器"}}
+{"id": "v2-04-050", "home": "threegen", "text": "看一下烘干机的进度", "gold": {"intent": "查询", "device": "烘干机"}}
+{"id": "v2-04-051", "home": "threegen", "text": "老人房空调能不能调高两度", "gold": {"intent": "控制", "device": "老人房空调", "action": "调高或增大"}}
+{"id": "v2-04-052", "home": "bigvilla", "text": "二楼那几间房的空调还有开着的吗", "gold": {"intent": "查询", "device": "多个设备或整屋"}}
+{"id": "v2-04-053", "home": "bigvilla", "text": "负一楼酒窖现在几度", "gold": {"intent": "查询", "device": "负一楼酒窖恒温柜"}}
+{"id": "v2-04-054", "home": "bigvilla", "text": "充电桩上的车充到百分之多少了", "gold": {"intent": "查询", "device": "充电桩"}}
+{"id": "v2-04-055", "home": "bigvilla", "text": "三楼烘干机还要烘多久", "gold": {"intent": "查询", "device": "三楼烘干机"}}
+{"id": "v2-04-056", "home": "bigvilla", "text": "大门门锁是锁着的吧", "gold": {"intent": "查询", "device": "大门门锁"}}
+{"id": "v2-04-057", "home": "bigvilla", "text": "负一楼除湿机在不在线", "gold": {"intent": "查询", "device": "负一楼除湿机"}}
+{"id": "v2-04-058", "home": "bigvilla", "text": "刚才谁开过车库门", "gold": {"intent": "查询", "device": "车库门"}}
+{"id": "v2-04-059", "home": "bigvilla", "text": "能不能帮我把三楼阳光房天窗合上", "gold": {"intent": "控制", "device": "三楼阳光房天窗", "action": "关闭或停止"}}
+{"id": "v2-04-060", "home": "bigvilla", "text": "装地暖和装空调哪个更省电", "gold": {"intent": "无关"}}

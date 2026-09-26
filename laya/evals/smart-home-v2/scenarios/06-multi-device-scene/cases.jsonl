@@ -1,0 +1,50 @@
+{"id": "v2-06-001", "home": "apartment", "text": "上班去了，家里交给你了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-002", "home": "apartment", "text": "困了，灯都关了吧", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-003", "home": "apartment", "text": "把客厅窗帘拉开，净化器也开一下", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-004", "home": "apartment", "text": "朋友一会儿到，家里弄成待客的样子", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-005", "home": "apartment", "text": "电视和音箱都关了，太吵", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-006", "home": "apartment", "text": "进门了，开灯开空调", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-007", "home": "apartment", "text": "睡前把床头灯关了", "gold": {"intent": "控制", "device": "床头灯", "action": "关闭或停止"}}
+{"id": "v2-06-008", "home": "apartment", "text": "电影开场了，客厅窗帘合上", "gold": {"intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}}
+{"id": "v2-06-009", "home": "house", "text": "开饭了，开启用餐模式", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-010", "home": "house", "text": "把烤箱、洗碗机和油烟机都停了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-011", "home": "house", "text": "开车回来了，车库门打开，充电桩也开上", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-012", "home": "house", "text": "家里所有灯都亮起来", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-013", "home": "house", "text": "花园浇上水，再给猫添点粮", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-014", "home": "house", "text": "要出门了，车库门关好", "gold": {"intent": "控制", "device": "车库门", "action": "关闭或停止"}}
+{"id": "v2-06-015", "home": "villa", "text": "一键全关", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-016", "home": "villa", "text": "客人来了，客厅灯和空调都开上", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-017", "home": "villa", "text": "除了床头灯，其他灯都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-018", "home": "villa", "text": "晚上看电影，窗帘拉上灯关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-019", "home": "villa", "text": "出差三天，家里设成离家状态", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-020", "home": "villa", "text": "到家了，先把客厅空调开开", "gold": {"intent": "控制", "device": "客厅空调", "action": "打开或启动"}}
+{"id": "v2-06-021", "home": "loft", "text": "睡了，楼下的灯都关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-022", "home": "loft", "text": "客厅的筒灯和灯带一起打开", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-023", "home": "loft", "text": "投影开起来，灯带调暗，要看片了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-024", "home": "loft", "text": "出门上班，家里电器都关了，门锁上", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-025", "home": "loft", "text": "楼上那层全部关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-026", "home": "loft", "text": "柜机挂机一起停", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-027", "home": "loft", "text": "睡觉前卧室挂机定到27度", "gold": {"intent": "控制", "device": "卧室挂机", "action": "设为指定的数值或模式"}}
+{"id": "v2-06-028", "home": "threegen", "text": "饭菜上桌了，餐厅和客厅的灯都打开", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-029", "home": "threegen", "text": "每个屋的空调都设成26度", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式"}}
+{"id": "v2-06-030", "home": "threegen", "text": "孩子和老人都睡了，他们屋的灯关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-031", "home": "threegen", "text": "全家出去旅游一周，家里都安顿好", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-032", "home": "threegen", "text": "客厅的几个都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-033", "home": "threegen", "text": "两台电视都关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-034", "home": "threegen", "text": "送孩子上学去了，玄关那道门锁好", "gold": {"intent": "控制", "device": "智能门锁", "action": "上锁"}}
+{"id": "v2-06-035", "home": "threegen", "text": "来客人了，把客厅空调打开", "gold": {"intent": "控制", "device": "客厅空调", "action": "打开或启动"}}
+{"id": "v2-06-036", "home": "smallflat", "text": "熄灯，睡了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-037", "home": "smallflat", "text": "出门了，灯和空调都给我关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-038", "home": "smallflat", "text": "电视和客厅灯一起开了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-039", "home": "smallflat", "text": "下班到家，开灯、开空调、烧壶水", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-040", "home": "smallflat", "text": "热水器和洗衣机都开上", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-041", "home": "smallflat", "text": "回家了先开客厅灯", "gold": {"intent": "控制", "device": "客厅灯", "action": "打开或启动"}}
+{"id": "v2-06-042", "home": "bigvilla", "text": "一楼的都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-06-043", "home": "bigvilla", "text": "去负一楼看电影，把影音室准备好", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-044", "home": "bigvilla", "text": "二楼的空调全部打开", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-045", "home": "bigvilla", "text": "睡前全屋安顿好：大门锁上，安防打开，灯都关了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-046", "home": "bigvilla", "text": "两台扫地机一起开工", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}}
+{"id": "v2-06-047", "home": "bigvilla", "text": "洗衣机和烘干机都先停一下", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "暂停"}}
+{"id": "v2-06-048", "home": "bigvilla", "text": "车快到家了，开启回家模式", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
+{"id": "v2-06-049", "home": "bigvilla", "text": "看电影前把负一楼影院灯调暗", "gold": {"intent": "控制", "device": "负一楼影院灯", "action": "调低或减小"}}
+{"id": "v2-06-050", "home": "bigvilla", "text": "吃饭了，餐厅灯打开", "gold": {"intent": "控制", "device": "一楼餐厅灯", "action": "打开或启动"}}

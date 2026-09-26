@@ -1,0 +1,5 @@
+{
+  "name": "villa",
+  "description": "大宅：apartment + house 的全部 36 台设备（加两个特殊选项共 38 个选项），用来单独测设备清单变长对准确率与延迟的影响。",
+  "include": ["apartment", "house"]
+}

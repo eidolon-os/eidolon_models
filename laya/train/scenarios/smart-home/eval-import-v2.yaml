@@ -1,0 +1,7 @@
+# evals/smart-home-v2（500 条，含 4 个训练从没见过的户型）→ 记录格式的锁定评测集（只读，永不进训练）。
+#   eidolon-laya-train gen --scenario train/scenarios/smart-home --config train/scenarios/smart-home/eval-import-v2.yaml --out train/scenarios/smart-home/eval/locked-v2-500.jsonl
+generators:
+  - kind: import
+    adapter: evals_cases
+    name: locked-v2-500
+    path: ../../../evals/smart-home-v2

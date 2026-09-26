@@ -1,0 +1,40 @@
+{"id": "v2-07-001", "home": "apartment", "text": "呃那个那个床头灯，就是，调暗一点点吧", "gold": {"intent": "控制", "device": "床头灯", "action": "调低或减小"}, "note": "床头灯调暗一点"}
+{"id": "v2-07-002", "home": "apartment", "text": "主窝空掉调到2十4度", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}, "note": "主卧空调调到二十四度"}
+{"id": "v2-07-003", "home": "apartment", "text": "那个空气净器，睡眠模式", "gold": {"intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式"}, "note": "空气净化器开睡眠模式"}
+{"id": "v2-07-004", "home": "apartment", "text": "智能因箱暂听一下", "gold": {"intent": "控制", "device": "智能音箱", "action": "暂停"}, "note": "智能音箱暂停一下"}
+{"id": "v2-07-005", "home": "apartment", "text": "嗯入户，呃玄关那个门锁，锁上了没", "gold": {"intent": "查询", "device": "智能门锁"}, "note": "玄关门锁锁上了没"}
+{"id": "v2-07-006", "home": "apartment", "text": "电是剧看到第几级了来着", "gold": {"intent": "无关"}, "note": "电视剧看到第几集了"}
+{"id": "v2-07-007", "home": "house", "text": "那个呃书房落地扇，开，开到三当", "gold": {"intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式"}, "note": "落地扇开到三档"}
+{"id": "v2-07-008", "home": "house", "text": "冰相冷冻室调到零下18度", "gold": {"intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式"}, "note": "冰箱冷冻室调到零下十八度"}
+{"id": "v2-07-009", "home": "house", "text": "花园交水阀关了吧嗯", "gold": {"intent": "控制", "device": "花园浇水阀", "action": "关闭或停止"}, "note": "花园浇水阀关了吧"}
+{"id": "v2-07-010", "home": "house", "text": "饮水机插做通上电", "gold": {"intent": "控制", "device": "饮水机插座", "action": "打开或启动"}, "note": "饮水机插座通上电"}
+{"id": "v2-07-011", "home": "house", "text": "影音室那个投影一，关掉了没有呀", "gold": {"intent": "查询", "device": "投影仪"}, "note": "影音室的投影仪关掉了没有"}
+{"id": "v2-07-012", "home": "house", "text": "按防警报先撤防", "gold": {"intent": "控制", "device": "安防警报", "action": "关闭或停止"}, "note": "安防警报先撤防"}
+{"id": "v2-07-013", "home": "villa", "text": "客厅空调，温度，呃，将两度吧", "gold": {"intent": "控制", "device": "客厅空调", "action": "调低或减小"}, "note": "客厅空调温度降两度"}
+{"id": "v2-07-014", "home": "villa", "text": "餐厅吊亮度调高点儿", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": "调高或增大"}, "note": "餐厅吊灯亮度调高点儿"}
+{"id": "v2-07-015", "home": "villa", "text": "烤想调到上下火一百八", "gold": {"intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式"}, "note": "烤箱调到上下火一百八"}
+{"id": "v2-07-016", "home": "villa", "text": "热水气用了五年了该换了吧", "gold": {"intent": "无关"}, "note": "热水器用了五年了该换了吧"}
+{"id": "v2-07-017", "home": "loft", "text": "帮我开下客厅桶灯", "gold": {"intent": "控制", "device": "客厅筒灯", "action": "打开或启动"}, "note": "帮我开下客厅筒灯"}
+{"id": "v2-07-018", "home": "loft", "text": "把那个灯代，客厅的灯代，调成暖光", "gold": {"intent": "控制", "device": "客厅灯带", "action": "设为指定的数值或模式"}, "note": "客厅灯带调成暖光"}
+{"id": "v2-07-019", "home": "loft", "text": "卧室挂鸡调成除湿模式", "gold": {"intent": "控制", "device": "卧室挂机", "action": "设为指定的数值或模式"}, "note": "卧室挂机调成除湿模式"}
+{"id": "v2-07-020", "home": "loft", "text": "电热水七，嗯，先加热吧", "gold": {"intent": "控制", "device": "电热水器", "action": "打开或启动"}, "note": "电热水器先加热"}
+{"id": "v2-07-021", "home": "loft", "text": "扫拖一机开始拖地", "gold": {"intent": "控制", "device": "扫拖一体机", "action": "打开或启动"}, "note": "扫拖一体机开始拖地"}
+{"id": "v2-07-022", "home": "loft", "text": "智能门所锁上没", "gold": {"intent": "查询", "device": "智能门锁"}, "note": "智能门锁锁上没"}
+{"id": "v2-07-023", "home": "loft", "text": "浴室暖风鸡多少钱买的来着", "gold": {"intent": "无关"}, "note": "浴室暖风机多少钱买的来着"}
+{"id": "v2-07-024", "home": "threegen", "text": "老人房空掉关一下，那个，嗯，爷爷睡了", "gold": {"intent": "控制", "device": "老人房空调", "action": "关闭或停止"}, "note": "老人房空调关一下"}
+{"id": "v2-07-025", "home": "threegen", "text": "而童房灯调暗一点，孩子要睡了", "gold": {"intent": "控制", "device": "儿童房灯", "action": "调低或减小"}, "note": "儿童房灯调暗一点"}
+{"id": "v2-07-026", "home": "threegen", "text": "儿童房那个出湿机开一下", "gold": {"intent": "控制", "device": "除湿机", "action": "打开或启动"}, "note": "除湿机开一下"}
+{"id": "v2-07-027", "home": "threegen", "text": "帮我用电饭宝熬个小米粥", "gold": {"intent": "控制", "device": "电饭煲", "action": ["打开或启动", "设为指定的数值或模式"]}, "note": "用电饭煲熬个小米粥"}
+{"id": "v2-07-028", "home": "threegen", "text": "客厅电世声音大一点那个", "gold": {"intent": "控制", "device": "客厅电视", "action": "调高或增大"}, "note": "客厅电视声音大一点"}
+{"id": "v2-07-029", "home": "threegen", "text": "烘干鸡还有多久烘完", "gold": {"intent": "查询", "device": "烘干机"}, "note": "烘干机还有多久烘完"}
+{"id": "v2-07-030", "home": "threegen", "text": "阳台良衣架，升，升到顶", "gold": {"intent": "控制", "device": "晾衣架", "action": ["调高或增大", "设为指定的数值或模式"]}, "note": "阳台晾衣架升到顶"}
+{"id": "v2-07-031", "home": "smallflat", "text": "卧室等关了吧啊", "gold": {"intent": "控制", "device": "卧室灯", "action": "关闭或停止"}, "note": "卧室灯关了吧"}
+{"id": "v2-07-032", "home": "smallflat", "text": "烧水壶查座打开", "gold": {"intent": "控制", "device": "烧水壶插座", "action": "打开或启动"}, "note": "烧水壶插座打开"}
+{"id": "v2-07-033", "home": "smallflat", "text": "空调开个制冷，二十，25度", "gold": {"intent": "控制", "device": "空调", "action": ["设为指定的数值或模式", "打开或启动"]}, "note": "空调制冷二十五度"}
+{"id": "v2-07-034", "home": "smallflat", "text": "洗衣鸡那边，嗯，好了没有", "gold": {"intent": "查询", "device": "洗衣机"}, "note": "洗衣机好了没有"}
+{"id": "v2-07-035", "home": "bigvilla", "text": "负一楼影院头影打开", "gold": {"intent": "控制", "device": "负一楼影院投影", "action": "打开或启动"}, "note": "负一楼影院投影打开"}
+{"id": "v2-07-036", "home": "bigvilla", "text": "二楼书房空调调到二十7度", "gold": {"intent": "控制", "device": "二楼书房空调", "action": "设为指定的数值或模式"}, "note": "二楼书房空调调到二十七度"}
+{"id": "v2-07-037", "home": "bigvilla", "text": "三楼阳光房天床关上", "gold": {"intent": "控制", "device": "三楼阳光房天窗", "action": "关闭或停止"}, "note": "三楼阳光房天窗关上"}
+{"id": "v2-07-038", "home": "bigvilla", "text": "车库们开一下嗯嗯", "gold": {"intent": "控制", "device": "车库门", "action": "打开或启动"}, "note": "车库门开一下"}
+{"id": "v2-07-039", "home": "bigvilla", "text": "一楼客厅窗廉，拉，拉开一半", "gold": {"intent": "控制", "device": "一楼客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"]}, "note": "一楼客厅窗帘拉开一半"}
+{"id": "v2-07-040", "home": "bigvilla", "text": "新风系同是装修公司送的", "gold": {"intent": "无关"}, "note": "新风系统是装修公司送的"}

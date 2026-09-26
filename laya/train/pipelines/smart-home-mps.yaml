@@ -66,8 +66,9 @@ steps:
     checkpoint: "{run}/checkpoint"
     eval_set:
       - ../scenarios/smart-home/eval/locked-182.jsonl
+      - ../scenarios/smart-home/eval/locked-v2-500.jsonl
     out: "{run}/eval"
-    baseline: ../runs/r6/eval               # 当前最好的版本；换版本后改这里
+    baseline: ../runs/r7/eval               # 当前最好的版本；换版本后改这里
     tolerance: 0.03
     alpha: 0.1                              # 配对符号检验：只拦显著的退步
     continue_on_error: true                 # 门槛不过也照样 package，方便对比；上线前看 gate.json

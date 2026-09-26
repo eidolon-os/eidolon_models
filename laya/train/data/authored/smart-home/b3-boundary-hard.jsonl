@@ -252,7 +252,6 @@
 {"home": "house", "text": "来点轻音乐", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
 {"home": "house", "text": "投影仪上放个纪录片", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
 {"home": "house", "text": "这部纪录片拍得真好", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
-{"home": "house", "text": "投影仪暂停，我去拿个零食", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["boundary", "media-vs-device"]}
 {"home": "house", "text": "给我放段相声听听", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["boundary", "media-vs-device"]}
 {"home": "house", "text": "郭德纲的相声哪段最经典", "intent": "无关", "tags": ["boundary", "media-vs-device"]}
 {"home": "house", "text": "投影仪声音大点，演员说话听不清", "intent": "控制", "device": "投影仪", "action": "调高或增大", "tags": ["boundary", "media-vs-device"]}

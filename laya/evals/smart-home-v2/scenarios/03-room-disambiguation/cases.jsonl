@@ -1,0 +1,50 @@
+{"id": "v2-03-001", "home": "apartment", "text": "我躺床上了，空调帮我关了", "gold": {"intent": "控制", "device": "主卧空调", "action": "关闭或停止"}}
+{"id": "v2-03-002", "home": "apartment", "text": "沙发这边太热，空调低两度", "gold": {"intent": "控制", "device": "客厅空调", "action": "调低或减小"}}
+{"id": "v2-03-003", "home": "apartment", "text": "卧室顶上那个灯开了", "gold": {"intent": "控制", "device": "主卧灯", "action": "打开或启动"}}
+{"id": "v2-03-004", "home": "apartment", "text": "枕头边上那盏小灯关掉", "gold": {"intent": "控制", "device": "床头灯", "action": "关闭或停止"}}
+{"id": "v2-03-005", "home": "apartment", "text": "客厅那盏大的调亮一点", "gold": {"intent": "控制", "device": "客厅主灯", "action": "调高或增大"}}
+{"id": "v2-03-006", "home": "apartment", "text": "卧室的大灯小灯都关了", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
+{"id": "v2-03-007", "home": "apartment", "text": "我回房间睡了，房间空调定到二十七度", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-03-008", "home": "apartment", "text": "空调帮忙开一下", "gold": {"intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "打开或启动"}}
+{"id": "v2-03-009", "home": "house", "text": "吃饭那屋的灯开一下", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": "打开或启动"}}
+{"id": "v2-03-010", "home": "house", "text": "看书那间的灯关了", "gold": {"intent": "控制", "device": "书房灯", "action": "关闭或停止"}}
+{"id": "v2-03-011", "home": "house", "text": "书房的灯别关，把餐厅的关了", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": "关闭或停止"}}
+{"id": "v2-03-012", "home": "house", "text": "客厅脚底下暖和一点", "gold": {"intent": "控制", "device": "地暖", "action": ["调高或增大", "打开或启动"]}}
+{"id": "v2-03-013", "home": "villa", "text": "客厅再暖和一点", "gold": {"intent": "控制", "device": ["客厅空调", "地暖"], "action": "调高或增大"}}
+{"id": "v2-03-014", "home": "villa", "text": "书房的灯关掉，卧室的留着", "gold": {"intent": "控制", "device": "书房灯", "action": "关闭或停止"}}
+{"id": "v2-03-015", "home": "villa", "text": "饭厅开个灯，要吃饭了", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": "打开或启动"}}
+{"id": "v2-03-016", "home": "villa", "text": "卧室床边那盏调亮一点", "gold": {"intent": "控制", "device": "床头灯", "action": "调高或增大"}}
+{"id": "v2-03-017", "home": "villa", "text": "把客厅天花板上那盏关了", "gold": {"intent": "控制", "device": "客厅主灯", "action": "关闭或停止"}}
+{"id": "v2-03-018", "home": "villa", "text": "我在主卧，这屋空调调到除湿", "gold": {"intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-03-019", "home": "villa", "text": "客厅那台空调开起来，卧室的不用", "gold": {"intent": "控制", "device": "客厅空调", "action": "打开或启动"}}
+{"id": "v2-03-020", "home": "villa", "text": "卧室大灯调暗一些", "gold": {"intent": "控制", "device": "主卧灯", "action": "调低或减小"}}
+{"id": "v2-03-021", "home": "loft", "text": "楼上那台空调开起来", "gold": {"intent": "控制", "device": "卧室挂机", "action": "打开或启动"}}
+{"id": "v2-03-022", "home": "loft", "text": "楼下的空调调到二十四度", "gold": {"intent": "控制", "device": "客厅柜机", "action": "设为指定的数值或模式"}}
+{"id": "v2-03-023", "home": "loft", "text": "柜机关了，挂机留着", "gold": {"intent": "控制", "device": "客厅柜机", "action": "关闭或停止"}}
+{"id": "v2-03-024", "home": "loft", "text": "挂机风调小", "gold": {"intent": "控制", "device": "卧室挂机", "action": "调低或减小"}}
+{"id": "v2-03-025", "home": "loft", "text": "楼下客厅开个灯", "gold": {"intent": "控制", "device": ["客厅筒灯", "客厅灯带"], "action": "打开或启动"}}
+{"id": "v2-03-026", "home": "loft", "text": "楼上放衣服那间的灯开一下", "gold": {"intent": "控制", "device": "衣帽间灯", "action": "打开或启动"}}
+{"id": "v2-03-027", "home": "loft", "text": "上楼那段台阶的灯亮一下", "gold": {"intent": "控制", "device": "楼梯灯", "action": "打开或启动"}}
+{"id": "v2-03-028", "home": "threegen", "text": "孩子那屋空调调到二十六度", "gold": {"intent": "控制", "device": "儿童房空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-03-029", "home": "threegen", "text": "奶奶屋里的电视声音大一点", "gold": {"intent": "控制", "device": "老人房电视", "action": "调高或增大"}}
+{"id": "v2-03-030", "home": "threegen", "text": "老人屋里的灯关了吧，他们睡下了", "gold": {"intent": "控制", "device": "老人房灯", "action": "关闭或停止"}}
+{"id": "v2-03-031", "home": "threegen", "text": "宝宝房间的灯调暗一点", "gold": {"intent": "控制", "device": "儿童房灯", "action": "调低或减小"}}
+{"id": "v2-03-032", "home": "threegen", "text": "我在书房加班，空调开一下", "gold": {"intent": "控制", "device": "书房空调", "action": "打开或启动"}}
+{"id": "v2-03-033", "home": "threegen", "text": "我和孩子他爸那屋的空调关掉", "gold": {"intent": "控制", "device": "主卧空调", "action": "关闭或停止"}}
+{"id": "v2-03-034", "home": "threegen", "text": "客厅电视关掉，老人那台不用管", "gold": {"intent": "控制", "device": "客厅电视", "action": "关闭或停止"}}
+{"id": "v2-03-035", "home": "threegen", "text": "爸妈房间空调高一点，他们怕冷", "gold": {"intent": "控制", "device": "老人房空调", "action": "调高或增大"}}
+{"id": "v2-03-036", "home": "threegen", "text": "想看会儿电视，开一下", "gold": {"intent": "控制", "device": ["客厅电视", "老人房电视"], "action": "打开或启动"}}
+{"id": "v2-03-037", "home": "threegen", "text": "过道黑乎乎的，灯开一下", "gold": {"intent": "控制", "device": "走廊感应灯", "action": "打开或启动"}}
+{"id": "v2-03-038", "home": "threegen", "text": "吃饭的地方灯再亮点", "gold": {"intent": "控制", "device": "餐厅灯", "action": "调高或增大"}}
+{"id": "v2-03-039", "home": "smallflat", "text": "外屋的灯给开开", "gold": {"intent": "控制", "device": "客厅灯", "action": "打开或启动"}}
+{"id": "v2-03-040", "home": "smallflat", "text": "里屋灯关一下", "gold": {"intent": "控制", "device": "卧室灯", "action": "关闭或停止"}}
+{"id": "v2-03-041", "home": "smallflat", "text": "我在沙发上，这边的灯关了", "gold": {"intent": "控制", "device": "客厅灯", "action": "关闭或停止"}}
+{"id": "v2-03-042", "home": "bigvilla", "text": "楼下客厅先把空调开上", "gold": {"intent": "控制", "device": "一楼客厅空调", "action": "打开或启动"}}
+{"id": "v2-03-043", "home": "bigvilla", "text": "健身房空调调到二十二度", "gold": {"intent": "控制", "device": "负一楼健身房空调", "action": "设为指定的数值或模式"}}
+{"id": "v2-03-044", "home": "bigvilla", "text": "二楼小卧室的空调关了", "gold": {"intent": "控制", "device": "二楼次卧空调", "action": "关闭或停止"}}
+{"id": "v2-03-045", "home": "bigvilla", "text": "楼上书房灯开亮点", "gold": {"intent": "控制", "device": "二楼书房灯", "action": "调高或增大"}}
+{"id": "v2-03-046", "home": "bigvilla", "text": "我要下地下室，那儿的灯开一下", "gold": {"intent": "控制", "device": "负一楼影院灯", "action": "打开或启动"}}
+{"id": "v2-03-047", "home": "bigvilla", "text": "楼顶阳光房空调关了", "gold": {"intent": "控制", "device": "三楼阳光房空调", "action": "关闭或停止"}}
+{"id": "v2-03-048", "home": "bigvilla", "text": "楼上那台扫地机开始扫", "gold": {"intent": "控制", "device": "二楼扫地机", "action": "打开或启动"}}
+{"id": "v2-03-049", "home": "bigvilla", "text": "一楼客厅那条灯带关了，主灯留着", "gold": {"intent": "控制", "device": "一楼客厅灯带", "action": "关闭或停止"}}
+{"id": "v2-03-050", "home": "bigvilla", "text": "我在主卧，窗帘拉上", "gold": {"intent": "控制", "device": "二楼主卧窗帘", "action": "关闭或停止"}}

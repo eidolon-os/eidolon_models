@@ -23,6 +23,7 @@ sources:
     weight: 0.2
 locked_eval:
   - ../../../evals/smart-home
+  - ../../../evals/smart-home-v2
 split:
   val: 0.1
   calib: 0.1

@@ -182,18 +182,15 @@
 {"home": "house", "text": "主卧冷得不想起床", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "卧室太暗了，找东西全靠摸", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "客厅光线差得看不清人脸", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
-{"home": "house", "text": "客厅里黑咕隆咚的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "厨房冷得手指发僵", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "厨房里冻得慌", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "厨房灶台那边昏暗暗的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
-{"home": "house", "text": "客厅太晒了，阳光直射沙发", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "影音室热得人冒汗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "车库黑得找不到车", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "花园黑灯瞎火的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "餐厅热得吃不下饭", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "书房太干了，嗓子痒", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "阳台太暗，喂猫看不清", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
-{"home": "house", "text": "书房冷得握不住笔", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "客厅干燥得嘴巴发苦", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "house", "text": "餐厅里冷得吃饭都得穿外套", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}
 {"home": "villa", "text": "厨房光线太差，切肉怕切到手", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "room-lacks"]}

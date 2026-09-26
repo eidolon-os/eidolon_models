@@ -218,7 +218,6 @@
 {"home": "villa", "text": "床头灯稍微亮一丢丢", "intent": "控制", "device": "床头灯", "action": "调高或增大", "tags": ["action-granularity", "light"]}
 {"home": "villa", "text": "床头灯亮度给个百分之十", "intent": "控制", "device": "床头灯", "action": "设为指定的数值或模式", "tags": ["action-granularity", "light"]}
 {"home": "house", "text": "书房的灯给我打开", "intent": "控制", "device": "书房灯", "action": "打开或启动", "tags": ["action-granularity", "light"]}
-{"home": "house", "text": "书房灯亮度拉满", "intent": "控制", "device": "书房灯", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["action-granularity", "light"]}
 {"home": "house", "text": "书房灯再亮两档", "intent": "控制", "device": "书房灯", "action": "调高或增大", "tags": ["action-granularity", "light"]}
 {"home": "house", "text": "书房灯色温调到四千K", "intent": "控制", "device": "书房灯", "action": "设为指定的数值或模式", "tags": ["action-granularity", "light"]}
 {"home": "house", "text": "餐厅吊灯亮度调到七十", "intent": "控制", "device": "餐厅吊灯", "action": "设为指定的数值或模式", "tags": ["action-granularity", "light"]}
@@ -238,7 +237,6 @@
 {"home": "apartment", "text": "热水器水温加两度", "intent": "控制", "device": "热水器", "action": "调高或增大", "tags": ["action-granularity", "climate"]}
 {"home": "apartment", "text": "热水器出水温度改成四十五", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["action-granularity", "climate"]}
 {"home": "apartment", "text": "热水器水温降一点", "intent": "控制", "device": "热水器", "action": "调低或减小", "tags": ["action-granularity", "climate"]}
-{"home": "apartment", "text": "客厅窗帘拉开百分之五十", "intent": "控制", "device": "客厅窗帘", "action": "设为指定的数值或模式", "tags": ["action-granularity", "curtain"]}
 {"home": "apartment", "text": "拉开客厅窗帘", "intent": "控制", "device": "客厅窗帘", "action": "打开或启动", "tags": ["action-granularity", "curtain"]}
 {"home": "apartment", "text": "客厅窗帘两边合拢", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["action-granularity", "curtain"]}
 {"home": "apartment", "text": "客厅窗帘缝再拉宽点", "intent": "控制", "device": "客厅窗帘", "action": "调高或增大", "tags": ["action-granularity", "curtain"]}

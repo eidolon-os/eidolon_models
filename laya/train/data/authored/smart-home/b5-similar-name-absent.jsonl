@@ -37,7 +37,6 @@
 {"home": "apartment", "text": "电视柜灯关了吧，费电", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p019"]}
 {"home": "apartment", "text": "电视关了吧，费电", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p019"]}
 {"home": "apartment", "text": "客厅窗户开条缝", "intent": "控制", "device": "没有对应的设备", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["device-not-in-home", "similar-name", "p020"]}
-{"home": "apartment", "text": "客厅窗帘开条缝", "intent": "控制", "device": "客厅窗帘", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "similar-name", "p020"]}
 {"home": "apartment", "text": "睡前把窗户关严实", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p021"]}
 {"home": "apartment", "text": "睡前把窗帘关严实", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "similar-name", "p021"]}
 {"home": "apartment", "text": "主卧的窗帘合上吧，太阳晒脸", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "similar-name", "p022"]}
@@ -85,7 +84,6 @@
 {"home": "apartment", "text": "洗碗机那边洗好了没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p043", "query"]}
 {"home": "apartment", "text": "洗衣机那边洗好了没", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "similar-name", "p043", "query"]}
 {"home": "apartment", "text": "电压力锅还剩几分钟", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p044", "query"]}
-{"home": "apartment", "text": "电饭煲还剩几分钟", "intent": "查询", "device": "电饭煲", "tags": ["status-query", "similar-name", "p044", "query"]}
 {"home": "apartment", "text": "热水壶现在多少度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p045", "query"]}
 {"home": "apartment", "text": "热水器现在多少度", "intent": "查询", "device": "热水器", "tags": ["status-query", "similar-name", "p045", "query"]}
 {"home": "apartment", "text": "除湿机水箱还有水吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p046", "query"]}
@@ -95,7 +93,6 @@
 {"home": "apartment", "text": "门铃电量还够不够", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p048", "query"]}
 {"home": "apartment", "text": "门锁电量还够不够", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "similar-name", "p048", "query"]}
 {"home": "apartment", "text": "次卧空调现在开着吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p049", "query"]}
-{"home": "apartment", "text": "主卧空调现在开着吗", "intent": "查询", "device": "主卧空调", "tags": ["status-query", "similar-name", "p049", "query"]}
 {"home": "apartment", "text": "净水器的滤芯该换了吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p050", "query"]}
 {"home": "apartment", "text": "空气净化器的滤芯该换了吗", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "similar-name", "p050", "query"]}
 {"home": "house", "text": "洗衣机可以开了，东西都放好了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "similar-name", "p051"]}
@@ -233,7 +230,6 @@
 {"home": "villa", "text": "书房空调现在几度", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p117", "query"]}
 {"home": "villa", "text": "客厅空调现在几度", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "similar-name", "p117", "query"]}
 {"home": "villa", "text": "洗地机电量还剩多少", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p118", "query"]}
-{"home": "villa", "text": "扫地机器人电量还剩多少", "intent": "查询", "device": "扫地机器人", "tags": ["status-query", "similar-name", "p118", "query"]}
 {"home": "villa", "text": "浴缸现在开着吗", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p119", "query"]}
 {"home": "villa", "text": "浴霸现在开着吗", "intent": "查询", "device": "浴霸", "tags": ["status-query", "similar-name", "p119", "query"]}
 {"home": "villa", "text": "厨房灯关了没", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "similar-name", "p120", "query"]}

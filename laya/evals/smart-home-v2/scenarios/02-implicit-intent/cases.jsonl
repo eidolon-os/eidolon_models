@@ -1,0 +1,60 @@
+{"id": "v2-02-001", "home": "apartment", "text": "客厅闷热得坐不住", "gold": {"intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "v2-02-002", "home": "apartment", "text": "躺床上想看会儿书，光线不够", "gold": {"intent": "控制", "device": ["床头灯", "主卧灯"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-003", "home": "apartment", "text": "早上起来鼻子干得难受", "gold": {"intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-004", "home": "apartment", "text": "米淘好放锅里了，六点前要吃上饭", "gold": {"intent": "控制", "device": "电饭煲", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "v2-02-005", "home": "apartment", "text": "屋里太安静了，想听点歌", "gold": {"intent": "控制", "device": "智能音箱", "action": "打开或启动"}}
+{"id": "v2-02-006", "home": "apartment", "text": "厨房炒菜呛得眼泪直流", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-007", "home": "apartment", "text": "主卧早上太阳直射进来，晃得睡不着", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-008", "home": "apartment", "text": "你这笑话讲得也太冷了", "gold": {"intent": "无关"}}
+{"id": "v2-02-009", "home": "house", "text": "炒辣椒呛得直咳嗽", "gold": {"intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-010", "home": "house", "text": "吃完饭碗筷都堆在水槽里了", "gold": {"intent": "控制", "device": "洗碗机", "action": "打开或启动"}}
+{"id": "v2-02-011", "home": "house", "text": "蛋糕胚调好了，准备烤", "gold": {"intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"]}}
+{"id": "v2-02-012", "home": "house", "text": "狗子的饭盆空了", "gold": {"intent": "控制", "device": "宠物喂食器", "action": "打开或启动"}}
+{"id": "v2-02-013", "home": "house", "text": "想泡杯茶，水还是凉的", "gold": {"intent": "控制", "device": "饮水机插座", "action": "打开或启动"}}
+{"id": "v2-02-014", "home": "house", "text": "这几天没下雨，草坪都干得发黄了", "gold": {"intent": "控制", "device": "花园浇水阀", "action": "打开或启动"}}
+{"id": "v2-02-015", "home": "house", "text": "客厅有点暗，看不清字", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-016", "home": "house", "text": "邻居家的猫天天半夜叫，吵死了", "gold": {"intent": "无关"}}
+{"id": "v2-02-017", "home": "villa", "text": "客厅冷飕飕的", "gold": {"intent": "控制", "device": ["客厅空调", "地暖"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-02-018", "home": "villa", "text": "主卧睡着有点热", "gold": {"intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "v2-02-019", "home": "villa", "text": "书房热得冒汗", "gold": {"intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-020", "home": "villa", "text": "餐厅那边太黑，看不清菜", "gold": {"intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-021", "home": "villa", "text": "屋里憋闷，想换点新鲜空气", "gold": {"intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-022", "home": "villa", "text": "卫生间里冷冰冰的，一会儿要洗澡", "gold": {"intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-023", "home": "villa", "text": "书房里冷得握不住笔", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-024", "home": "villa", "text": "明天外面要降温十度，记得多穿点", "gold": {"intent": "无关"}}
+{"id": "v2-02-025", "home": "loft", "text": "在客厅找个东西都得眯着眼", "gold": {"intent": "控制", "device": ["客厅筒灯", "客厅灯带"], "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-026", "home": "loft", "text": "上楼梯黑灯瞎火的", "gold": {"intent": "控制", "device": "楼梯灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-027", "home": "loft", "text": "卧室闷热睡不着", "gold": {"intent": "控制", "device": "卧室挂机", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "v2-02-028", "home": "loft", "text": "早上太阳一出来就把我晃醒了", "gold": {"intent": "控制", "device": "卧室电动窗帘", "action": "关闭或停止"}}
+{"id": "v2-02-029", "home": "loft", "text": "一会儿洗澡，浴室里太冷", "gold": {"intent": "控制", "device": "浴室暖风机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-030", "home": "loft", "text": "放出来的水温吞吞的", "gold": {"intent": "控制", "device": "电热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-02-031", "home": "loft", "text": "衣帽间里挑衣服看不清颜色", "gold": {"intent": "控制", "device": "衣帽间灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-032", "home": "loft", "text": "客厅下午太晒了，阳光直射沙发", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-033", "home": "loft", "text": "最近项目不顺，心里闷得慌", "gold": {"intent": "无关"}}
+{"id": "v2-02-034", "home": "threegen", "text": "爷爷奶奶那屋有点冷", "gold": {"intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-02-035", "home": "threegen", "text": "孩子在自己房间写作业，嫌太暗", "gold": {"intent": "控制", "device": "儿童房灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-036", "home": "threegen", "text": "儿童房最近潮乎乎的", "gold": {"intent": "控制", "device": "除湿机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-037", "home": "threegen", "text": "在书房看资料，桌上光线太弱", "gold": {"intent": "控制", "device": "书房台灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-038", "home": "threegen", "text": "明天要穿的衬衫还是湿的", "gold": {"intent": "控制", "device": "烘干机", "action": "打开或启动"}}
+{"id": "v2-02-039", "home": "threegen", "text": "晚上起夜过道里黑乎乎的", "gold": {"intent": "控制", "device": "走廊感应灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-040", "home": "threegen", "text": "爷爷屋里戏曲声太吵了", "gold": {"intent": "控制", "device": "老人房电视", "action": ["调低或减小", "关闭或停止"]}}
+{"id": "v2-02-041", "home": "threegen", "text": "厨房黑，炒菜看不清锅里", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-042", "home": "threegen", "text": "主卧最近返潮，墙上都有水珠了", "gold": {"intent": "控制", "device": ["除湿机", "没有对应的设备"]}, "note": "两种都算对：房间规则下是\"没有\"，但把唯一 / 可移动的那台打开也合理"}
+{"id": "v2-02-043", "home": "threegen", "text": "我儿子这阵子火气大得很", "gold": {"intent": "无关"}}
+{"id": "v2-02-044", "home": "smallflat", "text": "冻得手脚冰凉", "gold": {"intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-02-045", "home": "smallflat", "text": "想烧壶开水泡面", "gold": {"intent": "控制", "device": "烧水壶插座", "action": "打开或启动"}}
+{"id": "v2-02-046", "home": "smallflat", "text": "卧室里黑咕隆咚的", "gold": {"intent": "控制", "device": "卧室灯", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-047", "home": "smallflat", "text": "淋浴出来的水冰凉", "gold": {"intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-02-048", "home": "smallflat", "text": "周末想睡懒觉，阳光太晃眼", "gold": {"intent": "控制", "device": "窗帘", "action": "关闭或停止"}}
+{"id": "v2-02-049", "home": "smallflat", "text": "客厅里热得像蒸笼", "gold": {"intent": "控制", "device": ["空调", "没有对应的设备"]}, "note": "两种都算对：房间规则下是\"没有\"，但把唯一 / 可移动的那台打开也合理"}
+{"id": "v2-02-050", "home": "smallflat", "text": "外面三十九度，还好今天在公司待着", "gold": {"intent": "无关"}}
+{"id": "v2-02-051", "home": "bigvilla", "text": "一楼冷得坐不住", "gold": {"intent": "控制", "device": ["地暖", "一楼客厅空调"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}}
+{"id": "v2-02-052", "home": "bigvilla", "text": "地下室一股霉味，潮得很", "gold": {"intent": "控制", "device": "负一楼除湿机", "action": ["打开或启动", "调高或增大"]}}
+{"id": "v2-02-053", "home": "bigvilla", "text": "健身房刚跑完步热死了", "gold": {"intent": "控制", "device": "负一楼健身房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
+{"id": "v2-02-054", "home": "bigvilla", "text": "露台上黑漆漆的，想出去坐会儿", "gold": {"intent": "控制", "device": "三楼露台灯", "action": "打开或启动"}}
+{"id": "v2-02-055", "home": "bigvilla", "text": "酒窖里温度有点高，怕酒放坏了", "gold": {"intent": "控制", "device": "负一楼酒窖恒温柜", "action": ["调低或减小", "设为指定的数值或模式"]}}
+{"id": "v2-02-056", "home": "bigvilla", "text": "阳光房一股闷味，想透透气", "gold": {"intent": "控制", "device": ["三楼阳光房天窗", "新风系统"], "action": "打开或启动"}}
+{"id": "v2-02-057", "home": "bigvilla", "text": "花园里的草都蔫了", "gold": {"intent": "控制", "device": "花园喷灌", "action": "打开或启动"}}
+{"id": "v2-02-058", "home": "bigvilla", "text": "健身房里太暗了", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-059", "home": "bigvilla", "text": "三楼洗衣房黑乎乎的，看不清按钮", "gold": {"intent": "控制", "device": "没有对应的设备"}}
+{"id": "v2-02-060", "home": "bigvilla", "text": "这部片子的结局太黑暗了", "gold": {"intent": "无关"}}

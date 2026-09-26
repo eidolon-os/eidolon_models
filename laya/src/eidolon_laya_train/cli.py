@@ -153,7 +153,9 @@ def cmd_eval(args) -> int:
         _log(f"{name}: {json.dumps(report['overall'], ensure_ascii=False)}")
         for scn, agg in report["by_scenario"].items():
             _log(f"  {scn}: acc {agg['acc']} ece {agg['ece']} n {agg['n']}")
-        if args.baseline:
+        if args.baseline and not (Path(args.baseline) / f"{name}.json").exists():
+            _log(f"  no baseline for {name} in {args.baseline}; gate skipped for this set")
+        elif args.baseline:
             base = json.loads((Path(args.baseline) / f"{name}.json").read_text(encoding="utf-8"))
             g = gate(report, base, args.tolerance, alpha=args.alpha)
             (out_dir / f"{name}.gate.json").write_text(
