@@ -108,3 +108,100 @@ class OnnxBackend:
             "threads": self._threads or "ort-default",
             "onnxruntime": self._ort.__version__,
         }
+
+
+class RknnBackend:
+    """RK3588 NPU via rknn-toolkit-lite2, from what ``export-npu`` wrote and ``deploy/rk3588/laya_npu.py
+    convert`` compiled: encoder + head layers per sequence bucket on the NPU; token-embedding lookup,
+    marker gather, scorer and act head on the CPU (numpy).
+
+    The items of one batch (the questions of one request) run in parallel, one queue per NPU core.
+    Each core loads only the buckets in its placement — every bucket on every core runs the NPU out of
+    memory — and an item goes to the least-loaded core that has its bucket.
+    """
+
+    name = "rknn"
+    PLACEMENT = {0: (128, 256), 1: (256, 384, 512), 2: (128, 256)}
+
+    def __init__(self, npu_dir: Path, *, placement: dict[int, tuple[int, ...]] | None = None):
+        import re
+        import threading
+        from concurrent.futures import ThreadPoolExecutor
+
+        from rknnlite.api import RKNNLite
+
+        npu_dir = Path(npu_dir)
+        files = {int(re.search(r"hidden_l(\d+)", p.name).group(1)): p for p in npu_dir.glob("hidden_l*.rknn")}
+        if not files:
+            raise FileNotFoundError(f"no hidden_l*.rknn in {npu_dir}; run deploy/rk3588/laya_npu.py convert")
+        placement = placement or self.PLACEMENT
+        self._placement = {c: tuple(L for L in bs if L in files) for c, bs in placement.items()}
+        missing = set(files) - {L for bs in self._placement.values() for L in bs}
+        if missing:
+            raise ValueError(f"buckets {sorted(missing)} are on no core in placement {placement}")
+        self._buckets = sorted(files)
+        masks = {0: RKNNLite.NPU_CORE_0, 1: RKNNLite.NPU_CORE_1, 2: RKNNLite.NPU_CORE_2}
+        self._rt = {}
+        for core, bs in self._placement.items():
+            for L in bs:
+                r = RKNNLite(verbose=False)
+                if r.load_rknn(str(files[L])) != 0 or r.init_runtime(core_mask=masks[core]) != 0:
+                    raise RuntimeError(f"cannot load {files[L].name} on NPU core {core}")
+                self._rt[(core, L)] = r
+        self._emb = np.load(npu_dir / "tok_emb_fp16.npy", mmap_mode="r")
+        self._type = np.load(npu_dir / "type_emb.npy")
+        self._sc = dict(np.load(npu_dir / "scorer.npz"))
+        self._act = dict(np.load(npu_dir / "act_head.npz"))
+        self._pool = ThreadPoolExecutor(len(self._placement))
+        self._lock = threading.Lock()  # one batch at a time: its items already fill the cores
+
+    def _bucket(self, n: int) -> int:
+        for b in self._buckets:
+            if n <= b:
+                return b
+        raise ValueError(f"sequence of {n} tokens exceeds the largest NPU bucket {self._buckets[-1]}")
+
+    def schedule(self, lengths: list[int]) -> dict[int, list[tuple[int, int]]]:
+        """Item index -> core, longest first onto the least-loaded core that has the bucket (cost ~ L)."""
+        load = {c: 0 for c in self._placement}
+        queues: dict[int, list[tuple[int, int]]] = {c: [] for c in self._placement}
+        for i in sorted(range(len(lengths)), key=lambda i: -lengths[i]):
+            L = self._bucket(lengths[i])
+            core = min((c for c, bs in self._placement.items() if L in bs), key=lambda c: load[c])
+            load[core] += L
+            queues[core].append((i, L))
+        return queues
+
+    def forward(self, batch: dict[str, np.ndarray]) -> tuple[np.ndarray, np.ndarray]:
+        from .export_npu import act_from_logits, npu_inputs, score_hidden
+
+        n, kmax = batch["marker_mask"].shape
+        lengths = [int(batch["attention_mask"][i].sum()) for i in range(n)]
+        logits = np.full((n, kmax), -1e4, np.float32)
+        act = np.zeros((n, 2), np.float32)
+
+        def run(core, queue):
+            for i, L in queue:
+                ids = batch["input_ids"][i, : lengths[i]].tolist()
+                mk = batch["marker_mask"][i].astype(bool)
+                markers = batch["marker_pos"][i][mk].tolist()
+                h = np.asarray(self._rt[(core, L)].inference(
+                    inputs=npu_inputs(ids, int(batch["qtype"][i]), L, self._emb, self._type))[0], np.float32)[0]
+                lo = score_hidden(h, markers, self._sc)
+                logits[i, : len(lo)] = lo
+                act[i] = act_from_logits(h[0], lo, self._act)
+
+        with self._lock:
+            futures = [self._pool.submit(run, c, q) for c, q in self.schedule(lengths).items() if q]
+            for f in futures:
+                f.result()
+        return logits, act
+
+    def describe(self) -> dict:
+        return {
+            "backend": self.name,
+            "device": "rk3588-npu",
+            "precision": {"weights": "float16", "compute": "float16"},
+            "buckets": self._buckets,
+            "placement": {str(c): list(bs) for c, bs in self._placement.items()},
+        }

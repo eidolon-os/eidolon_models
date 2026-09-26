@@ -58,6 +58,21 @@ def score_hidden(h: np.ndarray, markers: list[int], sc: dict[str, np.ndarray]) -
     return (x @ sc["w2"].T + sc["b2"])[:, 0]
 
 
+def act_from_logits(pooled: np.ndarray, logits: np.ndarray, act: dict[str, np.ndarray]) -> np.ndarray:
+    """The model's ``act_head`` for one item: ``pooled`` = h[0] after the head layers, ``logits`` over its k options."""
+    k = len(logits)
+    p = np.exp(logits - logits.max())
+    p = p / p.sum()
+    kk = max(k, 2)
+    ent = float(-(p * np.log(np.clip(p, 1e-9, None))).sum() / np.log(kk))
+    top = np.sort(p)[::-1]
+    t1, t2 = float(top[0]), float(top[1]) if k >= 2 else 0.0
+    x = np.concatenate([pooled.astype(np.float32), np.array([t1, t1 - t2, ent, kk / 255.0], np.float32)])
+    x = x @ act["w1"].T + act["b1"]
+    x = 0.5 * x * (1 + _erf(x / np.sqrt(2)))
+    return x @ act["w2"].T + act["b2"]
+
+
 def npu_inputs(ids: list[int], qtype: int, L: int, emb: np.ndarray, type_emb: np.ndarray) -> list[np.ndarray]:
     """The three NPU graph inputs for one item, right-padded to ``L`` (pad rows are masked)."""
     n = len(ids)
@@ -137,6 +152,9 @@ def export_npu(manifest: Manifest, *, buckets=BUCKETS, force: bool = False, log=
     sc = {"ln_w": s[0].weight, "ln_b": s[0].bias, "w1": s[1].weight, "b1": s[1].bias, "w2": s[3].weight, "b2": s[3].bias}
     sc = {k: v.detach().float().numpy() for k, v in sc.items()}
     np.savez(out / "scorer.npz", **sc)
+    a = model.act_head
+    act = {"w1": a[0].weight, "b1": a[0].bias, "w2": a[2].weight, "b2": a[2].bias}
+    np.savez(out / "act_head.npz", **{k: v.detach().float().numpy() for k, v in act.items()})
     emb16 = np.load(out / "tok_emb_fp16.npy").astype(np.float32)  # parity uses what the device will use
 
     wrapper = Hidden(model).eval()
@@ -183,7 +201,7 @@ def export_npu(manifest: Manifest, *, buckets=BUCKETS, force: bool = False, log=
         "source_revision": manifest.revision,
         "buckets": list(buckets),
         "opset": OPSET,
-        "split": "cpu: tok_emb_fp16 + type_emb | npu: hidden_l<L>.onnx | cpu: scorer.npz on h[markers]",
+        "split": "cpu: tok_emb_fp16 + type_emb | npu: hidden_l<L>.onnx | cpu: scorer.npz on h[markers], act_head.npz on h[0]",
         "files": {p.name: sha256_file(p) for p in sorted(out.iterdir()) if p.name != EXPORT_RECORD},
         "parity": parity,
         "torch": torch.__version__,

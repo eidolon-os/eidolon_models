@@ -12,7 +12,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass, replace
 from pathlib import Path
 
-BACKENDS = ("torch", "onnx")
+BACKENDS = ("torch", "onnx", "rknn")
 DEVICES = ("auto", "cpu", "mps", "cuda")
 
 #: The laya project directory (the one holding ``models/``). The launcher exports

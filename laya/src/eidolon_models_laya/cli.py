@@ -126,6 +126,7 @@ def cmd_predict(args: argparse.Namespace) -> int:
         request["state"],
         request["questions"],
         truncate_left=bool(options.get("truncate_left", False)),
+        ask_if=options.get("ask_if"),
     )
     print(
         json.dumps(
