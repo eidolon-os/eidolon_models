@@ -28,7 +28,7 @@ class FakeEngine:
     def describe(self):
         return {"backend": "fake", "max_len": 1024, "head_max_len": 256}
 
-    def predict(self, state, questions, *, truncate_left=False):
+    def predict(self, state, questions, *, truncate_left=False, ask_if=None):
         self.calls.append((state, questions, truncate_left))
         if "bad" in questions:
             raise ValueError("question 'bad': unknown type")
@@ -117,7 +117,7 @@ async def test_validation(client, payload, code):
 
 
 async def test_chinese_is_sent_as_utf8_not_escapes(client, engine):
-    engine.predict = lambda state, questions, truncate_left=False: Prediction(
+    engine.predict = lambda state, questions, truncate_left=False, ask_if=None: Prediction(
         {
             "who": {
                 "type": "choice",
@@ -159,3 +159,22 @@ async def test_busy_is_rejected_not_queued(client, engine):
     )
     assert resp.status == 503 and resp.headers["Retry-After"] == "1"
     assert engine.calls == []
+
+
+async def test_ask_if_reaches_the_engine_and_bad_ask_if_is_a_400(client, engine):
+    seen = {}
+
+    def predict(state, questions, *, truncate_left=False, ask_if=None):
+        seen["ask_if"] = ask_if
+        if ask_if == "bad":
+            raise ValueError("'ask_if' must map question id -> {question id: [answers]}")
+        return Prediction({}, 1, [], 1.0, 1.0, {"who": "x=y"})
+
+    engine.predict = predict
+    body = {"state": {}, "questions": QUESTIONS, "options": {"ask_if": {"who": {"x": ["y"]}}}}
+    resp = await client.post("/v1/systemone", json=body, headers=AUTH)
+    assert resp.status == 200 and (await resp.json())["skipped"] == {"who": "x=y"}
+    assert seen["ask_if"] == {"who": {"x": ["y"]}}
+    body["options"]["ask_if"] = "bad"
+    resp = await client.post("/v1/systemone", json=body, headers=AUTH)
+    assert resp.status == 400 and (await resp.json())["error"]["code"] == "invalid_question"

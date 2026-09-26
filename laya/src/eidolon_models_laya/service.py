@@ -3,7 +3,8 @@
     GET  /healthz          liveness, no auth
     GET  /readyz           model loaded, no auth
     GET  /v1/info          model, backend, limits                       (auth)
-    POST /v1/systemone     {"state": ..., "questions": {...}, "options": {"truncate_left": bool}}
+    POST /v1/systemone     {"state": ..., "questions": {...}, "options": {"truncate_left": bool, "ask_if": {...}}}
+                           ask_if: {"device": {"intent": ["控制", "查询"]}} asks device only when intent is one of those
                            Jev / laya wire format; extra fields in the reply only  (auth)
 
 Inference runs on one worker thread: a forward pass already uses every core it
@@ -113,6 +114,7 @@ async def systemone(request: web.Request) -> web.Response:
     if not isinstance(options, dict):
         return _error(400, "bad_request", "'options' must be an object")
     truncate_left = bool(options.get("truncate_left", False))
+    ask_if = options.get("ask_if")
 
     if state["pending"] >= settings.max_pending:
         return _error(
@@ -123,7 +125,9 @@ async def systemone(request: web.Request) -> web.Response:
         loop = asyncio.get_running_loop()
         prediction = await loop.run_in_executor(
             state["executor"],
-            lambda: engine.predict(body["state"], questions, truncate_left=truncate_left),
+            lambda: engine.predict(
+                body["state"], questions, truncate_left=truncate_left, ask_if=ask_if
+            ),
         )
     except ValueError as exc:
         return _error(400, "invalid_question", str(exc))
@@ -134,8 +138,9 @@ async def systemone(request: web.Request) -> web.Response:
         state["pending"] -= 1
     state["served"] += 1
     log.info(
-        "systemone q=%d tokens=%d forward=%.0fms total=%.0fms truncated=%s",
+        "systemone q=%d skipped=%d tokens=%d forward=%.0fms total=%.0fms truncated=%s",
         len(questions),
+        len(prediction.skipped),
         prediction.input_tokens,
         prediction.forward_ms,
         prediction.total_ms,
