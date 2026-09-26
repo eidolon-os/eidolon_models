@@ -1,0 +1,200 @@
+{"home": "house", "text": "光脚踩在客厅地板上，凉得跟刚从冰箱里拿出来似的", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "house", "text": "浴室里冰凉冰凉的，脱了衣服直打哆嗦", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "house", "text": "卫生间冷得要命，想冲个澡都下不了决心", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "villa", "text": "主卧湿冷湿冷的，被窝捂了半天都不热乎", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "villa", "text": "坐客厅沙发上脚底冰凉，一点热乎气都没有", "intent": "控制", "device": ["地暖", "客厅空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "villa", "text": "卫生间冷飕飕的，热水再烫也扛不住", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "apartment", "text": "主卧冻得人直缩脖子，床头摸着都是冰的", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "apartment", "text": "客厅冷冰冰的，看会儿电视都得裹着毯子", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "warm", "qa-union"]}
+{"home": "apartment", "text": "卫生间冻得跟冰窖似的，站都站不住", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "brand", "text": "卧室冷，被子摸上去冰凉冰凉的", "intent": "控制", "device": "美的风尊空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "brand", "text": "客厅冻得哈口气都是白的，湿毛巾都快结冰了", "intent": "控制", "device": "格力云锦空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "brand", "text": "厨房冷得手指发僵，站那儿跟守着冰柜似的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm", "qa-union"]}
+{"home": "countryside", "text": "堂屋冷得跟冰柜里头一样", "intent": "控制", "device": "堂屋空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "countryside", "text": "洗澡间冷得衣裳都不敢脱，热水再足也白搭", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "duplex", "text": "二楼书房冷得像冰窖，坐一会儿腿都木了", "intent": "控制", "device": "二楼书房空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "warm", "qa-union"]}
+{"home": "duplex", "text": "楼上卫生间凉飕飕的，冲完热水澡出来冻得不行", "intent": "控制", "device": "二楼浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "elder", "text": "老人房冷，老爷子手脚冰凉直咳嗽", "intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "elder", "text": "客厅冷得电视都看不下去了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "elder", "text": "卫生间冰凉，老太太洗澡怕冻着", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "family3", "text": "儿童房冷得孩子小手冰凉", "intent": "控制", "device": "儿童房空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "kids", "text": "宝宝屋里冷，小脚丫冰得跟冰块似的", "intent": "控制", "device": "婴儿房空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "kids", "text": "我们屋冷飕飕的，跟窗缝漏风似的", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "mega", "text": "茶室冷得茶刚倒出来就凉了", "intent": "控制", "device": "茶室空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "mega", "text": "主卫里冻得直跺脚，热水都救不了", "intent": "控制", "device": "主卫浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "minimal", "text": "客厅冷得脚冰凉", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "office", "text": "敲了一上午键盘，手指冻得跟冰棍似的", "intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "pets", "text": "狗狗在客厅冻得直发抖，趴那儿跟块冰似的", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "rental", "text": "我屋里冷得像冰窖，杯子里的水都冰牙", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "warm", "qa-union"]}
+{"home": "studio", "text": "屋里冷得跟住在冰箱里一样", "intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm"]}
+{"home": "office", "text": "卧室冷得钻进被窝都不管用", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "warm", "qa-union"]}
+{"home": "house", "text": "书房灯底下看书，热得一脑门子汗", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "house", "text": "热得想把脑袋塞进冰箱里", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "house", "text": "餐厅闷得跟蒸笼似的，饭都吃不下", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "house", "text": "影音室闷热，看场电影出一身汗", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "villa", "text": "客厅热得汗顺着脖子流，冰棍都化了", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "villa", "text": "书房闷热，开着灯写作业满头大汗", "intent": "控制", "device": ["落地扇", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "villa", "text": "主卧热得汗把床单都洇湿了", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "apartment", "text": "主卧热得睡不着，枕头都被汗湿透了", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "apartment", "text": "客厅热得冒汗，冰镇饮料一瓶接一瓶", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "apartment", "text": "厨房做饭热得满头大汗，火一开跟烤炉似的", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "brand", "text": "卧室闷热，身上黏黏的全是汗", "intent": "控制", "device": ["美的风尊空调", "戴森净化风扇"], "action": ["打开或启动", "调低或减小", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "brand", "text": "书房热得汗往下滴，台灯底下作业都写不下去", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "countryside", "text": "堂屋热得直冒汗，冰柜里的冰棍都被吃光了", "intent": "控制", "device": "堂屋空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "countryside", "text": "卧室闷得跟火炉一样", "intent": "控制", "device": "卧室空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "countryside", "text": "鸡舍里热得鸡都张着嘴喘气", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "duplex", "text": "二楼书房闷得汗湿了衬衫", "intent": "控制", "device": ["二楼书房空调", "全屋新风"], "action": ["打开或启动", "调低或减小", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "duplex", "text": "一楼客厅热得人发蔫，电视都不想看", "intent": "控制", "device": "一楼客厅空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "duplex", "text": "楼梯来回爬两趟就一身汗，屋里太闷了", "intent": "控制", "device": ["全屋新风", "一楼客厅空调", "二楼主卧空调", "二楼书房空调"], "action": ["打开或启动", "调低或减小", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "elder", "text": "老人房热得老太太一直拿扇子扇风", "intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "elder", "text": "客厅闷热，看电视看得一身汗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool", "qa-union"]}
+{"home": "family3", "text": "儿童房热得孩子枕巾都汗湿了", "intent": "控制", "device": "儿童房空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "family3", "text": "客厅热得像蒸笼，冰西瓜都压不住", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "kids", "text": "宝宝屋闷热，宝宝脖子上都起痱子了", "intent": "控制", "device": "婴儿房空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "mega", "text": "影音室热，看电影看得后背全是汗", "intent": "控制", "device": "影音室空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "mega", "text": "衣帽间闷热，换件衣服出一身汗", "intent": "控制", "device": "衣帽间空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "office", "text": "开着视频会热得满脸是汗", "intent": "控制", "device": "空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "office", "text": "卧室里憋得透不过气，半夜翻来覆去一身汗","intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "pets", "text": "猫热得趴在瓷砖上一动不动，水都喝了好几碗", "intent": "控制", "device": ["客厅空调", "卧室空调"], "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "rental", "text": "我房间热得跟蒸笼一样，被子都汗湿了", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调低或减小"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "studio", "text": "热得T恤都湿透了，贴在背上", "intent": "控制", "device": ["空调", "风扇"], "action": ["打开或启动", "调低或减小", "调高或增大"], "tags": ["implicit-intent", "function-match", "cool"]}
+{"home": "house", "text": "书房昏得跟点蜡烛似的，书上的字都看不清", "intent": "控制", "device": "书房灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "house", "text": "厨房暗得看不清冰箱里有啥", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "house", "text": "车库里黑咕隆咚的，充电枪都找不着", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "villa", "text": "下午太阳直晒客厅，电视屏幕一片反光看不清", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "apartment", "text": "主卧黑得摸不着床头柜上的水杯", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "apartment", "text": "客厅下午太阳晃得眼睛睁不开", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "apartment", "text": "卫生间黑黢黢的，洗脸都看不清", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "brand", "text": "书房暗得作业本上的字发虚", "intent": "控制", "device": "米家台灯Pro", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "brand", "text": "客厅灯白得晃眼，跟冰窖里的光似的", "intent": "控制", "device": "易来吸顶灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "countryside", "text": "院子里黑咕隆咚的，看不清路，差点踩进水沟", "intent": "控制", "device": "院子灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "countryside", "text": "鸡窝里黑乎乎的，鸡蛋都摸不着", "intent": "控制", "device": "鸡舍灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "duplex", "text": "楼梯黑得脚底下看不清台阶", "intent": "控制", "device": "楼梯灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "duplex", "text": "二楼主卧早上太阳刺眼，晃得人睡不着", "intent": "控制", "device": "二楼主卧窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "elder", "text": "半夜起来上厕所，走廊黑得怕摔着", "intent": "控制", "device": "走廊夜灯", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "elder", "text": "老人房亮得跟电焊火花似的，老爷子眼睛睁不开", "intent": "控制", "device": ["老人房灯", "床边夜灯"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "family3", "text": "次卧暗得衣柜里翻不着衣服", "intent": "控制", "device": "次卧顶灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "kids", "text": "半夜在宝宝屋换尿布，黑得看不清", "intent": "控制", "device": ["婴儿房夜灯", "婴儿房灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "mega", "text": "书房下午西晒，电脑屏幕晃得看不清", "intent": "控制", "device": "书房窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "mega", "text": "玄关黑得钥匙孔都对不准", "intent": "控制", "device": "玄关灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "minimal", "text": "卧室黑得啥也看不清", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "office", "text": "书桌上暗得键盘字母都看不清，咖啡洒了都没发现", "intent": "控制", "device": "书桌灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "office", "text": "太阳正对着窗户，显示器反光晃得看不清", "intent": "控制", "device": "电动窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "pets", "text": "卧室黑得一脚踩翻了猫的水碗", "intent": "控制", "device": "卧室灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "rental", "text": "我屋里太暗了，看书费眼", "intent": "控制", "device": ["我房间的灯", "我房间的台灯"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "studio", "text": "太阳晃得投影都看不清", "intent": "控制", "device": "窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "light"]}
+{"home": "apartment", "text": "明早要穿的那件衬衫摸着还潮乎乎的", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "apartment", "text": "回南天，阳台上的袜子挂了三天都没干", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "apartment", "text": "刚洗的床单湿漉漉的，今晚就得铺", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "villa", "text": "校服洗完还湿着，孩子明早要穿", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "villa", "text": "泳衣还湿漉漉的，明天还要去游泳", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "brand", "text": "刚洗的牛仔裤湿答答的，晚上就要穿", "intent": "控制", "device": "好太太晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "brand", "text": "阳台的毛巾晾了好几天还是湿的，一股味儿", "intent": "控制", "device": "好太太晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "duplex", "text": "露台上的衣服晾了两天还是潮的", "intent": "控制", "device": "二楼晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "duplex", "text": "梅雨天衣服干不透，穿身上湿冷湿冷的", "intent": "控制", "device": "二楼晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "duplex", "text": "被套在楼上晾了一天，摸着还是湿的", "intent": "控制", "device": "二楼晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "family3", "text": "孩子明天要穿的秋裤还湿着", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "family3", "text": "洗衣机刚洗完一桶，下雨天根本晾不干", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "family3", "text": "被罩湿乎乎的，今晚就得套上", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "mega", "text": "连阴天衣服晾不干，衣帽间都快没得换了", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "mega", "text": "运动服还滴着水呢，下午要去打球", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "mega", "text": "毛衣挂了两天还是潮乎乎的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "kids", "text": "宝宝的小衣服晾了一天还潮，今晚没得换了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "pets", "text": "衣服晾了三天还是湿的，穿不了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "house", "text": "下雨天衣服晾不干，穿身上都是潮的", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "countryside", "text": "院子里晾的衣裳淋了雨，湿透了，明天还要穿", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "dry-clothes"]}
+{"home": "apartment", "text": "一觉醒来嗓子疼得像着了火", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "villa", "text": "屋里燥得嘴唇裂口子，喝多少水都不管用", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "villa", "text": "客厅返潮，地板上一层水汽", "intent": "控制", "device": ["客厅空调", "新风机"], "action": ["设为指定的数值或模式", "打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "brand", "text": "卧室干得嗓子冒烟，一晚上起来喝好几回水", "intent": "控制", "device": "德尔玛加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "brand", "text": "客厅潮得沙发摸着都黏手", "intent": "控制", "device": "格力云锦空调", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "elder", "text": "老人房干得老太太嗓子冒火", "intent": "控制", "device": "加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "family3", "text": "儿童房干得孩子鼻子直出血", "intent": "控制", "device": "儿童房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "family3", "text": "客厅潮得墙皮都起泡了", "intent": "控制", "device": "客厅空调", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "kids", "text": "宝宝屋太干，宝宝鼻子里都结痂了", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "rental", "text": "我屋里干得嗓子疼，早上起来跟吞了火炭似的", "intent": "控制", "device": "我房间加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "duplex", "text": "楼上干得嗓子冒火", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "duplex", "text": "二楼走廊一股霉味，墙纸都潮了", "intent": "控制", "device": ["二楼除湿机", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "house", "text": "卫生间潮得镜子上全是水珠，一股霉味", "intent": "控制", "device": ["浴霸", "新风机"], "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "humidity", "qa-union"]}
+{"home": "house", "text": "屋里干得嘴唇起皮，脸上直发紧", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "mega", "text": "主卧干得早上起来鼻子出血", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "mega", "text": "茶室返潮，茶叶都受潮了", "intent": "控制", "device": ["茶室空调", "全屋新风"], "action": ["设为指定的数值或模式", "打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity", "qa-union"]}
+{"home": "office", "text": "屋里潮得打印纸都软了", "intent": "控制", "device": ["空调", "新风机"], "action": ["设为指定的数值或模式", "打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "pets", "text": "屋里干，猫鼻头都干巴巴的", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "studio", "text": "屋里潮得被子能拧出水来", "intent": "控制", "device": "空调", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "countryside", "text": "堂屋潮得地面直返水", "intent": "控制", "device": "堂屋空调", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["implicit-intent", "function-match", "humidity"]}
+{"home": "house", "text": "来了客人要泡茶，倒出来的水温吞吞的", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "house", "text": "冬天想喝口热乎的，接出来的水冰得扎牙", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "house", "text": "洗澡水凉得没法冲，浴霸开着也白搭", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water", "qa-union"]}
+{"home": "villa", "text": "客人都坐下了，饮水机里的水还是凉的，茶泡不开", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "villa", "text": "淋浴的水半天不热，冻得直哆嗦", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "villa", "text": "早上想冲碗麦片，接出来的水凉冰冰的", "intent": "控制", "device": "饮水机插座", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "apartment", "text": "洗澡水温吞吞的，冲着一点不痛快", "intent": "控制", "device": "热水器", "action": ["调高或增大", "打开或启动"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "apartment", "text": "下班回来想泡个脚，水龙头出来的全是冰水", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "apartment", "text": "想泡壶茶，家里一口开水都没有", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "brand", "text": "洗头的水凉飕飕的，头皮都冰麻了", "intent": "控制", "device": "史密斯热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "brand", "text": "冬天洗澡水不够热，冲得直打哆嗦", "intent": "控制", "device": "史密斯热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "countryside", "text": "楼顶的水晒了一天还不热，晚上洗澡要冻死", "intent": "控制", "device": "太阳能热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "family3", "text": "给孩子洗澡的水不够热，孩子直喊冷", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "mega", "text": "泡澡水放了半缸，摸着是凉的", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "mega", "text": "茶室想泡壶普洱，一口热水都没有", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "rental", "text": "排到我洗澡就没热水了，冰得直跳脚", "intent": "控制", "device": "公共热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "studio", "text": "早上洗把脸，水冰得刺骨", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "kids", "text": "冲好的奶放凉了，宝宝嫌冰不肯喝", "intent": "控制", "device": "温奶器", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "kids", "text": "宝宝洗澡的水太凉了，不敢往盆里放", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "duplex", "text": "楼上洗澡水冰凉，浴霸再暖也不顶用", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "water"]}
+{"home": "house", "text": "厨房炝锅呛得人直咳嗽，满屋子辣椒烟","intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "house", "text": "书房一股烟味，风扇吹来吹去也散不掉", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "villa", "text": "客厅有人抽过烟，味儿半天散不掉", "intent": "控制", "device": ["空气净化器", "新风机"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "villa", "text": "厨房煎鱼烟大，火一开就呛得咳嗽", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "villa", "text": "主卧新买的衣柜一股油漆味", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "apartment", "text": "客厅一股火锅味，衣服上都是", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "brand", "text": "卧室里闻着有股烟味，睡不踏实", "intent": "控制", "device": "戴森净化风扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "brand", "text": "厨房油烟大，火一开满屋雾蒙蒙的", "intent": "控制", "device": "方太油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "duplex", "text": "楼上一股烟味，不知道谁家飘进来的", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "duplex", "text": "一楼厨房做饭呛得睁不开眼", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "family3", "text": "客厅一股烟味，孩子直咳嗽", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "kids", "text": "客厅一股油漆味，宝宝还在这儿爬", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "mega", "text": "书房烟味好重，昨晚有人在这儿抽雪茄", "intent": "控制", "device": "全屋新风", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "mega", "text": "主卧里灰大，打喷嚏停不下来", "intent": "控制", "device": ["主卧净化器", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "office", "text": "屋里一股外卖味，下午还要开视频会", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "pets", "text": "客厅一股狗味儿，客人马上到了", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "elder", "text": "厨房一股煤气味", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "countryside", "text": "堂屋烟熏火燎的，有人在屋里抽旱烟", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "rental", "text": "我屋里一股烟味，室友又在抽烟", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "minimal", "text": "屋里全是烟味，散都散不掉", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "air"]}
+{"home": "apartment", "text": "客厅吵得我打电话都听不清", "intent": "控制", "device": ["电视", "智能音箱", "扫地机器人"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "house", "text": "影音室那动静震得脑壳疼", "intent": "控制", "device": "投影仪", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "villa", "text": "宝宝刚睡着，地上那个吸尘的呼呼响", "intent": "控制", "device": "扫地机器人", "action": ["暂停", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "brand", "text": "我在卧室开会，客厅那边吵得不行", "intent": "控制", "device": ["小米电视", "小度音箱", "石头扫地机"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "duplex", "text": "楼上书房吵得看不进书", "intent": "控制", "device": ["二楼书房音箱", "二楼扫地机"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "duplex", "text": "一楼扫地的那个吵得我电视都听不见", "intent": "控制", "device": "一楼扫地机", "action": ["暂停", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "family3", "text": "客厅那边动静太大，孩子作业写不下去", "intent": "控制", "device": ["客厅电视", "扫地机器人"], "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "kids", "text": "地上那个嗡嗡的，宝宝要被吵醒了", "intent": "控制", "device": "扫地机器人", "action": ["暂停", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "rental", "text": "关了灯躺下，客厅那边电视声吵得睡不着", "intent": "控制", "device": "客厅公共电视", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "pets", "text": "音乐开这么大，猫吓得躲床底下了", "intent": "控制", "device": "音箱", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "studio", "text": "片子声音大得震耳朵，邻居要来敲门了", "intent": "控制", "device": ["投影仪", "音箱"], "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "countryside", "text": "院子里抽水的声音吵得睡不着", "intent": "控制", "device": "水泵", "action": ["关闭或停止", "暂停"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "elder", "text": "老爷子嫌吵睡不着，客厅那声儿太大", "intent": "控制", "device": "电视", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "house", "text": "洗衣机甩干的声音吵得人心烦", "intent": "控制", "device": "没有对应的设备", "action": ["关闭或停止", "暂停"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "office", "text": "开会呢，脚底下那机器吵得听不清", "intent": "控制", "device": "扫地机", "action": ["暂停", "关闭或停止"], "tags": ["implicit-intent", "function-match", "noise"]}
+{"home": "house", "text": "猫在冰箱跟前转悠，喵喵叫，估计饿坏了", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "pets", "text": "猫饿得围着饮水机直打转", "intent": "控制", "device": "猫粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "pets", "text": "阳台上狗饿得嗷嗷叫", "intent": "控制", "device": "狗粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "apartment", "text": "猫饿了，蹲在电饭煲旁边叫个不停", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "house", "text": "车没电了，明天还要跑高速", "intent": "控制", "device": "充电桩", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "villa", "text": "车停进车库了，电量就剩一格", "intent": "控制", "device": "充电桩", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "duplex", "text": "车快没电了，仪表盘灯都亮红了", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "house", "text": "花园里的花晒蔫了，叶子都卷了边", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "villa", "text": "院子里的绣球蔫头耷脑的，风一吹就倒", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "countryside", "text": "院子里的菜苗都旱蔫了", "intent": "控制", "device": "水泵", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "apartment", "text": "客厅地上一脚一个脚印，脏得没法看", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "brand", "text": "厨房地上撒了一地米，踩上去咯吱响", "intent": "控制", "device": "石头扫地机", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "duplex", "text": "楼上地板灰扑扑的，光脚都踩黑了", "intent": "控制", "device": "二楼扫地机", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "house", "text": "地板上全是泥脚印", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "house", "text": "晚饭吃完水池里摞了一堆碗", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "duplex", "text": "一楼厨房碗盘堆着没人洗", "intent": "控制", "device": "一楼洗碗机", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "apartment", "text": "吃完火锅碗筷堆了一水池", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "office", "text": "地上咖啡渣撒了一片", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "family3", "text": "儿童房地上全是橡皮屑和碎纸片", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}
+{"home": "mega", "text": "刚拖的地又踩脏了，全是灰", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "other"]}

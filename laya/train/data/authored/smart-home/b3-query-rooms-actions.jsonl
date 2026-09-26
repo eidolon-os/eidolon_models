@@ -160,8 +160,8 @@
 {"home": "villa", "text": "我在书房，这边灯暗一点", "intent": "控制", "device": "书房灯", "action": "调低或减小", "tags": ["room-disambiguation", "speaker"]}
 {"home": "villa", "text": "我在餐厅，把客厅的灯关掉", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation", "speaker"]}
 {"home": "villa", "text": "我人在客厅，这间的灯开一下", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["room-disambiguation", "speaker"]}
-{"home": "villa", "text": "我在书房加班，卧室的灯都关了", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "speaker"]}
-{"home": "villa", "text": "我在主卧呢，这边的灯都调暗", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "调低或减小", "tags": ["room-disambiguation", "speaker"]}
+{"home": "villa", "text": "我在书房加班，卧室的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation", "speaker"]}
+{"home": "villa", "text": "我在主卧呢，这边的灯都调暗", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["room-disambiguation", "speaker"]}
 {"home": "villa", "text": "我从书房出来了，那屋的灯关掉", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["room-disambiguation", "speaker"]}
 {"home": "villa", "text": "刚坐到餐桌边，头顶的灯开一下", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["room-disambiguation", "speaker"]}
 {"home": "villa", "text": "把灯弄亮堂些", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": "调高或增大", "tags": ["room-disambiguation", "ambiguous"]}
@@ -174,11 +174,11 @@
 {"home": "villa", "text": "书房的灯别动，把吃饭那边的关了", "intent": "控制", "device": "餐厅吊灯", "action": "关闭或停止", "tags": ["room-disambiguation", "exclusion"]}
 {"home": "villa", "text": "只关客厅的，其他灯留着", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation", "exclusion"]}
 {"home": "villa", "text": "不是书房，我说的是卧室的大灯，调暗", "intent": "控制", "device": "主卧灯", "action": "调低或减小", "tags": ["room-disambiguation", "exclusion"]}
-{"home": "villa", "text": "除了餐厅，别的灯都关", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "exclusion"]}
+{"home": "villa", "text": "除了餐厅，别的灯都关", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation", "exclusion"]}
 {"home": "villa", "text": "电视墙那边的灯调到五十", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "position"]}
-{"home": "villa", "text": "卧室里两盏灯都开", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "打开或启动", "tags": ["room-disambiguation", "position"]}
+{"home": "villa", "text": "卧室里两盏灯都开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["room-disambiguation", "position"]}
 {"home": "villa", "text": "电脑桌那边的灯开一下", "intent": "控制", "device": "书房灯", "action": "打开或启动", "tags": ["room-disambiguation", "position"]}
-{"home": "villa", "text": "餐厅和客厅的灯一起开", "intent": "控制", "device": ["餐厅吊灯", "客厅主灯"], "action": "打开或启动", "tags": ["room-disambiguation", "position"]}
+{"home": "villa", "text": "餐厅和客厅的灯一起开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["room-disambiguation", "position"]}
 {"home": "villa", "text": "客厅里再暖和些", "intent": "控制", "device": ["客厅空调", "地暖"], "action": "调高或增大", "tags": ["room-disambiguation", "similar-type"]}
 {"home": "villa", "text": "脚底下凉，地面暖一点", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["room-disambiguation", "similar-type"]}
 {"home": "villa", "text": "吹热风的那个关了，地暖留着", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["room-disambiguation", "similar-type"]}
@@ -202,7 +202,7 @@
 {"home": "villa", "text": "我在书房，把这边的风调小", "intent": "控制", "device": "落地扇", "action": "调低或减小", "tags": ["room-disambiguation", "speaker"]}
 {"home": "villa", "text": "关的是书房那台风扇，净化器别碰", "intent": "控制", "device": "落地扇", "action": "关闭或停止", "tags": ["room-disambiguation", "exclusion"]}
 {"home": "villa", "text": "我在客厅，这屋空气有点浑，开一下", "intent": "控制", "device": ["空气净化器", "新风机"], "action": "打开或启动", "tags": ["room-disambiguation", "speaker"]}
-{"home": "villa", "text": "净化空气的那两台都调小一档", "intent": "控制", "device": ["空气净化器", "新风机"], "action": "调低或减小", "tags": ["room-disambiguation", "similar-type"]}
+{"home": "villa", "text": "净化空气的那两台都调小一档", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["room-disambiguation", "similar-type"]}
 {"home": "house", "text": "两盏灯里，书房那盏开一下", "intent": "控制", "device": "书房灯", "action": "打开或启动", "tags": ["room-disambiguation", "position"]}
 {"home": "house", "text": "灯光给我开柔和一点", "intent": "控制", "device": ["书房灯", "餐厅吊灯"], "action": "调低或减小", "tags": ["room-disambiguation", "ambiguous"]}
 {"home": "house", "text": "我在饭厅吃东西，灯稍微暗一点", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["room-disambiguation", "speaker"]}

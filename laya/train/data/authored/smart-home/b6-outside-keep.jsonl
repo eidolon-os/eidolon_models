@@ -182,7 +182,7 @@
 {"home": "family3", "text": "楼下装修的灰都飘进客厅了，呛得人咳嗽", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "family3", "text": "次卧晚上黑得啥也看不见，床头柜都摸不着","intent": "控制", "device": "次卧顶灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "family3", "text": "儿童房太干，孩子早上又流鼻血了", "intent": "控制", "device": "儿童房加湿器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast"]}
-{"home": "family3", "text": "连着下雨，阳台上的衣服一直晾不干", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["implicit-intent", "inside-contrast"]}
+{"home": "family3", "text": "连着下雨，阳台上的衣服一直晾不干", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": "打开或启动", "tags": ["implicit-intent", "inside-contrast", "qa-union"]}
 {"home": "kids", "text": "宝宝屋里热得孩子起了一身痱子", "intent": "控制", "device": "婴儿房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "kids", "text": "宝宝醒了一直哭，哄都哄不好", "intent": "控制", "device": "电动摇篮", "action": "打开或启动", "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "kids", "text": "婴儿房的灯太刺眼，宝宝眼睛都眯起来了", "intent": "控制", "device": "婴儿房灯", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "inside-contrast"]}
@@ -198,7 +198,7 @@
 {"home": "minimal", "text": "客厅黑得摸瞎，钥匙都找不着", "intent": "控制", "device": "灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "minimal", "text": "早上起床卧室冻得人直哆嗦", "intent": "控制", "device": "空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "minimal", "text": "地上掉了一地饼干渣，脏兮兮的", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["implicit-intent", "inside-contrast"]}
-{"home": "office", "text": "开了一上午会，屋里闷得人昏昏欲睡", "intent": "控制", "device": ["新风机", "空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast"]}
+{"home": "office", "text": "开了一上午会，屋里闷得人昏昏欲睡", "intent": "控制", "device": ["新风机", "空调"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast", "qa-union"]}
 {"home": "office", "text": "书桌这块太暗了，眯着眼才看得清屏幕", "intent": "控制", "device": "书桌灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "office", "text": "音箱吵得我没法开会", "intent": "控制", "device": "音箱", "action": ["调低或减小", "关闭或停止", "暂停"], "tags": ["implicit-intent", "inside-contrast"]}
 {"home": "office", "text": "客厅太阳晒得屏幕反光，啥也看不清", "intent": "控制", "device": "电动窗帘", "action": "关闭或停止", "tags": ["implicit-intent", "inside-contrast"]}
@@ -322,7 +322,7 @@
 {"home": "house", "text": "投影仪上的片子先停在这儿，我下楼取个快递", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["boundary", "stop-running"]}
 {"home": "house", "text": "别给车充了，已经满了", "intent": "控制", "device": "充电桩", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}
 {"home": "house", "text": "安防警报别响了，是我自己回来了", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}
-{"home": "villa", "text": "落地扇别摇头了，就对着我吹", "intent": "控制", "device": "落地扇", "action": "设为指定的数值或模式", "tags": ["boundary", "stop-running"]}
+{"home": "villa", "text": "落地扇别摇头了，就对着我吹", "intent": "控制", "device": "落地扇", "action": ["设为指定的数值或模式", "关闭或停止"], "tags": ["boundary", "stop-running", "qa-union"]}
 {"home": "villa", "text": "电视别放了，都没人看", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}
 {"home": "villa", "text": "扫地机器人先停下，地上有袜子", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["boundary", "stop-running"]}
 {"home": "villa", "text": "别浇了别浇了，花园都成泥塘了", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["boundary", "stop-running"]}
@@ -360,13 +360,13 @@
 {"home": "studio", "text": "洗衣机先停一下，我忘放洗衣液了", "intent": "控制", "device": "洗衣机", "action": "暂停", "tags": ["boundary", "stop-running"]}
 {"home": "apartment", "text": "等我这集看完了再把电视关了", "intent": "控制", "device": "电视", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "apartment", "text": "等我躺下了再关主卧灯", "intent": "控制", "device": "主卧灯", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep"]}
-{"home": "apartment", "text": "衣服洗好之后把晾衣架降下来", "intent": "控制", "device": "电动晾衣架", "action": ["调低或减小", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep"]}
+{"home": "apartment", "text": "衣服洗好之后把晾衣架降下来", "intent": "控制", "device": "电动晾衣架", "action": ["调低或减小", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep", "qa-union"]}
 {"home": "apartment", "text": "电视先开着，我去倒杯水回来接着看", "intent": "无关", "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "apartment", "text": "空调先别关，我洗完澡还回卧室睡", "intent": "无关", "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "apartment", "text": "客厅主灯先亮着，等会儿我自己关", "intent": "无关", "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "house", "text": "等蛋糕烤好了就把烤箱关了", "intent": "控制", "device": "烤箱", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "house", "text": "电影放完再把投影仪关掉", "intent": "控制", "device": "投影仪", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep"]}
-{"home": "house", "text": "等我洗完澡把浴霸关了", "intent": "控制", "device": "浴霸", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep"]}
+{"home": "house", "text": "等我洗完澡把浴霸关了", "intent": "控制", "device": "浴霸", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["boundary", "deferred-vs-keep", "qa-union"]}
 {"home": "house", "text": "投影仪先开着，我上个厕所回来接着看", "intent": "无关", "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "house", "text": "地暖先别关，我一会儿还在客厅坐", "intent": "无关", "tags": ["boundary", "deferred-vs-keep"]}
 {"home": "villa", "text": "等饭煮好了电饭煲切到保温", "intent": "控制", "device": "电饭煲", "action": "设为指定的数值或模式", "tags": ["boundary", "deferred-vs-keep"]}

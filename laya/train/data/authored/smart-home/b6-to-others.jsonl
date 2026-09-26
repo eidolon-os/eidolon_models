@@ -261,7 +261,7 @@
 {"home": "apartment", "text": "小易，猫老追着扫地机器人跑，先让它停一下", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["explicit-control", "to-assistant", "pet"]}
 {"home": "apartment", "text": "狗在沙发上睡着了，把电视关了吧", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
 {"home": "apartment", "text": "糯米别扒了！小易，把客厅窗帘关上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
-{"home": "house", "text": "小易，给狗放一份粮", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
+{"home": "house", "text": "小易，给狗放一份粮", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "to-assistant", "pet", "qa-union"]}
 {"home": "house", "text": "旺财下来！助手，把落地扇关了，别卷着它尾巴", "intent": "控制", "device": "落地扇", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}
 {"home": "house", "text": "猫又钻车库里去了，小管家把车库门打开让它出来", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "to-assistant", "pet"]}
 {"home": "house", "text": "帮我把花园浇水阀关了，狗在那儿玩泥巴呢", "intent": "控制", "device": "花园浇水阀", "action": "关闭或停止", "tags": ["explicit-control", "to-assistant", "pet"]}

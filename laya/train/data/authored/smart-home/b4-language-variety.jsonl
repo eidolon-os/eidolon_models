@@ -60,7 +60,7 @@
 {"home": "apartment", "text": "叫扫地机返去叉电啦", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["explicit-control", "lang:cantonese"]}
 {"home": "apartment", "text": "加湿器开大啲，好干呀", "intent": "控制", "device": "加湿器", "action": "调高或增大", "tags": ["explicit-control", "lang:cantonese"]}
 {"home": "apartment", "text": "放首歌嚟听下", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["explicit-control", "lang:cantonese"]}
-{"home": "apartment", "text": "房间啲灯全部熄晒", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "lang:cantonese"]}
+{"home": "apartment", "text": "房间啲灯全部熄晒", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation", "lang:cantonese"]}
 {"home": "apartment", "text": "而家屋企几多度", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "lang:cantonese"]}
 {"home": "apartment", "text": "部洗衫机洗完衫未呀", "intent": "查询", "device": "洗衣机", "tags": ["status-query", "lang:cantonese"]}
 {"home": "apartment", "text": "客厅冷气开咗未", "intent": "查询", "device": "客厅空调", "tags": ["status-query", "lang:cantonese"]}
@@ -161,7 +161,7 @@
 {"home": "apartment", "text": "妈妈说不许看电视了，关掉吧", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "lang:child"]}
 {"home": "apartment", "text": "加湿器冒白烟烟，好好玩，再开大", "intent": "控制", "device": "加湿器", "action": "调高或增大", "tags": ["explicit-control", "lang:child"]}
 {"home": "apartment", "text": "摄像头开着吗，我要跟爸爸打招呼", "intent": "查询", "device": "摄像头", "tags": ["status-query", "lang:child"]}
-{"home": "apartment", "text": "大灯小灯都关掉，我要睡觉了", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation", "lang:child"]}
+{"home": "apartment", "text": "大灯小灯都关掉，我要睡觉了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation", "lang:child"]}
 {"home": "house", "text": "小猫咪饿了，给它吃饭饭", "intent": "控制", "device": "宠物喂食器", "action": "打开或启动", "tags": ["implicit-intent", "lang:child"]}
 {"home": "house", "text": "我要看大屏幕放动画片", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["implicit-intent", "lang:child"]}
 {"home": "house", "text": "风扇转转，我好热", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["explicit-control", "lang:child"]}

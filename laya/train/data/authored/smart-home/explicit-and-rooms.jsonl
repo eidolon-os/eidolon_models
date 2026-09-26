@@ -173,7 +173,7 @@
 {"home": "apartment", "text": "客厅灯亮度调到 30", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "卧室灯亮度调到一半", "intent": "控制", "device": "主卧灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "床头灯换成暖光", "intent": "控制", "device": "床头灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
-{"home": "apartment", "text": "睡觉那间的灯都关了", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "睡觉那间的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "看电视的地方灯关了", "intent": "控制", "device": "客厅主灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "这边的灯关了", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "卧室灯关了，我要睡了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
@@ -181,7 +181,7 @@
 {"home": "apartment", "text": "把客厅那个吸顶灯开一下", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "主卧吸顶灯调暗", "intent": "控制", "device": "主卧灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "台灯关了", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
-{"home": "apartment", "text": "卧室灯全关", "intent": "控制", "device": ["主卧灯", "床头灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "apartment", "text": "卧室灯全关", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "卧室那台空调开一下", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "客厅这台空调调到 25", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
 {"home": "apartment", "text": "空调关了", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
@@ -201,7 +201,7 @@
 {"home": "apartment", "text": "客厅空调开，我在客厅呢", "intent": "控制", "device": "客厅空调", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "书房那边的灯关了", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "餐桌上面的灯调暗点", "intent": "控制", "device": "餐厅吊灯", "action": "调低或减小", "tags": ["room-disambiguation"]}
-{"home": "villa", "text": "把灯都关了", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "把灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "工作的地方灯亮一点", "intent": "控制", "device": "书房灯", "action": "调高或增大", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "卧室的灯关了，我在书房", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "灯开一下", "intent": "控制", "device": ["客厅主灯", "主卧灯", "床头灯", "书房灯", "餐厅吊灯"], "action": "打开或启动", "tags": ["room-disambiguation"]}
@@ -216,7 +216,7 @@
 {"home": "villa", "text": "卧室大灯关了，留个床头的", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "我在餐厅，灯开一下", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "客厅大灯调到 80%", "intent": "控制", "device": "客厅主灯", "action": "设为指定的数值或模式", "tags": ["room-disambiguation"]}
-{"home": "villa", "text": "把空调都关了", "intent": "控制", "device": ["客厅空调", "主卧空调"], "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"home": "villa", "text": "把空调都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "卧室那边的空调开制热", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "客厅这边空调温度低点", "intent": "控制", "device": "客厅空调", "action": "调低或减小", "tags": ["room-disambiguation"]}
 {"home": "villa", "text": "书房不用了，灯关了吧", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}

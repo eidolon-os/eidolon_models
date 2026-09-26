@@ -1,0 +1,91 @@
+{"ref": "b7-alias-reference:9", "home": "apartment", "text": "有人敲门，把对着门口拍的那个打开我瞅瞅", "intent": "控制", "device": "摄像头", "action": "打开或启动"}
+{"ref": "b7-alias-reference:12", "home": "apartment", "text": "看节目的那个关掉，吃饭了", "intent": "控制", "device": "电视", "action": "关闭或停止"}
+{"ref": "b7-alias-reference:15", "home": "house", "text": "喂猫的那个放一份粮", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b7-alias-reference:24", "home": "house", "text": "进出车的那扇门关上", "intent": "控制", "device": "车库门", "action": "关闭或停止"}
+{"ref": "b7-alias-reference:42", "home": "countryside", "text": "抽井水的那个开起来", "intent": "控制", "device": "水泵", "action": "打开或启动"}
+{"ref": "b7-alias-reference:46", "home": "countryside", "text": "洗澡前把烘热卫生间的那个打开", "intent": "控制", "device": "浴霸", "action": "打开或启动"}
+{"ref": "b7-alias-reference:53", "home": "elder", "text": "一按就能叫人的那个帮我按一下", "intent": "控制", "device": "紧急呼叫按钮", "action": "打开或启动"}
+{"ref": "b7-alias-reference:61", "home": "family3", "text": "扫地拖地的那个今天拖两遍", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b7-alias-reference:62", "home": "family3", "text": "客厅去甲醛那台调成睡眠", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式"}
+{"ref": "b7-alias-reference:68", "home": "mega", "text": "洗澡水温度调到四十三", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式"}
+{"ref": "b7-alias-reference:80", "home": "pets", "text": "喂狗的那个多加一份", "intent": "控制", "device": "狗粮喂食器", "action": ["打开或启动", "设为指定的数值或模式", "调高或增大"], "note": "“多加一份”可读成现在再放一份（按喂食器细则），也可读成把计划份量调高，所以把调高或增大也放进列表"}
+{"ref": "b7-alias-reference:90", "home": "studio", "text": "洗衣服那台暂停一下，我还有件没放", "intent": "控制", "device": "洗衣机", "action": "暂停"}
+{"ref": "b7-alias-reference:92", "home": "apartment", "text": "卧室顶灯调暗点", "intent": "控制", "device": "主卧灯", "action": "调低或减小"}
+{"ref": "b7-alias-reference:111", "home": "house", "text": "可视对讲打开看看谁在外面", "intent": "控制", "device": "门铃", "action": "打开或启动", "note": "可视对讲 ≈ 可视门铃（type），算同一台而不是“名字相近”；按摄像头“打开看看”的细则标控制·打开"}
+{"ref": "b7-alias-reference:131", "home": "brand", "text": "晚上要泡脚，电热水器烧到六十五度吧", "intent": "控制", "device": "史密斯热水器", "action": ["设为指定的数值或模式", "打开或启动"]}
+{"ref": "b7-alias-reference:149", "home": "family3", "text": "柜机风速调到自动", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式"}
+{"ref": "b7-alias-reference:160", "home": "mega", "text": "影音室功放声音大点", "intent": "控制", "device": "影音室音响", "action": "调高或增大", "note": "功放是家庭影院音响的一部分"}
+{"ref": "b7-alias-reference:164", "home": "minimal", "text": "吸顶灯调亮", "intent": "控制", "device": "灯", "action": "调高或增大"}
+{"ref": "b7-alias-reference:182", "home": "apartment", "text": "沙发那边的灯亮一点", "intent": "控制", "device": "客厅主灯", "action": "调高或增大"}
+{"ref": "b7-alias-reference:189", "home": "house", "text": "书房那个吹风的开一下", "intent": "控制", "device": "落地扇", "action": "打开或启动"}
+{"ref": "b7-alias-reference:197", "home": "villa", "text": "沙发那边的空调调到二十五度", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式"}
+{"ref": "b7-alias-reference:199", "home": "villa", "text": "书桌那边的灯亮一点", "intent": "控制", "device": "书房灯", "action": "调高或增大", "note": "书桌默认在书房；villa 没有书桌灯，床头灯是台灯但在主卧"}
+{"ref": "b7-alias-reference:206", "home": "villa", "text": "卧房那台空调开到除湿", "intent": "控制", "device": "主卧空调", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b7-alias-reference:210", "home": "mega", "text": "阿姨住的屋空调调低一度", "intent": "控制", "device": "保姆房空调", "action": "调低或减小", "note": "“调低一度”是相对调整不是目标值，只标调低或减小"}
+{"ref": "b7-alias-reference:213", "home": "mega", "text": "看电影那屋的灯关了", "intent": "控制", "device": "影音室灯", "action": "关闭或停止"}
+{"ref": "b7-alias-reference:214", "home": "mega", "text": "客房的空调开到二十四，晚上有朋友住", "intent": "控制", "device": "次卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "note": "mega 的次卧就是客房（户型描述）"}
+{"ref": "b7-alias-reference:215", "home": "mega", "text": "吃饭那边的空调开一下", "intent": "控制", "device": "餐厅空调", "action": "打开或启动"}
+{"ref": "b7-alias-reference:217", "home": "mega", "text": "门口那盏灯开一下，我换鞋", "intent": "控制", "device": "玄关灯", "action": "打开或启动"}
+{"ref": "b7-alias-reference:225", "home": "duplex", "text": "露台上洗衣服那台开始吧", "intent": "控制", "device": "二楼洗衣机", "action": "打开或启动"}
+{"ref": "b7-alias-reference:232", "home": "family3", "text": "孩子屋的灯关了", "intent": "控制", "device": "儿童房顶灯", "action": "关闭或停止"}
+{"ref": "b7-alias-reference:233", "home": "family3", "text": "娃睡的那屋，空调设成二十六", "intent": "控制", "device": "儿童房空调", "action": "设为指定的数值或模式"}
+{"ref": "b7-alias-reference:245", "home": "elder", "text": "老人屋的大灯关一下", "intent": "控制", "device": "老人房灯", "action": "关闭或停止"}
+{"ref": "b7-alias-reference:278", "home": "villa", "text": "做咖啡那台来一杯", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}
+{"ref": "b7-alias-reference:291", "home": "elder", "text": "次卧的灯开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "elder 的次卧没有智能设备"}
+{"ref": "b7-alias-reference:292", "home": "family3", "text": "次卧那台挂机开开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "family3 的次卧只有顶灯，没有空调"}
+{"ref": "b7-alias-reference:294", "home": "family3", "text": "次卧加湿的那个开开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "family3 只有主卧和儿童房有加湿器"}
+{"ref": "b7-alias-reference:312", "home": "apartment", "text": "扫地的那个扫完没有", "intent": "查询", "device": "扫地机器人"}
+{"ref": "b7-alias-reference:315", "home": "apartment", "text": "出门的时候门禁那边落锁了没有", "intent": "查询", "device": "智能门锁", "note": "“门禁”+“落锁”指玄关的智能门锁"}
+{"ref": "b7-alias-reference:324", "home": "villa", "text": "晾衣服那个升上去没有", "intent": "查询", "device": "电动晾衣架"}
+{"ref": "b7-alias-reference:325", "home": "villa", "text": "花园浇水那个关了没", "intent": "查询", "device": "花园浇水阀"}
+{"ref": "b7-alias-reference:327", "home": "brand", "text": "扫地的现在扫到哪了", "intent": "查询", "device": "石头扫地机"}
+{"ref": "b7-qualifier-negation:10", "home": "apartment", "text": "主卧的空调帮我定个时，两小时后关", "intent": "控制", "device": "主卧空调", "action": ["设为指定的数值或模式", "关闭或停止"], "note": "定时 → 设为；两小时后关 → 关闭，两个都放"}
+{"ref": "b7-qualifier-negation:13", "home": "apartment", "text": "睡觉那屋的顶灯开一下", "intent": "控制", "device": "主卧灯", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:22", "home": "villa", "text": "书房那盏灯调成护眼模式", "intent": "控制", "device": "书房灯", "action": "设为指定的数值或模式"}
+{"ref": "b7-qualifier-negation:35", "home": "villa", "text": "我在床上躺着，我这边的小灯亮一点", "intent": "控制", "device": "床头灯", "action": "调高或增大"}
+{"ref": "b7-qualifier-negation:45", "home": "family3", "text": "外面客厅的空调温度降一度", "intent": "控制", "device": "客厅空调", "action": "调低或减小"}
+{"ref": "b7-qualifier-negation:61", "home": "mega", "text": "主卧那台净化器开睡眠档", "intent": "控制", "device": "主卧净化器", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"ref": "b7-qualifier-negation:67", "home": "duplex", "text": "楼下的窗帘拉开", "intent": "控制", "device": "一楼客厅窗帘", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:84", "home": "elder", "text": "我屋里的大灯开开", "intent": "控制", "device": "老人房灯", "action": "打开或启动", "note": "“我屋里”在老人户型按说话人是老人读（同户型另一句提到老伴）；若说话人住次卧则应为没有对应的设备"}
+{"ref": "b7-qualifier-negation:98", "home": "apartment", "text": "卧室的净化器开到睡眠模式", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "note": "apartment 唯一的净化器在客厅，主卧只有加湿器（加湿器 ≠ 净化器）；按“点名 + 房间但房间里没有”标没有"}
+{"ref": "b7-qualifier-negation:109", "home": "apartment", "text": "厨房那个热水器烧上", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "清单里热水器的 room 是卫生间不是厨房；现实中燃气热水器常装厨房，按规范第 3 节严格标没有"}
+{"ref": "b7-qualifier-negation:112", "home": "house", "text": "餐厅的灯打开，有客人来", "intent": "控制", "device": "餐厅吊灯", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:121", "home": "house", "text": "晚上想看片，把影音室那台投影打开", "intent": "控制", "device": "投影仪", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:123", "home": "house", "text": "花园里那个喂食器放一份粮", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "note": "house 的喂食器在阳台不在花园；喂食器能挪位置但清单 room 是阳台，按规范标没有"}
+{"ref": "b7-qualifier-negation:125", "home": "villa", "text": "书房的空调开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "villa 书房只有书房灯和落地扇，没有空调（落地扇 ≠ 空调）"}
+{"ref": "b7-qualifier-negation:126", "home": "villa", "text": "卧室的空调开一下", "intent": "控制", "device": "主卧空调", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:133", "home": "villa", "text": "主卧的地暖开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "地暖在客厅，主卧没有地暖"}
+{"ref": "b7-qualifier-negation:171", "home": "mega", "text": "主卧的电视开一下，躺床上看", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "note": "mega 只有客厅电视，主卧没有电视"}
+{"ref": "b7-qualifier-negation:186", "home": "duplex", "text": "走廊的空调关一下", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "note": "duplex 二楼走廊只有走廊灯和除湿机，没有空调"}
+{"ref": "b7-qualifier-negation:198", "home": "rental", "text": "我屋里那个加湿器打开", "intent": "控制", "device": "我房间加湿器", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:221", "home": "apartment", "text": "主卧顶上那盏灯关掉，床头的小灯别关", "intent": "控制", "device": "主卧灯", "action": "关闭或停止"}
+{"ref": "b7-qualifier-negation:229", "home": "apartment", "text": "音箱别关，电视关了吧", "intent": "控制", "device": "电视", "action": "关闭或停止"}
+{"ref": "b7-qualifier-negation:261", "home": "kids", "text": "宝宝屋顶上那盏灭了，小夜灯别动", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止"}
+{"ref": "b7-qualifier-negation:282", "home": "duplex", "text": "电视不用关，一楼客厅灯调暗点", "intent": "控制", "device": "一楼客厅灯", "action": "调低或减小"}
+{"ref": "b7-qualifier-negation:285", "home": "rental", "text": "大灯别开，桌上台灯开一下", "intent": "控制", "device": "我房间的台灯", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:292", "home": "brand", "text": "电视不用关，小度音箱关了", "intent": "控制", "device": "小度音箱", "action": "关闭或停止"}
+{"ref": "b7-qualifier-negation:295", "home": "elder", "text": "电视别关，老伴还在看，我屋里的空调关了", "intent": "控制", "device": "老人房空调", "action": "关闭或停止"}
+{"ref": "b7-qualifier-negation:300", "home": "countryside", "text": "大门别关，把卷帘门关上", "intent": "控制", "device": "卷帘门", "action": "关闭或停止"}
+{"ref": "b7-qualifier-negation:304", "home": "apartment", "text": "两台空调都调到二十六度", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式"}
+{"ref": "b7-qualifier-negation:311", "home": "house", "text": "灯全打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"ref": "b7-qualifier-negation:319", "home": "villa", "text": "睡觉那屋的灯都关掉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "note": "villa 主卧有主卧灯和床头灯两盏，“都”按第 8 节裁决标多个设备或整屋"}
+{"ref": "b7-qualifier-negation:337", "home": "duplex", "text": "一楼的都关掉，我们上楼睡觉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"ref": "b7-function-match:2", "home": "house", "text": "浴室里冰凉冰凉的，脱了衣服直打哆嗦", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "note": "house 的地暖在客厅，卫生间里能解决的只有浴霸"}
+{"ref": "b7-function-match:8", "home": "apartment", "text": "客厅冷冰冰的，看会儿电视都得裹着毯子", "intent": "控制", "device": "客厅空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b7-function-match:12", "home": "brand", "text": "厨房冷得手指发僵，站那儿跟守着冰柜似的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "note": "brand 的厨房只有冰箱、油烟机、电饭煲，没有能取暖的设备；空调在客厅和卧室"}
+{"ref": "b7-function-match:14", "home": "countryside", "text": "洗澡间冷得衣裳都不敢脱，热水再足也白搭", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "note": "“热水再足也白搭”排除了太阳能热水器"}
+{"ref": "b7-function-match:15", "home": "duplex", "text": "二楼书房冷得像冰窖，坐一会儿腿都木了", "intent": "控制", "device": "二楼书房空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b7-function-match:28", "home": "rental", "text": "我屋里冷得像冰窖，杯子里的水都冰牙", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"ref": "b7-function-match:30", "home": "office", "text": "卧室冷得钻进被窝都不管用", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "note": "office 唯一的空调在客厅，卧室只有灯"}
+{"ref": "b7-function-match:50", "home": "elder", "text": "客厅闷热，看电视看得一身汗", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调低或减小"], "note": "elder 的客厅没有空调（户型描述明说）"}
+{"ref": "b7-function-match:88", "home": "apartment", "text": "刚洗的床单湿漉漉的，今晚就得铺", "intent": "控制", "device": "电动晾衣架", "action": ["打开或启动", "设为指定的数值或模式"], "note": "apartment 没有烘干机，按第 7 节“衣服晾不干 → [烘干机, 电动晾衣架]”取电动晾衣架（烘干 / 风干功能）"}
+{"ref": "b7-function-match:114", "home": "kids", "text": "宝宝屋太干，宝宝鼻子里都结痂了", "intent": "控制", "device": "婴儿房加湿器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b7-function-match:118", "home": "house", "text": "卫生间潮得镜子上全是水珠，一股霉味", "intent": "控制", "device": ["浴霸", "新风机"], "action": ["打开或启动", "设为指定的数值或模式"], "note": "卫生间里的浴霸可换气除潮（房间优先），新风机是全屋设备也覆盖卫生间，两个都放"}
+{"ref": "b7-function-match:121", "home": "mega", "text": "茶室返潮，茶叶都受潮了", "intent": "控制", "device": ["茶室空调", "全屋新风"], "action": ["打开或启动", "设为指定的数值或模式"], "note": "茶室空调开除湿（房间优先），全屋新风也覆盖茶室，两个都放"}
+{"ref": "b7-function-match:128", "home": "house", "text": "洗澡水凉得没法冲，浴霸开着也白搭", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "调高或增大"], "note": "house 没有热水器，浴霸已被句子排除"}
+{"ref": "b7-function-match:151", "home": "apartment", "text": "客厅一股火锅味，衣服上都是", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b7-function-match:156", "home": "family3", "text": "客厅一股烟味，孩子直咳嗽", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"]}
+{"ref": "b7-function-match:169", "home": "brand", "text": "我在卧室开会，客厅那边吵得不行", "intent": "控制", "device": ["小米电视", "小度音箱", "石头扫地机"], "action": ["关闭或停止", "调低或减小", "暂停"], "note": "客厅的噪音源不确定，把会出声的设备都放进列表；若是家人在客厅说话则应为无关"}
+{"ref": "b7-function-match:185", "home": "house", "text": "车没电了，明天还要跑高速", "intent": "控制", "device": "充电桩", "action": "打开或启动", "note": "默认车停在家里车库"}
+{"ref": "b7-function-match:188", "home": "house", "text": "花园里的花晒蔫了，叶子都卷了边", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动"}
+{"ref": "b7-function-match:192", "home": "brand", "text": "厨房地上撒了一地米，踩上去咯吱响", "intent": "控制", "device": "石头扫地机", "action": "打开或启动"}
