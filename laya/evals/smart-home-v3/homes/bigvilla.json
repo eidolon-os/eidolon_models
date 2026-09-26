@@ -1,0 +1,246 @@
+{
+ "name": "bigvilla",
+ "description": "三层独栋 + 地下室（评测专用，测长清单）：名字带楼层或房间，同类设备很多。",
+ "devices": [
+  {
+   "name": "负一楼影院投影",
+   "room": "负一楼影音室",
+   "category": "影音",
+   "type": "投影仪"
+  },
+  {
+   "name": "负一楼影院灯",
+   "room": "负一楼影音室",
+   "category": "照明",
+   "type": "筒灯"
+  },
+  {
+   "name": "负一楼酒窖恒温柜",
+   "room": "负一楼酒窖",
+   "category": "厨电",
+   "type": "恒温酒柜"
+  },
+  {
+   "name": "负一楼除湿机",
+   "room": "负一楼",
+   "category": "空气",
+   "type": "除湿机"
+  },
+  {
+   "name": "负一楼健身房空调",
+   "room": "负一楼健身房",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "一楼客厅主灯",
+   "room": "一楼客厅",
+   "category": "照明",
+   "type": "吊灯"
+  },
+  {
+   "name": "一楼客厅灯带",
+   "room": "一楼客厅",
+   "category": "照明",
+   "type": "灯带"
+  },
+  {
+   "name": "一楼客厅空调",
+   "room": "一楼客厅",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "一楼客厅窗帘",
+   "room": "一楼客厅",
+   "category": "遮阳",
+   "type": "电动窗帘"
+  },
+  {
+   "name": "一楼客厅电视",
+   "room": "一楼客厅",
+   "category": "影音",
+   "type": "电视"
+  },
+  {
+   "name": "一楼餐厅灯",
+   "room": "一楼餐厅",
+   "category": "照明",
+   "type": "吊灯"
+  },
+  {
+   "name": "一楼厨房灯",
+   "room": "一楼厨房",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "冰箱",
+   "room": "一楼厨房",
+   "category": "厨电",
+   "type": "冰箱"
+  },
+  {
+   "name": "洗碗机",
+   "room": "一楼厨房",
+   "category": "厨电",
+   "type": "洗碗机"
+  },
+  {
+   "name": "蒸烤箱",
+   "room": "一楼厨房",
+   "category": "厨电",
+   "type": "蒸烤一体机"
+  },
+  {
+   "name": "油烟机",
+   "room": "一楼厨房",
+   "category": "厨电",
+   "type": "油烟机"
+  },
+  {
+   "name": "地暖",
+   "room": "一楼",
+   "category": "温控",
+   "type": "地暖"
+  },
+  {
+   "name": "大门门锁",
+   "room": "一楼玄关",
+   "category": "安防",
+   "type": "门锁"
+  },
+  {
+   "name": "门口摄像头",
+   "room": "一楼玄关",
+   "category": "安防",
+   "type": "摄像头"
+  },
+  {
+   "name": "车库门",
+   "room": "车库",
+   "category": "出入",
+   "type": "车库门"
+  },
+  {
+   "name": "充电桩",
+   "room": "车库",
+   "category": "能源",
+   "type": "充电桩"
+  },
+  {
+   "name": "二楼主卧灯",
+   "room": "二楼主卧",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "二楼主卧空调",
+   "room": "二楼主卧",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "二楼主卧窗帘",
+   "room": "二楼主卧",
+   "category": "遮阳",
+   "type": "电动窗帘"
+  },
+  {
+   "name": "二楼次卧灯",
+   "room": "二楼次卧",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "二楼次卧空调",
+   "room": "二楼次卧",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "二楼书房灯",
+   "room": "二楼书房",
+   "category": "照明",
+   "type": "吸顶灯"
+  },
+  {
+   "name": "二楼书房空调",
+   "room": "二楼书房",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "二楼走廊灯",
+   "room": "二楼走廊",
+   "category": "照明",
+   "type": "感应灯"
+  },
+  {
+   "name": "二楼扫地机",
+   "room": "二楼",
+   "category": "清洁",
+   "type": "扫地机器人"
+  },
+  {
+   "name": "三楼露台灯",
+   "room": "三楼露台",
+   "category": "照明",
+   "type": "庭院灯"
+  },
+  {
+   "name": "三楼阳光房空调",
+   "room": "三楼阳光房",
+   "category": "温控",
+   "type": "空调"
+  },
+  {
+   "name": "三楼阳光房天窗",
+   "room": "三楼阳光房",
+   "category": "遮阳",
+   "type": "电动天窗"
+  },
+  {
+   "name": "三楼洗衣机",
+   "room": "三楼洗衣房",
+   "category": "洗护",
+   "type": "洗衣机"
+  },
+  {
+   "name": "三楼烘干机",
+   "room": "三楼洗衣房",
+   "category": "洗护",
+   "type": "烘干机"
+  },
+  {
+   "name": "一楼扫地机",
+   "room": "一楼",
+   "category": "清洁",
+   "type": "扫地机器人"
+  },
+  {
+   "name": "新风系统",
+   "room": "全屋",
+   "category": "空气",
+   "type": "新风系统"
+  },
+  {
+   "name": "安防系统",
+   "room": "全屋",
+   "category": "安防",
+   "type": "安防报警系统"
+  },
+  {
+   "name": "花园喷灌",
+   "room": "花园",
+   "category": "园艺",
+   "type": "灌溉水阀"
+  },
+  {
+   "name": "全屋音响",
+   "room": "全屋",
+   "category": "影音",
+   "type": "背景音乐系统"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""从撰写训练数据里删掉与锁定评测集（v1 + v2）完全相同或近似重复的行。只依赖标准库。
+"""从撰写训练数据里删掉与锁定评测集（v1、v2、v3 开发集、验收集）完全相同或近似重复的行。只依赖标准库。
 
     python3 evals/smart-home-v2/purge_training_overlap.py          # 只报告
     python3 evals/smart-home-v2/purge_training_overlap.py --apply  # 真删，被删的行写进 purged.jsonl
@@ -20,14 +20,19 @@ from check_leakage import LAYA, lev_le, norm  # noqa: E402
 HERE = Path(__file__).resolve().parent
 
 
+# every set that must never be trained on: v1, v2 (dev + test), v3 (dev), accept (acceptance)
+LOCKED_ROOTS = [LAYA / "evals" / n for n in ("smart-home", "smart-home-v2", "smart-home-v3", "smart-home-accept")]
+
+
 def locked_texts() -> list[tuple[str, str]]:
     out = []
-    for root in (LAYA / "evals/smart-home", LAYA / "evals/smart-home-v2"):
+    for root in LOCKED_ROOTS:
         for f in sorted(root.glob("scenarios/*/cases.jsonl")):
             for line in f.read_text("utf-8").splitlines():
                 if line.strip():
                     c = json.loads(line)
-                    out.append((c["id"], norm(c["text"])))
+                    lid = c["id"] if root.name in ("smart-home", "smart-home-v2") else f"{root.name}:{c['id']}"
+                    out.append((lid, norm(c["text"])))
     return out
 
 
@@ -63,8 +68,9 @@ def main() -> int:
             Path(f).write_text("\n".join(keep) + "\n", encoding="utf-8")
     by = {}
     for p in purged:
-        by.setdefault(p["locked"][:5] if p["locked"].startswith("v2-") else "v1", 0)
-        by[p["locked"][:5] if p["locked"].startswith("v2-") else "v1"] += 1
+        lid = p["locked"]
+        key = lid[:5] if lid.startswith("v2-") else (lid.split(":")[0] if ":" in lid else "v1")
+        by[key] = by.get(key, 0) + 1
     print(f"authored {total} rows; overlapping a locked case: {len(purged)} {by}")
     if args.apply:
         out = HERE / "purged.jsonl"

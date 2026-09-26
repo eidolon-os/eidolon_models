@@ -106,3 +106,37 @@
 {"file": "noncommand-and-query.jsonl:240", "locked": "v2-04-013", "home": "house", "text": "今天有人按过门铃吗", "intent": "查询", "device": "门铃", "tags": ["status-query"]}
 {"file": "noncommand-and-query.jsonl:251", "locked": "v2-04-015", "home": "house", "text": "喂食器今天喂过几次了", "intent": "查询", "device": "宠物喂食器", "tags": ["status-query"]}
 {"file": "noncommand-and-query.jsonl:252", "locked": "v2-04-019", "home": "house", "text": "饮水机插座现在通电吗", "intent": "查询", "device": "饮水机插座", "tags": ["status-query"]}
+{"file": "b2-control-multi-missing-asr.jsonl:109", "locked": "smart-home-v3:A-166", "home": "apartment", "text": "小易晚安，都关了吧", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["multi-device"]}
+{"file": "b2-control-multi-missing-asr.jsonl:238", "locked": "smart-home-v3:B-140", "home": "villa", "text": "酒柜温度调到十二度", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home"]}
+{"file": "b2-control-multi-missing-asr.jsonl:249", "locked": "smart-home-v3:B-144", "home": "apartment", "text": "客厅空调二十4度", "intent": "控制", "device": "客厅空调", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
+{"file": "b2-control-multi-missing-asr.jsonl:286", "locked": "smart-home-v3:B-148", "home": "apartment", "text": "烤箱预热到两百读", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["asr-noise"]}
+{"file": "b3-new-homes.jsonl:32", "locked": "smart-home-v3:A-079", "home": "studio", "text": "门锁好了没", "intent": "查询", "device": "门锁", "tags": ["status-query"]}
+{"file": "b3-new-homes.jsonl:33", "locked": "smart-home-v3:A-105", "home": "studio", "text": "热水器烧好了没", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
+{"file": "b3-new-homes.jsonl:142", "locked": "smart-home-v3:A-066", "home": "elder", "text": "厨房有股煤气味儿", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["implicit-intent"]}
+{"file": "b4-more-on-b3-homes.jsonl:11", "locked": "smart-home-v3:B-073", "home": "studio", "text": "门锁还剩多少电", "intent": "查询", "device": "门锁", "tags": ["status-query"]}
+{"file": "b4-more-on-b3-homes.jsonl:74", "locked": "smart-home-v3:B-168", "home": "family3", "text": "次卧窗帘拉上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "near-miss"]}
+{"file": "b4-more-on-b3-homes.jsonl:85", "locked": "smart-home-v3:B-151", "home": "family3", "text": "大门反锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control"]}
+{"file": "b4-more-on-b3-homes.jsonl:194", "locked": "smart-home-v3:B-072", "home": "brand", "text": "云锦现在设的多少度", "intent": "查询", "device": "格力云锦空调", "tags": ["status-query", "model-only"]}
+{"file": "b4-new-homes.jsonl:120", "locked": "smart-home-v3:B-151", "home": "countryside", "text": "大门关上", "intent": "控制", "device": "大门", "action": "关闭或停止", "tags": ["explicit-control"]}
+{"file": "b4-new-homes.jsonl:149", "locked": "smart-home-v3:B-173", "home": "countryside", "text": "大门关好了没", "intent": "查询", "device": "大门", "tags": ["status-query"]}
+{"file": "b4-new-homes.jsonl:198", "locked": "smart-home-v3:A-163", "home": "pets", "text": "客厅灯关了", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
+{"file": "b4-new-homes.jsonl:288", "locked": "smart-home-v3:B-168", "home": "kids", "text": "主卧窗帘拉上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
+{"file": "b5-implicit-room.jsonl:227", "locked": "smart-home-v3:B-149", "home": "house", "text": "厨房被油烟熏得睁不开眼", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"file": "b5-implicit-room.jsonl:229", "locked": "smart-home-v3:B-059", "home": "house", "text": "卫生间冷得跟外面一样", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
+{"file": "b7-alias-reference.jsonl:317", "locked": "smart-home-v3:B-072", "home": "house", "text": "暖气现在设的多少度", "intent": "查询", "device": "地暖", "tags": ["status-query", "alias", "query"]}
+{"file": "b7-alias-reference.jsonl:328", "locked": "smart-home-v3:A-105", "home": "brand", "text": "电热水器烧好了没", "intent": "查询", "device": "史密斯热水器", "tags": ["status-query", "alias", "query"]}
+{"file": "b7-function-match.jsonl:162", "locked": "smart-home-v3:A-066", "home": "elder", "text": "厨房一股煤气味", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "air"]}
+{"file": "b9-need-comfort.jsonl:64", "locked": "smart-home-v3:B-059", "home": "apartment", "text": "卫生间冷得跟冰窖似的", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-temp", "cue-figurative", "absent"]}
+{"file": "b9-need-comfort.jsonl:124", "locked": "smart-home-v3:A-042", "home": "brand", "text": "冰箱冷冻那层现在几度", "intent": "查询", "device": "海尔冰箱", "tags": ["status-query", "need-contrast"]}
+{"file": "b9-need-condition.jsonl:177", "locked": "smart-home-v3:A-090", "home": "southyard", "text": "客厅除湿机水箱满了没", "intent": "查询", "device": "客厅除湿机", "tags": ["status-query", "need-contrast"]}
+{"file": "b9-need-condition.jsonl:188", "locked": "smart-home-v3:B-162", "home": "townhouse", "text": "明天要穿的衬衫还潮着", "intent": "控制", "device": ["干衣机", "露台晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
+{"file": "b9-need-condition.jsonl:283", "locked": "smart-home-v3:B-159", "home": "brand", "text": "客厅地上都是饼干渣", "intent": "控制", "device": "石头扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
+{"file": "b9-need-condition.jsonl:284", "locked": "smart-home-v3:B-159", "home": "elder", "text": "客厅地上都是饼干渣", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
+{"file": "b9-need-life.jsonl:287", "locked": "smart-home-v3:A-066", "home": "southyard", "text": "厨房里一股煤气味儿", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"], "note": "燃气泄漏不开关电器（排气扇可能打火）；只有燃气阀门能处理，没有就是没有"}
+{"file": "implicit-multi-missing.jsonl:24", "locked": "smart-home-v3:A-154", "home": "apartment", "text": "脏衣服堆了一筐了", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["implicit-intent"]}
+{"file": "misc-forms.jsonl:54", "locked": "smart-home-v3:B-148", "home": "villa", "text": "烤箱预热到两百度", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
+{"file": "misc-forms.jsonl:60", "locked": "smart-home-v3:B-176", "home": "villa", "text": "车充满了没", "intent": "查询", "device": "充电桩", "tags": ["status-query"]}
+{"file": "misc-forms.jsonl:61", "locked": "smart-home-v3:B-178", "home": "villa", "text": "警报现在是布防状态吗", "intent": "查询", "device": "安防警报", "tags": ["status-query"]}
+{"file": "misc-forms.jsonl:110", "locked": "smart-home-v3:A-105", "home": "apartment", "text": "热水器烧好了吗", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:188", "locked": "smart-home-v3:B-171", "home": "apartment", "text": "客厅空调开着没", "intent": "查询", "device": "客厅空调", "tags": ["status-query"]}
+{"file": "noncommand-and-query.jsonl:202", "locked": "smart-home-v3:A-152", "home": "apartment", "text": "洗衣机的衣服洗完了吗", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}

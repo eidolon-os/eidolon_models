@@ -29,8 +29,6 @@
 {"home": "studio", "text": "想躺床上看个电影", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "studio", "text": "脏衣服堆了一篮子了", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "studio", "text": "空调现在几度", "intent": "查询", "device": "空调", "tags": ["status-query"]}
-{"home": "studio", "text": "门锁好了没", "intent": "查询", "device": "门锁", "tags": ["status-query"]}
-{"home": "studio", "text": "热水器烧好了没", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
 {"home": "studio", "text": "扫地机还有多少电", "intent": "查询", "device": "扫地机", "tags": ["status-query"]}
 {"home": "studio", "text": "灯是不是还亮着", "intent": "查询", "device": "顶灯", "tags": ["status-query"]}
 {"home": "studio", "text": "窗帘现在是开着还是关着的", "intent": "查询", "device": "窗帘", "tags": ["status-query"]}
@@ -139,7 +137,6 @@
 {"home": "elder", "text": "我胸口闷得慌，喘不上气，快叫人", "intent": "控制", "device": "紧急呼叫按钮", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "elder", "text": "屋里凉飕飕的，腿又疼了", "intent": "控制", "device": "老人房空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "elder", "text": "电视里说的啥我一句也听不清", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["implicit-intent"]}
-{"home": "elder", "text": "厨房有股煤气味儿", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["implicit-intent"]}
 {"home": "elder", "text": "我今天的药吃了没", "intent": "查询", "device": "智能药盒", "tags": ["status-query"]}
 {"home": "elder", "text": "煤气阀关了没有", "intent": "查询", "device": "燃气阀门", "tags": ["status-query"]}
 {"home": "elder", "text": "屋里现在多少度", "intent": "查询", "device": "老人房空调", "tags": ["status-query"]}

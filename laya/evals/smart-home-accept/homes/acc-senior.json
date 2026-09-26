@@ -1,0 +1,15 @@
+{
+  "name": "acc-senior",
+  "description": "验收专用：独居老人的一室一厅（客厅、卧室、厨房、卫生间），9 台设备，设备少、名字就是品类；有紧急呼叫按钮和智能药盒。",
+  "devices": [
+    {"name": "客厅灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "电视", "room": "客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "空调", "room": "卧室", "category": "空调温控", "type": "挂机"},
+    {"name": "卧室灯", "room": "卧室", "category": "照明", "type": "吸顶灯"},
+    {"name": "床边感应灯", "room": "卧室", "category": "照明", "type": "感应夜灯"},
+    {"name": "电热水壶", "room": "厨房", "category": "厨房电器", "type": "电热水壶"},
+    {"name": "热水器", "room": "卫生间", "category": "热水卫浴", "type": "电热水器"},
+    {"name": "紧急呼叫按钮", "room": "卧室", "category": "适老看护", "type": "呼叫按钮"},
+    {"name": "智能药盒", "room": "客厅", "category": "适老看护", "type": "药盒"}
+  ]
+}

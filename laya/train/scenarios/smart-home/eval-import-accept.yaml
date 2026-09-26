@@ -1,0 +1,7 @@
+# evals/smart-home-accept（验收集，1,200 条，验收专用户型）→ 记录格式。只在候选版本上跑、只看汇总，永不进训练，不做误差分析。
+#   eidolon-laya-train gen --scenario train/scenarios/smart-home --config train/scenarios/smart-home/eval-import-accept.yaml --out train/scenarios/smart-home/eval/locked-accept.jsonl
+generators:
+  - kind: import
+    adapter: evals_cases
+    name: locked-accept
+    path: ../../../evals/smart-home-accept

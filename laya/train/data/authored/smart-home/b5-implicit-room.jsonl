@@ -224,9 +224,7 @@
 {"home": "house", "text": "书房里热得人心浮气躁", "intent": "控制", "device": "落地扇", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
 {"home": "house", "text": "客厅里冻得手都发紫", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
 {"home": "house", "text": "客厅冷得脚底发凉", "intent": "控制", "device": "地暖", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
-{"home": "house", "text": "厨房被油烟熏得睁不开眼", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
 {"home": "house", "text": "厨房烟呼呼往外冒", "intent": "控制", "device": "油烟机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
-{"home": "house", "text": "卫生间冷得跟外面一样", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
 {"home": "house", "text": "影音室太吵，耳朵嗡嗡响", "intent": "控制", "device": "投影仪", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent", "function-mismatch"]}
 {"home": "house", "text": "餐厅光线弱，吃饭心情都没了", "intent": "控制", "device": "餐厅吊灯", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}
 {"home": "villa", "text": "客厅凉透了，赶紧弄暖和", "intent": "控制", "device": ["客厅空调", "地暖"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-mismatch"]}

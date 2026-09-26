@@ -24,6 +24,8 @@ sources:
 locked_eval:
   - ../../../evals/smart-home
   - ../../../evals/smart-home-v2
+  - ../../../evals/smart-home-v3
+  - ../../../evals/smart-home-accept
 split:
   val: 0.1
   calib: 0.1

@@ -21,7 +21,6 @@
 {"home": "apartment", "text": "想听点音乐放松一下", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "地板好久没扫了，都是灰", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "扫地机太吵了，我在开会", "intent": "控制", "device": "扫地机器人", "action": ["暂停", "关闭或停止"], "tags": ["implicit-intent"]}
-{"home": "apartment", "text": "脏衣服堆了一筐了", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "要下雨了，衣服还挂在外面", "intent": "控制", "device": "电动晾衣架", "action": ["关闭或停止", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "晾衣架上的衣服干了，想收下来", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["implicit-intent"]}
 {"home": "apartment", "text": "洗澡水是凉的，冻死了", "intent": "控制", "device": "热水器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}

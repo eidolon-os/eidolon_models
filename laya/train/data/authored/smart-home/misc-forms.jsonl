@@ -51,14 +51,11 @@
 {"home": "villa", "text": "门锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["elliptical"]}
 {"home": "villa", "text": "把车库和大门都锁好", "intent": "控制", "device": "多个设备或整屋", "action": ["上锁", "关闭或停止"], "tags": ["multi-device"]}
 {"home": "villa", "text": "冰箱调到零下十八度", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
-{"home": "villa", "text": "烤箱预热到两百度", "intent": "控制", "device": "烤箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "音量调到百分之三十", "intent": "控制", "device": "智能音箱", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "电视换到央视一套", "intent": "控制", "device": "电视", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "热水器调到四十二度", "intent": "控制", "device": "热水器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "新风机切到自动模式", "intent": "控制", "device": "新风机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "villa", "text": "客厅温度现在多少", "intent": "查询", "device": "温湿度计", "tags": ["status-query"]}
-{"home": "villa", "text": "车充满了没", "intent": "查询", "device": "充电桩", "tags": ["status-query"]}
-{"home": "villa", "text": "警报现在是布防状态吗", "intent": "查询", "device": "安防警报", "tags": ["status-query"]}
 {"home": "villa", "text": "门锁了没有", "intent": "查询", "device": "智能门锁", "tags": ["status-query"]}
 {"home": "villa", "text": "冰箱现在几度", "intent": "查询", "device": "冰箱", "tags": ["status-query"]}
 {"home": "villa", "text": "扫地机器人扫到哪了", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
@@ -107,7 +104,6 @@
 {"home": "apartment", "text": "现在几度啊屋里", "intent": "查询", "device": "温湿度计", "tags": ["status-query"]}
 {"home": "apartment", "text": "湿度多少", "intent": "查询", "device": "温湿度计", "tags": ["status-query"]}
 {"home": "apartment", "text": "饭好了没", "intent": "查询", "device": "电饭煲", "tags": ["status-query"]}
-{"home": "apartment", "text": "热水器烧好了吗", "intent": "查询", "device": "热水器", "tags": ["status-query"]}
 {"home": "house", "text": "烤箱到温了吗", "intent": "查询", "device": "烤箱", "tags": ["status-query"]}
 {"home": "house", "text": "投影仪开着呢吗", "intent": "查询", "device": "投影仪", "tags": ["status-query"]}
 {"home": "house", "text": "地暖现在设的几度", "intent": "查询", "device": "地暖", "tags": ["status-query"]}

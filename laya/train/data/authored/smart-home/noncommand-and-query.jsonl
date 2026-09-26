@@ -185,7 +185,6 @@
 {"home": "apartment", "text": "主卧灯现在是什么状态", "intent": "查询", "device": "主卧灯", "tags": ["status-query"]}
 {"home": "apartment", "text": "床头灯是开的还是关的", "intent": "查询", "device": "床头灯", "tags": ["status-query"]}
 {"home": "apartment", "text": "床头灯现在亮度是多少", "intent": "查询", "device": "床头灯", "tags": ["status-query"]}
-{"home": "apartment", "text": "客厅空调开着没", "intent": "查询", "device": "客厅空调", "tags": ["status-query"]}
 {"home": "apartment", "text": "主卧空调现在设的是几度", "intent": "查询", "device": "主卧空调", "tags": ["status-query"]}
 {"home": "apartment", "text": "主卧空调是不是还开着", "intent": "查询", "device": "主卧空调", "tags": ["status-query"]}
 {"home": "apartment", "text": "客厅窗帘拉上了吗", "intent": "查询", "device": "客厅窗帘", "tags": ["status-query"]}
@@ -199,7 +198,6 @@
 {"home": "apartment", "text": "音箱现在在放什么", "intent": "查询", "device": "智能音箱", "tags": ["status-query"]}
 {"home": "apartment", "text": "智能音箱的音量现在是多少", "intent": "查询", "device": "智能音箱", "tags": ["status-query"]}
 {"home": "apartment", "text": "扫地机器人回充电座了吗", "intent": "查询", "device": "扫地机器人", "tags": ["status-query"]}
-{"home": "apartment", "text": "洗衣机的衣服洗完了吗", "intent": "查询", "device": "洗衣机", "tags": ["status-query"]}
 {"home": "apartment", "text": "晾衣架的烘干还要多久", "intent": "查询", "device": "电动晾衣架", "tags": ["status-query"]}
 {"home": "apartment", "text": "电饭煲现在是在保温吗", "intent": "查询", "device": "电饭煲", "tags": ["status-query"]}
 {"home": "apartment", "text": "热水器是不是开着", "intent": "查询", "device": "热水器", "tags": ["status-query"]}

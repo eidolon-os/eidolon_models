@@ -159,7 +159,6 @@
 {"home": "mega", "text": "主卧里灰大，打喷嚏停不下来", "intent": "控制", "device": ["主卧净化器", "全屋新风"], "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
 {"home": "office", "text": "屋里一股外卖味，下午还要开视频会", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
 {"home": "pets", "text": "客厅一股狗味儿，客人马上到了", "intent": "控制", "device": "空气净化器", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "function-match", "air"]}
-{"home": "elder", "text": "厨房一股煤气味", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["implicit-intent", "function-match", "air"]}
 {"home": "countryside", "text": "堂屋烟熏火燎的，有人在屋里抽旱烟", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "air"]}
 {"home": "rental", "text": "我屋里一股烟味，室友又在抽烟", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "air"]}
 {"home": "minimal", "text": "屋里全是烟味，散都散不掉", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["implicit-intent", "function-match", "air"]}

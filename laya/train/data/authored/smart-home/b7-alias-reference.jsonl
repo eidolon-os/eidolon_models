@@ -314,7 +314,6 @@
 {"home": "apartment", "text": "屋里那个测温度的现在显示几度", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "alias", "query"]}
 {"home": "apartment", "text": "出门的时候门禁那边落锁了没有", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "alias", "query"]}
 {"home": "apartment", "text": "卧室喷雾那个还有水吗", "intent": "查询", "device": "加湿器", "tags": ["status-query", "alias", "query"]}
-{"home": "house", "text": "暖气现在设的多少度", "intent": "查询", "device": "地暖", "tags": ["status-query", "alias", "query"]}
 {"home": "house", "text": "烤东西那个还要烤多久", "intent": "查询", "device": "烤箱", "tags": ["status-query", "alias", "query"]}
 {"home": "house", "text": "刷碗那台洗完了没", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "alias", "query"]}
 {"home": "house", "text": "给车充电那个充到多少了", "intent": "查询", "device": "充电桩", "tags": ["status-query", "alias", "query"]}
@@ -325,7 +324,6 @@
 {"home": "villa", "text": "花园浇水那个关了没", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "alias", "query"]}
 {"home": "villa", "text": "防盗那套布防了没", "intent": "查询", "device": "安防警报", "tags": ["status-query", "alias", "query"]}
 {"home": "brand", "text": "扫地的现在扫到哪了", "intent": "查询", "device": "石头扫地机", "tags": ["status-query", "alias", "query"]}
-{"home": "brand", "text": "电热水器烧好了没", "intent": "查询", "device": "史密斯热水器", "tags": ["status-query", "alias", "query"]}
 {"home": "countryside", "text": "太阳能里还有热水没", "intent": "查询", "device": "太阳能热水器", "tags": ["status-query", "alias", "query"]}
 {"home": "countryside", "text": "院门关好了吗", "intent": "查询", "device": "大门", "tags": ["status-query", "alias", "query"]}
 {"home": "countryside", "text": "冷柜现在几度", "intent": "查询", "device": "冰柜", "tags": ["status-query", "alias", "query"]}

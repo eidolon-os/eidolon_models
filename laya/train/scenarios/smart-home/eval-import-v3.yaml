@@ -1,0 +1,7 @@
+# evals/smart-home-v3（开发集，360 条，评测专用户型）→ 记录格式。只用于评测和误差分析，永不进训练；可以逐条看。
+#   eidolon-laya-train gen --scenario train/scenarios/smart-home --config train/scenarios/smart-home/eval-import-v3.yaml --out train/scenarios/smart-home/eval/locked-v3-dev.jsonl
+generators:
+  - kind: import
+    adapter: evals_cases
+    name: locked-v3-dev
+    path: ../../../evals/smart-home-v3

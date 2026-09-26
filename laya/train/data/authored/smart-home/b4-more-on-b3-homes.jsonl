@@ -8,7 +8,6 @@
 {"home": "studio", "text": "投影仪关了没有", "intent": "查询", "device": "投影仪", "tags": ["status-query"]}
 {"home": "studio", "text": "屋里还有什么电器开着", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "multi"]}
 {"home": "studio", "text": "灯和空调是不是都关了", "intent": "查询", "device": "多个设备或整屋", "tags": ["status-query", "multi"]}
-{"home": "studio", "text": "门锁还剩多少电", "intent": "查询", "device": "门锁", "tags": ["status-query"]}
 {"home": "studio", "text": "床头那边的窗帘拉开", "intent": "控制", "device": "窗帘", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "studio", "text": "卫生间里那台洗衣机开始洗吧", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "studio", "text": "门口那把锁锁上", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["room-disambiguation"]}
@@ -71,7 +70,6 @@
 {"home": "family3", "text": "书房空调打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "次卧加湿器开一下", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "主卧摄像头打开看看", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
-{"home": "family3", "text": "次卧窗帘拉上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "客厅加湿器开到二档", "intent": "控制", "device": "没有对应的设备", "action": "设为指定的数值或模式", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "厨房的灯打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "near-miss"]}
 {"home": "family3", "text": "门口摄像头现在拍到谁了", "intent": "查询", "device": "没有对应的设备", "tags": ["device-not-in-home", "near-miss", "query"]}
@@ -82,7 +80,6 @@
 {"home": "family3", "text": "孩子玩了一身泥，得赶紧洗洗", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "family3", "text": "看电视反光，屏幕上全是窗户的影子", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["implicit-intent"]}
 {"home": "family3", "text": "扫地机器人暂停，孩子在地上搭积木", "intent": "控制", "device": "扫地机器人", "action": "暂停", "tags": ["explicit-control"]}
-{"home": "family3", "text": "大门反锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["explicit-control"]}
 {"home": "family3", "text": "烘干机设成低温烘", "intent": "控制", "device": "烘干机", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
 {"home": "family3", "text": "客厅电视先暂停，吃完饭再看", "intent": "控制", "device": "客厅电视", "action": "暂停", "tags": ["explicit-control"]}
 {"home": "family3", "text": "空气净化器调到睡眠模式", "intent": "控制", "device": "空气净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
@@ -191,7 +188,6 @@
 {"home": "duplex", "text": "楼上楼下各买一台扫地机真值", "intent": "无关", "tags": ["non-command"]}
 {"home": "duplex", "text": "一楼餐厅那盏吊灯是我们自己挑的", "intent": "无关", "tags": ["non-command"]}
 {"home": "duplex", "text": "新风系统是装修的时候就预埋的管子", "intent": "无关", "tags": ["non-command"]}
-{"home": "brand", "text": "云锦现在设的多少度", "intent": "查询", "device": "格力云锦空调", "tags": ["status-query", "model-only"]}
 {"home": "brand", "text": "风尊开着没", "intent": "查询", "device": "美的风尊空调", "tags": ["status-query", "model-only"]}
 {"home": "brand", "text": "戴森显示的空气质量怎么样", "intent": "查询", "device": "戴森净化风扇", "tags": ["status-query", "brand-only"]}
 {"home": "brand", "text": "德尔玛还剩多少水", "intent": "查询", "device": "德尔玛加湿器", "tags": ["status-query", "brand-only"]}

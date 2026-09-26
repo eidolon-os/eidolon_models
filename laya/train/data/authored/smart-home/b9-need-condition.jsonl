@@ -174,7 +174,6 @@
 {"home": "elder", "text": "这段相声干巴巴的，一点不好笑", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "townhouse", "text": "上回去北京出差，干得嘴都裂了", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "apartment", "text": "客厅现在湿度多少", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "need-contrast"]}
-{"home": "southyard", "text": "客厅除湿机水箱满了没", "intent": "查询", "device": "客厅除湿机", "tags": ["status-query", "need-contrast"]}
 {"home": "northflat", "text": "主卧加湿器里还有水吗", "intent": "查询", "device": "主卧加湿器", "tags": ["status-query", "need-contrast"]}
 {"home": "townhouse", "text": "地下室除湿机在转吗", "intent": "查询", "device": "地下室除湿机", "tags": ["status-query", "need-contrast"]}
 {"home": "family3", "text": "儿童房加湿器开着没", "intent": "查询", "device": "儿童房加湿器", "tags": ["status-query", "need-contrast"]}
@@ -185,7 +184,6 @@
 {"home": "southyard", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": "电动晾衣杆", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect"]}
 {"home": "pets", "text": "衣服晾了一天还是湿的", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-effect", "absent"]}
 {"home": "kids", "text": "宝宝的小衣服还没干透", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-object", "absent"]}
-{"home": "townhouse", "text": "明天要穿的衬衫还潮着", "intent": "控制", "device": ["干衣机", "露台晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
 {"home": "family3", "text": "阳台上孩子明天要穿的校服还没干", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
 {"home": "mega", "text": "阳台上明早要穿的西裤还是潮的", "intent": "控制", "device": ["烘干机", "电动晾衣架"], "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming"]}
 {"home": "studio", "text": "明天要穿的T恤还湿着", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-laundry", "cue-upcoming", "absent"]}
@@ -280,8 +278,6 @@
 {"home": "house", "text": "地上全是泥脚印", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-effect", "absent"]}
 {"home": "kids", "text": "宝宝在客厅吃饼干掉了一地渣", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-effect"]}
 {"home": "family3", "text": "客厅沙发底下全是饼干渣", "intent": "控制", "device": "扫地机器人", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
-{"home": "brand", "text": "客厅地上都是饼干渣", "intent": "控制", "device": "石头扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
-{"home": "elder", "text": "客厅地上都是饼干渣", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object", "absent"]}
 {"home": "townhouse", "text": "水池里碗都堆成山了", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
 {"home": "house", "text": "水池里碗都堆成山了", "intent": "控制", "device": "洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}
 {"home": "duplex", "text": "水池里碗都堆成山了", "intent": "控制", "device": "一楼洗碗机", "action": ["打开或启动"], "tags": ["implicit-intent", "need-clean", "cue-object"]}

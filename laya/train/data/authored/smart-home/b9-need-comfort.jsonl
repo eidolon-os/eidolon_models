@@ -61,7 +61,6 @@
 {"home": "northflat", "text": "一会儿洗澡，卫生间先热乎热乎", "intent": "控制", "device": "卫生间暖风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-temp", "cue-upcoming"]}
 {"home": "southyard", "text": "一会儿洗澡，卫生间先热乎热乎", "intent": "控制", "device": "卫生间暖风机", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-temp", "cue-upcoming"]}
 {"home": "countryside", "text": "一会儿洗澡，卫生间先热乎热乎", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-temp", "cue-upcoming"]}
-{"home": "apartment", "text": "卫生间冷得跟冰窖似的", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-temp", "cue-figurative", "absent"]}
 {"home": "countryside", "text": "洗澡间冷得跟冰窖似的", "intent": "控制", "device": "浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-temp", "cue-figurative"]}
 {"home": "duplex", "text": "二楼卫生间冷，洗完澡出来直打喷嚏", "intent": "控制", "device": "二楼浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-temp", "cue-effect"]}
 {"home": "mega", "text": "主卫洗澡冷飕飕的", "intent": "控制", "device": "主卫浴霸", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent", "need-temp", "cue-body"]}
@@ -121,7 +120,6 @@
 {"home": "apartment", "text": "客厅温度计显示几度了", "intent": "查询", "device": "温湿度计", "tags": ["status-query", "need-contrast"]}
 {"home": "southyard", "text": "卫生间暖风机关了没", "intent": "查询", "device": "卫生间暖风机", "tags": ["status-query", "need-contrast"]}
 {"home": "kids", "text": "婴儿房空调现在开的几度", "intent": "查询", "device": "婴儿房空调", "tags": ["status-query", "need-contrast"]}
-{"home": "brand", "text": "冰箱冷冻那层现在几度", "intent": "查询", "device": "海尔冰箱", "tags": ["status-query", "need-contrast"]}
 {"home": "mega", "text": "主卫浴霸是不是还开着", "intent": "查询", "device": "主卫浴霸", "tags": ["status-query", "need-contrast"]}
 {"home": "southyard", "text": "外面晒得冒烟，幸亏窝在家里", "intent": "无关", "tags": ["non-command", "need-contrast"]}
 {"home": "northflat", "text": "单位暖气不行，冻了一整天", "intent": "无关", "tags": ["non-command", "need-contrast"]}

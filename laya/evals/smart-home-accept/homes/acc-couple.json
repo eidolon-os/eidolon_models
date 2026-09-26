@@ -1,0 +1,27 @@
+{
+  "name": "acc-couple",
+  "description": "验收专用：年轻夫妻 + 一只猫的两室一厅（客厅、主卧、书房兼客房、厨房、卫生间、阳台），21 台设备；灯按 app 默认名混用品牌和位置，客厅有吸顶灯和氛围灯带，书房有台灯和落地灯，猫用喂食器 / 饮水机 / 猫砂盆。",
+  "devices": [
+    {"name": "客厅吸顶灯", "room": "客厅", "category": "照明", "type": "吸顶灯"},
+    {"name": "电视背景灯带", "room": "客厅", "category": "照明", "type": "灯带"},
+    {"name": "客厅空调", "room": "客厅", "category": "空调温控", "type": "柜机"},
+    {"name": "小米电视", "room": "客厅", "category": "影音娱乐", "type": "电视"},
+    {"name": "客厅窗帘", "room": "客厅", "category": "窗帘遮阳", "type": "电动窗帘"},
+    {"name": "扫地机", "room": "全屋", "category": "清洁电器", "type": "扫拖机器人"},
+    {"name": "主卧灯", "room": "主卧", "category": "照明", "type": "吸顶灯"},
+    {"name": "主卧空调", "room": "主卧", "category": "空调温控", "type": "挂机"},
+    {"name": "床头小夜灯", "room": "主卧", "category": "照明", "type": "夜灯"},
+    {"name": "主卧加湿器", "room": "主卧", "category": "空气环境", "type": "加湿器"},
+    {"name": "书房台灯", "room": "书房", "category": "照明", "type": "台灯"},
+    {"name": "书房落地灯", "room": "书房", "category": "照明", "type": "落地灯"},
+    {"name": "书房空调", "room": "书房", "category": "空调温控", "type": "挂机"},
+    {"name": "厨房灯", "room": "厨房", "category": "照明", "type": "吸顶灯"},
+    {"name": "油烟机", "room": "厨房", "category": "厨房电器", "type": "油烟机"},
+    {"name": "热水器", "room": "卫生间", "category": "热水卫浴", "type": "燃气热水器"},
+    {"name": "浴霸", "room": "卫生间", "category": "热水卫浴", "type": "浴霸"},
+    {"name": "洗烘一体机", "room": "阳台", "category": "清洁电器", "type": "洗烘一体机"},
+    {"name": "猫咪喂食器", "room": "阳台", "category": "宠物", "type": "喂食器"},
+    {"name": "猫咪饮水机", "room": "阳台", "category": "宠物", "type": "饮水机"},
+    {"name": "入户门锁", "room": "门口", "category": "安防门禁", "type": "智能门锁"}
+  ]
+}

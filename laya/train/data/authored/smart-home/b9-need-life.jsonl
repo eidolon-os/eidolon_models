@@ -284,7 +284,6 @@
 {"home": "apartment", "text": "我爸摔倒了，爬不起来", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动"], "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"], "note": "没有呼叫按钮这类设备"}
 {"home": "elder", "text": "妈又忘了吃降压药", "intent": "控制", "device": "智能药盒", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["implicit-intent", "need-safety-event", "cue-indirect"], "note": "定时提醒药盒响铃提醒；按设备控制读"}
 {"home": "elder", "text": "厨房好像有股煤气味", "intent": "控制", "device": "燃气阀门", "action": ["关闭或停止"], "tags": ["implicit-intent", "need-safety-event", "cue-effect"]}
-{"home": "southyard", "text": "厨房里一股煤气味儿", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"], "note": "燃气泄漏不开关电器（排气扇可能打火）；只有燃气阀门能处理，没有就是没有"}
 {"home": "apartment", "text": "厨房怎么有煤气味", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"], "note": "厨房只有电饭煲"}
 {"home": "studio", "text": "屋里有股燃气味", "intent": "控制", "device": "没有对应的设备", "tags": ["implicit-intent", "need-safety-event", "cue-effect", "absent"]}
 {"home": "elder", "text": "燃气报警器刚才是不是响了", "intent": "查询", "device": "燃气报警器", "tags": ["status-query", "need-contrast"]}

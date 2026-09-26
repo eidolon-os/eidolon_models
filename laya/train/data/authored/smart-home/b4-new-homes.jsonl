@@ -117,7 +117,6 @@
 {"home": "minimal", "text": "这灯是我自己换的，花了一百多", "intent": "无关", "tags": ["non-command"]}
 {"home": "countryside", "text": "院子灯打开", "intent": "控制", "device": "院子灯", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "鸡舍灯关了", "intent": "控制", "device": "鸡舍灯", "action": "关闭或停止", "tags": ["explicit-control"]}
-{"home": "countryside", "text": "大门关上", "intent": "控制", "device": "大门", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "大门打开，车要进来", "intent": "控制", "device": "大门", "action": "打开或启动", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "卷帘门拉下来", "intent": "控制", "device": "卷帘门", "action": "关闭或停止", "tags": ["explicit-control"]}
 {"home": "countryside", "text": "卷帘门升到一半", "intent": "控制", "device": "卷帘门", "action": "设为指定的数值或模式", "tags": ["explicit-control"]}
@@ -146,7 +145,6 @@
 {"home": "countryside", "text": "堂屋坐着冷得直跺脚", "intent": "控制", "device": "堂屋空调", "action": ["打开或启动", "调高或增大"], "tags": ["implicit-intent"]}
 {"home": "countryside", "text": "洗澡冻得直哆嗦", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "countryside", "text": "孩子在写作业，电视太吵了", "intent": "控制", "device": "电视", "action": ["调低或减小", "关闭或停止"], "tags": ["implicit-intent"]}
-{"home": "countryside", "text": "大门关好了没", "intent": "查询", "device": "大门", "tags": ["status-query"]}
 {"home": "countryside", "text": "卷帘门放下来了吗", "intent": "查询", "device": "卷帘门", "tags": ["status-query"]}
 {"home": "countryside", "text": "太阳能热水器水温多少", "intent": "查询", "device": "太阳能热水器", "tags": ["status-query"]}
 {"home": "countryside", "text": "热水器里还有多少水", "intent": "查询", "device": "太阳能热水器", "tags": ["status-query"]}
@@ -195,7 +193,6 @@
 {"home": "pets", "text": "给狗喂点吃的", "intent": "控制", "device": "狗粮喂食器", "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "pets", "text": "空调开到二十五度", "intent": "控制", "device": ["客厅空调", "卧室空调"], "action": "设为指定的数值或模式", "tags": ["room-disambiguation", "cross-home"]}
 {"home": "pets", "text": "卧室空调调高一度", "intent": "控制", "device": "卧室空调", "action": "调高或增大", "tags": ["room-disambiguation"]}
-{"home": "pets", "text": "客厅灯关了", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["room-disambiguation"]}
 {"home": "pets", "text": "开一下灯", "intent": "控制", "device": ["客厅灯", "卧室灯"], "action": "打开或启动", "tags": ["room-disambiguation"]}
 {"home": "pets", "text": "猫饿得围着我直叫唤", "intent": "控制", "device": "猫粮喂食器", "action": "打开或启动", "tags": ["implicit-intent"]}
 {"home": "pets", "text": "狗刚洗完澡，毛还湿着", "intent": "控制", "device": "宠物烘干箱", "action": "打开或启动", "tags": ["implicit-intent"]}
@@ -285,7 +282,6 @@
 {"home": "kids", "text": "主卧夜灯打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
 {"home": "kids", "text": "辅食机打个米糊", "intent": "控制", "device": "没有对应的设备", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["device-not-in-home"]}
 {"home": "kids", "text": "客厅摄像头打开", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home"]}
-{"home": "kids", "text": "主卧窗帘拉上", "intent": "控制", "device": "没有对应的设备", "action": "关闭或停止", "tags": ["device-not-in-home"]}
 {"home": "kids", "text": "热水器烧上", "intent": "控制", "device": "没有对应的设备", "action": "打开或启动", "tags": ["device-not-in-home", "cross-home"]}
 {"home": "kids", "text": "温奶器是月嫂推荐的", "intent": "无关", "tags": ["non-command"]}
 {"home": "kids", "text": "摇篮摇久了宝宝会不会晕啊", "intent": "无关", "tags": ["non-command"]}
