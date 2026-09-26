@@ -1,0 +1,20 @@
+# 配方实验：相对 train-unfreeze-all.yaml（r14）只改一处——意图题金标为无关的样本损失 × 2。
+# 运行：eidolon-laya-train run --pipeline train/pipelines/smart-home-mps.yaml --run-id <rNN> --train-config train/scenarios/smart-home/train-unfreeze-all.yaml
+init: ../../../models/laya-multilingual/1c5edc17/torch
+model_name: laya-smart-home
+epochs: 3
+batch_size: 16
+lr_encoder: 2.5e-5
+lr_head: 1.0e-4
+unfreeze_layers: -1   # 全部 22 层（固定配方是最后 8 层）
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.06
+weight_decay: 0.01
+max_len: 1024
+head_max_len: 512
+seed: 7
+# 代价敏感：意图题金标为无关的样本损失 × 2（把无关判成控制更贵）；验证集 NLL 选 epoch 不加权
+gold_weights:
+  intent:
+    无关: 2.0

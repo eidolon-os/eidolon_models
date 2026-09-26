@@ -187,6 +187,33 @@ def cmd_eval(args) -> int:
     return rc
 
 
+def cmd_policy(args) -> int:
+    """Sweep the execute / confirm / ignore thresholds over saved eval reports (rows needed; no model)."""
+    from .evaluate import policy_metrics
+
+    grid_i = [float(x) for x in args.tau_intent.split(",")]
+    grid_s = [float(x) for x in args.tau_slots.split(",")]
+    out = {}
+    for path in args.report:
+        rows = json.loads(Path(path).read_text(encoding="utf-8")).get("rows")
+        if not rows:
+            _log(f"{path}: no rows (evaluated with --no-rows?); skipped")
+            continue
+        name = Path(path).stem
+        out[name] = []
+        _log(f"{name}: τ意图 τ槽位 | 无关直接执行 [95%] 无关要确认 | 执行精度 (n) | 控制: 直接执行对 / 执行错 / 确认 / 漏掉")
+        for ti in grid_i:
+            for ts in grid_s:
+                m = policy_metrics(rows, ti, ts, args.tau_confirm)
+                out[name].append(m)
+                fe, c = m["false_execute_无关"], m["控制"]
+                _log(f"  {ti:.2f} {ts:.2f} | {fe['rate']} {fe['ci95']} {m['confirm_无关']} | {m['execute']['precision']} "
+                     f"({m['execute']['n']}) | {c['execute_correct']} / {c['execute_wrong']} / {c['confirm']} / {c['ignore']}")
+    if args.out:
+        Path(args.out).write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    return 0
+
+
 def cmd_items(args) -> int:
     from .evaluate import dump_items
     from .model import load_checkpoint
@@ -403,6 +430,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="directory of <set>.logits.jsonl from a platform runner (e.g. deploy/rk3588/laya_npu.py): score those instead of running the model",
     )
     p.set_defaults(func=cmd_eval)
+
+    p = sub.add_parser(
+        "policy", help="sweep execute / confirm / ignore thresholds over saved eval reports (no model)"
+    )
+    p.add_argument("--report", action="append", required=True, help="eval report JSON with rows")
+    p.add_argument("--tau-intent", default="0.5,0.8,0.9,0.95,0.97,0.98,0.99")
+    p.add_argument("--tau-slots", default="0.5,0.9,0.95,0.97")
+    p.add_argument("--tau-confirm", type=float, default=0.5)
+    p.add_argument("--out")
+    p.set_defaults(func=cmd_policy)
 
     p = sub.add_parser(
         "items", help="dump model inputs + reference logits per eval question, for a platform runner"

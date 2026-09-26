@@ -167,6 +167,55 @@ def decision_metrics(rows: list[dict], threshold: float = 0.9) -> dict:
     return out
 
 
+def policy_metrics(rows: list[dict], tau_intent: float, tau_slots: float, tau_confirm: float = 0.5) -> dict:
+    """What a caller that acts on the answers would do (the product policy, 2026-09-26):
+
+    - **execute** without asking: intent is 控制 with p(控制) ≥ ``tau_intent`` and every other question's
+      top probability ≥ ``tau_slots``;
+    - **confirm** (hand back to the agent, which asks): not executed, but intent is 控制 or p(控制) ≥ ``tau_confirm``;
+    - **ignore**: everything else.
+
+    ``false_execute_无关`` is the safety number under this policy (a non-command acted on without asking);
+    ``confirm_无关`` is the nuisance (the agent asks about something nobody requested); for gold-控制 records,
+    ``execute_correct`` + ``execute_wrong`` + ``confirm`` + ``ignore`` = 1.
+    """
+    by: dict[str, dict] = defaultdict(dict)
+    for r in rows:
+        by[r["record_id"]][r["qid"]] = r
+    recs = [q for q in by.values() if "intent" in q]
+
+    def branch(q):
+        it = q["intent"]
+        pc = it["probabilities"].get("控制", 0.0)
+        slots = [x["p_top"] for k, x in q.items() if k != "intent"]
+        if it["pred"] == "控制" and pc >= tau_intent and all(p >= tau_slots for p in slots):
+            return "execute"
+        return "confirm" if it["pred"] == "控制" or pc >= tau_confirm else "ignore"
+
+    def share(qs, pred):
+        return round(sum(pred(q) for q in qs) / len(qs), 4) if qs else None
+
+    ok = lambda q: all(x["correct"] for x in q.values())  # noqa: E731
+    executed = [q for q in recs if branch(q) == "execute"]
+    ctrl = [q for q in recs if q["intent"]["gold"] == ["控制"]]
+    irr = [q for q in recs if q["intent"]["gold"] == ["无关"]]
+    qry = [q for q in recs if q["intent"]["gold"] == ["查询"]]
+    return {
+        "tau_intent": tau_intent, "tau_slots": tau_slots, "tau_confirm": tau_confirm,
+        "execute": {"n": len(executed), "precision": share(executed, ok),
+                    "ci95": _bootstrap_ci([float(ok(q)) for q in executed])},
+        "false_execute_无关": {"n": len(irr), "rate": share(irr, lambda q: branch(q) == "execute"),
+                              "ci95": _bootstrap_ci([float(branch(q) == "execute") for q in irr])},
+        "confirm_无关": share(irr, lambda q: branch(q) == "confirm"),
+        "false_execute_查询": share(qry, lambda q: branch(q) == "execute"),
+        "控制": {"n": len(ctrl),
+                 "execute_correct": share(ctrl, lambda q: branch(q) == "execute" and ok(q)),
+                 "execute_wrong": share(ctrl, lambda q: branch(q) == "execute" and not ok(q)),
+                 "confirm": share(ctrl, lambda q: branch(q) == "confirm"),
+                 "ignore": share(ctrl, lambda q: branch(q) == "ignore")},
+    }
+
+
 def dump_items(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> list[dict]:
     """Model inputs for every question of an eval set, with the reference (this backend's) logits:
     what a platform runner consumes, and what it is checked against."""

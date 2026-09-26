@@ -372,3 +372,22 @@ def test_gold_weights_make_the_loss_cost_sensitive():
              {"qid": "intent", "names": ["无关", "控制", "查询"], "label": 1},
              {"qid": "device", "names": ["无关", "灯"], "label": 0}]
     assert item_weights(chunk, {"intent": {"无关": 2.0}}) == [2.0, 1.0, 1.0]  # device's "无关" is not intent's
+
+
+def test_policy_metrics_split_execute_confirm_ignore():
+    from eidolon_laya_train.evaluate import policy_metrics
+
+    def rec(rid, gold, pc, slot_p, correct=True):
+        rows = [{"record_id": rid, "qid": "intent", "gold": [gold], "pred": "控制" if pc >= 0.5 else "无关",
+                 "p_top": max(pc, 1 - pc), "probabilities": {"控制": pc}, "correct": (gold == "控制") == (pc >= 0.5)}]
+        if gold == "控制":
+            rows.append({"record_id": rid, "qid": "device", "gold": ["灯"], "pred": "灯", "p_top": slot_p, "correct": correct})
+        return rows
+
+    rows = (rec("a", "控制", 0.99, 0.95) + rec("b", "控制", 0.99, 0.6) + rec("c", "控制", 0.7, 0.99)
+            + rec("d", "控制", 0.2, 0.99) + rec("e", "无关", 0.995, 0.9) + rec("f", "无关", 0.6, 0.9) + rec("g", "无关", 0.1, 0.9))
+    m = policy_metrics(rows, tau_intent=0.98, tau_slots=0.9)
+    c = m["控制"]
+    assert (c["execute_correct"], c["confirm"], c["ignore"]) == (0.25, 0.5, 0.25)  # a / b,c / d
+    assert m["false_execute_无关"]["rate"] == round(1 / 3, 4) and m["confirm_无关"] == round(1 / 3, 4)  # e / f
+    assert m["execute"]["n"] == 2 and m["execute"]["precision"] == 0.5  # a right, e a non-command acted on
