@@ -83,3 +83,58 @@ def test_without_ask_if_everything_is_one_pass():
 def test_bad_ask_if_is_rejected(ask_if, match):
     with pytest.raises(ValueError, match=match):
         engine(0).predict({"utterance": "开灯"}, QUESTIONS, ask_if=ask_if)
+
+
+class SlowSubmitBackend(PickBackend):
+    """Parallel backend with per-item futures: the first item (intent) is fast, the rest slow."""
+
+    def __init__(self, pick: int, slow: float = 0.4):
+        super().__init__(pick)
+        self.slow, self.submitted = slow, []
+
+    def submit(self, batch):
+        import threading
+        import time as _time
+        from concurrent.futures import Future
+
+        logits, act = self.forward(batch)
+        n = logits.shape[0]
+        self.submitted.append(n)
+        futs = [Future() for _ in range(n)]
+        k = batch["marker_mask"].sum(1)
+
+        def run(i, delay):
+            _time.sleep(delay)
+            futs[i].set_result((logits[i, : k[i]], act[i]))
+
+        for i in range(n):
+            threading.Thread(target=run, args=(i, 0.02 if i == 0 else self.slow), daemon=True).start()
+        return futs
+
+
+def speculative_engine(pick: int) -> DecisionEngine:
+    e = engine(pick)
+    return DecisionEngine(SlowSubmitBackend(pick), e.tokenizer, e.cfg, speculative=True)
+
+
+def test_speculative_returns_after_intent_for_a_non_command():
+    import time as _time
+
+    e = speculative_engine(2)
+    t = _time.perf_counter()
+    p = e.predict({"utterance": "邻居家的猫吵死了"}, QUESTIONS, ask_if=SMART_HOME)
+    assert _time.perf_counter() - t < 0.3  # did not wait for the 0.4 s device / action items
+    assert list(p.answers) == ["intent"] and p.skipped == {"device": "intent=无关", "action": "intent=无关"}
+    assert e.backend.submitted == [3]  # all three were started at once
+
+
+def test_speculative_matches_staged_answers():
+    for pick in (0, 1, 2):
+        spec = speculative_engine(pick).predict({"utterance": "开灯"}, QUESTIONS, ask_if=SMART_HOME)
+        staged = engine(pick).predict({"utterance": "开灯"}, QUESTIONS, ask_if=SMART_HOME)
+        assert spec.answers == staged.answers and spec.skipped == staged.skipped
+
+
+def test_speculative_needs_a_backend_that_can_submit():
+    e = engine(0)
+    assert not DecisionEngine(e.backend, e.tokenizer, e.cfg, speculative=True).speculative

@@ -11,6 +11,8 @@ import time
 from dataclasses import dataclass, field
 from typing import Any
 
+import numpy as np
+
 from .artifacts import Manifest, verify_onnx, verify_torch
 from .backends import Backend
 from .config import Settings
@@ -58,6 +60,7 @@ class DecisionEngine:
         max_len: int | None = None,
         head_max_len: int | None = None,
         name: str = "laya",
+        speculative: bool = False,
     ):
         self.backend = backend
         self.tokenizer = tokenizer
@@ -66,6 +69,8 @@ class DecisionEngine:
         # Budget for instruction + options; raise it for questions with many options.
         self.head_max_len = head_max_len or cfg.head_max_len
         self.name = name
+        # only when the backend can hand back each question as soon as it is done
+        self.speculative = speculative and hasattr(backend, "submit")
 
     def predict(
         self,
@@ -83,6 +88,8 @@ class DecisionEngine:
         for qid, qdef in questions.items():
             check_question(qid, qdef)
         ask_if = check_ask_if(questions, ask_if or {})
+        if ask_if and self.speculative:
+            return self._predict_speculative(state, questions, truncate_left, ask_if, t0)
         pending, answers, skipped = dict(questions), {}, {}
         tokens, truncated, forward_ms = 0, [], 0.0
         while pending:
@@ -110,7 +117,46 @@ class DecisionEngine:
             {q: skipped[q] for q in questions if q in skipped},
         )
 
-    def _forward(self, state: Any, questions: dict[str, dict], truncate_left: bool):
+    def _predict_speculative(self, state, questions, truncate_left, ask_if, t0) -> Prediction:
+        """Every question starts at once; wait only for those the earlier answers call for."""
+        ids, internals, items, truncated = self._prepare(state, questions, truncate_left)
+        index = {q: i for i, q in enumerate(ids)}
+        t1 = time.perf_counter()
+        futures = self.backend.submit(collate(items, self.tokenizer.pad_token_id))
+        pending, answers, skipped, asked = dict(questions), {}, {}, []
+        while pending:
+            ready = [q for q in pending if all(d in answers or d in skipped for d in ask_if.get(q, {}))]
+            need = []
+            for qid in ready:
+                why = next((f"{d}={answers[d]['choice']}" if d in answers else f"{d} skipped"
+                            for d, allowed in ask_if.get(qid, {}).items()
+                            if d in skipped or answers[d]["choice"] not in allowed), None)
+                if why:
+                    skipped[qid] = why
+                else:
+                    need.append(qid)
+                del pending[qid]
+            if need:
+                rows = [futures[index[q]].result() for q in need]
+                kmax = max(len(lo) for lo, _ in rows)
+                logits = np.full((len(need), kmax), -1e4, np.float32)
+                act = np.zeros((len(need), 2), np.float32)
+                for r, (lo, a) in enumerate(rows):
+                    logits[r, : len(lo)] = lo
+                    act[r] = a
+                answers |= decode_answers(need, [internals[index[q]] for q in need],
+                                          [items[index[q]] for q in need], logits, act, self.cfg)
+                asked += need
+        return Prediction(
+            {q: answers[q] for q in questions if q in answers},
+            sum(len(items[index[q]]["ids"]) for q in asked),
+            [q for q in truncated if q in asked],
+            (time.perf_counter() - t1) * 1000,
+            (time.perf_counter() - t0) * 1000,
+            {q: skipped[q] for q in questions if q in skipped},
+        )
+
+    def _prepare(self, state: Any, questions: dict[str, dict], truncate_left: bool):
         ids, internals, items, truncated = [], [], [], []
         for qid, qdef in questions.items():
             q = to_internal(qdef)
@@ -126,6 +172,10 @@ class DecisionEngine:
             items.append({"ids": seq, "markers": markers, "qtype": QTYPES[q["t"]]})
             if cut:
                 truncated.append(qid)
+        return ids, internals, items, truncated
+
+    def _forward(self, state: Any, questions: dict[str, dict], truncate_left: bool):
+        ids, internals, items, truncated = self._prepare(state, questions, truncate_left)
         batch = collate(items, self.tokenizer.pad_token_id)
         t1 = time.perf_counter()
         logits, act = self.backend.forward(batch)
@@ -201,6 +251,7 @@ def load_engine(settings: Settings, log=print) -> tuple[DecisionEngine, Manifest
         max_len=settings.max_len,
         head_max_len=settings.head_max_len,
         name=manifest.name,
+        speculative=settings.speculative,
     )
     log(
         f"loaded {manifest.name}@{manifest.revision[:8]} backend={backend.name} "

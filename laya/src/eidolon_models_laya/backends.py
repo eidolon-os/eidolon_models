@@ -154,6 +154,7 @@ class RknnBackend:
         self._act = dict(np.load(npu_dir / "act_head.npz"))
         self._pool = ThreadPoolExecutor(len(self._placement))
         self._lock = threading.Lock()  # one batch at a time: its items already fill the cores
+        # (released by whichever worker finishes the batch's last item, so a plain Lock, not RLock)
 
     def _bucket(self, n: int) -> int:
         for b in self._buckets:
@@ -162,7 +163,8 @@ class RknnBackend:
         raise ValueError(f"sequence of {n} tokens exceeds the largest NPU bucket {self._buckets[-1]}")
 
     def schedule(self, lengths: list[int]) -> dict[int, list[tuple[int, int]]]:
-        """Item index -> core, longest first onto the least-loaded core that has the bucket (cost ~ L)."""
+        """Item index -> core: longest first onto the least-loaded core that has the bucket (cost ~ L);
+        each core then runs its items shortest first, so short questions (intent) finish earliest."""
         load = {c: 0 for c in self._placement}
         queues: dict[int, list[tuple[int, int]]] = {c: [] for c in self._placement}
         for i in sorted(range(len(lengths)), key=lambda i: -lengths[i]):
@@ -170,31 +172,63 @@ class RknnBackend:
             core = min((c for c, bs in self._placement.items() if L in bs), key=lambda c: load[c])
             load[core] += L
             queues[core].append((i, L))
-        return queues
+        return {c: sorted(q, key=lambda x: x[1]) for c, q in queues.items()}
 
-    def forward(self, batch: dict[str, np.ndarray]) -> tuple[np.ndarray, np.ndarray]:
+    def submit(self, batch: dict[str, np.ndarray]) -> list:
+        """Start every item of the batch; one future per item resolving to ``(logits[k], act[2])``.
+        The NPU stays busy with this batch (the next one waits) until all of its items are done,
+        even those nobody waits for."""
+        import threading
+        from concurrent.futures import Future
+
         from .export_npu import act_from_logits, npu_inputs, score_hidden
 
-        n, kmax = batch["marker_mask"].shape
+        n = batch["marker_mask"].shape[0]
         lengths = [int(batch["attention_mask"][i].sum()) for i in range(n)]
-        logits = np.full((n, kmax), -1e4, np.float32)
-        act = np.zeros((n, 2), np.float32)
+        futures = [Future() for _ in range(n)]
+        self._lock.acquire()
+        try:
+            queues = self.schedule(lengths)
+        except Exception:
+            self._lock.release()
+            raise
+        left, guard = [n], threading.Lock()
+
+        def finished():
+            with guard:
+                left[0] -= 1
+                if left[0] == 0:
+                    self._lock.release()
 
         def run(core, queue):
             for i, L in queue:
-                ids = batch["input_ids"][i, : lengths[i]].tolist()
-                mk = batch["marker_mask"][i].astype(bool)
-                markers = batch["marker_pos"][i][mk].tolist()
-                h = np.asarray(self._rt[(core, L)].inference(
-                    inputs=npu_inputs(ids, int(batch["qtype"][i]), L, self._emb, self._type))[0], np.float32)[0]
-                lo = score_hidden(h, markers, self._sc)
-                logits[i, : len(lo)] = lo
-                act[i] = act_from_logits(h[0], lo, self._act)
+                try:
+                    ids = batch["input_ids"][i, : lengths[i]].tolist()
+                    markers = batch["marker_pos"][i][batch["marker_mask"][i].astype(bool)].tolist()
+                    x = npu_inputs(ids, int(batch["qtype"][i]), L, self._emb, self._type)
+                    h = np.asarray(self._rt[(core, L)].inference(inputs=x)[0], np.float32)[0]
+                    lo = score_hidden(h, markers, self._sc)
+                    futures[i].set_result((lo, act_from_logits(h[0], lo, self._act)))
+                except Exception as exc:  # noqa: BLE001 - surfaced through the future
+                    futures[i].set_exception(exc)
+                finally:
+                    finished()
 
-        with self._lock:
-            futures = [self._pool.submit(run, c, q) for c, q in self.schedule(lengths).items() if q]
-            for f in futures:
-                f.result()
+        if n == 0:
+            self._lock.release()
+        for core, queue in queues.items():
+            if queue:
+                self._pool.submit(run, core, queue)
+        return futures
+
+    def forward(self, batch: dict[str, np.ndarray]) -> tuple[np.ndarray, np.ndarray]:
+        n, kmax = batch["marker_mask"].shape
+        logits = np.full((n, kmax), -1e4, np.float32)
+        act = np.zeros((n, 2), np.float32)
+        for i, f in enumerate(self.submit(batch)):
+            lo, a = f.result()
+            logits[i, : len(lo)] = lo
+            act[i] = a
         return logits, act
 
     def describe(self) -> dict:

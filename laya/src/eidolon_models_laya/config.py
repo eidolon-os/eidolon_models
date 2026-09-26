@@ -89,6 +89,10 @@ class Settings:
     #: None keeps the checkpoint's own budget for instruction + options (256 for
     #: laya-multilingual). Many options share it, so a long device list needs more.
     head_max_len: int | None = None
+    #: with ``options.ask_if``: start every question at once and answer as soon as the earlier answers
+    #: settle what is needed (an utterance judged 无关 returns after the intent question). Only backends
+    #: that run questions in parallel (``rknn``) can; the others stage the questions instead.
+    speculative: bool = True
     max_pending: int = 4
     max_questions: int = 32
     max_body_bytes: int = 256 * 1024
@@ -110,6 +114,7 @@ class Settings:
             threads=_int(env, "EIDOLON_LAYA_THREADS", 0),
             max_len=_int(env, "EIDOLON_LAYA_MAX_LEN", None, minimum=64),
             head_max_len=_int(env, "EIDOLON_LAYA_HEAD_MAX_LEN", None, minimum=32),
+            speculative=_bool(env, "EIDOLON_LAYA_SPECULATIVE", True),
             max_pending=_int(env, "EIDOLON_LAYA_MAX_PENDING", 4, minimum=1),
             max_questions=_int(env, "EIDOLON_LAYA_MAX_QUESTIONS", 32, minimum=1),
             max_body_bytes=_int(env, "EIDOLON_LAYA_MAX_BODY_BYTES", 256 * 1024, minimum=1024),
