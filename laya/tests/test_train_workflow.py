@@ -322,3 +322,31 @@ def test_assemble_tag_weights(tmp_path):
     m2 = assemble({**base, "tag_weights": {"implicit-intent": 2.0}}, tmp_path / "b", tmp_path)
     n_impl = sum(1 for r in recs if r.tags[0] == "implicit-intent")
     assert m2["counts"]["train"] == m1["counts"]["train"] + n_impl
+
+
+def test_external_logits_are_scored_like_the_model(tmp_path):
+    """A platform runner's logits (eval --logits) go through the same calibration and metrics."""
+    tok_dir = HERE.parent / "models" / "laya-multilingual" / "1c5edc17" / "torch" / "tokenizer"
+    if not (tok_dir / "tokenizer.json").exists():
+        pytest.skip("base tokenizer not fetched")
+    from transformers import AutoTokenizer
+
+    from eidolon_laya_train.evaluate import evaluate, item_key
+    from eidolon_laya_train.model import Loaded, record_items
+
+    scn = Scenario.load(SMART_HOME)
+    spec = {"kind": "import", "adapter": "evals_cases", "path": "../../../evals/smart-home", "name": "locked"}
+    records = list(generate(scn, spec))[:5]
+    path = tmp_path / "set.jsonl"
+    write_jsonl(path, records)
+    loaded = Loaded(model=None, tok=AutoTokenizer.from_pretrained(tok_dir),
+                    cfg={"max_len": 1024, "head_max_len": 512, "temperature": [2.0, 1.0, 1.0]}, device="cpu")
+    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
+    logits = {item_key(it): [float(j == len(it["markers"]) - 1) * 4 for j in range(len(it["markers"]))] for it in items}
+    report = evaluate(loaded, path, logits=logits)
+    assert len(report["rows"]) == len(items)
+    for row, it in zip(report["rows"], items):
+        assert row["pred"] == it["names"][-1]  # the option we gave the largest logit
+        assert abs(row["p_top"] - 1 / (1 + (len(it["markers"]) - 1) * 2.718281828 ** -2)) < 1e-3  # T = 2 applied
+    with pytest.raises(ValueError, match="no logits"):
+        evaluate(loaded, path, logits={})

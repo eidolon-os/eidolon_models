@@ -147,8 +147,15 @@ def cmd_eval(args) -> int:
     out_dir = Path(args.out)
     rc = 0
     for path in args.eval_set:
-        report = evaluate(loaded, Path(path))
         name = Path(path).stem
+        logits = None
+        if args.logits:  # scored from a platform runner's output instead of this backend's forward
+            logits = {}
+            for line in (Path(args.logits) / f"{name}.logits.jsonl").read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    d = json.loads(line)
+                    logits[d["key"]] = d["logits"]
+        report = evaluate(loaded, Path(path), logits=logits)
         write_report(report, out_dir / f"{name}.json", keep_rows=not args.no_rows)
         _log(f"{name}: {json.dumps(report['overall'], ensure_ascii=False)}")
         d = report["decision"]
@@ -178,6 +185,23 @@ def cmd_eval(args) -> int:
                     )
             rc = rc or (0 if g["passed"] else 4)
     return rc
+
+
+def cmd_items(args) -> int:
+    from .evaluate import dump_items
+    from .model import load_checkpoint
+
+    loaded = load_checkpoint(args.checkpoint, args.device)
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for path in args.eval_set:
+        items = dump_items(loaded, Path(path))
+        name = Path(path).stem
+        (out_dir / f"{name}.items.jsonl").write_text(
+            "".join(json.dumps(it, ensure_ascii=False) + "\n" for it in items), encoding="utf-8"
+        )
+        _log(f"{name}: {len(items)} items -> {out_dir / f'{name}.items.jsonl'}")
+    return 0
 
 
 def cmd_package(args) -> int:
@@ -370,7 +394,20 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--no-rows", action="store_true")
     p.add_argument("--device")
+    p.add_argument(
+        "--logits",
+        help="directory of <set>.logits.jsonl from a platform runner (e.g. deploy/rk3588/laya_npu.py): score those instead of running the model",
+    )
     p.set_defaults(func=cmd_eval)
+
+    p = sub.add_parser(
+        "items", help="dump model inputs + reference logits per eval question, for a platform runner"
+    )
+    p.add_argument("--checkpoint", required=True)
+    p.add_argument("--eval-set", action="append", required=True)
+    p.add_argument("--out", required=True)
+    p.add_argument("--device")
+    p.set_defaults(func=cmd_items)
 
     p = sub.add_parser(
         "package", help="checkpoint -> models/<name>/<rev>/ (what serve / export-onnx read)"

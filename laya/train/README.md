@@ -27,6 +27,22 @@ scenario.yaml ──gen──▶ cases.jsonl ──label──▶ labeled.jsonl 
 
 **统一的部分**：从场景到 `models/<name>/<rev>/` 全部与推理平台无关——同一个打包目录，torch 后端直接加载，
 ONNX 由 `export` 生成，RKNN / AXERA / CoreML 之类是各自平台的导出器，读同一个目录、写到它旁边的子目录。
+平台上的精度用同一套评测验：`items` 导出每道题的输入和参考 logits → 平台跑出 `<set>.logits.jsonl` →
+`eval --logits` 用**同样的校准和指标**打分，和 torch 的报告直接可比。RK3588 的做法：
+
+```bash
+t=".venv/bin/eidolon-laya-train"                                                  # Mac
+scripts/eidolon-laya --model-dir models/laya-smart-home/<rev> export-npu          # → npu/：每档一个静态 ONNX，逐档与 PyTorch 对数
+$t items --checkpoint train/runs/<run>/checkpoint --eval-set <set.jsonl> --out <dir>/items
+# 板上（rknn-toolkit2 / toolkit-lite2 + numpy）：
+python deploy/rk3588/laya_npu.py convert <npu_dir>                                 # hidden_l<L>.onnx → .rknn（fp16）
+python deploy/rk3588/laya_npu.py run <npu_dir> <dir>/items <dir>/npu               # → <set>.logits.jsonl + run.json（延迟、与参考的一致率）
+# 回到 Mac：
+$t eval --checkpoint train/runs/<run>/checkpoint --eval-set <set.jsonl> --logits <dir>/npu --out <dir>/eval
+```
+
+NPU 图只放编码器 + 头（输入词向量，形状固定为 1 × L）；查词表和取 marker + 打分在 CPU 上做——25.6 万行的词表
+Gather 不适合 NPU，打分器只有几个选项向量、CPU 上不到 1 ms。
 换场景（陪伴路由、客服、智能家居）只换 `scenarios/<name>/` 下的文件，命令一个字不改。
 
 目录：

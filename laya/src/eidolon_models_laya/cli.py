@@ -1,4 +1,4 @@
-"""``eidolon-laya``: fetch | export-onnx | doctor | serve | predict."""
+"""``eidolon-laya``: fetch | export-onnx | export-npu | doctor | serve | predict."""
 
 from __future__ import annotations
 
@@ -44,6 +44,20 @@ def cmd_export(args: argparse.Namespace) -> int:
         )
         return 2
     export_onnx(manifest, force=args.force)
+    return 0
+
+
+def cmd_export_npu(args: argparse.Namespace) -> int:
+    from .export_npu import export_npu
+
+    manifest = Manifest.load(_settings(args).model_dir)
+    problems = verify_torch(manifest, checksums=False)
+    if problems:
+        print("PyTorch weights missing; run `eidolon-laya fetch` first:\n  " + "\n  ".join(problems))
+        return 2
+    buckets = tuple(sorted(int(x) for x in args.buckets.split(","))) if args.buckets else None
+    out = export_npu(manifest, force=args.force, **({"buckets": buckets} if buckets else {}))
+    print(f"next, on the board: python deploy/rk3588/laya_npu.py convert {out}")
     return 0
 
 
@@ -151,6 +165,14 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("export-onnx", help="export ONNX from the PyTorch weights (export extra)")
     p.add_argument("--force", action="store_true")
     p.set_defaults(func=cmd_export)
+
+    p = sub.add_parser(
+        "export-npu",
+        help="static-shape ONNX per sequence bucket + CPU-side tables, for NPU converters (export extra)",
+    )
+    p.add_argument("--force", action="store_true")
+    p.add_argument("--buckets", help="comma-separated sequence lengths (default 128,256,512)")
+    p.set_defaults(func=cmd_export_npu)
 
     p = sub.add_parser("doctor", help="check files, checksums, runtimes and exposure")
     _runtime_args(p)

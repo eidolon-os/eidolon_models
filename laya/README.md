@@ -24,14 +24,16 @@ laya/
 │   ├── backends.py               TorchBackend / OnnxBackend：只做前向
 │   ├── engine.py                 校验 → 拼序列 → 前向 → 解码
 │   ├── export.py                 PyTorch → ONNX，并与 PyTorch 对数后写 export.json
+│   ├── export_npu.py             PyTorch → 按长度分档的静态形状 ONNX + CPU 侧表（给 NPU 转换器），逐档对数
 │   ├── service.py                aiohttp HTTP API
-│   └── cli.py                    fetch | export-onnx | doctor | serve | predict
+│   └── cli.py                    fetch | export-onnx | export-npu | doctor | serve | predict
 ├── models/laya-multilingual/1c5edc17/
 │   ├── manifest.json             提交：来源、revision、每个文件的 sha256
 │   ├── torch/                    fetch 得到（gitignore）
-│   └── onnx/                     export-onnx 生成（gitignore）：model.onnx + model.onnx.data + export.json
+│   ├── onnx/                     export-onnx 生成（gitignore）：model.onnx + model.onnx.data + export.json
+│   └── npu/                      export-npu 生成（gitignore）：hidden_l<L>.onnx + tok_emb_fp16.npy + type_emb.npy + scorer.npz
 ├── examples/xiyouji-addressee.json
-├── deploy/                       systemd unit + 部署到 ECS 的脚本
+├── deploy/                       systemd unit + 部署到 ECS 的脚本；rk3588/laya_npu.py（板上：转 RKNN、在 NPU 上跑评测输入）
 └── tests/                        单测（无模型）+ 与上游对拍（需模型）
 ```
 

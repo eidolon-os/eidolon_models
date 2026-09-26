@@ -44,11 +44,26 @@ def temperature_for(cfg: dict, qtype: int, k: int) -> float:
     return clamp_temperature(temps[qtype])
 
 
-def score_records(loaded: Loaded, records: list[Record], batch_size: int = 16) -> list[dict]:
+def item_key(it: dict) -> str:
+    return f"{it['record_id']}/{it['qid']}"
+
+
+def score_records(
+    loaded: Loaded, records: list[Record], batch_size: int = 16, logits: dict[str, list[float]] | None = None
+) -> list[dict]:
+    """``logits`` (item key → raw logits) replaces the model forward: that is how a platform runner's
+    output (``export`` → device → ``*.logits.jsonl``) is scored with exactly the same calibration and metrics."""
     by_id = {r.id: r for r in records}
     items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
+    if logits is None:
+        scored = score_items(loaded, items, batch_size)
+    else:
+        missing = [item_key(it) for it in items if item_key(it) not in logits]
+        if missing:
+            raise ValueError(f"{len(missing)} items have no logits, e.g. {missing[0]}")
+        scored = [dict(it, logits=logits[item_key(it)]) for it in items]
     rows = []
-    for it in score_items(loaded, items, batch_size):
+    for it in scored:
         r = by_id[it["record_id"]]
         q = r.questions[it["qid"]]
         T = temperature_for(loaded.cfg, it["qtype"], len(it["markers"]))
@@ -152,9 +167,23 @@ def decision_metrics(rows: list[dict], threshold: float = 0.9) -> dict:
     return out
 
 
-def evaluate(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> dict:
+def dump_items(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> list[dict]:
+    """Model inputs for every question of an eval set, with the reference (this backend's) logits:
+    what a platform runner consumes, and what it is checked against."""
     records = list(read_jsonl(eval_path))
-    rows = score_records(loaded, records, batch_size)
+    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
+    return [
+        {"key": item_key(it), "qtype": it["qtype"], "ids": list(it["ids"]), "markers": list(it["markers"]),
+         "ref_logits": [round(x, 5) for x in it["logits"]]}
+        for it in score_items(loaded, items, batch_size)
+    ]
+
+
+def evaluate(
+    loaded: Loaded, eval_path: Path, *, batch_size: int = 16, logits: dict[str, list[float]] | None = None
+) -> dict:
+    records = list(read_jsonl(eval_path))
+    rows = score_records(loaded, records, batch_size, logits)
     by_scn, by_qt, by_qid, by_tag = (
         defaultdict(list),
         defaultdict(list),
