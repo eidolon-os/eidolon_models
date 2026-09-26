@@ -1,0 +1,360 @@
+{"home": "apartment", "text": "要是扫地机器人能自己把集尘盒倒了就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "要是客厅空调能自己看天气开关就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "要是电动晾衣架能自己把衣服叠好就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "真希望洗碗机能顺手把碗放回柜子里", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "要是烤箱能自己看着火候就省心了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "要是充电桩能给电动车和自行车一起充就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "要是电饭煲能自己淘米就完美了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "真希望宠物喂食器能分得清猫和狗", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "要是石头扫地机能上楼梯就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "要是太阳能热水器阴天也能烧得这么热就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "要是一楼扫地机能自己爬到二楼去就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "elder", "text": "要是电动床也带按摩功能就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "family3", "text": "真希望烘干机烘出来的衬衫不起皱，每次都得再熨一遍", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "kids", "text": "要是电动摇篮能自己唱摇篮曲就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "mega", "text": "要是影音室投影仪能自己找片子就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "minimal", "text": "要是扫地机能顺便把桌子也擦了就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "office", "text": "要是咖啡机能自己装胶囊就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "pets", "text": "要是智能猫砂盆能自己把砂也换了就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "rental", "text": "真希望公共洗衣机能分开每个人的衣服", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "studio", "text": "要是门锁能用手表开就好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "上个月要是每天用完都关热水器，燃气费能省一半", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "要是上周走的时候锁了智能门锁，我也不用半路打车回来", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "早知道买洗衣机的时候选带烘干的了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "当初要是没装地暖，装修还能省好几万", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "如果那天花园浇水阀没忘关，草坪也不会淹成那样", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "假如冰箱门那晚关严了，那一冰箱菜就不会坏", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "要是上个月没开着投影仪出门，灯泡也不会烧", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "如果那次出门前开了安防警报，小偷也不敢翻进来", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "早知道美的风尊空调这么费电，当时就买一级能效的了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "要是前天晚上把卷帘门拉下来了，那袋化肥就不会被人拿走", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "上次梅雨天要是二楼除湿机一直开着，衣柜里那几件衣服就不会发霉了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "elder", "text": "要是那天燃气阀门早点关，也不至于报警器响了半天", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "family3", "text": "假如当初儿童房摄像头装高一点，孩子就够不着了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "kids", "text": "如果前天晚上婴儿房加湿器开着，宝宝可能就不会鼻子干得哭了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "mega", "text": "要是装修时没在衣帽间装空调，能省下一台的钱", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "minimal", "text": "如果那天出门记得锁门锁，我也不用在公司担心一整天", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "office", "text": "假如当时买的升降桌是双电机的，现在也不会升得这么慢", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "pets", "text": "要是上次出差前给狗粮喂食器多装点粮，狗子也不会饿一天", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "rental", "text": "当初要是租带独立热水器的房间，也不用天天跟室友抢公共热水器", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "studio", "text": "如果上周没开着空调睡一晚，我也不会感冒", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "这客厅空调开起来是真安静，比老房子那台强多了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "扫地机器人又笨又吵，买的时候真不该图便宜", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "床头灯这个暖黄色挺有感觉的", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "这个空气净化器颜值挺高的，放客厅刚好", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "这台洗碗机洗得是真干净，油渍一点不剩", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "新风机装了以后家里灰少多了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "投影仪的画质比我想的好太多了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "油烟机的造型挺好看，就是价格有点虚高", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "电饭煲煮的饭就是比锅里焖的香", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "门铃的画面还挺清楚，连快递员的脸都看得见", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "小度音箱的音质也就那样，放个歌还行", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "戴森净化风扇贵是贵，做工确实没话说", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "院子摄像头晚上也拍得挺清楚，这钱花得值", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "这冰柜是真能装，半头猪都放得下", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "楼梯灯那个感应灯带做得挺高级的", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "一楼洗碗机洗得不太干净，碗底老有残渣", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "elder", "text": "这电动床比医院那种好用多了，我妈挺喜欢", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "family3", "text": "烘干机烘出来的毛巾软软的，挺舒服", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "kids", "text": "奶瓶消毒柜是今年买得最值的东西", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "mega", "text": "影音室音响的低音震得人心里发颤，太过瘾了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "office", "text": "这升降桌真是救了我的腰", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "pets", "text": "宠物饮水机的水泵声音几乎听不见，挺好", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "studio", "text": "这投影仪小是小，投到墙上效果还不错", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "rental", "text": "我房间空调制冷挺快的，房东这回没坑我", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "minimal", "text": "扫地机虽然便宜，扫得倒挺干净", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "上周末我把客厅窗帘全拉开，猫在窗台晒了一下午", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "我前天用电饭煲煲了锅粥，全家都说好喝", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "上个月我把主卧空调的滤网拆下来洗过一次", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "昨晚我开着智能音箱听相声，听着听着就睡着了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "去年冬天地暖一直开着，家里暖和得能穿短袖", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "前两天我用烤箱烤了只鸡，外皮特别脆", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "上次停电，车库门是我手动摇上去的", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "周末我在书房开着落地扇看了一下午书", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "我小时候家里的热水器还是烧煤的", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "昨天花园浇水阀浇了一个小时，番茄苗全都精神了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "上周我把海尔冰箱的冷藏室彻底擦了一遍", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "昨天好太太晾衣架升到顶的时候卡了一下，后来又好了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "去年秋收的时候，水泵连着抽了三天水", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "前年装太阳能热水器那天，师傅在楼顶忙到天黑", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "搬进来第一天，二楼扫地机就从楼梯口摔下去了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "昨晚我在一楼客厅电视上看完了那部剧", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "elder", "text": "我爸上个礼拜按了紧急呼叫按钮，结果是按错了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "elder", "text": "前天社区的人来检查过燃气报警器", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "family3", "text": "上周末我把儿童房加湿器的水箱刷了一遍", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "kids", "text": "宝宝满月那天，婴儿监视器录下了他第一次笑", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "mega", "text": "上次朋友来，在影音室投影仪上打了一晚上游戏", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "office", "text": "昨天开会前我把升降桌升起来站着开了两小时", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "pets", "text": "猫第一次用智能猫砂盆的时候吓得跳了出来", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "rental", "text": "上个月室友把公共洗衣机的排水管弄堵了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "studio", "text": "昨天我开着风扇睡了一觉，醒来嗓子有点哑", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "每次洗衣机甩干，阳台都跟地震似的", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "扫地机器人一到晚上就爱往床底下钻，每回都卡住", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "每次用热水器洗澡，都要放半天冷水才出热水", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "每回炒菜开油烟机，跟旁边人说话都得扯着嗓子", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "洗碗机每次都要洗两个多小时，太磨叽了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "house", "text": "门铃老是半夜误报，说门口有人", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "每年冬天开地暖那几个月，嗓子都干得难受", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "villa", "text": "安防警报隔三岔五被猫触发，邻居都有意见了", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "石头扫地机每次都在地毯边上转圈，转半天出不来", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "brand", "text": "苏泊尔电饭煲每次煮饭底下都有一层锅巴", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "每年夏天鸡舍灯底下都围一圈虫子，扫都扫不完", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "countryside", "text": "大门每次开到一半都要停一下，也不知道咋回事", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "duplex", "text": "二楼浴霸每次一开，镜子上就全是雾", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "elder", "text": "我妈总嫌走廊夜灯感应太慢，每次走两步才亮", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "family3", "text": "烘干机每次烘完，滤网上全是毛，天天要清", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "kids", "text": "婴儿房窗帘每次关到最后都会咯噔响一下", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "mega", "text": "主卧净化器老是半夜自己切到高速档，吵得人醒", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "office", "text": "咖啡机每次打奶泡都呲呲响，开会的时候特别尴尬", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "pets", "text": "狗粮喂食器每次出粮都不匀，有时候多有时候少", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "rental", "text": "公共热水器每天晚上都被室友用光，轮到我就只剩凉水", "intent": "无关", "tags": ["non-command", "speech-act", "mood"]}
+{"home": "apartment", "text": "你有没有定时关空调这个功能", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "你是只能开关电视，还是连换台也会", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "智能门锁这种东西你也能管吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "冰箱你也能管得了吗，还是只能管灯", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "充电桩的预约充电你支持吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "你认得出门铃里是谁在按吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "你一共能控制家里多少台设备，包括洗碗机吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "你懂不懂怎么调投影仪的梯形校正", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "brand", "text": "你能分得清格力云锦空调和美的风尊空调吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "countryside", "text": "水泵这种你也能控制？", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "duplex", "text": "一楼扫地机和二楼扫地机你是分开认的吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "elder", "text": "紧急呼叫按钮按了以后你会通知我吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "family3", "text": "你支不支持让烘干机烘完自动提醒", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "kids", "text": "你有没有那种听到宝宝哭就自动开电动摇篮的功能", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "minimal", "text": "除了扫地机，你还能管家里什么", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "office", "text": "升降桌你能记住几个高度档位", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "pets", "text": "你能看懂宠物摄像头里猫在干嘛吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "rental", "text": "室友那边的公共区空调你也有权限吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "studio", "text": "你会不会学我的习惯，自己开关窗帘", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "你昨天半夜把床头灯关了，我摸黑找了半天手机", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "上回你把客厅空调开成了制热，热得我一身汗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "你前天把花园浇水阀开了一整晚，水费估计要涨", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "上周你把洗衣机和洗碗机弄混了一次", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "brand", "text": "你昨天把米家台灯Pro调成冷白光了，我看书的时候还以为坏了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "duplex", "text": "你上次把二楼书房空调当成主卧的开了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "elder", "text": "昨晚你把电动床升起来的时候我吓了一跳", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "family3", "text": "前天早上你按时把主卧窗帘拉开了，挺准的", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "kids", "text": "你那天半夜把婴儿房夜灯打开了，宝宝一下就醒了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "mega", "text": "你上周末把茶室灯和餐厅灯搞反了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "pets", "text": "上次你给猫粮喂食器多放了一份，猫都吃撑了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "office", "text": "你昨天早上帮我把咖啡机提前开了，挺贴心", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "minimal", "text": "你上次半夜突然把灯打开，吓我一跳", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "你刚才关客厅主灯的反应真快", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "你怎么老把加湿器当成空气净化器", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "你每次关投影仪都要反应好几秒，太慢了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "你开车库门比遥控器还快", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "你怎么老是把书房灯和主卧灯搞混", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "说真的，你管电视和投影仪管得挺明白的", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "你刚才关落地扇的时候顺便把书房灯也关了，挺聪明", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "duplex", "text": "你怎么每次都把楼梯灯当成二楼走廊灯", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "elder", "text": "你比我儿子靠谱，燃气阀门每天晚上都记得检查", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "family3", "text": "你是不是有点笨，上回让你关儿童房顶灯你把次卧顶灯关了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "kids", "text": "你刚刚开温奶器挺麻利的", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "rental", "text": "你老是把我房间的灯和公共客厅灯弄混，室友都说我了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "studio", "text": "你这反应速度，开个窗帘都要等三秒", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "minimal", "text": "你除了开关灯，别的事好像都不太会啊", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "床头灯是不是也接到你这儿了", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "温湿度计的数据你多久同步一次", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "宠物喂食器绑在你账号下面了吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "house", "text": "你那边登记的地暖是在客厅还是在书房", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "villa", "text": "你设备列表里的摄像头是玄关那个吧", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "duplex", "text": "你是按楼层区分一楼客厅灯和二楼主卧灯的吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "elder", "text": "智能药盒是连在你这儿还是连在我女儿手机上", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "family3", "text": "儿童房摄像头在你这儿是谁有权限看", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "kids", "text": "婴儿监视器是跟你连的还是单独一个app", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "mega", "text": "你怎么知道哪台是保姆房空调，是按房间名认的吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "office", "text": "显示器插座在你那里显示的是哪个房间", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "pets", "text": "宠物烘干箱你那边能看到吗，我记得绑过", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "rental", "text": "公共热水器是房东绑的还是我绑的，你那边能看出来吗", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "studio", "text": "你是用什么协议连投影仪的", "intent": "无关", "tags": ["non-command", "speech-act", "meta"]}
+{"home": "apartment", "text": "我去阳台把电动晾衣架放下来收衣服", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "客厅窗帘我自己拉，你别动", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "等会儿我自己去把热水器打开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "床头灯我顺手就关了，不用你", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "电饭煲我自己按煮饭键就行", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "我出门的时候自己锁智能门锁，你不用管", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "扫地机器人我来手动开，你别插手", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "空气净化器的滤网我下午自己去换", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "车库门我倒车的时候自己拿遥控开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "油烟机我自己按，你别乱开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "我去厨房顺便把烤箱关了", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "花园浇水阀我待会儿自己去拧", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "我自己去给宠物喂食器加粮", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "落地扇我伸手就能关，不用你", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "house", "text": "晚上我自己把安防警报布防，你别提前开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "villa", "text": "我下楼的时候顺手把饮水机插座关了", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "villa", "text": "投影仪我自己拿遥控器开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "villa", "text": "洗碗机我吃完饭自己去启动", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "villa", "text": "主卧空调我睡前自己关，别给我定时", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "villa", "text": "我自己去门口按门铃试试响不响", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "brand", "text": "鹿客门锁我走的时候自己反锁", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "brand", "text": "我去阳台把好太太晾衣架升上去", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "countryside", "text": "我去院子把大门关上，不用你弄", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "countryside", "text": "鸡舍灯我喂完鸡自己关", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "duplex", "text": "我上楼顺便把二楼走廊灯关了", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "duplex", "text": "二楼晾衣架我自己去降", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "elder", "text": "电动床我自己用手柄摇，你别动它", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "elder", "text": "燃气阀门我睡前自己去关", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "elder", "text": "我起夜自己开床边夜灯就行", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "family3", "text": "烘干机我等衣服洗完自己去开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "family3", "text": "儿童房顶灯我哄完孩子自己关", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "kids", "text": "温奶器我自己按，你别开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "kids", "text": "我去婴儿房把窗帘拉上，你别出声", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "kids", "text": "奶瓶消毒柜我洗完奶瓶自己启动", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "mega", "text": "影音室投影仪我进去自己开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "mega", "text": "我顺路把玄关灯关了", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "mega", "text": "茶室灯我泡完茶自己关", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "minimal", "text": "灯我自己关，你歇着吧", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "minimal", "text": "扫地机我自己按启动键", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "office", "text": "升降桌我自己按按钮升就行", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "office", "text": "咖啡机我等会儿自己去开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "office", "text": "电动窗帘我自己手拉就行", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "pets", "text": "智能猫砂盆的砂我周末自己换", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "pets", "text": "狗粮喂食器我出门前自己去加满", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "rental", "text": "我房间的台灯我自己开，不用你", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "rental", "text": "公共大门锁我下楼自己去锁", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "rental", "text": "屋里空调我自己拿遥控开，你别管", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "studio", "text": "窗帘我起床了自己拉", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "studio", "text": "风扇我用脚就能关", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "studio", "text": "热水器我洗澡前自己去开", "intent": "无关", "tags": ["non-command", "speech-act", "self-do"]}
+{"home": "apartment", "text": "空气净化器的滤网一般多久换一次", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "apartment", "text": "热水器屏幕上跳 E1 是哪里出问题了", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "apartment", "text": "洗衣机的筒自洁要用什么清洁剂", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "apartment", "text": "扫地机器人的边刷缠了头发怎么弄下来", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "apartment", "text": "智能门锁没电了从外面怎么打开", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "apartment", "text": "加湿器里能加自来水吗，会不会有白雾", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "地暖整个供暖季的燃气费一般多少", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "洗碗机能洗不粘锅吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "烤箱第一次用要先空烧吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "油烟机的油网用什么泡能洗干净", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "充电桩七千瓦的充满一辆车要几个小时", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "新风机的初效滤网能水洗吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "villa", "text": "投影仪用了三年画面发黄，是不是得换光源了", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "villa", "text": "冰箱冷冻室结了厚冰要怎么除", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "villa", "text": "电视和投影仪看久了哪个更伤眼睛", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "villa", "text": "电动晾衣架的钢丝绳断了能自己换吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "brand", "text": "史密斯热水器的镁棒多久要换一根", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "brand", "text": "萤石摄像头一直闪红灯是什么意思", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "countryside", "text": "太阳能热水器冬天冻住了怎么办", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "countryside", "text": "水泵抽不上水是不是要先灌引水", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "duplex", "text": "除湿机水箱满了一般会自动停机吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "duplex", "text": "一楼洗碗机用洗碗块好还是洗碗粉好", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "elder", "text": "燃气报警器一般用几年要换", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "elder", "text": "电动床的电机坏了在保修范围里吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "family3", "text": "烘干机烘羊毛衫会缩水吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "family3", "text": "儿童房加湿器里加精油对孩子有害吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "kids", "text": "奶瓶消毒柜的紫外线灯管能用几年", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "kids", "text": "温奶器温母乳多少度合适", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "mega", "text": "主卧空调这种中央空调每年都要找人清洗吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "mega", "text": "影音室音响的功放需要一直通着电吗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "minimal", "text": "门锁的指纹录多少个比较好", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "minimal", "text": "扫地机的滚刷怎么拆下来洗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "office", "text": "咖啡机除垢用柠檬酸行不行", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "office", "text": "升降桌最多能承重多少斤", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "pets", "text": "智能猫砂盆用豆腐砂还是膨润土砂好", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "pets", "text": "宠物饮水机的滤芯多久换一次", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "rental", "text": "像公共热水器这种电热水器，一般一个月用多少电", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "rental", "text": "我房间加湿器出白粉是什么原因", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "studio", "text": "投影仪放在床尾投多大尺寸合适", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "studio", "text": "风扇的扇叶积灰了怎么拆洗", "intent": "无关", "tags": ["non-command", "speech-act", "knowledge"]}
+{"home": "house", "text": "要是脚底下能暖和点就好了，把地暖打开吧", "intent": "控制", "device": "地暖", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "真希望睡觉前屋里别这么干，帮我把加湿器开上", "intent": "控制", "device": "加湿器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "要是客厅能亮堂点就好了，你把客厅主灯开一下", "intent": "控制", "device": "客厅主灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "要是回家就有热水洗澡该多好，现在就把热水器开了吧", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "要是有点背景音乐就好了，让智能音箱放首歌", "intent": "控制", "device": "智能音箱", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "要是厨房油烟别这么大就好了，帮我把油烟机开大一点", "intent": "控制", "device": "油烟机", "action": ["调高或增大", "打开或启动"], "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "要是有人帮我把碗洗了就好了，洗碗机启动一下吧", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "villa", "text": "要是能多睡会儿就好了，把客厅窗帘关上挡挡光", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "villa", "text": "真希望书房凉快一点，你把落地扇打开", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "要是花园能自己浇水就好了，你先把花园浇水阀打开浇一会儿", "intent": "控制", "device": "花园浇水阀", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "brand", "text": "要是卧室能凉快点就好了，你把美的风尊空调开到二十五度", "intent": "控制", "device": "美的风尊空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "countryside", "text": "要是院子里亮一点就好了，把院子灯打开", "intent": "控制", "device": "院子灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "duplex", "text": "真希望二楼别这么潮，帮我把二楼除湿机开了", "intent": "控制", "device": "二楼除湿机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "elder", "text": "要是能靠着看会儿电视就好了，把电动床背板抬起来点", "intent": "控制", "device": "电动床", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "family3", "text": "真希望衣服今晚就能干，你把烘干机开了", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "kids", "text": "要是宝宝能睡得安稳点就好了，你把电动摇篮开起来", "intent": "控制", "device": "电动摇篮", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "mega", "text": "要是茶室能暖和点就好了，把茶室空调调高两度", "intent": "控制", "device": "茶室空调", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "minimal", "text": "要是有点声音陪着就好了，让音箱放点轻音乐", "intent": "控制", "device": "音箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "office", "text": "要是一早就有杯咖啡就好了，现在帮我把咖啡机开起来", "intent": "控制", "device": "咖啡机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "pets", "text": "要是猫能多喝点水就好了，把宠物饮水机打开", "intent": "控制", "device": "宠物饮水机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "rental", "text": "要是屋里暖和点就好了，你把我房间空调调成制热", "intent": "控制", "device": "我房间空调", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "studio", "text": "真想有点风吹吹，你把风扇开了吧", "intent": "控制", "device": "风扇", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "countryside", "text": "要是洗澡的时候暖和点就好了，先把浴霸开上", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "elder", "text": "要是屋里亮一点就好了，把老人房灯打开", "intent": "控制", "device": "老人房灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "mega", "text": "要是看电影的时候声音再大点就好了，把影音室音响调大一点", "intent": "控制", "device": "影音室音响", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "客厅空调吵得跟拖拉机似的，风速调小一档", "intent": "控制", "device": "客厅空调", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "这床头灯太晃眼了，暗一点", "intent": "控制", "device": "床头灯", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "电视这声音也太炸了，小点声", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "扫地机器人笨死了老撞墙，让它回去充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "落地扇摇头摇得我头晕，别让它摇了", "intent": "控制", "device": "落地扇", "action": ["设为指定的数值或模式", "关闭或停止"], "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "投影仪太亮了刺眼，亮度降一降", "intent": "控制", "device": "投影仪", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "这新风机开着跟吹风机一样响，关掉吧", "intent": "控制", "device": "新风机", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "villa", "text": "智能音箱这破音质听着难受，关掉", "intent": "控制", "device": "智能音箱", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "villa", "text": "餐厅吊灯太暗了吃饭都看不清，调亮点", "intent": "控制", "device": "餐厅吊灯", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "house", "text": "浴霸吹得脑袋发烫，关小一档", "intent": "控制", "device": "浴霸", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "brand", "text": "格力云锦空调吹得太冷了，调高两度", "intent": "控制", "device": "格力云锦空调", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "brand", "text": "小度音箱声音发闷，音量调大点", "intent": "控制", "device": "小度音箱", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "countryside", "text": "堂屋空调嗡嗡响，吵得人心烦，给我关了", "intent": "控制", "device": "堂屋空调", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "duplex", "text": "一楼客厅电视这画面太亮了，调暗一点", "intent": "控制", "device": "一楼客厅电视", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "elder", "text": "这客厅灯白得晃眼，调暗点", "intent": "控制", "device": "客厅灯", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "family3", "text": "扫地机器人扫得太慢了，吸力开到最大", "intent": "控制", "device": "扫地机器人", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "kids", "text": "婴儿房夜灯还是有点亮，再调暗一档", "intent": "控制", "device": "婴儿房夜灯", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "mega", "text": "主卧净化器声音太大了，切成睡眠模式", "intent": "控制", "device": "主卧净化器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "minimal", "text": "空调吹得我嗓子干，关了吧", "intent": "控制", "device": "空调", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "office", "text": "书桌灯这光有点冷，调成暖光", "intent": "控制", "device": "书桌灯", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "pets", "text": "空气净化器太吵了，把猫都吓跑了，调低一档", "intent": "控制", "device": "空气净化器", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "rental", "text": "我房间加湿器喷得太猛了，桌子都湿了，小一点", "intent": "控制", "device": "我房间加湿器", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "studio", "text": "投影仪嗡嗡响吵死了，关了吧", "intent": "控制", "device": "投影仪", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "duplex", "text": "二楼浴霸也太烫了，调低一档", "intent": "控制", "device": "二楼浴霸", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "countryside", "text": "这电视声音太小了，听不清，调大点", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "mood-contrast"]}
+{"home": "apartment", "text": "能不能帮我把主卧灯调暗一些", "intent": "控制", "device": "主卧灯", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "apartment", "text": "可以帮我把主卧空调调到二十六度吗", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "apartment", "text": "你能让扫地机器人现在去扫一下吗", "intent": "控制", "device": "扫地机器人", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "apartment", "text": "能麻烦你把电动晾衣架降下来吗", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "house", "text": "你能帮我把车库门打开吗，我在门口了", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "house", "text": "你可以把烤箱预热到一百八吗", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "house", "text": "你会开充电桩吗？现在就帮我充上", "intent": "控制", "device": "充电桩", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "villa", "text": "你能不能把洗衣机启动一下", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "villa", "text": "你能把书房灯关了吗", "intent": "控制", "device": "书房灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "house", "text": "你能不能让新风机开大一档", "intent": "控制", "device": "新风机", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "brand", "text": "你能把米家净化器4打开吗", "intent": "控制", "device": "米家净化器4", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "countryside", "text": "你能帮我把卷帘门拉下来不", "intent": "控制", "device": "卷帘门", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "duplex", "text": "你可以把二楼主卧窗帘关上吗", "intent": "控制", "device": "二楼主卧窗帘", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "elder", "text": "你能不能帮我把老人房空调关小点", "intent": "控制", "device": "老人房空调", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "family3", "text": "你能把儿童房加湿器开一下吗", "intent": "控制", "device": "儿童房加湿器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "kids", "text": "你可以把温奶器打开吗，宝宝饿了", "intent": "控制", "device": "温奶器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "mega", "text": "能帮我把书房窗帘拉开一半吗", "intent": "控制", "device": "书房窗帘", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "minimal", "text": "你能把门锁锁上吗", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "office", "text": "你能把升降桌升到站立的高度吗", "intent": "控制", "device": "升降桌", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "pets", "text": "你能给狗粮喂食器放一份粮吗", "intent": "控制", "device": "狗粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "rental", "text": "可以帮我把我房间插座断电吗", "intent": "控制", "device": "我房间插座", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "studio", "text": "你能不能把窗帘打开啊", "intent": "控制", "device": "窗帘", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "brand", "text": "你会调好太太晾衣架吗？把它升上去", "intent": "控制", "device": "好太太晾衣架", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "countryside", "text": "你能不能把水泵关了", "intent": "控制", "device": "水泵", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "mega", "text": "能不能把影音室投影仪打开", "intent": "控制", "device": "影音室投影仪", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "meta-contrast"]}
+{"home": "apartment", "text": "床头灯是你刚才给关的吗", "intent": "查询", "device": "床头灯", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "apartment", "text": "热水器现在报的是什么故障码", "intent": "查询", "device": "热水器", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "apartment", "text": "空气净化器的滤网还剩多少寿命", "intent": "查询", "device": "空气净化器", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "apartment", "text": "我自己去锁之前，你先看下智能门锁现在锁没锁", "intent": "查询", "device": "智能门锁", "tags": ["status-query", "speech-act", "self-do-contrast"]}
+{"home": "house", "text": "地暖这个月实际用了多少气", "intent": "查询", "device": "地暖", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "house", "text": "你昨晚是不是开过花园浇水阀", "intent": "查询", "device": "花园浇水阀", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "house", "text": "洗碗机现在是不是在报错", "intent": "查询", "device": "洗碗机", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "villa", "text": "车库门你昨天几点关的", "intent": "查询", "device": "车库门", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "villa", "text": "我要去睡了，先看看安防警报布防了没有，没有的话我自己去弄", "intent": "查询", "device": "安防警报", "tags": ["status-query", "speech-act", "self-do-contrast"]}
+{"home": "house", "text": "这油烟机吸得挺干净，现在开的是几档啊", "intent": "查询", "device": "油烟机", "tags": ["status-query", "speech-act", "mood-contrast"]}
+{"home": "brand", "text": "史密斯热水器屏幕上现在显示的是 E3 吗", "intent": "查询", "device": "史密斯热水器", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "brand", "text": "你前面是不是把萤石摄像头关了", "intent": "查询", "device": "萤石摄像头", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "countryside", "text": "太阳能热水器现在水温多少度", "intent": "查询", "device": "太阳能热水器", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "duplex", "text": "二楼除湿机水箱现在满了没", "intent": "查询", "device": "二楼除湿机", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "elder", "text": "你昨晚关燃气阀门了吗", "intent": "查询", "device": "燃气阀门", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "family3", "text": "我去收衣服前你看下烘干机烘完没有", "intent": "查询", "device": "烘干机", "tags": ["status-query", "speech-act", "self-do-contrast"]}
+{"home": "kids", "text": "奶瓶消毒柜的消毒程序走完了吗", "intent": "查询", "device": "奶瓶消毒柜", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "mega", "text": "你刚刚开的是书房空调还是次卧空调", "intent": "查询", "device": ["书房空调", "次卧空调"], "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "minimal", "text": "这扫地机今天挺勤快，现在扫到哪个房间了", "intent": "查询", "device": "扫地机", "tags": ["status-query", "speech-act", "mood-contrast"]}
+{"home": "office", "text": "咖啡机的水箱还有水吗", "intent": "查询", "device": "咖啡机", "tags": ["status-query", "speech-act", "knowledge-contrast"]}
+{"home": "pets", "text": "你今天给猫粮喂食器放了几次粮", "intent": "查询", "device": "猫粮喂食器", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "rental", "text": "公共热水器现在烧到多少度了，我等下自己去开水龙头", "intent": "查询", "device": "公共热水器", "tags": ["status-query", "speech-act", "self-do-contrast"]}
+{"home": "studio", "text": "空调刚才是你关的吗", "intent": "查询", "device": "空调", "tags": ["status-query", "speech-act", "meta-contrast"]}
+{"home": "countryside", "text": "这大门老卡，现在是开着还是关着", "intent": "查询", "device": "大门", "tags": ["status-query", "speech-act", "mood-contrast"]}
+{"home": "elder", "text": "燃气报警器现在显示正常吗", "intent": "查询", "device": "燃气报警器", "tags": ["status-query", "speech-act", "knowledge-contrast"]}

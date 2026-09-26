@@ -1,0 +1,360 @@
+{"home": "apartment", "text": "客厅空调关了再出门啊，老公，别又开一整天", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "媳妇儿，烤箱我预热好了，你把鸡翅放进去定二十分钟", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "你下班路过菜市场买把葱，回来顺手把热水器打开，我想洗个澡", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "老婆，茶室灯你走的时候关一下，我这边腾不开手", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "亲爱的，你上楼顺便把二楼主卧窗帘拉上，别让太阳晒着床", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "office", "text": "老公你开完会把显示器插座关了，别让它一直待机", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "你把车停进去以后记得把车库门关上，上回开了一整夜", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "媳妇，小米电视你看完就关掉，别开着睡着了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "爸，您午睡的时候把床头灯关了，开着睡不踏实", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "妈，您起夜别自己去摸走廊夜灯的开关，喊我一声就行", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "电动床您别自己调太高，奶奶，坐起来会头晕", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "爷爷，燃气阀门做完饭就拧上，别忘了啊", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "爹，你喂完鸡把鸡舍灯关了，别让鸡一晚上不睡", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "妈，你上楼顶看看太阳能热水器，要是没水了就把水泵开一下", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "妈，您抱孩子进婴儿房的时候开婴儿房夜灯就行，顶灯太亮", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "爸，花园浇水阀您浇完就关，别像昨天那样把菜地淹了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "写完作业把儿童房顶灯关了再去刷牙，儿子", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "闺女，看完这一集就把电视关了，眼睛都快看直了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "小宝，投影仪今天不许再开了，已经看了两个小时", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "宝贝，智能音箱别开那么大声，楼下阿姨会上来敲门的", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "哥哥，你去把婴儿房窗帘拉上，妹妹要睡午觉了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "乐乐，下楼吃饭前把书房灯关掉", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "你们俩别抢遥控器了，谁再把客厅空调调到十六度我就没收", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "妞妞，儿童房加湿器别自己去加水，等爸爸来", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "热水器洗完记得关，姐，上个月燃气费好贵", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "哥，你用完充电桩把枪挂回去，别扔地上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "弟，你出门把鹿客门锁反锁一下，我在洗头走不开", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "妹，你住次卧那几天，次卧空调别开太低", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "哥，你帮我把二楼洗衣机里的衣服拿出来挂到二楼晾衣架上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "二哥，你把院子灯打开照一下，我去储物间拿把锄头", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "姐，洗碗机你会用吗？洗完了把门打开晾一晾", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "姐你帮我盯着点，猫粮喂食器要是卡住了你就拍两下", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "电饭煲五点半按一下煮饭，阿姨，米我已经淘好了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "王姨，您拖完地把扫地机器人放回座子上就行", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "阿姨，油烟机炒完菜再多开五分钟，别一关火就关", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "李阿姨，宠物喂食器里的粮您下午帮我添满", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "阿姨，保姆房空调您想开就开，别替我们省电", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "张姐，洗衣机里的床单您拿出来放烘干机，烘四十分钟", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "阿姨您走之前把厨房灯和厨房空调都关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "阿姨，温奶器您调到四十度，太烫了宝宝不喝", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "刘姨，奶瓶洗好了您顺手把奶瓶消毒柜开上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "宝宝睡着了您就把电动摇篮停了吧，阿姨，摇久了不好", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "阿姨，烘干机里的衣服您叠好放主卧床上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "阿姨，我妈的智能药盒您每天早上帮她看一眼，别让她漏吃", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "护工大姐，您给老人洗澡前先把浴霸开五分钟", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "阿姨，冰箱您别塞那么满，门都关不严了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "阿姨，晚上走之前把餐厅吊灯关掉，客厅那盏留着", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "阿姨，您出门遛狗把智能门锁带严实，它有时候不自动锁", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "你们随便坐，冷的话自己把客厅空调调高点，遥控器在茶几上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "你就睡主卧，床头灯开关在枕头边上，想关自己按", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "投影仪你自己开就行，老张，遥控在沙发扶手里，我去切个水果", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "你们晚上要是觉得书房热，就把落地扇打开吹吹", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "王哥，客房给你收拾好了，次卧空调你按自己习惯开", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "嫂子，茶室灯你调暗一点泡茶更有感觉，开关在门边", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "叔叔阿姨，浴霸开关在卫生间门口，洗澡前先开一下", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "你们先吃，烤箱里还有一盘，一会儿叮一声你们帮我拿出来把烤箱关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "你在我这儿住两天，德尔玛加湿器晚上你自己开，屋里干", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "小周，你带孩子住次卧，次卧顶灯要是闪你就别开了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "你们上二楼参观的时候顺便把二楼书房空调打开，里面闷", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "表叔，你们进了院子把大门关上，狗会跑出去", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "你来看我妈啊，快坐，电视想看啥自己换台", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "office", "text": "你用我的书桌吧，书桌灯往左拧是开", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "你今晚睡我屋，我房间空调你随便开，走的时候关了就行", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "studio", "text": "你今晚就在这儿打地铺，风扇你自己开，别对着头吹", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "小陈，你洗完澡能把公共热水器关了吗，一直开着好费电", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "室友们，公共区扫地机我定的早上九点，谁要在客厅补觉就先把它关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "阿杰，你看完球把电视关了，声音都传到我屋里了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "你用洗衣机的时候把我那桶衣服先拿出来就行", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "公共区空调别开二十度了，老王，电费分下来我们都扛不住", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "你出门的时候记得把公共大门锁拉上，昨天又没关严", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "小李，公共客厅灯是你关的吗？我刚回来一片黑", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "你下楼接我一下，顺手把公共客厅灯打开，我抱着两个箱子呢", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "你周末在家的话帮我给加湿器加点水", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "你们谁用完公共洗衣机能不能把门开着晾一下，里面都有味了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "室友，你今晚用客厅空调的话记得定个时，别开一晚上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "小赵，洗衣机里你那缸好了，你自己把衣服挂电动晾衣架上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "阿敏，小度音箱是公共的，你放歌小声点，我明早要考试", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "你用苏泊尔电饭煲煮完粥把内胆泡上水，别干在那儿", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "室友你住二楼，二楼除湿机你自己开就行，回南天墙都是湿的", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "minimal", "text": "你晚上回来晚的话别开灯，我在沙发上睡", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "师傅，您先把热水器的燃气关了再拆，我怕漏气", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "师傅你试试把客厅空调开到制冷，看看还滴不滴水", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "车库门调一下限位吧，师傅，每次关到底又弹回来", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "师傅您装完把地暖开一下试试，看看哪块地不热", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "小哥，你一进门安防警报就会叫，你先在面板上把它撤了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "师傅，洗碗机你拆之前先把电断了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "师傅，油烟机洗完装回去，您开一下试试声音还大不大", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "师傅，新风机的滤网换好以后您开最大档听听有没有异响", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "师傅你先别走，投影仪再开一下，我看看颜色正没正", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "师傅，二楼浴霸您装好后开一下暖风，我看转不转", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "师傅，水泵你接好线开一下，看抽不抽得上水", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "师傅，卷帘门你修的时候先把它降到底，别砸着人", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "office", "text": "师傅，升降桌你调到最低我看看是不是还晃", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "师傅，方太油烟机你装完开一下最大风，听听响不响", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "师傅，燃气报警器装好后您按一下测试键，让我妈听听是啥声音", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "喂，老公，你还没出门吧？走之前把客厅窗帘拉上，下午西晒", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "喂，爸，你在家吗？帮我看看车库门关了没有，没关你就按一下", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "喂，儿子，你到家先给宠物喂食器添点粮，狗一天没吃了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "喂，妈，孩子睡了没？睡了你把儿童房顶灯关了吧", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "喂，老婆，温奶器我出门前开了，你记得十分钟后关掉", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "喂，阿姨，我们今晚不回去吃了，您把厨房空调关了早点歇着", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "喂，你到家没？到了把一楼门锁反锁上，最近小区不太平", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "喂，妈，要下雨了你把卷帘门放下来，里面堆着化肥", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "喂，爸，您看完电视记得关了再睡，别开一宿", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "喂，小姑，你今天去我家的话帮我把狗粮喂食器的粮加满", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "妈，你看视频里我指的这个，就是格力云锦空调，你按这个圆的键就开了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "studio", "text": "喂，房东吗？我那个热水器又不出热水了，您啥时候来看看", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "喂，老公，你快到家的时候打个电话，我下楼给你开车库门", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "office", "text": "喂，媳妇，咖啡机的胶囊没了，你下班帮我带一盒", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "喂，你还在家吗？帮我把我房间插座上那个电暖器拔了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "宝宝你别踢了，再踢就把婴儿监视器踢掉了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "乖乖，别伸手拽婴儿房窗帘，一会儿掉下来砸着你", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "宝宝别老盯着婴儿房夜灯看，闭上眼睛睡觉觉", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "咪咪，你又把猫砂刨出来了，智能猫砂盆都被你弄停了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "别扒狗粮喂食器了，旺财，还没到点呢", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "大黄你别蹲在宠物烘干箱门口，洗完澡才让你进去", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "喵喵，下来！不许踩宠物饮水机，水都洒了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "minimal", "text": "豆豆，离扫地机远点，它不是跟你玩的", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "团子，别在投影仪前面晃，挡住画面了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "狗子，别咬充电桩的线，咬断了你赔啊", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "小黑，扫地机器人过来了你别冲它叫", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "毛毛你别趴在加湿器旁边，毛都湿了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "咪咪你怎么又钻进洗衣机里了，快出来", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "鸡都进窝了，大黄你别冲着鸡舍灯叫了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "小宝，别去按儿童房摄像头，那是看你睡觉用的", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "小爱同学，把客厅空调调到二十六度", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "天猫精灵，投影仪打开，我要看电影", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "小度小度，把米家净化器4开到自动模式", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "嘿Siri，打开客厅窗帘", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "小艺小艺，把儿童房空调关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "office", "text": "OK Google，把书桌灯关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "小爱同学，扫地机器人回去充电", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "天猫精灵，一楼客厅电视调大声点", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "小爱，给猫粮喂食器放一份粮", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "小度，把书房灯关掉", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "Siri，关掉我房间的灯", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "studio", "text": "小爱同学，投影仪亮度调低一点", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "咱家人出门前记得看一眼客厅主灯关没关", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "house", "text": "谁最后一个睡谁把地暖调低，别开一晚上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "mega", "text": "各位，吃完饭谁有空去把餐厅空调关一下", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "villa", "text": "你们几个谁洗完澡谁关浴霸，别都指望别人", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "family3", "text": "全家注意：以后谁用完烘干机谁把滤网清一下", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "duplex", "text": "楼上的人下来的时候顺手把楼梯灯关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "rental", "text": "各位室友，最后一个出门的记得锁好公共大门锁", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "countryside", "text": "你们打牌的散场时把堂屋空调关了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "office", "text": "今天来我这儿开会的几位，最后走的那个把门锁带上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "elder", "text": "孩子们回来吃饭，谁先进门谁把客厅灯打开，别让老太太摸黑", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "kids", "text": "进婴儿房的都轻点，谁也别开婴儿房灯，开夜灯就够了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "pets", "text": "家里谁回来谁先看一眼宠物饮水机，没水了就加上", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "brand", "text": "谁用完方太油烟机谁擦一下，油都滴下来了", "intent": "无关", "tags": ["non-command", "speech-act", "addressee"]}
+{"home": "apartment", "text": "电视里那个侦探一进门就喊“别开灯”，演得跟真的似的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "广告里天天喊“开空调就选变频”，听得我脑仁疼", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "投影仪上放的那部片子，女主一直喊“快把警报关掉”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "电影里主角对管家说“把车库门打开”，然后开着车就飞出去了，太帅了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "这个油烟机广告词“一开一吸，油烟不见”也太土了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "刚才剧里那句“把烤箱关了，要糊了”，跟我妈一模一样", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "投影仪里那个反派说“关掉所有的灯”，然后画面就全黑了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "那个新风广告说“打开新风，森林进家”，吹得也太夸张了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "动画片里小猪说“快把电视关掉，妈妈回来了”，孩子笑疯了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "那个纸尿裤广告里妈妈说“空调调高点，宝宝踢被子了”，拍得还挺真实", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "brand", "text": "小米电视一开机就放广告“打开空调，一键清凉”，烦死了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "duplex", "text": "一楼客厅电视里那个主持人说“观众朋友们，拉上窗帘体验更好”，他管得着吗", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "countryside", "text": "电视剧里那村长喊“把大门关上，别放人进来”，跟咱家那扇门一模一样", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "elder", "text": "我妈看的养生节目说“空调别对着头吹”，她非让我记下来", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "office", "text": "网课里讲师说“请大家把音箱音量调小”，他自己那边倒是吵得很", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "pets", "text": "宠物频道里那人说“每天开一次宠物烘干箱就够了”，我看不靠谱", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "studio", "text": "投影仪上正放到那句“别开灯，它就在门后面”，我汗毛都竖起来了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "rental", "text": "中介的广告词写“空调热水器全配齐”，来了才知道只有一台公共热水器", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "电视剧里老头追着老伴问“你把热水器关了没有”，问了八遍", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "广告里门铃一响，小孩就喊“爸爸快开门”，我家门铃可没那么灵", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "kids", "text": "哄睡的时候我就对着婴儿房夜灯唱：“小灯灯，眨眼睛，关了灯灯睡觉觉”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "kids", "text": "绘本里小熊跟妈妈说“把摇篮再摇一摇”，我讲到这儿宝宝就睡着了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "有声书里那个机器人管家说“主人，已为您打开窗帘”，孩子非要学", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "family3", "text": "我给儿子编的睡前故事：小空调累了，对自己说“我要关机休息啦”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "智能音箱在放的那首歌，一直唱“电饭煲，咕嘟嘟，米饭香香出锅喽”，谁写的这么魔性", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "睡前故事讲到扫地机器人对小猫说“我要打扫啦，快让开”，孩子咯咯笑", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "幼儿园教的儿歌“小门铃，叮咚叮，谁来了，开门迎”，她一天唱八百遍", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "有声书里那个老教授一回家就喊“把地暖开起来，冻死我了”，播音员学得真像", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "我在给孩子念绘本：“小烤箱，呼呼热，面包宝宝快出来”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "那首儿歌唱“洗衣机，转呀转，衣服洗得白又白”，我都会背了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "mega", "text": "有声小说里男主进门就喊“影音室灯调暗”，这作者肯定是个土豪", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "duplex", "text": "女儿自己编了首歌：“楼梯灯，亮一亮，我上楼，你别慌”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "countryside", "text": "我奶奶以前讲过个故事，说有人天天对着堂屋灯喊“亮起来”，后来真亮了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "广播剧里那个老太太叫孙子“把电视关小声点”，跟我奶奶一个口气", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "brand", "text": "小度音箱刚讲的故事里，小兔子说“快把台灯关掉，月亮要睡觉了”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "pets", "text": "我给猫唱自己编的歌：“喂食器，咔哒响，猫粮落下来喵喵香”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "studio", "text": "音箱里那首说唱，一句“开风扇，吹走烦恼”重复了十几遍", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "office", "text": "播客主持人说他每天早上第一句话就是“咖啡机，开工”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "rental", "text": "我在看的小说里，男主对AI说“把我房间的灯关了”，AI居然拒绝了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "minimal", "text": "孩子听的故事里，门锁和灯吵架，灯说“你锁你的门，别管我亮不亮”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "物业群里发了条“今晚十点停气，请提前关闭燃气热水器”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "我妈微信又说“出门记得把电饭煲插头拔了”，她每次都这样", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "业主群有人说“车库门遥控今天升级，大家先别按”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "小区通知：“明天上午检修水管，花园浇水阀暂时不要开”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "快递短信写着“包裹放门铃旁边了，请及时取件”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "mega", "text": "物业刚发的：“周六全楼新风系统检修，请勿自行开启全屋新风”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "App推送“投影仪灯泡寿命剩余百分之十”，这灯泡还挺贵的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "family3", "text": "班主任在群里说“九点以后请家长关掉儿童房的灯，保证睡眠”，管得真宽", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "kids", "text": "月嫂在微信上留言：“温奶器用完要断电，别一直保温”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "duplex", "text": "小区公告写着“梅雨季请打开除湿设备”，写得跟命令似的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "countryside", "text": "去年台风前村里大喇叭喊“各家把卷帘门放下来”，结果咱家那扇还是被吹变形了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "elder", "text": "社区网格员发的通知：“独居老人家庭请检查燃气报警器是否正常”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "office", "text": "公司群里说“下班请关闭显示器电源”，可我在家办公，显示器插座都是自己管", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "pets", "text": "宠物医院的短信：“术后三天内不要使用宠物烘干箱”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "brand", "text": "美的App推送：“检测到您的美的风尊空调滤网需要清洗”", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "studio", "text": "房东发微信“退房前请把空调和热水器都关掉”，我下个月才退呢", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "rental", "text": "合租群公告：“公共洗衣机晚上十一点后禁止使用”，谁定的规矩", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "手机弹了个通知“摄像头检测到玄关有人移动”，原来是我自己", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "天气App上周就推送“建议开启地暖”，那几天其实一点都不冷", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "minimal", "text": "物业短信说“本周六停电维修，请提前关闭空调”，这周六我正好出差", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "我妈上次来说客厅空调的出风口有股味儿", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "老公昨天说扫地机器人老卡在沙发底下", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "我同事说她家电饭煲煮的饭比我们这个香", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "邻居说他们家车库门也老是关不严", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "我爸说过烤箱第一次用要空烧一遍", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "老婆说她周末想把花园浇水阀改成早晚各浇一次", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "我哥说他们家洗碗机一年都没用过几次", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "我儿子说以后他也要装一个跟咱家一样的充电桩", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "阿姨说她以前那家主人天天把新风机开最大", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "mega", "text": "设计师当初说主卧窗帘最好装双层的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "family3", "text": "孩子他爸说周末要带孩子去奶奶家，儿童房空调那几天就不用开了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "family3", "text": "闺女跟我说她同学家的烘干机会唱歌", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "kids", "text": "婆婆说她们那时候哪有什么电动摇篮，还不是手摇大的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "kids", "text": "月嫂走之前交代过，奶瓶消毒柜每次别塞太多，烘不干", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "duplex", "text": "楼下邻居说半夜听见扫地机在响，我觉得不是我们家的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "countryside", "text": "我爸说这个水泵是他十年前自己装的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "countryside", "text": "隔壁婶子说她家太阳能热水器一到冬天就没热水", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "elder", "text": "上回体检医生说老人房空调冬天最好别低于二十度", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "elder", "text": "我妈总说紧急呼叫按钮那个声音太吓人", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "brand", "text": "卖空调的说格力云锦空调开节能模式一晚上才一度电", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "pets", "text": "宠物店老板说猫粮喂食器一天最好分四顿", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "office", "text": "我老板说他家的升降桌比我这个稳多了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "studio", "text": "上一个租客说这个热水器冬天要提前半小时开", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "rental", "text": "隔壁室友说他以前住的地方公共区空调是投币的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "minimal", "text": "我姐说她家扫地机比我这个吵多了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "family3", "text": "宝宝跟着我说：打——开——窗——帘", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "来，叫一声“关灯”，对，就这样，宝宝真棒", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "我给你举个例子，比如你说“把主卧空调调到二十五度”，它就会照做", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "讲个笑话：有人对着电饭煲喊“开机”，喊了半天才发现那是空气炸锅", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "你教我妈用吧，就说“打开地暖”这四个字就行", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "笑死，我爸对着冰箱说“给我来瓶可乐”，冰箱根本不理他", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "像“关闭安防警报”这种话，最好让它先确认一遍", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "mega", "text": "我在写说明书，示例句就写“把客厅灯调暗一点”吧", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "duplex", "text": "考考你，我要是说“二楼晾衣架降下来”，它会不会听成一楼", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "countryside", "text": "教你奶奶说：“院子灯打开”，慢慢说，别带口音", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "elder", "text": "妈，您学着说一句“电动床升起来”，我录下来看看它听不听得懂", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "brand", "text": "有个段子：程序员回家对易来吸顶灯说“Hello World”，灯就亮了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "pets", "text": "你试试说“狗粮喂食器出粮”，看它反应快不快", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "office", "text": "打个比方，你要是说“升降桌升到一米一”，它自己就动了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "studio", "text": "我在练普通话呢：投影仪，投——影——仪，不是头影仪", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "昨晚我喊了三遍“关电视”你都没反应，最后还是我下床关的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "house", "text": "上周我说“打开车库门”，你愣了五秒才动，后面的车都按喇叭了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "villa", "text": "我刚才喊“开浴霸”你没听见，我自己按了，你这耳朵得治治", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "family3", "text": "早上我说“打开主卧窗帘”，你说“好的”然后啥也没干，还是我自己拉开的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "mega", "text": "每次我说“影音室灯调暗”你都给我全关了，这毛病什么时候能改", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "kids", "text": "前天半夜我小声说“开婴儿房夜灯”，你那么大声回我“好的”，把孩子都吵醒了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "duplex", "text": "我说“关二楼走廊灯”你为啥老听成楼梯灯，昨天又错了一回", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "brand", "text": "刚跟你说“开格力空调”，你回我“没找到设备”，最后还是用遥控开的", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "elder", "text": "我妈说“关电视”你就听不懂，非得我说普通话，老人家多难啊", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "rental", "text": "刚才我说“关我房间空调”，你关成了公共区空调，室友都来敲门了，我已经自己弄好了", "intent": "无关", "tags": ["non-command", "speech-act", "quote"]}
+{"home": "apartment", "text": "老公你坐着别动，小易，把电视关了", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "爸，您躺着就行，小管家把床头灯关掉", "intent": "控制", "device": "床头灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "house", "text": "媳妇儿你别起来，小易帮我把烤箱预热到两百度", "intent": "控制", "device": "烤箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "family3", "text": "儿子快去刷牙，小易把儿童房顶灯调暗一点", "intent": "控制", "device": "儿童房顶灯", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "mega", "text": "老婆你忙你的，小管家把茶室灯关了", "intent": "控制", "device": "茶室灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "elder", "text": "妈您别下床，小易，把走廊夜灯打开", "intent": "控制", "device": "走廊夜灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "elder", "text": "奶奶您坐稳了，助手，电动床慢慢升起来", "intent": "控制", "device": "电动床", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "countryside", "text": "爹你别跑了，小易把鸡舍灯关了", "intent": "控制", "device": "鸡舍灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "duplex", "text": "哥你忙你的，小易把二楼洗衣机启动", "intent": "控制", "device": "二楼洗衣机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "brand", "text": "弟你手上拿着东西，小易帮我把鹿客门锁锁上", "intent": "控制", "device": "鹿客门锁", "action": "上锁", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "villa", "text": "姐你歇着，小管家，洗碗机启动", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "kids", "text": "妈，您抱着孩子别动，小易把婴儿房窗帘拉上", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "kids", "text": "阿姨您手上忙着，小易把温奶器调到四十度", "intent": "控制", "device": "温奶器", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "mega", "text": "阿姨您别跑了，小管家帮我把烘干机打开", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "house", "text": "李阿姨粮不用您添了，小易给宠物喂食器放一份", "intent": "控制", "device": "宠物喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "王姨，饭我让助手煮，助手，电饭煲开始煮饭", "intent": "控制", "device": "电饭煲", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "你们坐，不用找遥控器，小易，客厅空调调高两度", "intent": "控制", "device": "客厅空调", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "house", "text": "老张你别找遥控了，小易，打开投影仪", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "mega", "text": "王哥你住次卧，小管家把次卧空调开到二十六度", "intent": "控制", "device": "次卧空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "villa", "text": "叔叔阿姨先别进去，小易先把浴霸打开暖一暖", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "studio", "text": "你打地铺别着凉，小易把风扇关了", "intent": "控制", "device": "风扇", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "countryside", "text": "表叔你们进来吧，小易把大门关上", "intent": "控制", "device": "大门", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "office", "text": "你用书桌吧，我让它开灯——小易，书桌灯打开", "intent": "控制", "device": "书桌灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "rental", "text": "小陈你不用管了，小易帮我把公共热水器关了", "intent": "控制", "device": "公共热水器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "rental", "text": "阿杰你睡吧，小管家把客厅公共电视关掉", "intent": "控制", "device": "客厅公共电视", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "rental", "text": "你们别争了，小易，公共区空调调到二十六度", "intent": "控制", "device": "公共区空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "rental", "text": "你去拿快递吧，小易把公共客厅灯打开", "intent": "控制", "device": "公共客厅灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "duplex", "text": "室友你别跑上楼了，小易把二楼除湿机打开", "intent": "控制", "device": "二楼除湿机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "师傅您稍等，助手，把热水器关了", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "house", "text": "师傅您别动面板，小易先把安防警报撤防", "intent": "控制", "device": "安防警报", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "villa", "text": "师傅您听着，小管家把新风机开到最大档", "intent": "控制", "device": "新风机", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "countryside", "text": "师傅线接好了吧，小易把水泵打开试试", "intent": "控制", "device": "水泵", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "office", "text": "师傅您看着，小易，升降桌降到最低", "intent": "控制", "device": "升降桌", "action": ["调低或减小", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "duplex", "text": "师傅您看转不转——小易，二楼浴霸打开", "intent": "控制", "device": "二楼浴霸", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "喂，妈，我在家呢你别操心，小易，热水器打开", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "house", "text": "喂，爸，我这就关，小易，把车库门关上", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "kids", "text": "喂，老婆，温奶器我来弄，小易把温奶器关了", "intent": "控制", "device": "温奶器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "family3", "text": "喂，妈你等一下，小管家把儿童房空调调高一度", "intent": "控制", "device": "儿童房空调", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "elder", "text": "喂，爸，先不说了——小易，电视声音调小一点", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "kids", "text": "宝宝不哭了啊，小易把电动摇篮打开", "intent": "控制", "device": "电动摇篮", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "pets", "text": "旺财别扒了，小易给狗粮喂食器出一份粮", "intent": "控制", "device": "狗粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "pets", "text": "豆豆吓着了吧，小易让扫地机器人停下", "intent": "控制", "device": "扫地机器人", "action": ["关闭或停止", "暂停"], "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "毛毛你走开，小管家把加湿器关了", "intent": "控制", "device": "加湿器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "house", "text": "团子别挡着，小易把投影仪暂停一下", "intent": "控制", "device": "投影仪", "action": "暂停", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "不是叫你Siri，小易，把主卧空调调到二十六度", "intent": "控制", "device": "主卧空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "brand", "text": "小度你别插嘴，小易把米家净化器4打开", "intent": "控制", "device": "米家净化器4", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "mega", "text": "天猫精灵老听不懂，还是小管家来：客厅窗帘打开", "intent": "控制", "device": "客厅窗帘", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "villa", "text": "小爱同学退下，小易，扫地机器人回去充电", "intent": "控制", "device": "扫地机器人", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "duplex", "text": "不用手机App点了，小易把一楼客厅电视音量调大", "intent": "控制", "device": "一楼客厅电视", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "大家都出门了，小易把灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "mega", "text": "客人都走了，小管家把餐厅灯和餐厅空调关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "rental", "text": "室友们都睡了，小易把公共客厅灯关了", "intent": "控制", "device": "公共客厅灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "family3", "text": "一家人都到齐了，小易把客厅灯调亮一点", "intent": "控制", "device": "客厅灯", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "countryside", "text": "打牌的都散了，小易把堂屋空调关了", "intent": "控制", "device": "堂屋空调", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "office", "text": "开会的人都走了，小易把门锁锁上", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["explicit-control", "speech-act", "addressee-contrast"]}
+{"home": "apartment", "text": "刚才广告说拉上窗帘能省空调电，小易你把客厅窗帘拉上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "house", "text": "电影里那管家一句话就开了车库门，小易你也把车库门打开", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "mega", "text": "剧里那人说“关掉所有的灯”，小管家，你也把影音室灯关了", "intent": "控制", "device": "影音室灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "brand", "text": "广告说开节能模式省电，小易把格力云锦空调调成节能模式", "intent": "控制", "device": "格力云锦空调", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "duplex", "text": "主持人说拉上窗帘看得清楚，那小易把一楼客厅窗帘关上", "intent": "控制", "device": "一楼客厅窗帘", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "studio", "text": "片子里说“别开灯”，我偏要开，小易把顶灯打开", "intent": "控制", "device": "顶灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "villa", "text": "节目里说冰箱冷藏调到四度最保鲜，小易你把冰箱调到四度", "intent": "控制", "device": "冰箱", "action": "设为指定的数值或模式", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "countryside", "text": "电视里说今晚降温，小易把卧室空调开成制热", "intent": "控制", "device": "卧室空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "kids", "text": "“关了灯灯睡觉觉”唱完了，小易把婴儿房灯关了", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "family3", "text": "故事讲完了该睡了，小易把儿童房顶灯关了", "intent": "控制", "device": "儿童房顶灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "brand", "text": "小度音箱的故事讲完了，小易把米家台灯Pro调暗点", "intent": "控制", "device": "米家台灯Pro", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "apartment", "text": "这首歌太吵了，小管家把智能音箱声音调小", "intent": "控制", "device": "智能音箱", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "pets", "text": "歌唱完了该开饭了，小易给猫粮喂食器放一份", "intent": "控制", "device": "猫粮喂食器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "office", "text": "播客里说早上喝咖啡最提神，小易现在就把咖啡机打开", "intent": "控制", "device": "咖啡机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "apartment", "text": "物业说今晚十点停气，小易先把热水器关了", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "house", "text": "业主群说今晚有台风，小易把车库门关上", "intent": "控制", "device": "车库门", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "house", "text": "App提醒新风机滤网该换了，小管家先把新风机关了", "intent": "控制", "device": "新风机", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "kids", "text": "月嫂交代温奶器用完要断电，小易，温奶器关掉", "intent": "控制", "device": "温奶器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "studio", "text": "房东说出门要关热水器，小易把热水器关了", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "rental", "text": "群里说十一点后不能用公共洗衣机，小易把公共洗衣机停了", "intent": "控制", "device": "公共洗衣机", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "duplex", "text": "小区通知说梅雨季要除湿，小易把二楼除湿机打开", "intent": "控制", "device": "二楼除湿机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "elder", "text": "网格员说要检查燃气，小易先把燃气阀门关上", "intent": "控制", "device": "燃气阀门", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "villa", "text": "快递说包裹放车库门口了，小管家把车库门打开", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "apartment", "text": "我爸说卧室里闷得慌，小易把主卧空调打开", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "house", "text": "老婆说书房热得坐不住，小易把落地扇开开", "intent": "控制", "device": "落地扇", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "family3", "text": "闺女说主卧太亮了她睡不着，小易把主卧窗帘拉上", "intent": "控制", "device": "主卧窗帘", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "mega", "text": "客人说茶室有点凉，小管家把茶室空调调高一点", "intent": "控制", "device": "茶室空调", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "kids", "text": "婆婆说宝宝屋里太干，小易把婴儿房加湿器打开", "intent": "控制", "device": "婴儿房加湿器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "elder", "text": "我妈说腿凉，小易把老人房空调调高两度", "intent": "控制", "device": "老人房空调", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "countryside", "text": "我爹说堂屋太暗看不清牌，小易把堂屋灯打开", "intent": "控制", "device": "堂屋灯", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "duplex", "text": "老公说二楼书房太闷，小易把二楼书房空调开到二十五度", "intent": "控制", "device": "二楼书房空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "rental", "text": "室友说客厅太吵，小易把客厅公共电视声音调小", "intent": "控制", "device": "客厅公共电视", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "pets", "text": "老婆说猫砂盆有味儿了，小易让智能猫砂盆清理一下", "intent": "控制", "device": "智能猫砂盆", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "brand", "text": "我妈说屋里太干嗓子疼，小易把德尔玛加湿器开开", "intent": "控制", "device": "德尔玛加湿器", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "villa", "text": "孩子说脚底下凉，小管家把地暖打开", "intent": "控制", "device": "地暖", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "office", "text": "你看我怎么用：小易，把书桌灯调亮一点", "intent": "控制", "device": "书桌灯", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "elder", "text": "妈您看着啊，我说一遍您就会了：小易，电动床降下来", "intent": "控制", "device": "电动床", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "house", "text": "教你个办法不用找遥控——小易，地暖调高两度", "intent": "控制", "device": "地暖", "action": "调高或增大", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "minimal", "text": "我给你演示一下：小易，把灯关了", "intent": "控制", "device": "灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "family3", "text": "宝宝你看妈妈怎么说：小管家，打开客厅窗帘", "intent": "控制", "device": "客厅窗帘", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "apartment", "text": "刚才说关主卧灯你没反应，小易，再来一遍，主卧灯关了", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "mega", "text": "上次说调暗你全给关了，这回听好：小管家，影音室灯调暗一点", "intent": "控制", "device": "影音室灯", "action": "调低或减小", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "brand", "text": "刚才叫你开格力空调说没找到，小易，打开格力云锦空调", "intent": "控制", "device": "格力云锦空调", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "minimal", "text": "我刚说扫地你没动静，小易，扫地机开始扫", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}
+{"home": "studio", "text": "刚才喊你开投影仪没听见是吧，小易，投影仪打开", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["explicit-control", "speech-act", "quote-contrast"]}

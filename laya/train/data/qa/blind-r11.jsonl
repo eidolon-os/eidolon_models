@@ -1,0 +1,62 @@
+{"ref": "b8-addressee-quote:8", "home": "brand", "text": "媳妇，小米电视你看完就关掉，别开着睡着了", "intent": "无关"}
+{"ref": "b8-addressee-quote:10", "home": "elder", "text": "妈，您起夜别自己去摸走廊夜灯的开关，喊我一声就行", "intent": "无关"}
+{"ref": "b8-addressee-quote:13", "home": "countryside", "text": "爹，你喂完鸡把鸡舍灯关了，别让鸡一晚上不睡", "intent": "无关"}
+{"ref": "b8-addressee-quote:22", "home": "house", "text": "乐乐，下楼吃饭前把书房灯关掉", "intent": "无关", "note": "乐乐按家人（孩子）名读：'下楼吃饭前'是说人要做的事；若乐乐是助手唤醒名则应为 控制 · 书房灯 · 关闭或停止"}
+{"ref": "b8-addressee-quote:25", "home": "apartment", "text": "热水器洗完记得关，姐，上个月燃气费好贵", "intent": "无关"}
+{"ref": "b8-addressee-quote:26", "home": "house", "text": "哥，你用完充电桩把枪挂回去，别扔地上", "intent": "无关"}
+{"ref": "b8-addressee-quote:39", "home": "mega", "text": "阿姨您走之前把厨房灯和厨房空调都关了", "intent": "无关"}
+{"ref": "b8-addressee-quote:40", "home": "kids", "text": "阿姨，温奶器您调到四十度，太烫了宝宝不喝", "intent": "无关"}
+{"ref": "b8-addressee-quote:51", "home": "house", "text": "投影仪你自己开就行，老张，遥控在沙发扶手里，我去切个水果", "intent": "无关"}
+{"ref": "b8-addressee-quote:53", "home": "mega", "text": "王哥，客房给你收拾好了，次卧空调你按自己习惯开", "intent": "无关"}
+{"ref": "b8-addressee-quote:74", "home": "rental", "text": "你们谁用完公共洗衣机能不能把门开着晾一下，里面都有味了", "intent": "无关"}
+{"ref": "b8-addressee-quote:84", "home": "house", "text": "师傅您装完把地暖开一下试试，看看哪块地不热", "intent": "无关"}
+{"ref": "b8-addressee-quote:111", "home": "kids", "text": "宝宝你别踢了，再踢就把婴儿监视器踢掉了", "intent": "无关"}
+{"ref": "b8-addressee-quote:112", "home": "kids", "text": "乖乖，别伸手拽婴儿房窗帘，一会儿掉下来砸着你", "intent": "无关"}
+{"ref": "b8-addressee-quote:113", "home": "kids", "text": "宝宝别老盯着婴儿房夜灯看，闭上眼睛睡觉觉", "intent": "无关"}
+{"ref": "b8-addressee-quote:119", "home": "house", "text": "团子，别在投影仪前面晃，挡住画面了", "intent": "无关"}
+{"ref": "b8-addressee-quote:165", "home": "office", "text": "网课里讲师说“请大家把音箱音量调小”，他自己那边倒是吵得很", "intent": "无关", "note": "引述讲师的话 + 评价讲师那边吵，不是对助手的请求；若把'他那边吵'读成通过家里音箱传出来的当前噪音，才会有 控制 · 音箱 · 调低或减小 的读法，我认为不成立"}
+{"ref": "b8-addressee-quote:170", "home": "house", "text": "广告里门铃一响，小孩就喊“爸爸快开门”，我家门铃可没那么灵", "intent": "无关"}
+{"ref": "b8-addressee-quote:185", "home": "brand", "text": "小度音箱刚讲的故事里，小兔子说“快把台灯关掉，月亮要睡觉了”", "intent": "无关"}
+{"ref": "b8-addressee-quote:231", "home": "pets", "text": "宠物店老板说猫粮喂食器一天最好分四顿", "intent": "无关", "note": "转述别人的建议，没有要求助手照做；若读成隐含'帮我设成一天四顿'则为 控制 · 猫粮喂食器 · 设为指定的数值或模式，规范第 2 节只写了'别人的旧事 / 计划'，没写'别人的建议'"}
+{"ref": "b8-addressee-quote:235", "home": "minimal", "text": "我姐说她家扫地机比我这个吵多了", "intent": "无关"}
+{"ref": "b8-addressee-quote:258", "home": "brand", "text": "刚跟你说“开格力空调”，你回我“没找到设备”，最后还是用遥控开的", "intent": "无关", "note": "对助手的抱怨 + 叙述，空调已经用遥控开了，没有新的请求"}
+{"ref": "b8-addressee-quote:285", "home": "rental", "text": "阿杰你睡吧，小管家把客厅公共电视关掉", "intent": "控制", "device": "客厅公共电视", "action": "关闭或停止"}
+{"ref": "b8-addressee-quote:313", "home": "family3", "text": "一家人都到齐了，小易把客厅灯调亮一点", "intent": "控制", "device": "客厅灯", "action": "调高或增大"}
+{"ref": "b8-addressee-quote:316", "home": "apartment", "text": "刚才广告说拉上窗帘能省空调电，小易你把客厅窗帘拉上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止"}
+{"ref": "b8-addressee-quote:334", "home": "studio", "text": "房东说出门要关热水器，小易把热水器关了", "intent": "控制", "device": "热水器", "action": "关闭或停止"}
+{"ref": "b8-mood-meta:4", "home": "house", "text": "真希望洗碗机能顺手把碗放回柜子里", "intent": "无关"}
+{"ref": "b8-mood-meta:5", "home": "house", "text": "要是烤箱能自己看着火候就省心了", "intent": "无关"}
+{"ref": "b8-mood-meta:21", "home": "apartment", "text": "上个月要是每天用完都关热水器，燃气费能省一半", "intent": "无关"}
+{"ref": "b8-mood-meta:25", "home": "house", "text": "如果那天花园浇水阀没忘关，草坪也不会淹成那样", "intent": "无关"}
+{"ref": "b8-mood-meta:28", "home": "villa", "text": "如果那次出门前开了安防警报，小偷也不敢翻进来", "intent": "无关"}
+{"ref": "b8-mood-meta:38", "home": "pets", "text": "要是上次出差前给狗粮喂食器多装点粮，狗子也不会饿一天", "intent": "无关"}
+{"ref": "b8-mood-meta:40", "home": "studio", "text": "如果上周没开着空调睡一晚，我也不会感冒", "intent": "无关"}
+{"ref": "b8-mood-meta:45", "home": "house", "text": "这台洗碗机洗得是真干净，油渍一点不剩", "intent": "无关"}
+{"ref": "b8-mood-meta:51", "home": "brand", "text": "小度音箱的音质也就那样，放个歌还行", "intent": "无关"}
+{"ref": "b8-mood-meta:53", "home": "countryside", "text": "院子摄像头晚上也拍得挺清楚，这钱花得值", "intent": "无关"}
+{"ref": "b8-mood-meta:68", "home": "apartment", "text": "上个月我把主卧空调的滤网拆下来洗过一次", "intent": "无关"}
+{"ref": "b8-mood-meta:87", "home": "office", "text": "昨天开会前我把升降桌升起来站着开了两小时", "intent": "无关"}
+{"ref": "b8-mood-meta:88", "home": "pets", "text": "猫第一次用智能猫砂盆的时候吓得跳了出来", "intent": "无关"}
+{"ref": "b8-mood-meta:91", "home": "apartment", "text": "每次洗衣机甩干，阳台都跟地震似的", "intent": "无关", "note": "'每次'明确是习惯性吐槽，不是当前状况（第 7 节'说不清按当前'不适用）"}
+{"ref": "b8-mood-meta:127", "home": "pets", "text": "你能看懂宠物摄像头里猫在干嘛吗", "intent": "无关", "note": "问的是助手能不能'看懂'画面（能力问题）；'能…吗'也可读成间接请求'看看猫在干嘛'→ 查询 · 宠物摄像头，规范对'问助手能力 vs 问句形式的请求'没有给出界线"}
+{"ref": "b8-mood-meta:144", "home": "apartment", "text": "你怎么老把加湿器当成空气净化器", "intent": "无关"}
+{"ref": "b8-mood-meta:152", "home": "family3", "text": "你是不是有点笨，上回让你关儿童房顶灯你把次卧顶灯关了", "intent": "无关", "note": "抱怨的是'上回'的错，没有要求现在关儿童房顶灯或把次卧顶灯开回来"}
+{"ref": "b8-mood-meta:165", "home": "kids", "text": "婴儿监视器是跟你连的还是单独一个app", "intent": "无关"}
+{"ref": "b8-mood-meta:170", "home": "studio", "text": "你是用什么协议连投影仪的", "intent": "无关"}
+{"ref": "b8-mood-meta:183", "home": "house", "text": "我自己去给宠物喂食器加粮", "intent": "无关"}
+{"ref": "b8-mood-meta:184", "home": "house", "text": "落地扇我伸手就能关，不用你", "intent": "无关"}
+{"ref": "b8-mood-meta:208", "home": "minimal", "text": "灯我自己关，你歇着吧", "intent": "无关"}
+{"ref": "b8-mood-meta:209", "home": "minimal", "text": "扫地机我自己按启动键", "intent": "无关"}
+{"ref": "b8-mood-meta:227", "home": "house", "text": "地暖整个供暖季的燃气费一般多少", "intent": "无关", "note": "'一般多少'是常识问题；若读成查自家地暖的历史用量才是查询，句子没有'我家 / 去年'这类指向"}
+{"ref": "b8-mood-meta:233", "home": "villa", "text": "投影仪用了三年画面发黄，是不是得换光源了", "intent": "无关"}
+{"ref": "b8-mood-meta:236", "home": "villa", "text": "电动晾衣架的钢丝绳断了能自己换吗", "intent": "无关"}
+{"ref": "b8-mood-meta:251", "home": "minimal", "text": "门锁的指纹录多少个比较好", "intent": "无关"}
+{"ref": "b8-mood-meta:263", "home": "apartment", "text": "要是客厅能亮堂点就好了，你把客厅主灯开一下", "intent": "控制", "device": "客厅主灯", "action": "打开或启动"}
+{"ref": "b8-mood-meta:279", "home": "office", "text": "要是一早就有杯咖啡就好了，现在帮我把咖啡机开起来", "intent": "控制", "device": "咖啡机", "action": "打开或启动"}
+{"ref": "b8-mood-meta:280", "home": "pets", "text": "要是猫能多喝点水就好了，把宠物饮水机打开", "intent": "控制", "device": "宠物饮水机", "action": "打开或启动"}
+{"ref": "b8-mood-meta:293", "home": "villa", "text": "智能音箱这破音质听着难受，关掉", "intent": "控制", "device": "智能音箱", "action": "关闭或停止"}
+{"ref": "b8-mood-meta:301", "home": "family3", "text": "扫地机器人扫得太慢了，吸力开到最大", "intent": "控制", "device": "扫地机器人", "action": ["调高或增大", "设为指定的数值或模式"]}
+{"ref": "b8-mood-meta:311", "home": "apartment", "text": "能不能帮我把主卧灯调暗一些", "intent": "控制", "device": "主卧灯", "action": "调低或减小"}
+{"ref": "b8-mood-meta:329", "home": "office", "text": "你能把升降桌升到站立的高度吗", "intent": "控制", "device": "升降桌", "action": ["调高或增大", "设为指定的数值或模式"], "note": "'升'是相对调高，'到站立的高度'是目标档位 / 模式，两种都合理取并集"}
+{"ref": "b8-mood-meta:331", "home": "rental", "text": "可以帮我把我房间插座断电吗", "intent": "控制", "device": "我房间插座", "action": "关闭或停止"}
+{"ref": "b8-mood-meta:337", "home": "apartment", "text": "热水器现在报的是什么故障码", "intent": "查询", "device": "热水器"}
