@@ -237,9 +237,10 @@ def load_engine(settings: Settings, log=print) -> tuple[DecisionEngine, Manifest
 
         backend = TorchBackend(manifest.torch_dir, device=settings.device, threads=settings.threads)
     elif settings.backend == "rknn":
-        from .backends import RknnBackend
+        from .backends import RknnBackend, parse_placement
 
-        backend = RknnBackend(manifest.root / "npu")
+        placement = parse_placement(settings.rknn_placement) if settings.rknn_placement else None
+        backend = RknnBackend(manifest.root / "npu", placement=placement)
     else:
         from .backends import OnnxBackend
 

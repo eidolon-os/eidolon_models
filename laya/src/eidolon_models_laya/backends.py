@@ -110,6 +110,17 @@ class OnnxBackend:
         }
 
 
+def parse_placement(text: str) -> dict[int, tuple[int, ...]]:
+    """``"0:128,256|1:256,384,512"`` -> {0: (128, 256), 1: (256, 384, 512)}."""
+    out = {}
+    for part in text.split("|"):
+        core, _, buckets = part.partition(":")
+        if not buckets or int(core) not in (0, 1, 2):
+            raise ValueError(f"bad NPU placement {text!r}: want 'core:bucket,bucket|core:...' with cores 0-2")
+        out[int(core)] = tuple(int(b) for b in buckets.split(","))
+    return out
+
+
 class RknnBackend:
     """RK3588 NPU via rknn-toolkit-lite2, from what ``export-npu`` wrote and ``deploy/rk3588/laya_npu.py
     convert`` compiled: encoder + head layers per sequence bucket on the NPU; token-embedding lookup,

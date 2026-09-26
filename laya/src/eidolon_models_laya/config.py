@@ -93,6 +93,10 @@ class Settings:
     #: settle what is needed (an utterance judged 无关 returns after the intent question). Only backends
     #: that run questions in parallel (``rknn``) can; the others stage the questions instead.
     speculative: bool = True
+    #: rknn only: which NPU core loads which sequence buckets, e.g. ``"0:128,256|1:256,384,512|2:128,256"``
+    #: (the default). Local TTS keeps all three cores busy while it speaks; one core (``"1:128,256,384,512"``)
+    #: leaves it more room. None = the backend's default placement.
+    rknn_placement: str | None = None
     max_pending: int = 4
     max_questions: int = 32
     max_body_bytes: int = 256 * 1024
@@ -115,6 +119,7 @@ class Settings:
             max_len=_int(env, "EIDOLON_LAYA_MAX_LEN", None, minimum=64),
             head_max_len=_int(env, "EIDOLON_LAYA_HEAD_MAX_LEN", None, minimum=32),
             speculative=_bool(env, "EIDOLON_LAYA_SPECULATIVE", True),
+            rknn_placement=(env.get("EIDOLON_LAYA_RKNN_PLACEMENT") or "").strip() or None,
             max_pending=_int(env, "EIDOLON_LAYA_MAX_PENDING", 4, minimum=1),
             max_questions=_int(env, "EIDOLON_LAYA_MAX_QUESTIONS", 32, minimum=1),
             max_body_bytes=_int(env, "EIDOLON_LAYA_MAX_BODY_BYTES", 256 * 1024, minimum=1024),

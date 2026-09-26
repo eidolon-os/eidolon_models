@@ -164,3 +164,13 @@ def test_rknn_backend_refuses_a_bucket_on_no_core(rknn_dir):
 
     with pytest.raises(ValueError, match="on no core"):
         RknnBackend(rknn_dir, placement={0: (128,), 1: (256,), 2: (256,)})
+
+
+def test_placement_parsing_and_single_core(rknn_dir):
+    from eidolon_models_laya.backends import RknnBackend, parse_placement
+
+    assert parse_placement("0:128,256|1:256,384,512") == {0: (128, 256), 1: (256, 384, 512)}
+    with pytest.raises(ValueError):
+        parse_placement("3:128")
+    be = RknnBackend(rknn_dir, placement=parse_placement("1:128,256,384,512"))
+    assert {r.core for r in be._rt.values()} == {1} and len(be._rt) == 4
