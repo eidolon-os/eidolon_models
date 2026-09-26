@@ -26,7 +26,7 @@
 {"id": "W2-0029", "home": "acc-house", "text": "儿子，音响后面那些线你别乱拔，拔错了又没声了", "gold": {"intent": "无关"}}
 {"id": "W2-0030", "home": "acc-house", "text": "这套家庭影院音响是你舅推荐的，说五万以内没对手", "gold": {"intent": "无关"}}
 {"id": "W2-0031", "home": "acc-house", "text": "音响小点声，孩子睡了", "gold": {"intent": "控制", "device": "客厅音响", "action": "调低或减小"}}
-{"id": "W2-0032", "home": "acc-house", "text": "楼下音响吵得我没法睡", "gold": {"intent": "控制", "device": "客厅音响", "action": ["调低或减小", "关闭或停止", "暂停"]}, "adjudicated": ["action: union with second annotator"]}
+{"id": "W2-0032", "home": "acc-house", "text": "楼下音响吵得我没法睡", "gold": {"intent": "控制", "device": "客厅音响", "action": ["调低或减小", "关闭或停止"]}, "note": "说话人在楼上被楼下自家音响吵，读成对自家设备的隐含请求（家外面的噪音才是无关）"}
 {"id": "W2-0033", "home": "acc-house", "text": "说明书说，窗帘行程不对的话，长按电机上的按钮五秒重新校准", "gold": {"intent": "无关"}}
 {"id": "W2-0034", "home": "acc-house", "text": "别在窗帘后面躲猫猫了，快出来吃饭", "gold": {"intent": "无关"}}
 {"id": "W2-0035", "home": "acc-house", "text": "客厅窗帘我早上已经拉开了", "gold": {"intent": "无关"}}
@@ -56,7 +56,7 @@
 {"id": "W2-0062", "home": "acc-house", "text": "这冰箱是对开门的，整个西瓜都赛不进去，一点不实用", "gold": {"intent": "无关"}}
 {"id": "W2-0063", "home": "acc-house", "text": "喂，老公，你帮我看一眼冰箱里还有没有牛奶", "gold": {"intent": "无关"}}
 {"id": "W2-0064", "home": "acc-house", "text": "冰箱调到四度是我刚弄的，你别动啊", "gold": {"intent": "无关"}}
-{"id": "W2-0066", "home": "acc-house", "text": "冰箱开个速冻，我买了一堆肉", "gold": {"intent": "控制", "device": "冰箱", "action": ["设为指定的数值或模式", "打开或启动"]}}
+{"id": "W2-0066", "home": "acc-house", "text": "冰箱开个速冻，我买了一堆肉", "gold": {"intent": "控制", "device": "冰箱", "action": ["打开或启动", "设为指定的数值或模式"]}}
 {"id": "W2-0067", "home": "acc-house", "text": "冰箱冷冻室现在多少度", "gold": {"intent": "查询", "device": "冰箱"}}
 {"id": "W2-0068", "home": "acc-house", "text": "客房的灯好久没开过了，估计灯管都坏了", "gold": {"intent": "无关"}}
 {"id": "W2-0069", "home": "acc-house", "text": "你爸妈下礼拜来住，客房得先换个亮点的灯泡", "gold": {"intent": "无关"}}
@@ -69,7 +69,7 @@
 {"id": "W2-0076", "home": "acc-house", "text": "客房热得跟蒸笼似的", "gold": {"intent": "控制", "device": "客房空调", "action": ["打开或启动", "调低或减小", "设为指定的数值或模式"]}}
 {"id": "W2-0077", "home": "acc-house", "text": "客房空调关了没有", "gold": {"intent": "查询", "device": "客房空调"}}
 {"id": "W2-0078", "home": "acc-house", "text": "早上车库门遥控器没电了，我在车里按了半天，最后下车手动拉开的", "gold": {"intent": "无关"}}
-{"id": "W2-0079", "home": "acc-house", "text": "送桶装水的师傅让我把车库门打开，他从那边搬进来", "gold": {"intent": "无关"}}
+{"id": "W2-0079", "home": "acc-house", "text": "送桶装水的师傅让我把车库门打开，他从那边搬进来", "gold": {"intent": "无关"}, "note": "外人（送水师傅）要求开车库门，说话人只是转述、没有明确让助手开，按规范“快递员说帮他开下车库”读成无关；若读成主人授意则是 控制·车库门·打开或启动"}
 {"id": "W2-0080", "home": "acc-house", "text": "车库门那个防夹挺灵的，上回碰到个纸箱就自己弹回去了", "gold": {"intent": "无关"}}
 {"id": "W2-0081", "home": "acc-house", "text": "喂，爸，您出门了吗？走之前把车库门关上啊", "gold": {"intent": "无关"}}
 {"id": "W2-0082", "home": "acc-house", "text": "车库门打开，我要出车", "gold": {"intent": "控制", "device": "车库门", "action": "打开或启动"}}
@@ -182,7 +182,7 @@
 {"id": "W2-0193", "home": "acc-house", "text": "我同事说全屋净化其实没啥用，还不如开窗通风", "gold": {"intent": "无关"}}
 {"id": "W2-0194", "home": "acc-house", "text": "有人抽烟了吧，屋里一股烟味，净化器开大点", "gold": {"intent": "控制", "device": "全屋净化器", "action": "调高或增大"}}
 {"id": "W2-0195", "home": "acc-house", "text": "隔壁在装修，屋里一股子灰味", "gold": {"intent": "控制", "device": "全屋净化器", "action": ["打开或启动", "调高或增大"]}}
-{"id": "W2-0196", "home": "acc-house", "text": "家里现在空气怎么样", "gold": {"intent": "查询", "device": "全屋净化器"}}
+{"id": "W2-0196", "home": "acc-house", "text": "家里现在空气怎么样", "gold": {"intent": "查询", "device": "全屋净化器"}, "note": "户型没有独立空气检测仪，问全屋空气质量落到全屋净化器（中央净化带读数）"}
 {"id": "W2-0197", "home": "acc-house", "text": "我们全家出门了，家里交给你了", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
 {"id": "W2-0198", "home": "acc-house", "text": "把二楼的灯全关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
 {"id": "W2-0199", "home": "acc-house", "text": "把洗碗机打开", "gold": {"intent": "控制", "device": "没有对应的设备", "action": "打开或启动"}}
@@ -263,7 +263,7 @@
 {"id": "W2-0278", "home": "acc-couple", "text": "说明书上说羊毛衫要选轻柔模式，水温不能超过三十度", "gold": {"intent": "无关"}}
 {"id": "W2-0279", "home": "acc-couple", "text": "洗烘一体机开始洗吧，衣服都放进去了", "gold": {"intent": "控制", "device": "洗烘一体机", "action": "打开或启动"}}
 {"id": "W2-0280", "home": "acc-couple", "text": "被罩还潮乎乎的，再烘一下", "gold": {"intent": "控制", "device": "洗烘一体机", "action": ["打开或启动", "设为指定的数值或模式"]}}
-{"id": "W2-0281", "home": "acc-couple", "text": "洗衣机还有多久洗完", "gold": {"intent": "查询", "device": "洗烘一体机"}}
+{"id": "W2-0281", "home": "acc-couple", "text": "洗衣机还有多久洗完", "gold": {"intent": "查询", "device": "洗烘一体机"}, "note": "“洗衣机”按别名读成洗烘一体机（同为洗衣设备，户型唯一一台）"}
 {"id": "W2-0282", "home": "acc-couple", "text": "上回出差三天，全靠喂食器，回来猫一点没瘦", "gold": {"intent": "无关"}}
 {"id": "W2-0283", "home": "acc-couple", "text": "喂食器出粮口卡了一颗粮，你拿筷子捅一下", "gold": {"intent": "无关"}}
 {"id": "W2-0284", "home": "acc-couple", "text": "别扒喂食器了，还没到点呢，馋猫", "gold": {"intent": "无关"}}
@@ -274,10 +274,10 @@
 {"id": "W2-0289", "home": "acc-couple", "text": "猫咪饮水机打开", "gold": {"intent": "控制", "device": "猫咪饮水机", "action": "打开或启动"}}
 {"id": "W2-0290", "home": "acc-couple", "text": "饮水机里的水还够猫喝吗", "gold": {"intent": "查询", "device": "猫咪饮水机"}}
 {"id": "W2-0291", "home": "acc-couple", "text": "门锁密码你换了没有？我那天按了三遍都不对", "gold": {"intent": "无关"}}
-{"id": "W2-0292", "home": "acc-couple", "text": "楼下保安说有你的快递，让开下门他送上来", "gold": {"intent": "无关"}}
+{"id": "W2-0292", "home": "acc-couple", "text": "楼下保安说有你的快递，让开下门他送上来", "gold": {"intent": "无关"}, "note": "保安要求开门且“有你的快递”是说给家人听的，按外人要求开门读成无关"}
 {"id": "W2-0293", "home": "acc-couple", "text": "那个门锁你走的时候不用管，它自己会上锁", "gold": {"intent": "无关"}}
 {"id": "W2-0294", "home": "acc-couple", "text": "入户门锁上", "gold": {"intent": "控制", "device": "入户门锁", "action": "上锁"}}
-{"id": "W2-0295", "home": "acc-couple", "text": "闺蜜来送东西，已经到门口了，你直接把门打开吧", "gold": {"intent": "控制", "device": "入户门锁", "action": "打开或启动"}}
+{"id": "W2-0295", "home": "acc-couple", "text": "闺蜜来送东西，已经到门口了，你直接把门打开吧", "gold": {"intent": "控制", "device": "入户门锁", "action": "打开或启动"}, "note": "“你直接把门打开吧”也可能是说给同住的人，按规范“我朋友在门口，你帮他开一下”读成主人授意替访客开门 → 控制"}
 {"id": "W2-0296", "home": "acc-couple", "text": "门锁上了没", "gold": {"intent": "查询", "device": "入户门锁"}}
 {"id": "W2-0297", "home": "acc-couple", "text": "困死了，睡觉睡觉", "gold": {"intent": "控制", "device": "多个设备或整屋"}}
 {"id": "W2-0298", "home": "acc-couple", "text": "把客厅的灯都关掉", "gold": {"intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}}
