@@ -70,7 +70,7 @@ steps:
       - ../scenarios/smart-home/eval/locked-v2-dev.jsonl
       - ../scenarios/smart-home/eval/locked-v3-dev.jsonl    # 开发集 v3（误触发为主，2026-09-26 起）
     out: "{run}/eval"
-    baseline: ../runs/r12/eval              # 上一版（通过门槛的最近版本）
+    baseline: ../runs/r13/eval              # 上一版（通过门槛的最近版本）
     tolerance: 0.03
     alpha: 0.1                              # 配对符号检验：只拦显著的退步
     continue_on_error: true                 # 门槛不过也照样 package，方便对比；上线前看 gate.json
