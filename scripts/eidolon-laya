@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+REPO_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+MODEL_DIR=${EIDOLON_LAYA_MODEL_DIR:-/var/lib/eidolon/models/laya-smart-home-r14-onnx-45f3dedb}
+if [ ! -f "$MODEL_DIR/manifest.json" ] || [ ! -f "$MODEL_DIR/onnx/model.onnx.data" ]; then
+  echo "eidolon-laya: pinned model artifact missing: $MODEL_DIR" >&2
+  exit 2
+fi
+export EIDOLON_LAYA_MODEL_DIR="$MODEL_DIR"
+export EIDOLON_LAYA_BACKEND=${EIDOLON_LAYA_BACKEND:-onnx}
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+exec "$REPO_ROOT/.venv/bin/eidolon-laya" "$@"

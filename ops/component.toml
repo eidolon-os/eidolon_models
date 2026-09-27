@@ -122,7 +122,8 @@ url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f
 # 每个文件在上游的路径，三者能拼出可解析的 URL，并且有测试钉住这一点。
 #
 
-# Nothing else is declared yet, deliberately.
+# Other local-model artifacts are declared only when their bytes and origin
+# can be pinned. Laya r14 below uses the local frozen-source transport.
 #
 # The ASR weights are not artifacts: they are committed to this repository
 # (asr/*/2.0.5/, ~728 MB, each version carrying a manifest.json with a SHA-256
@@ -160,3 +161,66 @@ url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f
 # The files are fetched on the workstation and carried over the transport a
 # release already uses — never pulled by the Host, which is the case above
 # about a board with no route to a model hub.
+
+[[units]]
+id = "eidolon-laya"
+kind = "service"
+exec = "scripts/eidolon-laya"
+user = "eidolon"
+serves = ["laya_api"]
+after = ["local-fs.target", "network.target"]
+requires_capability = "local_laya"
+
+[ports.laya_api]
+default = 8771
+bind = "loopback"
+purpose = "Laya System One decision suggestions, HTTP at /v1/systemone"
+
+# r14 is a shadow-only semantic model. The ONNX export and tokenizer are a
+# frozen local artifact source; the runtime never reads train/runs or models/.
+# Ops verifies every byte before carriage. A later version gets a new root.
+[[artifacts]]
+id = "laya-smart-home-r14-onnx-45f3dedb"
+kind = "model"
+install_root = "/var/lib/eidolon/models/laya-smart-home-r14-onnx-45f3dedb"
+requires_capability = "local_laya"
+
+[[artifacts.files]]
+path = "manifest.json"
+sha256 = "6f6a2c0826fbb49659c9b194fcda237308d321e5f77aa367098d206eb2dc47ab"
+url = "local-artifact://laya-r14-onnx/manifest.json"
+
+[[artifacts.files]]
+path = "onnx/model.onnx"
+sha256 = "aafa0a973725af5b0f392c2bcdd60bee60b5cd24092160026c879d36bb713275"
+url = "local-artifact://laya-r14-onnx/onnx/model.onnx"
+
+[[artifacts.files]]
+path = "onnx/model.onnx.data"
+sha256 = "50d7163e0871b79d6e4ff2d70ba4ff0eedd90eadb6036c0ad97921254617489f"
+url = "local-artifact://laya-r14-onnx/onnx/model.onnx.data"
+
+[[artifacts.files]]
+path = "torch/rl_agent_config.json"
+sha256 = "b8557a6bb691309c5a7d3cbd761c3042e1473ad15263c193351ef0a12fe17d01"
+url = "local-artifact://laya-r14-onnx/torch/rl_agent_config.json"
+
+[[artifacts.files]]
+path = "torch/encoder/config.json"
+sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
+url = "local-artifact://laya-r14-onnx/torch/encoder/config.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer.json"
+sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+url = "local-artifact://laya-r14-onnx/torch/tokenizer/tokenizer.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer_config.json"
+sha256 = "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
+url = "local-artifact://laya-r14-onnx/torch/tokenizer/tokenizer_config.json"
+
+[[artifacts.files]]
+path = "onnx/export.json"
+sha256 = "e236f17b7829613d8aaf01e63616a25e07ebec276031219a9b5931853a41e430"
+url = "local-artifact://laya-r14-onnx/onnx/export.json"

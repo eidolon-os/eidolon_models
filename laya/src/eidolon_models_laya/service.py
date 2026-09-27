@@ -146,7 +146,11 @@ async def systemone(request: web.Request) -> web.Response:
         prediction.total_ms,
         prediction.truncated or "-",
     )
-    return _json(prediction.as_response(engine.name, engine.backend.name))
+    return _json({
+        "contract_version": "eidolon.models.laya.systemone.v1",
+        "revision": request.app[INFO].get("revision"),
+        **prediction.as_response(engine.name, engine.backend.name),
+    })
 
 
 def create_app(engine: DecisionEngine, settings: Settings, model_info: dict) -> web.Application:

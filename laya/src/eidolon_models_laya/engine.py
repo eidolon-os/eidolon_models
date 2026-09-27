@@ -226,7 +226,10 @@ def check_ask_if(questions: dict[str, dict], ask_if: Any) -> dict[str, dict[str,
 def load_engine(settings: Settings, log=print) -> tuple[DecisionEngine, Manifest]:
     """Build the engine the settings ask for, refusing incomplete model files."""
     manifest = Manifest.load(settings.model_dir)
-    problems = verify_torch(manifest, checksums=False)  # tokenizer + config needed by both
+    # ONNX needs the tokenizer and model config, but never opens safetensors.
+    problems = verify_torch(
+        manifest, checksums=False, include_weights=settings.backend == "torch"
+    )
     if settings.backend == "onnx":
         problems += verify_onnx(manifest, checksums=False)
     if problems:

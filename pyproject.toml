@@ -13,6 +13,12 @@ dependencies = [
   "funasr-onnx==0.4.2",
 ]
 
+[project.optional-dependencies]
+laya = ["eidolon-models-laya[onnx]"]
+
+[tool.uv.sources]
+eidolon-models-laya = { path = "laya" }
+
 [tool.uv]
 # funasr-onnx 0.4.2 declares `numpy<=1.26.4`, and numpy 1.26.4 ships no cp313
 # wheel for any platform — it predates Python 3.13. On this Host that is

@@ -110,10 +110,14 @@ class Manifest:
         return json.loads(path.read_text(encoding="utf-8"))
 
 
-def verify_torch(manifest: Manifest, *, checksums: bool = True) -> list[str]:
+def verify_torch(
+    manifest: Manifest, *, checksums: bool = True, include_weights: bool = True
+) -> list[str]:
     """Problems with the PyTorch files; empty means complete and intact."""
     problems = []
     for rel, expected in manifest.torch_files.items():
+        if not include_weights and rel == "model.safetensors":
+            continue
         path = manifest.torch_dir / rel
         if not path.is_file():
             problems.append(f"missing {path}")
