@@ -130,6 +130,30 @@ ECS（1 物理核 / 7.5 GB，与其它服务共用）实测，示例请求（2 �
 **别在这台服务器上跑 `scripts/eidolon-laya test` 的模型对拍**：服务已占 2 GB，对拍再加载两份模型
 会触发 OOM。在服务器上用 `scripts/eidolon-laya test -m "not model"`，对拍在本机跑。
 
+## IP 角色团 participation v2（显式启用）
+
+`/v1/systemone` 是通用 Laya 接口，不能作为 Agent 的 `participation.url`。角色团使用
+`POST /v1/participation/decide`，请求和响应以 `eidolon_sdk.biz.participation` 为唯一契约。
+当前家居 r14 工件没有角色团 profile，该端点返回 503；`/readyz` 仍只表示通用模型可用。
+
+训练产物通过准入后，模型目录中的 `manifest.json` 须为 `task_profiles.ip_team.participation`
+固定 `participation.json` 的路径与 SHA-256。profile 必须声明任务、`ip-team-v3` 输入格式、
+同一模型 revision、校准策略版本、置信度阈值和最多 6 个候选；将这两份文件都列入 Ops
+工件的逐文件 digest。仅在服务环境设置 `EIDOLON_LAYA_ENABLE_PARTICIPATION=1` 后，启动才会
+校验该 profile 并开放端点。Ops 对本地角色团路由检查 `/participation/readyz` 的任务与版本；
+校验失败会使发布就绪门槛失败。
+
+`participation.json` 的固定字段示例（实际阈值由独立评估校准，不使用此示例值上线）：
+
+```json
+{"schema_version":1,"task":"ip_team.participation","state_format":"ip-team-v3","model_revision":"<manifest revision>","policy_version":"<calibration version>","min_confidence":0.8,"max_candidates":6}
+```
+
+当前 `ip-team-v3` 模型输出只有动作和候选槽位。运行时按请求中的动态候选 ID 映射，
+不通过名称猜成员；任何输入或选项截断、未知动作、低置信度均弃权。分类头不能生成具体
+澄清问题，所以 `clarify` 目前弃权；不能靠固定台词补出 `instruction`。训练任务若调整
+输入格式或提供经验证的澄清任务输出，需更新版本化 profile 和对应适配器测试后再发布。
+
 ## 测试
 
 ```bash

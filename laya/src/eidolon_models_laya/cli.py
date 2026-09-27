@@ -87,6 +87,21 @@ def cmd_doctor(args: argparse.Namespace) -> int:
     except ValueError as exc:
         print(f"exposure   {exc}")
         ok = False
+    if settings.enable_participation:
+        from .participation import participation_profile_digest, read_participation_profile
+
+        try:
+            digest = participation_profile_digest(manifest.raw)
+            profile = read_participation_profile(
+                settings.model_dir / "participation.json",
+                model_dir=settings.model_dir,
+                model_revision=manifest.revision,
+                expected_sha256=digest,
+            )
+            print(f"ip_team    profile: {profile['policy_version']} | task: participation v2")
+        except (OSError, ValueError) as exc:
+            print(f"ip_team    NOT ready: {exc}")
+            ok = False
     print("ready" if ok else "NOT ready for the configured backend")
     return 0 if ok else 1
 
@@ -95,6 +110,7 @@ def cmd_serve(args: argparse.Namespace) -> int:
     from aiohttp import web
 
     from .engine import load_engine
+    from .participation import load_participation_adapter, participation_profile_digest
     from .service import create_app
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
@@ -107,8 +123,21 @@ def cmd_serve(args: argparse.Namespace) -> int:
         "revision": manifest.revision,
         "subfolder": manifest.subfolder,
     }
+    profile_digest = (
+        participation_profile_digest(manifest.raw) if settings.enable_participation else ""
+    )
+    participation = (
+        load_participation_adapter(
+            settings.model_dir / "participation.json",
+            engine,
+            model_dir=settings.model_dir,
+            model_revision=manifest.revision,
+            expected_sha256=profile_digest,
+        )
+        if settings.enable_participation else None
+    )
     web.run_app(
-        create_app(engine, settings, model_info),
+        create_app(engine, settings, model_info, participation=participation),
         host=settings.host,
         port=settings.port,
         print=lambda msg: logging.getLogger("eidolon_laya").info(msg.strip()),

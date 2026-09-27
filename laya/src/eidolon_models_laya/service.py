@@ -2,7 +2,10 @@
 
     GET  /healthz          liveness, no auth
     GET  /readyz           model loaded, no auth
+    GET  /participation/readyz  task-qualified readiness, no auth
     GET  /v1/info          model, backend, limits                       (auth)
+    GET  /v1/participation/readyz  IP-team v2 adapter ready, if configured (auth)
+    POST /v1/participation/decide  SDK participation v2, if configured (auth)
     POST /v1/systemone     {"state": ..., "questions": {...}, "options": {"truncate_left": bool, "ask_if": {...}}}
                            ask_if: {"device": {"intent": ["控制", "查询"]}} asks device only when intent is one of those
                            Jev / laya wire format; extra fields in the reply only  (auth)
@@ -23,10 +26,13 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 from aiohttp import web
+from eidolon_sdk.biz.participation import DecisionRequest
+from pydantic import ValidationError
 
 from . import __version__
 from .config import Settings
 from .engine import DecisionEngine
+from .participation import ParticipationAdapter
 
 log = logging.getLogger("eidolon_laya")
 
@@ -34,6 +40,7 @@ ENGINE = web.AppKey("engine", DecisionEngine)
 SETTINGS = web.AppKey("settings", Settings)
 INFO = web.AppKey("info", dict)
 STATE = web.AppKey("state", dict)
+PARTICIPATION = web.AppKey("participation", ParticipationAdapter | None)
 
 # Labels and messages are mostly Chinese: send them as UTF-8, not \uXXXX escapes.
 _json = functools.partial(
@@ -89,6 +96,68 @@ async def info(request: web.Request) -> web.Response:
             },
         }
     )
+
+
+async def participation_readyz(request: web.Request) -> web.Response:
+    adapter = request.app[PARTICIPATION]
+    if adapter is None:
+        return _error(503, "not_configured", "IP-team decision model is not configured")
+    return _json({
+        "status": "ready",
+        "task": "ip_team.participation",
+        "schema_version": 2,
+        "policy_version": adapter.policy_version,
+        "model_version": adapter.model_version,
+    })
+
+
+async def participation_decide(request: web.Request) -> web.Response:
+    adapter = request.app[PARTICIPATION]
+    if adapter is None:
+        return _error(503, "not_configured", "IP-team decision model is not configured")
+    try:
+        payload = await request.json()
+        decision = DecisionRequest.model_validate(payload)
+    except web.HTTPRequestEntityTooLarge:
+        raise
+    except (ValueError, ValidationError):
+        return _error(400, "invalid_request", "expected a valid participation v2 request")
+
+    state, settings = request.app[STATE], request.app[SETTINGS]
+    if state["pending"] >= settings.max_pending:
+        return _error(503, "busy", "decision service is busy", **{"Retry-After": "1"})
+    state["pending"] += 1
+    loop = asyncio.get_running_loop()
+    future = loop.run_in_executor(state["executor"], adapter.decide, decision)
+    # A request deadline cannot stop a running inference thread. Count it as
+    # pending until the worker actually exits, so timed-out callers cannot
+    # enqueue work without bound.
+    def completed(work: asyncio.Future) -> None:
+        state["pending"] -= 1
+        if not work.cancelled():
+            work.exception()  # Observe a failure after the HTTP deadline.
+
+    future.add_done_callback(completed)
+    try:
+        response = await asyncio.wait_for(
+            asyncio.shield(future),
+            timeout=decision.timeout_ms / 1000,
+        )
+    except TimeoutError:
+        return _error(504, "deadline", "decision deadline exceeded")
+    except Exception:
+        log.exception("participation prediction failed")
+        return _error(500, "internal", "prediction failed; see server log")
+    state["served"] += 1
+    log.info(
+        "participation decision=%s status=%s action=%s policy=%s model=%s",
+        decision.decision_id,
+        response.status,
+        response.proposal.action if response.proposal else "-",
+        adapter.policy_version,
+        adapter.model_version,
+    )
+    return _json(response.model_dump(mode="json"))
 
 
 async def systemone(request: web.Request) -> web.Response:
@@ -153,11 +222,18 @@ async def systemone(request: web.Request) -> web.Response:
     })
 
 
-def create_app(engine: DecisionEngine, settings: Settings, model_info: dict) -> web.Application:
+def create_app(
+    engine: DecisionEngine,
+    settings: Settings,
+    model_info: dict,
+    *,
+    participation: ParticipationAdapter | None = None,
+) -> web.Application:
     app = web.Application(client_max_size=settings.max_body_bytes, middlewares=[_auth])
     app[ENGINE] = engine
     app[SETTINGS] = settings
     app[INFO] = model_info
+    app[PARTICIPATION] = participation
     app[STATE] = {
         "pending": 0,
         "served": 0,
@@ -171,6 +247,11 @@ def create_app(engine: DecisionEngine, settings: Settings, model_info: dict) -> 
     app.on_cleanup.append(_shutdown)
     app.router.add_get("/healthz", healthz)
     app.router.add_get("/readyz", readyz)
+    # The Host's release gate probes this loopback-only surface without a
+    # credential. It reports task readiness, never an inference or secret.
+    app.router.add_get("/participation/readyz", participation_readyz)
     app.router.add_get("/v1/info", info)
+    app.router.add_get("/v1/participation/readyz", participation_readyz)
+    app.router.add_post("/v1/participation/decide", participation_decide)
     app.router.add_post("/v1/systemone", systemone)
     return app

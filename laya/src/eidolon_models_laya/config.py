@@ -100,6 +100,9 @@ class Settings:
     max_pending: int = 4
     max_questions: int = 32
     max_body_bytes: int = 256 * 1024
+    #: A task-qualified profile in the pinned model root is required to expose
+    #: participation v2. The existing smart-home shadow model keeps this off.
+    enable_participation: bool = False
 
     @classmethod
     def from_env(cls, env: Mapping[str, str] = os.environ) -> Settings:
@@ -123,6 +126,7 @@ class Settings:
             max_pending=_int(env, "EIDOLON_LAYA_MAX_PENDING", 4, minimum=1),
             max_questions=_int(env, "EIDOLON_LAYA_MAX_QUESTIONS", 32, minimum=1),
             max_body_bytes=_int(env, "EIDOLON_LAYA_MAX_BODY_BYTES", 256 * 1024, minimum=1024),
+            enable_participation=_bool(env, "EIDOLON_LAYA_ENABLE_PARTICIPATION", False),
         )
 
     def with_overrides(self, **overrides: object) -> Settings:
