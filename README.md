@@ -44,6 +44,24 @@ laya/   laya 决策模型服务（独立 uv 项目：PyTorch / ONNX 两个后端
 
 ## Host 能力与验证
 
+### 按 Host 选择模型服务
+
+`eidolon_ops/config/eidolon-rk3588.toml` 和 `eidolon_ops/config/eidolon-pi.toml`
+分别配置 Orange Pi 5 Max 和 Pi 5。`[capabilities].provides` 中的
+`local_asr`、`local_llm`、`local_tts`、`local_laya` 决定本地安装的模型服务、
+工件和健康检查；`[services].units` 必须列出对应的 systemd unit，启用任一
+本地模型时还须在 `[sources.eidolon_models]` 指向本仓库。Ops 在发布前校验三者
+一致，切换后停止从配置中移除的旧模型服务。
+
+当前两台 Host 均只选择 `local_laya`，因此只有 `eidolon-laya.service` 作为本地
+模型服务启动。RK3588 的 `rknpu2` 仍描述硬件能力；Laya r14 当前运行 ONNX CPU
+后端。ASR、TTS 和会话 LLM 的本地服务不启动，调用仍遵照各 Host 的 Provider
+配置。Pi 5 需恢复网络可达后才能部署并验证这份配置。
+
+Laya r14 权重不在 Git 中。发布工作站须先备齐 Ops 配置所引用的冻结工件源，
+由组件契约校验逐文件摘要；换工作站时要搬运相同字节。只修改能力声明不会
+绕过工件校验。
+
 - [HOST-RK3588.md](HOST-RK3588.md)：**Orange Pi 5 Max（RK3588）的实测档案**。系统与 NPU、
   内存带宽、funasr 2pass、Qwen3-1.7B、prompt 前缀缓存、CosyVoice2 分组件与端到端、
   Kokoro 对照、bge，以及 ASR/LLM/TTS/bge 的联合压测与 CPU/NPU 分配方案。开头有结论速查。
