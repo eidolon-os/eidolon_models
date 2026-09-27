@@ -106,8 +106,8 @@ sha256 = "c876f159707a4e4f70e045106c69db15bfc935a4981706fd4f65c6e7ea1e81c5"
 url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f15126ef60b45a1e1933222/Qwen3-1.7B-Q4_0.gguf"
 
 # CosyVoice2 的合成权重不在这里，是**有意**的，理由和 ASR 一样：它们提交进了
-# 仓库（tts/cosyvoice2-rk3588/<版本>/，Git LFS），而一次发布是精确的 git commit，
-# 所以它们本来就随发布走。
+# 仓库（tts/cosyvoice2-rk3588/<版本>/，Git LFS）。发布归档仅在 Host 选择
+# local_tts 时包含 tts/，否则不把这些字节传上板。
 #
 # 这里曾经**同时**声明过一份上游 pin，装到 .../cosyvoice2-upstream，用意是"同样
 # 的字节可以不经 Git 再取一次、再核一次"。拆掉了：
@@ -127,8 +127,9 @@ url = "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/resolve/d7f544eead698dbd1f
 #
 # The ASR weights are not artifacts: they are committed to this repository
 # (asr/*/2.0.5/, ~728 MB, each version carrying a manifest.json with a SHA-256
-# per file), and a release is exact Git commits, so they already ride it. The
-# `artifacts` section exists for what Git does not hold.
+# per file). The release archive includes asr/ only for local_asr Hosts;
+# exact Git commits pin those bytes. The `artifacts` section exists for what
+# Git does not hold.
 #
 # CosyVoice2's RKNN and RKLLM models used to be listed here as undeclarable,
 # on the grounds that conversion outputs are not pinned anywhere. They are:

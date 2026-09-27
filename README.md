@@ -53,6 +53,12 @@ laya/   laya 决策模型服务（独立 uv 项目：PyTorch / ONNX 两个后端
 本地模型时还须在 `[sources.eidolon_models]` 指向本仓库。Ops 在发布前校验三者
 一致，切换后停止从配置中移除的旧模型服务。
 
+发布包在归档时按能力排除未启用的 ASR/TTS 模型目录，运行环境也只安装已启用服务
+需要的 Python extra。独立工件（如 LLM、Laya 权重）只为已启用能力传输。
+成功激活并清理旧发布后，Ops 会检查已取消选择的旧工件：仅当目录仍与组件契约
+中的固定摘要完全一致、相关服务已停止时才删除；检查不通过会保留目录并在发布
+结果中说明。dry-run 和健康检查失败时不会删除旧模型。
+
 当前两台 Host 均只选择 `local_laya`，因此只有 `eidolon-laya.service` 作为本地
 模型服务启动。RK3588 的 `rknpu2` 仍描述硬件能力；Laya r14 当前运行 ONNX CPU
 后端。ASR、TTS 和会话 LLM 的本地服务不启动，调用仍遵照各 Host 的 Provider

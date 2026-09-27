@@ -10,10 +10,10 @@ readme = "README.md"
 requires-python = ">=3.13,<3.14"
 dependencies = [
   "aiohttp>=3.11,<4",
-  "funasr-onnx==0.4.2",
 ]
 
 [project.optional-dependencies]
+asr = ["funasr-onnx==0.4.2"]
 laya = ["eidolon-models-laya[onnx]"]
 
 [tool.uv.sources]

@@ -258,10 +258,12 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "aiohttp" },
-    { name = "funasr-onnx" },
 ]
 
 [package.optional-dependencies]
+asr = [
+    { name = "funasr-onnx" },
+]
 laya = [
     { name = "eidolon-models-laya", extra = ["onnx"] },
 ]
@@ -278,9 +280,9 @@ dev = [
 requires-dist = [
     { name = "aiohttp", specifier = ">=3.11,<4" },
     { name = "eidolon-models-laya", extras = ["onnx"], marker = "extra == 'laya'", directory = "laya" },
-    { name = "funasr-onnx", specifier = "==0.4.2" },
+    { name = "funasr-onnx", marker = "extra == 'asr'", specifier = "==0.4.2" },
 ]
-provides-extras = ["laya"]
+provides-extras = ["asr", "laya"]
 
 [package.metadata.requires-dev]
 dev = [
