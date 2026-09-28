@@ -7,8 +7,9 @@ Writes <model-dir>/participation.json (schema 2, state format participation-laya
 exactly as scenario.yaml trained them, plus the bounded clarification task per reason) and pins its
 sha256 in the model's manifest.json under task_profiles. Whether a clarify may carry these per-reason
 tasks (the reply model words the question from the public history) or must abstain is a policy choice
-(docs/IP团队/决策模型集成边界审查-20260928.md §4); --no-clarify-tasks gives the abstaining profile. min_confidence is the calibrated action
-confidence below which the service abstains and the agent decides (choose it on p-dev, PLAN.md §3).
+(docs/IP团队/决策模型集成边界审查-20260928.md §4); --no-clarify-tasks gives the abstaining profile.
+min_confidence is the calibrated action confidence below which the service abstains and the agent
+decides (choose it on p-dev, PLAN.md §3).
 """
 
 from __future__ import annotations
