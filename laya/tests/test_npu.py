@@ -88,23 +88,15 @@ class _FakeRuntime:
 
     ran: list = []
 
-    def __init__(self, verbose=False):
-        self.core = self.path = None
+    def __init__(self, model, core):
+        self.path, self.core = str(model), core
 
-    def load_rknn(self, path):
-        self.path = path
-        return 0
-
-    def init_runtime(self, core_mask=None):
-        self.core = core_mask
-        return 0
-
-    def inference(self, inputs):
+    def infer(self, inputs):
         x, mask, tv = inputs
         _FakeRuntime.ran.append((self.core, x.shape[1]))
-        return [x @ _W + tv]
+        return x @ _W + tv
 
-    def release(self):
+    def close(self):
         pass
 
 
@@ -113,14 +105,7 @@ _W = np.random.default_rng(9).normal(size=(32, 32)).astype(np.float32) / 6
 
 @pytest.fixture
 def rknn_dir(tmp_path, monkeypatch):
-    import sys
-    import types
-
-    api = types.SimpleNamespace(RKNNLite=_FakeRuntime)
-    for i, name in enumerate(("NPU_CORE_0", "NPU_CORE_1", "NPU_CORE_2")):
-        setattr(_FakeRuntime, name, i)
-    monkeypatch.setitem(sys.modules, "rknnlite", types.SimpleNamespace(api=api))
-    monkeypatch.setitem(sys.modules, "rknnlite.api", api)
+    monkeypatch.setattr("eidolon_models_laya.rknn_runtime.RknnRuntime", _FakeRuntime)
     rng = np.random.default_rng(11)
     np.save(tmp_path / "tok_emb_fp16.npy", rng.normal(size=(100, 32)).astype(np.float16))
     np.save(tmp_path / "type_emb.npy", rng.normal(size=(3, 32)).astype(np.float32))

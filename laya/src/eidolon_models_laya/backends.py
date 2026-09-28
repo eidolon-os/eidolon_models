@@ -122,7 +122,7 @@ def parse_placement(text: str) -> dict[int, tuple[int, ...]]:
 
 
 class RknnBackend:
-    """RK3588 NPU via rknn-toolkit-lite2, from what ``export-npu`` wrote and ``deploy/rk3588/laya_npu.py
+    """RK3588 NPU via the pinned RKNN C Runtime, from what ``export-npu`` wrote and ``deploy/rk3588/laya_npu.py
     convert`` compiled: encoder + head layers per sequence bucket on the NPU; token-embedding lookup,
     marker gather, scorer and act head on the CPU (numpy).
 
@@ -139,7 +139,7 @@ class RknnBackend:
         import threading
         from concurrent.futures import ThreadPoolExecutor
 
-        from rknnlite.api import RKNNLite
+        from .rknn_runtime import RknnRuntime
 
         npu_dir = Path(npu_dir)
         files = {int(re.search(r"hidden_l(\d+)", p.name).group(1)): p for p in npu_dir.glob("hidden_l*.rknn")}
@@ -151,14 +151,16 @@ class RknnBackend:
         if missing:
             raise ValueError(f"buckets {sorted(missing)} are on no core in placement {placement}")
         self._buckets = sorted(files)
-        masks = {0: RKNNLite.NPU_CORE_0, 1: RKNNLite.NPU_CORE_1, 2: RKNNLite.NPU_CORE_2}
+        self.max_len = max(self._buckets)
         self._rt = {}
-        for core, bs in self._placement.items():
-            for L in bs:
-                r = RKNNLite(verbose=False)
-                if r.load_rknn(str(files[L])) != 0 or r.init_runtime(core_mask=masks[core]) != 0:
-                    raise RuntimeError(f"cannot load {files[L].name} on NPU core {core}")
-                self._rt[(core, L)] = r
+        try:
+            for core, bs in self._placement.items():
+                for L in bs:
+                    self._rt[(core, L)] = RknnRuntime(files[L], core)
+        except BaseException:
+            for runtime in self._rt.values():
+                runtime.close()
+            raise
         self._emb = np.load(npu_dir / "tok_emb_fp16.npy", mmap_mode="r")
         self._type = np.load(npu_dir / "type_emb.npy")
         self._sc = dict(np.load(npu_dir / "scorer.npz"))
@@ -217,7 +219,7 @@ class RknnBackend:
                     ids = batch["input_ids"][i, : lengths[i]].tolist()
                     markers = batch["marker_pos"][i][batch["marker_mask"][i].astype(bool)].tolist()
                     x = npu_inputs(ids, int(batch["qtype"][i]), L, self._emb, self._type)
-                    h = np.asarray(self._rt[(core, L)].inference(inputs=x)[0], np.float32)[0]
+                    h = np.asarray(self._rt[(core, L)].infer(x), np.float32)[0]
                     lo = score_hidden(h, markers, self._sc)
                     futures[i].set_result((lo, act_from_logits(h[0], lo, self._act)))
                 except Exception as exc:  # noqa: BLE001 - surfaced through the future

@@ -66,6 +66,8 @@ class DecisionEngine:
         self.tokenizer = tokenizer
         self.cfg = cfg
         self.max_len = max_len or cfg.max_len
+        if hasattr(backend, "max_len"):
+            self.max_len = min(self.max_len, backend.max_len)
         # Budget for instruction + options; raise it for questions with many options.
         self.head_max_len = head_max_len or cfg.head_max_len
         self.name = name

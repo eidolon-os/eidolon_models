@@ -10,8 +10,6 @@ Group=eidolon
 EnvironmentFile=/etc/eidolon/host.env
 Environment=EIDOLON_LAYA_HOST=127.0.0.1
 Environment=EIDOLON_LAYA_PORT=8771
-Environment=EIDOLON_LAYA_BACKEND=onnx
-Environment=EIDOLON_LAYA_MODEL_DIR=/var/lib/eidolon/models/laya-smart-home-r14-onnx-45f3dedb
 Environment=PATH=/opt/eidolon/current/eidolon_models/.venv/bin:/usr/local/bin:/usr/bin:/bin
 ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-laya serve
 Restart=on-failure

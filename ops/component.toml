@@ -225,3 +225,86 @@ url = "local-artifact://laya-r14-onnx/torch/tokenizer/tokenizer_config.json"
 path = "onnx/export.json"
 sha256 = "e236f17b7829613d8aaf01e63616a25e07ebec276031219a9b5931853a41e430"
 url = "local-artifact://laya-r14-onnx/onnx/export.json"
+
+# Both inference formats remain pinned for explicit rollback. Selected by local_laya;
+# the launcher uses the Host rknpu2 declaration, never a runtime failure fallback.
+[[artifacts]]
+id = "laya-smart-home-r14-rknn-45f3dedb"
+kind = "model"
+install_root = "/var/lib/eidolon/models/laya-smart-home-r14-rknn-45f3dedb"
+requires_capability = "local_laya"
+
+[[artifacts.files]]
+path = "librknnrt.so"
+sha256 = "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8"
+url = "local-artifact://laya-r14-rknn/librknnrt.so"
+
+[[artifacts.files]]
+path = "manifest.json"
+sha256 = "6f6a2c0826fbb49659c9b194fcda237308d321e5f77aa367098d206eb2dc47ab"
+url = "local-artifact://laya-r14-rknn/manifest.json"
+
+[[artifacts.files]]
+path = "npu/act_head.npz"
+sha256 = "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98"
+url = "local-artifact://laya-r14-rknn/npu/act_head.npz"
+
+[[artifacts.files]]
+path = "npu/export.json"
+sha256 = "650c843e7475ce3f8ebd81fdc26a3dd3e41c74c8d64553c2be9106a12893392d"
+url = "local-artifact://laya-r14-rknn/npu/export.json"
+
+[[artifacts.files]]
+path = "npu/hidden_l128.rknn"
+sha256 = "54d65e2b715f2381fa165d8e33c3243118b4c41158eea9243bffcaf7b0782fc2"
+url = "local-artifact://laya-r14-rknn/npu/hidden_l128.rknn"
+
+[[artifacts.files]]
+path = "npu/hidden_l256.rknn"
+sha256 = "4c71e5682f9e72d142a9f90d9c33251ba3333859c5b096ce65e1a280b34eb3be"
+url = "local-artifact://laya-r14-rknn/npu/hidden_l256.rknn"
+
+[[artifacts.files]]
+path = "npu/hidden_l384.rknn"
+sha256 = "e1c3c0cb80afd27e306b67f867b03ab1fa07d39a06b9eb5d8ca56ecbe6d54b84"
+url = "local-artifact://laya-r14-rknn/npu/hidden_l384.rknn"
+
+[[artifacts.files]]
+path = "npu/hidden_l512.rknn"
+sha256 = "14fc62762813fbe4fa986868417252fa593c5666431d839f8c36723977382bb0"
+url = "local-artifact://laya-r14-rknn/npu/hidden_l512.rknn"
+
+[[artifacts.files]]
+path = "npu/scorer.npz"
+sha256 = "c6f524896408c33e3378f53ae8118348fe3b39441d0156280e0c757bc01ce6ac"
+url = "local-artifact://laya-r14-rknn/npu/scorer.npz"
+
+[[artifacts.files]]
+path = "npu/tok_emb_fp16.npy"
+sha256 = "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d"
+url = "local-artifact://laya-r14-rknn/npu/tok_emb_fp16.npy"
+
+[[artifacts.files]]
+path = "npu/type_emb.npy"
+sha256 = "643769581d15c9594f45c9ab765235b52ac1867b6cfdbbf122341a90325b242b"
+url = "local-artifact://laya-r14-rknn/npu/type_emb.npy"
+
+[[artifacts.files]]
+path = "torch/encoder/config.json"
+sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
+url = "local-artifact://laya-r14-rknn/torch/encoder/config.json"
+
+[[artifacts.files]]
+path = "torch/rl_agent_config.json"
+sha256 = "b8557a6bb691309c5a7d3cbd761c3042e1473ad15263c193351ef0a12fe17d01"
+url = "local-artifact://laya-r14-rknn/torch/rl_agent_config.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer.json"
+sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+url = "local-artifact://laya-r14-rknn/torch/tokenizer/tokenizer.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer_config.json"
+sha256 = "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
+url = "local-artifact://laya-r14-rknn/torch/tokenizer/tokenizer_config.json"

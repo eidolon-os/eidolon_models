@@ -51,6 +51,17 @@ def test_non_command_costs_one_question():
     assert p.as_response("m", "fake")["skipped"] == p.skipped
 
 
+def test_backend_input_capacity_bounds_service_and_reports_truncation():
+    e = engine(0)
+    e.backend.max_len = 128
+    bounded = DecisionEngine(
+        e.backend, e.tokenizer, ModelConfig.from_dict({"max_len": 1024, "head_max_len": 128}),
+    )
+    assert bounded.max_len == 128
+    result = bounded.predict({"utterance": "打开客厅灯" * 300}, QUESTIONS)
+    assert result.truncated == list(QUESTIONS)
+
+
 def test_command_asks_the_rest_in_one_second_pass():
     e = engine(0)  # intent = 控制
     p = e.predict({"utterance": "开灯"}, QUESTIONS, ask_if=SMART_HOME)

@@ -1,0 +1,136 @@
+{
+  "source": "current-mac-recorded-request",
+  "candidate_count": 22,
+  "results": [
+    {
+      "utterance": "打开客厅灯",
+      "elapsed_ms": 2967.9,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "opi-review-0",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.9812,
+          "action_p": 0.996,
+          "backend": "onnx",
+          "server_ms": 2916.0
+        }
+      },
+      "within_current_800ms": false
+    },
+    {
+      "utterance": "关闭主灯",
+      "elapsed_ms": 2363.8,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "opi-review-1",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9917,
+          "device_p": 0.3751,
+          "action_p": 0.9959,
+          "backend": "onnx",
+          "server_ms": 2350.2
+        }
+      },
+      "within_current_800ms": false
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "elapsed_ms": 2497.0,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "opi-review-2",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.995,
+          "device_p": 0.9779,
+          "action_p": 0.704,
+          "backend": "onnx",
+          "server_ms": 2477.4
+        }
+      },
+      "within_current_800ms": false
+    },
+    {
+      "utterance": "今天星期几",
+      "elapsed_ms": 2768.2,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "opi-review-3",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5317,
+          "action_p": 0.5916,
+          "backend": "onnx",
+          "server_ms": 2755.5
+        }
+      },
+      "within_current_800ms": false
+    }
+  ],
+  "device_execution": false
+}
