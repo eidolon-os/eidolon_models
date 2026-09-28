@@ -152,10 +152,18 @@ def record_items(
     return items
 
 
-def batches(items: list[dict], batch_size: int, pad_id: int):
+def batches(items: list[dict], batch_size: int, pad_id: int, pad_multiple: int = 1):
+    """pad_multiple > 1 rounds the sequence length up (extra positions are masked). On MPS every distinct
+    shape gets its own compiled graph, so exact-length batches over a large set grow memory until it swaps."""
     for i in range(0, len(items), batch_size):
         chunk = items[i : i + batch_size]
-        yield chunk, collate_items([[it] for it in chunk], pad_id)
+        b = collate_items([[it] for it in chunk], pad_id)
+        if pad_multiple > 1:
+            extra = -b["input_ids"].shape[1] % pad_multiple
+            if extra:
+                b["input_ids"] = torch.nn.functional.pad(b["input_ids"], (0, extra), value=pad_id)
+                b["attention_mask"] = torch.nn.functional.pad(b["attention_mask"], (0, extra), value=0)
+        yield chunk, b
 
 
 def to_device(batch: dict, device: torch.device) -> dict:

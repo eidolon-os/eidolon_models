@@ -1,8 +1,9 @@
-# 参与决策 p1：沿用家居 r14 配方（全部 22 层解冻、3 epoch、验证集 NLL 选轮），见 PLAN.md §7。
+# 参与决策 p2：p1 配方，唯一改动是按验证准确率选轮（见 EXPERIMENTS.md p2）；batch 8 × 累积 2 只为省内存，等效 batch 不变。
 init: ../../../models/laya-multilingual/1c5edc17/torch
 model_name: laya-participation
 epochs: 3
-batch_size: 16
+batch_size: 8
+grad_accum: 2
 lr_encoder: 2.5e-5
 lr_head: 1.0e-4
 unfreeze_layers: -1
@@ -15,3 +16,4 @@ head_max_len: 512
 seed: 7
 pad_multiple: 64      # MPS 按形状编译并缓存图；精确长度 × 1,200 个 batch 把内存涨到 32 GB 开始换页（p1 首跑）
 log_every: 200
+checkpoint_metric: accuracy

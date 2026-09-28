@@ -1,6 +1,6 @@
 """Participation decision metrics from an eval report (rows needed: evaluate without --no-rows).
 
-    python3 train/scenarios/participation/metrics.py <report.json> [--baseline <report.json>]
+    python3 train/scenarios/participation/metrics.py <report.json> [--json out.json] [--errors out.jsonl --records eval.jsonl]
 
 Per record (one decision point): action right; speaker right when the gold action speaks; clarify_about right
 when it clarifies; end-to-end = all of those. Also the two costly errors — speaking when it should stay silent
@@ -79,6 +79,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("report")
     ap.add_argument("--json", help="write the numbers here")
+    ap.add_argument("--errors", help="write every wrong record (variant 0) with its state here; needs --records")
+    ap.add_argument("--records", help="the eval records file the report was made from")
     a = ap.parse_args()
     recs = records(json.loads(Path(a.report).read_text("utf-8")))
     res = {"all": summary(recs)}
@@ -96,6 +98,16 @@ def main() -> int:
         Path(a.json).write_text(json.dumps({"slices": res, "families": fam,
                                             "confusion": {f"{g}->{p}": n for (g, p), n in confusion.items()}},
                                            ensure_ascii=False, indent=1), "utf-8")
+    if a.errors:
+        states = {}
+        for line in Path(a.records).read_text("utf-8").splitlines():
+            if line.strip():
+                r = json.loads(line)
+                states[r["id"]] = r["state"]
+        with Path(a.errors).open("w", encoding="utf-8") as f:
+            for r in recs:
+                if not r["e2e"] and r["variant"] in (None, "0"):
+                    f.write(json.dumps({**r, "state": states.get(r["id"])}, ensure_ascii=False) + "\n")
     return 0
 
 

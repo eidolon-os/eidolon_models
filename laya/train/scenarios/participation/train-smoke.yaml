@@ -13,3 +13,5 @@ weight_decay: 0.01
 max_len: 1024        # 实测最长约 720 token（团队 5 人 + 16 条历史）
 head_max_len: 512
 seed: 7
+pad_multiple: 64      # MPS 按形状编译并缓存图；精确长度 × 1,200 个 batch 把内存涨到 32 GB 开始换页（p1 首跑）
+log_every: 200

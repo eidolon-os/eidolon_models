@@ -155,12 +155,12 @@ def set_trainable(model, unfreeze_layers: int) -> tuple[list, list]:
     return enc_params, head_params
 
 
-def evaluate_split(loaded: Loaded, items: list[dict], batch_size: int) -> dict:
+def evaluate_split(loaded: Loaded, items: list[dict], batch_size: int, pad_multiple: int = 1) -> dict:
     loaded.model.eval()
     nll, n, correct = 0.0, 0, 0
     by_type = defaultdict(lambda: [0, 0])
     with torch.no_grad():
-        for chunk, batch in batches(items, batch_size, loaded.tok.pad_token_id):
+        for chunk, batch in batches(items, batch_size, loaded.tok.pad_token_id, pad_multiple):
             b = to_device(batch, loaded.device)
             logits, _ = loaded.model(
                 b["input_ids"], b["attention_mask"], b["marker_pos"], b["marker_mask"], b["qtype"]
@@ -250,6 +250,8 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
         float(config.get("pg_sigma_end", 0.1)),
     )
     accum = int(config.get("grad_accum", 1))
+    pad_multiple = int(config.get("pad_multiple", 1))
+    log_every = int(config.get("log_every", 0))
     # items per epoch is stable (one per labelled question), so the schedule is known up front
     n_items = sum(len(record_items(r, tok, cfg)) for r in train_records)
     steps_per_epoch = math.ceil(n_items / batch_size / accum)
@@ -279,7 +281,7 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
         )  # notebook's schedule
         opt.zero_grad(set_to_none=True)
         for gi, chunk in enumerate(groups):
-            _, batch = next(batches(chunk, len(chunk), tok.pad_token_id))
+            _, batch = next(batches(chunk, len(chunk), tok.pad_token_id, pad_multiple))
             b = to_device(batch, device)
             with torch.autocast(device_type="cuda", dtype=torch.bfloat16, enabled=amp):
                 logits, _ = model(
@@ -317,13 +319,17 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
                 sched.step()
                 opt.zero_grad(set_to_none=True)
                 step += 1
+            if log_every and (gi + 1) % log_every == 0:
+                mem = torch.mps.driver_allocated_memory() / 2**30 if device.type == "mps" else None
+                log(json.dumps({"epoch": epoch + 1, "batch": gi + 1, "of": len(groups), "loss": round(running / max(nb, 1), 4),
+                                "elapsed_s": round(time.time() - t0, 1), "mps_gb": mem and round(mem, 1)}))
         rec = {
             "epoch": epoch + 1,
             "loss": running / max(nb, 1),
             **{k: v / max(nb, 1) for k, v in parts_sum.items()},
         }
         if val_items:
-            rec["val"] = evaluate_split(loaded, val_items, batch_size)
+            rec["val"] = evaluate_split(loaded, val_items, batch_size, pad_multiple)
             # Equal-mass multi-gold labels count any acceptable next move as
             # correct. NLL remains logged even when decisions select the epoch.
             score = rec["val"]["nll"] if checkpoint_metric == "nll" else -rec["val"]["acc"]
