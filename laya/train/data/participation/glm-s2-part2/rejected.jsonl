@@ -1,0 +1,49 @@
+{"episode": "G2-01112", "family": "C01", "reason": "3 texts for 4 events"}
+{"episode": "G2-01125", "family": "T07", "reason": "named user turn lacks the name 小婉"}
+{"episode": "G2-01139", "family": "T07", "reason": "ValueError: chat completion returned empty text content"}
+{"episode": "G2-01140", "family": "T11", "reason": "ValueError: chat completion returned empty text content"}
+{"episode": "G2-01141", "family": "C02", "reason": "ValueError: chat completion returned empty text content"}
+{"episode": "G2-01149", "family": "T08", "reason": "named user turn lacks the name 蓝笛"}
+{"episode": "G2-01155", "family": "T13", "reason": "texts is not a list of strings"}
+{"episode": "G2-01156", "family": "T01", "reason": "named user turn lacks the name 团团妈"}
+{"episode": "G2-01159", "family": "C07", "reason": "candidate slots"}
+{"episode": "G2-01176", "family": "C06", "reason": "texts is not a list of strings"}
+{"episode": "G2-01184", "family": "T12", "reason": "unnamed user turn mentions a candidate"}
+{"episode": "G2-01209", "family": "T11", "reason": "named user turn lacks the name 云舒"}
+{"episode": "G2-01222", "family": "T04", "reason": "candidate slots"}
+{"episode": "G2-01230", "family": "T10", "reason": "unexpected duplicate names"}
+{"episode": "G2-01232", "family": "T06", "reason": "unnamed user turn mentions a candidate"}
+{"episode": "G2-01235", "family": "T08", "reason": "named user turn lacks the name 柳青梧"}
+{"episode": "G2-01261", "family": "T01", "reason": "candidate slots"}
+{"episode": "G2-01264", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-01265", "family": "T08", "reason": "named user turn lacks the name 程野"}
+{"episode": "G2-01283", "family": "T10", "reason": "candidate slots"}
+{"episode": "G2-01291", "family": "T07", "reason": "named user turn lacks the name 苏白梨"}
+{"episode": "G2-01296", "family": "T07", "reason": "candidate slots"}
+{"episode": "G2-01311", "family": "T04", "reason": "texts is not a list of strings"}
+{"episode": "G2-01322", "family": "T06", "reason": "3 texts for 2 events"}
+{"episode": "G2-01331", "family": "T02", "reason": "named user turn lacks the name 棉棉"}
+{"episode": "G2-01339", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-01390", "family": "C01", "reason": "6 texts for 4 events"}
+{"episode": "G2-01413", "family": "T14", "reason": "5 texts for 4 events"}
+{"episode": "G2-01414", "family": "C04", "reason": "4 texts for 5 events"}
+{"episode": "G2-01422", "family": "T16", "reason": "candidate slots"}
+{"episode": "G2-01428", "family": "T01", "reason": "candidate slots"}
+{"episode": "G2-01467", "family": "T13", "reason": "candidate slots"}
+{"episode": "G2-01472", "family": "T08", "reason": "named user turn lacks the name 麦兜兜"}
+{"episode": "G2-01473", "family": "T13", "reason": "meta phrase in a role's line"}
+{"episode": "G2-01475", "family": "T06", "reason": "unnamed user turn mentions a candidate"}
+{"episode": "G2-01480", "family": "C04", "reason": "texts is not a list of strings"}
+{"episode": "G2-01500", "family": "C02", "reason": "texts is not a list of strings"}
+{"episode": "G2-01503", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-01509", "family": "T07", "reason": "texts is not a list of strings"}
+{"episode": "G2-01510", "family": "T16", "reason": "1 texts for 4 events"}
+{"episode": "G2-01516", "family": "T14", "reason": "texts is not a list of strings"}
+{"episode": "G2-01534", "family": "T08", "reason": "named user turn lacks the name 墨白"}
+{"episode": "G2-01536", "family": "C06", "reason": "3 texts for 4 events"}
+{"episode": "G2-01544", "family": "T05", "reason": "named user turn lacks the name 苏一鸣"}
+{"episode": "G2-01548", "family": "C03", "reason": "texts is not a list of strings"}
+{"episode": "G2-01549", "family": "C08", "reason": "texts is not a list of strings"}
+{"episode": "G2-01551", "family": "T13", "reason": "named user turn lacks the name 老周"}
+{"episode": "G2-01572", "family": "C07", "reason": "texts is not a list of strings"}
+{"episode": "G2-01573", "family": "C01", "reason": "texts is not a list of strings"}

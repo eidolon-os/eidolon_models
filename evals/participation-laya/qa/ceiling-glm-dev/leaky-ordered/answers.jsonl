@@ -1,0 +1,210 @@
+{"id": "DC-0001#0", "gold": {"action": "respond", "speaker": ["ning"]}, "answered": true}
+{"id": "DC-0001#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0001#2", "gold": {"action": "respond", "speaker": ["ning"]}, "answered": true}
+{"id": "DC-0001#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0002#0", "gold": {"action": "respond", "speaker": ["dafu"]}, "answered": true}
+{"id": "DC-0002#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0002#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0002#3", "gold": {"action": "respond", "speaker": ["dafu"]}, "answered": true}
+{"id": "DC-0002#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0003#0", "gold": {"action": "respond", "speaker": ["shen"]}, "answered": true}
+{"id": "DC-0003#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0003#2", "gold": {"action": "respond", "speaker": ["shen"]}, "answered": true}
+{"id": "DC-0003#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0003#4", "gold": {"action": "respond", "speaker": ["shen"]}, "answered": true}
+{"id": "DC-0003#5", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0004#0", "gold": {"action": "respond", "speaker": ["zhou"]}, "answered": true}
+{"id": "DC-0004#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0004#2", "gold": {"action": "respond", "speaker": ["zhou"]}, "answered": true}
+{"id": "DC-0004#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0004#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0005#0", "gold": {"action": "respond", "speaker": ["doudou"]}, "answered": true}
+{"id": "DC-0005#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0005#2", "gold": {"action": "respond", "speaker": ["doudou"]}, "answered": true}
+{"id": "DC-0005#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0006#0", "gold": {"action": "respond", "speaker": ["yehang"]}, "answered": true}
+{"id": "DC-0006#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0006#2", "gold": {"action": "respond", "speaker": ["yehang"]}, "answered": true}
+{"id": "DC-0006#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0006#4", "gold": {"action": "respond", "speaker": ["yehang"]}, "answered": true}
+{"id": "DC-0006#5", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0007#0", "gold": {"action": "respond", "speaker": ["ailin"]}, "answered": true}
+{"id": "DC-0007#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0007#2", "gold": {"action": "respond", "speaker": ["ailin"]}, "answered": true}
+{"id": "DC-0007#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0007#4", "gold": {"action": "respond", "speaker": ["ailin"]}, "answered": true}
+{"id": "DC-0007#5", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0008#0", "gold": {"action": "respond", "speaker": ["guifang"]}, "answered": true}
+{"id": "DC-0008#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0008#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0009#0", "gold": {"action": "respond", "speaker": ["mili"]}, "answered": true}
+{"id": "DC-0009#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0009#2", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0009#3", "gold": {"action": "respond", "speaker": ["mili"]}, "answered": true}
+{"id": "DC-0009#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0010#0", "gold": {"action": "respond", "speaker": ["hanchuan"]}, "answered": true}
+{"id": "DC-0010#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0010#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0011#0", "gold": {"action": "respond", "speaker": ["tiemao"]}, "answered": true}
+{"id": "DC-0011#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0011#2", "gold": {"action": "respond", "speaker": ["tiemao"]}, "answered": true}
+{"id": "DC-0011#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0012#0", "gold": {"action": "respond", "speaker": ["linyao"]}, "answered": true}
+{"id": "DC-0012#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0012#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0013#0", "gold": {"action": "respond", "speaker": ["bailing"]}, "answered": true}
+{"id": "DC-0013#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0013#2", "gold": {"action": "respond", "speaker": ["bailing"]}, "answered": true}
+{"id": "DC-0013#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0014#0", "gold": {"action": "respond", "speaker": ["laohan"]}, "answered": true}
+{"id": "DC-0014#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0014#2", "gold": {"action": "respond", "speaker": ["laohan"]}, "answered": true}
+{"id": "DC-0014#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0014#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0015#0", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0015#1", "gold": {"action": "respond", "speaker": ["xu"]}, "answered": true}
+{"id": "DC-0015#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0015#3", "gold": {"action": "respond", "speaker": ["xu"]}, "answered": true}
+{"id": "DC-0015#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0016#0", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0016#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0016#2", "gold": {"action": "respond", "speaker": ["ahuang"]}, "answered": true}
+{"id": "DC-0016#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0017#0", "gold": {"action": "respond", "speaker": ["qinghe"]}, "answered": true}
+{"id": "DC-0017#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0017#2", "gold": {"action": "respond", "speaker": ["qinghe"]}, "answered": true}
+{"id": "DC-0017#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0018#0", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0018#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0018#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0018#3", "gold": {"action": "respond", "speaker": ["yanyan"]}, "answered": true}
+{"id": "DC-0018#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0019#0", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0019#1", "gold": {"action": "respond", "speaker": ["su"]}, "answered": true}
+{"id": "DC-0019#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0019#3", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0019#4", "gold": {"action": "respond", "speaker": ["su"]}, "answered": true}
+{"id": "DC-0019#5", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0020#0", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0020#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0020#2", "gold": {"action": "respond", "speaker": ["akai"]}, "answered": true}
+{"id": "DC-0020#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0021#0", "gold": {"action": "respond", "speaker": ["bobo"]}, "answered": true}
+{"id": "DC-0021#1", "gold": {"action": "respond", "speaker": ["bobo"]}, "answered": true}
+{"id": "DC-0021#2", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0021#3", "gold": {"action": "respond", "speaker": ["bobo"]}, "answered": true}
+{"id": "DC-0021#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0022#0", "gold": {"action": "respond", "speaker": ["liu"]}, "answered": true}
+{"id": "DC-0022#1", "gold": {"action": "respond", "speaker": ["liu"]}, "answered": true}
+{"id": "DC-0022#2", "gold": {"action": "respond", "speaker": ["liu"]}, "answered": true}
+{"id": "DC-0022#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0022#4", "gold": {"action": "respond", "speaker": ["liu"]}, "answered": true}
+{"id": "DC-0022#5", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0023#0", "gold": {"action": "respond", "speaker": ["xiaochuan"]}, "answered": true}
+{"id": "DC-0023#1", "gold": {"action": "respond", "speaker": ["xiaochuan"]}, "answered": true}
+{"id": "DC-0023#2", "gold": {"action": "respond", "speaker": ["xiaochuan"]}, "answered": true}
+{"id": "DC-0023#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0024#0", "gold": {"action": "respond", "speaker": ["victor"]}, "answered": true}
+{"id": "DC-0024#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0024#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0024#3", "gold": {"action": "respond", "speaker": ["victor"]}, "answered": true}
+{"id": "DC-0024#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0025#0", "gold": {"action": "respond", "speaker": ["zhaxi"]}, "answered": true}
+{"id": "DC-0025#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0025#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0025#3", "gold": {"action": "respond", "speaker": ["zhaxi"]}, "answered": true}
+{"id": "DC-0025#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0026#0", "gold": {"action": "respond", "speaker": ["popo"]}, "answered": true}
+{"id": "DC-0026#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0026#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0026#3", "gold": {"action": "respond", "speaker": ["popo"]}, "answered": true}
+{"id": "DC-0026#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0027#0", "gold": {"action": "respond", "speaker": ["tiepi"]}, "answered": true}
+{"id": "DC-0027#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0027#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0027#3", "gold": {"action": "respond", "speaker": ["tiepi"]}, "answered": true}
+{"id": "DC-0027#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0028#0", "gold": {"action": "respond", "speaker": ["qingxu"]}, "answered": true}
+{"id": "DC-0028#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0028#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0028#3", "gold": {"action": "respond", "speaker": ["qingxu"]}, "answered": true}
+{"id": "DC-0028#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0028#5", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0029#0", "gold": {"action": "clarify", "speaker": ["meimei"], "clarify_about": "要求不明"}, "answered": true}
+{"id": "DC-0029#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0029#2", "gold": {"action": "respond", "speaker": ["meimei"]}, "answered": true}
+{"id": "DC-0029#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0030#0", "gold": {"action": "respond", "speaker": ["haibo"]}, "answered": true}
+{"id": "DC-0030#1", "gold": {"action": "respond", "speaker": ["haibo"]}, "answered": true}
+{"id": "DC-0030#2", "gold": {"action": "respond", "speaker": ["haibo"]}, "answered": true}
+{"id": "DC-0030#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0031#0", "gold": {"action": "clarify", "speaker": ["sun"], "clarify_about": "对象不在场"}, "answered": true}
+{"id": "DC-0031#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0031#2", "gold": {"action": "respond", "speaker": ["sun"]}, "answered": true}
+{"id": "DC-0031#3", "gold": {"action": "respond", "speaker": ["sun"]}, "answered": true}
+{"id": "DC-0032#0", "gold": {"action": "respond", "speaker": ["laoqin"]}, "answered": true}
+{"id": "DC-0032#1", "gold": {"action": "respond", "speaker": ["laoqin"]}, "answered": true}
+{"id": "DC-0032#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0032#3", "gold": {"action": "clarify", "speaker": ["laoqin"], "clarify_about": "指代不明"}, "answered": true}
+{"id": "DC-0032#4", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0032#5", "gold": {"action": "respond", "speaker": ["laoqin"]}, "answered": true}
+{"id": "DC-0032#6", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0033#0", "gold": {"action": "clarify", "speaker": ["anna"], "clarify_about": "要求不明"}, "answered": true}
+{"id": "DC-0033#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0033#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0033#3", "gold": {"action": "respond", "speaker": ["anna"]}, "answered": true}
+{"id": "DC-0033#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0034#0", "gold": {"action": "clarify", "speaker": ["yanqing"], "clarify_about": "要求不明"}, "answered": true}
+{"id": "DC-0034#1", "gold": {"action": "respond", "speaker": ["yanqing"]}, "answered": true}
+{"id": "DC-0034#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0034#3", "gold": {"action": null}, "answered": false}
+{"id": "DC-0035#0", "gold": {"action": "clarify", "speaker": ["xiaotang"], "clarify_about": "要求不明"}, "answered": true}
+{"id": "DC-0035#1", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0035#2", "gold": {"action": "respond", "speaker": ["xiaotang"]}, "answered": true}
+{"id": "DC-0035#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0035#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0036#0", "gold": {"action": "respond", "speaker": ["kaka"]}, "answered": true}
+{"id": "DC-0036#1", "gold": {"action": "respond", "speaker": ["kaka"]}, "answered": true}
+{"id": "DC-0036#2", "gold": {"action": "respond", "speaker": ["kaka"]}, "answered": true}
+{"id": "DC-0036#3", "gold": {"action": "respond", "speaker": ["kaka"]}, "answered": true}
+{"id": "DC-0036#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0037#0", "gold": {"action": "respond", "speaker": ["sanxian"]}, "answered": true}
+{"id": "DC-0037#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0037#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0038#0", "gold": {"action": "respond", "speaker": ["zhinv"]}, "answered": true}
+{"id": "DC-0038#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0038#2", "gold": {"action": "respond", "speaker": ["zhinv"]}, "answered": true}
+{"id": "DC-0038#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0039#0", "gold": {"action": "respond", "speaker": ["manman"]}, "answered": true}
+{"id": "DC-0039#1", "gold": {"action": "respond", "speaker": ["manman"]}, "answered": true}
+{"id": "DC-0039#2", "gold": {"action": "respond", "speaker": ["manman"]}, "answered": true}
+{"id": "DC-0039#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0040#0", "gold": {"action": "respond", "speaker": ["murphy"]}, "answered": true}
+{"id": "DC-0040#1", "gold": {"action": "respond", "speaker": ["murphy"]}, "answered": true}
+{"id": "DC-0040#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0040#3", "gold": {"action": "respond", "speaker": ["murphy"]}, "answered": true}
+{"id": "DC-0040#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0041#0", "gold": {"action": "respond", "speaker": ["duoduo"]}, "answered": true}
+{"id": "DC-0041#1", "gold": {"action": "respond", "speaker": ["duoduo"]}, "answered": true}
+{"id": "DC-0041#2", "gold": {"action": "respond", "speaker": ["duoduo"]}, "answered": true}
+{"id": "DC-0041#3", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0041#4", "gold": {"action": "respond", "speaker": ["duoduo"]}, "answered": true}
+{"id": "DC-0041#5", "gold": {"action": "respond", "speaker": ["duoduo"]}, "answered": true}
+{"id": "DC-0041#6", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0042#0", "gold": {"action": "respond", "speaker": ["huihui"]}, "answered": true}
+{"id": "DC-0042#1", "gold": {"action": "respond", "speaker": ["huihui"]}, "answered": true}
+{"id": "DC-0042#2", "gold": {"action": "respond", "speaker": ["huihui"]}, "answered": true}
+{"id": "DC-0042#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0043#0", "gold": {"action": "respond", "speaker": ["wenyan"]}, "answered": true}
+{"id": "DC-0043#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0043#2", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0043#3", "gold": {"action": "respond", "speaker": ["wenyan"]}, "answered": true}
+{"id": "DC-0043#4", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0044#0", "gold": {"action": "wait"}, "answered": true}
+{"id": "DC-0044#1", "gold": {"action": "respond", "speaker": ["yan"]}, "answered": true}
+{"id": "DC-0044#2", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0044#3", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0045#0", "gold": {"action": "respond", "speaker": ["apo"]}, "answered": true}
+{"id": "DC-0045#1", "gold": {"action": "finish"}, "answered": true}
+{"id": "DC-0045#2", "gold": {"action": "respond", "speaker": ["apo"]}, "answered": true}
+{"id": "DC-0045#3", "gold": {"action": "finish"}, "answered": true}

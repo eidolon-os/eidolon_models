@@ -1,0 +1,55 @@
+{"episode": "G2-00020", "family": "T02", "reason": "named user turn lacks the name 老魏"}
+{"episode": "G2-00024", "family": "T13", "reason": "meta phrase in a role's line"}
+{"episode": "G2-00029", "family": "T08", "reason": "named user turn lacks the name 白瑟瑟"}
+{"episode": "G2-00032", "family": "T08", "reason": "named user turn lacks the name 沉舟"}
+{"episode": "G2-00042", "family": "C06", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00043", "family": "C01", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00044", "family": "C08", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00049", "family": "C02", "reason": "texts is not a list of strings"}
+{"episode": "G2-00078", "family": "T11", "reason": "candidate slots"}
+{"episode": "G2-00088", "family": "C06", "reason": "texts is not a list of strings"}
+{"episode": "G2-00092", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-00122", "family": "T08", "reason": "named user turn lacks the name 眠眠"}
+{"episode": "G2-00146", "family": "T12", "reason": "unnamed user turn mentions a candidate"}
+{"episode": "G2-00160", "family": "T12", "reason": "6 texts for 5 events"}
+{"episode": "G2-00163", "family": "C01", "reason": "texts is not a list of strings"}
+{"episode": "G2-00180", "family": "T16", "reason": "JSONDecodeError: Extra data: line 2 column 787 (char 787)"}
+{"episode": "G2-00181", "family": "C04", "reason": "JSONDecodeError: Extra data: line 2 column 787 (char 787)"}
+{"episode": "G2-00182", "family": "C03", "reason": "JSONDecodeError: Extra data: line 2 column 787 (char 787)"}
+{"episode": "G2-00207", "family": "T07", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00208", "family": "C04", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00209", "family": "T14", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00217", "family": "T02", "reason": "texts is not a list of strings"}
+{"episode": "G2-00218", "family": "C04", "reason": "missing in response"}
+{"episode": "G2-00230", "family": "T08", "reason": "named user turn lacks the name 阿福"}
+{"episode": "G2-00232", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-00233", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-00235", "family": "T06", "reason": "4 texts for 2 events"}
+{"episode": "G2-00240", "family": "C04", "reason": "texts is not a list of strings"}
+{"episode": "G2-00241", "family": "T03", "reason": "texts is not a list of strings"}
+{"episode": "G2-00242", "family": "T16", "reason": "texts is not a list of strings"}
+{"episode": "G2-00250", "family": "C08", "reason": "texts is not a list of strings"}
+{"episode": "G2-00282", "family": "C04", "reason": "7 texts for 5 events"}
+{"episode": "G2-00301", "family": "C04", "reason": "3 texts for 5 events"}
+{"episode": "G2-00302", "family": "T07", "reason": "named user turn lacks the name 顾云舟"}
+{"episode": "G2-00338", "family": "T15", "reason": "texts is not a list of strings"}
+{"episode": "G2-00353", "family": "T01", "reason": "candidate slots"}
+{"episode": "G2-00356", "family": "T09", "reason": "3 texts for 4 events"}
+{"episode": "G2-00364", "family": "T13", "reason": "named user turn lacks the name 桃夭夭"}
+{"episode": "G2-00375", "family": "T02", "reason": "named user turn lacks the name 陈默"}
+{"episode": "G2-00376", "family": "T02", "reason": "named user turn lacks the name 苏兰亭"}
+{"episode": "G2-00387", "family": "C02", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00388", "family": "C04", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00389", "family": "C05", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00401", "family": "C06", "reason": "texts is not a list of strings"}
+{"episode": "G2-00402", "family": "C03", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00403", "family": "T08", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00404", "family": "C06", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00405", "family": "C05", "reason": "JSONDecodeError: Expecting ',' delimiter: line 2 column 4761 (char 4761)"}
+{"episode": "G2-00406", "family": "T10", "reason": "JSONDecodeError: Expecting ',' delimiter: line 2 column 4761 (char 4761)"}
+{"episode": "G2-00407", "family": "T13", "reason": "JSONDecodeError: Expecting ',' delimiter: line 2 column 4761 (char 4761)"}
+{"episode": "G2-00408", "family": "T12", "reason": "named user turn lacks the name 墨砚"}
+{"episode": "G2-00424", "family": "T12", "reason": "unnamed user turn mentions a candidate"}
+{"episode": "G2-00440", "family": "T13", "reason": "meta phrase in a role's line"}
+{"episode": "G2-00451", "family": "T04", "reason": "2 texts for 4 events"}
+{"episode": "G2-00474", "family": "T08", "reason": "named user turn lacks the name 球球"}

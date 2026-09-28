@@ -1,0 +1,48 @@
+{"episode": "G2-00561", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-00563", "family": "T07", "reason": "named user turn lacks the name 周桂香"}
+{"episode": "G2-00581", "family": "C02", "reason": "texts is not a list of strings"}
+{"episode": "G2-00594", "family": "C08", "reason": "texts is not a list of strings"}
+{"episode": "G2-00611", "family": "C03", "reason": "4 texts for 3 events"}
+{"episode": "G2-00617", "family": "T16", "reason": "candidate slots"}
+{"episode": "G2-00630", "family": "T08", "reason": "named user turn lacks the name 周沐"}
+{"episode": "G2-00635", "family": "T04", "reason": "named user turn lacks the name 萤火"}
+{"episode": "G2-00651", "family": "T04", "reason": "candidate slots"}
+{"episode": "G2-00665", "family": "T11", "reason": "texts is not a list of strings"}
+{"episode": "G2-00680", "family": "T04", "reason": "named user turn lacks the name 陆知远"}
+{"episode": "G2-00690", "family": "C04", "reason": "6 texts for 5 events"}
+{"episode": "G2-00696", "family": "T15", "reason": "candidate slots"}
+{"episode": "G2-00721", "family": "T04", "reason": "named user turn lacks the name 陆小满"}
+{"episode": "G2-00738", "family": "T15", "reason": "named user turn lacks the name 温叙冬"}
+{"episode": "G2-00751", "family": "T01", "reason": "candidate slots"}
+{"episode": "G2-00767", "family": "T02", "reason": "candidate slots"}
+{"episode": "G2-00770", "family": "T07", "reason": "named user turn lacks the name 白露露"}
+{"episode": "G2-00799", "family": "T01", "reason": "named user turn lacks the name 苏晴"}
+{"episode": "G2-00817", "family": "T05", "reason": "candidate slots"}
+{"episode": "G2-00824", "family": "T02", "reason": "named user turn lacks the name 温言"}
+{"episode": "G2-00837", "family": "T10", "reason": "unexpected duplicate names"}
+{"episode": "G2-00858", "family": "T15", "reason": "texts is not a list of strings"}
+{"episode": "G2-00890", "family": "T14", "reason": "unnamed user turn mentions a candidate"}
+{"episode": "G2-00892", "family": "C02", "reason": "HTTPError: HTTP Error 400: Bad Request"}
+{"episode": "G2-00893", "family": "C03", "reason": "HTTPError: HTTP Error 400: Bad Request"}
+{"episode": "G2-00894", "family": "T01", "reason": "HTTPError: HTTP Error 400: Bad Request"}
+{"episode": "G2-00909", "family": "T04", "reason": "named user turn lacks the name 小屿"}
+{"episode": "G2-00911", "family": "T02", "reason": "named user turn lacks the name 林小满"}
+{"episode": "G2-00920", "family": "T01", "reason": "meta phrase in a role's line"}
+{"episode": "G2-00923", "family": "T04", "reason": "named user turn lacks the name 沈知砚"}
+{"episode": "G2-00924", "family": "C06", "reason": "texts is not a list of strings"}
+{"episode": "G2-00926", "family": "C04", "reason": "4 texts for 5 events"}
+{"episode": "G2-00927", "family": "C04", "reason": "4 texts for 5 events"}
+{"episode": "G2-00929", "family": "T05", "reason": "6 texts for 3 events"}
+{"episode": "G2-00936", "family": "T12", "reason": "named user turn lacks the name 咕噜"}
+{"episode": "G2-00948", "family": "T08", "reason": "named user turn lacks the name 悠悠"}
+{"episode": "G2-00954", "family": "T10", "reason": "unexpected duplicate names"}
+{"episode": "G2-00956", "family": "T02", "reason": "named user turn lacks the name 陈默"}
+{"episode": "G2-00958", "family": "C07", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00959", "family": "C05", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00960", "family": "T16", "reason": "AttributeError: 'list' object has no attribute 'get'"}
+{"episode": "G2-00969", "family": "T08", "reason": "candidate slots"}
+{"episode": "G2-00977", "family": "T08", "reason": "texts is not a list of strings"}
+{"episode": "G2-00979", "family": "T04", "reason": "named user turn lacks the name 麦兜兜"}
+{"episode": "G2-00983", "family": "T12", "reason": "texts is not a list of strings"}
+{"episode": "G2-00990", "family": "T06", "reason": "6 texts for 2 events"}
+{"episode": "G2-01017", "family": "T05", "reason": "texts is not a list of strings"}

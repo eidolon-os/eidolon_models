@@ -1,0 +1,27 @@
+{"episode": "DC-0003", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["shen"]}, "text": "shen: 中秋么，家家设案拜月，饮桂花酒。小生常与同窗登楼联句，对不上的要罚酒三杯。"}
+{"episode": "DC-0003", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["shen"]}, "text": "shen: 惭愧。那年同窗出上联'月到中秋分外明'，小生苦思半晌对不出，连饮三杯，醉倒栏边。"}
+{"episode": "DC-0008", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["guifang"]}, "text": "guifang: 累了就歇着，天塌下来有高个儿顶着。奶奶在这儿呢，啥也不用怕。"}
+{"episode": "DC-0019", "event": 5, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["su"]}, "text": "su: 这句好多了，有画面，也有人情。就从这棵柿子树往下写吧。"}
+{"episode": "DC-0045", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["apo"]}, "text": "apo: 傻囡囡，哪里笨啦。你小时候学骑车摔了十几跤，最后不也骑得飞快？慢慢来。"}
+{"episode": "DC-0046", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["kuangdao"]}, "text": "kuangdao: 行，直说：你老不看小地图，一上头就单冲，被抓了还不长记性。先把这个改了。"}
+{"episode": "DC-0048", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["guyan"]}, "text": "guyan: 慌没用。拿张纸，把明天考的章节写下来，挑最有把握的先过一遍。"}
+{"episode": "DC-0048", "event": 3, "first": {"action": "finish"}, "second": {"action": "wait"}, "text": "guyan: ……好吧。你平时作业都认真做了，底子在，没你想的那么糟，我陪你一起过重点。"}
+{"episode": "DC-0048", "event": 6, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["guyan"]}, "text": "guyan: 第三章考点就三个：定义、两个定理、一道证明。先把定义背熟，我来抽查。"}
+{"episode": "DC-0052", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["zou"]}, "text": "zou: 国内明信片贴八毛的就够了。记得把邮编写上，字写清楚些，邮递员好认。"}
+{"episode": "DC-0054", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["chunmei"]}, "text": "chunmei: 得洗！攥着冲两遍，不然齁酸。但也别洗太狠，那股酸香味儿可不能洗没了。"}
+{"episode": "DT-0015", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["han", "ali", "mimi", "lu"]}, "text": "han: 不如唤作“垂玉”，枝叶垂落如碧玉，雅致些。"}
+{"episode": "DT-0019", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["chen", "du"]}, "text": "tieniu: 少吃可不行，越饿越掉肌肉！蛋白质得吃够，然后使劲练，肌肉多了人自然就瘦了。"}
+{"episode": "DT-0026", "event": 4, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["wei"]}, "text": "xia: 刚出来是嫩绿偏白的，翅膀皱巴巴的，过一两个小时才慢慢变硬变黑，特别好看。"}
+{"episode": "DT-0027", "event": 5, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["xiaoxiao"]}, "text": "xiaoxiao: 好呀，那就弹一曲《渔舟唱晚》，炖菜的烟火气配这曲子，正合适。"}
+{"episode": "DT-0030", "event": 3, "first": {"action": "clarify", "speaker": ["xiang", "qin", "bubu"], "clarify_about": "指代不明"}, "second": {"action": "respond", "speaker": ["xiang", "qin"]}, "text": "哈哈哈那个猫太逗了，再多讲讲它的事"}
+{"episode": "DT-0031", "event": 5, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["ping", "ruby", "shitou"]}, "text": "ruby: 当然！给我三天，我造一只会爬树的铜发条松鼠，眼睛里装望远镜，走到哪看到哪！"}
+{"episode": "DT-0034", "event": 5, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["luo", "shu"]}, "text": "keke: 我没偷吃！我就舔了一小下……宇航员在太空也吃冰淇淋，是冻干的那种！"}
+{"episode": "DT-0039", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["yz_bard"]}, "text": "yz_bard: 我曾走过一座落雪的小镇，镇口的老婆婆递给我一碗热汤，我便为她唱到了天明。"}
+{"episode": "DT-0040", "event": 0, "first": {"action": "respond", "speaker": ["aa_nurse"]}, "second": {"action": "clarify", "speaker": ["aa_nurse", "aa_cat"], "clarify_about": "指代不明"}, "text": "安安，你们医院夜班一般几点下班啊"}
+{"episode": "DT-0040", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["batu"]}, "text": "aa_cat: 晚上当然是巡视领地，顺便把桌上的杯子推下去。人类睡着了，才是本喵的时间。"}
+{"episode": "DT-0049", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["wu"]}, "text": "mia: 圆脸留长发就烫锁骨以下的大波浪，刘海改成八字侧分，脸立刻显得小一圈。"}
+{"episode": "DT-0049", "event": 4, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["wu"]}, "text": "我觉得可以"}
+{"episode": "DT-0050", "event": 4, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["nangong"]}, "text": "妈呀后背发凉"}
+{"episode": "DT-0052", "event": 1, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["yiran"]}, "text": "yiran: 寿司米煮好拌上寿司醋放凉，海苔铺在竹帘上，米铺薄薄一层，放黄瓜和蟹棒，卷紧切段就好。"}
+{"episode": "DT-0055", "event": 3, "first": {"action": "finish"}, "second": {"action": "respond", "speaker": ["lianqiao"]}, "text": "好了好了别说了，越听越起鸡皮疙瘩"}
+{"episode": "DT-0062", "event": 0, "first": {"action": "clarify", "speaker": ["jiao"], "clarify_about": "要求不明"}, "second": {"action": "clarify", "speaker": ["jiao", "miaomiao", "heidou"], "clarify_about": "指代不明"}, "text": "大伟，你帮我弄一下那个呗"}
