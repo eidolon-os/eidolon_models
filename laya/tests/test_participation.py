@@ -217,3 +217,142 @@ async def test_http_route_serves_validated_v2_result(aiohttp_client):
     assert (await client.post(
         "/v1/participation/decide", json=invalid, headers=headers,
     )).status == 400
+
+
+# participation-laya-v1: action / speaker / clarify_about, as the participation release was trained
+
+QUESTIONS = {
+    "action": {"type": "choice", "instructions": "下一步应该怎样？", "criteria": {
+        "respond": "要人说", "clarify": "先问清", "wait": "先等", "finish": "结束"}},
+    "speaker": {"type": "choice", "instructions": "由谁来说？"},
+    "clarify_about": {"type": "choice", "instructions": "问清什么？", "criteria": {
+        "指代不明": "哪一位", "要求不明": "做什么", "对象不在场": "不在"}},
+}
+CLARIFY = {"指代不明": "请用户说清指谁。", "要求不明": "请用户说清要什么。", "对象不在场": "告诉用户这位不在。"}
+
+
+class V1Engine(Engine):
+    def __init__(self, answers, *, truncated=False):
+        super().__init__()
+        self.answers = answers
+        self.truncated = truncated
+
+    def predict(self, state, questions, *, truncate_left=False, ask_if=None):
+        self.calls.append((state, questions, ask_if))
+        asked = {"action"} | {q for q, deps in (ask_if or {}).items()
+                              if self.answers["action"]["choice"] in deps["action"]}
+        return Prediction({q: a for q, a in self.answers.items() if q in asked}, 100,
+                          ["action"] if self.truncated else [], 1.0, 2.0)
+
+
+def v1_adapter(engine, *, threshold=0.8):
+    from eidolon_models_laya.participation import LayaParticipationPredictor
+    return ParticipationAdapter(
+        LayaParticipationPredictor(engine, questions=QUESTIONS, clarify_instructions=CLARIFY),
+        model_version="p2", policy_version="participation-laya-v1/p2", min_confidence=threshold,
+    )
+
+
+def team_request(*, allowed=None):
+    user = Message(message_id="u1", author_kind="user", author_id="input", text="你俩都说说")
+    said = Message(message_id="c1", author_kind="companion", author_id="id-A", text="我先说一个。")
+    return request(allowed=allowed, context=Context(recent_messages=(user, said))).model_copy(
+        update={"user_request": user, "trigger": said})
+
+
+def answers(action, conf=0.95, speaker=None, about=None):
+    out = {"action": {"choice": action, "answer_confidence": conf}}
+    if speaker:
+        out["speaker"] = {"choice": speaker, "answer_confidence": 0.6}
+    if about:
+        out["clarify_about"] = {"choice": about, "answer_confidence": 0.9}
+    return out
+
+
+def test_v1_state_matches_training_snapshot_format():
+    engine = V1Engine(answers("respond", speaker="M1"))
+    result = v1_adapter(engine).decide(team_request())
+    assert result.proposal.action == "respond" and result.proposal.participants == ("id-B",)
+    state, questions, ask_if = engine.calls[0]
+    assert state == {
+        "场景目标": "",
+        "候选": [{"编号": "M0", "名字": "小甲", "角色": "小甲；伙伴"},
+                 {"编号": "M1", "名字": "小乙", "角色": "小乙；伙伴"}],
+        "本轮用户请求": "你俩都说说",
+        "公开记录": [{"说话": "用户", "内容": "你俩都说说"}, {"说话": "M0 小甲", "内容": "我先说一个。"}],
+        "最新一条": "M0 小甲：我先说一个。",
+    }
+    assert questions["speaker"]["criteria"] == {"M0": "小甲：小甲；伙伴", "M1": "小乙：小乙；伙伴"}
+    assert ask_if == {"speaker": {"action": ["respond", "clarify"]}, "clarify_about": {"action": ["clarify"]}}
+
+
+def test_v1_clarify_carries_the_reason_task_and_silent_actions_have_none():
+    result = v1_adapter(V1Engine(answers("clarify", speaker="M0", about="指代不明"))).decide(team_request())
+    assert result.proposal.action == "clarify"
+    assert result.proposal.participants == ("id-A",)
+    assert result.proposal.instruction == CLARIFY["指代不明"]
+    for silent in ("wait", "finish"):
+        proposal = v1_adapter(V1Engine(answers(silent))).decide(team_request()).proposal
+        assert proposal.action == silent and proposal.participants == () and proposal.instruction == ""
+
+
+@pytest.mark.parametrize("model_answers,allowed", [
+    (answers("respond", conf=0.5, speaker="M1"), None),        # below the calibrated threshold
+    (answers("respond", speaker="M7"), None),                  # speaker outside the candidates
+    (answers("respond"), None),                                # no speaker answer
+    (answers("clarify", speaker="M0", about="别的"), None),    # reason without a task
+    (answers("respond", speaker="M1"), ("wait", "finish")),    # action not allowed now
+])
+def test_v1_uncertain_or_illegal_choices_abstain(model_answers, allowed):
+    result = v1_adapter(V1Engine(model_answers)).decide(team_request(allowed=allowed))
+    assert result.status == "abstained" and result.proposal is None
+
+
+def test_v1_rejects_unsupported_context_before_the_model():
+    engine = V1Engine(answers("respond", speaker="M1"))
+    no_name = team_request().model_copy(update={"candidates": (
+        Candidate(companion_id="id-A", display_name="", description="伙伴"),
+        Candidate(companion_id="id-B", display_name="小乙", description="伙伴"),
+    )})
+    assert v1_adapter(engine).decide(no_name).status == "abstained"
+    stranger = Message(message_id="s1", author_kind="system", author_id="sys", text="系统提示")
+    odd = team_request().model_copy(update={
+        "context": Context(recent_messages=(stranger,)), "trigger": stranger})
+    assert v1_adapter(engine).decide(odd).status == "abstained"
+    assert not engine.calls
+    assert v1_adapter(V1Engine(answers("finish"), truncated=True)).decide(team_request()).status == "abstained"
+
+
+def test_v1_keeps_the_last_sixteen_public_messages():
+    msgs = tuple(Message(message_id=f"m{i}", author_kind="user", author_id="input", text=f"第{i}句")
+                 for i in range(20))
+    req = request(context=Context(recent_messages=msgs)).model_copy(update={"trigger": msgs[-1]})
+    engine = V1Engine(answers("finish"))
+    v1_adapter(engine).decide(req)
+    public = engine.calls[0][0]["公开记录"]
+    assert len(public) == 16 and public[0]["内容"] == "第4句" and public[-1]["内容"] == "第19句"
+
+
+def test_v2_profile_loads_the_three_question_predictor(tmp_path):
+    from eidolon_models_laya.participation import LayaParticipationPredictor
+    document = {
+        "schema_version": 2, "task": "ip_team.participation", "state_format": "participation-laya-v1",
+        "model_revision": "rev-2", "policy_version": "participation-laya-v1/rev-2/min0.9",
+        "min_confidence": 0.9, "max_candidates": 5, "questions": QUESTIONS, "clarify_instructions": CLARIFY,
+    }
+    profile = tmp_path / "participation.json"
+    profile.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
+    digest = hashlib.sha256(profile.read_bytes()).hexdigest()
+    loaded = load_participation_adapter(
+        profile, Engine(), model_dir=tmp_path, model_revision="rev-2", expected_sha256=digest,
+    )
+    assert isinstance(loaded.predictor, LayaParticipationPredictor)
+    assert loaded.min_confidence == 0.9
+    for bad in ({**document, "state_format": "ip-team-v3"}, {**document, "schema_version": 1},
+                {**document, "questions": {**QUESTIONS, "action": {**QUESTIONS["action"], "criteria": {"respond": "x"}}}}):
+        profile.write_text(json.dumps(bad, ensure_ascii=False), encoding="utf-8")
+        digest = hashlib.sha256(profile.read_bytes()).hexdigest()
+        with pytest.raises(ValueError):
+            load_participation_adapter(
+                profile, Engine(), model_dir=tmp_path, model_revision="rev-2", expected_sha256=digest,
+            )

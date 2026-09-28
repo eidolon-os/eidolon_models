@@ -2,8 +2,10 @@
 
 This module deliberately does not map Laya's generic question/choice output to
 the business contract. A trained model must supply a predictor with a frozen
-input format, calibration policy and version. Until then no predictor is
-configured and the HTTP endpoint is unavailable.
+input format, calibration policy and version, pinned by its manifest
+(``task_profiles``); without one the HTTP endpoint is unavailable.
+Two formats: ``ip-team-v3`` (one "move" question, clarify abstains) and
+``participation-laya-v1`` (action / speaker / clarify_about, the participation release).
 """
 
 from __future__ import annotations
@@ -232,6 +234,134 @@ class LayaMovePredictor:
             raise ContextTooLong("public context or model options would be truncated")
 
 
+ACTIONS = ("respond", "clarify", "wait", "finish")
+# speaker is asked only when the action speaks; clarify_about only for clarify (as trained: a question
+# is labelled only where its answer matters, so it is never seen in the other states)
+ASK_IF = {"speaker": {"action": ["respond", "clarify"]}, "clarify_about": {"action": ["clarify"]}}
+
+
+class LayaParticipationPredictor:
+    """participation-laya-v1: the state and three questions of the participation release
+    (laya/train/scenarios/participation): action, then speaker, then clarify_about.
+
+    The state is built exactly as the training snapshots were; the questions come frozen from the
+    model's pinned profile. A clarify carries the profile's bounded task for its reason.
+    """
+
+    HISTORY = 16  # public entries the model was trained on (episodes.py HISTORY)
+
+    def __init__(
+        self,
+        engine: DecisionEngine,
+        *,
+        questions: dict,
+        clarify_instructions: dict[str, str],
+        max_candidates: int = 6,
+    ) -> None:
+        if type(max_candidates) is not int or not 1 <= max_candidates <= 6:
+            raise ValueError("participation-laya-v1 supports at most six candidates")
+        action = questions.get("action") or {}
+        about = questions.get("clarify_about") or {}
+        speaker = questions.get("speaker") or {}
+        if (
+            set(questions) != {"action", "speaker", "clarify_about"}
+            or action.get("type") != "choice"
+            or tuple(action.get("criteria") or {}) != ACTIONS
+            or speaker.get("type") != "choice"
+            or "criteria" in speaker
+            or about.get("type") != "choice"
+            or set(about.get("criteria") or {}) != set(clarify_instructions)
+            or not all(isinstance(v, str) and v.strip() for v in clarify_instructions.values())
+        ):
+            raise ValueError("participation-laya-v1 profile questions do not match the trained task")
+        self.engine = engine
+        self.questions = questions
+        self.clarify_instructions = dict(clarify_instructions)
+        self.max_candidates = max_candidates
+
+    def state(self, request: DecisionRequest) -> tuple[dict, dict, list[str]]:
+        """(state, questions, slot -> companion id) for one request; raises ContextTooLong."""
+        if (
+            not request.candidates
+            or len(request.candidates) > self.max_candidates
+            or request.context.summary
+            or request.context.pending_requirements
+            or not all(c.display_name.strip() for c in request.candidates)
+        ):
+            raise ContextTooLong("snapshot has unsupported or over-capacity context")
+        slots = {c.companion_id: f"M{i}" for i, c in enumerate(request.candidates)}
+        names = {c.companion_id: c.display_name for c in request.candidates}
+        history = request.context.recent_messages
+        if not history or history[-1] != request.trigger:
+            raise ContextTooLong("trigger is not the latest public message")
+        public = []
+        for message in history:
+            if message.author_kind == "user":
+                speaker = "用户"
+            elif message.author_kind == "companion" and message.author_id in slots:
+                speaker = f"{slots[message.author_id]} {names[message.author_id]}"
+            else:
+                raise ContextTooLong("public history contains an unsupported author")
+            public.append({"说话": speaker, "内容": message.text})
+        state = {
+            "场景目标": request.scene_goal,
+            "候选": [
+                {"编号": slots[c.companion_id], "名字": c.display_name, "角色": c.description}
+                for c in request.candidates
+            ],
+            "本轮用户请求": request.user_request.text,
+            "公开记录": public[-self.HISTORY:],
+            "最新一条": f"{public[-1]['说话']}：{public[-1]['内容']}",
+        }
+        questions = {
+            "action": self.questions["action"],
+            "speaker": self.questions["speaker"] | {"criteria": {
+                slots[c.companion_id]: f"{c.display_name}：{c.description}" for c in request.candidates
+            }},
+            "clarify_about": self.questions["clarify_about"],
+        }
+        return state, questions, [c.companion_id for c in request.candidates]
+
+    def predict(self, request: DecisionRequest) -> ModelChoice:
+        state, questions, ids = self.state(request)
+        self._check_input_budget(state, questions)
+        prediction = self.engine.predict(state, questions, truncate_left=False, ask_if=ASK_IF)
+        if prediction.truncated:
+            raise ContextTooLong("model truncated its input")
+        answers = prediction.answers
+        action = answers.get("action", {}).get("choice")
+        confidence = answers.get("action", {}).get("answer_confidence")
+        if action not in ACTIONS or type(confidence) not in (int, float):
+            return ModelChoice("abstain")
+        if action in {"wait", "finish"}:
+            return ModelChoice(action, confidence=float(confidence))
+        slot = answers.get("speaker", {}).get("choice")
+        if not isinstance(slot, str) or not slot.startswith("M") or not slot[1:].isdigit() \
+                or int(slot[1:]) >= len(ids):
+            return ModelChoice("abstain", confidence=float(confidence))
+        if action == "respond":
+            return ModelChoice("respond", ids[int(slot[1:])], confidence=float(confidence))
+        instruction = self.clarify_instructions.get(answers.get("clarify_about", {}).get("choice"))
+        if not instruction:
+            return ModelChoice("abstain", confidence=float(confidence))
+        return ModelChoice("clarify", ids[int(slot[1:])], instruction, float(confidence))
+
+    def _check_input_budget(self, state: dict, questions: dict) -> None:
+        tokenizer = self.engine.tokenizer
+        if tokenizer.mask_token in json.dumps(state, ensure_ascii=False) or any(
+            tokenizer.mask_token in json.dumps(q, ensure_ascii=False) for q in questions.values()
+        ):
+            raise ContextTooLong("model control token occurs in public input")
+        for question in questions.values():
+            internal = to_internal(question)
+            _, markers, truncated = build_sequence(
+                tokenizer, state, internal, self.engine.max_len, self.engine.head_max_len,
+                truncate_left=False,
+            )
+            if truncated or len(markers) != len(render_options(internal)):
+                raise ContextTooLong("public context or model options would be truncated")
+
+
 def participation_profile_digest(manifest: dict) -> str:
     profiles = manifest.get("task_profiles")
     pin = profiles.get("ip_team.participation") if isinstance(profiles, dict) else None
@@ -257,15 +387,18 @@ def read_participation_profile(
     if len(expected_sha256) != 64 or hashlib.sha256(raw).hexdigest() != expected_sha256:
         raise ValueError("participation profile digest mismatch")
     profile = json.loads(raw)
-    if not isinstance(profile, dict) or set(profile) != {
+    base = {
         "schema_version", "task", "state_format", "model_revision", "policy_version",
         "min_confidence", "max_candidates",
-    }:
+    }
+    # v1: the ip-team-v3 single "move" question; v2: participation-laya-v1 with its frozen questions
+    formats = {1: ("ip-team-v3", base), 2: ("participation-laya-v1", base | {"questions", "clarify_instructions"})}
+    version = profile.get("schema_version") if isinstance(profile, dict) else None
+    if type(version) is not int or version not in formats or set(profile) != formats[version][1]:
         raise ValueError("invalid participation profile fields")
     if (
-        type(profile["schema_version"]) is not int or profile["schema_version"] != 1
-        or profile["task"] != "ip_team.participation"
-        or profile["state_format"] != "ip-team-v3"
+        profile["task"] != "ip_team.participation"
+        or profile["state_format"] != formats[version][0]
         or profile["model_revision"] != model_revision
     ):
         raise ValueError("participation profile task or model revision mismatch")
@@ -292,7 +425,15 @@ def load_participation_adapter(
         profile_path, model_dir=model_dir, model_revision=model_revision,
         expected_sha256=expected_sha256,
     )
-    predictor = LayaMovePredictor(engine, max_candidates=profile["max_candidates"])
+    if profile["state_format"] == "participation-laya-v1":
+        predictor = LayaParticipationPredictor(
+            engine,
+            questions=profile["questions"],
+            clarify_instructions=profile["clarify_instructions"],
+            max_candidates=profile["max_candidates"],
+        )
+    else:
+        predictor = LayaMovePredictor(engine, max_candidates=profile["max_candidates"])
     return ParticipationAdapter(
         predictor,
         model_version=model_revision,
