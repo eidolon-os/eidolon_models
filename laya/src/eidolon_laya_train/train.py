@@ -10,6 +10,8 @@ so that treating a non-command as a command costs more); the val NLL used to pic
 Choice and noul options are shuffled every epoch (score levels keep their order); the last
 ``unfreeze_layers`` encoder layers and the head train, the rest stays frozen (``unfreeze_layers: -1``
 trains the whole encoder, as the notebook does). The act head is never trained (it is unused).
+``checkpoint_metric: accuracy`` optionally selects the first epoch with highest validation
+accuracy (including equal-mass multi-gold targets); default selection remains minimum NLL.
 
 Config (yaml)::
 
@@ -67,6 +69,7 @@ def question_loss(
     pg_sigma: float = 0.4,
     pg_w_sph: float = 0.75,
     weight: torch.Tensor | None = None,
+    loss_mode: str = "distribution",
 ) -> tuple[torch.Tensor, dict]:
     """soft CE + brier·Brier − proper·(proper score) + pg·(laya's noisy-logit policy gradient).
 
@@ -78,8 +81,21 @@ def question_loss(
     logits = logits.masked_fill(~mask, -1e4)
     logp = F.log_softmax(logits, -1)
     p = logp.exp()
-    ce = -(target * logp).sum(-1)
-    brier = (((p - target) ** 2) * mask).sum(-1)
+    if loss_mode == "acceptable_set":
+        if proper_weight or pg_weight or (qtype != 0).any():
+            raise ValueError("acceptable_set supports choice questions without proper/PG reward")
+        accepted = (target > 0) & mask
+        if not accepted.any(-1).all():
+            raise ValueError("acceptable_set needs a nonempty legal answer set")
+        ce = -torch.logsumexp(logp.masked_fill(~accepted, -torch.inf), -1)
+        # Binary event Brier: the selected answer belongs to the acceptable set.
+        # No artificial uniform preference among equally legitimate characters.
+        brier = (1 - (p * accepted).sum(-1)).square()
+    elif loss_mode == "distribution":
+        ce = -(target * logp).sum(-1)
+        brier = (((p - target) ** 2) * mask).sum(-1)
+    else:
+        raise ValueError("unknown loss_mode")
     loss = ce + brier_weight * brier
     parts = {"ce": ce.mean().item(), "brier": brier.mean().item()}
     if proper_weight > 0:
@@ -168,6 +184,14 @@ def evaluate_split(loaded: Loaded, items: list[dict], batch_size: int) -> dict:
 
 
 def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
+    loss_mode = config.get("loss_mode", "distribution")
+    if loss_mode not in {"distribution", "acceptable_set"}:
+        raise ValueError("loss_mode must be distribution or acceptable_set")
+    checkpoint_metric = config.get("checkpoint_metric", "nll")
+    if checkpoint_metric not in {"nll", "accuracy"}:
+        raise ValueError("checkpoint_metric must be nll or accuracy")
+    if checkpoint_metric == "accuracy" and not (dataset_dir / "val.jsonl").exists():
+        raise ValueError("accuracy selection requires a validation split")
     seed = int(config.get("seed", 7))
     torch.manual_seed(seed)
     rng = random.Random(seed)
@@ -192,7 +216,14 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
     train_records = list(read_jsonl(dataset_dir / "train.jsonl"))
     val_path = dataset_dir / "val.jsonl"
     val_records = list(read_jsonl(val_path)) if val_path.exists() else []
+    if loss_mode == "acceptable_set":
+        for record in [*train_records, *val_records]:
+            for qid, label in record.labels.items():
+                if record.questions[qid]["type"] != "choice" or "gold" not in label or label.get("target") is not None:
+                    raise ValueError("acceptable_set requires explicit choice gold sets, not soft distributions")
     val_items = [it for r in val_records for it in record_items(r, tok, cfg)]
+    if checkpoint_metric == "accuracy" and not val_items:
+        raise ValueError("accuracy selection requires nonempty validation items")
     log(f"train records {len(train_records)}, val items {len(val_items)}")
 
     enc_params, head_params = set_trainable(model, int(config.get("unfreeze_layers", 8)))
@@ -273,6 +304,7 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
                     if gold_weights
                     else None
                 ),
+                loss_mode=loss_mode,
             )
             (loss / accum).backward()
             running += loss.item()
@@ -292,7 +324,9 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
         }
         if val_items:
             rec["val"] = evaluate_split(loaded, val_items, batch_size)
-            score = rec["val"]["nll"]
+            # Equal-mass multi-gold labels count any acceptable next move as
+            # correct. NLL remains logged even when decisions select the epoch.
+            score = rec["val"]["nll"] if checkpoint_metric == "nll" else -rec["val"]["acc"]
         else:
             score = rec["loss"]
         rec["elapsed_s"] = round(time.time() - t0, 1)
@@ -318,6 +352,7 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
                 },
             )
     summary = {
+        "checkpoint_metric": checkpoint_metric,
         "best_epoch": best_epoch,
         "best_score": best,
         "history": history,

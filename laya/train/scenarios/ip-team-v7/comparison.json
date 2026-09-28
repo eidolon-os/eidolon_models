@@ -1,0 +1,1898 @@
+{
+  "selection": {
+    "projection": "named",
+    "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6",
+    "dev_macro": 0.6319444444444445,
+    "dev_wrong_speech": 4,
+    "dev_summary_sha256": "34d008eb96d9bec063238a52e9ed043c0c7630488c7608b1947e94555827c5f1",
+    "candidates": [
+      {
+        "projection": "compact",
+        "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-compact-r5",
+        "dev_macro": 0.5763888888888888,
+        "dev_wrong_speech": 6,
+        "dev_summary_sha256": "6b241b3934ce536404fa07a735f4a424e034e7628f6d63e1049780ffbe6d4e0d"
+      },
+      {
+        "projection": "named",
+        "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6",
+        "dev_macro": 0.6319444444444445,
+        "dev_wrong_speech": 4,
+        "dev_summary_sha256": "34d008eb96d9bec063238a52e9ed043c0c7630488c7608b1947e94555827c5f1"
+      }
+    ],
+    "selection_rule": "highest dev slice macro, ties fewer must-stop wrong responses, then compact",
+    "test_not_used_for_selection": true,
+    "dataset_lineage_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+    "sealed_test_sha256": "c58ed6e67a46001243dfd4d1e7201439977aea75410eca53822b0f96b29892b2",
+    "allowed_test_checkpoints": {
+      "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6/checkpoint": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+      "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-multilingual/1c5edc17/torch": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+    }
+  },
+  "dataset": {
+    "counts": {
+      "test": 20,
+      "train": 48,
+      "val": 21
+    },
+    "generation_batches": {
+      "test": 11,
+      "train": 20,
+      "val": 12
+    },
+    "actions_by_split": {
+      "test": {
+        "respond": 16,
+        "finish": 4,
+        "wait": 1
+      },
+      "train": {
+        "abstain": 2,
+        "respond": 48,
+        "finish": 5,
+        "wait": 8
+      },
+      "val": {
+        "respond": 20,
+        "finish": 2,
+        "abstain": 1,
+        "wait": 2
+      }
+    },
+    "slice_families": {
+      "test": {
+        "author_continuation": 2,
+        "mention_not_address": 2,
+        "direct_address": 2,
+        "end_or_wait": 2,
+        "explicit_handoff": 3,
+        "interrupt_redirect": 2,
+        "open_conversation": 1,
+        "quiet_text": 2,
+        "same_name": 1,
+        "unfinished_or_done": 3
+      },
+      "train": {
+        "same_name": 3,
+        "relationship_reference": 7,
+        "open_conversation": 8,
+        "interrupt_redirect": 6,
+        "end_or_wait": 7,
+        "direct_address": 3,
+        "author_continuation": 4,
+        "explicit_handoff": 5,
+        "pause_or_listen": 2,
+        "quiet_text": 3
+      },
+      "val": {
+        "direct_address": 2,
+        "end_or_wait": 1,
+        "explicit_handoff": 3,
+        "pause_or_listen": 3,
+        "author_continuation": 3,
+        "interrupt_redirect": 2,
+        "mention_not_address": 1,
+        "open_conversation": 1,
+        "quiet_text": 1,
+        "relationship_reference": 2,
+        "same_name": 1,
+        "unfinished_or_done": 1
+      }
+    },
+    "audit_sha256": "3d581a54906f42776b2d5717bdef2b1ad15d4d195b433b7608d9213771bb7252",
+    "projection_sha256": "8bb48e0484be91a670a8ed9c979929d9801f49c57993a0f362dfee79ec250558",
+    "prepare_sha256": "528e82414cd3a96b55954176ff5a89a3a7db34c0374659ec995caf923248fe78",
+    "source_sha256": {
+      "adjudicated-ambiguity.json": "485a39fedb2e2ee89980c2e1661dd702875df5d6e5e718cf3e3c16e304cbadd7",
+      "recovered-test-0-author_continuation.json": "9233f13328fd0cbc15333500a886790dd2de4a131bcd57adb213863c5f748fe3",
+      "recovered-test-0-mention_not_address.json": "3c9b18c967b1efdba557a78490e5578b50e985e47de4b2b3a1712bde1f7bc2eb",
+      "recovered-train-0-same_name.json": "484dc2739fbe5f798edfb57fa6d24416c66d340cdcaf71601556cc2dfc8633c8",
+      "recovered-train-1-interrupt_redirect.json": "550e6cee98a6a7e3ebf7b21911eabb84ffeba339820b4e8dfc7ef54d14487c61",
+      "recovered-train-1-same_name.json": "afbf6ba5fe39ef0d95a1a4d8b45f71237b9291632f8a7f92ce5b5c3f212be320",
+      "recovered-val-0-direct_address.json": "ffb0b566eb11b470a41997c6b6a38351baa87883c2aa588dbc59e2b540cea3f7",
+      "recovered-val-0-end_or_wait.json": "db7f2a03ed04723298a7ec87437baccc0b370ae534988044066a767bfa38a5a9",
+      "recovered-val-0-pause_or_listen.json": "bc486ae4f190fbcae492e5f13b268daf54bee689368362b04b7d2a2ffc6ab0ad",
+      "test-0-author_continuation.json": "784b28c442ea69efb08018b72360a4d22508f4fbcde6bc848594f8ba37bf9ff6",
+      "test-0-direct_address.json": "78cafd969300f30f5eaa66cf7332bdc4eb87e5330ce6ccbacc82acab8945f9fa",
+      "test-0-end_or_wait.json": "64aad6c5cd3adc3c5786effe268d0719134e62f01bfd6f152df744a6f7c8d90e",
+      "test-0-explicit_handoff.json": "2a4d0e559a69e804229d99d31e053f0b0cff9dc94a6c27e89f4d165ecf1ce05a",
+      "test-0-interrupt_redirect.json": "b2110801cfbdf9a05d17819816741e92db172478f8d0e82b1810346c851ec1f4",
+      "test-0-mention_not_address.json": "c0f91f00be38f55cf0a1fb5706294f77a357c59ce80c209e1b54729504d14daa",
+      "test-0-open_conversation.json": "355eed9a89d505c457ac2dc657eea7b88ae2013aaa70f7ebc50603d9f82096cf",
+      "test-0-pause_or_listen.json": "8d000c72c55edef582e3c089d29ded71713cc981ab7d19ac555784876e53ca4a",
+      "test-0-quiet_text.json": "fa9ac97cea1a86aaa52df9e9beb9058d2c267f12a475b62f036e3734472c37d0",
+      "test-0-relationship_reference.json": "468cfe7ce0cc5690941abeea53bd6fae9d34030bec3d0f8f645efa34a100f668",
+      "test-0-same_name.json": "e77613186d6c18c83c8ce4fd230e2b5fb37f5cf0d99c9650dff27f37871f48e4",
+      "test-0-unfinished_or_done.json": "f4a35eb8f2cbd6ffe329ae7b80f5cde39abe9f77789d7ce8f2843de1c09db1e2",
+      "train-0-author_continuation.json": "ea2d273caf745e4705769b8353046a56d1821c14c91cefed4ff6fe09844e407a",
+      "train-0-direct_address.json": "8cae86a1b58e863ed56a1c61771aadff696285b47e6d2a42802cd80abac8c72a",
+      "train-0-end_or_wait.json": "bad4e9d1ab2b9ab1527d28bcb4a297109360cd76315e290c5c20e858ef95655d",
+      "train-0-explicit_handoff.json": "61ac547bc0c8ea63d136115e06e77e63e4bea6115b1bb86599b3d0035e1d1ca4",
+      "train-0-interrupt_redirect.json": "b118da8b7a8b1278c0dbe88afe1b894587eff0ff71acbe239ecb2f6918391753",
+      "train-0-mention_not_address.json": "1c8a4653aea98fdef14add477f25e59a40912881f15d46fc4da9c6c3453cd996",
+      "train-0-open_conversation.json": "cc6dc5340ad81c2cc81c024cb5812b1f75060ddbaa364e064a052029ad4170f3",
+      "train-0-pause_or_listen.json": "ed0080e2fd469219ece8e5dd4771deefcef1ad9c0219eff032f3b5421717d3d1",
+      "train-0-quiet_text.json": "8ccc1a64201b44d2024f20c9e010800af6ccddee5060ac23d2bcfca369bd86e2",
+      "train-0-relationship_reference.json": "cf910cb77fb6b0d4ee5a8db5fcb77e21d95f9fedc7ee34ac49bbb78d153c11a0",
+      "train-0-same_name.json": "d07cf1b74bda776be13b04cbf3233dab33c4e336da13893773b416f340358e87",
+      "train-0-unfinished_or_done.json": "9578890b3ee8c8071d8501a8a9c2536f26adb277294cec309b392a195d383fec",
+      "train-1-author_continuation.json": "fa2db42958f73a7faeba7eb8be7e7158364930727862d2977b90fa306c8e6e57",
+      "train-1-direct_address.json": "6768910f2003c6f8afda202a224f9947efe085297e9f1d6a11e74cb6cfd19362",
+      "train-1-end_or_wait.json": "7b6e5c8a30548cf7436b41325b7522e109cc4d2d2127da481ea3680e1cc3d5fb",
+      "train-1-explicit_handoff.json": "c834c9898a3a748c9b542c9cfc94eb681f3b07bb4ff50d491400b385ff2baea1",
+      "train-1-interrupt_redirect.json": "efdaee278fe3f476c52015e35a3a6f8230ff60b9fcb45ac54fe6c8b53f20b92d",
+      "train-1-mention_not_address.json": "4a21634245296c4fe13d706e9e700548b9bf26835cf371c38f1086f0505b29a0",
+      "train-1-open_conversation.json": "67e25d0d6567762a05ffb58306a0f135a3a95de344fd106638064352d97c2926",
+      "train-1-pause_or_listen.json": "6deffebc69e5c2b34a904f181575be4168f04b54d65b390c7b37cea34c1b4ccc",
+      "train-1-quiet_text.json": "6a59be26ad5020708aa3c49205944f65574407c833d443f29d3b5137635bb6d9",
+      "train-1-relationship_reference.json": "2350c4a15f3e1ea3cddcdd3d249412582087d1015f5a0b9d4a6a68d30c99accd",
+      "train-1-same_name.json": "91169a927de61264bfa5bcdde6241d42adb2e889575c92ea68ebccd51e4cb04f",
+      "train-1-unfinished_or_done.json": "5159305664bb2cbc1335e468c315690000220c6034fe9c6ee169581d6418a2cd",
+      "val-0-author_continuation.json": "736e08799098ac6f5fe22900a59780bc7d329c16171d5f1326dc52731e0e4912",
+      "val-0-direct_address.json": "8ab14e2efa20052a6f1dc103fe0526bf8d87aa17c2eb5f45cd08a9f3b210015b",
+      "val-0-end_or_wait.json": "73a6fcb0ab26b79ebfb8ab775e69c8e22ba996cea5dd775167bfe1dac7f5348b",
+      "val-0-explicit_handoff.json": "e1edc3241a521ac0694587585ba791e6a694d4258855d33df4340ba6a3717b4d",
+      "val-0-interrupt_redirect.json": "b1afe906df744a8ec9b8625ba8664fbf39cb55e6bcdbc362d5d36d5cd5a3ef3e",
+      "val-0-mention_not_address.json": "115a2c8ce0b4c4382c4b797db8b44d8904aa7ad0f66f9c6fcf8a7edd5111e289",
+      "val-0-open_conversation.json": "908cc194804e03b2750b33b7cee49b5b9167eaeb524fbc769dde64d29da2f785",
+      "val-0-pause_or_listen.json": "a54f55251ea00fb001598262aa3f0745118e9da8338389ca5f9fb7ad7d53c32d",
+      "val-0-quiet_text.json": "7c70b8b83a7da427f733b409bdb880c1fbb960101ddfd0a27fb51f2f67d3d1bd",
+      "val-0-relationship_reference.json": "d07527c6afc53b28f9924b80e443780ec967c158f0c627593bdfc4bd39298808",
+      "val-0-same_name.json": "78f7fb71244b3029be53945a8c02fdb5c31ff3338c589a0d8155516a0a998af7",
+      "val-0-unfinished_or_done.json": "943a97e81e2c1e260ea2354a29b19ab657b42274cb653d8ce68704b3595e6081",
+      "val_wait-supplement.json": "3870f0f9756270b53936e3631ab4bac23094eb6eea9a07e116ae7330c00ef680"
+    },
+    "files": {
+      "sealed/compact/test.jsonl": {
+        "sha256": "34c05c899a8ff58d5cafe0c5026ad1e4e6ed2700153909af5bf07c664290078b",
+        "records": 40
+      },
+      "compact/train.jsonl": {
+        "sha256": "75129b141a01fc49da85edee4f8bfe6db6baf8defb3ca86df785efefb71682da",
+        "records": 96
+      },
+      "compact/val.jsonl": {
+        "sha256": "39dc4e792d0476113aac0c919a1bacc91ddf0aef82f71c7906623fca32cd9906",
+        "records": 42
+      },
+      "sealed/named/test.jsonl": {
+        "sha256": "c58ed6e67a46001243dfd4d1e7201439977aea75410eca53822b0f96b29892b2",
+        "records": 40
+      },
+      "named/train.jsonl": {
+        "sha256": "496482fc24ccf8332d151679734ed273c4633f2f152fabe23a0352233ea4781d",
+        "records": 96
+      },
+      "named/val.jsonl": {
+        "sha256": "4a75cb7644ef9b102aceff938486cc61bbbe5fd2c9f7a63b8800d4f9e8573ae4",
+        "records": 42
+      }
+    },
+    "lengths": {
+      "compact": {
+        "min": 265,
+        "max": 626,
+        "parity_records": 178
+      },
+      "named": {
+        "min": 274,
+        "max": 651,
+        "parity_records": 178
+      }
+    },
+    "cross_split_near_user_text": []
+  },
+  "runs": {
+    "compact": {
+      "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-compact-r5",
+      "lineage": {
+        "dataset_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+        "projection": "compact",
+        "init_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "checkpoint_sha256": "a5ae76f3b44ab810fa2b1939cb2a60afafc1b792d68c75e1846438ee987361d3",
+        "train_source_sha256": "96bc0150e82e4537428096662d62dd214b718aab27e27aee5f011fba3f597fb4"
+      },
+      "train": {
+        "records": 96,
+        "generation_batches": 20,
+        "families": 48,
+        "correct": 51,
+        "family_accuracy": 0.53125,
+        "slice_macro_accuracy": 0.5019642857142859,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.4135550595238095,
+          0.5824047619047619
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "same_name": 2,
+          "relationship_reference": 3,
+          "open_conversation": 6,
+          "interrupt_redirect": 2,
+          "end_or_wait": 5,
+          "direct_address": 3,
+          "author_continuation": 3,
+          "explicit_handoff": 3,
+          "pause_or_listen": 2,
+          "quiet_text": 2
+        },
+        "slices": {
+          "same_name": {
+            "families": 3,
+            "accuracy": 0.0
+          },
+          "relationship_reference": {
+            "families": 7,
+            "accuracy": 0.35714285714285715
+          },
+          "open_conversation": {
+            "families": 8,
+            "accuracy": 0.9375
+          },
+          "interrupt_redirect": {
+            "families": 6,
+            "accuracy": 0.75
+          },
+          "end_or_wait": {
+            "families": 7,
+            "accuracy": 0.0
+          },
+          "direct_address": {
+            "families": 3,
+            "accuracy": 0.8333333333333334
+          },
+          "author_continuation": {
+            "families": 4,
+            "accuracy": 0.875
+          },
+          "explicit_handoff": {
+            "families": 5,
+            "accuracy": 0.6
+          },
+          "pause_or_listen": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "quiet_text": {
+            "families": 3,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "must_stop": {
+          "n": 20,
+          "correct": 0,
+          "wrong_speech": 20
+        },
+        "must_speak": {
+          "n": 72,
+          "correct": 51,
+          "missed_speech": 0
+        },
+        "unique_member": {
+          "n": 56,
+          "correct": 36,
+          "wrong_member": 20
+        },
+        "must_abstain": {
+          "n": 4,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 22,
+          "correct": 15
+        },
+        "exact_equivariant_families": 27,
+        "all_variants_correct_families": 21,
+        "confidence": {
+          "0.5": {
+            "covered": 30,
+            "correct": 24,
+            "errors": 6,
+            "coverage": 0.3125
+          },
+          "0.7": {
+            "covered": 2,
+            "correct": 2,
+            "errors": 0,
+            "coverage": 0.020833333333333332
+          },
+          "0.8": {
+            "covered": 0,
+            "correct": 0,
+            "errors": 0,
+            "coverage": 0.0
+          },
+          "0.9": {
+            "covered": 0,
+            "correct": 0,
+            "errors": 0,
+            "coverage": 0.0
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 40,
+            "correct": 25
+          },
+          "3": {
+            "n": 26,
+            "correct": 12
+          },
+          "4": {
+            "n": 30,
+            "correct": 14
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.3958333333333333,
+          "wait": 0.16666666666666666,
+          "finish": 0.10416666666666667,
+          "abstain": 0.041666666666666664
+        },
+        "sdk_replay": {
+          "valid_results": 96,
+          "decided": 0,
+          "median_ms": 42.898333485936746
+        }
+      },
+      "val": {
+        "records": 42,
+        "generation_batches": 12,
+        "families": 21,
+        "correct": 24,
+        "family_accuracy": 0.5714285714285714,
+        "slice_macro_accuracy": 0.5763888888888888,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.4861111111111111,
+          0.673611111111111
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "direct_address": 1,
+          "end_or_wait": 1,
+          "explicit_handoff": 2,
+          "pause_or_listen": 2,
+          "author_continuation": 2,
+          "interrupt_redirect": 1,
+          "mention_not_address": 1,
+          "open_conversation": 1,
+          "quiet_text": 1,
+          "relationship_reference": 1,
+          "same_name": 1,
+          "unfinished_or_done": 1
+        },
+        "slices": {
+          "direct_address": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "end_or_wait": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "explicit_handoff": {
+            "families": 3,
+            "accuracy": 0.6666666666666666
+          },
+          "pause_or_listen": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          },
+          "author_continuation": {
+            "families": 3,
+            "accuracy": 0.6666666666666666
+          },
+          "interrupt_redirect": {
+            "families": 2,
+            "accuracy": 0.75
+          },
+          "mention_not_address": {
+            "families": 1,
+            "accuracy": 0.5
+          },
+          "open_conversation": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "quiet_text": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "relationship_reference": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "same_name": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "unfinished_or_done": {
+            "families": 1,
+            "accuracy": 1.0
+          }
+        },
+        "must_stop": {
+          "n": 6,
+          "correct": 0,
+          "wrong_speech": 6
+        },
+        "must_speak": {
+          "n": 32,
+          "correct": 22,
+          "missed_speech": 0
+        },
+        "unique_member": {
+          "n": 28,
+          "correct": 18,
+          "wrong_member": 10
+        },
+        "must_abstain": {
+          "n": 2,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 6,
+          "correct": 6
+        },
+        "exact_equivariant_families": 11,
+        "all_variants_correct_families": 9,
+        "confidence": {
+          "0.5": {
+            "covered": 10,
+            "correct": 8,
+            "errors": 2,
+            "coverage": 0.23809523809523808
+          },
+          "0.7": {
+            "covered": 0,
+            "correct": 0,
+            "errors": 0,
+            "coverage": 0.0
+          },
+          "0.8": {
+            "covered": 0,
+            "correct": 0,
+            "errors": 0,
+            "coverage": 0.0
+          },
+          "0.9": {
+            "covered": 0,
+            "correct": 0,
+            "errors": 0,
+            "coverage": 0.0
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 12,
+            "correct": 8
+          },
+          "3": {
+            "n": 18,
+            "correct": 12
+          },
+          "4": {
+            "n": 12,
+            "correct": 4
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.4523809523809524,
+          "wait": 0.09523809523809523,
+          "finish": 0.09523809523809523,
+          "abstain": 0.047619047619047616
+        },
+        "sdk_replay": {
+          "valid_results": 42,
+          "decided": 0,
+          "median_ms": 46.037145977607
+        }
+      },
+      "training": {
+        "checkpoint_metric": "accuracy",
+        "best_epoch": 3,
+        "best_score": -0.5714285714285714,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 2.1270444045464196,
+            "ce": 1.7759586150447528,
+            "brier": 0.7021715976297855,
+            "val": {
+              "nll": 1.4751438072749548,
+              "acc": 0.5,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5
+              }
+            },
+            "elapsed_s": 12.5
+          },
+          {
+            "epoch": 2,
+            "loss": 1.8329616437355678,
+            "ce": 1.5228300789992015,
+            "brier": 0.6202631356815497,
+            "val": {
+              "nll": 1.4577726977212089,
+              "acc": 0.5238095238095238,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5238095238095238
+              }
+            },
+            "elapsed_s": 25.0
+          },
+          {
+            "epoch": 3,
+            "loss": 1.6140570590893428,
+            "ce": 1.3412110383311908,
+            "brier": 0.5456920123348633,
+            "val": {
+              "nll": 1.4380708081381661,
+              "acc": 0.5714285714285714,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5714285714285714
+              }
+            },
+            "elapsed_s": 37.4
+          },
+          {
+            "epoch": 4,
+            "loss": 1.516663466890653,
+            "ce": 1.2599237809578578,
+            "brier": 0.5134793284038702,
+            "val": {
+              "nll": 1.4244675238927205,
+              "acc": 0.5714285714285714,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5714285714285714
+              }
+            },
+            "elapsed_s": 49.8
+          }
+        ],
+        "items_per_epoch": 96
+      }
+    },
+    "named": {
+      "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6",
+      "lineage": {
+        "dataset_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+        "projection": "named",
+        "init_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "checkpoint_sha256": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+        "train_source_sha256": "96bc0150e82e4537428096662d62dd214b718aab27e27aee5f011fba3f597fb4"
+      },
+      "train": {
+        "records": 96,
+        "generation_batches": 20,
+        "families": 48,
+        "correct": 67,
+        "family_accuracy": 0.6979166666666666,
+        "slice_macro_accuracy": 0.7034523809523809,
+        "worst_slice_accuracy": 0.16666666666666666,
+        "exploratory_family_bootstrap_95": [
+          0.6309404761904763,
+          0.782157738095238
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "same_name": 2,
+          "relationship_reference": 3,
+          "open_conversation": 6,
+          "interrupt_redirect": 2,
+          "end_or_wait": 5,
+          "direct_address": 3,
+          "author_continuation": 3,
+          "explicit_handoff": 3,
+          "pause_or_listen": 2,
+          "quiet_text": 2
+        },
+        "slices": {
+          "same_name": {
+            "families": 3,
+            "accuracy": 0.16666666666666666
+          },
+          "relationship_reference": {
+            "families": 7,
+            "accuracy": 0.7857142857142857
+          },
+          "open_conversation": {
+            "families": 8,
+            "accuracy": 1.0
+          },
+          "interrupt_redirect": {
+            "families": 6,
+            "accuracy": 0.5833333333333334
+          },
+          "end_or_wait": {
+            "families": 7,
+            "accuracy": 0.35714285714285715
+          },
+          "direct_address": {
+            "families": 3,
+            "accuracy": 1.0
+          },
+          "author_continuation": {
+            "families": 4,
+            "accuracy": 0.875
+          },
+          "explicit_handoff": {
+            "families": 5,
+            "accuracy": 0.6
+          },
+          "pause_or_listen": {
+            "families": 2,
+            "accuracy": 1.0
+          },
+          "quiet_text": {
+            "families": 3,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "must_stop": {
+          "n": 20,
+          "correct": 10,
+          "wrong_speech": 10
+        },
+        "must_speak": {
+          "n": 72,
+          "correct": 57,
+          "missed_speech": 0
+        },
+        "unique_member": {
+          "n": 56,
+          "correct": 41,
+          "wrong_member": 15
+        },
+        "must_abstain": {
+          "n": 4,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 22,
+          "correct": 18
+        },
+        "exact_equivariant_families": 26,
+        "all_variants_correct_families": 27,
+        "confidence": {
+          "0.5": {
+            "covered": 51,
+            "correct": 44,
+            "errors": 7,
+            "coverage": 0.53125
+          },
+          "0.7": {
+            "covered": 18,
+            "correct": 17,
+            "errors": 1,
+            "coverage": 0.1875
+          },
+          "0.8": {
+            "covered": 10,
+            "correct": 10,
+            "errors": 0,
+            "coverage": 0.10416666666666667
+          },
+          "0.9": {
+            "covered": 3,
+            "correct": 3,
+            "errors": 0,
+            "coverage": 0.03125
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 40,
+            "correct": 30
+          },
+          "3": {
+            "n": 26,
+            "correct": 15
+          },
+          "4": {
+            "n": 30,
+            "correct": 22
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.3958333333333333,
+          "wait": 0.16666666666666666,
+          "finish": 0.10416666666666667,
+          "abstain": 0.041666666666666664
+        },
+        "sdk_replay": {
+          "valid_results": 96,
+          "decided": 10,
+          "median_ms": 42.15204151114449
+        }
+      },
+      "val": {
+        "records": 42,
+        "generation_batches": 12,
+        "families": 21,
+        "correct": 27,
+        "family_accuracy": 0.6428571428571429,
+        "slice_macro_accuracy": 0.6319444444444445,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.5416666666666666,
+          0.7222222222222222
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "direct_address": 1,
+          "end_or_wait": 1,
+          "explicit_handoff": 2,
+          "pause_or_listen": 2,
+          "author_continuation": 2,
+          "interrupt_redirect": 1,
+          "mention_not_address": 1,
+          "open_conversation": 1,
+          "quiet_text": 1,
+          "relationship_reference": 1,
+          "same_name": 1,
+          "unfinished_or_done": 1
+        },
+        "slices": {
+          "direct_address": {
+            "families": 2,
+            "accuracy": 1.0
+          },
+          "end_or_wait": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "explicit_handoff": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          },
+          "pause_or_listen": {
+            "families": 3,
+            "accuracy": 0.6666666666666666
+          },
+          "author_continuation": {
+            "families": 3,
+            "accuracy": 0.8333333333333334
+          },
+          "interrupt_redirect": {
+            "families": 2,
+            "accuracy": 0.75
+          },
+          "mention_not_address": {
+            "families": 1,
+            "accuracy": 0.5
+          },
+          "open_conversation": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "quiet_text": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "relationship_reference": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "same_name": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "unfinished_or_done": {
+            "families": 1,
+            "accuracy": 1.0
+          }
+        },
+        "must_stop": {
+          "n": 6,
+          "correct": 2,
+          "wrong_speech": 4
+        },
+        "must_speak": {
+          "n": 32,
+          "correct": 23,
+          "missed_speech": 0
+        },
+        "unique_member": {
+          "n": 28,
+          "correct": 19,
+          "wrong_member": 9
+        },
+        "must_abstain": {
+          "n": 2,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 6,
+          "correct": 6
+        },
+        "exact_equivariant_families": 14,
+        "all_variants_correct_families": 12,
+        "confidence": {
+          "0.5": {
+            "covered": 22,
+            "correct": 17,
+            "errors": 5,
+            "coverage": 0.5238095238095238
+          },
+          "0.7": {
+            "covered": 10,
+            "correct": 9,
+            "errors": 1,
+            "coverage": 0.23809523809523808
+          },
+          "0.8": {
+            "covered": 4,
+            "correct": 4,
+            "errors": 0,
+            "coverage": 0.09523809523809523
+          },
+          "0.9": {
+            "covered": 2,
+            "correct": 2,
+            "errors": 0,
+            "coverage": 0.047619047619047616
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 12,
+            "correct": 8
+          },
+          "3": {
+            "n": 18,
+            "correct": 14
+          },
+          "4": {
+            "n": 12,
+            "correct": 5
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.4523809523809524,
+          "wait": 0.09523809523809523,
+          "finish": 0.09523809523809523,
+          "abstain": 0.047619047619047616
+        },
+        "sdk_replay": {
+          "valid_results": 42,
+          "decided": 4,
+          "median_ms": 46.89802051871084
+        }
+      },
+      "training": {
+        "checkpoint_metric": "accuracy",
+        "best_epoch": 4,
+        "best_score": -0.6428571428571429,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 1.9783359318971634,
+            "ce": 1.6504745185375214,
+            "brier": 0.6557228118181229,
+            "val": {
+              "nll": 1.4162133421216692,
+              "acc": 0.5476190476190477,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5476190476190477
+              }
+            },
+            "elapsed_s": 12.2
+          },
+          {
+            "epoch": 2,
+            "loss": 1.6293598065773647,
+            "ce": 1.356838434934616,
+            "brier": 0.5450428004066149,
+            "val": {
+              "nll": 1.3691038688023884,
+              "acc": 0.5952380952380952,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5952380952380952
+              }
+            },
+            "elapsed_s": 24.3
+          },
+          {
+            "epoch": 3,
+            "loss": 1.3873144934574764,
+            "ce": 1.1589354077974956,
+            "brier": 0.4567582000357409,
+            "val": {
+              "nll": 1.3262164394060771,
+              "acc": 0.5952380952380952,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.5952380952380952
+              }
+            },
+            "elapsed_s": 37.3
+          },
+          {
+            "epoch": 4,
+            "loss": 1.3168178151051204,
+            "ce": 1.0965085079272587,
+            "brier": 0.44061862242718536,
+            "val": {
+              "nll": 1.3211962353615534,
+              "acc": 0.6428571428571429,
+              "n": 42,
+              "acc_by_qtype": {
+                "0": 0.6428571428571429
+              }
+            },
+            "elapsed_s": 48.9
+          }
+        ],
+        "items_per_epoch": 96
+      }
+    },
+    "compact_base": {
+      "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-compact-zero",
+      "lineage": {
+        "dataset_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+        "projection": "compact",
+        "init_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "checkpoint_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "train_source_sha256": "96bc0150e82e4537428096662d62dd214b718aab27e27aee5f011fba3f597fb4"
+      },
+      "train": {
+        "records": 96,
+        "generation_batches": 20,
+        "families": 48,
+        "correct": 36,
+        "family_accuracy": 0.375,
+        "slice_macro_accuracy": 0.3929166666666667,
+        "worst_slice_accuracy": 0.125,
+        "exploratory_family_bootstrap_95": [
+          0.31862797619047617,
+          0.47059523809523807
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "same_name": 2,
+          "relationship_reference": 3,
+          "open_conversation": 6,
+          "interrupt_redirect": 2,
+          "end_or_wait": 5,
+          "direct_address": 3,
+          "author_continuation": 3,
+          "explicit_handoff": 3,
+          "pause_or_listen": 2,
+          "quiet_text": 2
+        },
+        "slices": {
+          "same_name": {
+            "families": 3,
+            "accuracy": 0.16666666666666666
+          },
+          "relationship_reference": {
+            "families": 7,
+            "accuracy": 0.2857142857142857
+          },
+          "open_conversation": {
+            "families": 8,
+            "accuracy": 0.6875
+          },
+          "interrupt_redirect": {
+            "families": 6,
+            "accuracy": 0.4166666666666667
+          },
+          "end_or_wait": {
+            "families": 7,
+            "accuracy": 0.21428571428571427
+          },
+          "direct_address": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          },
+          "author_continuation": {
+            "families": 4,
+            "accuracy": 0.125
+          },
+          "explicit_handoff": {
+            "families": 5,
+            "accuracy": 0.2
+          },
+          "pause_or_listen": {
+            "families": 2,
+            "accuracy": 1.0
+          },
+          "quiet_text": {
+            "families": 3,
+            "accuracy": 0.5
+          }
+        },
+        "must_stop": {
+          "n": 20,
+          "correct": 8,
+          "wrong_speech": 12
+        },
+        "must_speak": {
+          "n": 72,
+          "correct": 28,
+          "missed_speech": 18
+        },
+        "unique_member": {
+          "n": 56,
+          "correct": 17,
+          "wrong_member": 26
+        },
+        "must_abstain": {
+          "n": 4,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 22,
+          "correct": 11
+        },
+        "exact_equivariant_families": 18,
+        "all_variants_correct_families": 11,
+        "confidence": {
+          "0.5": {
+            "covered": 59,
+            "correct": 24,
+            "errors": 35,
+            "coverage": 0.6145833333333334
+          },
+          "0.7": {
+            "covered": 27,
+            "correct": 9,
+            "errors": 18,
+            "coverage": 0.28125
+          },
+          "0.8": {
+            "covered": 17,
+            "correct": 5,
+            "errors": 12,
+            "coverage": 0.17708333333333334
+          },
+          "0.9": {
+            "covered": 1,
+            "correct": 0,
+            "errors": 1,
+            "coverage": 0.010416666666666666
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 40,
+            "correct": 20
+          },
+          "3": {
+            "n": 26,
+            "correct": 6
+          },
+          "4": {
+            "n": 30,
+            "correct": 10
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.3958333333333333,
+          "wait": 0.16666666666666666,
+          "finish": 0.10416666666666667,
+          "abstain": 0.041666666666666664
+        },
+        "sdk_replay": {
+          "valid_results": 96,
+          "decided": 17,
+          "median_ms": 40.6637919950299
+        }
+      },
+      "val": {
+        "records": 42,
+        "generation_batches": 12,
+        "families": 21,
+        "correct": 16,
+        "family_accuracy": 0.38095238095238093,
+        "slice_macro_accuracy": 0.40277777777777773,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.375,
+          0.4583333333333333
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "direct_address": 1,
+          "end_or_wait": 1,
+          "explicit_handoff": 2,
+          "pause_or_listen": 2,
+          "author_continuation": 2,
+          "interrupt_redirect": 1,
+          "mention_not_address": 1,
+          "open_conversation": 1,
+          "quiet_text": 1,
+          "relationship_reference": 1,
+          "same_name": 1,
+          "unfinished_or_done": 1
+        },
+        "slices": {
+          "direct_address": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "end_or_wait": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "explicit_handoff": {
+            "families": 3,
+            "accuracy": 0.5
+          },
+          "pause_or_listen": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          },
+          "author_continuation": {
+            "families": 3,
+            "accuracy": 0.5
+          },
+          "interrupt_redirect": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "mention_not_address": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "open_conversation": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "quiet_text": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "relationship_reference": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "same_name": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "unfinished_or_done": {
+            "families": 1,
+            "accuracy": 1.0
+          }
+        },
+        "must_stop": {
+          "n": 6,
+          "correct": 2,
+          "wrong_speech": 2
+        },
+        "must_speak": {
+          "n": 32,
+          "correct": 12,
+          "missed_speech": 7
+        },
+        "unique_member": {
+          "n": 28,
+          "correct": 8,
+          "wrong_member": 13
+        },
+        "must_abstain": {
+          "n": 2,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 6,
+          "correct": 6
+        },
+        "exact_equivariant_families": 5,
+        "all_variants_correct_families": 4,
+        "confidence": {
+          "0.5": {
+            "covered": 16,
+            "correct": 7,
+            "errors": 9,
+            "coverage": 0.38095238095238093
+          },
+          "0.7": {
+            "covered": 4,
+            "correct": 1,
+            "errors": 3,
+            "coverage": 0.09523809523809523
+          },
+          "0.8": {
+            "covered": 2,
+            "correct": 1,
+            "errors": 1,
+            "coverage": 0.047619047619047616
+          },
+          "0.9": {
+            "covered": 1,
+            "correct": 1,
+            "errors": 0,
+            "coverage": 0.023809523809523808
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 12,
+            "correct": 4
+          },
+          "3": {
+            "n": 18,
+            "correct": 9
+          },
+          "4": {
+            "n": 12,
+            "correct": 3
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.4523809523809524,
+          "wait": 0.09523809523809523,
+          "finish": 0.09523809523809523,
+          "abstain": 0.047619047619047616
+        },
+        "sdk_replay": {
+          "valid_results": 42,
+          "decided": 2,
+          "median_ms": 45.387146004941314
+        }
+      }
+    },
+    "named_base": {
+      "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-zero",
+      "lineage": {
+        "dataset_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+        "projection": "named",
+        "init_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "checkpoint_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "train_source_sha256": "96bc0150e82e4537428096662d62dd214b718aab27e27aee5f011fba3f597fb4"
+      },
+      "train": {
+        "records": 96,
+        "generation_batches": 20,
+        "families": 48,
+        "correct": 33,
+        "family_accuracy": 0.34375,
+        "slice_macro_accuracy": 0.3728571428571429,
+        "worst_slice_accuracy": 0.125,
+        "exploratory_family_bootstrap_95": [
+          0.2876175595238095,
+          0.4595342261904761
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "same_name": 2,
+          "relationship_reference": 3,
+          "open_conversation": 6,
+          "interrupt_redirect": 2,
+          "end_or_wait": 5,
+          "direct_address": 3,
+          "author_continuation": 3,
+          "explicit_handoff": 3,
+          "pause_or_listen": 2,
+          "quiet_text": 2
+        },
+        "slices": {
+          "same_name": {
+            "families": 3,
+            "accuracy": 0.16666666666666666
+          },
+          "relationship_reference": {
+            "families": 7,
+            "accuracy": 0.2857142857142857
+          },
+          "open_conversation": {
+            "families": 8,
+            "accuracy": 0.625
+          },
+          "interrupt_redirect": {
+            "families": 6,
+            "accuracy": 0.25
+          },
+          "end_or_wait": {
+            "families": 7,
+            "accuracy": 0.14285714285714285
+          },
+          "direct_address": {
+            "families": 3,
+            "accuracy": 0.5
+          },
+          "author_continuation": {
+            "families": 4,
+            "accuracy": 0.125
+          },
+          "explicit_handoff": {
+            "families": 5,
+            "accuracy": 0.3
+          },
+          "pause_or_listen": {
+            "families": 2,
+            "accuracy": 1.0
+          },
+          "quiet_text": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "must_stop": {
+          "n": 20,
+          "correct": 7,
+          "wrong_speech": 13
+        },
+        "must_speak": {
+          "n": 72,
+          "correct": 26,
+          "missed_speech": 19
+        },
+        "unique_member": {
+          "n": 56,
+          "correct": 16,
+          "wrong_member": 27
+        },
+        "must_abstain": {
+          "n": 4,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 22,
+          "correct": 10
+        },
+        "exact_equivariant_families": 18,
+        "all_variants_correct_families": 10,
+        "confidence": {
+          "0.5": {
+            "covered": 65,
+            "correct": 25,
+            "errors": 40,
+            "coverage": 0.6770833333333334
+          },
+          "0.7": {
+            "covered": 31,
+            "correct": 7,
+            "errors": 24,
+            "coverage": 0.3229166666666667
+          },
+          "0.8": {
+            "covered": 21,
+            "correct": 6,
+            "errors": 15,
+            "coverage": 0.21875
+          },
+          "0.9": {
+            "covered": 6,
+            "correct": 1,
+            "errors": 5,
+            "coverage": 0.0625
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 40,
+            "correct": 17
+          },
+          "3": {
+            "n": 26,
+            "correct": 7
+          },
+          "4": {
+            "n": 30,
+            "correct": 9
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.3958333333333333,
+          "wait": 0.16666666666666666,
+          "finish": 0.10416666666666667,
+          "abstain": 0.041666666666666664
+        },
+        "sdk_replay": {
+          "valid_results": 96,
+          "decided": 21,
+          "median_ms": 43.27956301858649
+        }
+      },
+      "val": {
+        "records": 42,
+        "generation_batches": 12,
+        "families": 21,
+        "correct": 17,
+        "family_accuracy": 0.40476190476190477,
+        "slice_macro_accuracy": 0.3958333333333333,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.3263888888888889,
+          0.46527777777777773
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "direct_address": 1,
+          "end_or_wait": 1,
+          "explicit_handoff": 2,
+          "pause_or_listen": 2,
+          "author_continuation": 2,
+          "interrupt_redirect": 1,
+          "mention_not_address": 1,
+          "open_conversation": 1,
+          "quiet_text": 1,
+          "relationship_reference": 1,
+          "same_name": 1,
+          "unfinished_or_done": 1
+        },
+        "slices": {
+          "direct_address": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "end_or_wait": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "explicit_handoff": {
+            "families": 3,
+            "accuracy": 0.6666666666666666
+          },
+          "pause_or_listen": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          },
+          "author_continuation": {
+            "families": 3,
+            "accuracy": 0.5
+          },
+          "interrupt_redirect": {
+            "families": 2,
+            "accuracy": 0.25
+          },
+          "mention_not_address": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "open_conversation": {
+            "families": 1,
+            "accuracy": 0.5
+          },
+          "quiet_text": {
+            "families": 1,
+            "accuracy": 1.0
+          },
+          "relationship_reference": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "same_name": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "unfinished_or_done": {
+            "families": 1,
+            "accuracy": 1.0
+          }
+        },
+        "must_stop": {
+          "n": 6,
+          "correct": 2,
+          "wrong_speech": 2
+        },
+        "must_speak": {
+          "n": 32,
+          "correct": 13,
+          "missed_speech": 10
+        },
+        "unique_member": {
+          "n": 28,
+          "correct": 10,
+          "wrong_member": 9
+        },
+        "must_abstain": {
+          "n": 2,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 6,
+          "correct": 5
+        },
+        "exact_equivariant_families": 7,
+        "all_variants_correct_families": 5,
+        "confidence": {
+          "0.5": {
+            "covered": 21,
+            "correct": 12,
+            "errors": 9,
+            "coverage": 0.5
+          },
+          "0.7": {
+            "covered": 11,
+            "correct": 8,
+            "errors": 3,
+            "coverage": 0.2619047619047619
+          },
+          "0.8": {
+            "covered": 8,
+            "correct": 6,
+            "errors": 2,
+            "coverage": 0.19047619047619047
+          },
+          "0.9": {
+            "covered": 2,
+            "correct": 2,
+            "errors": 0,
+            "coverage": 0.047619047619047616
+          }
+        },
+        "candidate_counts": {
+          "2": {
+            "n": 12,
+            "correct": 6
+          },
+          "3": {
+            "n": 18,
+            "correct": 8
+          },
+          "4": {
+            "n": 12,
+            "correct": 3
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.4523809523809524,
+          "wait": 0.09523809523809523,
+          "finish": 0.09523809523809523,
+          "abstain": 0.047619047619047616
+        },
+        "sdk_replay": {
+          "valid_results": 42,
+          "decided": 8,
+          "median_ms": 45.64687501988374
+        }
+      }
+    },
+    "selected_test": {
+      "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-selected-test",
+      "lineage": {
+        "dataset_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+        "projection": "named",
+        "init_sha256": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+        "checkpoint_sha256": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+        "train_source_sha256": "96bc0150e82e4537428096662d62dd214b718aab27e27aee5f011fba3f597fb4"
+      },
+      "test": {
+        "records": 40,
+        "generation_batches": 11,
+        "families": 20,
+        "correct": 12,
+        "family_accuracy": 0.3,
+        "slice_macro_accuracy": 0.3,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.16666666666666666,
+          0.4416666666666666
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "author_continuation": 1,
+          "mention_not_address": 1,
+          "direct_address": 1,
+          "end_or_wait": 1,
+          "explicit_handoff": 2,
+          "interrupt_redirect": 1,
+          "open_conversation": 1,
+          "quiet_text": 1,
+          "same_name": 1,
+          "unfinished_or_done": 1
+        },
+        "slices": {
+          "author_continuation": {
+            "families": 2,
+            "accuracy": 0.25
+          },
+          "mention_not_address": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "direct_address": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "end_or_wait": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "explicit_handoff": {
+            "families": 3,
+            "accuracy": 0.16666666666666666
+          },
+          "interrupt_redirect": {
+            "families": 2,
+            "accuracy": 0.25
+          },
+          "open_conversation": {
+            "families": 1,
+            "accuracy": 0.5
+          },
+          "quiet_text": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "same_name": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "unfinished_or_done": {
+            "families": 3,
+            "accuracy": 0.3333333333333333
+          }
+        },
+        "must_stop": {
+          "n": 10,
+          "correct": 2,
+          "wrong_speech": 7
+        },
+        "must_speak": {
+          "n": 30,
+          "correct": 10,
+          "missed_speech": 7
+        },
+        "unique_member": {
+          "n": 28,
+          "correct": 9,
+          "wrong_member": 13
+        },
+        "must_abstain": {
+          "n": 0,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 2,
+          "correct": 1
+        },
+        "exact_equivariant_families": 11,
+        "all_variants_correct_families": 4,
+        "confidence": {
+          "0.5": {
+            "covered": 13,
+            "correct": 7,
+            "errors": 6,
+            "coverage": 0.325
+          },
+          "0.7": {
+            "covered": 4,
+            "correct": 1,
+            "errors": 3,
+            "coverage": 0.1
+          },
+          "0.8": {
+            "covered": 2,
+            "correct": 0,
+            "errors": 2,
+            "coverage": 0.05
+          },
+          "0.9": {
+            "covered": 2,
+            "correct": 0,
+            "errors": 2,
+            "coverage": 0.05
+          }
+        },
+        "candidate_counts": {
+          "3": {
+            "n": 16,
+            "correct": 6
+          },
+          "4": {
+            "n": 10,
+            "correct": 2
+          },
+          "5": {
+            "n": 8,
+            "correct": 4
+          },
+          "6": {
+            "n": 6,
+            "correct": 0
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.275,
+          "wait": 0.05,
+          "finish": 0.2,
+          "abstain": 0.0
+        },
+        "sdk_replay": {
+          "valid_results": 40,
+          "decided": 2,
+          "median_ms": 51.12968751927838
+        }
+      }
+    },
+    "base_test": {
+      "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-base-test",
+      "lineage": {
+        "dataset_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+        "projection": "named",
+        "init_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "checkpoint_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "train_source_sha256": "96bc0150e82e4537428096662d62dd214b718aab27e27aee5f011fba3f597fb4"
+      },
+      "test": {
+        "records": 40,
+        "generation_batches": 11,
+        "families": 20,
+        "correct": 6,
+        "family_accuracy": 0.15,
+        "slice_macro_accuracy": 0.13333333333333333,
+        "worst_slice_accuracy": 0.0,
+        "exploratory_family_bootstrap_95": [
+          0.06666666666666667,
+          0.2
+        ],
+        "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+        "generation_batches_by_slice": {
+          "author_continuation": 1,
+          "mention_not_address": 1,
+          "direct_address": 1,
+          "end_or_wait": 1,
+          "explicit_handoff": 2,
+          "interrupt_redirect": 1,
+          "open_conversation": 1,
+          "quiet_text": 1,
+          "same_name": 1,
+          "unfinished_or_done": 1
+        },
+        "slices": {
+          "author_continuation": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "mention_not_address": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "direct_address": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "end_or_wait": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "explicit_handoff": {
+            "families": 3,
+            "accuracy": 0.16666666666666666
+          },
+          "interrupt_redirect": {
+            "families": 2,
+            "accuracy": 0.0
+          },
+          "open_conversation": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "quiet_text": {
+            "families": 2,
+            "accuracy": 0.5
+          },
+          "same_name": {
+            "families": 1,
+            "accuracy": 0.0
+          },
+          "unfinished_or_done": {
+            "families": 3,
+            "accuracy": 0.16666666666666666
+          }
+        },
+        "must_stop": {
+          "n": 10,
+          "correct": 3,
+          "wrong_speech": 4
+        },
+        "must_speak": {
+          "n": 30,
+          "correct": 3,
+          "missed_speech": 17
+        },
+        "unique_member": {
+          "n": 28,
+          "correct": 3,
+          "wrong_member": 10
+        },
+        "must_abstain": {
+          "n": 0,
+          "correct": 0
+        },
+        "multi_gold": {
+          "n": 2,
+          "correct": 0
+        },
+        "exact_equivariant_families": 8,
+        "all_variants_correct_families": 1,
+        "confidence": {
+          "0.5": {
+            "covered": 30,
+            "correct": 5,
+            "errors": 25,
+            "coverage": 0.75
+          },
+          "0.7": {
+            "covered": 17,
+            "correct": 3,
+            "errors": 14,
+            "coverage": 0.425
+          },
+          "0.8": {
+            "covered": 12,
+            "correct": 2,
+            "errors": 10,
+            "coverage": 0.3
+          },
+          "0.9": {
+            "covered": 8,
+            "correct": 2,
+            "errors": 6,
+            "coverage": 0.2
+          }
+        },
+        "candidate_counts": {
+          "3": {
+            "n": 16,
+            "correct": 4
+          },
+          "4": {
+            "n": 10,
+            "correct": 0
+          },
+          "5": {
+            "n": 8,
+            "correct": 2
+          },
+          "6": {
+            "n": 6,
+            "correct": 0
+          }
+        },
+        "constant_baselines": {
+          "respond:M0": 0.275,
+          "wait": 0.05,
+          "finish": 0.2,
+          "abstain": 0.0
+        },
+        "sdk_replay": {
+          "valid_results": 40,
+          "decided": 12,
+          "median_ms": 51.3105210266076
+        }
+      }
+    }
+  },
+  "paired_test": {
+    "fixed": 8,
+    "broken": 2,
+    "both_correct": 4,
+    "both_wrong": 26
+  }
+}

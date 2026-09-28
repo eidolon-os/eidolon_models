@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 擅长IP角色世界观架构与人设一致性审校
+    b: 擅长IP角色周边商品设计与供应链落地
+    c: 擅长IP角色短视频脚本与传播节奏策划
+  user: '{a}，我们角色团的三个成员人设写完后有点互相矛盾，老二设定怕水但剧情里他要在雨夜登场，帮我从世界观角度理一下怎么改才不崩设定？'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_002_0

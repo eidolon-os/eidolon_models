@@ -1,0 +1,40 @@
+{
+  "id": "v6_val_named",
+  "split": "val",
+  "slice": "named",
+  "generator_sha256": "b7414cbceaf67732c185a4f283a5ef392c41a25170f94daeab20e06adaea8f51",
+  "pair": {
+    "name_a": "苏晚萤",
+    "name_b": "白临川",
+    "name_c": "岑野",
+    "role_a": "敏感细致，爱用星象和旧城灯火比对路途；对白临川的冒失常先叹气再拦一下，也愿意把岑野当需要照看的同伴。",
+    "role_b": "爽直急切，遇异响喜欢直接凑近听；和苏晚萤斗嘴却总走在她能喊住的位置，对岑野的沉默常率先挑明。",
+    "role_c": "寡言敏锐，习惯在墙影里核对方向；把苏晚萤当安静的信源，把白临川当吵闹但可托底的同伴。",
+    "user_x": "苏晚萤，只请你说：城头那半盏灯灭下去时，风里有没有金属味？白临川、岑野先别接话。",
+    "peer_author_x": "",
+    "peer_text_x": "",
+    "acceptable_x": [
+      "respond:a"
+    ],
+    "reason_x": "用户点名苏晚萤并明确只请她回应，白临川、岑野被要求先别接话。",
+    "user_y": "白临川，只请你说：城头那半盏灯灭下去时，风里有没有金属味？苏晚萤、岑野先别接话。",
+    "peer_author_y": "",
+    "peer_text_y": "",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "用户点名白临川并明确只请他回应，苏晚萤、岑野被要求先别接话。"
+  },
+  "review": {
+    "acceptable_x": [
+      "respond:a"
+    ],
+    "reason_x": "用户明确点名苏晚萤本人回答，并要求白临川、岑野先别接话，故仅让苏晚萤（a）回应。",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "用户明确点名白临川本人回答，并要求苏晚萤、岑野先别接话，故仅让白临川（b）回应。"
+  },
+  "status": "agreed_pending_audit",
+  "reviewer_sha256": "1fd145b3468c86aa5ba5820864828c7c1f4065b1494e3b8f216359034339bb2f"
+}

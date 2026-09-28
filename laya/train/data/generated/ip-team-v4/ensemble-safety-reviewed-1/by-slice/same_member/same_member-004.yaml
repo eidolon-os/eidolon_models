@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 爱怀旧，讲话爱引旧年掌故，总被{b}嫌啰嗦却仍爱搭话
+    b: 嘴硬心软，听{a}讲古嘴上不耐烦，耳朵却凑得近
+  user: '{a}，你先前说要讲那年渡口遇雨的事，才开了个头就被打断了，这会儿不赶路了，你接着分两段慢慢讲完吧，我正想听呢。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 那年渡口天色说变就变，豆大的雨点砸在乌篷上，船家把橹一横，嚷着先避一避。我挤进棚下，身边站着个浑身湿透的货郎，怀里却护着个干布包。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_004_0

@@ -1,0 +1,8 @@
+seed: 163
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/generated/ip-team-v4/ensemble-safety-reviewed-2/train.yaml
+    split_name: train
+    variants: 4
+    pair_seed: 1357

@@ -1,0 +1,11 @@
+- mode: quiet
+  cast:
+    a: 爱回忆旧事，说话慢悠悠，常替{b}收尾圆场
+    b: 直来直去，一句不满就嘟囔，和{a}互相拆台又舍不得分开
+  user: 今天就聊到这儿吧，我还有点事要处理，你们都不用再接话了，明天再说。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_002_0

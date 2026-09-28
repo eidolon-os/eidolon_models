@@ -1,0 +1,25 @@
+# Built from synthetic development errors; user-visible end/wait semantics are the focus.
+version: ip-team-v4-glm53-flash-ensemble-safety-1
+domain: ensemble_characters
+slices:
+  - id: finish_direct
+    quota: 7
+    mode: quiet
+    candidates: 3
+    focus: 用户直接结束本轮，没有角色再发言；覆盖多样的自然收束说法。
+  - id: finish_after_peer
+    quota: 7
+    mode: named
+    candidates: 3
+    focus: 用户先让某一角色回答，真实发言完成后必须收束，不再追加其他成员。
+  - id: wait_or_finish
+    quota: 4
+    mode: quiet
+    candidates: 2
+    decisions: [wait, finish]
+    focus: 相似的安静表达中区分暂时等待与明确结束。
+  - id: same_member
+    quota: 4
+    mode: named
+    candidates: 2
+    focus: 用户明确要求同一角色继续第二段，第一段后的收束不得过早。

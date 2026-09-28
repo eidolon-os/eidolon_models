@@ -1,0 +1,27 @@
+version: ip-team-v4-glm53-flash-ensemble-safety-1-review-1
+source_plan_version: ip-team-v4-glm53-flash-ensemble-safety-1
+source: ../../private/ip-team-v4-glm-ensemble-safety
+selected:
+  finish_direct-001: 用户明确今天聊到此处，角色团直接结束。
+  finish_direct-002: 用户明确今天结束，明天再继续。
+  finish_direct-003: 用户明确现在结束，回来另起一轮。
+  finish_direct-005: 用户明确现在结束，改天再邀伙伴。
+  finish_direct-006: 用户明确现在结束，之后再找伙伴。
+  finish_direct-007: 用户明确今天说到这里，改天再聊。
+  finish_after_peer-002: 用户明确答完就到这，一位伙伴已完整答复；曾因词面校验过严拒稿，按更新规则离线重验，无额外 API 调用。
+  finish_after_peer-003: 用户明确答完本轮结束，伙伴已完整答复。
+  finish_after_peer-004: 用户明确答完本轮结束，伙伴已完整答复。
+  finish_after_peer-006: 用户明确答完本轮结束，伙伴已完整答复。
+  finish_after_peer-007: 用户明确答完本轮结束，伙伴已完整答复。
+  wait_or_finish-001: 用户只要求暂时安静，等下一条消息。
+  wait_or_finish-002: 用户明确今日讨论结束。
+  wait_or_finish-003: 用户只要求暂时安静，等下一条消息。
+  wait_or_finish-004: 用户明确今日讨论结束。
+  same_member-001: 用户明确要同一伙伴继续第二段故事，不能过早结束。
+  same_member-002: 用户明确要同一伙伴连续两段，不能过早结束。
+  same_member-003: 用户明确要同一伙伴继续后事，不能过早结束。
+  same_member-004: 用户明确要同一伙伴连讲两段，不能过早结束。
+rejected:
+  finish_direct-004: 与同切片另一条收束措辞高度近似。
+  finish_after_peer-001: 用户只说不问其他角色，未明确本轮结束，结构校验拒绝。
+  finish_after_peer-005: 一位人物描述错误地自指，人物关系不成立。

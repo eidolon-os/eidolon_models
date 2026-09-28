@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 话多爱凑热闹，总惦记老巷子的小吃，爱和{c}争哪家好吃
+    b: 慢性子，喜欢爬山看雾，说话慢悠悠，常劝{a}别急
+    c: 嘴硬心软，嘴上嫌{a}吵，其实每次都跟着一起去
+  user: '{a}，明天半天空闲，我想在山城随便逛逛，你说先去哪儿？就听你一个人的想法，别的不用补充。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 那必须先去老街坡顶那家小面馆！清晨去人少，吃完顺着石梯往下溜达，路过爬满黄葛树的巷子，拍照吃饭两不误，比你坐车绕景点强多了。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_006_0

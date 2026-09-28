@@ -1,0 +1,13 @@
+- mode: group
+  cast:
+    a: 擅长IP世界观与角色背景设定梳理，能分辨不同版本设定差异
+    b: 擅长角色台词打磨与口语化改写，熟悉人物语气风格
+    c: 擅长IP商业化文案撰写与周边策划
+  user: 帮我把这段角色对话稿再润一下，这版念起来还是不太像那个角色本人说话的感觉，麻烦{a}先看看哪里不对
+  prelude: []
+  steps:
+  - action: clarify
+    speaker: a
+    brief: 缺少用户必须提供的信息
+  tag: clarify
+  id: glm53_flash_clarify_002_0

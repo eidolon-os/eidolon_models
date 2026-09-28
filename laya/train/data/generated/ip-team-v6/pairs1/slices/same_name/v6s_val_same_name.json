@@ -1,0 +1,41 @@
+{
+  "id": "v6s_val_same_name",
+  "split": "val",
+  "slice": "same_name",
+  "schema": "shared_fields_v2",
+  "generator_sha256": "caea548273a5bafdbf85bb5c8fcd743b3df7dec4304d3457b34001e0a0302b5b",
+  "status": "agreed_pending_audit",
+  "pair": {
+    "acceptable_x": [
+      "abstain"
+    ],
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "name_a": "林望月",
+    "name_b": "林望月",
+    "name_c": "阿禾",
+    "reason_x": "user_x只喊出名字『林望月』，而a与b是同名人物且本快照无其他公开线索区分，无法分辨被叫到的是哪一位，按规则应弃权",
+    "reason_y": "user_y明确提及『夜市里替我占卜过星象』这一公开的具体人格与关系线索，唯一指向同为占星者的b，故respond:b",
+    "role_a": "星砂商队的向导，曾在沙暴中救过用户的性命",
+    "role_b": "古城夜市的占星师，曾与用户在星夜下并肩守过水源",
+    "role_c": "为旅队牵驼的少年，性格好奇爱插嘴",
+    "user_x": "林望月，你听见了吗？古城外又有驼铃响了。",
+    "user_y": "林望月，夜市里替我占卜过星象的那位，今晚星光这么亮，还能再解一次吗？",
+    "peer_author_x": "",
+    "peer_author_y": "",
+    "peer_text_x": "",
+    "peer_text_y": ""
+  },
+  "review": {
+    "acceptable_x": [
+      "abstain"
+    ],
+    "reason_x": "用户只叫了'林望月'，无任何指向a或b的线索（驼铃对两人都不构成公开文本依据），无法分辨同名人物",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "用户明确提及'夜市里替我占卜过星象'，与b的占星师身份及经历吻合，点名指向b"
+  },
+  "reviewer_sha256": "33515619e55d5930ee6fd9878ddec2bd14ee942a9d99d34c7459593bd0761bb4"
+}

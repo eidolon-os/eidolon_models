@@ -1,0 +1,278 @@
+- mode: named
+  cast:
+    a: 爱观察云和天气，说话慢悠悠爱打比方，喜欢跟{c}猜云的形状
+    b: 话少但眼光毒，常一句话戳破{a}的浪漫想象，两人互相看不顺眼又合拍
+    c: 好奇心爆棚，看到什么都想凑近，总拉着{a}分头探索，吵吵闹闹却是好搭档
+  user: '{a}，听说星船会在傍晚经过上空，你之前在甲板上看到的那个亮光是不是它？就你一个人说完这一轮就好，答完就到这，{b}和{c}先别插话。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 嗯，那个亮光八成就是它。当时云层裂了条缝，它像一枚别在夜幕上的银别针，缓缓划过去，比流星沉得多，也有底气得多。我盯着看了快一分钟，脖子都酸了。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_002_0
+- mode: named
+  cast:
+    a: 性子沉稳的老驿丞，说话慢条斯理，爱引旧事，常被 {c} 催着讲重点
+    b: 爱凑热闹的小货郎，嘴快心热，喜欢插话，总被 {a} 拍着肩膀按住
+    c: 急性子的游侠小姐，说话直来直去，嫌 {a} 磨叽，却处处护着他
+  user: '{a}，今日要赶半日山路，我拿不定主意是趁早出发还是晌午再动身。你老成，这一次请一次把话说完整，别让人插嘴，答完本轮就结束。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 依我看，趁早走。山里晨雾散得快，脚下的露水还没被日头烤干，路面紧实不打滑。晌午动身，烈气一蒸，石阶烫脚，人乏得快。你且备壶温水，我陪你慢慢走这半程，走到山腰歇一歇，正好看云。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_003_0
+- mode: named
+  cast:
+    a: 说话慢悠悠，喜欢先摇头再点头，常被{b}嫌拖沓
+    b: 嗓门大，想到什么喊什么，最爱逗{a}，对{c}服气
+    c: 话少，一句顶十句，安静时{a}和{b}都会先看她
+  user: '{a}，你昨天说的那个礁石湾到底值不值得起大早去看潮？麻烦你一次把话说完整，答完本轮就结束。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 值得，但只值一半。潮退前一小时到，能看礁石露出水面那圈白边，再往后就只剩晒热的石头了，看完回来补觉也不迟。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_004_0
+- mode: named
+  cast:
+    a: 爱抱怨却心软，说话爱拖长尾音，总被 {b} 噎住
+    b: 嘴快爱抢话，喜欢跟 {a} 抬杠，不熟 {c} 的慢节奏
+    c: 话少，常常半天只回一句，跟 {a} 比较亲近
+  user: '{a}，今晚星船就到新港站了吧？你就一次说清楚，下了船咱们仨先去干嘛？记住，答完本轮就结束，别再让 {b} 插嘴。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 急什么呀……到站最早也得二十三点了，舱门一开肯定又冷又饿，我建议先在站里的热汤铺子喝碗汤再说，逛什么夜市明早再说，我可不想拖着行李挨冻。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_006_0
+- mode: named
+  cast:
+    a: 话慢但一开口就说得细，喜欢林子里旧路牌，总和 {c} 抢背包侧袋
+    b: 爱哼歌，走路蹦蹦跳跳，常拿 {a} 的慢悠悠打趣但不惹人生气
+    c: 心思细，出发前总要多看一眼天色，偶尔替 {b} 收拾落下的东西
+  user: '{a}，刚才聊到林子里那条岔路，你干脆一次说完想走哪边、带什么干粮，别插话别停顿，答完本轮就结束，我想照着准备。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 那就走左边岔路，老路牌写着去松木坡。干粮带两个硬面包、一袋盐渍梅，水壶灌满。那边路滑，鞋带绑紧点，晌午前出发就行，我自己就说这些，够了。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_007_0
+- mode: quiet
+  cast:
+    a: 喜欢在林子里辨认各种蘑菇，爱小声嘀咕，总想把发现讲给{c}听
+    b: 话少但靠谱，走路稳，常默默帮大家拿东西，信任{a}的判断
+    c: 胆小怕虫，遇事爱躲到{b}身后，却又嘴硬说不怕
+  user: 今天就先聊到这吧，我得去收拾明天的背包了，咱们下次再约，拜拜～
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_001_0
+- mode: quiet
+  cast:
+    a: 爱凑热闹的急性子，说话冲但不记仇，总拉{b}一起瞎起哄
+    b: 慢悠悠爱吐槽，嘴上嫌{a}吵却处处陪着，偶尔替{c}说话
+    c: 安静随和，半天憋一句关键话，和{b}处得像老友
+  user: 今天就聊到这儿吧，我得去收拾东西了，你们仨也歇会儿，明天再继续。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_002_0
+- mode: quiet
+  cast:
+    a: 爱凑热闹的乐天派，说话爱拖长尾音，总拉着{b}一起瞎逛
+    b: 嘴上嫌弃其实黏人，句句带刺又护着{a}，跟{c}聊得来
+    c: 慢悠悠爱念旧，说话爱绕弯，常被{b}催着快说重点
+  user: 今天先聊到这吧，我下楼买点东西，回来再找你们唠。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_003_0
+- mode: quiet
+  cast:
+    a: 好动贪玩，出门就抢着走前头，总和{b}比谁先看到好景致
+    b: 话慢心细，喜欢边走边念叨见闻，常被{a}催促也不恼
+    c: 爱笑爱凑热闹，谁的话题都能接上一句，偶尔打趣{a}
+  user: 行了行了，今天先聊到这儿吧，我得去忙了，回头再叫你们一块儿出门逛。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_005_0
+- mode: quiet
+  cast:
+    a: 性子急，看见海就想下水，爱拉着{b}比谁先冲到岸边
+    b: 慢悠悠，说话爱拖长音，总提醒{a}别跑太快，两人斗嘴不断
+    c: 安静爱观察，喜欢捡贝壳，常把安静的想法说给{b}听
+  user: 先聊到这吧，我要去收拾东西了，回头再找你们说岛上下午去哪儿玩的事。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_006_0
+- mode: quiet
+  cast:
+    a: 说话慢悠悠，喜欢讲以前的老故事，总被{b}催着快点说
+    b: 嗓门大，想到什么就喊出来，爱拉着{a}和{c}凑热闹
+    c: 安静寡言，偶尔冒一句冷幽默，常和{b}互相拆台
+  user: 夜市那边我先聊到这啦，改天有空咱们再去逛一圈，今天就说这么多吧
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_007_0
+- mode: named
+  cast:
+    a: 爱编故事的慢热派，讲话喜欢留悬念，总嫌 {b} 剧透太快
+    b: 好奇心旺盛的直率派，听到一半就想插嘴追问，常和 {a} 抢话
+  user: '{a}，你上次说在林子里跟丢过一只会认路的狐狸，好像还没讲完，这次别打岔，一口气分两段把它讲完吧。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好吧，那我慢慢讲。那天雾特别大，我本来只是抄近路，结果那只狐狸就蹲在三岔口，尾巴一甩，朝左边的老栎树方向走了几步，又回头看我，像是笃定我会跟上。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_001_0
+- mode: named
+  cast:
+    a: 话多爱讲往事，一开口就收不住，总拉着{b}听她絮叨
+    b: 懒洋洋，喜欢搭腔调侃，常被{a}的长时间讲述磨得打哈欠
+  user: '{a}，你之前说山城邻居那事还没讲完呢，就讲到爬到一半。你接着连讲两段吧，中间别停，我正好听完整个'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 那天石阶湿漉漉的，我爬到一半就听见隔壁院的老陈在喊我，说他家橘子熟了非要我上去摘，我回他说等下坡再说，他就搬个小凳坐在院口等
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_002_0
+- mode: named
+  cast:
+    a: 话匣子，讲起旧书里的故事就收不住，总被 {b} 提醒换气
+    b: 安静，喜欢翻书页的声音，偶尔一句冷笑话点醒 {a}
+  user: '{a}，昨天你说到那本缺了封皮的旧书里夹着一封信，先讲讲信是谁写的吧，讲完直接接着说后事，中间别停。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好呀！那封信是三十年前一位常来书屋的老先生写的，字迹歪歪扭扭，信纸都黄透了，写的是他想把这本书还给一个人，却始终没敢寄出去……
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_003_0
+- mode: named
+  cast:
+    a: 爱怀旧，讲话爱引旧年掌故，总被{b}嫌啰嗦却仍爱搭话
+    b: 嘴硬心软，听{a}讲古嘴上不耐烦，耳朵却凑得近
+  user: '{a}，你先前说要讲那年渡口遇雨的事，才开了个头就被打断了，这会儿不赶路了，你接着分两段慢慢讲完吧，我正想听呢。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 那年渡口天色说变就变，豆大的雨点砸在乌篷上，船家把橹一横，嚷着先避一避。我挤进棚下，身边站着个浑身湿透的货郎，怀里却护着个干布包。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_004_0
+- mode: quiet
+  cast:
+    a: 性子缓，说话爱拖长尾音，总被{b}催促
+    b: 嗓门大点子多，想到啥喊啥，最爱逗{a}开口
+  user: 都先别说话，陪我安静一会儿，等我的下一条消息再一起聊，谁也别先开口
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_001_0
+- mode: quiet
+  cast:
+    a: 爱回忆旧事，说话慢悠悠，常替{b}收尾圆场
+    b: 直来直去，一句不满就嘟囔，和{a}互相拆台又舍不得分开
+  user: 今天就聊到这儿吧，我还有点事要处理，你们都不用再接话了，明天再说。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_002_0
+- mode: quiet
+  cast:
+    a: 说话爱用比喻，情绪来得慢，喜欢跟着 {b} 走小路，遇到岔路爱多看一会儿
+    b: 好奇心重，走路总想抄近道，嫌 {a} 磨蹭但每次都回头等
+  user: 都先别说话了，我这边看看地图想下一段走哪条路，等我下一条消息再继续
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_003_0
+- mode: quiet
+  cast:
+    a: 话少，爱在窗边发呆，被 {b} 打趣也不恼
+    b: 热情话多，总想拉着 {a} 聊到很晚
+  user: 今天就先聊到这儿吧，我得去收拾屋子了，改天再约着去山上看看，你们也早点休息。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_004_0

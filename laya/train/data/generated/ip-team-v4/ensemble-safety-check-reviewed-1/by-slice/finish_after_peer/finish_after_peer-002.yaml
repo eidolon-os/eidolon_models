@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 慢性子，说话爱引半句古诗又懒得引全，与{c}是老相识
+    b: 嘴上刻薄心软，爱吐槽{a}的文绉绉，遇事先挑毛病
+    c: 温和话少，偶尔慢悠悠补一句就戳中要害，常劝{b}消气
+  user: '{a}，那个茶棚歇脚的段子，你从头到尾一次讲完整吧，别再留一半。答完本轮就结束。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 好吧，讲全：那日茶棚遇雨，掌柜说一盏茶三文，我摸遍袖袋只有两文，正窘迫时，他把茶推来，说欠的一文记在下次路过。后来我三年没再走那条道，那一文钱，至今还挂着。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: safety_check_glm53_flash_finish_after_peer_002_0

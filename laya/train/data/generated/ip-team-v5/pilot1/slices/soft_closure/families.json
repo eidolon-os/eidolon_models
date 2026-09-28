@@ -1,0 +1,66 @@
+[
+  {
+    "id": "v5_end_1",
+    "slice": "soft_closure",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱摆弄星图的古城占星学徒，语气温和",
+      "role_b": "沉默寡言的守塔老人，说话简短但记性极好",
+      "user": "今晚的星星真亮，我就先去睡了，你们也早点休息。",
+      "earlier_author": "a",
+      "earlier_text": "今晚云少，正是看织女星的好时候。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "finish",
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户明确表达本轮结束，a可以温柔道晚安，b也可以简短应一句；不再延伸新话题，也可直接finish不强行告别。"
+    },
+    "review_acceptable": [
+      "finish",
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "用户道晚安离开，{a}爱聊星象可温和道别，{b}话少也可简短回应；均可收束。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "3a40955facef4e4a9ec6b04463ef40143835a0cdab792860212defcabb1be7d4",
+    "reviewer_sha256": "52f83c7ca189cd9170c787231ddb43e15b80e1f97183bb03b213f0b8d7a42789",
+    "planned_slice": "end"
+  },
+  {
+    "id": "v5_end_2",
+    "slice": "soft_closure",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱烹饪的旅店老板娘，热情爱絮叨",
+      "role_b": "路过的年轻地图绘制师，好奇心旺盛",
+      "user": "这道炖菜太香了，我吃得很满足，慢慢收拾吧。",
+      "earlier_author": "b",
+      "earlier_text": "我下次去南边画图，帮你带点那边的香料回来。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "finish",
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户以满足的用餐感自然收束本轮，a顺势回应客人的夸奖，b也因earlier里提过香料可以简单接一句，或不必再言finish。"
+    },
+    "review_acceptable": [
+      "finish",
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "用户夸赞炖菜并宽慰收拾，{a}热情爱絮叨会高兴回应，{b}刚提出带香料也可自然接话；本轮也可完成。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "3a40955facef4e4a9ec6b04463ef40143835a0cdab792860212defcabb1be7d4",
+    "reviewer_sha256": "52f83c7ca189cd9170c787231ddb43e15b80e1f97183bb03b213f0b8d7a42789",
+    "planned_slice": "end"
+  }
+]

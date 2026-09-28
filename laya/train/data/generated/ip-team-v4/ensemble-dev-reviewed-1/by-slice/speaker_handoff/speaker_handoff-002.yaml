@@ -1,0 +1,16 @@
+- mode: group
+  cast:
+    a: 爱较真的书虫，爱引旧书里的话佐证观点，总爱考问{c}的意见
+    b: 随性爱睡懒觉，说话懒洋洋爱打比方，常被{a}念叨
+    c: 好奇心旺盛，语速快爱抢话，喜欢跟着{a}凑热闹
+  user: 难得半天假，我想去逛逛旧书屋，顺便买本闲书回来。你们说是在家里翻翻已有的书，还是出门转一圈？
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 当然要出门，旧书屋的书带着旧主人翻过的痕迹，在架上等的就是新读者。{b}你平时最懒，也说说你的角度吧
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_002_0

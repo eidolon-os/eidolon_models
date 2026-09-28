@@ -1,0 +1,32 @@
+[
+  {
+    "id": "v5_boundaries_2",
+    "slice": "explicit_finish",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "守灯塔的老水手，嗓门大，喜欢给星图标注记号",
+      "role_b": "爱擦望远镜的少年学徒，好奇心重",
+      "role_c": "海鸥形状的信使，性子急，落脚总在桅杆顶",
+      "user": "今晚的星图就整理到这儿吧，这次讨论到此为止，不用送别也不用回话。",
+      "earlier_author": "a",
+      "earlier_text": "北斗那几颗我都圈出来了，明天出海就照这个走。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "finish"
+      ],
+      "reason": "用户明确结束讨论并要求不告别不确认，本轮已完成，故选finish，不应添加respond或wait。"
+    },
+    "review_acceptable": [
+      "finish"
+    ],
+    "review_reason": "用户明确表示星图整理到此为止、讨论结束且不用回话，收束意图清晰，本轮已完成。",
+    "status": "agreed_pending_audit",
+    "structural_error": null,
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2",
+    "reviewer_sha256": "2ecbcc431922450cbd0d89d3ed67791118416ede751afb7ac535367b3539e0f3",
+    "planned_slice": "boundaries"
+  }
+]

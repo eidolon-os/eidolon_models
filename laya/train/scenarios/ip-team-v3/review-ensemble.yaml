@@ -1,0 +1,34 @@
+version: ip-team-v4-glm53-flash-ensemble-1-review-1
+source_plan_version: ip-team-v4-glm53-flash-ensemble-1
+source: ../../private/ip-team-v4-glm-ensemble
+selected:
+  named_unique-003: 用户明确点名性格温和的伙伴陪聊。
+  named_unique-005: 用户明确点名古风伙伴独自陪伴散步。
+  speaker_handoff-003: 已公开发言的 a 直接点名 b 补充不同看法。
+  speaker_handoff-004: a 已给排队观点并直接点名 b 从吃的角度接话。
+  speaker_handoff-005: a 已给旧书屋观点并直接点名 b 接话。
+  same_member-001: 用户要求同一伙伴连续两段讲完故事。
+  same_member-003: 用户要求同一伙伴连续讲完礁石故事。
+  user_override-001: 用户打断旧话题并明确点名 b 回答新问题。
+  user_override-003: 用户打断旧话题并明确点名 b 回答新问题。
+  user_override-004: 用户打断旧话题并明确点名 b 回答新问题。
+  wait_or_finish-001: 用户要求先安静，等下一条消息。
+  wait_or_finish-002: 用户明确今天先结束讨论。
+  wait_or_finish-003: 用户要求先安静，等下一条消息。
+  wait_or_finish-004: 用户明确今天先结束讨论。
+  named_finish-001: 点名伙伴已说完完整故事，用户要求本轮到此为止。
+  named_finish-003: 点名伙伴已说完完整回忆，用户要求本轮到此为止。
+  wait_after_peer-002: 点名伙伴已回答，用户要求其他人等下一条消息。
+  wait_after_peer-003: 点名伙伴已回答，用户要求其他人等下一条消息。
+rejected:
+  named_unique-001: 候选仍是行程和内容专业人员，不是故事角色本人。
+  named_unique-002: 人物关系含未渲染的裸槽位字母。
+  named_unique-004: 与同切片另一条情绪陪聊请求高度相近，避免重复模板。
+  speaker_handoff-001: 候选仍是行程和餐饮专业人员，且接话邀请不明确。
+  speaker_handoff-002: 本次生成时含一个缺乏唯一性的首位发言金标；后续脚本已改为只标已公开发言后的接话。
+  same_member-002: 响应引用了不存在的第三位候选，结构校验拒绝。
+  user_override-002: 与其他打断换话题样本过于接近。
+  named_finish-002: 用户未明确结束本轮，答完后 finish 与 wait 不唯一。
+  named_finish-004: 用户未明确结束本轮，角色回复还邀请大家后续跟上。
+  wait_after_peer-001: 用户实际邀请其他两位一起商量，没有要求答完等待。
+  wait_after_peer-004: 响应含未渲染的成员槽位，结构校验拒绝。

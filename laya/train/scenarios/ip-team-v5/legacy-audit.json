@@ -1,0 +1,54 @@
+{
+  "ip-ensemble-v4-characters-r1": {
+    "train": {
+      "records": 676,
+      "families": 98,
+      "sources": {
+        "authored:ensemble-v3-text": 676
+      },
+      "source_families": {
+        "authored:ensemble-v3-text": 98
+      },
+      "potential_truncation": {
+        "head_over_256": 64
+      }
+    },
+    "val": {
+      "records": 57,
+      "families": 13,
+      "sources": {
+        "authored:ensemble-v3-text": 57
+      },
+      "source_families": {
+        "authored:ensemble-v3-text": 13
+      },
+      "potential_truncation": {}
+    }
+  },
+  "ip-ensemble-v4-characters-r3": {
+    "train": {
+      "records": 788,
+      "families": 117,
+      "sources": {
+        "authored:ensemble-v3-text": 788
+      },
+      "source_families": {
+        "authored:ensemble-v3-text": 117
+      },
+      "potential_truncation": {
+        "head_over_256": 128
+      }
+    },
+    "val": {
+      "records": 57,
+      "families": 13,
+      "sources": {
+        "authored:ensemble-v3-text": 57
+      },
+      "source_families": {
+        "authored:ensemble-v3-text": 13
+      },
+      "potential_truncation": {}
+    }
+  }
+}

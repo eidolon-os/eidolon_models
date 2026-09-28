@@ -1,0 +1,20 @@
+# Fixed before safety-focused retraining; assessed once after checkpoint selection.
+version: ip-team-v4-glm53-flash-ensemble-safety-check-1
+domain: ensemble_characters
+slices:
+  - id: finish_direct
+    quota: 3
+    mode: quiet
+    candidates: 3
+    focus: 用户明确直接结束本轮；用与训练数据不同的场景和自然说法。
+  - id: finish_after_peer
+    quota: 3
+    mode: named
+    candidates: 3
+    focus: 角色公开回答完整后，用户原本明确要求本轮结束；其他人不补话。
+  - id: wait_or_finish
+    quota: 2
+    mode: quiet
+    candidates: 2
+    decisions: [wait, finish]
+    focus: 同样是安静，一条只等下一条消息，一条确实结束本轮。

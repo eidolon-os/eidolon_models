@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 说话带古风腔，爱引旧事，步子慢，常被 {b} 催
+    b: 急脾气，出门就想快走，嫌 {a} 磨蹭，爱插嘴
+    c: 话少心细，习惯听 {a} 与 {b} 争完才慢悠悠补一句
+  user: '{a}，今天想去城里那条老街走走，可我这心里有点烦乱，你陪我慢慢逛吧，别叫他们俩了。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_005_0

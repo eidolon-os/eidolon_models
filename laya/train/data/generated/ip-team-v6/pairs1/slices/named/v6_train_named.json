@@ -1,0 +1,40 @@
+{
+  "id": "v6_train_named",
+  "split": "train",
+  "slice": "named",
+  "generator_sha256": "5c31985dd22c61111b0e2f510d0036a66ddcd20d1d54bb6e2bdaed7ef1b6412a",
+  "pair": {
+    "name_a": "墨白",
+    "name_b": "青芦",
+    "name_c": "纸鸢",
+    "role_a": "沉稳温和的老书灵，是旅伴中的倾听者，常在争执时安抚急性子的青芦，对迷路的纸鸢有守护之心",
+    "role_b": "活泼急躁的年轻书签精，好奇心旺盛，喜欢抢话，却最信任墨白的判断，把纸鸢当妹妹看待",
+    "role_c": "怯生生的新来小纸页仙，说话细声细气，夹在墨白与青芦中间，崇拜青芦的胆量也依恋墨白的稳重",
+    "user_x": "墨白，这一段只请你来讲讲你们怎么找到纸鸢的，青芦先别插嘴。",
+    "peer_author_x": "",
+    "peer_text_x": "",
+    "acceptable_x": [
+      "respond:a"
+    ],
+    "reason_x": "用户明确点名墨白（a）回应并要求青芦暂不插嘴，故仅墨白可respond",
+    "user_y": "青芦，接下来换你来说说书岛漂走那晚的事，墨白先不用开口。",
+    "peer_author_y": "",
+    "peer_text_y": "",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "用户明确点名青芦（b）回应并要求墨白先不说话，故仅青芦可respond"
+  },
+  "review": {
+    "acceptable_x": [
+      "respond:a"
+    ],
+    "reason_x": "用户明确点名墨白讲述找纸鸢的经过，并要求青芦先别插嘴，故下一步由墨白本人回应；青芦未被点名发言，纸鸢也未涉及，不选respond:b/c。",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "用户明确点名青芦讲述书岛漂走那晚的事，并让墨白暂不开口，故下一步由青芦本人回应；墨白、纸鸢均未被点名发言，不选respond:a/c。"
+  },
+  "status": "agreed_pending_audit",
+  "reviewer_sha256": "27869f3612ee9f9355510f83d5db8c3cefee9628ae24060f3303a2be406bdd5b"
+}

@@ -1,0 +1,19 @@
+version: ip-team-v4-glm53-flash-ensemble-exclusive-1-review-1
+source_plan_version: ip-team-v4-glm53-flash-ensemble-exclusive-1
+source: ../../private/ip-team-v4-glm-ensemble-exclusive
+selected:
+  named_finish-001: 用户只让指定角色完整表达，已听到完整路线建议，不再让其他角色插话。
+  named_finish-002: 用户只听指定角色完整表态，实际发言已答明二选一及理由。
+  named_finish-003: 用户只听指定角色一个人说，实际发言已答明所选地点及理由。
+  named_finish-004: 用户只听指定角色的意见，实际发言已完整给出观察与提醒。
+  named_finish-006: 用户只听指定角色一人的想法，实际发言已完整给出建议。
+  named_finish-007: 用户只听指定角色完整说法，实际发言已说明选择与理由。
+  named_finish-008: 用户只让指定角色完整回答，实际发言已说完消遣建议。
+  same_member-001: 用户明确要求同一角色连续讲两段，第一段后应继续。
+  same_member-002: 用户明确要求同一角色分两段讲完，第一段后应继续。
+  wait_after_peer-001: 用户指定角色先说，公开发言完成后等下一条消息。
+  wait_after_peer-002: 用户指定角色先说，其他人等下一条指示。
+  named_unique-001: 用户刚点名指定角色，尚未有回应，应先回答。
+  named_unique-002: 用户刚点名指定角色，尚未有回应，应先回答。
+rejected:
+  named_finish-005: 已公开发言以“说到你笑为止”结束，承诺的内容尚未完成，finish 金标有歧义。

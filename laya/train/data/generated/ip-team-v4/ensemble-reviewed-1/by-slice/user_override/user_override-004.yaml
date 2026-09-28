@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 爱幻想的海岛迷，说话爱形容风景，和 {b} 关系好
+    b: 说话简短直接，常被 {a} 拉去聊岛上的事
+    c: 慢悠悠爱睡午觉，偶尔插一句怪问题
+  user: 先别聊那个啦。{b}，你说如果明天半日出海，是早上出发好还是傍晚去看落日好？给我个准话。
+  prelude:
+  - author: a
+    text: 我说过好想去礁石那边看潮池，退潮的时候肯定特别漂亮，还想捡几个贝壳回来。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_004_0

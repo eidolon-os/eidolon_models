@@ -1,0 +1,610 @@
+{
+  "max_paid_calls": 32,
+  "calls_made": 31,
+  "pending": 0,
+  "failed": 2,
+  "usage_missing_calls": 2,
+  "total_tokens": 30534,
+  "statuses": {
+    "rejected_structure": 11,
+    "agreed_pending_audit": 8,
+    "rejected_api": 2,
+    "quarantined_disagreement": 1
+  },
+  "calls": [
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_author-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "aa7e237eb1e4444390d3c6c7387bf3768580bee8441826ba64a3b70ac22ac016",
+      "response_id": "20260928113544a511acfe59bc431b",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 835,
+        "completion_tokens_details": {
+          "reasoning_tokens": 418
+        },
+        "prompt_tokens": 529,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1364
+      },
+      "response_sha256": "e5b6558215a98654070a9d0d15df2e822850579f5379b5b67c69849ca2d73247"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_continue_done-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "dc92d0619b85291c229aa1a85ced6e356e575174c909d3c1469afdf518a86719",
+      "response_id": "2026092811314014685936b92847c7",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 1116,
+        "completion_tokens_details": {
+          "reasoning_tokens": 538
+        },
+        "prompt_tokens": 485,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1601
+      },
+      "response_sha256": "91969e557dcbfc127b8bd852a8be37fca454caebf2da5c8be10f6bdb866a373a"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_end_pause-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "910d1155ca8491e16416da08e5cdc41b2fc23ccf95f5ed688b5b961cc0f19194",
+      "response_id": "202609281132453351239d34eb4a55",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 777,
+        "completion_tokens_details": {
+          "reasoning_tokens": 538
+        },
+        "prompt_tokens": 474,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1251
+      },
+      "response_sha256": "52e64a9dadb2960f084cd37b9f7afcea51d632f8acacc6937a2a81a771ac3c71"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_handoff-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "a7e2538458389af5256dd55f152f6e6e5547e0ec1ce0699f5525d06e80ce19b1",
+      "response_id": "20260928113103efde1bd94cc14643",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 1224,
+        "completion_tokens_details": {
+          "reasoning_tokens": 881
+        },
+        "prompt_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1704
+      },
+      "response_sha256": "d71401c9cf9de4d6a1c7880ce78940a8928bc74fafc8ea33d89a00fe7f68f265"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_named-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "48389a8a931a03c01386d926aec78975e15ab68af94bd6086254f7bd217e7cee",
+      "response_id": "2026092811293574ad1919049247ef",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 517,
+        "completion_tokens_details": {
+          "reasoning_tokens": 213
+        },
+        "prompt_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 996
+      },
+      "response_sha256": "5c31985dd22c61111b0e2f510d0036a66ddcd20d1d54bb6e2bdaed7ef1b6412a"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_named-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "d80401d3842b9954b4dc42f06e22da17e3334668878fe98ede0bb310ee23149c",
+      "response_id": "20260928112951f19b2343186449c0",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 258,
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        },
+        "prompt_tokens": 451,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 709
+      },
+      "response_sha256": "27869f3612ee9f9355510f83d5db8c3cefee9628ae24060f3303a2be406bdd5b"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_pause_discuss-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "34b8bbdcc18520720df539ac457e2aeaf8b3498275450d8228300b9715414956",
+      "response_id": "202609281132140538dff3f9914e54",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 982,
+        "completion_tokens_details": {
+          "reasoning_tokens": 663
+        },
+        "prompt_tokens": 474,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1456
+      },
+      "response_sha256": "85d5b155a8b2667f75190ca717b7bae07a83c7f4454a5d47d2d8d04d4b764070"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_quiet-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "4819850e014be805812f380ddebea72eedc454ea856ff9a1bb0d23e525a751e9",
+      "response_id": "202609281134231cadd27de59c4008",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 2836,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2468
+        },
+        "prompt_tokens": 506,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3342
+      },
+      "response_sha256": "ab3f72058bdb0a07e4f680edb8208664fe622a98408514d53fc7db56020f23bc"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_same_name-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "4b7aafe31de89190583f8a8ee1d809fc068c9a9a634207bfd17be044cfa27637",
+      "response_id": "20260928113345191fbc38fb8443ff",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 1310,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1037
+        },
+        "prompt_tokens": 515,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1825
+      },
+      "response_sha256": "3f3c1e7e81a1cd410a3eb25bb52e0c1000518a9c476d1f8f76716ebbf405a0dc"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_train_same_name-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "8152b01ab7f3a37278655f3de53e4d2b6eb8ab5a97d5b4ea6bd2f89f91fcef56",
+      "response_id": "20260928113421ffdf82e55a1944cf",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 229,
+        "completion_tokens_details": {
+          "reasoning_tokens": 89
+        },
+        "prompt_tokens": 437,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 666
+      },
+      "response_sha256": "c8d86855ea4c971d6ecb2858bc2d870d81bffb264af4af8a0e71c99786293eb0"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_val_named-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "3160036ec6ad0993e75993af19b43c25cce057c9fe2090656c7b39045f71a531",
+      "response_id": "20260928113611bfcb52fac28149bd",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 2736,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2414
+        },
+        "prompt_tokens": 513,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 3249
+      },
+      "response_sha256": "b7414cbceaf67732c185a4f283a5ef392c41a25170f94daeab20e06adaea8f51"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6_val_named-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "fbf69dea72831fab89f053030f610ed56665b6f2375230a32ed91334ef56cc30",
+      "response_id": "20260928113739f5552a000d6d49fb",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 136,
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "prompt_tokens": 523,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 659
+      },
+      "response_sha256": "1fd145b3468c86aa5ba5820864828c7c1f4065b1494e3b8f216359034339bb2f"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_continue_done-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "f54ffbcd0327f81434b8f0a9de134cf1027a8ae737df5b562c28734b92e8c413",
+      "response_id": "20260928115027d21c4c21f25543c9",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 395,
+        "completion_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "prompt_tokens": 433,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 828
+      },
+      "response_sha256": "01bd5d5e752c7081c1f544896a081bf90a8e43deb2bf5b8007163a1c701bb5b4"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_end_pause-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "d05154d2fdbbdddeb337ca102045b1693591febe1aee4f84b5a2f49ae88a802a",
+      "response_id": "20260928114836ee7456e8f16c4ce1",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 318,
+        "completion_tokens_details": {
+          "reasoning_tokens": 111
+        },
+        "prompt_tokens": 413,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 731
+      },
+      "response_sha256": "74e784d0155e4914ccd5707edbc546a9d5eb8c4734c64b8f53d83359da15da60"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_end_pause-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "340260ab3f28238833c8ae2057f61a90fde7dc52758c5b249aed1ef7add2b942",
+      "response_id": "202609281148461c3cbf9727f04c41",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 78,
+        "completion_tokens_details": {
+          "reasoning_tokens": 7
+        },
+        "prompt_tokens": 417,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 495
+      },
+      "response_sha256": "1dec1d9c5c448a16e106f8a89447ef783d81ea6775dbbc73aa74b381b0db957f"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_handoff-gen.json",
+      "status": "failed",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "3683edf8950696ebbbd9dbf160ebd9d48788300a04663715e6152a8d91087e07",
+      "error_type": "ValueError"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_pause_discuss-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "1980ecfdf085c933d8ca1b8c65ee545af7a70db2a12e2a19af5d542170cea3ea",
+      "response_id": "2026092811481147d1610b653549c5",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 266,
+        "completion_tokens_details": {
+          "reasoning_tokens": 51
+        },
+        "prompt_tokens": 413,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 679
+      },
+      "response_sha256": "56f29289d15d9861e6abcdebfabec40852e4112ae09fb5bea06c7c59ef041a70"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_pause_discuss-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "7a23aeb431247cf494d34c93168f06f940c5d1af814c22c8223919a57ad7ab32",
+      "response_id": "202609281148190639e8c37cd54048",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 179,
+        "completion_tokens_details": {
+          "reasoning_tokens": 94
+        },
+        "prompt_tokens": 409,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 588
+      },
+      "response_sha256": "8dfb6769be9fe45a0cdddf1270576821bb4c59128403af54b307cb9fde07c089"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_quiet-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "583fbb10a9d9e8c35c13b18da0a2da057a5be295d2398c498a4f50b06ac390ed",
+      "response_id": "20260928114922c44497c412304928",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 264,
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "prompt_tokens": 413,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 677
+      },
+      "response_sha256": "c7a6afe74601e3e7a0a485195fa08b53dfae91299f973b77561d6d8ac9b85db8"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_train_quiet-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "4cbebab37999f9c89169df27baa1a3dcb0f11799f6126771f338f6edbcc2bb36",
+      "response_id": "2026092811493090985498d48244a7",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 122,
+        "completion_tokens_details": {
+          "reasoning_tokens": 16
+        },
+        "prompt_tokens": 429,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 551
+      },
+      "response_sha256": "b7bfaacef0ad87655a3f6d95973b854398f60eab194859b88b712f1e73e91d5d"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_author-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "dc6132e8e102b589b6e5749ead0ee2ecd890a925de552ca07f21849685ecffee",
+      "response_id": "2026092811494315a760813ebb4545",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 204,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 447,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 651
+      },
+      "response_sha256": "f49a9dd110e234561e59a73e007876ec58c7cc8d5cc6f52122a4e4038800bec0"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_author-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "8e1568c93cfcf93c48729606bdae9351c9641bd8b43162d393fa831a8b768107",
+      "response_id": "202609281149480dc8245f2d84468b",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 143,
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        },
+        "prompt_tokens": 467,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 610
+      },
+      "response_sha256": "10274fbfeed56d9db60b23112fdd5a1457d3a3e0dfb80f1fdf998d2090554067"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_continue_done-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "baa2094ed231a9ee3237e44bdfee1882f426f74db52f3c5e8e208b11e9b1f2ab",
+      "response_id": "202609281150388c651b24a4124548",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 614,
+        "completion_tokens_details": {
+          "reasoning_tokens": 237
+        },
+        "prompt_tokens": 435,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1049
+      },
+      "response_sha256": "6317b6841d7a780177a6e09462890a1c8408dfa3c3cd5696567639860e2a6639"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_end_pause-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "437a4caf67c7ebc48fec941e387fb70932b3ab3893baecf360ec248afe378c28",
+      "response_id": "202609281149146158e3c62d9a41a4",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 273,
+        "completion_tokens_details": {
+          "reasoning_tokens": 56
+        },
+        "prompt_tokens": 415,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 688
+      },
+      "response_sha256": "1f72b73710075b9f1e9bdce0ce9b67fa3bccf8051a186e9b8a1b5af7cdc28204"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_handoff-gen.json",
+      "status": "failed",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "bf2a3b73be57111e2bb4d84aeedbd4d39aa023c432f50f41be151be80aa3266b",
+      "error_type": "ValueError"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_pause_discuss-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "d3e1600c72e44ed15315de2f52c15b7963b66dd7293aadb2f8aae949dd6be334",
+      "response_id": "202609281148267d362b0cf60d458a",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 301,
+        "completion_tokens_details": {
+          "reasoning_tokens": 65
+        },
+        "prompt_tokens": 415,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 716
+      },
+      "response_sha256": "3b997e8561710d13b726c9b1ccdec77f6be8f0513a42383c132369ee85abb799"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_pause_discuss-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "7df2c63dd86f817258e865968497e71eab65f2045f5bba77ce890a4ce7773e1a",
+      "response_id": "2026092811483502a47a904a524e07",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 76,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 428,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 504
+      },
+      "response_sha256": "3caaeca1cb2cc5231dbb53fa44ffcbce9b24aa6b8bf0323e53f6f3c1793f7a99"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_quiet-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "19cd82a53a9d1e68768406afdf1b37ca2d88edb657103937015c444e087c4ad3",
+      "response_id": "2026092811493288aae2d6455e4b3b",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 381,
+        "completion_tokens_details": {
+          "reasoning_tokens": 122
+        },
+        "prompt_tokens": 415,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 796
+      },
+      "response_sha256": "e734b2f91e74afb94f4892ec114b83bccf07b51d5e7f01730339c746342a4ed7"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_same_name-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "cabe27f65148be2529b4cca4fec3a858e1e7f9a5622dff2e468426e989f896ad",
+      "response_id": "20260928114754ca1ed86480d24b68",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 434,
+        "completion_tokens_details": {
+          "reasoning_tokens": 163
+        },
+        "prompt_tokens": 424,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 858
+      },
+      "response_sha256": "caea548273a5bafdbf85bb5c8fcd743b3df7dec4304d3457b34001e0a0302b5b"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6s_val_same_name-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "eb9fe9935c879a5125fd111005e154eb6819befbbf8a77dc716193d161293535",
+      "response_id": "20260928114807c26e5625089b4266",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 122,
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "prompt_tokens": 439,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 561
+      },
+      "response_sha256": "33515619e55d5930ee6fd9878ddec2bd14ee942a9d99d34c7459593bd0761bb4"
+    },
+    {
+      "file": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/calls/v6t_val_author-gen.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "prompt_sha256": "dceb8aee49f93b1be99d9cea06ff3c8d10721a48b3f35da483cd8b7e7f5c24f3",
+      "response_id": "20260928115211782ad42e3338493c",
+      "response_model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 268,
+        "completion_tokens_details": {
+          "reasoning_tokens": 67
+        },
+        "prompt_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 730
+      },
+      "response_sha256": "2716fc65540bc2a8ef9a75a064d22a9b6145ef85ab3cf1bb6d715ccf3d954d37"
+    }
+  ]
+}

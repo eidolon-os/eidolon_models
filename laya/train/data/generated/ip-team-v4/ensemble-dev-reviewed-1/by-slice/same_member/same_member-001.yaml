@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 慢性子，说话慢悠悠爱讲细节，和{b}是老搭档
+    b: 心直口快，听人讲话总忍不住插一句，最服{a}
+  user: '{a}，你今天不是去看灯塔了吗？快给我们讲讲，你慢慢说，分两段讲，第一段先说路上，第二段再说灯塔底下的事，我等你说完再回。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好呀，那我先说路上那段。今天风大，去灯塔的坡道两边全是芦苇，被吹得一浪一浪的，我走一路停了好几次，还捡了枚被海水磨白的贝壳。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_001_0

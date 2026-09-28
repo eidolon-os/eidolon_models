@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 擅长梳理角色设定矛盾，快速给出单一修正建议
+    b: 擅长设计角色间对话的语气差异与口头禅风格
+    c: 擅长校验人设剧情时间线的前后一致性
+  user: '{a}你先把主角口癖和背景设定冲突的那一处具体讲清楚，讲完大家先停一下，别继续往下讨论，等我看完剧本再决定下一步怎么改。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 主角设定里自称习惯用敬语，但童年流浪背景又写明他没受过礼仪训练，这两处冲突，建议把口癖改成半文半白的短句。具体怎么定，先等你的指示，我们暂停讨论。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_006_0

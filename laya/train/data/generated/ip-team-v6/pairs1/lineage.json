@@ -1,0 +1,53 @@
+{
+  "source": "/Users/manson/ai/eidolon/eidolon_models/laya/train/private/ip-team-v6-pairs/reviewed",
+  "prior_train_sha256": "502f85c2d8eef43c6c3f7c2f9591692ca2925d144f12a3536a9ad593579ea5d5",
+  "audit_sha256": "35a7cf5fb5b950086c2ac9500bdfec55ffe6bdc8eadfdd1807e0202ed49c9b91",
+  "reviewed_source_sha256": {
+    "v6_train_author.json": "84321a366af712208ccb1a8d96f4c5f234286120826eae4899381f2032273fec",
+    "v6_train_continue_done.json": "8d3da1c0c5153b71f3e597804a60cd35359de8ca7049fe355e65d92d2608f08e",
+    "v6_train_end_pause.json": "456860e49dd76b6cd97ec1253a0f1b564d081420c94d47bfd6dba18f7a8c0739",
+    "v6_train_handoff.json": "7334863710eaeb5c22d13ff3302b920ede92a98bc2470c9d344964a7daa09d7d",
+    "v6_train_named.json": "3bc8f5aaf3e47bbea98fd3675d9f2687fb4cfe433f1d2dc7a87db380fee78ac7",
+    "v6_train_pause_discuss.json": "fa31fec94dbcc69cf5e5912d04285a1592abd709ca91e3108469fc5ccc3914df",
+    "v6_train_quiet.json": "8be6e8e82fd550a22ee770ffe5027d54107bfbfb417788e62675ec2ebe5ed289",
+    "v6_train_same_name.json": "207dcef4697904720062a9091b68a40fe4b5483e74be7af30705ac016b8d4fdf",
+    "v6_val_named.json": "57a931a81538a76b55b0f188640166e45249b48b6cd31824a875049982a48325",
+    "v6s_train_continue_done.json": "61d0205d4ddc514ebd8d22dcebc53257a56b34834c9d515b676d0dce0bac320c",
+    "v6s_train_end_pause.json": "762788b6e35a8c85e1ad500aabb2231e6f363ff287b4248f88c1e09002dda94c",
+    "v6s_train_handoff.json": "75e8f3c1c67f35aae6a70d17ca26fad11a272c86ae6f8e79f1a3ba9d8d3cd266",
+    "v6s_train_pause_discuss.json": "e5fc41024613f657f67266a4af126989d2fb8b46f30886ccfb83373d4c1272c3",
+    "v6s_train_quiet.json": "ac791ba7e01464356d23458cbdfda8f0b347cc0520ddbcb5828fea89cc933be5",
+    "v6s_val_author.json": "54cf52537bd95b44640452d9601e57fb454af96eba906f36026dce71e3a0fb7f",
+    "v6s_val_continue_done.json": "b4c166d3f3ed2fdff631fb19f2ce3155fac4333353ca5bae7b928f1e6b4a73c2",
+    "v6s_val_end_pause.json": "5a3c9ed33f029c2ca2ce0edafddc6e78a76e50b3e8159a9582d142b47c464a29",
+    "v6s_val_handoff.json": "8e543d70b8d758953611ad705e218b991567569e9471a3613fd17a75547025a4",
+    "v6s_val_pause_discuss.json": "b8d89e71d8010679cfe568710695530a7da791709a2e11e4d5e428eb23832a3f",
+    "v6s_val_quiet.json": "66ab3fc7837bc7981c6f8f2551bcdb0f835bd03d97857078ba7d5848e9753fc1",
+    "v6s_val_same_name.json": "a60d8dc954221790ae70eca7bac4983e35c09fdcd2ca81898ba221d29c0cac97",
+    "v6t_val_author.json": "f4b80f03df1c7f2902929204036a78b5c4bb4e874993b230d58355647f62785d"
+  },
+  "prepare_source_sha256": "5d408da04e05573e3d316a41ba370e65842bba205d9f4b3d6ac1b111ab657974",
+  "split_policy": "story pair and all permutations remain within preassigned train/val; old dev regression only",
+  "min_tokens": 281,
+  "max_tokens": 385,
+  "new_families": {
+    "v6_train_named": "train",
+    "v6_train_same_name": "train",
+    "v6_val_named": "val",
+    "v6s_train_end_pause": "train",
+    "v6s_train_pause_discuss": "train",
+    "v6s_val_pause_discuss": "val",
+    "v6s_val_same_name": "val"
+  },
+  "projection_sha256": "4efcf24c54b7d83ffc76c3fce1cee5a622b560285f9fe55f41ce56f1dc1b9d56",
+  "train": {
+    "records": 68,
+    "families": 13,
+    "sha256": "d05369a7f2c4e0faa8c06dbff4b05d5854462fc31dcd56287fd95956445fdd74"
+  },
+  "val": {
+    "records": 24,
+    "families": 3,
+    "sha256": "b5c6278f7f06ab19122b9f358658a78fc46352ea272343791115ab3f63845bd9"
+  }
+}

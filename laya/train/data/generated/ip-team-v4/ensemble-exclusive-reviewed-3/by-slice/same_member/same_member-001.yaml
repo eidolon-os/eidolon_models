@@ -1,0 +1,19 @@
+- mode: named
+  cast:
+    a: 书屋里的老派角色，说话慢条斯理，爱翻旧书讲典故
+    b: 好奇心重的年轻角色，爱打断提问，最黏{a}听故事
+    c: 安静温和，喜欢在窗边打盹，偶尔慢悠悠补一句
+  user: '{a}，你上次说要讲这家书屋最早的故事，一直没听完呢。这次麻烦你连续讲两段，中间别停，我一次听完。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好，那我接着说。这家书屋最早是位退休教师开的，她把自家的藏书全搬了进来，连书架都是她亲手钉的，门口那块木匾也是那时候挂上的。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: exclusive_glm53_flash_same_member_001_0

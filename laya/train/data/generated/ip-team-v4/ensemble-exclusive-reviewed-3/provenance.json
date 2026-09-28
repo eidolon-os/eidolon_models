@@ -1,0 +1,102 @@
+{
+  "review_version": "ip-team-v4-glm53-flash-ensemble-exclusive-1-review-1",
+  "source_plan_version": "ip-team-v4-glm53-flash-ensemble-exclusive-1",
+  "selected_calls": [
+    {
+      "call_id": "named_finish-001",
+      "slice": "named_finish",
+      "response_sha256": "29e64e61120231ded21af8d9525cd070c3a922c580b6c10b36b52e7f1c0a8c6d",
+      "review_reason": "用户只让指定角色完整表达，已听到完整路线建议，不再让其他角色插话。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-002",
+      "slice": "named_finish",
+      "response_sha256": "d64ed754767717b39957a31d1a14f05cb11ffb22e667791cd9a16ccbb68af8f5",
+      "review_reason": "用户只听指定角色完整表态，实际发言已答明二选一及理由。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-003",
+      "slice": "named_finish",
+      "response_sha256": "0498247662deb2dc0e1054b4f33139597d04c4560e01524c21d889e1bff4f893",
+      "review_reason": "用户只听指定角色一个人说，实际发言已答明所选地点及理由。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-004",
+      "slice": "named_finish",
+      "response_sha256": "e4d7461db1771b3979f6af8d10f94b6868efeaddc003cc028802c7ba8d014586",
+      "review_reason": "用户只听指定角色的意见，实际发言已完整给出观察与提醒。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-006",
+      "slice": "named_finish",
+      "response_sha256": "507333ad35993a7300da418cee9dea5de8f3f004c6e7ffb0f488217addb035d7",
+      "review_reason": "用户只听指定角色一人的想法，实际发言已完整给出建议。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-007",
+      "slice": "named_finish",
+      "response_sha256": "08c124a5fd903c913e5e3b7d84382d2c1a6d558ff2addd7c20ccb8eb841b4ea1",
+      "review_reason": "用户只听指定角色完整说法，实际发言已说明选择与理由。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-008",
+      "slice": "named_finish",
+      "response_sha256": "7875a244931b238d8b08dbcff8320a4b7c3cc8beeab9e4c1ea786e365bf60356",
+      "review_reason": "用户只让指定角色完整回答，实际发言已说完消遣建议。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-001",
+      "slice": "named_unique",
+      "response_sha256": "cea6e10ce60d558f7f60b0375b81fb300f189cddaf5aa533976b55a32ad72cc5",
+      "review_reason": "用户刚点名指定角色，尚未有回应，应先回答。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-002",
+      "slice": "named_unique",
+      "response_sha256": "6303ea2d2627c9994569fe6c5132ee7e7019a10fba4625a5ec5d37751d66e7cc",
+      "review_reason": "用户刚点名指定角色，尚未有回应，应先回答。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-001",
+      "slice": "same_member",
+      "response_sha256": "6301814ef4f65fe9b74433985d68fc43190f37d5f43c7337827648a7bf25fb91",
+      "review_reason": "用户明确要求同一角色连续讲两段，第一段后应继续。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-002",
+      "slice": "same_member",
+      "response_sha256": "ea4b10370b4ab1df4c1e8183aadcf029109f3054a39241b3501f157dbf7cb8f7",
+      "review_reason": "用户明确要求同一角色分两段讲完，第一段后应继续。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-001",
+      "slice": "wait_after_peer",
+      "response_sha256": "d484f4c94a9412d1de2c63fcb1a36109563139d70b52333009518776e2a32c5b",
+      "review_reason": "用户指定角色先说，公开发言完成后等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-002",
+      "slice": "wait_after_peer",
+      "response_sha256": "97445f1f6c8eb87bd4a00ca0c0796bf2aff6dea877dd536aaabbd81722034cbf",
+      "review_reason": "用户指定角色先说，其他人等下一条指示。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "named_finish-005": "已公开发言以“说到你笑为止”结束，承诺的内容尚未完成，finish 金标有歧义。"
+  },
+  "families": 13,
+  "namespace": "exclusive_"
+}

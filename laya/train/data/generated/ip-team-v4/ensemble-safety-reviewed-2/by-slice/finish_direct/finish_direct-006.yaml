@@ -1,0 +1,12 @@
+- mode: quiet
+  cast:
+    a: 性子急，看见海就想下水，爱拉着{b}比谁先冲到岸边
+    b: 慢悠悠，说话爱拖长音，总提醒{a}别跑太快，两人斗嘴不断
+    c: 安静爱观察，喜欢捡贝壳，常把安静的想法说给{b}听
+  user: 先聊到这吧，我要去收拾东西了，回头再找你们说岛上下午去哪儿玩的事。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: safety_glm53_flash_finish_direct_006_0

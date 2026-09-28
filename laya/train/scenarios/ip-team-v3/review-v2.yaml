@@ -1,0 +1,32 @@
+version: ip-team-v3-glm53-flash-2-review-1
+source_plan_version: ip-team-v3-glm53-flash-2
+source: ../../private/ip-team-v3-glm-flash-v2
+selected:
+  named_unique-001: 用户明确点名，目标和成员专长一致。
+  named_unique-002: 用户明确点名，世界观冲突对应成员专长。
+  named_unique-003: 用户明确点名，台词规范对应成员专长。
+  named_unique-004: 用户明确点名，人设审校对应成员专长。
+  speaker_handoff-001: 已公开故事主线后接角色视觉设定。
+  speaker_handoff-002: 已公开世界观后接雕塑材质。
+  speaker_handoff-004: 已公开时间线后接台词风格。
+  same_member-002: 明确要求同一成员连续讲完两段。
+  same_member-003: 明确要求同一成员继续第二段。
+  user_override-002: 用户停下旧的仙侠目标并点名新目标成员。
+  user_override-003: 用户停下旧的仙侠目标并点名新目标成员。
+  clarify-001: 缺少要修改的新角色和当前稿件。
+  clarify-002: 没提供所指对话稿，点名成员先问清材料。
+  clarify-003: 没提供所指草稿，点名成员先问清材料。
+  wait_or_finish-001: 明确暂停发言，等待下一条用户消息。
+  wait_or_finish-002: 明确本轮讨论结束。
+  wait_or_finish-003: 明确暂停发言，等待角色资料。
+  wait_or_finish-004: 明确本轮讨论结束。
+rejected:
+  same_member-001: 用户要求等确认后继续，第二步应等待而非直接发言。
+  user_override-001: 内容偏企业年会，脱离 IP 角色创作目标。
+  same_name-001: 同名情况下所选澄清者缺乏唯一性。
+  same_name-002: 用户的任务内容可区分同名成员，澄清标注不成立。
+  speaker_handoff-003: 用户说视觉稿已定，第一步再让视觉成员发言缺乏必要性。
+  counterfactual-001: 两分支改变不止一个事实，且下一位没有唯一性。
+  counterfactual-002: API 输出额外字段，结构校验拒绝；语义也不足以支持 b/c 切换。
+  counterfactual-003: 首次登场年份变化不足以支持编剧/数据分析师切换。
+  counterfactual-004: 出身地域变化不足以支持形象/配音负责人切换。

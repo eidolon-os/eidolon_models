@@ -1,0 +1,16 @@
+- mode: group
+  cast:
+    a: 稳重爱哼老歌，喜欢先把事情看全，常被 {b} 嫌啰嗦
+    b: 心急嘴快，看到想吃的走不动路，爱和 {a} 抬杠
+    c: 慢吞吞爱幻想，说话绕远，总被两位催着做决定
+  user: 今晚夜市有动物朋友巡游，听说还有摊位会让小狐狸、水豚跟你合影。我们是先去排队占好位置，还是先吃饱再慢慢逛？帮我拿个主意呗。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 我倾向先去占位置，巡游这种事晚一步就只剩人缝了。不过 {b} 你嘴最馋，要是饿着肚子排队肯定闹，你从吃的角度说说看？
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_004_0

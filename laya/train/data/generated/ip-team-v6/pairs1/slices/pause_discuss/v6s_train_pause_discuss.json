@@ -1,0 +1,45 @@
+{
+  "id": "v6s_train_pause_discuss",
+  "split": "train",
+  "slice": "pause_discuss",
+  "schema": "shared_fields_v2",
+  "generator_sha256": "56f29289d15d9861e6abcdebfabec40852e4112ae09fb5bea06c7c59ef041a70",
+  "status": "agreed_pending_audit",
+  "pair": {
+    "acceptable_x": [
+      "wait"
+    ],
+    "acceptable_y": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "name_a": "云雀纸鸢",
+    "name_b": "墨汐灯烛",
+    "name_c": "苔痕书签",
+    "reason_x": "用户x要求所有人完全暂停回复并等待用户下一条输入，因此只能选择wait暂停。",
+    "reason_y": "用户y旁听并让大家继续聊天，三位旅伴都可自然接话，无被点名者，a、b、c均可回应。",
+    "role_a": "爱朗读书页片段的乐观飞行向导",
+    "role_b": "守护岛上灯火、语气沉静的记事者",
+    "role_c": "藏在旧书里、爱插嘴提问的胆小学者",
+    "user_x": "所有人先停下，等我的下一句话再继续。",
+    "user_y": "你们继续聊，我就在旁边听着。",
+    "peer_author_x": "",
+    "peer_author_y": "",
+    "peer_text_x": "",
+    "peer_text_y": ""
+  },
+  "review": {
+    "acceptable_x": [
+      "wait"
+    ],
+    "reason_x": "用户明确要求所有人停下，等其下一句话，属于暂停等待用户，不能回复。",
+    "acceptable_y": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "reason_y": "用户让三人继续互相聊天，未点名特定人物，三人皆为被允许继续对话的对象，均有公开文本依据可回应。"
+  },
+  "reviewer_sha256": "8dfb6769be9fe45a0cdddf1270576821bb4c59128403af54b307cb9fde07c089"
+}

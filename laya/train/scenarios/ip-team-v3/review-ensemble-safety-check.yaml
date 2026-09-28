@@ -1,0 +1,13 @@
+version: ip-team-v4-glm53-flash-ensemble-safety-check-1-review-1
+source_plan_version: ip-team-v4-glm53-flash-ensemble-safety-check-1
+source: ../../private/ip-team-v4-glm-ensemble-safety-check
+selected:
+  finish_direct-002: 用户明确这轮结束，改日再和角色团说话。
+  finish_direct-003: 用户明确这轮结束，改日再和角色团说话。
+  finish_after_peer-001: 用户要求一位角色说完整后本轮结束。
+  finish_after_peer-002: 用户要求一位角色说完整后本轮结束。
+  finish_after_peer-003: 用户要求一位角色说完整后本轮结束。
+  wait_or_finish-001: 用户只要求暂停并等待下一条消息。
+  wait_or_finish-002: 用户明确本轮结束。
+rejected:
+  finish_direct-001: 响应字段不符合扁平 JSON 格式，结构校验拒绝。

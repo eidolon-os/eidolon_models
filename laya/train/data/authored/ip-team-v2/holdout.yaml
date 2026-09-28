@@ -1,0 +1,74 @@
+- id: sealed_team_recipe
+  mode: group
+  tag: content_handoff
+  cast: {a: "善于提出菜谱", b: "负责检查过敏与口味限制", c: "善于简要整合"}
+  user: "给周末聚餐想个清淡的菜，你们商量。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一道清淡的聚餐菜"}
+    - heard: {speaker: a, text: "可以做清蒸鱼配时蔬。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "承接菜品，提示先确认食客是否能吃鱼"
+    - heard: {speaker: b, text: "先问大家有没有鱼类过敏，再确定主菜。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "将清淡菜品和过敏确认合成简短建议"
+- id: sealed_named_poem
+  mode: named
+  tag: named_request
+  cast: {a: "擅长解读诗歌", b: "善于计划路线"}
+  user: "{a}，只请你解释‘晚风拂过旧桥，河面留下一条摇晃的光’的意境，其他人先不说。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "解释晚风、旧桥与河面光影营造的安静意境"}
+- id: sealed_need_reference
+  mode: group
+  tag: clarify
+  cast: {a: "擅长讲历史", b: "善于提出澄清问题"}
+  user: "把刚才那个人讲的地方再解释一下。"
+  steps:
+    - {action: clarify, speaker: b, task: clarify, brief: "询问是哪位成员、哪个地方"}
+- id: sealed_no_reply
+  mode: quiet
+  tag: wait
+  cast: {a: "善于陪伴", b: "爱给提议"}
+  user: "我还没想好，先暂停发言。"
+  steps:
+    - {action: wait, task: none}
+- id: sealed_close
+  mode: group
+  tag: finish
+  cast: {a: "负责主持", b: "擅长给建议"}
+  user: "感谢，话题到此结束。"
+  steps:
+    - {action: finish, task: none}
+- id: sealed_urgent_override
+  mode: interrupt
+  tag: user_override
+  cast: {a: "擅长观影推荐", b: "擅长宠物护理常识"}
+  prelude:
+    - {author: user, text: "推荐一部轻松的电影。"}
+    - {author: a, text: "可以看看一部温暖的动画片。"}
+  user: "先别谈电影，猫刚刚打翻水盆，我该先怎么收拾？"
+  steps:
+    - {action: respond, speaker: b, task: answer, brief: "只回答新提出的安全清理步骤，不续谈电影"}
+- id: sealed_no_allowed
+  mode: group
+  tag: abstain
+  cast: {a: "擅长计划", b: "善于总结"}
+  user: "现在做一个下一步选择。"
+  steps:
+    - {action: abstain, task: none, allowed_actions: []}
+- id: sealed_self_followup
+  mode: named
+  tag: same_member
+  cast: {a: "擅长解释天文", b: "喜欢提出质疑"}
+  user: "{a}先讲流星是什么，再由{a}自己补一个比喻。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "准确解释流星是进入大气层发光的物质"}
+    - heard: {speaker: a, text: "流星是进入大气层时发光的微小天体物质。"}
+      action: respond
+      speaker: a
+      task: build
+      brief: "为自己刚才的解释补一个简洁比喻"

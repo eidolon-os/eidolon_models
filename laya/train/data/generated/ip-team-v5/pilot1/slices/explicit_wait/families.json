@@ -1,0 +1,62 @@
+[
+  {
+    "id": "v5_boundaries_1",
+    "slice": "explicit_wait",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱收集露水的森林精灵，说话轻快，喜欢哼歌",
+      "role_b": "背包客旅伴，做事麻利，常惦记下一站的干粮",
+      "role_c": "古城旧识，慢性子，爱翻旧地图讲故事",
+      "user": "我想到怎么修营地的那盏灯了，你们三个先什么都别说，等我把想法写完再讲。",
+      "earlier_author": "b",
+      "earlier_text": "那盏灯挂歪了，风一吹就晃，要不我们换个挂法？",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "wait"
+      ],
+      "reason": "用户明确要求三人暂时完全不回复，等其写完再讲，故只能wait，任何角色均不得以性格或礼貌确认为由respond。"
+    },
+    "review_acceptable": [
+      "wait"
+    ],
+    "review_reason": "用户明确要求三人先保持沉默，等TA写完想法再讲，此时所有角色都不应回话，暂停等用户是唯一合理动作。",
+    "status": "agreed_pending_audit",
+    "structural_error": null,
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2",
+    "reviewer_sha256": "2ecbcc431922450cbd0d89d3ed67791118416ede751afb7ac535367b3539e0f3",
+    "planned_slice": "boundaries"
+  },
+  {
+    "id": "v5_boundaries_4",
+    "slice": "explicit_wait",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "山间采药的年轻猎户，观察力敏锐，说话简洁",
+      "role_b": "帐篷里掌勺的老伙伴，火候拿捏得准，爱唠叨几句",
+      "role_c": "会画山形的旅人，安静，随身带炭笔",
+      "user": "山下好像有动静，都先憋住别出声也别回任何字，等我看完再说话。",
+      "earlier_author": "c",
+      "earlier_text": "我把东侧的山脊描完了，缺口那块明天补。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "wait"
+      ],
+      "reason": "用户因山下动静要求所有人先不回复任何内容、等下一条消息，属严格静默，只能wait，不因爱唠叨或观察敏锐而respond。"
+    },
+    "review_acceptable": [
+      "wait"
+    ],
+    "review_reason": "用户要求所有人憋住不出声也不回任何字，等TA看完再说，此轮应暂停等用户。",
+    "status": "agreed_pending_audit",
+    "structural_error": null,
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2",
+    "reviewer_sha256": "2ecbcc431922450cbd0d89d3ed67791118416ede751afb7ac535367b3539e0f3",
+    "planned_slice": "boundaries"
+  }
+]

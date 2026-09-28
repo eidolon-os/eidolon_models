@@ -1,0 +1,84 @@
+# Development comparison families, disjoint from training family IDs and names/topics.
+- id: cmp_named_turn
+  tag: named_request
+  user: "先听{c}讲讲{topic}，只需要他一个人。"
+  action: respond
+  target: c
+- id: cmp_named_second
+  tag: named_request
+  user: "下一位换{a}，请围绕{topic}说。"
+  action: respond
+  target: a
+- id: cmp_role_feasibility
+  tag: role_request
+  roles: [budget, tech, host]
+  user: "关于{topic}的落地步骤，先由技术成员说明。"
+  action: respond
+  target: tech
+- id: cmp_role_source
+  tag: role_request
+  user: "关于{topic}，请负责查证的人先说明证据。"
+  action: respond
+  target: fact
+- id: cmp_public_budget
+  tag: public_context
+  roles: [creative, budget, host]
+  user: "我们讨论{topic}，看现有公开发言选下一位。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "构想有趣，可是资源上限不清楚，先核算开支吧。"
+  action: respond
+  target: budget
+- id: cmp_conditional_tech_or_creative
+  tag: counterfactual
+  roles: [creative, tech, host]
+  user: "如果讲实现就让技术成员说，如果讲视觉就让创意成员说。"
+  trigger_kind: companion
+  trigger_author: host
+  action: respond
+  target: tech
+  alternatives:
+    - id: implementation
+      trigger: "{topic}现在卡在具体实现步骤。"
+      target: tech
+    - id: appearance
+      trigger: "{topic}现在卡在视觉表达。"
+      target: creative
+- id: cmp_clarify_which
+  tag: ambiguity
+  user: "按我刚才说的那一个方案来，但之前并未指定。"
+  action: clarify
+  target: host
+- id: cmp_answer_after_clarify
+  tag: clarification_answer
+  roles: [creative, tech, host]
+  user: "我选技术可行性，先解释这部分。"
+  history:
+    - author: host
+      text: "你希望先听创意还是可行性？"
+  action: respond
+  target: tech
+- id: cmp_wait
+  tag: wait
+  user: "我先看看材料，你们稍候，不用接着说。"
+  action: wait
+- id: cmp_finish
+  tag: finish
+  user: "关于{topic}已经够了，本轮就此结束。"
+  action: finish
+- id: cmp_duplicate
+  tag: ambiguous_candidate
+  duplicate_names: true
+  user: "请{a}来回答{topic}，只说名字。"
+  action: abstain
+- id: cmp_disallowed
+  tag: constraint
+  user: "马上请{b}发言。"
+  allowed_actions: [wait]
+  action: abstain
+- id: cmp_long_context
+  tag: long_context
+  long_history: true
+  user: "前面的讨论我都听了，最后请{a}总结{topic}。"
+  action: respond
+  target: a

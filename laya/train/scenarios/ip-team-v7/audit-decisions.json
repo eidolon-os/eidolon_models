@@ -1,0 +1,760 @@
+{
+  "train-0-direct_address-s1": {
+    "decision": "accept",
+    "reason": "用户明确请阿麂回应，职业能力不改变唯一对象。",
+    "rename_safe": false,
+    "observed_slice": "direct_address"
+  },
+  "train-0-author_continuation-s1": {
+    "decision": "reject",
+    "reason": "此前角色自己遇险，用户却无说明接替第一人称并回答针对角色的关切；身份时序不清，不作为干净作者监督。",
+    "rename_safe": false
+  },
+  "train-0-author_continuation-s2": {
+    "decision": "reject",
+    "reason": "用户已在最新消息完成发现并说先说到这，finish亦合理；唯一wait的依据错误引用较早被截断的用户句。",
+    "rename_safe": false
+  },
+  "train-0-author_continuation-s3": {
+    "decision": "accept",
+    "reason": "最新用户明确先说到这、回头再讲，模糊收束允许wait与finish；不是人物作者续讲切片。",
+    "rename_safe": false,
+    "observed_slice": "end_or_wait"
+  },
+  "train-0-explicit_handoff-s1": {
+    "decision": "accept",
+    "reason": "最新小舟正要讲鱼头，已拿到发言权并要求阿潮不插嘴，同一作者继续；昵称保留。",
+    "rename_safe": false,
+    "observed_slice": "author_continuation"
+  },
+  "train-0-explicit_handoff-s2": {
+    "decision": "accept",
+    "reason": "最新石磊明确将龙舟话题交给海蓝，其昵称在persona明确给出。",
+    "rename_safe": false,
+    "observed_slice": "explicit_handoff"
+  },
+  "train-0-explicit_handoff-s3": {
+    "decision": "reject",
+    "reason": "只是约定当前故事讲完后再让李锚接，当前还没有讲雾夜故事；不能提前跳过当前人物。",
+    "rename_safe": false
+  },
+  "train-0-unfinished_or_done-s1": {
+    "decision": "accept",
+    "reason": "用户点名续讲，最新该人物只说准备接着讲而未实际讲，继续同一位。",
+    "rename_safe": false,
+    "observed_slice": "author_continuation"
+  },
+  "train-0-unfinished_or_done-s3": {
+    "decision": "accept",
+    "reason": "用户明确事情已定、感谢并散场，finish。",
+    "rename_safe": false,
+    "observed_slice": "end_or_wait"
+  },
+  "train-0-end_or_wait-s1": {
+    "decision": "accept",
+    "reason": "禁止接话并说回来再谈，wait。",
+    "rename_safe": false,
+    "observed_slice": "end_or_wait"
+  },
+  "train-0-end_or_wait-s2": {
+    "decision": "accept",
+    "reason": "账未算完，用户要歇口气再说，wait。",
+    "rename_safe": false,
+    "observed_slice": "end_or_wait"
+  },
+  "train-0-end_or_wait-s3": {
+    "decision": "accept",
+    "reason": "最新用户明确谁有主意谁说，公开开放集合全体；不是结束场景。",
+    "rename_safe": false,
+    "observed_slice": "open_conversation"
+  },
+  "train-0-open_conversation-s1": {
+    "decision": "accept",
+    "reason": "用户自由聊天旁听，所有角色可回应。",
+    "rename_safe": false,
+    "observed_slice": "open_conversation"
+  },
+  "train-0-open_conversation-s2": {
+    "decision": "reject",
+    "reason": "复审仅因老槐刚发言就排除其继续，没有规则依据；开放集合不完整。",
+    "rename_safe": false
+  },
+  "train-0-open_conversation-s3": {
+    "decision": "reject",
+    "reason": "复审仅因覃小满刚发言就排除其继续，隐含机械轮流，拒收。",
+    "rename_safe": false
+  },
+  "train-0-pause_or_listen-s1": {
+    "decision": "accept",
+    "reason": "用户明确听其讲完再回，wait。",
+    "rename_safe": false,
+    "observed_slice": "pause_or_listen"
+  },
+  "train-0-pause_or_listen-s2": {
+    "decision": "reject",
+    "reason": "最新郑云帆明确拿起话头准备讲新鲜事，标全体忽略尚待兑现的继续意图，无法作为可靠开放集合。",
+    "rename_safe": false
+  },
+  "train-0-pause_or_listen-s3": {
+    "decision": "accept",
+    "reason": "实际为只问罗铁柱、别人不说，唯一角色。",
+    "rename_safe": false,
+    "observed_slice": "direct_address"
+  },
+  "train-0-quiet_text-s1": {
+    "decision": "accept",
+    "reason": "用户要求独处且连文字也不要，wait。",
+    "rename_safe": false,
+    "observed_slice": "quiet_text"
+  },
+  "train-0-quiet_text-s2": {
+    "decision": "accept",
+    "reason": "明确向灰钉请求文字陪伴，respond:1。",
+    "rename_safe": false,
+    "observed_slice": "quiet_text"
+  },
+  "train-0-quiet_text-s3": {
+    "decision": "accept",
+    "reason": "实际为指定细簧排除其他，非静音场景。",
+    "rename_safe": false,
+    "observed_slice": "direct_address"
+  },
+  "train-0-direct_address-s2": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-0-direct_address-s3": {
+    "decision": "reject",
+    "reason": "user"
+  },
+  "train-1-direct_address-s1": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-1-direct_address-s2": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-1-direct_address-s3": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-0-same_name-s1": {
+    "decision": "reject",
+    "reason": "need exactly two same names"
+  },
+  "train-0-same_name-s2": {
+    "decision": "reject",
+    "reason": "need exactly two same names"
+  },
+  "train-0-same_name-s3": {
+    "decision": "reject",
+    "reason": "need exactly two same names"
+  },
+  "train-0-unfinished_or_done-s2": {
+    "decision": "reject",
+    "reason": "cast count"
+  },
+  "train-0-mention_not_address-s1": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-0-mention_not_address-s2": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-0-mention_not_address-s3": {
+    "decision": "reject",
+    "reason": "quarantined_review"
+  },
+  "train-0-interrupt_redirect-s1": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": true,
+    "reason": "最新用户改变旧讨论并明确点名；按新用户要求选对应人物，不跟随旧话题。"
+  },
+  "train-0-relationship_reference-s1": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": false,
+    "reason": "公开persona与用户描述唯一匹配，其他人物的插话不改变被指定者。称谓保持原文。"
+  },
+  "train-1-author_continuation-s1": {
+    "decision": "reject",
+    "reason": "after已经由被点名者回答了具体追问，复审理由只是说明既有回答合理，没有判断下一步；缺少仍需其继续的明确依据。"
+  },
+  "train-1-explicit_handoff-s1": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "最新公开发言明确邀请指定人物回答尚未回答的问题，昵称/含身份显示名保持原文。"
+  },
+  "train-1-open_conversation-s1": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": true,
+    "reason": "用户邀请两位本人聊各自日常，before仅是背景，尚无人回答新请求，允许集合两人。"
+  },
+  "train-0-interrupt_redirect-s2": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": true,
+    "reason": "最新用户改变旧讨论并明确点名；按新用户要求选对应人物，不跟随旧话题。"
+  },
+  "train-0-relationship_reference-s2": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": false,
+    "reason": "公开persona与用户描述唯一匹配，其他人物的插话不改变被指定者。称谓保持原文。"
+  },
+  "train-1-author_continuation-s2": {
+    "decision": "reject",
+    "reason": "after已经由被点名者回答了具体追问，复审理由只是说明既有回答合理，没有判断下一步；缺少仍需其继续的明确依据。"
+  },
+  "train-1-explicit_handoff-s2": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "最新公开发言明确邀请指定人物回答尚未回答的问题，昵称/含身份显示名保持原文。"
+  },
+  "train-1-open_conversation-s2": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": true,
+    "reason": "用户邀请两位本人聊各自日常，before仅是背景，尚无人回答新请求，允许集合两人。"
+  },
+  "train-0-interrupt_redirect-s3": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": true,
+    "reason": "最新用户改变旧讨论并明确点名；按新用户要求选对应人物，不跟随旧话题。"
+  },
+  "train-0-relationship_reference-s3": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": false,
+    "reason": "公开persona与用户描述唯一匹配，其他人物的插话不改变被指定者。称谓保持原文。"
+  },
+  "train-1-author_continuation-s3": {
+    "decision": "reject",
+    "reason": "after已经由被点名者回答了具体追问，复审理由只是说明既有回答合理，没有判断下一步；缺少仍需其继续的明确依据。"
+  },
+  "train-1-explicit_handoff-s3": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "最新公开发言明确邀请指定人物回答尚未回答的问题，昵称/含身份显示名保持原文。"
+  },
+  "train-1-open_conversation-s3": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": true,
+    "reason": "用户邀请两位本人聊各自日常，before仅是背景，尚无人回答新请求，允许集合两人。"
+  },
+  "train-1-unfinished_or_done-s1": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": false,
+    "reason": "用户点名此前第一人称经历者继续，after为空，请求尚未满足，指定同一人物。"
+  },
+  "train-1-unfinished_or_done-s3": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": false,
+    "reason": "用户点名此前第一人称经历者继续，after为空，请求尚未满足，指定同一人物。"
+  },
+  "train-1-unfinished_or_done-s2": {
+    "decision": "accept",
+    "observed_slice": "end_or_wait",
+    "rename_safe": true,
+    "reason": "最新用户明确结束排班讨论，finish。"
+  },
+  "train-1-mention_not_address-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-mention_not_address-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-mention_not_address-s3": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-quiet_text-s1": {
+    "decision": "accept",
+    "observed_slice": "quiet_text",
+    "rename_safe": false,
+    "reason": "明确指定陈屿帆以文字陪伴，不把不想说话理解成完全禁回复。"
+  },
+  "train-1-quiet_text-s3": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": false,
+    "reason": "用户开放问主意；白栀桨已表示先照顾乘客回头再谈，其他两位可回应，有公开暂离依据。"
+  },
+  "train-1-pause_or_listen-s1": {
+    "decision": "accept",
+    "observed_slice": "pause_or_listen",
+    "rename_safe": false,
+    "reason": "明确等用户回来再说，wait。"
+  },
+  "train-1-end_or_wait-s1": {
+    "decision": "accept",
+    "observed_slice": "end_or_wait",
+    "rename_safe": false,
+    "reason": "原问题在after已回答，最新同伴离开，自然收束允许wait/finish。"
+  },
+  "train-1-end_or_wait-s2": {
+    "decision": "accept",
+    "observed_slice": "end_or_wait",
+    "rename_safe": false,
+    "reason": "原用户问题已完整回答，后续短交流已收束，停止集合合理。"
+  },
+  "train-1-end_or_wait-s3": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "虽然原用户问题答完，但最新人物又明确问前辈要不要姜糖，被问者可回答。"
+  },
+  "train-1-quiet_text-s2": {
+    "decision": "reject",
+    "reason": "用户明确暂时不要任何消息、缓过来再出现，复审把已违反要求的角色留言当放宽为finish的依据，拒收。"
+  },
+  "train-1-pause_or_listen-s2": {
+    "decision": "reject",
+    "reason": "开放互聊却排除刚定计划者，无明确排除其补充的依据，不能确认集合完整。"
+  },
+  "train-1-pause_or_listen-s3": {
+    "decision": "reject",
+    "reason": "标注把雨眠错认成索引2；实际索引1。理由也把霜橘的发言认作雨眠，身份绑定错误，绝不从理由本地纠正。"
+  },
+  "train-1-relationship_reference-s1": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": true,
+    "reason": "用户以唯一公开记赊账老人身份指定栗婆婆，尚未回答。"
+  },
+  "train-1-relationship_reference-s2": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": true,
+    "reason": "用户明确请石鸣回答北坡情况，其巡坡拆索公开经历使其可答；理由把before当已回答不准确，但gold仍由尚未满足的明确用户指向支持，无需假定知道下索者。"
+  },
+  "train-1-relationship_reference-s3": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": true,
+    "reason": "用户以记账徒弟指定白露，最新师傅又明确让白露念，目标唯一。"
+  },
+  "train-1-same_name-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-same_name-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-same_name-s3": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-interrupt_redirect-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-interrupt_redirect-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "train-1-interrupt_redirect-s3": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "val-0-direct_address-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "val-0-direct_address-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "val-0-mention_not_address-s1": {
+    "decision": "accept",
+    "observed_slice": "mention_not_address",
+    "rename_safe": true,
+    "reason": "苔枝仅被提及，用户明确问露芽自己的看法，目标索引2正确。"
+  },
+  "val-0-mention_not_address-s2": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": true,
+    "reason": "实际是向市集三人开放问分工，无唯一指定，允许所有三人。"
+  },
+  "val-0-author_continuation-s1": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": false,
+    "reason": "用户明确请此前第一人称经历者续讲，最新after仍在悬念中未讲完；同一人物继续，保留昵称。"
+  },
+  "val-0-explicit_handoff-s1": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "用户允许互聊，最新角色明确向另一位发出尚未回答的请求，目标索引0正确。"
+  },
+  "val-0-author_continuation-s2": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": false,
+    "reason": "用户明确请此前第一人称经历者续讲，最新after仍在悬念中未讲完；同一人物继续，保留昵称。"
+  },
+  "val-0-explicit_handoff-s2": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "用户允许互聊，最新角色明确向另一位发出尚未回答的请求，目标索引0正确。"
+  },
+  "val-0-unfinished_or_done-s1": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": true,
+    "reason": "故事尚在明确未完的中途，用户要求苔娘讲完，继续0。"
+  },
+  "val-0-unfinished_or_done-s2": {
+    "decision": "accept",
+    "observed_slice": "unfinished_or_done",
+    "rename_safe": true,
+    "reason": "用户的一句明确问题已答，finish合理；最新同伴向原回答者放话，人物也可自然接一句，集合保留实际软收束歧义。"
+  },
+  "val-0-quiet_text-s1": {
+    "decision": "accept",
+    "reason": "用户请求陪伴聊天，无单一指定，均可回应。",
+    "rename_safe": false,
+    "observed_slice": "quiet_text"
+  },
+  "val-0-quiet_text-s2": {
+    "decision": "reject",
+    "reason": "用户明确临时静默一会儿，应wait；标注把wait错误理解成打扰，finish没有结束依据。",
+    "rename_safe": false
+  },
+  "val-0-same_name-s1": {
+    "decision": "accept",
+    "reason": "同名掌柜和伙计，用户无唯一消歧线索；先前谁背柴不等于被指定回答添炉火，abstain。",
+    "rename_safe": false,
+    "observed_slice": "same_name"
+  },
+  "val-0-same_name-s2": {
+    "decision": "reject",
+    "reason": "拿袜子与厨娘人格只是弱联想，皮货商也可提供衣物；没有唯一公开消歧依据，不接受凭职业猜人。",
+    "rename_safe": false
+  },
+  "val-0-pause_or_listen-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "val-0-pause_or_listen-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "val-0-open_conversation": {
+    "decision": "reject",
+    "reason": "top-level schema/count/ids"
+  },
+  "val-0-end_or_wait": {
+    "decision": "reject",
+    "reason": "top-level schema/count/ids"
+  },
+  "val-0-interrupt_redirect-s1": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": true,
+    "reason": "最新用户打断旧话题并明确指定新的发言者，标签按新请求而非旧话题。"
+  },
+  "val-0-interrupt_redirect-s2": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": true,
+    "reason": "最新用户打断旧话题并明确指定新的发言者，标签按新请求而非旧话题。"
+  },
+  "val-0-relationship_reference-s1": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": false,
+    "reason": "撑船哼歌公开特征唯一匹配阿澜，最新妹妹也把答话交还本人。"
+  },
+  "val-0-relationship_reference-s2": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": false,
+    "reason": "守摊打瞌睡但不误事唯一匹配阿满；用户请其答收不收，不能凭其他人熟悉情况代答。"
+  },
+  "test-0-direct_address-s1": {
+    "decision": "accept",
+    "observed_slice": "direct_address",
+    "rename_safe": true,
+    "reason": "5成员场景中最新用户明确点名一个目标并提到其他干扰人物，回应索引与被点者一致。"
+  },
+  "test-0-explicit_handoff-s1": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "6成员场景，用户允许互聊，最新人物明确交棒给另一位且其尚未回应，标签对象正确。"
+  },
+  "test-0-direct_address-s2": {
+    "decision": "accept",
+    "observed_slice": "direct_address",
+    "rename_safe": true,
+    "reason": "5成员场景中最新用户明确点名一个目标并提到其他干扰人物，回应索引与被点者一致。"
+  },
+  "test-0-explicit_handoff-s2": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "6成员场景，用户允许互聊，最新人物明确交棒给另一位且其尚未回应，标签对象正确。"
+  },
+  "test-0-unfinished_or_done-s1": {
+    "decision": "accept",
+    "observed_slice": "unfinished_or_done",
+    "rename_safe": true,
+    "reason": "故事明确未讲完、用户请讲完，续讲0。"
+  },
+  "test-0-unfinished_or_done-s2": {
+    "decision": "accept",
+    "observed_slice": "unfinished_or_done",
+    "rename_safe": true,
+    "reason": "故事已完整给出，最新用户感谢收束，无新问，finish。"
+  },
+  "test-0-unfinished_or_done-s3": {
+    "decision": "accept",
+    "observed_slice": "unfinished_or_done",
+    "rename_safe": true,
+    "reason": "人物明确规矩已讲完，其他人感叹/报时没有新请求，finish。"
+  },
+  "test-0-open_conversation-s1": {
+    "decision": "reject",
+    "reason": "开放聊天却仅选组织者，没有排除其余角色的依据，未完整保留合理回应者。"
+  },
+  "test-0-open_conversation-s2": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": false,
+    "reason": "迷路经历的两位当事人正交谈纠正，其他人明说旁听或提供背景；双方都可接话，无需固定轮流。"
+  },
+  "test-0-mention_not_address-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "test-0-mention_not_address-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "test-0-author_continuation-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "test-0-author_continuation-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "test-0-quiet_text-s1": {
+    "decision": "accept",
+    "observed_slice": "quiet_text",
+    "rename_safe": false,
+    "reason": "用户指定沈临舟陪聊，after只是答应起头且其余人表示旁听，指定者继续尚未完成的陪伴。"
+  },
+  "test-0-quiet_text-s2": {
+    "decision": "accept",
+    "observed_slice": "quiet_text",
+    "rename_safe": true,
+    "reason": "用户明确一个字都先不要且等其召唤，先前角色越界回应不能改变下一步应wait。"
+  },
+  "test-0-pause_or_listen-s2": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": true,
+    "reason": "开放讨论最新角色明确让软木道谢，软木是自然直接被要求回应者。"
+  },
+  "test-0-end_or_wait-s1": {
+    "decision": "accept",
+    "observed_slice": "end_or_wait",
+    "rename_safe": true,
+    "reason": "用户明确今晚就聊到这里、早些歇息，finish。"
+  },
+  "test-0-end_or_wait-s2": {
+    "decision": "accept",
+    "observed_slice": "end_or_wait",
+    "rename_safe": true,
+    "reason": "谁去查看的问题已由角色明确自愿承接，任务问答已满足，无新问题，finish。"
+  },
+  "recovered-train-0-same_name-s1": {
+    "decision": "accept",
+    "observed_slice": "same_name",
+    "rename_safe": false,
+    "reason": "同一简称阿云对应两人，用户没有唯一线索，abstain。"
+  },
+  "recovered-train-0-same_name-s2": {
+    "decision": "accept",
+    "observed_slice": "relationship_reference",
+    "rename_safe": false,
+    "reason": "公开师徒关系与before的师父称呼唯一对应周阿云，respond1。"
+  },
+  "recovered-train-0-same_name-s3": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": true,
+    "reason": "用户允许两人互聊，分拣安排后两人仍都可补充，无机械轮流。"
+  },
+  "recovered-train-1-same_name-s1": {
+    "decision": "accept",
+    "observed_slice": "same_name",
+    "rename_safe": true,
+    "reason": "同名两人都能评价钟声，无公开唯一指向，abstain。"
+  },
+  "recovered-train-1-same_name-s2": {
+    "decision": "accept",
+    "observed_slice": "same_name",
+    "rename_safe": true,
+    "reason": "铜绿的徒弟唯一对应报时精灵林铃，respond0；同名身份有明确公开消歧。"
+  },
+  "recovered-train-1-same_name-s3": {
+    "decision": "accept",
+    "observed_slice": "open_conversation",
+    "rename_safe": true,
+    "reason": "用户允许互聊，角色发言未形成新排他要求，双方均可继续。"
+  },
+  "recovered-val-0-end_or_wait-s1": {
+    "decision": "accept",
+    "observed_slice": "end_or_wait",
+    "rename_safe": true,
+    "reason": "用户明确散场，after最后收摊问答也已结束，finish。"
+  },
+  "recovered-val-0-end_or_wait-s3": {
+    "decision": "accept",
+    "observed_slice": "explicit_handoff",
+    "rename_safe": false,
+    "reason": "最新青梧点名小满算账且尚未得到回答，respond2。"
+  },
+  "recovered-val-0-pause_or_listen-s1": {
+    "decision": "accept",
+    "observed_slice": "pause_or_listen",
+    "rename_safe": false,
+    "reason": "用户点名慢慢讲并表示回来接着听，没有禁止说话，不能把暂离自动标成wait。"
+  },
+  "test-0-same_name-s2": {
+    "decision": "accept",
+    "observed_slice": "same_name",
+    "rename_safe": true,
+    "reason": "用户明说脾气最急那位，公开persona唯一对应机械师，respond1。"
+  },
+  "test-0-interrupt_redirect-s1": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": false,
+    "reason": "新用户点小绒儿讲首次登台，不延续幕布旧话题，respond1。"
+  },
+  "test-0-interrupt_redirect-s2": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": true,
+    "reason": "新用户只请墨脸生，其余候选及不在场铜铃不可替答，respond0。"
+  },
+  "recovered-val-0-end_or_wait-s2": {
+    "decision": "reject",
+    "reason": "开放互聊却用急性子/刚被答等偏好仅留两人，没有排除其他合理回应者的依据。"
+  },
+  "recovered-val-0-pause_or_listen-s2": {
+    "decision": "reject",
+    "reason": "理由明确承认灯婆婆也合理，却gold只列藤七，且依据是话痨最可能而非排他许可，集合不可靠。"
+  },
+  "test-0-same_name-s1": {
+    "decision": "reject",
+    "reason": "两位同名船员都可能知道到家时间，不能仅凭领航员职业把一般问题消歧；无唯一公开指定，拒收respond0。"
+  },
+  "test-0-pause_or_listen-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "test-0-relationship_reference-s1": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "test-0-relationship_reference-s2": {
+    "decision": "reject",
+    "reason": "scene fields"
+  },
+  "recovered-test-0-author_continuation-s1": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": false,
+    "reason": "用户请此前第一人称经历者本人继续，after仍是未完悬念，继续同一人物，昵称保留。"
+  },
+  "recovered-test-0-mention_not_address-s1": {
+    "decision": "accept",
+    "observed_slice": "mention_not_address",
+    "rename_safe": true,
+    "reason": "背景提及另一人，最新用户明确向被点名者询问；其中问是否散场是待确认问题，不是已经宣布散场。"
+  },
+  "recovered-val-0-direct_address-s1": {
+    "decision": "accept",
+    "observed_slice": "direct_address",
+    "rename_safe": true,
+    "reason": "用户明确问第二位本人经历/是否同行，after为空，被点名者正确，其他人无替答许可。"
+  },
+  "recovered-test-0-author_continuation-s2": {
+    "decision": "accept",
+    "observed_slice": "author_continuation",
+    "rename_safe": false,
+    "reason": "用户请此前第一人称经历者本人继续，after仍是未完悬念，继续同一人物，昵称保留。"
+  },
+  "recovered-test-0-mention_not_address-s2": {
+    "decision": "accept",
+    "observed_slice": "mention_not_address",
+    "rename_safe": true,
+    "reason": "背景提及另一人，最新用户明确向被点名者询问；其中问是否散场是待确认问题，不是已经宣布散场。"
+  },
+  "recovered-val-0-direct_address-s2": {
+    "decision": "accept",
+    "observed_slice": "direct_address",
+    "rename_safe": true,
+    "reason": "用户明确问第二位本人经历/是否同行，after为空，被点名者正确，其他人无替答许可。"
+  },
+  "recovered-train-1-interrupt_redirect-s1": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": false,
+    "reason": "最新用户从旧讨论改为对指定人物提出请求，被点名者尚未回应；保留原文昵称与混合用语。"
+  },
+  "recovered-train-1-interrupt_redirect-s2": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": false,
+    "reason": "最新用户从旧讨论改为对指定人物提出请求，被点名者尚未回应；保留原文昵称与混合用语。"
+  },
+  "recovered-train-1-interrupt_redirect-s3": {
+    "decision": "accept",
+    "observed_slice": "interrupt_redirect",
+    "rename_safe": false,
+    "reason": "最新用户从旧讨论改为对指定人物提出请求，被点名者尚未回应；保留原文昵称与混合用语。"
+  },
+  "val_wait-supplement-s1": {
+    "decision": "accept",
+    "observed_slice": "pause_or_listen",
+    "rename_safe": false,
+    "reason": "用户明确全员暂停任何回复直到下一条输入，临时等待不是结束，wait。"
+  },
+  "val_wait-supplement-s2": {
+    "decision": "accept",
+    "observed_slice": "pause_or_listen",
+    "rename_safe": false,
+    "reason": "用户明确全员暂停任何回复直到下一条输入，临时等待不是结束，wait。"
+  },
+  "adjudicated-test-0-same_name-s1": {
+    "decision": "reject",
+    "reason": "盲重标注仍依据职业猜测同名对象，未解决可接受集合的语义争议；保持隔离，不以两次一致代替明确依据，不本地改成abstain。"
+  },
+  "adjudicated-val-0-same_name-s2": {
+    "decision": "reject",
+    "reason": "盲重标注仍依据职业猜测同名对象，未解决可接受集合的语义争议；保持隔离，不以两次一致代替明确依据，不本地改成abstain。"
+  }
+}

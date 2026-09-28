@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 爱晒太阳的随性派，说话慢悠悠爱拖长尾音，常拉 {b} 一起发呆看海
+    b: 好奇心旺盛，想到什么就蹦出来问，喜欢追着 {a} 打听小岛新鲜事
+  user: '{a}，昨天你说退潮时礁石那边藏着东西，吊我胃口一整天了。分两段讲吧，先讲你当时看见什么，再讲后来发生的事，一口气说完别停。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 唔……昨天傍晚嘛，潮水退得老远，我踩着湿沙往礁石那边晃，先闻到一股咸咸的腥味，低头一看，水洼里趴着一只彩色的小螃蟹呢……
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_003_0

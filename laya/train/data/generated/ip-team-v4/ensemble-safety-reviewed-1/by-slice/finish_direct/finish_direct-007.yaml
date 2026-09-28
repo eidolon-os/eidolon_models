@@ -1,0 +1,12 @@
+- mode: quiet
+  cast:
+    a: 说话慢悠悠，喜欢讲以前的老故事，总被{b}催着快点说
+    b: 嗓门大，想到什么就喊出来，爱拉着{a}和{c}凑热闹
+    c: 安静寡言，偶尔冒一句冷幽默，常和{b}互相拆台
+  user: 夜市那边我先聊到这啦，改天有空咱们再去逛一圈，今天就说这么多吧
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_007_0

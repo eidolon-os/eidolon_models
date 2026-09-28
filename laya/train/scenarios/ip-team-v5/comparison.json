@@ -1,0 +1,510 @@
+{
+  "ip-ensemble-v5-base-zero": {
+    "checkpoint": "laya/models/laya-multilingual/1c5edc17/torch",
+    "checkpoint_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+    "temperature": 1.0,
+    "evaluation_role": "consumed synthetic development; not independent acceptance",
+    "train": {
+      "records": 36,
+      "families": 9,
+      "acceptable_accuracy": 0.6388888888888888,
+      "family_macro_accuracy": 0.6388888888888888,
+      "all_variants_correct_families": 3,
+      "silent_wrong_speech": {
+        "errors": 5,
+        "n": 8
+      },
+      "speaking_missed": {
+        "errors": 0,
+        "n": 20
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 2,
+        "accuracy": 1.0
+      },
+      "unique_gold": {
+        "n": 16,
+        "accuracy": 0.3125
+      },
+      "multiple_gold": {
+        "n": 20,
+        "accuracy": 0.9
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5833333333333334,
+        "wait": 0.1111111111111111,
+        "finish": 0.3333333333333333,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 0
+        },
+        "explicit_finish": {
+          "n": 4,
+          "correct": 1
+        },
+        "same_member": {
+          "n": 8,
+          "correct": 4
+        },
+        "soft_closure": {
+          "n": 8,
+          "correct": 8
+        },
+        "mention": {
+          "n": 8,
+          "correct": 6
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        }
+      }
+    },
+    "val": {
+      "records": 16,
+      "families": 4,
+      "acceptable_accuracy": 0.5625,
+      "family_macro_accuracy": 0.5625,
+      "all_variants_correct_families": 2,
+      "silent_wrong_speech": {
+        "errors": 4,
+        "n": 4
+      },
+      "speaking_missed": {
+        "errors": 2,
+        "n": 12
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 0,
+        "accuracy": null
+      },
+      "unique_gold": {
+        "n": 8,
+        "accuracy": 0.125
+      },
+      "multiple_gold": {
+        "n": 8,
+        "accuracy": 1.0
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5625,
+        "wait": 0.25,
+        "finish": 0.0,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 0
+        },
+        "open_group": {
+          "n": 4,
+          "correct": 4
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        },
+        "content_handoff": {
+          "n": 4,
+          "correct": 1
+        }
+      }
+    },
+    "sdk_replay": {
+      "requests": 16,
+      "valid_results": 16,
+      "decided": 0,
+      "median_ms_including_projection": 32.14266698341817,
+      "p95_ms": 37.26659373205621,
+      "over_capacity_abstained": true
+    }
+  },
+  "ip-ensemble-v5-base-r1": {
+    "checkpoint": "laya/train/runs/ip-ensemble-v5-base-r1/checkpoint",
+    "checkpoint_sha256": "459db6d5bef28d5fa6532be7848ab6e00910c36a875b2d4cffaa97c3e46a1cc5",
+    "temperature": 1.0,
+    "evaluation_role": "consumed synthetic development; not independent acceptance",
+    "train": {
+      "records": 36,
+      "families": 9,
+      "acceptable_accuracy": 0.9722222222222222,
+      "family_macro_accuracy": 0.9722222222222222,
+      "all_variants_correct_families": 8,
+      "silent_wrong_speech": {
+        "errors": 0,
+        "n": 8
+      },
+      "speaking_missed": {
+        "errors": 0,
+        "n": 20
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 7,
+        "accuracy": 1.0
+      },
+      "unique_gold": {
+        "n": 16,
+        "accuracy": 1.0
+      },
+      "multiple_gold": {
+        "n": 20,
+        "accuracy": 0.95
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5833333333333334,
+        "wait": 0.1111111111111111,
+        "finish": 0.3333333333333333,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 4
+        },
+        "explicit_finish": {
+          "n": 4,
+          "correct": 4
+        },
+        "same_member": {
+          "n": 8,
+          "correct": 8
+        },
+        "soft_closure": {
+          "n": 8,
+          "correct": 8
+        },
+        "mention": {
+          "n": 8,
+          "correct": 7
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        }
+      }
+    },
+    "val": {
+      "records": 16,
+      "families": 4,
+      "acceptable_accuracy": 0.5625,
+      "family_macro_accuracy": 0.5625,
+      "all_variants_correct_families": 2,
+      "silent_wrong_speech": {
+        "errors": 0,
+        "n": 4
+      },
+      "speaking_missed": {
+        "errors": 4,
+        "n": 12
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 0,
+        "accuracy": null
+      },
+      "unique_gold": {
+        "n": 8,
+        "accuracy": 0.125
+      },
+      "multiple_gold": {
+        "n": 8,
+        "accuracy": 1.0
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5625,
+        "wait": 0.25,
+        "finish": 0.0,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 1
+        },
+        "open_group": {
+          "n": 4,
+          "correct": 4
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        },
+        "content_handoff": {
+          "n": 4,
+          "correct": 0
+        }
+      }
+    },
+    "sdk_replay": {
+      "requests": 16,
+      "valid_results": 16,
+      "decided": 0,
+      "median_ms_including_projection": 36.51558348792605,
+      "p95_ms": 72.15189600537997,
+      "over_capacity_abstained": true
+    },
+    "training_selection": {
+      "checkpoint_metric": "accuracy",
+      "selected_epoch": 2,
+      "nll_min_epoch": 1,
+      "elapsed_seconds": 21.5
+    }
+  },
+  "ip-ensemble-v5-transfer-zero": {
+    "checkpoint": "laya/train/runs/ip-ensemble-v4-characters-r3/checkpoint",
+    "checkpoint_sha256": "336500d83f72ff315136ff6bab20a499cb1d81928d71f92a09f766839d58a076",
+    "temperature": 1.0,
+    "evaluation_role": "consumed synthetic development; not independent acceptance",
+    "train": {
+      "records": 36,
+      "families": 9,
+      "acceptable_accuracy": 0.6944444444444444,
+      "family_macro_accuracy": 0.6944444444444444,
+      "all_variants_correct_families": 4,
+      "silent_wrong_speech": {
+        "errors": 4,
+        "n": 8
+      },
+      "speaking_missed": {
+        "errors": 5,
+        "n": 20
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 22,
+        "accuracy": 0.7272727272727273
+      },
+      "unique_gold": {
+        "n": 16,
+        "accuracy": 0.4375
+      },
+      "multiple_gold": {
+        "n": 20,
+        "accuracy": 0.9
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5833333333333334,
+        "wait": 0.1111111111111111,
+        "finish": 0.3333333333333333,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 0
+        },
+        "explicit_finish": {
+          "n": 4,
+          "correct": 4
+        },
+        "same_member": {
+          "n": 8,
+          "correct": 3
+        },
+        "soft_closure": {
+          "n": 8,
+          "correct": 8
+        },
+        "mention": {
+          "n": 8,
+          "correct": 7
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 3
+        }
+      }
+    },
+    "val": {
+      "records": 16,
+      "families": 4,
+      "acceptable_accuracy": 0.5,
+      "family_macro_accuracy": 0.5,
+      "all_variants_correct_families": 2,
+      "silent_wrong_speech": {
+        "errors": 0,
+        "n": 4
+      },
+      "speaking_missed": {
+        "errors": 2,
+        "n": 12
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 10,
+        "accuracy": 0.4
+      },
+      "unique_gold": {
+        "n": 8,
+        "accuracy": 0.0
+      },
+      "multiple_gold": {
+        "n": 8,
+        "accuracy": 1.0
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5625,
+        "wait": 0.25,
+        "finish": 0.0,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 0
+        },
+        "open_group": {
+          "n": 4,
+          "correct": 4
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        },
+        "content_handoff": {
+          "n": 4,
+          "correct": 0
+        }
+      }
+    },
+    "sdk_replay": {
+      "requests": 16,
+      "valid_results": 16,
+      "decided": 10,
+      "median_ms_including_projection": 32.55164547590539,
+      "p95_ms": 38.96680223988369,
+      "over_capacity_abstained": true
+    }
+  },
+  "ip-ensemble-v5-transfer-r2": {
+    "checkpoint": "laya/train/runs/ip-ensemble-v5-transfer-r2/checkpoint",
+    "checkpoint_sha256": "b9a1aa184941b2b7917be9381d7a16fff4e68611c5884cd7661a54bc6fb47aa5",
+    "temperature": 1.0,
+    "evaluation_role": "consumed synthetic development; not independent acceptance",
+    "train": {
+      "records": 36,
+      "families": 9,
+      "acceptable_accuracy": 0.8055555555555556,
+      "family_macro_accuracy": 0.8055555555555556,
+      "all_variants_correct_families": 6,
+      "silent_wrong_speech": {
+        "errors": 3,
+        "n": 8
+      },
+      "speaking_missed": {
+        "errors": 0,
+        "n": 20
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 7,
+        "accuracy": 1.0
+      },
+      "unique_gold": {
+        "n": 16,
+        "accuracy": 0.625
+      },
+      "multiple_gold": {
+        "n": 20,
+        "accuracy": 0.95
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5833333333333334,
+        "wait": 0.1111111111111111,
+        "finish": 0.3333333333333333,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 1
+        },
+        "explicit_finish": {
+          "n": 4,
+          "correct": 4
+        },
+        "same_member": {
+          "n": 8,
+          "correct": 5
+        },
+        "soft_closure": {
+          "n": 8,
+          "correct": 8
+        },
+        "mention": {
+          "n": 8,
+          "correct": 7
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        }
+      }
+    },
+    "val": {
+      "records": 16,
+      "families": 4,
+      "acceptable_accuracy": 0.5625,
+      "family_macro_accuracy": 0.5625,
+      "all_variants_correct_families": 2,
+      "silent_wrong_speech": {
+        "errors": 1,
+        "n": 4
+      },
+      "speaking_missed": {
+        "errors": 0,
+        "n": 12
+      },
+      "uncalibrated_threshold_0.8": {
+        "covered": 0,
+        "accuracy": null
+      },
+      "unique_gold": {
+        "n": 8,
+        "accuracy": 0.125
+      },
+      "multiple_gold": {
+        "n": 8,
+        "accuracy": 1.0
+      },
+      "constant_choice_accuracy": {
+        "respond:M0": 0.5625,
+        "wait": 0.25,
+        "finish": 0.0,
+        "abstain": 0.0
+      },
+      "slices": {
+        "explicit_wait": {
+          "n": 4,
+          "correct": 0
+        },
+        "open_group": {
+          "n": 4,
+          "correct": 4
+        },
+        "quiet_text": {
+          "n": 4,
+          "correct": 4
+        },
+        "content_handoff": {
+          "n": 4,
+          "correct": 1
+        }
+      }
+    },
+    "sdk_replay": {
+      "requests": 16,
+      "valid_results": 16,
+      "decided": 0,
+      "median_ms_including_projection": 32.84831199562177,
+      "p95_ms": 38.55693723016884,
+      "over_capacity_abstained": true
+    },
+    "training_selection": {
+      "checkpoint_metric": "accuracy",
+      "selected_epoch": 1,
+      "nll_min_epoch": 1,
+      "elapsed_seconds": 19.6
+    }
+  }
+}

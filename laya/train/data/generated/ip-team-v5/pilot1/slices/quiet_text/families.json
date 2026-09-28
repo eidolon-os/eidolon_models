@@ -1,0 +1,68 @@
+[
+  {
+    "id": "v5_quiet_text_1",
+    "slice": "quiet_text",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "守塔的年迈守望者，寡言但愿意写字交流",
+      "role_b": "塔里寄居的小灯精灵，爱用文字调侃人",
+      "role_c": "偶尔来访的星图学徒，好奇心重",
+      "user": "今晚全城禁声，我一个人守灯塔有点闷，能陪我写写字吗？",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "reason": "用户想要文字陪伴，三位同在灯塔的成员都可以合理回应；安静陪伴允许文字，无人需要沉默。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "review_reason": "用户向守塔全体发出笔谈邀请，三位角色均有参与依据，无点名",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "f9886dc4cb8c4331e54be1a479131df211fc95c2f4076f385cd771f7917b6466",
+    "reviewer_sha256": "09c5e6bdd918a1bd15219600b78dbfcbeff80662b2c49861590d4a726368df8a",
+    "planned_slice": "quiet_text"
+  },
+  {
+    "id": "v5_quiet_text_4",
+    "slice": "quiet_text",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "月光下修补书页的古籍匠，性情温和",
+      "role_b": "书阁里的猫妖，爱用爪印和短句回应",
+      "role_c": "借宿书阁的夜行诗人，健谈",
+      "user": "禁声的夜里最想念聊天的声音了，书阁的诸位还醒着吗？",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "reason": "用户点名书阁诸位而非具体某人，三人皆醒着且被问及，均可作文字回应；abstain无依据，wait没有理由。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "review_reason": "用户询问书阁诸位是否醒着，{b}可用短句、{c}健谈、{a}温和，均可回应，无点名",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "f9886dc4cb8c4331e54be1a479131df211fc95c2f4076f385cd771f7917b6466",
+    "reviewer_sha256": "09c5e6bdd918a1bd15219600b78dbfcbeff80662b2c49861590d4a726368df8a",
+    "planned_slice": "quiet_text"
+  }
+]

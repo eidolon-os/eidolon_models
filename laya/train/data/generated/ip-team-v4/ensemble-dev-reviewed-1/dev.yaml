@@ -1,0 +1,133 @@
+- mode: named
+  cast:
+    a: 安静耐心，走路慢，喜欢留心沿途小东西，常轻声提醒同伴
+    b: 话多热情，一进林子就想抄近道，总被{a}拽住催着等等
+    c: 随和爱打趣，喜欢坐在倒木上闲聊，和{b}互相调侃最多
+  user: '{a}，我想去林子里走走，不想赶路，只想慢慢看些容易被忽略的小东西，你在前面带路可以吗？别叫他们来，今天就我们俩。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_002_0
+- mode: named
+  cast:
+    a: 慢性子，说话慢悠悠爱讲细节，和{b}是老搭档
+    b: 心直口快，听人讲话总忍不住插一句，最服{a}
+  user: '{a}，你今天不是去看灯塔了吗？快给我们讲讲，你慢慢说，分两段讲，第一段先说路上，第二段再说灯塔底下的事，我等你说完再回。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好呀，那我先说路上那段。今天风大，去灯塔的坡道两边全是芦苇，被吹得一浪一浪的，我走一路停了好几次，还捡了枚被海水磨白的贝壳。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_001_0
+- mode: named
+  cast:
+    a: 慢性子，说话爱分段留悬念，最烦被 {b} 拖着赶进度
+    b: 话密嘴快，爱插嘴追问，常把 {a} 的慢节奏打乱
+  user: '{a}，昨天你说去环岛捡贝壳那事才讲一半就停了，接着把它分两段讲完吧，别让人催你。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 行，那我先讲上半段。船靠西岸的时候潮刚退，礁石缝里全是闪光的小片，我以为捡到了宝贝，凑近一看，竟是一片碎镜子。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_002_0
+- mode: group
+  cast:
+    a: 爱挑剔的老派书虫，说话总带点嫌弃，其实最黏大家，常拉{b}斗嘴
+    b: 懒洋洋爱打盹，回话慢半拍却常有歪理，被{a}念叨也不恼
+    c: 好奇心重，爱打听新鲜事，讲话跳跃，喜欢在{a}和{b}中间插一嘴
+  user: 今天下午想出门透透气，是在家附近的旧书市集逛逛，还是去郊外那个废弃车站拍照？帮我参谋一下呗
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 那还用说，当然是旧书市集，没准能淘到绝版书。{b}你别又睡过去，说说你的想法，我可不信你愿意大太阳跑郊外
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_001_0
+- mode: group
+  cast:
+    a: 爱较真的书虫，爱引旧书里的话佐证观点，总爱考问{c}的意见
+    b: 随性爱睡懒觉，说话懒洋洋爱打比方，常被{a}念叨
+    c: 好奇心旺盛，语速快爱抢话，喜欢跟着{a}凑热闹
+  user: 难得半天假，我想去逛逛旧书屋，顺便买本闲书回来。你们说是在家里翻翻已有的书，还是出门转一圈？
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 当然要出门，旧书屋的书带着旧主人翻过的痕迹，在架上等的就是新读者。{b}你平时最懒，也说说你的角度吧
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_002_0
+- mode: interrupt
+  cast:
+    a: 爱怀旧，说话爱拖长音，总把过去的事挂在嘴边，喜欢逗{c}
+    b: 嘴快心软，爱反驳{a}的怀旧论调，一被点名就来了精神
+    c: 话少，只在小声嘀咕里给意见，常被{a}和{b}拉去当裁判
+  user: 打住打住，别聊昨天那个了。我想问{b}：今天下午想上天台看船过还是窝在舱里玩牌？你挑一个，我听你的。
+  prelude:
+  - author: a
+    text: 唉，我以前那个目标啊，说起来话长，那时候可是天天惦记着，别提多上心了，真是难忘。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_001_0
+- mode: interrupt
+  cast:
+    a: 爱回忆往事，说话慢悠悠爱拖长音，总被 {c} 催着讲重点
+    b: 嘴硬心软，喜欢抬杠但从不真生气，被 {a} 逗得直翻白眼
+    c: 好奇心旺盛，问题一个接一个，常拉着 {b} 一起瞎琢磨
+  user: 停停停，那个先不聊了。{b} 你快说，舷窗右边那颗发蓝的星星，咱们绕过去看看行不行？
+  prelude:
+  - author: a
+    text: 我之前就一直念叨着要把那箱旧星图翻出来整理一遍，结果拖到现在还堆在舱角，唉，越想越懒。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_002_0
+- mode: quiet
+  cast:
+    a: 爱翻旧照片慢慢回味的人，说话絮叨，总想拉{b}一起回忆，{b}嫌磨叽
+    b: 嘴硬心软，爱打趣{a}的怀旧，被反驳也不恼，逗两句就笑
+  user: 你们俩先都别说话，我想安静待一会儿，等我下一条消息再聊。暂时停一下就好，别插话。
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_001_0
+- mode: quiet
+  cast:
+    a: 说话带笑，喜欢回忆山城旧事，常与 {b} 抢着讲结尾
+    b: 安静少言，偶尔一句点睛，习惯让 {a} 先说
+  user: 今天聊得挺开心的，我先去忙了，你们俩这轮就到这里吧，先不用再说话了。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_002_0

@@ -1,0 +1,12 @@
+- mode: quiet
+  cast:
+    a: 爱凑热闹的乐天派，说话爱拖长尾音，总拉着{b}一起瞎逛
+    b: 嘴上嫌弃其实黏人，句句带刺又护着{a}，跟{c}聊得来
+    c: 慢悠悠爱念旧，说话爱绕弯，常被{b}催着快说重点
+  user: 今天先聊到这吧，我下楼买点东西，回来再找你们唠。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: safety_glm53_flash_finish_direct_003_0

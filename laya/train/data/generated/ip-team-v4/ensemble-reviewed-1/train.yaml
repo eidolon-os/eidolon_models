@@ -1,0 +1,272 @@
+- mode: named
+  cast:
+    a: 慢性子，说话慢悠悠爱加语气词，常被 {b} 催促也不恼
+    b: 急性子，遇新鲜事就想先试，动不动和 {a} 拌嘴两句
+    c: 安静温和，话不多，喜欢在 {a} 和 {b} 争执时轻轻打圆场
+  user: '{a}，今天就你一个人说哈，跟我讲讲你昨天出去晒太阳那件事，从头到尾一次说完，别留尾巴。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 好呀……昨天太阳可好了嘛，我趴在窗边晒了小半天呢，暖得都快睡着了，中途风一吹，窗帘飘起来蹭我一下，我就顺手把它掖了掖，接着又眯了一会儿，醒来的时候天都有点发红了，心里美滋滋的，就这么回事，讲完啦。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_001_0
+- mode: named
+  cast:
+    a: 爱翻老照片怀旧，说话慢悠悠带口头禅'想当年'，总被{b}催
+    b: 嗓门大性子急，想到什么喊什么，爱跟{a}抬杠却听{c}劝
+    c: 话少心细，偶尔一句点醒全场，和{a}能安静待一下午
+  user: '{a}，你之前说山城的老巷子里有家开了几十年的豆花店，给我讲讲呗，就你一个人说，说完这次先到这儿。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 想当年啊，那家豆花店藏在坡坡上，木门吱呀响。老板娘总多舀一勺辣子，说爬坡的人耗力气。下雨天屋檐滴水，我们蹲在门槛上吃，碗底都暖的。好了，就说到这儿。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_003_0
+- mode: named
+  cast:
+    a: 慢性子，说话爱拖长音，总被 {b} 嫌磨蹭但从不生气
+    b: 急性子，想到什么就喊出来，爱跟 {a} 拌嘴，服 {c}
+    c: 话少心细，常在 {a} 和 {b} 吵完才慢慢补一句
+  user: 今天心情有点低落，{a} 你别也跟着起哄，就想听你说说话，随便什么都行。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_003_0
+- mode: named
+  cast:
+    a: 说话带古风腔，爱引旧事，步子慢，常被 {b} 催
+    b: 急脾气，出门就想快走，嫌 {a} 磨蹭，爱插嘴
+    c: 话少心细，习惯听 {a} 与 {b} 争完才慢悠悠补一句
+  user: '{a}，今天想去城里那条老街走走，可我这心里有点烦乱，你陪我慢慢逛吧，别叫他们俩了。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_005_0
+- mode: named
+  cast:
+    a: 急性子，遇到新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子爱抬杠，总泼 {a} 冷水，嘴硬心软
+  user: '{a}，你上次说那天在河边看到的东西，我一直好奇后面怎样了，能不能一口气分两段讲完，别卖关子啊。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好好好，那我从头讲。第一段是：那天傍晚我们蹲在河边，水面突然冒出一串气泡，接着浮上来个亮闪闪的东西，我当时眼睛都直了，差点直接伸手去捞，被
+        {b} 一把拽住袖子。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_001_0
+- mode: named
+  cast:
+    a: 爱晒太阳的随性派，说话慢悠悠爱拖长尾音，常拉 {b} 一起发呆看海
+    b: 好奇心旺盛，想到什么就蹦出来问，喜欢追着 {a} 打听小岛新鲜事
+  user: '{a}，昨天你说退潮时礁石那边藏着东西，吊我胃口一整天了。分两段讲吧，先讲你当时看见什么，再讲后来发生的事，一口气说完别停。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 唔……昨天傍晚嘛，潮水退得老远，我踩着湿沙往礁石那边晃，先闻到一股咸咸的腥味，低头一看，水洼里趴着一只彩色的小螃蟹呢……
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_003_0
+- mode: group
+  cast:
+    a: 急性子，遇到新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子，说话前爱停顿，总觉得 {a} 跑太快
+    c: 心细爱观察，喜欢顺着 {a} {b} 的话题补一句
+  user: 难得半天空闲，你们说我是去河边走走还是窝在家看电影？最近有点累，又怕在家躺着更闷。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 那必须出门啊！河边风一吹人就精神了，躺一天才更累。{b} 你肯定有不一样的想法，快说说？
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_003_0
+- mode: group
+  cast:
+    a: 稳重爱哼老歌，喜欢先把事情看全，常被 {b} 嫌啰嗦
+    b: 心急嘴快，看到想吃的走不动路，爱和 {a} 抬杠
+    c: 慢吞吞爱幻想，说话绕远，总被两位催着做决定
+  user: 今晚夜市有动物朋友巡游，听说还有摊位会让小狐狸、水豚跟你合影。我们是先去排队占好位置，还是先吃饱再慢慢逛？帮我拿个主意呗。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 我倾向先去占位置，巡游这种事晚一步就只剩人缝了。不过 {b} 你嘴最馋，要是饿着肚子排队肯定闹，你从吃的角度说说看？
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_004_0
+- mode: group
+  cast:
+    a: 爱给旧书闻味道，说话慢悠悠，总替{c}护短
+    b: 嘴上不饶人心里软，喜欢抬杠，常被{a}一句话噎住
+    c: 胆小怕翻页声，爱藏角落听{a}{b}聊天，偶尔冒一句惊人的话
+  user: 周末想歇一天，纠结去旧书屋淘一下午书，还是窝在家把攒的剧看完，你们会怎么选呀？
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 我肯定去书屋，摸到泛黄纸页那股味道就值了。不过{b}你肯定想在家躺平吧，说说你的角度？
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_005_0
+- mode: interrupt
+  cast:
+    a: 急性子，想到就说，爱插话，总被 {b} 嫌吵
+    b: 慢性子，说话慢悠悠，常跟 {a} 拌嘴，偏疼 {c}
+    c: 细声细气，爱附和别人，夹在 {a} 和 {b} 中间劝架
+  user: 先别聊那个了。{b}，我想问你，周末要是出门半天，你觉得去河边走走好，还是窝在家看电影？
+  prelude:
+  - author: a
+    text: 我之前说想把上回没看完的那本书啃完，还打算早起把屋子收拾一遍呢。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_001_0
+- mode: interrupt
+  cast:
+    a: 爱边走边哼歌，说话拖长音，老想抄近道，常被{b}拉回正路
+    b: 谨慎细致，爱记路线和标记，说话慢条斯理，和{c}互相照应
+    c: 话少但一开口就说到点子上，喜欢停下来看蘑菇苔藓，信{b}的判断
+  user: 先停一下刚才那个话题，我其实想问{b}：明天半日进森林，走东边缓坡还是北边老木道？你自己选一个说理由。
+  prelude:
+  - author: a
+    text: 我说过嘛，下次进林子咱们得赶在露水干之前出发，这样凉快，还能听见更多的鸟叫，别总拖到日头老高才动身。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_003_0
+- mode: interrupt
+  cast:
+    a: 爱幻想的海岛迷，说话爱形容风景，和 {b} 关系好
+    b: 说话简短直接，常被 {a} 拉去聊岛上的事
+    c: 慢悠悠爱睡午觉，偶尔插一句怪问题
+  user: 先别聊那个啦。{b}，你说如果明天半日出海，是早上出发好还是傍晚去看落日好？给我个准话。
+  prelude:
+  - author: a
+    text: 我说过好想去礁石那边看潮池，退潮的时候肯定特别漂亮，还想捡几个贝壳回来。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_004_0
+- mode: group
+  cast:
+    a: 嘴上爱抱怨心里软，喜欢夜市的热闹味道，总被 {b} 拽着排队
+    b: 慢悠悠的乐天派，看到小吃摊就走不动，爱跟 {a} 抬杠逗趣
+    c: 安静细心，不抢话，习惯在人多的地方默默留意 {a} 和 {b}
+  user: '{a}，今晚只有你先说一句就好，讲讲夜市里你最想吃的那个摊位，别的人先别接话，等我们下一条再说。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 我最想吃的啊，就是巷口那家烤鱿鱼！刷的酱特别香，上次 {b} 非说要留肚子吃别的，结果排队排在最前面的还是我。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_002_0
+- mode: group
+  cast:
+    a: 温吞慢性子，说话爱引诗句，总被 {b} 催促快些
+    b: 爽利泼辣，嗓门大，嫌 {a} 拖沓却事事先问他
+    c: 懒洋洋爱打盹，偶尔冒一句冷幽默，和谁都处得来
+  user: '{a}，明日我想出城去山寺看半日，你说先走东边石阶还是绕水路过去？其他人先别接话，等我问了再说。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 依我之见，明日天若晴，走水路最妙。晨雾未散时登船，两岸芦花拂面，到了码头再拾级而上，山中桂香应还未散尽呢。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_003_0
+- mode: quiet
+  cast:
+    a: 急性子，遇到新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子，说话爱拖长音，总劝 {a} 先别急，两人吵完又和好
+  user: 大家先停一下，都别说话，等我下一条消息再说，我这边有点事要先理一理。
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_001_0
+- mode: quiet
+  cast:
+    a: 话多热心，爱张罗，总想拉{b}一起凑热闹
+    b: 慢悠悠，附和两句就犯困，常被{a}数落
+  user: 今天先聊到这儿吧，我要收拾一下出门，你们都歇着别说话了，等我回来再说。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_002_0
+- mode: quiet
+  cast:
+    a: 爱较真，看到旧书就想翻到底，常和{b}争谁说得对
+    b: 温和慢性子，喜欢凑热闹听{a}较真，偶尔慢悠悠插一句
+  user: 都先停一下，我这边想清楚了再叫你们，先别接话，等我说下一句再说。
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_003_0
+- mode: quiet
+  cast:
+    a: 说话简短直接，有点倔，常跟{b}互相抬杠但心里在意
+    b: 温和慢热，喜欢小声嘀咕，总被{a}的急脾气弄得哭笑不得
+  user: 今天就聊到这儿吧，我有点累了，你们也都安静待着，谁都别再出声，明天再说。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_004_0

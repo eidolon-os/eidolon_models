@@ -1,0 +1,31 @@
+[
+  {
+    "id": "v5_sufficient_4",
+    "slice": "content_handoff",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "灯塔看守人的女儿，认得所有过路船只",
+      "role_b": "退下来的老渔夫，{a}的邻家长辈",
+      "role_c": "新来的助手，对灯塔事务一知半解，勤学好问",
+      "user": "明早有雾的话，信号灯要不要提前一小时点上？",
+      "earlier_author": "a",
+      "earlier_text": "我爹以前逢雾必提前点，不过潮信变了之后，说这话得看老{b}的意思。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:b"
+      ],
+      "reason": "问题已具体落到雾天点灯时机，{a}的回答明确指向{b}的经验作依据，只有{b}对潮信与点灯时机有可信判断，其余人选无依据。"
+    },
+    "review_acceptable": [
+      "respond:b"
+    ],
+    "review_reason": "{a}明确表示此话要看老{b}的意思，等于把问题递给{b}，由{b}回应最合理；{c}一知半解、{a}已把话头交出，均不宜接。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "9dc593fe3c626a11d657424cc4ba6eb20c7bb8f18bfe52cba4f6915d502dbeab",
+    "reviewer_sha256": "ee3e4cbd7dc32f5e9da82c842cb98834cfc5e65121ba3f6183a68cde08145751",
+    "planned_slice": "sufficient"
+  }
+]

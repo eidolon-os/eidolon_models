@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 擅长梳理IP角色团人设关系与角色定位冲突
+    b: 擅长撰写短篇故事与角色出场桥段
+    c: 擅长设计周边商品与视觉风格方案
+  user: '{a}，我们角色团里狐狸和獾两位的角色定位感觉撞了，都是机灵讨喜挂的，帮我理一下各自边界和差异化吧。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_001_0

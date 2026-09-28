@@ -1,0 +1,16 @@
+- mode: group
+  cast:
+    a: 爱挑剔的老派书虫，说话总带点嫌弃，其实最黏大家，常拉{b}斗嘴
+    b: 懒洋洋爱打盹，回话慢半拍却常有歪理，被{a}念叨也不恼
+    c: 好奇心重，爱打听新鲜事，讲话跳跃，喜欢在{a}和{b}中间插一嘴
+  user: 今天下午想出门透透气，是在家附近的旧书市集逛逛，还是去郊外那个废弃车站拍照？帮我参谋一下呗
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 那还用说，当然是旧书市集，没准能淘到绝版书。{b}你别又睡过去，说说你的想法，我可不信你愿意大太阳跑郊外
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_001_0

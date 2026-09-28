@@ -1,0 +1,105 @@
+{
+  "status": "complete",
+  "entries": [
+    {
+      "run": "r13",
+      "path": "laya/train/runs/r13/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/0bd7ca2b/torch/model.safetensors",
+      "sha256": "0bd7ca2b9c9cfc741ed17b76fbedd63192c446e292ecfe3f56a8d8ee68b1fb1e",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r2",
+      "path": "laya/train/runs/r2/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/219b0311/torch/model.safetensors",
+      "sha256": "219b031137bea0ab4b09a16db41fa5c87e6e890985ce90c8c35e42c85f2981f5",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r7",
+      "path": "laya/train/runs/r7/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/344c4be5/torch/model.safetensors",
+      "sha256": "344c4be5e32f7aba424ae9d061c100d57729c2847389bb80ccf54d8993ead8c3",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r5",
+      "path": "laya/train/runs/r5/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/5dace5a3/torch/model.safetensors",
+      "sha256": "5dace5a329dc411d0943eba5a524630f135904684fefc0034ab76f4d7515fd7d",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r3",
+      "path": "laya/train/runs/r3/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/6b835acf/torch/model.safetensors",
+      "sha256": "6b835acf888bc3b1f312d0a0fb99b1a651ebbb8aa79c044ff16cf76d620caf17",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r6",
+      "path": "laya/train/runs/r6/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/92256ee3/torch/model.safetensors",
+      "sha256": "92256ee3015f84cefde566ffba5950262503513edf84c4e86f0b70c7f60b1a58",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r10",
+      "path": "laya/train/runs/r10/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "sha256": "94d898b94607254069f1fe07685bb988cfb468be4244eddc92f17295bfd1d98f",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r4",
+      "path": "laya/train/runs/r4/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/a0e33df6/torch/model.safetensors",
+      "sha256": "a0e33df64096bd5c42c1a55d28a0715217f0d43a269feea3048ccb488d0be609",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r12",
+      "path": "laya/train/runs/r12/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/a76720a8/torch/model.safetensors",
+      "sha256": "a76720a81fcb9fc3fcb77c8f131dccb0fb011a15e8a654bba1362186dd508ce7",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r9",
+      "path": "laya/train/runs/r9/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/ad904d10/torch/model.safetensors",
+      "sha256": "ad904d10b81c855269ebc933faecb6998b3f8c2a6c4ec8b49e09028e4bf39307",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r11",
+      "path": "laya/train/runs/r11/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/e2e318af/torch/model.safetensors",
+      "sha256": "e2e318afd7d1e9209f80d21b1727b8be8e5445db067cff8f9da3566f98e7428a",
+      "bytes": 1287653720,
+      "deleted": true
+    },
+    {
+      "run": "r8",
+      "path": "laya/train/runs/r8/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/f5fde66b/torch/model.safetensors",
+      "sha256": "f5fde66ba5b8adcefbbd497d0283e63d835b10ef0faa789b335541d9df49ae05",
+      "bytes": 1287653720,
+      "deleted": true
+    }
+  ],
+  "free_before_bytes": 10652688384,
+  "timestamp": "2026-09-28T02:47:10.985858+00:00",
+  "removed_bytes": 15451844640,
+  "free_after_bytes": 26105626624
+}

@@ -1,0 +1,45 @@
+{
+  "id": "v6s_val_pause_discuss",
+  "split": "val",
+  "slice": "pause_discuss",
+  "schema": "shared_fields_v2",
+  "generator_sha256": "3b997e8561710d13b726c9b1ccdec77f6be8f0513a42383c132369ee85abb799",
+  "status": "agreed_pending_audit",
+  "pair": {
+    "acceptable_x": [
+      "wait"
+    ],
+    "acceptable_y": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "name_a": "沈青梧",
+    "name_b": "赫连霜",
+    "name_c": "白鹭洲",
+    "reason_x": "用户明确要求所有人完全暂停回复并等待下一条输入，故唯一可接受动作为wait。",
+    "reason_y": "用户以旁听者身份让大家继续聊，三位人物均可回应且无需点名，故acceptabel为respond:a,respond:b,respond:c。",
+    "role_a": "星夜旅伴中的向导，沉稳寡言，熟悉沙海古城的旧道与传说",
+    "role_b": "同行商队护卫，性急直率，爱在篝火旁插话争辩",
+    "role_c": "随行的年轻画师，好奇多问，喜欢记录夜话细节",
+    "user_x": "所有人都先停下来，等我下一句话再说。",
+    "user_y": "你们继续聊，我就当个安静的旁听人。",
+    "peer_author_x": "",
+    "peer_author_y": "",
+    "peer_text_x": "",
+    "peer_text_y": ""
+  },
+  "review": {
+    "acceptable_x": [
+      "wait"
+    ],
+    "reason_x": "用户明确要求所有人停下等他下一句话，属暂停等待用户，用wait。",
+    "acceptable_y": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "reason_y": "用户让三人继续聊天且自己只旁听，无点名，三人皆可回应。"
+  },
+  "reviewer_sha256": "3caaeca1cb2cc5231dbb53fa44ffcbce9b24aa6b8bf0323e53f6f3c1793f7a99"
+}

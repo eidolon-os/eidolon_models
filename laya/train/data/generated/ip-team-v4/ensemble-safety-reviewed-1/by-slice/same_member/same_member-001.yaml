@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 爱编故事的慢热派，讲话喜欢留悬念，总嫌 {b} 剧透太快
+    b: 好奇心旺盛的直率派，听到一半就想插嘴追问，常和 {a} 抢话
+  user: '{a}，你上次说在林子里跟丢过一只会认路的狐狸，好像还没讲完，这次别打岔，一口气分两段把它讲完吧。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好吧，那我慢慢讲。那天雾特别大，我本来只是抄近路，结果那只狐狸就蹲在三岔口，尾巴一甩，朝左边的老栎树方向走了几步，又回头看我，像是笃定我会跟上。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_001_0

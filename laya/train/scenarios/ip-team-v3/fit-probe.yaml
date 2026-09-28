@@ -1,0 +1,15 @@
+# Deliberately tiny same-record validation. Diagnostic only, not generalization.
+init: ../../runs/r14/checkpoint
+model_name: laya-ip-fit-probe
+epochs: 10
+batch_size: 8
+lr_encoder: 5.0e-5
+lr_head: 2.0e-4
+unfreeze_layers: 8
+brier_weight: 0.5
+warmup: 0.02
+weight_decay: 0.01
+max_len: 1024
+head_max_len: 384
+seed: 51
+device: mps

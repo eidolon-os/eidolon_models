@@ -1,0 +1,21 @@
+name: ip-team
+
+# This model proposes one semantic step. The SDK request/result snapshot, permissions,
+# cancellation epoch, and free-form instruction are owned by the caller/adapter.
+questions:
+  action:
+    type: choice
+    instructions: "根据用户本轮原始要求、最新已公开发言和约束，团队下一步应做什么？无法可靠决定时选 abstain。"
+    criteria:
+      respond: 让恰好一位已授权成员回应或继续讨论；不是要求所有成员轮流说
+      clarify: 请恰好一位成员提出一个澄清问题，然后等待用户回答
+      wait: 本轮暂时不发言，等待用户下一次输入；不是结束讨论轮
+      finish: 当前讨论轮已经完成，不再接续发言；团队会话仍保持
+      abstain: 输入越界、对象不明、候选冲突或能力不足，不能安全提出下一步
+  speaker:
+    type: choice
+    instructions: "若下一步需要一位成员发言，选择唯一合适的候选。按名字、角色和真实已公开内容判断；没有唯一人选则选 NONE。"
+    criteria_from: members
+    exits:
+      NONE: 不需要发言成员，或者没有唯一可确定的候选
+

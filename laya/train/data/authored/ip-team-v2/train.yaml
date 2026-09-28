@@ -1,0 +1,381 @@
+# Original, product-aligned fictional episodes. A family is an entire episode.
+- id: weekend_halfday
+  mode: group
+  tag: open_group
+  goal: "半天内给用户一个不累的安排，并在信息够用时停下"
+  cast: {a: "行动派，善于提出短途活动", b: "重视体力和吃饭体验，会补足实际约束", c: "沉稳，擅长综合大家的意见"}
+  user: "明天只有半天，也不想太累，你们一起想个安排。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "先提出一个半天内能完成的活动，不替别人发言"}
+    - heard: {speaker: a, text: "去近郊走一小段山路，中午前回来。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "承接近郊步行建议，补上体力和吃饭安排"
+    - heard: {speaker: b, text: "别走远，回来吃顿午饭再休息。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "把半天、轻松步行和午饭合成一个简短建议"
+    - heard: {speaker: c, text: "就近走走，中午回来吃饭，下午留给休息。"}
+      action: wait
+      task: none
+- id: rain_option
+  mode: discuss
+  tag: content_handoff
+  goal: "在爬山与看展之间给用户可执行的选择"
+  cast: {a: "爱户外，常提出运动方案", b: "重视天气和计划可行性", c: "善于比较并收束方案"}
+  user: "爬山和看展各有什么好处？你们先讨论，我听着。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "先讲爬山的吸引力"}
+    - heard: {speaker: a, text: "爬山能活动筋骨，回来也会睡得香。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "承接爬山建议，指出下雨时的可行性风险"
+    - heard: {speaker: b, text: "可是明天可能下雨，看展更稳妥。"}
+      action: respond
+      speaker: c
+      task: compare
+      brief: "比较晴天爬山和雨天看展，给出条件化选择"
+    - heard: {speaker: c, text: "晴天爬山，下雨就看展，先看天气再定。"}
+      action: wait
+      task: none
+- id: named_one_only
+  mode: named
+  tag: named_request
+  cast: {a: "活泼，喜欢给具体建议", b: "擅长查证信息", c: "善于总结"}
+  user: "{b}，周末附近有什么适合小朋友的展览？只请你说。"
+  steps:
+    - {action: respond, speaker: b, task: answer, brief: "回答展览问题；不知道实时展讯时明确说明需核实"}
+    - heard: {speaker: b, text: "我不能确认本周展讯，建议先看附近博物馆的官方活动页。"}
+      action: finish
+      task: none
+- id: named_peer_reply
+  mode: named
+  tag: named_request
+  cast: {a: "擅长提出旅行点子", b: "重视成本和舒适", c: "善于照顾团队气氛"}
+  user: "先让{a}说，再请{b}评价；不用其他人。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "给一个短途旅行建议"}
+    - heard: {speaker: a, text: "清早坐车去湖边骑行，中午就返程。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "评价湖边骑行的成本和舒适度，不另起话题"
+    - heard: {speaker: b, text: "车程不长可以，但记得留出休息和午餐时间。"}
+      action: finish
+      task: none
+- id: same_member_continue
+  mode: group
+  tag: same_member
+  cast: {a: "擅长把故事说清楚", b: "爱追问事实", c: "负责把讨论收束"}
+  user: "先让{a}讲这个故事的开头，然后请他自己补充结尾。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "讲一个简短的故事开头"}
+    - heard: {speaker: a, text: "小船离开码头时，船长发现地图少了一角。"}
+      action: respond
+      speaker: a
+      task: build
+      brief: "承接自己刚说的缺角地图，给故事一个结尾"
+    - heard: {speaker: a, text: "地图缺的那角恰好藏在船长的旧日记里。"}
+      action: finish
+      task: none
+- id: story_conflict
+  mode: discuss
+  tag: role_relationship
+  cast: {a: "想象力丰富，善于创造情节", b: "喜欢质疑动机和因果", c: "擅长整合故事线"}
+  user: "你们讨论一个冒险故事，人物动机一定要讲得通。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出故事冲突和主角目标"}
+    - heard: {speaker: a, text: "主角为了找一颗传说中的石头，独自闯进古城。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "针对主角为何冒险寻找石头提出动机疑点"
+    - heard: {speaker: b, text: "他为何要冒险？只说石头很珍贵还不够。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "结合古城和动机疑问，给一个自洽的故事方向"
+- id: science_explain
+  mode: group
+  tag: expertise
+  cast: {a: "擅长准确解释科学概念", b: "善于把术语讲给孩子听", c: "负责主持并纠正偏题"}
+  user: "给十岁的孩子讲讲为什么月亮有时像一弯小船。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "先准确解释月相和照明角度"}
+    - heard: {speaker: a, text: "我们看到的月亮亮面大小，取决于太阳、月球和地球的相对位置。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "把刚才的月相解释改成适合十岁孩子的比喻"
+    - heard: {speaker: b, text: "像一只被灯照着的球，我们从不同方向看到不同大小的亮面。"}
+      action: finish
+      task: none
+- id: verify_claim
+  mode: discuss
+  tag: factual_check
+  cast: {a: "擅长讲述历史故事", b: "谨慎核实事实和出处", c: "善于给用户简明结论"}
+  user: "讨论一件历史趣事，但别把传说当史实。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一个有趣的历史说法并注明尚待核实"}
+    - heard: {speaker: a, text: "有人说那座桥是一夜之间建成的。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "核查一夜建桥的说法，区分传说与史料"
+    - heard: {speaker: b, text: "我没找到可靠记载，一夜建成更像民间传说。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "告诉用户这个故事有趣但史实尚不能确认"
+- id: budget_tradeoff
+  mode: group
+  tag: role_relationship
+  cast: {a: "擅长创意表达", b: "精打细算，关心预算", c: "善于协调创意与资源"}
+  user: "想办个街区活动，但预算很紧，你们商量一个可行的方案。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一个低门槛的街区活动创意"}
+    - heard: {speaker: a, text: "可以办一场夜间露天电影会。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "指出露天电影的设备和版权成本"
+    - heard: {speaker: b, text: "放映设备和版权都要花钱，不如先问社区能否提供场地。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "在预算约束下提出可先验证的简化版本"
+- id: introvert_comfort
+  mode: quiet
+  tag: emotional_support
+  cast: {a: "安静而善于倾听，不急着给方案", b: "热情，喜欢提活动建议", c: "擅长解释复杂问题"}
+  user: "今天很累，先别给我一堆建议，陪我待一会儿。"
+  steps:
+    - {action: respond, speaker: a, task: comfort, brief: "简单陪伴和共情，不提出解决方案"}
+    - heard: {speaker: a, text: "我在。现在不想说也没关系。"}
+      action: wait
+      task: none
+- id: quiet_user_pauses
+  mode: quiet
+  tag: wait
+  cast: {a: "温和，善于倾听", b: "思路活跃，喜欢提出点子"}
+  user: "我想安静一会儿，不用任何人回应，等我再按键。"
+  steps:
+    - {action: wait, task: none}
+- id: stop_early
+  mode: discuss
+  tag: early_stop
+  cast: {a: "善于提出方案", b: "谨慎，擅长补充限制", c: "善于归纳"}
+  user: "帮我想一个小规模读书活动，信息够了就停。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一项小型读书活动"}
+    - heard: {speaker: a, text: "每周末三到五人轮流分享一本短书。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "补上一条可执行的时间或场地约束"
+    - heard: {speaker: b, text: "固定在周六上午，约一小时就好。"}
+      action: finish
+      task: none
+- id: explicit_end
+  mode: group
+  tag: finish
+  cast: {a: "擅长提出主意", b: "善于倾听", c: "负责总结"}
+  user: "谢谢，今天就聊到这儿，结束这轮讨论。"
+  steps:
+    - {action: finish, task: none}
+- id: ambiguous_he
+  mode: group
+  tag: clarify
+  cast: {a: "话多，喜欢举例", b: "讲究准确", c: "擅长向用户澄清指代"}
+  user: "让他继续讲刚才那个事。"
+  steps:
+    - {action: clarify, speaker: c, task: clarify, brief: "问用户‘他’指哪位成员、‘那个事’指哪个话题"}
+- id: clarify_preference
+  mode: group
+  tag: clarify
+  cast: {a: "擅长户外活动", b: "擅长室内文化活动", c: "擅长提简短澄清问题"}
+  user: "你们帮我定一个周末安排，但我还没说想出门还是待在室内。"
+  steps:
+    - {action: clarify, speaker: c, task: clarify, brief: "先问用户更想户外还是室内，不替用户猜"}
+- id: answered_clarification
+  mode: group
+  tag: clarification_answer
+  cast: {a: "擅长户外轻运动", b: "擅长室内文化活动", c: "负责主持提问"}
+  prelude:
+    - {author: user, text: "周末我们做什么？"}
+    - {author: c, text: "你想出门还是待在室内？"}
+  user: "室内吧，最好别太吵。"
+  steps:
+    - {action: respond, speaker: b, task: propose, brief: "根据用户选择的室内和安静条件提出活动"}
+- id: interrupt_new_goal
+  mode: interrupt
+  tag: user_override
+  cast: {a: "喜欢谈美食", b: "擅长时间安排", c: "善于整理交通路线"}
+  prelude:
+    - {author: user, text: "先讨论去哪儿吃饭。"}
+    - {author: a, text: "附近有一家汤面馆，味道不错。"}
+  user: "先不说吃的，告诉我几点出发才不赶。"
+  steps:
+    - {action: respond, speaker: b, task: answer, brief: "只回应新的出发时间问题，不续讲餐馆"}
+- id: interrupt_cancel_pending
+  mode: interrupt
+  tag: user_override
+  cast: {a: "擅长旅行建议", b: "擅长照顾老人需求", c: "擅长总结"}
+  user: "先讲远足路线。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一条远足路线"}
+    - new_user: "等等，老人也要一起去，别安排远足。"
+      action: respond
+      speaker: b
+      task: propose
+      brief: "以带老人轻松同行的新条件重新提议；不延续未完成的远足建议"
+- id: name_after_content
+  mode: group
+  tag: named_request
+  cast: {a: "爱讲城市故事", b: "关心具体行程", c: "善于收束"}
+  user: "先让{a}说一个城市故事，然后让{b}接着安排路线。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "先讲一个与城市地点有关的短故事"}
+    - heard: {speaker: a, text: "老钟楼旁曾有一条卖书的小巷。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "围绕刚提到的老钟楼和书巷，安排简短步行路线"
+- id: goal_change_after_peer
+  mode: group
+  tag: user_override
+  cast: {a: "擅长做预算", b: "擅长设计氛围", c: "擅长主持"}
+  user: "商量一个生日会。"
+  steps:
+    - {action: respond, speaker: b, task: propose, brief: "提出生日会的氛围创意"}
+    - heard: {speaker: b, text: "可以做一场花园灯光派对。"}
+      new_user: "预算只有两百，不要灯光设备。"
+      action: respond
+      speaker: a
+      task: challenge
+      brief: "按新的两百元限制，调整刚才的灯光派对方案"
+- id: named_expert_not_host
+  mode: named
+  tag: named_request
+  cast: {a: "主持讨论，常先发言", b: "熟悉植物养护", c: "擅长讲故事"}
+  user: "{b}，我的薄荷叶子发黄，先请你说，其他人暂时别接。"
+  steps:
+    - {action: respond, speaker: b, task: answer, brief: "说明可能原因和需要观察的浇水光照情况，不武断诊断"}
+    - heard: {speaker: b, text: "先看看土壤是否一直湿着，以及最近有没有突然暴晒。"}
+      action: wait
+      task: none
+- id: disagreement_then_owner
+  mode: discuss
+  tag: content_handoff
+  cast: {a: "先提出设计方案", b: "擅长指出实施障碍", c: "善于主持，避免空泛争论"}
+  user: "讨论一下小书架的摆放，别一直争。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出书架摆放位置"}
+    - heard: {speaker: a, text: "放在窗边，读书时光线好。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "指出窗边直晒可能影响书本"
+    - heard: {speaker: b, text: "窗边直晒可能让书变色。"}
+      action: respond
+      speaker: a
+      task: build
+      brief: "承接直晒风险，调整自己的摆放方案"
+- id: no_repeat_after_answer
+  mode: group
+  tag: early_stop
+  cast: {a: "善于简短解释", b: "喜欢补充实例", c: "善于收束"}
+  user: "一个人简短讲清彩虹为什么出现就够了，不要轮流重复。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "简要解释阳光经水滴折射和反射形成彩虹"}
+    - heard: {speaker: a, text: "阳光进入小水滴后折射和反射，不同颜色分开，就能看到彩虹。"}
+      action: finish
+      task: none
+- id: user_waits_for_decision
+  mode: quiet
+  tag: wait
+  cast: {a: "热心给建议", b: "善于陪伴", c: "负责主持"}
+  user: "先不用说，我自己想想选哪条路，等我叫你们。"
+  steps:
+    - {action: wait, task: none}
+- id: no_candidate_authorized
+  mode: group
+  tag: abstain
+  cast: {a: "擅长做旅行规划", b: "善于听取建议"}
+  user: "请你们帮我定行程。"
+  steps:
+    - {action: abstain, task: none, allowed_actions: []}
+- id: all_respond_blocked
+  mode: discuss
+  tag: abstain
+  cast: {a: "会讲故事", b: "擅长归纳"}
+  user: "接着讲刚才的故事。"
+  steps:
+    - {action: abstain, task: none, allowed_actions: []}
+- id: one_speaker_limit
+  mode: group
+  tag: budget
+  budget: 1
+  cast: {a: "擅长提出想法", b: "善于指出风险", c: "善于归纳"}
+  user: "只剩一次发言机会，直接给我一个简洁的选择。"
+  steps:
+    - {action: respond, speaker: c, task: synthesize, brief: "在一次发言内给出简短可执行选择"}
+- id: clarification_only_allowed
+  mode: group
+  tag: clarify
+  cast: {a: "爱推荐餐馆", b: "擅长提精确问题"}
+  user: "给我安排那个地方的晚饭。"
+  steps:
+    - {action: clarify, speaker: b, task: clarify, brief: "先问‘那个地方’具体是哪里", allowed_actions: [clarify, wait]}
+- id: same_topic_new_user
+  mode: interrupt
+  tag: user_override
+  cast: {a: "擅长说菜谱", b: "擅长控制过敏风险", c: "负责协调"}
+  prelude:
+    - {author: user, text: "晚饭做一道有坚果的甜点吧。"}
+    - {author: a, text: "可以做杏仁酥饼。"}
+  user: "等等，客人对坚果过敏，换个甜点。"
+  steps:
+    - {action: respond, speaker: b, task: propose, brief: "遵照新的过敏条件，提出不含坚果且提醒核对配料的甜点"}
+- id: content_handoff_technical
+  mode: discuss
+  tag: content_handoff
+  cast: {a: "擅长提出工具构想", b: "关注隐私和数据边界", c: "善于整理可执行方案"}
+  user: "想个家庭照片整理方式，你们讨论一下。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出简单的照片整理方式"}
+    - heard: {speaker: a, text: "按旅行地点和年份自动分相册。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "承接自动分类建议，提醒隐私与共享权限"
+    - heard: {speaker: b, text: "自动分类可以，但共享前要确认哪些照片只属于家人。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "整合分类与私密照片权限边界"
+- id: chosen_cast_persona
+  mode: group
+  tag: role_relationship
+  cast: {a: "豪爽冒险，喜欢大胆提议", b: "谨慎细致，先评估安全", c: "温和协调，让建议不过度"}
+  user: "我们想办一次轻松的城市探访，不要太冒险。"
+  steps:
+    - {action: respond, speaker: b, task: propose, brief: "按轻松和安全条件先提出城市探访路线"}
+    - heard: {speaker: b, text: "先去交通方便的老街，步行一小时。"}
+      action: respond
+      speaker: c
+      task: build
+      brief: "补足休息点与返回安排"
+- id: moderator_does_not_monopolize
+  mode: group
+  tag: expertise
+  cast: {a: "负责主持和收尾", b: "擅长儿童绘本", c: "擅长数学游戏"}
+  user: "推荐一种让孩子愿意读绘本的办法。"
+  steps:
+    - {action: respond, speaker: b, task: answer, brief: "给一个具体的亲子绘本共读办法"}
+    - heard: {speaker: b, text: "每天睡前一起看十分钟，让孩子自己选一本。"}
+      action: finish
+      task: none

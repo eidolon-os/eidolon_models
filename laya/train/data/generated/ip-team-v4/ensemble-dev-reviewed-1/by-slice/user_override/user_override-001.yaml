@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 爱怀旧，说话爱拖长音，总把过去的事挂在嘴边，喜欢逗{c}
+    b: 嘴快心软，爱反驳{a}的怀旧论调，一被点名就来了精神
+    c: 话少，只在小声嘀咕里给意见，常被{a}和{b}拉去当裁判
+  user: 打住打住，别聊昨天那个了。我想问{b}：今天下午想上天台看船过还是窝在舱里玩牌？你挑一个，我听你的。
+  prelude:
+  - author: a
+    text: 唉，我以前那个目标啊，说起来话长，那时候可是天天惦记着，别提多上心了，真是难忘。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_001_0

@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 擅长为IP角色设计统一话术风格与语言规范
+    b: 专注多平台粉丝社群运营与活动策划
+    c: 负责IP形象视觉设计与周边产品开发
+  user: '{a}，我们团里那个新角色总说话前后不搭，一会儿高冷一会儿卖萌，帮我定一套角色语气规范吧，把用词、句式和禁忌都写清楚。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_003_0

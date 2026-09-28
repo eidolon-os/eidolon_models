@@ -1,0 +1,13 @@
+- mode: group
+  cast:
+    a: 擅长IP角色世界观与人物小传的编辑
+    b: 负责角色台词风格与口癖打磨的文案
+    c: 主理角色周边选品与联名方案的运营
+  user: 我们团队想给新的角色团做一轮文本决策评审，{a}你说下这版草稿的问题吧？
+  prelude: []
+  steps:
+  - action: clarify
+    speaker: a
+    brief: 缺少用户必须提供的信息
+  tag: clarify
+  id: glm53_flash_clarify_003_0

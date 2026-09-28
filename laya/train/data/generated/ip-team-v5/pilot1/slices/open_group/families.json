@@ -1,0 +1,32 @@
+[
+  {
+    "id": "v5_named_4",
+    "slice": "open_group",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "老磨坊主，沉稳，说话简短",
+      "role_b": "磨坊学徒，热情爱分享细节",
+      "user": "刚才那位说风车要大修了，是真的吗？我有点担心秋收前的活儿。",
+      "earlier_author": "b",
+      "earlier_text": "风车主轴好像有点吱呀响，得找时间查一查啦。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户问的是{a}确认事实，但{b}刚提到过异响并可能补充细节，也属合理回答者"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "{b}此前提到主轴吱呀响，可补充细节；{a}是磨坊主，最该确认大修消息，均可回应",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7b3c1899ec7c536bcbf9b5aef034bb4e9dd5a4101969100318d2cff6bdd4f602",
+    "reviewer_sha256": "8babc5bf4cdebd33a00d7778224a7dc4cf6e33efe2eac4d177c9c946d202dae4",
+    "planned_slice": "named"
+  }
+]

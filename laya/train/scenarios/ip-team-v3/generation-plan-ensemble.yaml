@@ -1,0 +1,40 @@
+# Product-aligned: original fictional characters converse with the user as companions.
+version: ip-team-v4-glm53-flash-ensemble-1
+domain: ensemble_characters
+slices:
+  - id: named_unique
+    quota: 5
+    mode: named
+    candidates: 3
+    focus: 用户在一起聊时直接点名一位角色，仅该角色答复。
+  - id: speaker_handoff
+    quota: 5
+    mode: group
+    candidates: 3
+    focus: 几位有不同性格的角色围绕用户日常选择接话，后一位承接而不复述。
+  - id: same_member
+    quota: 3
+    mode: named
+    candidates: 2
+    focus: 同一角色按用户要求连说两段，不因为说过一次就强行换人。
+  - id: user_override
+    quota: 4
+    mode: interrupt
+    candidates: 3
+    focus: 用户新输入打断原讨论，点名另一角色换话题；旧排队内容不得复活。
+  - id: wait_or_finish
+    quota: 4
+    mode: quiet
+    candidates: 2
+    decisions: [wait, finish]
+    focus: 用户明确要求暂停或结束，角色团保持安静。
+  - id: named_finish
+    quota: 4
+    mode: named
+    candidates: 3
+    focus: 点名角色答完后应结束本轮，不让其他角色补话。
+  - id: wait_after_peer
+    quota: 4
+    mode: group
+    candidates: 3
+    focus: 角色完成一次发言后，按用户要求等下一条消息。

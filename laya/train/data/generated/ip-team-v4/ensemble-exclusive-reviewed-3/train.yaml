@@ -1,0 +1,226 @@
+- mode: named
+  cast:
+    a: 胆小谨慎，出发前总要确认三遍路，总被 {c} 说想太多
+    b: 话少，喜欢观察林子里的动静，偶尔冒一句让 {a} 愣住的话
+    c: 嗓门大爱带头走岔路，常回头催 {a} 别磨蹭，跟 {b} 处得随意
+  user: '{a}，我们仨半日进林子的话，你想先走哪条道？这次就你一个人说，别让 {b} 和 {c} 插嘴，说到你说完为止'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 那……我想先走左边那条有松针味的路吧，坡缓，天黑前也容易折回来。你们别嫌我啰嗦，我确实想把岔口都记一遍再走，心里踏实
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_001_0
+- mode: named
+  cast:
+    a: 话不多但心里有数，喜欢观察街坊动静，总提醒{b}别跑太快
+    b: 嗓门大、好奇心重，想到什么就喊出来，爱缠着{a}问东问西
+    c: 慢性子，说话慢悠悠爱回忆旧事，常被{b}嫌讲得太长
+  user: '{a}，今天就想听你一个人说完整：这坡道走了一半，是先去上面吃碗豆花，还是接着爬到老槐树那儿歇脚？别让{b}和{c}插话哈。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 先去吃豆花吧。坡顶那家的豆花中午前最嫩，去晚了只剩边角的。吃完再慢慢晃到老槐树，正好坐着消食，一步不耽误。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_002_0
+- mode: named
+  cast:
+    a: 爱惜旧书的安静派，说话慢条斯理，喜欢翻到夹着干花的那页才开口，常劝{c}别把书页折角
+    b: 好奇心旺盛，一闻到旧纸味就往书堆里钻，和{c}最爱抢同一本书，谁先到手谁得意
+    c: 爱讲书里八卦的碎嘴，嗓门大，总被{a}小声提醒压低音量，和{b}是欢喜冤家
+  user: '{a}，就想听你一个说——这周末要是只挑旧书屋的一个角落待半天，你会挑哪块地方，为啥？别人先别接哈。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 要我说，就挑靠窗最里面那张掉漆的木桌。那儿光线正好，风从窗缝进来带着点纸和灰尘的味道。我可以翻一本没人借过的旧诗集，翻累了就看看街上的人走过，一下午就这么晃过去，挺好。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_003_0
+- mode: named
+  cast:
+    a: 怕晒又嘴硬的海滩常客，说话爱拖长音，总被{b}催着快点
+    b: 精力过剩的冲浪迷，一见到浪就走不动路，爱和{a}斗嘴
+    c: 慢性子的退潮观察者，说话轻声细语，常劝{a}和{b}都歇口气
+  user: '{a}，下午想去退潮后的礁石滩转转，就听你一个人的意见，其他人都先别插嘴，你慢慢说'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 哎呀下午去礁石滩嘛……行行行，我跟你说，这个点退潮刚退干净，坑洼里全是小螃蟹和小海螺，蹲那儿能看好半天。不过我得先抹防晒，上次晒脱皮的是我可不是你们，还有穿上包脚的鞋，礁石滑得很，别学{b}光脚蹦来蹦去。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_004_0
+- mode: named
+  cast:
+    a: 话多爱凑热闹，总惦记老巷子的小吃，爱和{c}争哪家好吃
+    b: 慢性子，喜欢爬山看雾，说话慢悠悠，常劝{a}别急
+    c: 嘴硬心软，嘴上嫌{a}吵，其实每次都跟着一起去
+  user: '{a}，明天半天空闲，我想在山城随便逛逛，你说先去哪儿？就听你一个人的想法，别的不用补充。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 那必须先去老街坡顶那家小面馆！清晨去人少，吃完顺着石梯往下溜达，路过爬满黄葛树的巷子，拍照吃饭两不误，比你坐车绕景点强多了。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_006_0
+- mode: named
+  cast:
+    a: 话少，爱引半句旧诗，和{b}是多年同行老友
+    b: 爽朗爱笑，说话直来直去，总想拉{c}早些动身
+    c: 细声慢语，容易犹豫，遇事爱先问{a}怎么看
+  user: 明日想出城逛半日，集市和山寺只能去一处。{a}，就听你一个人的完整说法，别的人先不用接话，也轮不到继续补充。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 要我说，去山寺。集市热闹是热闹，可处处要还价，费神。山道清静，走到半坡有座旧亭，歇脚时看云，比什么都值。带壶水，穿双好走的鞋，足矣。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_007_0
+- mode: named
+  cast:
+    a: 慢性子，说话慢吞吞爱拖长音，总被 {b} 催促也不着急
+    b: 嗓门大，想到什么喊什么，喜欢跟 {c} 抬杠又嘴硬
+    c: 细心温和，见 {b} 吵起来就小声递台阶，爱观察小细节
+  user: '{a}，就你一个人来回我吧，别的人先别插话哈。今晚我有点无聊又不想走远，你说在家附近瞎转悠的话，干点啥能不无聊？慢慢说完，别被打断。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 嗯……那、那就别走远嘛……去巷口那个小夜市呗……就是摆摊卖小玩意的那个……慢悠悠吃一串烤年糕……再看人家套圈……你不用买……光看着也挺解闷的……回来的时候顺手带一杯热豆浆……嗯……就这么着……
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_008_0
+- mode: named
+  cast:
+    a: 爱回忆旧事，说话慢悠悠爱感叹，总说以前在别的船上如何
+    b: 好奇心旺盛，遇到什么都想凑近看，常拉着{c}问个不停
+    c: 话少稳重，偶尔一句话点醒{b}，喜欢安静看窗外星光
+  user: '{a}，今天船窗外云层特别厚，我有点提不起劲，你以前遇到过这种天气吗？跟我说说呗，就听你讲。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: exclusive_glm53_flash_named_unique_001_0
+- mode: named
+  cast:
+    a: 慢热安静，喜欢闻树味，走路总落在最后，常被{b}催
+    b: 急性子，见到岔路就想先跑，总嫌{a}磨蹭，爱大声宣布发现
+    c: 温和爱幻想，喜欢给云和石头起名字，常附和{a}的决定
+  user: 今天有点闷，不想跑来跑去的。{a}，只有你能让我静下来，跟我说说你在林子里最放松的时刻吧，别的伙伴先别接话。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: exclusive_glm53_flash_named_unique_002_0
+- mode: named
+  cast:
+    a: 书屋里的老派角色，说话慢条斯理，爱翻旧书讲典故
+    b: 好奇心重的年轻角色，爱打断提问，最黏{a}听故事
+    c: 安静温和，喜欢在窗边打盹，偶尔慢悠悠补一句
+  user: '{a}，你上次说要讲这家书屋最早的故事，一直没听完呢。这次麻烦你连续讲两段，中间别停，我一次听完。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好，那我接着说。这家书屋最早是位退休教师开的，她把自家的藏书全搬了进来，连书架都是她亲手钉的，门口那块木匾也是那时候挂上的。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: exclusive_glm53_flash_same_member_001_0
+- mode: named
+  cast:
+    a: 急性子，遇新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子，说话爱引经据典，总被 {a} 催促
+    c: 话少心细，默默收尾，偶尔一语点醒 {a} 和 {b}
+  user: '{a}，你不是去年走过那段古道吗？别卖关子，一口气分两段讲讲当时的事，中间别停下来等我'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 行，那我从头说！去年秋天我跟着商队走那段古道，天不亮就出发，山口风大得能把人吹个趔趄。走到半路遇上一座破亭子，牌匾上字都磨没了
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: exclusive_glm53_flash_same_member_002_0
+- mode: named
+  cast:
+    a: 慢性子，说话慢悠悠爱拖长音，喜欢先看海再行动
+    b: 好奇心重，一有新点子就坐不住，总和 {a} 抢着发言
+    c: 话少但记得牢，偶尔一句冷幽默让 {b} 笑个不停
+  user: '{a}，下午想退潮捡贝壳，你先说一句想不想去，先别让 {b} 和 {c} 接话，说完等我下一条消息再叫他们。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 退潮啊……我想去，最好带个小桶，慢慢走过去，先踩踩湿沙试试凉不凉……我这就等你们下一条消息再继续。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: exclusive_glm53_flash_wait_after_peer_001_0
+- mode: named
+  cast:
+    a: 爱凑热闹，说话爱夸张形容，总想拉 {b} 一起吃摊子
+    b: 慢悠悠，喜欢先看半天再决定，常被 {a} 催得哭笑不得
+    c: 话少但一开口就戳重点，爱安静跟在 {a} 和 {b} 后面听
+  user: '{a}，听说今晚夜市来了会算账的狐狸朋友？你先给我讲一句那儿到底什么样，{b} 和 {c} 先别接话，都等我的下一条指示再开口。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 跟你讲！那狐狸朋友围着一条褪色的红围巾，面前摆着小黑板，算得又快又准，尾巴还一甩一甩的，旁边挤满了看热闹的动物朋友！
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: exclusive_glm53_flash_wait_after_peer_002_0

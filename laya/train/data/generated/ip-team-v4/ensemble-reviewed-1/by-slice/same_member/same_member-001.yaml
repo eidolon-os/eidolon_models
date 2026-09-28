@@ -1,0 +1,19 @@
+- mode: named
+  cast:
+    a: 急性子，遇到新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子爱抬杠，总泼 {a} 冷水，嘴硬心软
+  user: '{a}，你上次说那天在河边看到的东西，我一直好奇后面怎样了，能不能一口气分两段讲完，别卖关子啊。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好好好，那我从头讲。第一段是：那天傍晚我们蹲在河边，水面突然冒出一串气泡，接着浮上来个亮闪闪的东西，我当时眼睛都直了，差点直接伸手去捞，被
+        {b} 一把拽住袖子。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_001_0

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "new_predictions": 456,
+  "records_per_configuration": 114,
+  "baseline_unchanged": true,
+  "frozen_manifest_unchanged": true,
+  "finite_normalized_probabilities": true,
+  "gold_and_ids_match": true,
+  "raw_sha256": {
+    "decider-A.jsonl": "8108e3e5861c5b1768723da743712ef1fa5cf7c3a08c8f4dbb4b7a1622756d9f",
+    "decider-B.jsonl": "e84be738575da56e93e30b115e29a9377ca5150cd573e4cee1b6060c1e7f2352",
+    "jevk5-A.jsonl": "e64600cdd737a6675be02cf7d84bd23e49999056c9067ba2962798a296188d09",
+    "jevk5-B.jsonl": "b3d9a93a7baccdc0c61ca8278728f8a85a42aa23f12de99b886791308dfd5654"
+  },
+  "manifest": {
+    "policies": {
+      "A": "补充决策规则：用户明确暂停或结束时，优先选择wait或finish。用户要求某个特定角色回应时，必须用称呼、身份特征和公开历史判断指向。若多个候选都符合该指代，且现有信息不能唯一确定目标，选择abstain；不得用候选排列顺序、性格偏好或自行猜测替用户确定身份。同名本身不是弃权理由：若附带特征或上下文已唯一确定角色，就由该角色回应。如果用户只是开放聊天、没有限定某个特定人，可以选择合适角色，不因候选多而弃权。",
+      "B": "执行以下参与约定。暂停请求用wait，本轮结束用finish，优先处理这两类意图。在用户指定某个人发言时，先根据名字、人物资料与已有对话确定是谁；有身份线索足以区分，即使重名也应让被指向的人回应。如果仍有两人或更多人同样符合这个指代，没有证据能区分，就应选abstain。不要因谁排在前面、谁更讨喜或凭空推断而替用户挑一个。对于未指定特定人物的普通开放交谈，允许挑选合适的回应者，无需仅因多人可选而弃权。"
+    },
+    "data_sha256": {
+      "v7": "4a75cb7644ef9b102aceff938486cc61bbbe5fd2c9f7a63b8800d4f9e8573ae4",
+      "v8": "b5347b5de86c3598a82a79ed8518ac941bd10d474cb771c6b1917dcd2601fef5"
+    },
+    "sources": {
+      "openjev": {
+        "repo": "com-kotobalabs/open-jev-deberta-v3-large",
+        "revision": "188ee67a5c93122b916e5acd5bdb0cb3623e380a"
+      },
+      "decider": {
+        "repo": "Mapika/decider-2b",
+        "revision": "533964dae8be954c5b5e19fa4948e48408094c1e"
+      },
+      "jevk5": {
+        "repo": "alibiserikbay/JevK5",
+        "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d"
+      }
+    },
+    "script_sha256": "582eaaef96c011753561dfd174a873ba4f2ffdcce2427cfa3d71fece3b8ff0c3",
+    "design_sha256": "e66997bcfaa663349e5dfd4d3145f21d08ad2cf2c0f75ffdbdca0f7b2f3b9a31"
+  },
+  "parent_provenance_sha256": "6171afa54cd053a64cd4baf2eef35f17afcbec0c32fe97c1559370f56177e97b",
+  "audit_code_sha256": {
+    "report.py": "065b3cc6a0a6de5d565001790f5fb28c7a9b642c63ecd356b5df7dbde6ee2891",
+    "validate.py": "b2032da54165a1ee0925962d3f9925112ecc68d36e8a373fe50abcf3d7d63125"
+  },
+  "automated_tests": {
+    "command": "PYTHONPATH=../eidolon_sdk laya/.venv/bin/python -m pytest -q laya/tests/test_direction_check.py laya/tests/test_backbone_comparison.py",
+    "passed": 6
+  },
+  "scope": "DEV only; no training or teacher calls; no sealed test inference"
+}

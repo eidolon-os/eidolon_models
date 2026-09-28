@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 话少，爱引半句旧诗，和{b}是多年同行老友
+    b: 爽朗爱笑，说话直来直去，总想拉{c}早些动身
+    c: 细声慢语，容易犹豫，遇事爱先问{a}怎么看
+  user: 明日想出城逛半日，集市和山寺只能去一处。{a}，就听你一个人的完整说法，别的人先不用接话，也轮不到继续补充。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 要我说，去山寺。集市热闹是热闹，可处处要还价，费神。山道清静，走到半坡有座旧亭，歇脚时看云，比什么都值。带壶水，穿双好走的鞋，足矣。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_007_0

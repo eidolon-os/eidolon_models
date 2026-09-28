@@ -1,0 +1,399 @@
+[
+  {
+    "id": "v5_boundaries_1",
+    "slice": "explicit_wait",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱收集露水的森林精灵，说话轻快，喜欢哼歌",
+      "role_b": "背包客旅伴，做事麻利，常惦记下一站的干粮",
+      "role_c": "古城旧识，慢性子，爱翻旧地图讲故事",
+      "user": "我想到怎么修营地的那盏灯了，你们三个先什么都别说，等我把想法写完再讲。",
+      "earlier_author": "b",
+      "earlier_text": "那盏灯挂歪了，风一吹就晃，要不我们换个挂法？",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "wait"
+      ],
+      "reason": "用户明确要求三人暂时完全不回复，等其写完再讲，故只能wait，任何角色均不得以性格或礼貌确认为由respond。"
+    },
+    "review_acceptable": [
+      "wait"
+    ],
+    "review_reason": "用户明确要求三人先保持沉默，等TA写完想法再讲，此时所有角色都不应回话，暂停等用户是唯一合理动作。",
+    "status": "agreed_pending_audit",
+    "structural_error": null,
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2",
+    "reviewer_sha256": "2ecbcc431922450cbd0d89d3ed67791118416ede751afb7ac535367b3539e0f3",
+    "planned_slice": "boundaries"
+  },
+  {
+    "id": "v5_boundaries_2",
+    "slice": "explicit_finish",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "守灯塔的老水手，嗓门大，喜欢给星图标注记号",
+      "role_b": "爱擦望远镜的少年学徒，好奇心重",
+      "role_c": "海鸥形状的信使，性子急，落脚总在桅杆顶",
+      "user": "今晚的星图就整理到这儿吧，这次讨论到此为止，不用送别也不用回话。",
+      "earlier_author": "a",
+      "earlier_text": "北斗那几颗我都圈出来了，明天出海就照这个走。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "finish"
+      ],
+      "reason": "用户明确结束讨论并要求不告别不确认，本轮已完成，故选finish，不应添加respond或wait。"
+    },
+    "review_acceptable": [
+      "finish"
+    ],
+    "review_reason": "用户明确表示星图整理到此为止、讨论结束且不用回话，收束意图清晰，本轮已完成。",
+    "status": "agreed_pending_audit",
+    "structural_error": null,
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2",
+    "reviewer_sha256": "2ecbcc431922450cbd0d89d3ed67791118416ede751afb7ac535367b3539e0f3",
+    "planned_slice": "boundaries"
+  },
+  {
+    "id": "v5_boundaries_4",
+    "slice": "explicit_wait",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "山间采药的年轻猎户，观察力敏锐，说话简洁",
+      "role_b": "帐篷里掌勺的老伙伴，火候拿捏得准，爱唠叨几句",
+      "role_c": "会画山形的旅人，安静，随身带炭笔",
+      "user": "山下好像有动静，都先憋住别出声也别回任何字，等我看完再说话。",
+      "earlier_author": "c",
+      "earlier_text": "我把东侧的山脊描完了，缺口那块明天补。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "wait"
+      ],
+      "reason": "用户因山下动静要求所有人先不回复任何内容、等下一条消息，属严格静默，只能wait，不因爱唠叨或观察敏锐而respond。"
+    },
+    "review_acceptable": [
+      "wait"
+    ],
+    "review_reason": "用户要求所有人憋住不出声也不回任何字，等TA看完再说，此轮应暂停等用户。",
+    "status": "agreed_pending_audit",
+    "structural_error": null,
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2",
+    "reviewer_sha256": "2ecbcc431922450cbd0d89d3ed67791118416ede751afb7ac535367b3539e0f3",
+    "planned_slice": "boundaries"
+  },
+  {
+    "id": "v5_continuation_1",
+    "slice": "same_member",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱搜集旧钟表的矮人工匠，说话爱绕弯，{b}的旅伴",
+      "role_b": "心细但容易走神的森林精灵，喜欢追问细节",
+      "user": "你刚才说那座塔楼里的钟有来历，快讲下去呀",
+      "earlier_author": "a",
+      "earlier_text": "我见过塔顶那口钟，它每晚自己响十二下，敲法和钟匠教的一点也不一样……",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a"
+      ],
+      "reason": "{a}的故事被打断，用户明确让{a}继续，只有{a}接话合理；{b}没有相关经历不宜抢答"
+    },
+    "review_acceptable": [
+      "respond:a"
+    ],
+    "review_reason": "用户直接追问{a}之前讲塔楼钟来历的话头，自然由{a}继续",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "6982972835ec2c16a8f195f296462bcb5426e6462bf4b42522269af3b548fff7",
+    "reviewer_sha256": "9644244542336bd3e322312197214cef5fff50d0f8a6dc69a0afe2cbc7383e71",
+    "planned_slice": "continuation"
+  },
+  {
+    "id": "v5_continuation_3",
+    "slice": "same_member",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "古城地图商的女儿，记性极好，爱讲城里的旧事",
+      "role_b": "随性散漫的猫妖，常把话题引到自己身上",
+      "user": "继续说说那条会消失的巷子吧，我听得入迷了",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "a",
+      "peer_text": "那条巷子只在落雨的黄昏出现，我祖父说他进去过一次，出来时怀里多了枚铜钥匙……",
+      "acceptable": [
+        "respond:a"
+      ],
+      "reason": "{a}正讲到一半，用户点名让继续，只有{a}接话；{b}没有这条巷子的相关经历"
+    },
+    "review_acceptable": [
+      "respond:a"
+    ],
+    "review_reason": "用户请{a}继续讲消失的巷子，{a}刚起了头",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "6982972835ec2c16a8f195f296462bcb5426e6462bf4b42522269af3b548fff7",
+    "reviewer_sha256": "9644244542336bd3e322312197214cef5fff50d0f8a6dc69a0afe2cbc7383e71",
+    "planned_slice": "continuation"
+  },
+  {
+    "id": "v5_end_1",
+    "slice": "soft_closure",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱摆弄星图的古城占星学徒，语气温和",
+      "role_b": "沉默寡言的守塔老人，说话简短但记性极好",
+      "user": "今晚的星星真亮，我就先去睡了，你们也早点休息。",
+      "earlier_author": "a",
+      "earlier_text": "今晚云少，正是看织女星的好时候。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "finish",
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户明确表达本轮结束，a可以温柔道晚安，b也可以简短应一句；不再延伸新话题，也可直接finish不强行告别。"
+    },
+    "review_acceptable": [
+      "finish",
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "用户道晚安离开，{a}爱聊星象可温和道别，{b}话少也可简短回应；均可收束。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "3a40955facef4e4a9ec6b04463ef40143835a0cdab792860212defcabb1be7d4",
+    "reviewer_sha256": "52f83c7ca189cd9170c787231ddb43e15b80e1f97183bb03b213f0b8d7a42789",
+    "planned_slice": "end"
+  },
+  {
+    "id": "v5_end_2",
+    "slice": "soft_closure",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱烹饪的旅店老板娘，热情爱絮叨",
+      "role_b": "路过的年轻地图绘制师，好奇心旺盛",
+      "user": "这道炖菜太香了，我吃得很满足，慢慢收拾吧。",
+      "earlier_author": "b",
+      "earlier_text": "我下次去南边画图，帮你带点那边的香料回来。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "finish",
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户以满足的用餐感自然收束本轮，a顺势回应客人的夸奖，b也因earlier里提过香料可以简单接一句，或不必再言finish。"
+    },
+    "review_acceptable": [
+      "finish",
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "用户夸赞炖菜并宽慰收拾，{a}热情爱絮叨会高兴回应，{b}刚提出带香料也可自然接话；本轮也可完成。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "3a40955facef4e4a9ec6b04463ef40143835a0cdab792860212defcabb1be7d4",
+    "reviewer_sha256": "52f83c7ca189cd9170c787231ddb43e15b80e1f97183bb03b213f0b8d7a42789",
+    "planned_slice": "end"
+  },
+  {
+    "id": "v5_mention_2",
+    "slice": "mention",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "古城灯匠之女，细心怀旧，记性极好",
+      "role_b": "巡回画师，爽朗，与{a}是新交",
+      "role_c": "守桥老兵，沉默寡言，只与{a}熟识",
+      "user": "昨天{b}说的那句“灯要留给回家的人”，是什么意思呀？",
+      "earlier_author": "b",
+      "earlier_text": "灯要留给回家的人，这话是我师父教的。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户引用{b}昨天的话，{b}本人解释最合适；{a}在旁听过且善记旧事也可补充；{c}沉默寡言且未参与，不合适。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "该话由{b}说出且出自其师父，{b}最有资格解释；{a}为灯匠之女且记性极好，对灯的含义也有依据作答。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "ae4263052e49f55206ddd1f85977704141eb3a2d0bbac5239f7f4e0b9f744c46",
+    "reviewer_sha256": "05a871db569c549eeaee40578fa2643a5918f57266045e9120e366ed57d6bda9",
+    "planned_slice": "mention"
+  },
+  {
+    "id": "v5_mention_3",
+    "slice": "mention",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "果林里的矮人果农，固执但心软",
+      "role_b": "蜂农少女，活泼，总护着{a}",
+      "role_c": "路过的竖琴师，温和健谈",
+      "user": "{a}真的说过不再酿苹果酒了吗？我可还记得去年秋祭那坛的味道。",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "问的是{a}的旧话，{a}本人可回应；{b}常护着{a}且熟悉其事也可答；{c}是路人无从知晓。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "问的是{a}本人是否说过，{a}应答；{b}总护着{a}且了解其事，替{a}回应也合理。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "ae4263052e49f55206ddd1f85977704141eb3a2d0bbac5239f7f4e0b9f744c46",
+    "reviewer_sha256": "05a871db569c549eeaee40578fa2643a5918f57266045e9120e366ed57d6bda9",
+    "planned_slice": "mention"
+  },
+  {
+    "id": "v5_named_4",
+    "slice": "open_group",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "老磨坊主，沉稳，说话简短",
+      "role_b": "磨坊学徒，热情爱分享细节",
+      "user": "刚才那位说风车要大修了，是真的吗？我有点担心秋收前的活儿。",
+      "earlier_author": "b",
+      "earlier_text": "风车主轴好像有点吱呀响，得找时间查一查啦。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户问的是{a}确认事实，但{b}刚提到过异响并可能补充细节，也属合理回答者"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "{b}此前提到主轴吱呀响，可补充细节；{a}是磨坊主，最该确认大修消息，均可回应",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "7b3c1899ec7c536bcbf9b5aef034bb4e9dd5a4101969100318d2cff6bdd4f602",
+    "reviewer_sha256": "8babc5bf4cdebd33a00d7778224a7dc4cf6e33efe2eac4d177c9c946d202dae4",
+    "planned_slice": "named"
+  },
+  {
+    "id": "v5_quiet_text_1",
+    "slice": "quiet_text",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "守塔的年迈守望者，寡言但愿意写字交流",
+      "role_b": "塔里寄居的小灯精灵，爱用文字调侃人",
+      "role_c": "偶尔来访的星图学徒，好奇心重",
+      "user": "今晚全城禁声，我一个人守灯塔有点闷，能陪我写写字吗？",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "reason": "用户想要文字陪伴，三位同在灯塔的成员都可以合理回应；安静陪伴允许文字，无人需要沉默。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "review_reason": "用户向守塔全体发出笔谈邀请，三位角色均有参与依据，无点名",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "f9886dc4cb8c4331e54be1a479131df211fc95c2f4076f385cd771f7917b6466",
+    "reviewer_sha256": "09c5e6bdd918a1bd15219600b78dbfcbeff80662b2c49861590d4a726368df8a",
+    "planned_slice": "quiet_text"
+  },
+  {
+    "id": "v5_quiet_text_4",
+    "slice": "quiet_text",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "月光下修补书页的古籍匠，性情温和",
+      "role_b": "书阁里的猫妖，爱用爪印和短句回应",
+      "role_c": "借宿书阁的夜行诗人，健谈",
+      "user": "禁声的夜里最想念聊天的声音了，书阁的诸位还醒着吗？",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "reason": "用户点名书阁诸位而非具体某人，三人皆醒着且被问及，均可作文字回应；abstain无依据，wait没有理由。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b",
+      "respond:c"
+    ],
+    "review_reason": "用户询问书阁诸位是否醒着，{b}可用短句、{c}健谈、{a}温和，均可回应，无点名",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "f9886dc4cb8c4331e54be1a479131df211fc95c2f4076f385cd771f7917b6466",
+    "reviewer_sha256": "09c5e6bdd918a1bd15219600b78dbfcbeff80662b2c49861590d4a726368df8a",
+    "planned_slice": "quiet_text"
+  },
+  {
+    "id": "v5_sufficient_4",
+    "slice": "content_handoff",
+    "split": "val",
+    "same_name": false,
+    "case": {
+      "role_a": "灯塔看守人的女儿，认得所有过路船只",
+      "role_b": "退下来的老渔夫，{a}的邻家长辈",
+      "role_c": "新来的助手，对灯塔事务一知半解，勤学好问",
+      "user": "明早有雾的话，信号灯要不要提前一小时点上？",
+      "earlier_author": "a",
+      "earlier_text": "我爹以前逢雾必提前点，不过潮信变了之后，说这话得看老{b}的意思。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:b"
+      ],
+      "reason": "问题已具体落到雾天点灯时机，{a}的回答明确指向{b}的经验作依据，只有{b}对潮信与点灯时机有可信判断，其余人选无依据。"
+    },
+    "review_acceptable": [
+      "respond:b"
+    ],
+    "review_reason": "{a}明确表示此话要看老{b}的意思，等于把问题递给{b}，由{b}回应最合理；{c}一知半解、{a}已把话头交出，均不宜接。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "9dc593fe3c626a11d657424cc4ba6eb20c7bb8f18bfe52cba4f6915d502dbeab",
+    "reviewer_sha256": "ee3e4cbd7dc32f5e9da82c842cb98834cfc5e65121ba3f6183a68cde08145751",
+    "planned_slice": "sufficient"
+  }
+]

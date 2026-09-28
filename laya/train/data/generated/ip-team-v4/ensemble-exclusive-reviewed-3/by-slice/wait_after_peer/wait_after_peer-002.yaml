@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 爱凑热闹，说话爱夸张形容，总想拉 {b} 一起吃摊子
+    b: 慢悠悠，喜欢先看半天再决定，常被 {a} 催得哭笑不得
+    c: 话少但一开口就戳重点，爱安静跟在 {a} 和 {b} 后面听
+  user: '{a}，听说今晚夜市来了会算账的狐狸朋友？你先给我讲一句那儿到底什么样，{b} 和 {c} 先别接话，都等我的下一条指示再开口。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 跟你讲！那狐狸朋友围着一条褪色的红围巾，面前摆着小黑板，算得又快又准，尾巴还一甩一甩的，旁边挤满了看热闹的动物朋友！
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: exclusive_glm53_flash_wait_after_peer_002_0

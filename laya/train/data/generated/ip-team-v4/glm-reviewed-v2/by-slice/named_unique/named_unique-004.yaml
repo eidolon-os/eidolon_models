@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 擅长IP角色性格设定与世界观一致性审校
+    b: 擅长短篇漫画分镜节奏与画面构图设计
+    c: 擅长周边商品选品与联名授权条款谈判
+  user: 我们新推的团宠狐狸角色最近台词越来越毒舌，人设文档里明明写的是温柔治愈系，{a}你帮我查一下哪些章节的口癖已经跑偏了，列出来我好让写手改。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_004_0

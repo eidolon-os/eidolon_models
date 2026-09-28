@@ -1,0 +1,64 @@
+[
+  {
+    "id": "v5_mention_2",
+    "slice": "mention",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "古城灯匠之女，细心怀旧，记性极好",
+      "role_b": "巡回画师，爽朗，与{a}是新交",
+      "role_c": "守桥老兵，沉默寡言，只与{a}熟识",
+      "user": "昨天{b}说的那句“灯要留给回家的人”，是什么意思呀？",
+      "earlier_author": "b",
+      "earlier_text": "灯要留给回家的人，这话是我师父教的。",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "用户引用{b}昨天的话，{b}本人解释最合适；{a}在旁听过且善记旧事也可补充；{c}沉默寡言且未参与，不合适。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "该话由{b}说出且出自其师父，{b}最有资格解释；{a}为灯匠之女且记性极好，对灯的含义也有依据作答。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "ae4263052e49f55206ddd1f85977704141eb3a2d0bbac5239f7f4e0b9f744c46",
+    "reviewer_sha256": "05a871db569c549eeaee40578fa2643a5918f57266045e9120e366ed57d6bda9",
+    "planned_slice": "mention"
+  },
+  {
+    "id": "v5_mention_3",
+    "slice": "mention",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "果林里的矮人果农，固执但心软",
+      "role_b": "蜂农少女，活泼，总护着{a}",
+      "role_c": "路过的竖琴师，温和健谈",
+      "user": "{a}真的说过不再酿苹果酒了吗？我可还记得去年秋祭那坛的味道。",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a",
+        "respond:b"
+      ],
+      "reason": "问的是{a}的旧话，{a}本人可回应；{b}常护着{a}且熟悉其事也可答；{c}是路人无从知晓。"
+    },
+    "review_acceptable": [
+      "respond:a",
+      "respond:b"
+    ],
+    "review_reason": "问的是{a}本人是否说过，{a}应答；{b}总护着{a}且了解其事，替{a}回应也合理。",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "ae4263052e49f55206ddd1f85977704141eb3a2d0bbac5239f7f4e0b9f744c46",
+    "reviewer_sha256": "05a871db569c549eeaee40578fa2643a5918f57266045e9120e366ed57d6bda9",
+    "planned_slice": "mention"
+  }
+]

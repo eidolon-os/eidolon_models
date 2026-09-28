@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 擅长设计古风仙侠类角色外观与服饰设定
+    b: 专精科幻机甲角色的世界观与技能体系构建
+    c: 负责角色台词打磨与配音情绪指导
+  user: 各位，之前仙侠那个角色先放一放，我现在想做一个赛博废土里的机甲猎人角色，得有完整世界观和战斗技能设定，这块还是{b}来牵头吧
+  prelude:
+  - author: a
+    text: '{a}：关于古风仙侠角色，我已经公开说过会出三套外观方案，配水墨风服饰细节，下周先交第一版草稿给大家看'
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_003_0

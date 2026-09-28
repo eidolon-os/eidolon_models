@@ -1,0 +1,440 @@
+{
+  "authorized_max_calls": 24,
+  "actual_calls": 24,
+  "pending": 0,
+  "total_tokens": 36825,
+  "calls": [
+    {
+      "file": "laya/train/private/ip-team-v5-text/calls/named-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 792,
+        "completion_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "prompt_tokens": 728,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1520
+      },
+      "prompt_sha256": "730443c802d0ad6f89b37c75884a3f72b67cb72c8dad30c1312cfa7229dcb4bb",
+      "response_sha256": "43a54c051e57d11b99722e21986f4ff60634b14e7511ddc72ca0129f08b140eb"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/continuation-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 794,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 887,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1681
+      },
+      "prompt_sha256": "e8a6012b3c21cfbbf0037061777d199278495fe3eda216e5150e30d28f6db8d9",
+      "response_sha256": "6982972835ec2c16a8f195f296462bcb5426e6462bf4b42522269af3b548fff7"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/continuation-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 212,
+        "completion_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "prompt_tokens": 952,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1164
+      },
+      "prompt_sha256": "c4d33927b03048486a56214be937af37357d11a411e628b98d0e6c905603d36f",
+      "response_sha256": "cb1d8e1b09602c0229af6b28fcf9e88ed66b50503fede54761df38dd670b9382"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/end-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 730,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 874,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1604
+      },
+      "prompt_sha256": "ae165e06dc561919959fc15d17ae66aa14f0a14ae622bbe8e4391c818edfd1b7",
+      "response_sha256": "3a40955facef4e4a9ec6b04463ef40143835a0cdab792860212defcabb1be7d4"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/end-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 374,
+        "completion_tokens_details": {
+          "reasoning_tokens": 154
+        },
+        "prompt_tokens": 882,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1256
+      },
+      "prompt_sha256": "34e3b7173ef7932164b07ddf70ba8bc2779a1ee4cb1b40f432686bc01afc9f2a",
+      "response_sha256": "d68e920d211575e7cbca73b6e3fe7b756a87f9c44f52a7fe9ace898f0cc406e8"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/interrupt-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 849,
+        "completion_tokens_details": {
+          "reasoning_tokens": 22
+        },
+        "prompt_tokens": 913,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1762
+      },
+      "prompt_sha256": "bccc5862411b454126659c567dcc49d9bb2864a629aefe61910e6fde0facb12a",
+      "response_sha256": "405e42201511637dcadd04b5ebfd00fa3de3a1e385743cd27c69958e0be48ef5"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/interrupt-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 413,
+        "completion_tokens_details": {
+          "reasoning_tokens": 196
+        },
+        "prompt_tokens": 964,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1377
+      },
+      "prompt_sha256": "869a2367526cdfb93105b4828ebcea3b169a1e5ebcc2a1def3c0699c469dd309",
+      "response_sha256": "be3e28e5847939d1ede087c8e2b3f89f5acb65d44a8e932ab466e1b684c24da7"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/mention-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 829,
+        "completion_tokens_details": {
+          "reasoning_tokens": 20
+        },
+        "prompt_tokens": 912,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1741
+      },
+      "prompt_sha256": "d40a9f7ee3e9a8f54a0f9085dbdc1f67286ffae860d360eed9c452da70d84d04",
+      "response_sha256": "ae4263052e49f55206ddd1f85977704141eb3a2d0bbac5239f7f4e0b9f744c46"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/mention-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 455,
+        "completion_tokens_details": {
+          "reasoning_tokens": 221
+        },
+        "prompt_tokens": 961,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1416
+      },
+      "prompt_sha256": "3c518692acfcf7a56ea9be19dc164c946d262a0b0f5f91109a5f7f12ef265122",
+      "response_sha256": "5297f44b53de4d727930e7cc99f5139c7792fa0e1fa7b65469fa29ce5aac0cd2"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/named-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 699,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_tokens": 827,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1526
+      },
+      "prompt_sha256": "23d0b7e30a4174b0791edb59af002d79f9a83334deb9c008fc5285006b66c7f4",
+      "response_sha256": "7b3c1899ec7c536bcbf9b5aef034bb4e9dd5a4101969100318d2cff6bdd4f602"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/named-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 194,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 801,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 995
+      },
+      "prompt_sha256": "6297615562ed9b93487632d40f455e9207a2ca386da152b2800915376eeb9364",
+      "response_sha256": "a858c02ad98d2ea7a14d882217797c48977ecf443ccc2e2afa1552d57060a747"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/open_group-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 944,
+        "completion_tokens_details": {
+          "reasoning_tokens": 8
+        },
+        "prompt_tokens": 858,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1802
+      },
+      "prompt_sha256": "aa61123daa878999320cbaeb8c9b02884a3a164d501a935a4c66908a2613dba0",
+      "response_sha256": "8a0931652b5591a2968399b7aceafeae2515c7379a43b4869062b5385b1f1fc1"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/open_group-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 176,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 923,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1099
+      },
+      "prompt_sha256": "6ac2b09bdf15974f48c524b6e3eed50945b18ae0c7f7b0e4609f4c1c6a93b7cc",
+      "response_sha256": "3a37a6e69ca0de24afba3396b686b1e1fced4bc0e19b10b8e38321cec9dcd6e0"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/pause-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 777,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 929,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1706
+      },
+      "prompt_sha256": "eac737f9518f03cc657fd8f1228a9c1847e491e403649b0930f0f453600455ae",
+      "response_sha256": "0e0faefb23d7df80db698ee9893c08fcbd590b5c1e637ddd12e3a01cc640a3a4"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/pause-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 491,
+        "completion_tokens_details": {
+          "reasoning_tokens": 166
+        },
+        "prompt_tokens": 955,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1446
+      },
+      "prompt_sha256": "adafb5c0fbcb5e9b2a6c5591ef4408e4abe28973af9bd7b7cedf8718fdc32d8d",
+      "response_sha256": "c824309d646fd3e76557ddd16d51b4f8e582871d39dd4f30bbd361480122e937"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/quiet_text-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 813,
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "prompt_tokens": 908,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1721
+      },
+      "prompt_sha256": "605837f754be0ad53ff4237d3c34a0285a5d088781a169d911911a157d78da27",
+      "response_sha256": "f9886dc4cb8c4331e54be1a479131df211fc95c2f4076f385cd771f7917b6466"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/quiet_text-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 257,
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        },
+        "prompt_tokens": 944,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1201
+      },
+      "prompt_sha256": "4883a5399f65c8f6478633c3ee88204ef3a26fbe9ce7d767e53e50e782911d72",
+      "response_sha256": "4c629c737b13763bb139a3a0ba3c84ad580122ca4f800c8a4038c3f2a1b21b60"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/relation-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 910,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 834,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1744
+      },
+      "prompt_sha256": "669c5577bbb8e147e8201ed2b270cc36a197b6b4be135d0ca2f3c3a0ef22f208",
+      "response_sha256": "889612e83ee2dbcda98f08dd99ae392907723a6646eb4865f273171cd4b743a5"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/relation-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 535,
+        "completion_tokens_details": {
+          "reasoning_tokens": 281
+        },
+        "prompt_tokens": 968,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1503
+      },
+      "prompt_sha256": "62f756df5f9e6c4d8be601bec5bc3563fe87ad23547bcc39a19e3b35ddc2fdea",
+      "response_sha256": "1be8d033645749380b26f6783f28a5ddf66aad15f9f23236dc7f77c11c8a6dd6"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/same_name-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 900,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_tokens": 913,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1813
+      },
+      "prompt_sha256": "b6187f44589d578eb3c5073c74accc47fe3b16b2af9516caa867c38af7546319",
+      "response_sha256": "5089ec2c6ab8e02573fb66faef64360cc9c2b26193c44a74491021f0098d5d3e"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/sufficient-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 881,
+        "completion_tokens_details": {
+          "reasoning_tokens": 31
+        },
+        "prompt_tokens": 909,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1790
+      },
+      "prompt_sha256": "41a9cb0abd3c5ad4118c5c6175a2e639bc84e5cf936013b9a63a49431b7514d7",
+      "response_sha256": "9dc593fe3c626a11d657424cc4ba6eb20c7bb8f18bfe52cba4f6915d502dbeab"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-text-pilot1/calls/sufficient-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 595,
+        "completion_tokens_details": {
+          "reasoning_tokens": 282
+        },
+        "prompt_tokens": 991,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1586
+      },
+      "prompt_sha256": "8bd9b9c63d46ac9a0a835f468070e73532092338ae02ee8849685e769ebae9e3",
+      "response_sha256": "4d502a4e3ff2ff0a2d14410c9c54c4206e3e6c99390bb5953b93b1c34b19672c"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-boundaries/calls/boundaries-generate.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 966,
+        "completion_tokens_details": {
+          "reasoning_tokens": 141
+        },
+        "prompt_tokens": 1001,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1967
+      },
+      "prompt_sha256": "6a3573270d557a43eecfc5a3acb0a7030d4eecaa60ca23b04eeaf8bc95179ea1",
+      "response_sha256": "7a2ccb24e85c4cb3c38164b0caaad1a3f0fec54e01c1ea99f3be251f298679a2"
+    },
+    {
+      "file": "laya/train/private/ip-team-v5-boundaries/calls/boundaries-review.json",
+      "status": "complete",
+      "model": "glm-5.3-flash",
+      "usage": {
+        "completion_tokens": 399,
+        "completion_tokens_details": {
+          "reasoning_tokens": 219
+        },
+        "prompt_tokens": 1006,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1405
+      },
+      "prompt_sha256": "bfb331370040e78ce077350ac697d6908d482a2b910c562bb27d91c4ff85fce3",
+      "response_sha256": "cee31c0360f75aaeb6a357affa46b0c3d9afab43b5dc35262f6883eb2c24ddf4"
+    }
+  ]
+}

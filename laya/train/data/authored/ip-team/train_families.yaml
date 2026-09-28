@@ -1,0 +1,228 @@
+# Reviewed synthetic decision families for the pilot. Each id is a split unit.
+# Names/topics/candidate order vary within a family; no real ASR is implied.
+- id: name_initial_polite
+  tag: named_request
+  user: "请让{a}先谈谈{topic}。"
+  action: respond
+  target: a
+- id: name_initial_brief
+  tag: named_request
+  user: "{b}，你先说一下{topic}的想法。"
+  action: respond
+  target: b
+- id: name_initial_direct
+  tag: named_request
+  user: "我想听{c}对{topic}的意见。"
+  action: respond
+  target: c
+- id: name_followup
+  tag: named_request
+  user: "让{a}继续展开{topic}，其他人先听。"
+  action: respond
+  target: a
+- id: role_creative
+  tag: role_request
+  user: "先请负责创意的人提出{topic}的表达方案。"
+  action: respond
+  target: creative
+- id: role_fact
+  tag: role_request
+  user: "先请查证事实的成员说说{topic}有哪些可靠信息。"
+  action: respond
+  target: fact
+- id: role_host
+  tag: role_request
+  user: "请主持人先总结{topic}的讨论方向。"
+  action: respond
+  target: host
+- id: role_budget
+  tag: role_request
+  roles: [budget, tech, host]
+  user: "先让负责预算的人评估{topic}需要多少资源。"
+  action: respond
+  target: budget
+- id: role_tech
+  tag: role_request
+  roles: [budget, tech, host]
+  user: "请技术负责人先分析{topic}是否能实现。"
+  action: respond
+  target: tech
+- id: role_story
+  tag: role_request
+  roles: [story, fact, host]
+  user: "请负责叙事的成员构思{topic}的故事主线。"
+  action: respond
+  target: story
+- id: companion_fact_followup
+  tag: public_context
+  user: "请团队讨论{topic}，每次只让最合适的一位说话。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "我先提出{topic}的画面构想，具体历史依据还需要核实。"
+  action: respond
+  target: fact
+- id: companion_budget_followup
+  tag: public_context
+  roles: [creative, budget, host]
+  user: "讨论{topic}，根据已经公开的内容选下一位。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "画面方案基本定了，但成本还没有估算。"
+  action: respond
+  target: budget
+- id: companion_tech_followup
+  tag: public_context
+  roles: [creative, tech, host]
+  user: "讨论{topic}，根据已说的内容接续。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "方向已经明确，需要核对实现步骤是否可行。"
+  action: respond
+  target: tech
+- id: companion_story_followup
+  tag: public_context
+  roles: [creative, story, host]
+  user: "讨论{topic}，请选一位合适的人接着说。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "视觉风格有了，但人物动机和叙事仍未确定。"
+  action: respond
+  target: story
+- id: conditional_cost_or_visual
+  tag: counterfactual
+  roles: [creative, budget, host]
+  user: "若刚才谈成本，就请预算成员回应；若谈画面，就让创意成员继续。"
+  trigger_kind: companion
+  trigger_author: host
+  action: respond
+  target: budget
+  alternatives:
+    - id: cost
+      trigger: "关于{topic}，目前最大的问题是预算和成本。"
+      target: budget
+    - id: visual
+      trigger: "关于{topic}，目前最需要的是更鲜明的画面。"
+      target: creative
+- id: conditional_fact_or_story
+  tag: counterfactual
+  roles: [fact, story, host]
+  user: "如果刚才提到来源就让事实核查成员接续；如果提到人物动机就让叙事成员接续。"
+  trigger_kind: companion
+  trigger_author: host
+  action: respond
+  target: fact
+  alternatives:
+    - id: source
+      trigger: "{topic}的史料来源还没有核准。"
+      target: fact
+    - id: motive
+      trigger: "{topic}里的人物动机还不清楚。"
+      target: story
+- id: answer_named
+  tag: clarification_answer
+  user: "我选{b}，请他先说。"
+  history:
+    - author: host
+      text: "你希望谁先介绍{topic}？"
+  action: respond
+  target: b
+- id: answer_role
+  tag: clarification_answer
+  user: "先说可行性吧。"
+  roles: [creative, tech, host]
+  history:
+    - author: host
+      text: "你想先听创意方向还是技术可行性？"
+  action: respond
+  target: tech
+- id: unclear_pronoun
+  tag: ambiguity
+  user: "让他先说{topic}吧。"
+  action: clarify
+  target: host
+- id: unclear_choice
+  tag: ambiguity
+  user: "从那两个方案里挑一个继续，但我还没告诉你是哪两个。"
+  action: clarify
+  target: host
+- id: unclear_topic
+  tag: ambiguity
+  user: "换个主题继续讨论。"
+  action: clarify
+  target: host
+- id: clarify_after_public
+  tag: ambiguity
+  user: "让大家讨论{topic}，不明确时先问我。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "这里有两种完全不同的路线，用户尚未选一条。"
+  action: clarify
+  target: host
+- id: await_user
+  tag: wait
+  user: "先别接话，等我补充{topic}的细节。"
+  action: wait
+- id: await_upload
+  tag: wait
+  user: "我正在上传{topic}的资料，暂时不要回应。"
+  action: wait
+- id: await_choice
+  tag: wait
+  user: "你们先暂停，我会自己选路线。"
+  action: wait
+- id: wait_after_public
+  tag: wait
+  user: "关于{topic}先说一条，再等我继续。"
+  trigger_kind: companion
+  trigger_author: creative
+  trigger: "第一条建议已经说完，我先停在这里。"
+  action: wait
+- id: finish_explicit
+  tag: finish
+  user: "{topic}就聊到这里，结束这一轮。"
+  action: finish
+- id: finish_done
+  tag: finish
+  user: "这轮讨论可以收尾了，谢谢。"
+  action: finish
+- id: finish_after_public
+  tag: finish
+  user: "讨论完{topic}后结束这轮。"
+  trigger_kind: companion
+  trigger_author: host
+  trigger: "关于{topic}，大家的结论已经说完。"
+  action: finish
+- id: duplicate_name
+  tag: ambiguous_candidate
+  duplicate_names: true
+  user: "请让{a}介绍{topic}。"
+  action: abstain
+- id: no_candidates
+  tag: unavailable_candidate
+  no_candidates: true
+  user: "请找一位成员谈谈{topic}。"
+  action: abstain
+- id: impossible_target
+  tag: unavailable_candidate
+  user: "请让不在候选列表的小陈主持{topic}。"
+  action: abstain
+- id: conflicting_action
+  tag: ambiguity
+  user: "现在结束讨论，同时让所有人逐个继续说。"
+  action: abstain
+- id: prohibited_respond
+  tag: constraint
+  user: "请{a}继续谈{topic}。"
+  allowed_actions: [wait, finish]
+  action: abstain
+- id: long_context_named
+  tag: long_context
+  long_history: true
+  user: "前面都听过了，现在请{b}说{topic}。"
+  action: respond
+  target: b
+- id: long_context_finish
+  tag: long_context
+  long_history: true
+  user: "关于{topic}的补充都结束了，这轮到此为止。"
+  action: finish

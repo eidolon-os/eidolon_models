@@ -1,0 +1,81 @@
+{
+  "review_version": "ip-team-v4-glm53-flash-targeted-1-review-1",
+  "source_plan_version": "ip-team-v4-glm53-flash-targeted-1",
+  "selected_calls": [
+    {
+      "call_id": "named_finish-003",
+      "slice": "named_finish",
+      "response_sha256": "285f18ef9eca2642d038339f278162925ece80dee74e3aa1da686a5b2729ad19",
+      "review_reason": "用户明确一次答完，公开回复已给完整时间线思路。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-004",
+      "slice": "named_finish",
+      "response_sha256": "507e29781c9d80ad619b2ecc21175b6994907ba83bc86c3e163033abc4835ba1",
+      "review_reason": "用户明确一次答完，公开回复已给完整检查步骤。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-005",
+      "slice": "named_finish",
+      "response_sha256": "858e670595dfc22e16f031ce35a7648dee2d8796e52aacaf52a09dde6a64f325",
+      "review_reason": "用户明确一次答完，公开回复已给完整角色弧光建议。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-006",
+      "slice": "named_finish",
+      "response_sha256": "e07e0196630a5efdcf1474ac869ea211fa58e7c0a8570c63b29706b7ae155a85",
+      "review_reason": "用户明确一次答完，公开回复已给完整语气建议。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-001",
+      "slice": "wait_after_peer",
+      "response_sha256": "087be9cdaaae8506c87657380d214c2e57675355b36cfc79ae3c4a548ca96847",
+      "review_reason": "成员说完角色与主线关联，用户明确等待下一指示。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-002",
+      "slice": "wait_after_peer",
+      "response_sha256": "816a61fd6dcc86bb1f53291c9496114ae71386fae8e0fc9f39ab6c715dc471f0",
+      "review_reason": "成员说完角色出身，用户明确等待下一指示。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-003",
+      "slice": "wait_after_peer",
+      "response_sha256": "1a9612e908e6f98f485f71676e585caf039aae1b25f3edf6bd416ea568ff4fe2",
+      "review_reason": "成员说完角色转变动机，用户明确等待下一指示。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-004",
+      "slice": "wait_after_peer",
+      "response_sha256": "dd681b27950e648ae6c6c82747a3ceda8a12eb006aa5aaf123c49c0b32750717",
+      "review_reason": "成员说完出场动作，用户明确等待下一指示。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-005",
+      "slice": "wait_after_peer",
+      "response_sha256": "c1909ef5ce710de184cb9279b5ec6eeed6ade251d589c9a370e6c78f5a0c1bd7",
+      "review_reason": "成员说完身世解释，用户明确等待下一指示。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-006",
+      "slice": "wait_after_peer",
+      "response_sha256": "223a8fb195d8c79d5ff300d91f71641d0a4c0b04987164d52351e76a930fdb9f",
+      "review_reason": "成员说完设定冲突，用户明确等待下一指示。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "named_finish-001": "用户文本含未渲染的裸槽位字母，偏离自然键入。",
+    "named_finish-002": "公开回复给出未经核实的儿童发展量化事实，不适合作为本任务素材。"
+  },
+  "families": 10
+}

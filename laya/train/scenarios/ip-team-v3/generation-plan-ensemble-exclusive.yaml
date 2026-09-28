@@ -1,0 +1,24 @@
+# Generalize one named character's completed answer without repeating val topic or wording.
+version: ip-team-v4-glm53-flash-ensemble-exclusive-1
+domain: ensemble_characters
+slices:
+  - id: named_finish
+    quota: 8
+    mode: named
+    candidates: 3
+    focus: 只听指定故事角色完整回答一个日常问题；不同主题和口语表达，用户可以不说结束二字。
+  - id: same_member
+    quota: 2
+    mode: named
+    candidates: 3
+    focus: 用户明确要求同一角色连说两段，第一段完成后不能错误结束。
+  - id: wait_after_peer
+    quota: 2
+    mode: named
+    candidates: 3
+    focus: 指定角色完整回答之后按用户要求暂时等下一条消息，不能误判成本轮已结束。
+  - id: named_unique
+    quota: 2
+    mode: named
+    candidates: 3
+    focus: 用户刚点名，尚未收到任何角色发言，应先让指定角色回答。

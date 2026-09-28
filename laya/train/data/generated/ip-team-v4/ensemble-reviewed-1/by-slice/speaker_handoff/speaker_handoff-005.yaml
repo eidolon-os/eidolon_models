@@ -1,0 +1,16 @@
+- mode: group
+  cast:
+    a: 爱给旧书闻味道，说话慢悠悠，总替{c}护短
+    b: 嘴上不饶人心里软，喜欢抬杠，常被{a}一句话噎住
+    c: 胆小怕翻页声，爱藏角落听{a}{b}聊天，偶尔冒一句惊人的话
+  user: 周末想歇一天，纠结去旧书屋淘一下午书，还是窝在家把攒的剧看完，你们会怎么选呀？
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 我肯定去书屋，摸到泛黄纸页那股味道就值了。不过{b}你肯定想在家躺平吧，说说你的角度？
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_005_0

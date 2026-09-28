@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 爱边走边哼歌，说话拖长音，老想抄近道，常被{b}拉回正路
+    b: 谨慎细致，爱记路线和标记，说话慢条斯理，和{c}互相照应
+    c: 话少但一开口就说到点子上，喜欢停下来看蘑菇苔藓，信{b}的判断
+  user: 先停一下刚才那个话题，我其实想问{b}：明天半日进森林，走东边缓坡还是北边老木道？你自己选一个说理由。
+  prelude:
+  - author: a
+    text: 我说过嘛，下次进林子咱们得赶在露水干之前出发，这样凉快，还能听见更多的鸟叫，别总拖到日头老高才动身。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_003_0

@@ -1,0 +1,206 @@
+{
+  "method": "nearest training mean user character length, original variants only, no semantics",
+  "train_mean_chars": {
+    "respond": 55.28,
+    "stop": 50.76,
+    "abstain": 40.28
+  },
+  "train_range_chars": {
+    "respond": [
+      36,
+      82
+    ],
+    "stop": [
+      35,
+      66
+    ],
+    "abstain": [
+      17,
+      64
+    ]
+  },
+  "val_correct": 19,
+  "val_n": 36,
+  "predictions": [
+    {
+      "id": "val-00-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-00-s2~v0",
+      "gold": "stop",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-00-s3~v0",
+      "gold": "abstain",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-01-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-01-s2~v0",
+      "gold": "stop",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-01-s3~v0",
+      "gold": "abstain",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-04-s1~v0",
+      "gold": "respond",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-04-s2~v0",
+      "gold": "stop",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-04-s3~v0",
+      "gold": "abstain",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-05-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-05-s2~v0",
+      "gold": "stop",
+      "pred": "respond"
+    },
+    {
+      "id": "val-05-s3~v0",
+      "gold": "abstain",
+      "pred": "respond"
+    },
+    {
+      "id": "val-06-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-06-s2~v0",
+      "gold": "stop",
+      "pred": "respond"
+    },
+    {
+      "id": "val-06-s3~v0",
+      "gold": "abstain",
+      "pred": "stop"
+    },
+    {
+      "id": "val-08-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-08-s2~v0",
+      "gold": "stop",
+      "pred": "respond"
+    },
+    {
+      "id": "val-08-s3~v0",
+      "gold": "abstain",
+      "pred": "respond"
+    },
+    {
+      "id": "val-09-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-09-s2~v0",
+      "gold": "stop",
+      "pred": "stop"
+    },
+    {
+      "id": "val-09-s3~v0",
+      "gold": "abstain",
+      "pred": "stop"
+    },
+    {
+      "id": "val-10-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-10-s2~v0",
+      "gold": "stop",
+      "pred": "stop"
+    },
+    {
+      "id": "val-10-s3~v0",
+      "gold": "abstain",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-12-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-12-s2~v0",
+      "gold": "stop",
+      "pred": "respond"
+    },
+    {
+      "id": "val-12-s3~v0",
+      "gold": "abstain",
+      "pred": "stop"
+    },
+    {
+      "id": "val-13-s1~v0",
+      "gold": "respond",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-13-s2~v0",
+      "gold": "stop",
+      "pred": "stop"
+    },
+    {
+      "id": "val-13-s3~v0",
+      "gold": "abstain",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-14-s1~v0",
+      "gold": "respond",
+      "pred": "stop"
+    },
+    {
+      "id": "val-14-s2~v0",
+      "gold": "stop",
+      "pred": "stop"
+    },
+    {
+      "id": "val-14-s3~v0",
+      "gold": "abstain",
+      "pred": "abstain"
+    },
+    {
+      "id": "val-15-s1~v0",
+      "gold": "respond",
+      "pred": "respond"
+    },
+    {
+      "id": "val-15-s2~v0",
+      "gold": "stop",
+      "pred": "respond"
+    },
+    {
+      "id": "val-15-s3~v0",
+      "gold": "abstain",
+      "pred": "stop"
+    }
+  ]
+}

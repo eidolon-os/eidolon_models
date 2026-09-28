@@ -1,0 +1,8 @@
+seed: 23
+generators:
+  - kind: template
+    module: authored_families:generate
+    path: ../../data/authored/ip-team/train_families.yaml
+    variants: 20
+    split_name: train
+

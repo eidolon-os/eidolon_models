@@ -305,16 +305,26 @@ class ChatClient:
         key_env = config.get("api_key_env", "EIDOLON_TRAIN_LLM_API_KEY")
         self.api_key = os.environ.get(key_env, "")
         self.timeout = float(config.get("timeout", 120))
+        self.request_options = {
+            name: config[name]
+            for name in ("max_tokens", "thinking", "reasoning_effort", "response_format")
+            if name in config
+        }
         if not self.base_url or not self.model:
             raise ValueError(
                 "llm generator needs base_url and model (or EIDOLON_TRAIN_LLM_BASE_URL / _MODEL)"
             )
 
     def complete(self, prompt: str, temperature: float = 0.9) -> str:
+        return self.complete_with_meta(prompt, temperature=temperature)["text"]
+
+    def complete_with_meta(self, prompt: str, temperature: float = 0.9) -> dict:
+        """Return the same completion plus provider usage for bounded data generation."""
         body = {
             "model": self.model,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": temperature,
+            **self.request_options,
         }
         req = urllib.request.Request(
             self.base_url + "/chat/completions",
@@ -328,4 +338,12 @@ class ChatClient:
         opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
         with opener.open(req, timeout=self.timeout) as resp:
             data = json.loads(resp.read())
-        return data["choices"][0]["message"]["content"]
+        content = data["choices"][0]["message"]["content"]
+        if not isinstance(content, str) or not content.strip():
+            raise ValueError("chat completion returned empty text content")
+        return {
+            "text": content,
+            "id": data.get("id"),
+            "model": data.get("model", self.model),
+            "usage": data.get("usage") or {},
+        }

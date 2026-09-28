@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 话匣子，讲起旧书里的故事就收不住，总被 {b} 提醒换气
+    b: 安静，喜欢翻书页的声音，偶尔一句冷笑话点醒 {a}
+  user: '{a}，昨天你说到那本缺了封皮的旧书里夹着一封信，先讲讲信是谁写的吧，讲完直接接着说后事，中间别停。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好呀！那封信是三十年前一位常来书屋的老先生写的，字迹歪歪扭扭，信纸都黄透了，写的是他想把这本书还给一个人，却始终没敢寄出去……
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_003_0

@@ -1,0 +1,90 @@
+{
+  "v6_train_author": {
+    "decision": "reject",
+    "reason": "结构验证未通过：exact flat string fields required。不从理由推写gold，不本地修补生成文本。"
+  },
+  "v6_train_continue_done": {
+    "decision": "reject",
+    "reason": "结构验证未通过：invalid acceptable actions。不从理由推写gold，不本地修补生成文本。"
+  },
+  "v6_train_end_pause": {
+    "decision": "reject",
+    "reason": "结构验证未通过：user/reason length。不从理由推写gold，不本地修补生成文本。"
+  },
+  "v6_train_handoff": {
+    "decision": "reject",
+    "reason": "结构验证未通过：invalid acceptable actions。不从理由推写gold，不本地修补生成文本。"
+  },
+  "v6_train_named": {
+    "decision": "accept",
+    "reason": "公开点名不同人物并限制其余发言，两个唯一标签均有依据。仅控制变化字段；两分支话题也不同，不声称逐词最小反事实。"
+  },
+  "v6_train_pause_discuss": {
+    "decision": "reject",
+    "reason": "结构验证未通过：invalid acceptable actions。不从理由推写gold，不本地修补生成文本。"
+  },
+  "v6_train_quiet": {
+    "decision": "reject",
+    "reason": "结构验证未通过：changed ['user', 'peer_author', 'peer_text']; expected only user。不从理由推写gold，不本地修补生成文本。"
+  },
+  "v6_train_same_name": {
+    "decision": "accept",
+    "reason": "同名无消歧依据与公开人格线索唯一指向b形成对照；不能凭作者ID猜被叫对象。"
+  },
+  "v6_val_named": {
+    "decision": "accept",
+    "reason": "问题正文一致，仅被点名与被要求等待的人物互换；资料不预先给出感官结果，不影响决定由谁回答。"
+  },
+  "v6s_train_end_pause": {
+    "decision": "accept",
+    "reason": "明确结束且不必回复对应finish；暂时静默等下一条对应wait。"
+  },
+  "v6s_train_handoff": {
+    "decision": "reject",
+    "reason": "ChatClient raised ValueError; no usable completion retained; no retry. Failed request counts toward 32; usage unknown."
+  },
+  "v6s_train_pause_discuss": {
+    "decision": "accept",
+    "reason": "完全暂停等下一句与允许所有人物互聊区别明确。个性不限制开放回应集合。"
+  },
+  "v6s_val_handoff": {
+    "decision": "reject",
+    "reason": "ChatClient raised ValueError; no usable completion retained; no retry. Failed request counts toward 32; usage unknown."
+  },
+  "v6s_val_pause_discuss": {
+    "decision": "accept",
+    "reason": "等待与旁听互聊标签明确。措辞与train同切片很近，只能作为近模板开发诊断。"
+  },
+  "v6s_val_same_name": {
+    "decision": "accept",
+    "reason": "x同名呼唤不能唯一指定；y用户公开给出的夜市占星经历与b身份唯一相符，允许b回答。用户本身提供关系事实，不要求把这条当作模型推断。"
+  },
+  "v6s_val_end_pause": {
+    "decision": "reject",
+    "reason": "共享格式字段集合不符，原稿隔离，不本地填补。"
+  },
+  "v6s_train_quiet": {
+    "decision": "reject",
+    "reason": "原标注在明确禁止回复时仍允许respond；盲复审纠正为wait。按预定一致性要求隔离，不能只采纳看似正确一侧。"
+  },
+  "v6s_val_quiet": {
+    "decision": "reject",
+    "reason": "共享格式字段集合不符，原稿隔离，不本地填补。"
+  },
+  "v6s_val_author": {
+    "decision": "reject",
+    "reason": "虽然双审同意作者续讲，但peer在第一人称发现后又说“请这位本人继续讲讲它的经过”，指代不自然且引入向不明对象交棒。原标注依赖预设目标忽略正文，拒收这对以免把歧义当成干净作者对照。"
+  },
+  "v6s_train_continue_done": {
+    "decision": "reject",
+    "reason": "作者字段填入显示姓名而不是槽位ID，严格结构检查失败；未复审，不本地猜改标签。"
+  },
+  "v6s_val_continue_done": {
+    "decision": "reject",
+    "reason": "作者字段填入显示姓名而不是槽位ID，严格结构检查失败；未复审，不本地猜改标签。"
+  },
+  "v6t_val_author": {
+    "decision": "reject",
+    "reason": "三个人格资料均只写“旅伴”，长度和人格关系约束均不满足；无盲复审，不放宽标准凑数。"
+  }
+}

@@ -1,0 +1,11 @@
+- mode: quiet
+  cast:
+    a: 话多热心，爱张罗，总想拉{b}一起凑热闹
+    b: 慢悠悠，附和两句就犯困，常被{a}数落
+  user: 今天先聊到这儿吧，我要收拾一下出门，你们都歇着别说话了，等我回来再说。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_002_0

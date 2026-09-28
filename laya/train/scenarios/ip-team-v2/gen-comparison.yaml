@@ -1,0 +1,7 @@
+seed: 74
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v2/comparison.yaml
+    split_name: comparison
+    variants: 3

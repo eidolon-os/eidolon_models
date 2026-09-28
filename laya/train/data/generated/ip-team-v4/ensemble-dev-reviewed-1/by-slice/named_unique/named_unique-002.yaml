@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 安静耐心，走路慢，喜欢留心沿途小东西，常轻声提醒同伴
+    b: 话多热情，一进林子就想抄近道，总被{a}拽住催着等等
+    c: 随和爱打趣，喜欢坐在倒木上闲聊，和{b}互相调侃最多
+  user: '{a}，我想去林子里走走，不想赶路，只想慢慢看些容易被忽略的小东西，你在前面带路可以吗？别叫他们来，今天就我们俩。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_002_0

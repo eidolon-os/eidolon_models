@@ -1,0 +1,80 @@
+- id: val_picnic
+  mode: group
+  tag: content_handoff
+  cast: {a: "爱想户外活动", b: "细心照顾出行限制", c: "善于收束"}
+  user: "想办一次不费力的野餐，你们商量。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一个容易到达的野餐地点"}
+    - heard: {speaker: a, text: "去地铁站旁的小公园，走路不远。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "承接小公园方案，补充座椅和天气准备"
+    - heard: {speaker: b, text: "带坐垫和水，天气不好就改天。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "简要汇总野餐方案"
+    - heard: {speaker: c, text: "地铁旁的小公园，带坐垫和水，天气不好改天。"}
+      action: wait
+      task: none
+- id: val_named_music
+  mode: named
+  tag: named_request
+  cast: {a: "会讲音乐入门", b: "擅长运动", c: "喜欢总结"}
+  user: "{a}，先给我说说爵士乐的节奏感，只你回答。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "简要解释爵士节奏与切分音"}
+    - heard: {speaker: a, text: "它常用切分节奏，让重拍的位置听起来更灵活。"}
+      action: finish
+      task: none
+- id: val_ambiguous_place
+  mode: group
+  tag: clarify
+  cast: {a: "擅长查路线", b: "善于澄清模糊指代"}
+  user: "帮我安排去那边的路。"
+  steps:
+    - {action: clarify, speaker: b, task: clarify, brief: "询问‘那边’的具体目的地"}
+- id: val_pause
+  mode: quiet
+  tag: wait
+  cast: {a: "安静善听", b: "爱讲故事"}
+  user: "先别接话，我想独处几分钟。"
+  steps:
+    - {action: wait, task: none}
+- id: val_end
+  mode: discuss
+  tag: finish
+  cast: {a: "擅长提出点子", b: "擅长归纳"}
+  user: "这个话题到这里就好，结束这一轮。"
+  steps:
+    - {action: finish, task: none}
+- id: val_override
+  mode: interrupt
+  tag: user_override
+  cast: {a: "懂花园布置", b: "懂室内灯光", c: "善于协调"}
+  prelude:
+    - {author: user, text: "讨论阳台的花。"}
+    - {author: a, text: "薄荷和迷迭香都能放在阳台。"}
+  user: "先不说花了，客厅怎么补一盏阅读灯？"
+  steps:
+    - {action: respond, speaker: b, task: answer, brief: "回应新提出的阅读灯问题，不继续谈花"}
+- id: val_no_action
+  mode: group
+  tag: abstain
+  cast: {a: "擅长活动安排", b: "善于总结"}
+  user: "给我再安排一个活动。"
+  steps:
+    - {action: abstain, task: none, allowed_actions: []}
+- id: val_same_member
+  mode: named
+  tag: same_member
+  cast: {a: "擅长讲自然知识", b: "善于做比喻"}
+  user: "{a}，先讲海潮的原因，随后你自己举个例子。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "说明月球引力与海潮"}
+    - heard: {speaker: a, text: "月球引力是潮汐的重要原因。"}
+      action: respond
+      speaker: a
+      task: build
+      brief: "为自己刚才的解释补一个生活化例子"

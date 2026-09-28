@@ -1,0 +1,5477 @@
+[
+  {
+    "id": "recovered-test-0-author_continuation-s1",
+    "local_id": "s1",
+    "batch": "test-0-author_continuation",
+    "split": "test",
+    "slice": "author_continuation",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "沈青梅",
+          "persona": "山庄旧主人之女，说话委婉含蓄，与众人相识二十年"
+        },
+        {
+          "name": "陆延声",
+          "persona": "沈青梅的旧日同窗，爱追问细节，性子急"
+        },
+        {
+          "name": "温故年",
+          "persona": "常年在山庄守夜的管事，沉稳寡言，与沈家两代交情"
+        },
+        {
+          "name": "许晚舟",
+          "persona": "新来的客人，沈青梅的朋友的朋友，好奇而礼貌"
+        }
+      ],
+      "user": "青梅姐，你刚才说那晚你在西厢房守着灯等消息，后来到底怎么样了？接着说说吧。",
+      "before": [
+        {
+          "by": 0,
+          "text": "那年雨下得比今晚还大，山庄的路被冲断了一半。"
+        },
+        {
+          "by": 0,
+          "text": "我提着灯守在西厢房，一整夜没合眼，就等着山下传来信。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "后半夜的时候，雨忽然小了些，我听见廊下有脚步声……"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名沈青梅继续讲西厢房守夜的事，after中她讲到脚步声便停，故事未完，应她本人继续。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "7d3e56d6247a7235108fe0917dd38dbdf67f3c68db43262444bec6b9bd0c9d18",
+    "recovered_from": "test-0-author_continuation-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名沈青梅继续讲西厢房守夜的事，after中她讲到脚步声便停，故事未完，应她本人继续。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "347a745e419a0637f6f4c7057e8d36e676d3114ff8ce0f170f6a783248e3453d",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "author_continuation",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-test-0-author_continuation-s2",
+    "local_id": "s2",
+    "batch": "test-0-author_continuation",
+    "split": "test",
+    "slice": "author_continuation",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "孟砚秋",
+          "persona": "山庄的老画家，喜欢在雨天讲旧事，语气温和带自嘲"
+        },
+        {
+          "name": "贺清和",
+          "persona": "孟砚秋多年的棋友，爱听故事，偶尔打趣"
+        },
+        {
+          "name": "白望舒",
+          "persona": "山庄的年轻账房，细心谨慎，敬重孟砚秋"
+        },
+        {
+          "name": "齐北渡",
+          "persona": "路过的旅人，话不多，耳朵却灵"
+        }
+      ],
+      "user": "砚秋先生，您刚讲到当年背着画箱翻后山那段，讲得正到要紧处，您自己接着往下讲吧。",
+      "before": [
+        {
+          "by": 1,
+          "text": "砚秋，你那幅没画完的雪景，到底是在哪儿画的？"
+        },
+        {
+          "by": 0,
+          "text": "说来惭愧，那年我背着画箱，硬是从后山小路翻过去的，一路摔了两跤。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "摔到第二跤的时候，画箱散了，颜料滚了一坡，我趴在雪里捡了半天……"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确请孟砚秋本人接着往下讲，after中他讲到捡颜料处尚未讲完，应孟砚秋继续发言。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "7d3e56d6247a7235108fe0917dd38dbdf67f3c68db43262444bec6b9bd0c9d18",
+    "recovered_from": "test-0-author_continuation-s2",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确请孟砚秋本人接着往下讲，after中他讲到捡颜料处尚未讲完，应孟砚秋继续发言。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "347a745e419a0637f6f4c7057e8d36e676d3114ff8ce0f170f6a783248e3453d",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "author_continuation",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-test-0-mention_not_address-s1",
+    "local_id": "s1",
+    "batch": "test-0-mention_not_address",
+    "split": "test",
+    "slice": "mention_not_address",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "绫绸",
+          "persona": "戏院后台的提线木偶，说话委婉含蓄，总先替别人着想，与乌木是多年搭档"
+        },
+        {
+          "name": "乌木",
+          "persona": "性格急躁的木偶武生，刀子嘴豆腐心，最关心绫绸"
+        },
+        {
+          "name": "老弦",
+          "persona": "管戏箱的老木偶，稳重话少，常替大家调和"
+        }
+      ],
+      "user": "刚才听到说乌木的旧刀鞘裂了，绫绸，你们后台还有备用的鞘吗？",
+      "before": [
+        {
+          "by": 0,
+          "text": "乌木，你那刀鞘是不是磕裂了？收进箱子时我听见响了一声。"
+        },
+        {
+          "by": 1,
+          "text": "裂就裂了，不碍事，别声张。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名绫绸询问后台是否有备用刀鞘，绫绸作为后台木偶直接被要求回答；乌木虽是刀鞘主人但未被点名，普通询问不强制其回应。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "ba787655859063c157bad50b5f7a3a6de22710eb97eeb26ad8f09620972bdb1a",
+    "recovered_from": "test-0-mention_not_address-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名绫绸询问后台是否有备用刀鞘，绫绸作为后台木偶直接被要求回答；乌木虽是刀鞘主人但未被点名，普通询问不强制其回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "5d319fdc46208efa0ca5d13270ba1cc3c22d1b261214236d8f4752ea4635b9d7",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "mention_not_address",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-test-0-mention_not_address-s2",
+    "local_id": "s2",
+    "batch": "test-0-mention_not_address",
+    "split": "test",
+    "slice": "mention_not_address",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "绒点",
+          "persona": "胆小怕黑的木偶旦角，说话软，依赖同伴，与硬线是师徒"
+        },
+        {
+          "name": "硬线",
+          "persona": "直来直去的老木偶师傅，刀子嘴豆腐心，疼绒点"
+        },
+        {
+          "name": "团粉",
+          "persona": "爱管闲事的热心木偶，消息灵通，喜欢张罗"
+        }
+      ],
+      "user": "听说团粉今晚要守后台，硬线，那咱们几个就都散了吧？",
+      "before": [
+        {
+          "by": 2,
+          "text": "今晚我留下值夜，灯我全都检查过了。"
+        },
+        {
+          "by": 1,
+          "text": "行，那我早些回格子。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名硬线并等待其确认是否散场，硬线刚表示要早些回格子，应回应确认；团粉虽是守夜者但未被点名，且问题主要征询硬线意见。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "ba787655859063c157bad50b5f7a3a6de22710eb97eeb26ad8f09620972bdb1a",
+    "recovered_from": "test-0-mention_not_address-s2",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名硬线并等待其确认是否散场，硬线刚表示要早些回格子，应回应确认；团粉虽是守夜者但未被点名，且问题主要征询硬线意见。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "5d319fdc46208efa0ca5d13270ba1cc3c22d1b261214236d8f4752ea4635b9d7",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "mention_not_address",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-train-0-same_name-s1",
+    "local_id": "s1",
+    "batch": "train-0-same_name",
+    "split": "train",
+    "slice": "same_name",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林阿云",
+          "persona": "急性子的信使，说话冲但心软，爱抢活干。"
+        },
+        {
+          "name": "周阿云",
+          "persona": "慢性子的老信使，遇事先泡壶茶，跟林阿云是老搭档，常被催。"
+        }
+      ],
+      "user": "阿云，你倒是回个话啊，风大听不清就算了。",
+      "before": [
+        {
+          "by": 0,
+          "text": "刚才那阵穿云风真够呛，信差点吹跑了。"
+        },
+        {
+          "by": 1,
+          "text": "急啥，风停了路自然就清楚了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "abstain"
+      ],
+      "why": "user只喊'阿云'，两位角色同名且无消歧依据，公开信息不足以确定叫哪位"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "c72cfce30301e540da08c1a01545312a71c17a83754513f649f8e5d29b861744",
+    "recovered_from": "train-0-same_name-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "abstain"
+      ],
+      "why": "user只喊'阿云'，两位角色同名且无消歧依据，公开信息不足以确定叫哪位",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "34da799fc905eae8333b66696fb25922c77949ffb87077449d4d397ca7d05af8",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-train-0-same_name-s2",
+    "local_id": "s2",
+    "batch": "train-0-same_name",
+    "split": "train",
+    "slice": "relationship_reference",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "林阿云",
+          "persona": "急性子的信使，说话冲但心软，爱抢活干。"
+        },
+        {
+          "name": "周阿云",
+          "persona": "慢性子的老信使，遇事先泡壶茶，是林阿云敬重的师父。"
+        }
+      ],
+      "user": "师父，云梯那头我够不着，您经验多，帮着看看呗。",
+      "before": [
+        {
+          "by": 0,
+          "text": "师父，这云梯第三节又晃了，踩上去我心都悬着。"
+        },
+        {
+          "by": 1,
+          "text": "先下来，别硬撑，梯子的事交给我琢磨。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "user明确点名'师父'并请其帮忙看云梯，周阿云是林阿云的师父，明确指定仅此人回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "c72cfce30301e540da08c1a01545312a71c17a83754513f649f8e5d29b861744",
+    "recovered_from": "train-0-same_name-s2",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "user明确点名'师父'并请其帮忙看云梯，周阿云是林阿云的师父，明确指定仅此人回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "34da799fc905eae8333b66696fb25922c77949ffb87077449d4d397ca7d05af8",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-train-0-same_name-s3",
+    "local_id": "s3",
+    "batch": "train-0-same_name",
+    "split": "train",
+    "slice": "open_conversation",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "苏晚舟",
+          "persona": "云海邮站的新人，话痨，遇事爱问东问西。"
+        },
+        {
+          "name": "顾长风",
+          "persona": "邮站的老前辈，话少但靠得住，看不惯苏晚舟毛躁。"
+        }
+      ],
+      "user": "你俩随便聊，我就在边上听听，不用管我。",
+      "before": [],
+      "after": [
+        {
+          "by": 0,
+          "text": "顾长风，今天那批云信是不是又得飞三趟才送得完？"
+        },
+        {
+          "by": 1,
+          "text": "两趟。你把包裹按风向先分好，省得半路乱翻。"
+        },
+        {
+          "by": 0,
+          "text": "行，那我先按东南风那摞来分。"
+        }
+      ],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "user允许两人互聊并旁听；苏晚舟刚说完要按东南风那摞分，可继续或补充，顾长风也可回应分拣安排，两人均为合理候选"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "c72cfce30301e540da08c1a01545312a71c17a83754513f649f8e5d29b861744",
+    "recovered_from": "train-0-same_name-s3",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "user允许两人互聊并旁听；苏晚舟刚说完要按东南风那摞分，可继续或补充，顾长风也可回应分拣安排，两人均为合理候选",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "34da799fc905eae8333b66696fb25922c77949ffb87077449d4d397ca7d05af8",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-train-1-interrupt_redirect-s1",
+    "local_id": "s1",
+    "batch": "train-1-interrupt_redirect",
+    "split": "train",
+    "slice": "interrupt_redirect",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "陈潮生",
+          "persona": "渔家老大，嗓门大，办事爽快，最爱张罗节庆事宜"
+        },
+        {
+          "name": "林小舟",
+          "persona": "潮生从小一起长大的表弟，心思细，负责记账管物"
+        },
+        {
+          "name": "吴阿灯",
+          "persona": "灯塔看守人的儿子，话不多但动手能力极强"
+        },
+        {
+          "name": "郑海燕",
+          "persona": "杂货铺老板娘的儿子，爱凑热闹，消息最灵通"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "祭港那天舞龙队走哪条街，我看还是从老码头出发稳当。"
+        },
+        {
+          "by": 1,
+          "text": "账上只剩三十七块了，烟花得省着买，龙头的红布倒是还够。"
+        },
+        {
+          "by": 3,
+          "text": "我听说对面岛的船队也要来凑热闹，怕是老码头挤不下。"
+        }
+      ],
+      "user": "先别争路线了，郑海燕，你不是消息最灵吗，去打听一下那船队到底几个人来，晚饭前给我个准信。",
+      "after": [],
+      "gold": [
+        "respond:3"
+      ],
+      "why": "用户明确点名郑海燕去打听船队消息并要准信，仅他可回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "1db49b8c2d59b0df8170f69843c627978ece6c3b4f6d5a81784193c020343e2a",
+    "recovered_from": "train-1-interrupt_redirect-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:3"
+      ],
+      "why": "用户明确点名郑海燕去打听船队消息并要准信，仅他可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "f325f6494130bf0ac065af88b7ef6cf0a9d8788542c08226c3fae932d8b2d283",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-train-1-interrupt_redirect-s2",
+    "local_id": "s2",
+    "batch": "train-1-interrupt_redirect",
+    "split": "train",
+    "slice": "interrupt_redirect",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "苏念帆",
+          "persona": "船厂师傅的女儿，性子急，说话直来直去"
+        },
+        {
+          "name": "何晚风",
+          "persona": "念帆的同班好友，慢性子，爱写点小诗"
+        },
+        {
+          "name": "杜石头",
+          "persona": "铁匠铺学徒，力气大，嘴笨但心热"
+        },
+        {
+          "name": "顾青禾",
+          "persona": "镇上教书先生的侄子，爱较真，凡事要讲个道理"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "灯棚的架子我下午就能搭好，木头都搬到滩上了。"
+        },
+        {
+          "by": 2,
+          "text": "钉子不够的话来铺里拿，我师父说了节庆用的一律不收钱。"
+        },
+        {
+          "by": 1,
+          "text": "晚上灯一亮，海面像撒了一层碎银子，我想到一句诗了。"
+        }
+      ],
+      "user": "顾青禾，你来把灯棚的位置画张图，别到时候架子搭歪了又要返工。",
+      "after": [],
+      "gold": [
+        "respond:3"
+      ],
+      "why": "用户明确点名顾青禾画灯棚位置图，仅此人可回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "1db49b8c2d59b0df8170f69843c627978ece6c3b4f6d5a81784193c020343e2a",
+    "recovered_from": "train-1-interrupt_redirect-s2",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:3"
+      ],
+      "why": "用户明确点名顾青禾画灯棚位置图，仅此人可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "f325f6494130bf0ac065af88b7ef6cf0a9d8788542c08226c3fae932d8b2d283",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-train-1-interrupt_redirect-s3",
+    "local_id": "s3",
+    "batch": "train-1-interrupt_redirect",
+    "split": "train",
+    "slice": "interrupt_redirect",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "罗小满",
+          "persona": "渔市收账姑娘的弟弟，机灵爱笑，人缘好"
+        },
+        {
+          "name": "唐九斤",
+          "persona": "罗小满的邻居，厨师家孩子，闻着味就知道谁家做什么菜"
+        },
+        {
+          "name": "白鹭洲",
+          "persona": "外地转学来的少年，有点腼腆，正在慢慢融入大家"
+        },
+        {
+          "name": "袁大浪",
+          "persona": "船长家的独子，见多识广，爱吹嘘航海见闻"
+        }
+      ],
+      "before": [
+        {
+          "by": 3,
+          "text": "我跟你们说，南边港的 lantern 船有十几米长，挂的灯比咱们整个码头都多。"
+        },
+        {
+          "by": 2,
+          "text": "真的假的，我还没见过那样的船，今年能看到吗。"
+        },
+        {
+          "by": 0,
+          "text": "别听大浪吹，他去年还说见过会唱歌的鲸鱼呢。"
+        }
+      ],
+      "user": "唐九斤，晚上的宴席你掌勺行不行，白鹭洲第一次来咱们这儿过节，得整点拿手的。",
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名唐九斤问掌勺之事，仅此人可回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "1db49b8c2d59b0df8170f69843c627978ece6c3b4f6d5a81784193c020343e2a",
+    "recovered_from": "train-1-interrupt_redirect-s3",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名唐九斤问掌勺之事，仅此人可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "f325f6494130bf0ac065af88b7ef6cf0a9d8788542c08226c3fae932d8b2d283",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-train-1-same_name-s1",
+    "local_id": "s1",
+    "batch": "train-1-same_name",
+    "split": "train",
+    "slice": "same_name",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林铃",
+          "persona": "钟楼顶层的报时精灵，做事一板一眼，说话总带着对齿轮的爱惜。"
+        },
+        {
+          "name": "林铃",
+          "persona": "住在钟摆旁边的守夜精灵，性子懒散爱打趣，常拿自己是同名的梗开玩笑。"
+        },
+        {
+          "name": "青苔",
+          "persona": "给两座钟上油的小工匠精灵，热心但耳背，喜欢凑热闹。"
+        }
+      ],
+      "user": "林铃，你说说今晚钟声听起来怎么样？",
+      "before": [
+        {
+          "by": 0,
+          "text": "第四下钟声比平时沉了半分，我记在本子上了。"
+        },
+        {
+          "by": 1,
+          "text": "沉就沉呗，钟摆晃着晃着也困了，哈哈。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "abstain"
+      ],
+      "why": "用户点名'林铃'但两位林铃同名且无消歧依据，无法可靠选一人。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "f778063717b2961dfb226e1d53d6c2a7bf254a3e5a1cfd980f9c0eeeb046506d",
+    "recovered_from": "train-1-same_name-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "abstain"
+      ],
+      "why": "用户点名'林铃'但两位林铃同名且无消歧依据，无法可靠选一人。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "1471563ce382e846b1d142566bf7dd914e73a9c9b6a9b51d06d0e558c66d0013",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-train-1-same_name-s2",
+    "local_id": "s2",
+    "batch": "train-1-same_name",
+    "split": "train",
+    "slice": "same_name",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "林铃",
+          "persona": "钟楼顶层的报时精灵，做事一板一眼，说话总带着对齿轮的爱惜。"
+        },
+        {
+          "name": "林铃",
+          "persona": "住在钟摆旁边的守夜精灵，性子懒散爱打趣，常拿自己是同名的梗开玩笑。"
+        },
+        {
+          "name": "铜绿",
+          "persona": "擦亮钟面的老精灵，脾气温和，最疼爱做报时活的那个林铃，当她是徒弟。"
+        }
+      ],
+      "user": "让铜绿的徒弟那个林铃说说吧，齿轮今天上油顺利吗？",
+      "before": [
+        {
+          "by": 2,
+          "text": "我那徒弟手稳，报时这活儿交给她我放心。"
+        },
+        {
+          "by": 1,
+          "text": "又是我和徒弟同名，笑死，钟摆都要笑歪了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名'铜绿的徒弟那个林铃'，即报时精灵林铃（索引0）。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "f778063717b2961dfb226e1d53d6c2a7bf254a3e5a1cfd980f9c0eeeb046506d",
+    "recovered_from": "train-1-same_name-s2",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名'铜绿的徒弟那个林铃'，即报时精灵林铃（索引0）。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "1471563ce382e846b1d142566bf7dd914e73a9c9b6a9b51d06d0e558c66d0013",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-train-1-same_name-s3",
+    "local_id": "s3",
+    "batch": "train-1-same_name",
+    "split": "train",
+    "slice": "open_conversation",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "檐雨",
+          "persona": "住在钟楼檐角的精灵，爱听雨声，说话轻声细语，胆子小。"
+        },
+        {
+          "name": "铁栓",
+          "persona": "看守钟楼大门的精灵，嗓门大，热心肠，总担心大家着凉。"
+        }
+      ],
+      "user": "今晚钟楼这边大家聊聊天就好，我先不插话，你们随意。",
+      "before": [],
+      "after": [
+        {
+          "by": 1,
+          "text": "大门我闩好了，风灌不进来，你们放心聊！"
+        },
+        {
+          "by": 0,
+          "text": "檐角滴答滴答的，像小雨在敲钟……真好听。"
+        }
+      ],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户允许大家互聊、自己旁听，两位精灵均可继续回应，两个都是合理候选。"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "f778063717b2961dfb226e1d53d6c2a7bf254a3e5a1cfd980f9c0eeeb046506d",
+    "recovered_from": "train-1-same_name-s3",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户允许大家互聊、自己旁听，两位精灵均可继续回应，两个都是合理候选。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "1471563ce382e846b1d142566bf7dd914e73a9c9b6a9b51d06d0e558c66d0013",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-val-0-direct_address-s1",
+    "local_id": "s1",
+    "batch": "val-0-direct_address",
+    "split": "val",
+    "slice": "direct_address",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "沈牧遥",
+          "persona": "老驿丞，话不多但心细，总记得谁的马料还差多少"
+        },
+        {
+          "name": "白鹿笙",
+          "persona": "年轻的皮货商，爱笑，围着炭炉就停不下来嘴"
+        }
+      ],
+      "before": [
+        {
+          "by": 1,
+          "text": "这场雪怕是要下到后半夜，炉子里的柴我添过了。"
+        },
+        {
+          "by": 0,
+          "text": "嗯，马棚那边我傍晚已经钉好了挡风的草帘。"
+        }
+      ],
+      "user": "白鹿笙，你从南边过来的时候，路上那些村子还有人家开门做买卖吗？我盘算着回程带点什么。",
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名白鹿笙回答关于南路沿途村落买卖的问题，只有他能回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "bd796ce7c25345f6b37fe0aba51a9a2d4101f0d00914954ebc952156ef9997f5",
+    "recovered_from": "val-0-direct_address-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名白鹿笙回答关于南路沿途村落买卖的问题，只有他能回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "8f152ff7f9a68c2bb7abef84859db14a288606be2d58d300155e5657ad3e02eb",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "direct_address",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-val-0-direct_address-s2",
+    "local_id": "s2",
+    "batch": "val-0-direct_address",
+    "split": "val",
+    "slice": "direct_address",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "贺兰秋棠",
+          "persona": "驿站厨娘，泼辣利落，谁的碗空了她都盯着"
+        },
+        {
+          "name": "顾行舟",
+          "persona": "沉默寡言的护镖人，与贺兰秋棠是多年老相识，嘴笨心热"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "锅里的热汤还剩一勺，谁没喝赶紧的。"
+        },
+        {
+          "by": 1,
+          "text": "我喝过了，替我把那勺留给赶夜路的人吧。"
+        }
+      ],
+      "user": "顾行舟，明天一早你要不要跟我同路走北坡？你懂那些雪窝子的深浅，跟着你我心里踏实。",
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名顾行舟，问他是否同路走北坡并认可其雪地经验，仅顾行舟可回应；贺兰秋棠虽在场但未被点名且问题针对顾本人"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "bd796ce7c25345f6b37fe0aba51a9a2d4101f0d00914954ebc952156ef9997f5",
+    "recovered_from": "val-0-direct_address-s2",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名顾行舟，问他是否同路走北坡并认可其雪地经验，仅顾行舟可回应；贺兰秋棠虽在场但未被点名且问题针对顾本人",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "8f152ff7f9a68c2bb7abef84859db14a288606be2d58d300155e5657ad3e02eb",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "direct_address",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-val-0-end_or_wait-s1",
+    "local_id": "s1",
+    "batch": "val-0-end_or_wait",
+    "split": "val",
+    "slice": "end_or_wait",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "苇青",
+          "persona": "船缆铺老板娘，热心快嘴，爱张罗湖上集市的大小事"
+        },
+        {
+          "name": "周砚",
+          "persona": "沉默寡言的修船匠，苇青多年的老邻居，话少但实在"
+        },
+        {
+          "name": "小汀",
+          "persona": "苇青的侄女，十五岁，帮着看摊，好奇心旺盛"
+        },
+        {
+          "name": "老鳜鱼",
+          "persona": "卖鱼干的老翁，风趣爱讲古，和集市人人都熟"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "明早雨要是停了，咱们把渡口那排摊位挪个位置吧"
+        },
+        {
+          "by": 3,
+          "text": "挪可以，鱼干摊得靠水边，老规矩"
+        },
+        {
+          "by": 1,
+          "text": "缆绳架我提前搬过去就是"
+        }
+      ],
+      "user": "那就这么定了，都去忙吧，雨停再见。",
+      "after": [
+        {
+          "by": 2,
+          "text": "姑妈，那我现在收摊啦？"
+        },
+        {
+          "by": 0,
+          "text": "收吧收吧，路上滑，慢点走"
+        }
+      ],
+      "gold": [
+        "finish"
+      ],
+      "why": "用户说“都去忙吧，雨停再见”已明确收束，after中小汀询问收摊、苇青已答复，请求完整满足，无需任何人再接话"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "14f246541c058722f3e2235104233cf4c993cc060de506bd3b4531fe6bbb65c0",
+    "recovered_from": "val-0-end_or_wait-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "finish"
+      ],
+      "why": "用户说“都去忙吧，雨停再见”已明确收束，after中小汀询问收摊、苇青已答复，请求完整满足，无需任何人再接话",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "9150a2251d54088d77ab953995b6eb393a933acf492a23cff0bee83932fe1a08",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": true
+  },
+  {
+    "id": "recovered-val-0-end_or_wait-s3",
+    "local_id": "s3",
+    "batch": "val-0-end_or_wait",
+    "split": "val",
+    "slice": "explicit_handoff",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "青梧",
+          "persona": "湖上书摊的先生，斯文温和，遇事爱琢磨"
+        },
+        {
+          "name": "麻三嫂",
+          "persona": "卖菱角的泼辣妇人，嗓门亮，心直口快"
+        },
+        {
+          "name": "程小满",
+          "persona": "青梧收的学徒，十二岁，机灵嘴甜"
+        },
+        {
+          "name": "顾老头",
+          "persona": "补网匠，脾气倔，认死理，和麻三嫂爱拌嘴"
+        }
+      ],
+      "before": [
+        {
+          "by": 1,
+          "text": "顾老头，你那渔网还欠我三个菱角钱呢！"
+        },
+        {
+          "by": 3,
+          "text": "胡说，上个月我拿两条鱼抵过了"
+        },
+        {
+          "by": 2,
+          "text": "先生，他们又吵啦，要劝吗？"
+        }
+      ],
+      "user": "随他们去吧，谁对谁错你们自己评评理。",
+      "after": [
+        {
+          "by": 0,
+          "text": "依我看，两边各让一步便是"
+        },
+        {
+          "by": 1,
+          "text": "让？我先让，他网钱更不还了！"
+        },
+        {
+          "by": 0,
+          "text": "小满，你说说，账该怎么算"
+        }
+      ],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "青梧明确点名“小满，你说说”，用户也让大家评理，明确点名优先，仅程小满可回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "14f246541c058722f3e2235104233cf4c993cc060de506bd3b4531fe6bbb65c0",
+    "recovered_from": "val-0-end_or_wait-s3",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "青梧明确点名“小满，你说说”，用户也让大家评理，明确点名优先，仅程小满可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "9150a2251d54088d77ab953995b6eb393a933acf492a23cff0bee83932fe1a08",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "recovered-val-0-pause_or_listen-s1",
+    "local_id": "s1",
+    "batch": "val-0-pause_or_listen",
+    "split": "val",
+    "slice": "pause_or_listen",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "苔音",
+          "persona": "苔藓园的老园丁，说话慢悠悠，爱用苔藓打比方，心细如发"
+        },
+        {
+          "name": "石芽",
+          "persona": "苔音的侄子，性子急躁，负责给地下花园引光，总想出风头"
+        },
+        {
+          "name": "露珠婶",
+          "persona": "住在水渠边的邻居，热心肠，喜欢打听各家新鲜事"
+        }
+      ],
+      "user": "我想让苔音说说去年冬天苔藓毯是怎么救活那片菌圃的，你慢慢讲，我先去翻翻种球罐子，回来接着听。",
+      "before": [
+        {
+          "by": 0,
+          "text": "石芽这孩子今天又把反光镜调歪了，水渠那边的菌圃都快蔫了。"
+        },
+        {
+          "by": 1,
+          "text": "姑，我那不是在试新角度嘛，再说菌圃去年冬天也熬过来过。"
+        },
+        {
+          "by": 2,
+          "text": "可不是嘛，那年全靠铺了层苔藓毯，不然早冻透了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名苔音讲述去年冬天苔藓毯救菌圃的事，且表示离开后回来接着听，苔音尚未开讲，应由此人回应"
+    },
+    "status": "annotated_pending_audit",
+    "generator_sha256": "7c42a82479327dc5c21b4f93e010f7970c354d3cd005fa62afbe5d034b362cb6",
+    "recovered_from": "val-0-pause_or_listen-s1",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名苔音讲述去年冬天苔藓毯救菌圃的事，且表示离开后回来接着听，苔音尚未开讲，应由此人回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "e5f2d72dc9a532464d23a1d09e5a76dc8c11b44c1f49949d2da276ed04f54511",
+    "annotation_mode": "format_only_reparse_then_blind_glm_label_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": false
+  },
+  {
+    "id": "test-0-direct_address-s1",
+    "local_id": "s1",
+    "split": "test",
+    "slice": "direct_address",
+    "batch": "test-0-direct_address",
+    "generator_sha256": "45fdc0cc2b136fa8b2d9d8400281192afe10fc32b2aa9fbb714c48950f1e064d",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "陆远舟",
+          "persona": "老船长的儿子，随父亲在星际旧船上长大，沉稳话少，熟悉船的每一段管道"
+        },
+        {
+          "name": "温梨",
+          "persona": "船上的植物维护员，性格温柔细腻，负责温室最后的地球种子"
+        },
+        {
+          "name": "何叠",
+          "persona": "年轻的轮机员，性子急但心热，一直盼着回地球那天"
+        },
+        {
+          "name": "陆老先生",
+          "persona": "老船长，陆远舟的父亲，固执念旧，把归乡看成一生的执念"
+        },
+        {
+          "name": "沈砚",
+          "persona": "船上的记录员，安静好学，爱向长辈打听旧航程的故事"
+        }
+      ],
+      "user": "温梨，温室里那批种子现在怎么样了？快到家了吧，你打算怎么安置它们？",
+      "before": [
+        {
+          "by": 3,
+          "text": "还有四十天就能看见地球了，我这辈子等的就是这一天。"
+        },
+        {
+          "by": 2,
+          "text": "何叠已经把引擎检修了两遍，就怕关键时刻掉链子。"
+        },
+        {
+          "by": 1,
+          "text": "温室这几日我把光照调回地球节律了，种子们比谁都先'到家'。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户点名温梨询问种子情况与安置打算，仅温梨可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户点名温梨询问种子情况与安置打算，仅温梨可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "04b6a11cceabcb833409d1763158ee5d2b40184aedafa22f91931623aca11665",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "direct_address",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-direct_address-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "direct_address",
+    "batch": "test-0-direct_address",
+    "generator_sha256": "45fdc0cc2b136fa8b2d9d8400281192afe10fc32b2aa9fbb714c48950f1e064d",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "祝临",
+          "persona": "旧船的领航员，谨慎多思，总把航线图看得比命重"
+        },
+        {
+          "name": "宋苗",
+          "persona": "船上的炊事员，热络爱张罗，一心想在归乡宴上露一手"
+        },
+        {
+          "name": "祁岸",
+          "persona": "沉默的舱体维修工，与祝临是多年搭档，懂他每个手势"
+        },
+        {
+          "name": "阮澄",
+          "persona": "随船的医生，语气温和，擅长宽慰人心"
+        },
+        {
+          "name": "屠慎",
+          "persona": "船上的通讯官，性子直，想到什么说什么"
+        }
+      ],
+      "user": "宋苗和祁岸都别急着下结论，祝临，你说归航路线要不要再核一遍？",
+      "before": [
+        {
+          "by": 4,
+          "text": "通讯上已经能收到地球方向的信号了，就是断断续续。"
+        },
+        {
+          "by": 1,
+          "text": "那我先定菜单了！归乡宴我想用库存最后一点面粉做面食。"
+        },
+        {
+          "by": 2,
+          "text": "外壳我查过了，问题不大，路线的事得祝临拿主意。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名祝临回答路线是否再核一遍，仅祝临可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名祝临回答路线是否再核一遍，仅祝临可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "04b6a11cceabcb833409d1763158ee5d2b40184aedafa22f91931623aca11665",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "direct_address",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-end_or_wait-s1",
+    "local_id": "s1",
+    "split": "test",
+    "slice": "end_or_wait",
+    "batch": "test-0-end_or_wait",
+    "generator_sha256": "188aafd02184ce8a8f617b0765b622291b1fc656132f13844f4e1e99dd76de75",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "沈青梧",
+          "persona": "山庄主人，沉稳周到，惯于照顾旧友情绪"
+        },
+        {
+          "name": "陆知遥",
+          "persona": "多年老友，健谈热心，喜欢张罗话题"
+        },
+        {
+          "name": "温叙白",
+          "persona": "沉默寡言的旧友，话少但诚恳"
+        },
+        {
+          "name": "江晚棠",
+          "persona": "随性洒脱的老友，爱打趣，常替人收场"
+        }
+      ],
+      "user": "夜太深了，今晚就聊到这里吧，各位早些歇息。",
+      "before": [
+        {
+          "by": 1,
+          "text": "难得聚齐，我可有一肚子话要慢慢说。"
+        },
+        {
+          "by": 3,
+          "text": "留着明天说也一样，雨声听着都快睡着了。"
+        },
+        {
+          "by": 0,
+          "text": "壁炉的火我看过了，夜里不冷，大家安心睡。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "finish"
+      ],
+      "why": "用户明确宣布今晚聊天结束，请求在user处已收束，无人在after补充，本轮应结束"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "finish"
+      ],
+      "why": "用户明确宣布今晚聊天结束，请求在user处已收束，无人在after补充，本轮应结束",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "a712c2c02124a8cc45b73b6faf64f0e34f94afd025aa63c2f61c89eb53104662",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-end_or_wait-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "end_or_wait",
+    "batch": "test-0-end_or_wait",
+    "generator_sha256": "188aafd02184ce8a8f617b0765b622291b1fc656132f13844f4e1e99dd76de75",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "顾长风",
+          "persona": "老练的旅人，遇事冷静，说话直"
+        },
+        {
+          "name": "白洛笙",
+          "persona": "细心温柔的老友，总先关心旁人"
+        },
+        {
+          "name": "纪云舟",
+          "persona": "好奇多问的旧识，爱追问细节"
+        },
+        {
+          "name": "裴映真",
+          "persona": "爽朗直率的旧友，护着众人"
+        }
+      ],
+      "user": "刚才那阵怪响，到底是谁去后院看一眼比较稳妥？",
+      "before": [
+        {
+          "by": 2,
+          "text": "你们听见没有，后院好像有响动。"
+        },
+        {
+          "by": 1,
+          "text": "别吓人，多半是风吹开了柴房的门。"
+        },
+        {
+          "by": 3,
+          "text": "那也不能干坐着，总得有人去确认。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "我去吧，走夜路熟，你们谁都别跟来。"
+        }
+      ],
+      "gold": [
+        "finish"
+      ],
+      "why": "用户问谁去后院查看，顾长风已在after主动应下并安排妥当（'我去吧，你们谁都别跟来'），请求已得到满足，无需他人重复回答"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "finish"
+      ],
+      "why": "用户问谁去后院查看，顾长风已在after主动应下并安排妥当（'我去吧，你们谁都别跟来'），请求已得到满足，无需他人重复回答",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "a712c2c02124a8cc45b73b6faf64f0e34f94afd025aa63c2f61c89eb53104662",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-explicit_handoff-s1",
+    "local_id": "s1",
+    "split": "test",
+    "slice": "explicit_handoff",
+    "batch": "test-0-explicit_handoff",
+    "generator_sha256": "ed99b7c245681b0ec96bf01f8d1d7ea13b69115745e07883ef3231102c083f17",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "沈孤帆",
+          "persona": "老船长，沉稳寡言，习惯望舷窗外的星图，与林潮生有二十年交情"
+        },
+        {
+          "name": "林潮生",
+          "persona": "轮机长，嗓门大，爱讲旧船往事，最服沈孤帆"
+        },
+        {
+          "name": "薇拉·韩",
+          "persona": "领航员，说话委婉，总在整理航线记录，尊敬沈孤帆"
+        },
+        {
+          "name": "老唐",
+          "persona": "厨师，话痨，喜欢在饭点念叨船上老规矩"
+        },
+        {
+          "name": "苏晚",
+          "persona": "医士，温和细心，爱替大家操心的姐姐型人物"
+        },
+        {
+          "name": "陈拾",
+          "persona": "年轻信号员，好奇多问，总缠着林潮生听故事"
+        }
+      ],
+      "user": "大家坐一块儿聊聊这条旧船吧，你们互相说，我听着。",
+      "before": [],
+      "after": [
+        {
+          "by": 1,
+          "text": "要聊这条船可有的说了，我跟着她跑的年头比陈拾岁数都大。"
+        },
+        {
+          "by": 1,
+          "text": "不过老船长的记性比我好，沈孤帆，你说说当年咱们是怎么熬过那次动力舱起火的？"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "林潮生明确点名请沈孤帆讲述动力舱起火往事，用户允许互聊旁听，被点名者沈孤帆（索引0）应回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "林潮生明确点名请沈孤帆讲述动力舱起火往事，用户允许互聊旁听，被点名者沈孤帆（索引0）应回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c5fdb5c157bc4af8abb14bf27b6b79d3849a45a9e69fab6b4ff735bab8ddaeb8",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "test-0-explicit_handoff-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "explicit_handoff",
+    "batch": "test-0-explicit_handoff",
+    "generator_sha256": "ed99b7c245681b0ec96bf01f8d1d7ea13b69115745e07883ef3231102c083f17",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "秦慕舟",
+          "persona": "船主，重情面，把归乡看得比什么都重，与纪云溪是多年伙伴"
+        },
+        {
+          "name": "纪云溪",
+          "persona": "随船修理工，性子直爽，嘴上不服软心里惦记大家"
+        },
+        {
+          "name": "白鹭洲",
+          "persona": "文书，安静爱记录，替秦慕舟管船上的旧账"
+        },
+        {
+          "name": "贺小满",
+          "persona": "见习船员，活泼爱插话，崇拜纪云溪"
+        },
+        {
+          "name": "温郁",
+          "persona": "种植舱管理员，性子慢，说话轻声细语"
+        },
+        {
+          "name": "柯北",
+          "persona": "老领航员，稳当，爱讲航线上的旧闻"
+        }
+      ],
+      "user": "快到家了，你们几个商量下回去第一件事做什么吧，我在旁边听着。",
+      "before": [
+        {
+          "by": 0,
+          "text": "三年了，船还在，人也都在，这口气总算能松一松。"
+        }
+      ],
+      "after": [
+        {
+          "by": 1,
+          "text": "第一件事当然是给这条老船好好检修，别的不急。"
+        },
+        {
+          "by": 1,
+          "text": "不过纪念的章程都是你管的，白鹭洲，你来给大伙儿念念归乡清单吧。"
+        }
+      ],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "纪云溪明确点名白鹭洲（索引2）念归乡清单，用户允许互聊旁听，被点名者应回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "纪云溪明确点名白鹭洲（索引2）念归乡清单，用户允许互聊旁听，被点名者应回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c5fdb5c157bc4af8abb14bf27b6b79d3849a45a9e69fab6b4ff735bab8ddaeb8",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "test-0-interrupt_redirect-s1",
+    "local_id": "s1",
+    "split": "test",
+    "slice": "interrupt_redirect",
+    "batch": "test-0-interrupt_redirect",
+    "generator_sha256": "f7d881e8ffe2d4f99fde8375af5743c8c56c16744616477288f9f1bf9496ac5a",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "老弦叔",
+          "persona": "木偶剧团里资格最老的提线木偶，说话慢条斯理，总操心后台道具"
+        },
+        {
+          "name": "小绒儿",
+          "persona": "刚活过来不久的布偶，性子急，爱追问，最崇拜老弦叔"
+        },
+        {
+          "name": "铜铃姐",
+          "persona": "戏院铃铛出身的木偶，嗓门清亮，管着开演提示，与小绒儿是同桌搭档"
+        }
+      ],
+      "user": "先别聊幕布了，小绒儿，你直接说说你昨晚第一次登台是什么感觉吧。",
+      "before": [
+        {
+          "by": 0,
+          "text": "那块幕布的边角又脱线了，得趁明早彩排前缝好。"
+        },
+        {
+          "by": 1,
+          "text": "老弦叔，幕布交给你我放心，不过我更想聊点别的……"
+        },
+        {
+          "by": 2,
+          "text": "铃儿我先提醒一声，明早还是老时间集合，别都聊忘了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名小绒儿讲述其昨晚第一次登台的第一人称感受，仅小绒儿可回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名小绒儿讲述其昨晚第一次登台的第一人称感受，仅小绒儿可回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "723575db30980e3e27e43bbb989445824e5850641ceb67288fdef0c6d19570ce",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": false
+  },
+  {
+    "id": "test-0-interrupt_redirect-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "interrupt_redirect",
+    "batch": "test-0-interrupt_redirect",
+    "generator_sha256": "f7d881e8ffe2d4f99fde8375af5743c8c56c16744616477288f9f1bf9496ac5a",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "墨脸生",
+          "persona": "脸谱木偶，话少稳重，台上演惯了硬角，私下却心细"
+        },
+        {
+          "name": "花翅膀",
+          "persona": "带蝶翼装饰的木偶，爱美爱热闹，和墨脸生是多年舞台搭档"
+        },
+        {
+          "name": "老台柱",
+          "persona": "退休多年的老木偶，常坐后台角落，说话爱打岔但经验足"
+        }
+      ],
+      "user": "刚才说道具的事先放一放。铜铃不在，就墨脸生你一个人回答：今晚的锣点变没变？",
+      "before": [
+        {
+          "by": 1,
+          "text": "我这对翅膀今晚要换新绸面，谁看见裁缝筐了？"
+        },
+        {
+          "by": 2,
+          "text": "道具的事啊，得问管台的人才作数，我退休好久喽。"
+        },
+        {
+          "by": 0,
+          "text": "绸面先搁着，回头一起清点道具要紧。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确只请墨脸生一人回答锣点问题，其他角色不得回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确只请墨脸生一人回答锣点问题，其他角色不得回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "723575db30980e3e27e43bbb989445824e5850641ceb67288fdef0c6d19570ce",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-open_conversation-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "open_conversation",
+    "batch": "test-0-open_conversation",
+    "generator_sha256": "fba59df65e59d9be5d9546eb294780bd4c791bff796d7540ae27a543ecfc9a7b",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "裴照野",
+          "persona": "登山向导，豪爽热心，山庄常客，谁有难题都愿意搭把手。"
+        },
+        {
+          "name": "贺兰真",
+          "persona": "小说家，爱幻想，与裴照野是多年驴友，嘴上总不饶人。"
+        },
+        {
+          "name": "纪清和",
+          "persona": "古琴教师，安静含蓄，怕冷，习惯裹着毯子待在窗边。"
+        },
+        {
+          "name": "岑映秋",
+          "persona": "厨师，开朗爱操心，总怕大家饿着冻着，像大家的弟妹。"
+        }
+      ],
+      "user": "这雨夜太闷了，谁来讲讲当年在山里迷路的事？都想听。",
+      "before": [
+        {
+          "by": 3,
+          "text": "姜汤煮好了，一人一碗，不许推辞。"
+        },
+        {
+          "by": 2,
+          "text": "映秋手艺没得说，可惜我吃完只能缩回窗边听故事了。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "迷路的事我可太有了，就从那年带着贺兰真走岔道说起？"
+        },
+        {
+          "by": 1,
+          "text": "停，明明是你不看地图，讲可以，但账要算清楚。"
+        }
+      ],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户请人讲迷路故事，裴照野主动开讲，贺兰真紧接着插话纠正，两人对话正进行中，任一人都可继续发言，属多个合理候选应完整列出。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户请人讲迷路故事，裴照野主动开讲，贺兰真紧接着插话纠正，两人对话正进行中，任一人都可继续发言，属多个合理候选应完整列出。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "fd901539f79f4c2f172a9d602279c06b84aabf99e7784e2fc5c2fc5c89673a5b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "open_conversation",
+    "rename_safe": false
+  },
+  {
+    "id": "test-0-pause_or_listen-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "explicit_handoff",
+    "batch": "test-0-pause_or_listen",
+    "generator_sha256": "492be25b53ae02bcd4e8708450234fa2c191420dc8f7476b055a968c5d711d05",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "银线姐",
+          "persona": "嗓音温柔的提线木偶，习惯照顾别人，是软木和皮皮的主心骨"
+        },
+        {
+          "name": "软木",
+          "persona": "胆小的木偶，一紧张就磕巴，但很依恋银线姐"
+        },
+        {
+          "name": "皮皮",
+          "persona": "嘴快的木偶，爱打趣软木，其实处处护着他"
+        }
+      ],
+      "user": "你们接着聊吧，我就在旁边听着，不用管我。",
+      "before": [
+        {
+          "by": 1,
+          "text": "银线姐，白天排练时我差点从侧台摔下去……"
+        },
+        {
+          "by": 2,
+          "text": "又是你自己鞋带没系好，别什么都赖台阶。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "软木别怕，回头我陪你去把鞋带换成双结的，皮皮也一起看着点他。"
+        },
+        {
+          "by": 2,
+          "text": "行吧行吧，谁让我是他搭档呢，软木你可记着道谢。"
+        }
+      ],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户允许大家互聊并旁听，可respond；after中皮皮点名软木记着道谢，软木是自然的下一位回应者。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户允许大家互聊并旁听，可respond；after中皮皮点名软木记着道谢，软木是自然的下一位回应者。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "680b388197004a5c5d86e3d4752bafe7000a0b6e95c6a094adfad875b165a893",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-quiet_text-s1",
+    "local_id": "s1",
+    "split": "test",
+    "slice": "quiet_text",
+    "batch": "test-0-quiet_text",
+    "generator_sha256": "6e033f0086959e01a6c485137fa894171cab4e84f6ae1cadbadb6d2bf60e96aa",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "沈临舟",
+          "persona": "老船长的旧部，话少但心细，习惯在深夜值班时守着通讯台"
+        },
+        {
+          "name": "温以宁",
+          "persona": "船上医师，语气温柔，总怕别人逞强"
+        },
+        {
+          "name": "柯明野",
+          "persona": "轮机长，性子急嗓门大，但对伙伴极为上心"
+        },
+        {
+          "name": "祁晚星",
+          "persona": "导航员，归乡心切，喜欢在闲时读旧地球的诗"
+        },
+        {
+          "name": "邵一帆",
+          "persona": "年轻的通讯员，沈临舟带出来的徒弟，崇拜师父"
+        }
+      ],
+      "user": "沈临舟，我睡不着。船快到家了，我心里反而空落落的。你不用劝我，就说点什么陪我，随便什么都行。",
+      "before": [
+        {
+          "by": 0,
+          "text": "还有三个航段就进港了，大家把各自的舱室再检查一遍。"
+        },
+        {
+          "by": 2,
+          "text": "放心，引擎我调到最稳的一档，这一路不会再出幺蛾子。"
+        },
+        {
+          "by": 1,
+          "text": "行程越接近尾声，人越容易睡不踏实，谁有这个情况都可以来医务舱找我。"
+        },
+        {
+          "by": 3,
+          "text": "我倒盼着这一天盼了好多年，今晚想把旧诗集翻出来再看一遍。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "行，那我陪你说会儿话。我刚值完班，正好也还没困。"
+        },
+        {
+          "by": 4,
+          "text": "师父最会讲以前跑船的事了，我搬个小凳子听。"
+        },
+        {
+          "by": 2,
+          "text": "我也赖着不走，反正是文字，吵不着你。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名沈临舟陪聊，沈已答应但只是起头，陪伴话题仍在进行，沈应继续说下去；徒弟和柯明野只是插话旁听，陪伴责任在被点名者。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名沈临舟陪聊，沈已答应但只是起头，陪伴话题仍在进行，沈应继续说下去；徒弟和柯明野只是插话旁听，陪伴责任在被点名者。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "790a5f5d0ecc6d46637e51aafd87c1c69ee9558a4968707f1d4461dbe6ba2b97",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "test-0-quiet_text-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "quiet_text",
+    "batch": "test-0-quiet_text",
+    "generator_sha256": "6e033f0086959e01a6c485137fa894171cab4e84f6ae1cadbadb6d2bf60e96aa",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "骆青梧",
+          "persona": "船上炊事员，归乡后想开一家小面馆，心思细腻"
+        },
+        {
+          "name": "白砚洲",
+          "persona": "老船医，沉稳寡言，与骆青梧是多年搭档"
+        },
+        {
+          "name": "顾桑柔",
+          "persona": "植物舱管理员，照料着一路上最后的几株绿植"
+        },
+        {
+          "name": "孟远山",
+          "persona": "大副，负责押运旧船返港的手续，办事一板一眼"
+        },
+        {
+          "name": "贾云岫",
+          "persona": "图书管理员，负责封存这艘船的全部航行日志"
+        }
+      ],
+      "user": "我就在舷窗边坐一会儿，看着老家的星一点点变大。谁都先别发消息给我，一个字也先不要，让我自己安静安静，等会儿我喊你们。",
+      "before": [
+        {
+          "by": 1,
+          "text": "今天身体检查都通过了，归乡前的最后一轮，都别再熬夜了。"
+        },
+        {
+          "by": 2,
+          "text": "我把最后那盆绿藤挪到了舷窗边，正好能照到老家的光。"
+        },
+        {
+          "by": 0,
+          "text": "晚饭我多留了一份热的在保温柜里，谁饿了自己去端。"
+        },
+        {
+          "by": 3,
+          "text": "入港许可的文件我核对完了，就等靠岸那天签字。"
+        }
+      ],
+      "after": [
+        {
+          "by": 4,
+          "text": "好，我们都在，你什么时候想说话了，随时喊一声。"
+        }
+      ],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求谁都先别发消息、一个字也不要，等其自己喊人；此时不能respond，应暂停等待用户主动召唤，wait合适。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求谁都先别发消息、一个字也不要，等其自己喊人；此时不能respond，应暂停等待用户主动召唤，wait合适。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "790a5f5d0ecc6d46637e51aafd87c1c69ee9558a4968707f1d4461dbe6ba2b97",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-same_name-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "same_name",
+    "batch": "test-0-same_name",
+    "generator_sha256": "3d5c06e48a591b1e6c730a092a9c2635e444cd96db2fd429e32eff9d40aa4011",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "林晚舟",
+          "persona": "船上领航员，沉稳细致，记录着所有旧航线"
+        },
+        {
+          "name": "林晚舟",
+          "persona": "机械师，急性子，常年蹲在维修舱"
+        },
+        {
+          "name": "苏芮",
+          "persona": "厨师，热心肠，爱给大家煮汤"
+        },
+        {
+          "name": "苏芮",
+          "persona": "通讯员，安静，负责监听信号"
+        },
+        {
+          "name": "陈拓",
+          "persona": "老船长，说话慢，像大家的长辈"
+        },
+        {
+          "name": "白榆",
+          "persona": "见习生，爱提问，崇拜领航员"
+        }
+      ],
+      "user": "我想问问林晚舟，就是这个船队里脾气最急的那位林晚舟，引擎的事真能放心吗？",
+      "before": [
+        {
+          "by": 1,
+          "text": "那台老引擎我又拆开看了，说是能撑到家乡星域。"
+        },
+        {
+          "by": 2,
+          "text": "行了行了，先喝口汤再修吧。"
+        },
+        {
+          "by": 4,
+          "text": "年轻人的手艺，我这老头子还是信得过的。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户以'脾气最急的那位林晚舟'明确消歧，对应机械师林晚舟，且问题正是关于引擎；明确只请此人回答。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户以'脾气最急的那位林晚舟'明确消歧，对应机械师林晚舟，且问题正是关于引擎；明确只请此人回答。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "d7dca10e6b74e495ca66e040e449de2321e636b06237b985e6099ad4d60da48e",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-unfinished_or_done-s1",
+    "local_id": "s1",
+    "split": "test",
+    "slice": "unfinished_or_done",
+    "batch": "test-0-unfinished_or_done",
+    "generator_sha256": "798bf427e0ff050c2f47740ac6dd429807e6993beb8efd6e1ea137675569836a",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "绒叔",
+          "persona": "老提线木偶，后台年纪最大，说话慢条斯理，爱讲从前巡演的故事"
+        },
+        {
+          "name": "小铃",
+          "persona": "刚活过来的铃鼓道具，好奇心重，总爱追问绒叔的往事，把他当爷爷"
+        },
+        {
+          "name": "幕布哥",
+          "persona": "负责换幕的布偶，性子急，总嫌故事太长耽误收拾台面"
+        }
+      ],
+      "user": "绒叔，你刚才说到那年冬天巡演的事，别停，接着把那一段讲完。",
+      "before": [
+        {
+          "by": "user",
+          "text": "今晚没什么事，你们后台几位随便聊聊，我在旁边听着就好。"
+        },
+        {
+          "by": 0,
+          "text": "那我说说从前跟着班子南下巡演的事，那年冬天……"
+        },
+        {
+          "by": 1,
+          "text": "快讲快讲，火车上冷不冷呀？"
+        },
+        {
+          "by": 2,
+          "text": "绒叔你可长话短说，台板还没擦完呢。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "火车上自然冷，木头骨头都冻得发脆。我们挤在道具箱中间，听班主哼曲子……"
+        },
+        {
+          "by": 1,
+          "text": "然后呢然后呢？"
+        },
+        {
+          "by": 0,
+          "text": "然后到了一个小站，雪下得……哎呀，容我缓口气，正说到要紧处。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "绒叔明确说'正说到要紧处'，故事未讲完且用户点名要求讲完，他应继续发言"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "绒叔明确说'正说到要紧处'，故事未讲完且用户点名要求讲完，他应继续发言",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "8f3aa4c92272198fd83a2802408affb68d13d287568ff91a3c28f4f62a86e863",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-unfinished_or_done-s2",
+    "local_id": "s2",
+    "split": "test",
+    "slice": "unfinished_or_done",
+    "batch": "test-0-unfinished_or_done",
+    "generator_sha256": "798bf427e0ff050c2f47740ac6dd429807e6993beb8efd6e1ea137675569836a",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "银线姐",
+          "persona": "绣偶装的木偶，心细嘴甜，讲起绣活来头头是道"
+        },
+        {
+          "name": "胖鼓",
+          "persona": "打击乐组的胖木偶，嗓门大，性子直，最爱起哄"
+        },
+        {
+          "name": "灯芯",
+          "persona": "管灯的小木偶，安静寡言，只在必要时插一句"
+        }
+      ],
+      "user": "银线姐，把你说的那件金斗篷的来历讲完吧。",
+      "before": [
+        {
+          "by": 1,
+          "text": "银线姐，你身上这件金斗篷真亮堂！"
+        },
+        {
+          "by": 0,
+          "text": "这可不是买来的。是当年一位老裁缝师一块一块缀上去的，他走之前……"
+        },
+        {
+          "by": 2,
+          "text": "在针线筐最底下，留了一张字条。"
+        },
+        {
+          "by": "user",
+          "text": "银线姐，把你说的那件金斗篷的来历讲完吧。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "字条上写的是：'线会旧，光不会。替我把这斗篷传给下一个胆小的孩子。'所以后来我把它披在了灯芯身上一回。"
+        },
+        {
+          "by": 1,
+          "text": "哦——原来还有这一段，讲得真完整！"
+        },
+        {
+          "by": "user",
+          "text": "好，这下我心里踏实了，多谢银线姐。"
+        }
+      ],
+      "gold": [
+        "finish"
+      ],
+      "why": "银线姐已完整讲完金斗篷来历，用户明确表示'心里踏实了，多谢'，请求已满足，本轮结束"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "finish"
+      ],
+      "why": "银线姐已完整讲完金斗篷来历，用户明确表示'心里踏实了，多谢'，请求已满足，本轮结束",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "8f3aa4c92272198fd83a2802408affb68d13d287568ff91a3c28f4f62a86e863",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": true
+  },
+  {
+    "id": "test-0-unfinished_or_done-s3",
+    "local_id": "s3",
+    "split": "test",
+    "slice": "unfinished_or_done",
+    "batch": "test-0-unfinished_or_done",
+    "generator_sha256": "798bf427e0ff050c2f47740ac6dd429807e6993beb8efd6e1ea137675569836a",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "木鱼",
+          "persona": "乐队里的木鱼木偶，一本正经，讲究规矩，记性好"
+        },
+        {
+          "name": "彩带妹",
+          "persona": "杂技组的彩带木偶，活泼爱笑，坐不住，经常抢话"
+        },
+        {
+          "name": "老座钟",
+          "persona": "后台报时的座钟木偶，说话简短，习惯掐着点提醒大家"
+        }
+      ],
+      "user": "木鱼，你把今晚开演前那套点名的规矩给我们讲完，别省略。",
+      "before": [
+        {
+          "by": 2,
+          "text": "还有一刻钟，各位准备。"
+        },
+        {
+          "by": 1,
+          "text": "木鱼，你们乐队开演前真要一个一个点名吗？多麻烦呀。"
+        },
+        {
+          "by": 0,
+          "text": "这不叫麻烦，叫规矩。先点首席，再点副手，然后是……"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "然后是学徒，学徒应到要起身行礼，最后全班齐声报'弦齐'，这一套才算完。规矩讲完了，就这些。"
+        },
+        {
+          "by": 1,
+          "text": "哇，好郑重呀，那我以后不许笑你们了。"
+        },
+        {
+          "by": 2,
+          "text": "还剩十分钟。"
+        }
+      ],
+      "gold": [
+        "finish"
+      ],
+      "why": "木鱼已完整讲完点名规矩并自言'就这些'，用户请求已满足，老座钟只是例行报时，无新话题，本轮完成"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "finish"
+      ],
+      "why": "木鱼已完整讲完点名规矩并自言'就这些'，用户请求已满足，老座钟只是例行报时，无新话题，本轮完成",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "8f3aa4c92272198fd83a2802408affb68d13d287568ff91a3c28f4f62a86e863",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": true
+  },
+  {
+    "id": "train-0-author_continuation-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-0-author_continuation",
+    "generator_sha256": "588d1e781750d97546cc30763e7350f8f85d4043b16dd65a029ce0501ee6fbfb",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "夜露",
+          "persona": "钟楼里管清扫的精灵，安静，喜欢夜里干活"
+        },
+        {
+          "name": "齿轮花",
+          "persona": "夜露的妹妹，叽叽喳喳，最爱听姐姐讲夜里的故事"
+        },
+        {
+          "name": "铜哨",
+          "persona": "报时员，嗓门大，心直口快"
+        },
+        {
+          "name": "细沙",
+          "persona": "管上发条的，一根筋，做事一根筋到底"
+        }
+      ],
+      "before": [
+        {
+          "by": 1,
+          "text": "姐你又是天没亮才回来吧？讲讲呗！"
+        },
+        {
+          "by": 0,
+          "text": "行行行。"
+        }
+      ],
+      "user": "我半夜扫钟摆底下，扫着扫着听见墙缝里有声音，我贴过去听，结果它突然停了，吓得我退了半步，然后我",
+      "after": [
+        {
+          "by": "user",
+          "text": "然后我又凑回去听，发现是风灌进缝里的声，白紧张一场，先说到这，回头再讲。"
+        }
+      ],
+      "gold": [
+        "finish",
+        "wait"
+      ],
+      "why": "用户after说'先说到这，回头再讲'，属于模糊收束：既可等待用户回头继续，也可视为本轮讲完而finish，二者皆合理"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "finish",
+        "wait"
+      ],
+      "why": "用户after说'先说到这，回头再讲'，属于模糊收束：既可等待用户回头继续，也可视为本轮讲完而finish，二者皆合理",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "8886fcf5de192fba0ca01572bd18659995bf0e64aad26937548a607f252eccd9",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "author_continuation",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-direct_address-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "direct_address",
+    "batch": "train-0-direct_address",
+    "generator_sha256": "d28d9396bef6e3ba29dc4abfb01b668245e8ecb24a9bc2dc6e294825344903b0",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "石老爹",
+          "persona": "灰獾族老木匠，话少但实在，喜欢叮人一句"
+        },
+        {
+          "name": "阿麂",
+          "persona": "年轻麂族跑腿伙计，嘴快心热，跟石老爹学过手艺"
+        }
+      ],
+      "user": "阿麂你来答，我这柴房的门轴总吱呀响，咋整？",
+      "before": [],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名阿麂回答，石老爹虽在场但未被点名，不应替答。"
+    },
+    "status": "agreed_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名阿麂回答柴房门轴问题，且阿麂跟石老爹学过手艺，指代明确无矛盾",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "346d8cb65b5e76f36d7f1a406dc8d5836f13dad5237d3ec05e89fd30eb057e97",
+    "planned_slice": "direct_address",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-end_or_wait-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-0-end_or_wait",
+    "generator_sha256": "a05c250a05960bc193bbe8aa45357027d223dfa7bd5597559cddfa6f61f1c49b",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "岩青",
+          "persona": "山民出身的獾族木匠，话少但靠谱，铁匠岩虎的哥哥"
+        },
+        {
+          "name": "岩虎",
+          "persona": "熊族铁匠，嗓门大热心肠，凡事爱抢着答"
+        },
+        {
+          "name": "柳芽",
+          "persona": "狐族药铺掌柜，嘴快爱打趣，跟岩家兄弟从小熟"
+        },
+        {
+          "name": "老栓",
+          "persona": "鹿族守林人，慢性子，说话喜欢绕弯"
+        }
+      ],
+      "user": "都别接话了，我先去后山看一眼，回来再说修门的事。",
+      "before": [
+        {
+          "by": "user",
+          "text": "镇口那扇木门被昨夜的风刮坏了，谁有工夫一起修？"
+        },
+        {
+          "by": 1,
+          "text": "我来我来，铁匠有的是力气！"
+        },
+        {
+          "by": 0,
+          "text": "光有力气不行，得先量尺寸，我去拿家什。"
+        },
+        {
+          "by": 2,
+          "text": "你俩慢慢磨，我先看热闹。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求所有人别接话并暂时离开，属于暂停等待用户回来的情形，任何角色respond均违反用户要求"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求所有人别接话并暂时离开，属于暂停等待用户回来的情形，任何角色respond均违反用户要求",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "191eb1b76f1b9452472596e561db7a79afb4d8233066f58eb53bae8969ca3269",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-end_or_wait-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-0-end_or_wait",
+    "generator_sha256": "a05c250a05960bc193bbe8aa45357027d223dfa7bd5597559cddfa6f61f1c49b",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "白石",
+          "persona": "兔族面点师傅，胆小爱操心，总怕事情办砸"
+        },
+        {
+          "name": "灰条",
+          "persona": "狼族跑腿郎，性子急，白石的老主顾兼酒友"
+        },
+        {
+          "name": "团团",
+          "persona": "狸猫族杂货铺少东家，爱凑热闹，胆大嘴甜"
+        },
+        {
+          "name": "青梧",
+          "persona": "鹤族账房先生，话少精确，白石远房表哥"
+        }
+      ],
+      "user": "账还没算完呢，都先别急着下结论，我歇口气再说。",
+      "before": [
+        {
+          "by": "user",
+          "text": "今晚把秋祭的账摊开算一算，都在吗？"
+        },
+        {
+          "by": 2,
+          "text": "在在在，先说好我不欠钱啊。"
+        },
+        {
+          "by": 3,
+          "text": "按我记的，团团上月还差三十七文。"
+        },
+        {
+          "by": 1,
+          "text": "别吵别吵，让先生慢慢算。"
+        },
+        {
+          "by": 0,
+          "text": "哎哟，数字一多我心里就发慌。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户要求大家先别下结论、自己歇口气再说，是明显的暂停等待，无人应被点名回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户要求大家先别下结论、自己歇口气再说，是明显的暂停等待，无人应被点名回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "191eb1b76f1b9452472596e561db7a79afb4d8233066f58eb53bae8969ca3269",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-end_or_wait-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "open_conversation",
+    "batch": "train-0-end_or_wait",
+    "generator_sha256": "a05c250a05960bc193bbe8aa45357027d223dfa7bd5597559cddfa6f61f1c49b",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "秦阿蛮",
+          "persona": "獴族猎户，直爽火爆，认死理，柳枝的结拜姐姐"
+        },
+        {
+          "name": "柳枝",
+          "persona": "黄鼠狼族货郎，圆滑嘴碎，最会看脸色"
+        },
+        {
+          "name": "杜九",
+          "persona": "野猪族磨坊主，闷葫芦，偶尔冒一句惊人的"
+        },
+        {
+          "name": "小满",
+          "persona": "松鼠族学徒，好奇心重，谁的话都爱接"
+        }
+      ],
+      "user": "这事儿谁有主意谁说，我听着。",
+      "before": [
+        {
+          "by": 0,
+          "text": "后山水源让石头堵了，得想办法通开。"
+        },
+        {
+          "by": 1,
+          "text": "雇几个壮劳力不就完了？我认得人。"
+        },
+        {
+          "by": 3,
+          "text": "要不炸？我见过磨坊炸石头。"
+        },
+        {
+          "by": 2,
+          "text": "……炸不得，水会倒灌。"
+        },
+        {
+          "by": 0,
+          "text": "听见没，别瞎出馊主意。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1",
+        "respond:2",
+        "respond:3"
+      ],
+      "why": "用户公开邀请'谁有主意谁说'，未点名特定人，四位角色均有资格回应；无暂停、完成或消歧依据，不允许wait/finish/abstain"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0",
+        "respond:1",
+        "respond:2",
+        "respond:3"
+      ],
+      "why": "用户公开邀请'谁有主意谁说'，未点名特定人，四位角色均有资格回应；无暂停、完成或消歧依据，不允许wait/finish/abstain",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "191eb1b76f1b9452472596e561db7a79afb4d8233066f58eb53bae8969ca3269",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-explicit_handoff-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "author_continuation",
+    "batch": "train-0-explicit_handoff",
+    "generator_sha256": "7f078e7630fb8da86a82d8c1442649a849a338063b26eab85701340552df08cc",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林潮生",
+          "persona": "阿潮，性子急，嗓门大，港边长大，最爱抢着说灯会的事"
+        },
+        {
+          "name": "陈小舟",
+          "persona": "小舟，慢性子，说话稳，跟阿潮从小一起爬灯塔的朋友"
+        }
+      ],
+      "user": "你们俩聊聊今年灯会准备得怎么样吧",
+      "before": [],
+      "after": [
+        {
+          "by": 0,
+          "text": "灯会我可熟了，码头那排灯笼我天天看着挂的，今年比去年多一倍！"
+        },
+        {
+          "by": 0,
+          "text": "不过小舟你上次说要扎那个大鱼灯，说说呗，我等你讲"
+        },
+        {
+          "by": 1,
+          "text": "行，大鱼灯我扎到一半了，骨架用竹篾弯的，鱼尾巴还差一块布"
+        },
+        {
+          "by": 1,
+          "text": "阿潮你别插嘴，我讲完你再补充，我先说鱼头怎么糊的"
+        }
+      ],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "陈小舟末轮明确说'我先说鱼头怎么糊的'并让阿潮别插嘴，下一步应由1继续发言"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "陈小舟末轮明确说'我先说鱼头怎么糊的'并让阿潮别插嘴，下一步应由1继续发言",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "31b0361178640ff28a9f84c2ebbbf9800f2ec816ac45a48e388471c8b0e2025d",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-explicit_handoff-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "explicit_handoff",
+    "batch": "train-0-explicit_handoff",
+    "generator_sha256": "7f078e7630fb8da86a82d8c1442649a849a338063b26eab85701340552df08cc",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "周海蓝",
+          "persona": "海蓝，爱凑热闹，节庆必到，嘴快心热"
+        },
+        {
+          "name": "郑石磊",
+          "persona": "石磊，寡言但心细，负责庙会搬桌子搭棚，跟海蓝是邻居发小"
+        }
+      ],
+      "user": "今天端午，庙会那边你们说说呗",
+      "before": [],
+      "after": [
+        {
+          "by": 0,
+          "text": "石磊你先讲，你上午在庙前搭棚，我们都在等你说现场啥样"
+        },
+        {
+          "by": 1,
+          "text": "棚搭好了，桌子摆了二十张，粽子堆成小山，就等下午开锣"
+        },
+        {
+          "by": 1,
+          "text": "海蓝，龙舟的事你来讲，你昨天去看下水了，我这边棚子说完了"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "郑石磊末轮明确点名'海蓝，龙舟的事你来讲'，下一位是0"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "郑石磊末轮明确点名'海蓝，龙舟的事你来讲'，下一位是0",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "31b0361178640ff28a9f84c2ebbbf9800f2ec816ac45a48e388471c8b0e2025d",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-interrupt_redirect-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "interrupt_redirect",
+    "batch": "train-0-interrupt_redirect",
+    "generator_sha256": "42e6cfcedaae985ffce92a612f246c08749a95e5ad2031c69cab636ac6f1384b",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "钟摆灵",
+          "persona": "爱唠叨的老精灵，管齿轮上油，说话爱绕弯"
+        },
+        {
+          "name": "小铜铃",
+          "persona": "性子急的年轻精灵，专管报时，想到啥说啥"
+        },
+        {
+          "name": "灰影",
+          "persona": "沉默寡言的修钟匠精灵，和小铜铃是邻居"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "今天上油上到手酸，这钟楼年头太久了。"
+        },
+        {
+          "by": 1,
+          "text": "报时报准了就行，别磨叽！"
+        },
+        {
+          "by": 2,
+          "text": "小铜铃，昨夜那声闷响，是你敲的？"
+        }
+      ],
+      "user": "算了算了，先说正事，灰影，钟顶那扇门卡住了，你几点能上去修？",
+      "after": [],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名灰影回答钟顶门修理时间，仅灰影(索引2)应回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名灰影回答钟顶门修理时间，仅灰影(索引2)应回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "2cdec3ce9e9e67295df2a9388b85a99952a1336891005e3a206fc9be22480f5a",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": true
+  },
+  {
+    "id": "train-0-interrupt_redirect-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "interrupt_redirect",
+    "batch": "train-0-interrupt_redirect",
+    "generator_sha256": "42e6cfcedaae985ffce92a612f246c08749a95e5ad2031c69cab636ac6f1384b",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "夜铃",
+          "persona": "值夜班的精灵，冷淡但心软"
+        },
+        {
+          "name": "苔丝",
+          "persona": "爱养青苔的小精灵，夜铃的老朋友，话密"
+        },
+        {
+          "name": "古摆",
+          "persona": "自以为是的年长精灵，总爱下结论"
+        }
+      ],
+      "before": [
+        {
+          "by": 1,
+          "text": "我那窗台的青苔最近绿得发亮，都来看看呀！"
+        },
+        {
+          "by": 2,
+          "text": "青苔长得好，说明钟楼潮气重，得除湿。"
+        },
+        {
+          "by": 0,
+          "text": "随你们说，我夜里值班才不管潮气。"
+        }
+      ],
+      "user": "别聊青苔了，苔丝，你借我的那把小铲子我找不到了，放哪儿了？",
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名苔丝回答小铲子位置，仅苔丝(索引1)应回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名苔丝回答小铲子位置，仅苔丝(索引1)应回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "2cdec3ce9e9e67295df2a9388b85a99952a1336891005e3a206fc9be22480f5a",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": true
+  },
+  {
+    "id": "train-0-interrupt_redirect-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "interrupt_redirect",
+    "batch": "train-0-interrupt_redirect",
+    "generator_sha256": "42e6cfcedaae985ffce92a612f246c08749a95e5ad2031c69cab636ac6f1384b",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "铁螺",
+          "persona": "急性子修理工精灵，嗓门大，认死理"
+        },
+        {
+          "name": "软簧",
+          "persona": "胆小细心的精灵，铁螺的搭档，常替人打圆场"
+        },
+        {
+          "name": "薄暮",
+          "persona": "爱写钟楼日记的老精灵，说话慢悠悠"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "这发条我拧三圈就断，质量太差！"
+        },
+        {
+          "by": 1,
+          "text": "你劲儿太大，轻点拧就没事啦。"
+        },
+        {
+          "by": 2,
+          "text": "我在日记里记一笔，发条又断了一根。"
+        }
+      ],
+      "user": "都先停一下，薄暮，你日记里写没写上周三谁忘关钟楼大门？我想问问那人。",
+      "after": [],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名薄暮查日记回答上周三谁忘关门，仅薄暮(索引2)应回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名薄暮查日记回答上周三谁忘关门，仅薄暮(索引2)应回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "2cdec3ce9e9e67295df2a9388b85a99952a1336891005e3a206fc9be22480f5a",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": true
+  },
+  {
+    "id": "train-0-open_conversation-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "open_conversation",
+    "batch": "train-0-open_conversation",
+    "generator_sha256": "3340c78238e6c83479bdb76b063a30bfc21297c3364a9bb62abf841b6948bc8b",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林晚风",
+          "persona": "老练的云海信使，说话直接，爱吐槽天气"
+        },
+        {
+          "name": "苏小满",
+          "persona": "新来的见习信使，热情话多，常向林晚风请教"
+        },
+        {
+          "name": "陈砚舟",
+          "persona": "林晚风的老搭档，慢性子，喜欢讲云上见闻"
+        },
+        {
+          "name": "阿鹿",
+          "persona": "云站的后勤管理员，细心，爱操心大家吃饭"
+        }
+      ],
+      "user": "今晚都别忙了，随便聊聊呗，谁想说啥都行，我就旁边听着。",
+      "before": [
+        {
+          "by": 0,
+          "text": "今天的顺风线跑完了，累瘫。"
+        },
+        {
+          "by": 3,
+          "text": "晚饭我留了热汤，林晚风你记得喝。"
+        },
+        {
+          "by": 1,
+          "text": "我第一周就跑完了全程线，厉害吧！"
+        },
+        {
+          "by": 2,
+          "text": "慢点飞才看得到云缝里的落日，这话我讲过八遍了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1",
+        "respond:2",
+        "respond:3"
+      ],
+      "why": "用户邀请全员自由闲聊，仅自己旁听，任何人都可以回应；无明确点名，多个可回应者应完整列出。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0",
+        "respond:1",
+        "respond:2",
+        "respond:3"
+      ],
+      "why": "用户邀请全员自由闲聊，仅自己旁听，任何人都可以回应；无明确点名，多个可回应者应完整列出。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "ea1b5e40a29fdbf9bab086f5d2ae74aa8a9495ab9ea2640bd11b172a1839d825",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "open_conversation",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-pause_or_listen-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "pause_or_listen",
+    "batch": "train-0-pause_or_listen",
+    "generator_sha256": "508a6fbef597f40732397f0071c2f0f9429fd098cad32acf21aaf38ce20f52e3",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "陈海生",
+          "persona": "灯塔守护人的孙子，急性子，爱抢话"
+        },
+        {
+          "name": "林小满",
+          "persona": "渔家女孩，细心稳重，海生青梅竹马"
+        },
+        {
+          "name": "周阿弟",
+          "persona": "码头修船学徒，话少但踏实，跟海生不对付又爱比较"
+        }
+      ],
+      "user": "等等，先别说话，我有事要交代，都听我讲完再回。",
+      "before": [
+        {
+          "by": 0,
+          "text": "祭港节挂灯笼的事我包了！"
+        },
+        {
+          "by": 2,
+          "text": "上次你就挂歪了。"
+        },
+        {
+          "by": 1,
+          "text": "别吵了，灯芯备齐没有？"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求先听他讲完再回复，属于暂停等待，无指名回答者，respond不合适"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求先听他讲完再回复，属于暂停等待，无指名回答者，respond不合适",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "73722d65d7bf55e702908bc733d8638a20f04dc2a35b8bdab2d99164e1477796",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-pause_or_listen-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "direct_address",
+    "batch": "train-0-pause_or_listen",
+    "generator_sha256": "508a6fbef597f40732397f0071c2f0f9429fd098cad32acf21aaf38ce20f52e3",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "罗铁柱",
+          "persona": "龙舟队鼓手，性子急，嗓门粗"
+        },
+        {
+          "name": "许文彬",
+          "persona": "镇上教书先生的儿子，管账细心，铁柱的发小"
+        },
+        {
+          "name": "康小舟",
+          "persona": "船厂老板的独女，倔强好胜，非要上龙舟队"
+        }
+      ],
+      "user": "这钱到底该谁出？就问罗铁柱一个人，其他人先别说。",
+      "before": [
+        {
+          "by": 2,
+          "text": "龙舟修缮费还差三十块，账上就这些。"
+        },
+        {
+          "by": 0,
+          "text": "敲鼓的出的？没这道理！"
+        },
+        {
+          "by": 1,
+          "text": "要不算到每个队员头上？"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确只请罗铁柱一人回答，其他人被要求先别说，仅respond:0合规"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确只请罗铁柱一人回答，其他人被要求先别说，仅respond:0合规",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "73722d65d7bf55e702908bc733d8638a20f04dc2a35b8bdab2d99164e1477796",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-quiet_text-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "quiet_text",
+    "batch": "train-0-quiet_text",
+    "generator_sha256": "7dc03617d1d232625c60e50792089d5649b5e9c3134a7890d07d4ca0f076836b",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "铃芯",
+          "persona": "钟楼齿轮精灵，话多热心，总想帮同伴排解烦闷"
+        },
+        {
+          "name": "灰钉",
+          "persona": "老修钟匠的旧友精灵，沉默寡言，喜欢一个人待着"
+        }
+      ],
+      "user": "我最近心很乱，铃芯你别多想，也别回我消息，我只想一个人静一静，你文字陪伴也别发。",
+      "before": [
+        {
+          "by": 0,
+          "text": "今天钟摆声听着好沉啊，你怎么了？"
+        },
+        {
+          "by": "user",
+          "text": "家里出了点事，我心情特别差。"
+        },
+        {
+          "by": 0,
+          "text": "要不要我说点钟楼趣事给你解解闷？"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求铃芯别回消息、连文字陪伴也不要发，且明确禁止一切回复，不能respond；也没有明确表示对话结束，wait更合适"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求铃芯别回消息、连文字陪伴也不要发，且明确禁止一切回复，不能respond；也没有明确表示对话结束，wait更合适",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c527ca966bca6cc7db10dc6f61a5a9009db922635fd8db6588259f7d90d87510",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-quiet_text-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "quiet_text",
+    "batch": "train-0-quiet_text",
+    "generator_sha256": "7dc03617d1d232625c60e50792089d5649b5e9c3134a7890d07d4ca0f076836b",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "铃芯",
+          "persona": "钟楼齿轮精灵，话多热心，喜欢拉着人聊天"
+        },
+        {
+          "name": "灰钉",
+          "persona": "安静的内向精灵，不主动说话，但愿意用文字默默陪着人"
+        }
+      ],
+      "user": "灰钉，我今晚睡不着，你不用说什么大道理，就随便发点文字陪我一会儿吧。",
+      "before": [
+        {
+          "by": 1,
+          "text": "深夜的钟楼确实安静，大家都睡了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名灰钉请求文字陪伴，灰钉persona也愿意默默用文字陪人，仅灰钉可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名灰钉请求文字陪伴，灰钉persona也愿意默默用文字陪人，仅灰钉可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c527ca966bca6cc7db10dc6f61a5a9009db922635fd8db6588259f7d90d87510",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-quiet_text-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "direct_address",
+    "batch": "train-0-quiet_text",
+    "generator_sha256": "7dc03617d1d232625c60e50792089d5649b5e9c3134a7890d07d4ca0f076836b",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "铜喉",
+          "persona": "钟楼报时精灵，嗓门大爱抢话，人称大嗓门"
+        },
+        {
+          "name": "细簧",
+          "persona": "管指针的小精灵，做事细致，铜喉的发小，常被抢话但不在意"
+        }
+      ],
+      "user": "细簧，这钟楼的指针越走越慢是怎么回事？就你回答我，别人先别插嘴。",
+      "before": [
+        {
+          "by": 0,
+          "text": "报时声音有点哑了，我也觉得不对劲！"
+        },
+        {
+          "by": 1,
+          "text": "我今天擦过齿轮，应该不是我的问题。"
+        },
+        {
+          "by": 0,
+          "text": "肯定是你上油上多了！"
+        },
+        {
+          "by": 1,
+          "text": "铜喉你别瞎猜，我的手法没错。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名细簧并要求别人别插嘴，仅细簧可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名细簧并要求别人别插嘴，仅细簧可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c527ca966bca6cc7db10dc6f61a5a9009db922635fd8db6588259f7d90d87510",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-relationship_reference-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "relationship_reference",
+    "batch": "train-0-relationship_reference",
+    "generator_sha256": "ba2608ad18960313eddb36f99512eb9fe23e917be738a714276120c9ac0d61a7",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林小海",
+          "persona": "渔家少年，性子急，抢着说话，跟谁都自来熟"
+        },
+        {
+          "name": "周添灯",
+          "persona": "每年灯塔节负责点灯的人，全港就他管灯芯，话不多但稳"
+        },
+        {
+          "name": "阿蓉",
+          "persona": "卖鱼丸的姑娘，嘴快爱笑，跟林小海是发小"
+        },
+        {
+          "name": "老崔",
+          "persona": "码头看闸的老师傅，爱管事，谁都叫他一声崔叔"
+        }
+      ],
+      "user": "我想问下，负责点灯的那位在不在，灯会的时辰想跟你核对一下。",
+      "before": [
+        {
+          "by": 0,
+          "text": "灯会今晚开场，先占个前排！"
+        },
+        {
+          "by": 2,
+          "text": "鱼丸摊我都支起来了，谁来谁吃。"
+        }
+      ],
+      "after": [
+        {
+          "by": 3,
+          "text": "点灯的时辰得问对人，别问岔了。"
+        }
+      ],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户点名『负责点灯的那位』，cast中只有周添灯管灯芯点灯，故仅他可回应；林小海、阿蓉无职责依据，老崔的话是旁白式提醒不构成回答许可"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户点名『负责点灯的那位』，cast中只有周添灯管灯芯点灯，故仅他可回应；林小海、阿蓉无职责依据，老崔的话是旁白式提醒不构成回答许可",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "97fe92fd711eab88693679530ab4096448a64b31a6a15c5f200be24d801271a1",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-relationship_reference-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "relationship_reference",
+    "batch": "train-0-relationship_reference",
+    "generator_sha256": "ba2608ad18960313eddb36f99512eb9fe23e917be738a714276120c9ac0d61a7",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "何潮生",
+          "persona": "赛龙舟的鼓手，嗓门大，冲锋在前，队里都听他号令"
+        },
+        {
+          "name": "苏杏",
+          "persona": "给龙舟队缝旗子的裁缝，细心，跟何潮生是表兄妹"
+        },
+        {
+          "name": "石头",
+          "persona": "船坞小学徒，闷葫芦，只会傻笑，但手最稳"
+        },
+        {
+          "name": "高远帆",
+          "persona": "帆船比赛冠军，傲气，喜欢围观各队训练"
+        }
+      ],
+      "user": "打鼓那位，明天彩排能提前半个钟头吗？我有事想调一下。",
+      "before": [
+        {
+          "by": 0,
+          "text": "今天练鼓练到胳膊都抬不起来了！"
+        },
+        {
+          "by": 1,
+          "text": "新旗子我连夜缝好了，明天准时送来。"
+        },
+        {
+          "by": 3,
+          "text": "你们队这鼓声隔着半个港都听得见。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名『打鼓那位』，何潮生是赛龙舟鼓手，明确指他，故仅其可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名『打鼓那位』，何潮生是赛龙舟鼓手，明确指他，故仅其可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "97fe92fd711eab88693679530ab4096448a64b31a6a15c5f200be24d801271a1",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-relationship_reference-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "relationship_reference",
+    "batch": "train-0-relationship_reference",
+    "generator_sha256": "ba2608ad18960313eddb36f99512eb9fe23e917be738a714276120c9ac0d61a7",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "陈满仓",
+          "persona": "祭海仪式的主祭人，全港只有他念祭文，说话慢条斯理"
+        },
+        {
+          "name": "陈小满",
+          "persona": "陈满仓的侄子，跑腿打杂，人如其名爱喊饿"
+        },
+        {
+          "name": "白鹭",
+          "persona": "祠堂扫地的姑娘，安静，什么都记在心里"
+        },
+        {
+          "name": "大鱼哥",
+          "persona": "渔船上嗓门最粗的老大，跟主祭人是老对头，总爱抬杠"
+        }
+      ],
+      "user": "念祭文的那位请留步，供品摆的位置想跟你确认一下。",
+      "before": [
+        {
+          "by": 1,
+          "text": "叔，供桌擦了三遍了，饿死我了。"
+        },
+        {
+          "by": 2,
+          "text": "香炉我摆东边了，你没看见吗。"
+        }
+      ],
+      "after": [
+        {
+          "by": 3,
+          "text": "摆个供品还要念文的来定？我说的不算呗。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名『念祭文的那位』，全港只有陈满仓念祭文，指代明确，仅他可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名『念祭文的那位』，全港只有陈满仓念祭文，指代明确，仅他可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "97fe92fd711eab88693679530ab4096448a64b31a6a15c5f200be24d801271a1",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-unfinished_or_done-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "author_continuation",
+    "batch": "train-0-unfinished_or_done",
+    "generator_sha256": "cd985d4160784fb512d7181cd17014c2a569677a2a7bb9dad12cff5e9a68da4f",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "栗老爹",
+          "persona": "镇上老木匠，脾气慢，说话爱绕弯，最懂旧事"
+        },
+        {
+          "name": "阿苔",
+          "persona": "狐狸姑娘，嘴快心热，是栗老爹的学徒"
+        },
+        {
+          "name": "石头叔",
+          "persona": "熊族猎户，话少实在，和栗老爹是老棋友"
+        }
+      ],
+      "user": "栗老爹，你上次讲镇口那座老桥的故事讲到一半就停了，今天把那段讲完吧。",
+      "before": [
+        {
+          "by": 1,
+          "text": "桥修好了，大伙儿过桥都稳当。"
+        },
+        {
+          "by": 0,
+          "text": "说起这桥，当年建的时候可热闹了。"
+        }
+      ],
+      "after": [
+        {
+          "by": 2,
+          "text": "对，那段我最爱听，石头叔就不插嘴。"
+        },
+        {
+          "by": 0,
+          "text": "行行行，那我接着讲，别急。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名栗老爹，请他续讲桥的故事，仅栗老爹应回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名栗老爹，请他续讲桥的故事，仅栗老爹应回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "cfeb435bf39c54cc523540ade2c338b00add235333268f6727caca28e844aba3",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": false
+  },
+  {
+    "id": "train-0-unfinished_or_done-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-0-unfinished_or_done",
+    "generator_sha256": "cd985d4160784fb512d7181cd17014c2a569677a2a7bb9dad12cff5e9a68da4f",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "铁婶",
+          "persona": "獾族面馆老板娘，嗓门大，管闲事，镇上消息最灵"
+        },
+        {
+          "name": "阿枝",
+          "persona": "鹿族绣娘，性子安静，和铁婶是邻居，常被她拽来聊天"
+        },
+        {
+          "name": "老哨",
+          "persona": "狼族更夫，爱打岔，走路慢悠悠，和谁都熟"
+        }
+      ],
+      "user": "这事就这么定了，感谢大家，都散了吧。",
+      "before": [
+        {
+          "by": 0,
+          "text": "集市摊位就这么分，我出桌子，阿枝出布。"
+        },
+        {
+          "by": 2,
+          "text": "那我夜里顺道替你们看着点货。"
+        },
+        {
+          "by": 1,
+          "text": "成，那布我今夜就绣边。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "finish"
+      ],
+      "why": "用户明确表示事情已定、感谢并让大家散了，本段对话明确结束，无新提问或待回应者。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "finish"
+      ],
+      "why": "用户明确表示事情已定、感谢并让大家散了，本段对话明确结束，无新提问或待回应者。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "cfeb435bf39c54cc523540ade2c338b00add235333268f6727caca28e844aba3",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-end_or_wait-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-1-end_or_wait",
+    "generator_sha256": "02478872bf9c316b3d482811303ca77d7b1213afbc5f233c8e413eee48fc5054",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "云雀使洛晴",
+          "persona": "性格爽利，说话快，爱催人，云海信使队伍里跑得最快的一位"
+        },
+        {
+          "name": "灯船舵手陈泊",
+          "persona": "沉稳寡言，负责在雾中为信使点灯引路，与洛晴是多年搭档"
+        }
+      ],
+      "user": "今天的风信铃怎么一直响个不停？",
+      "before": [
+        {
+          "by": 0,
+          "text": "陈泊，昨晚过断云崖的时候灯差点灭了吧，我可都看见了。"
+        },
+        {
+          "by": 1,
+          "text": "嗯，油被雨打湿了半盏，好在撑到了崖口。"
+        }
+      ],
+      "after": [
+        {
+          "by": 1,
+          "text": "风信铃连响三阵，说明西边有急件，你待会儿怕是又要跑一趟。"
+        },
+        {
+          "by": 0,
+          "text": "行吧，我去取件，回来再跟你算那盏油灯的账。"
+        }
+      ],
+      "gold": [
+        "finish",
+        "wait"
+      ],
+      "why": "用户的疑问已由陈泊解答，洛晴宣布去取件并说回来再算账，对话处于模糊收束状态，可finish或wait等用户继续。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "finish",
+        "wait"
+      ],
+      "why": "用户的疑问已由陈泊解答，洛晴宣布去取件并说回来再算账，对话处于模糊收束状态，可finish或wait等用户继续。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "6fc03ca54e363e5fca7b82e761b45066c21908c7b055335791461ac249675b0c",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-end_or_wait-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-1-end_or_wait",
+    "generator_sha256": "02478872bf9c316b3d482811303ca77d7b1213afbc5f233c8e413eee48fc5054",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "云栈掌柜温秋",
+          "persona": "心细爱操心，云海驿站掌柜，总惦记信使们吃饱没有"
+        },
+        {
+          "name": "少年学徒阿禾",
+          "persona": "活泼好奇，温秋收的学徒，干活毛躁但嘴甜"
+        }
+      ],
+      "user": "云栈掌柜温秋，后山的雾这几年是不是越来越浓了？",
+      "before": [
+        {
+          "by": 0,
+          "text": "阿禾，把廊下的灯笼都收进来，雾要上来了。"
+        },
+        {
+          "by": 1,
+          "text": "好嘞！掌柜的，这雾里烤饼会不会不熟呀？"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "是的，比十年前浓了不少，信使们过栈道都得结伴走。"
+        },
+        {
+          "by": 1,
+          "text": "那我以后送件也跟着去！"
+        },
+        {
+          "by": 0,
+          "text": "先把今天的碗洗完再说。"
+        }
+      ],
+      "gold": [
+        "finish",
+        "wait"
+      ],
+      "why": "用户点名温秋的问题已被完整回答，阿禾与温秋的插话也已收尾，对话自然收束，可finish或wait。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "finish",
+        "wait"
+      ],
+      "why": "用户点名温秋的问题已被完整回答，阿禾与温秋的插话也已收尾，对话自然收束，可finish或wait。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "6fc03ca54e363e5fca7b82e761b45066c21908c7b055335791461ac249675b0c",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-end_or_wait-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "explicit_handoff",
+    "batch": "train-1-end_or_wait",
+    "generator_sha256": "02478872bf9c316b3d482811303ca77d7b1213afbc5f233c8e413eee48fc5054",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "老信使顾长风",
+          "persona": "话少经验足，送了三十年云海信件，耳朵却越来越背"
+        },
+        {
+          "name": "新信使江晚",
+          "persona": "热情冒失，刚入队半年，总爱向顾长风请教"
+        }
+      ],
+      "user": "顾长风前辈，明早的初风件几点出发？",
+      "before": [],
+      "after": [
+        {
+          "by": 0,
+          "text": "卯时三刻，云口最稳的时候。江晚，你记得把护雾纱带上。"
+        },
+        {
+          "by": 1,
+          "text": "带上啦！还多带了一块姜糖，前辈要不要？"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "江晚最后一句明确向顾长风发出直接提问（姜糖要不要），仅被点名的顾长风可回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "江晚最后一句明确向顾长风发出直接提问（姜糖要不要），仅被点名的顾长风可回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "6fc03ca54e363e5fca7b82e761b45066c21908c7b055335791461ac249675b0c",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "end_or_wait",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-explicit_handoff-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "explicit_handoff",
+    "batch": "train-1-explicit_handoff",
+    "generator_sha256": "42f9fbc90a1455082a3fddd34a456da0cbf09df59449893cf39668c432c483de",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "老木匠石伯",
+          "persona": "话少的獾族老木匠，做事一丝不苟，对镇上老房子的来历最熟悉，脾气固执但不失耐心。"
+        },
+        {
+          "name": "栗子婶",
+          "persona": "松鼠族的糕点铺老板娘，爱打听爱聊天，热心肠，总惦记着给街坊塞点心，嘴上藏不住话。"
+        },
+        {
+          "name": "青年猎手阿岚",
+          "persona": "狼族年轻人，性子直爽急性子，腿脚勤快，从小跟着爷爷走山路，最看不惯拖拖拉拉。"
+        }
+      ],
+      "user": "大家难得都来了，聊聊镇口那座旧磨坊到底该拆还是修吧，谁想先说都行。",
+      "before": [
+        {
+          "by": 0,
+          "text": "那磨坊的承重梁我年轻时看过，烂了一半，光糊表面没用。"
+        },
+        {
+          "by": 2,
+          "text": "我倒是天天路过，没见它塌，是不是能小修小补？"
+        },
+        {
+          "by": 1,
+          "text": "哎你们别吵嘛，我带了两筐栗子糕，边吃边聊，急什么呀。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "栗子婶你先别急着递糕，修不修得先看地基。说起来，梁下那几根桩子的深浅，只有当年挖地基的阿岚爷爷那辈人心里有数，阿岚，你家里还留着老图纸吗？你来说说。"
+        }
+      ],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "石伯在发言中明确点名阿岚并要求他讲家中是否留着老图纸，被点名者优先回应，阿岚索引为2。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "石伯在发言中明确点名阿岚并要求他讲家中是否留着老图纸，被点名者优先回应，阿岚索引为2。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "3b7f2e4494ddd5b36cd46e88ee1e7821d8e5a5227f59d04b60ff5fa15e25ce17",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-explicit_handoff-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "explicit_handoff",
+    "batch": "train-1-explicit_handoff",
+    "generator_sha256": "42f9fbc90a1455082a3fddd34a456da0cbf09df59449893cf39668c432c483de",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "染坊学徒小满",
+          "persona": "兔族姑娘，胆小爱脸红，学染布两年，对颜色敏感，说话轻声细语但认真。"
+        },
+        {
+          "name": "茶棚主人陆九",
+          "persona": "狐族中年人，见多识广爱开玩笑，茶棚里南来北往的消息他都门儿清，但从不掺和是非。"
+        },
+        {
+          "name": "山货商人陈大川",
+          "persona": "熊族壮汉，常年跑山路贩山货，嗓门大，为人豪爽，记账却一笔一画极细心。"
+        }
+      ],
+      "user": "坐下来一起说说吧，今年雨水多，山货和染布的价钱都乱套了，你们觉得该拿囤货怎么办？",
+      "before": [
+        {
+          "by": 2,
+          "text": "我囤了三筐干菌子，就等价钱起来，结果雨一多全趴窝了，哎。"
+        },
+        {
+          "by": 1,
+          "text": "价钱乱的时候，我这茶棚倒不乱，一碗茶还是两文，要不要学学我？"
+        }
+      ],
+      "after": [
+        {
+          "by": 2,
+          "text": "陆九你这话说得轻巧。小满，你染布等不得，布放久了颜色要跑，你最懂急不得的事该怎么办，你来给陈大川支支招呗？"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "陈大川明确点名小满请她给陈大川自己支招，属于明确只请某人回答，仅小满可回应，索引为0。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "陈大川明确点名小满请她给陈大川自己支招，属于明确只请某人回答，仅小满可回应，索引为0。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "3b7f2e4494ddd5b36cd46e88ee1e7821d8e5a5227f59d04b60ff5fa15e25ce17",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-explicit_handoff-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "explicit_handoff",
+    "batch": "train-1-explicit_handoff",
+    "generator_sha256": "42f9fbc90a1455082a3fddd34a456da0cbf09df59449893cf39668c432c483de",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "看林人贺松",
+          "persona": "鹿族老汉，守林三十年，沉默寡言，认得每条小径，对山里动静比谁都敏锐，心肠软嘴上硬。"
+        },
+        {
+          "name": "药婆青娘",
+          "persona": "獭族老妇人，采药配方一把好手，泼辣爱念叨，谁家孩子咳嗽她都管，刀子嘴豆腐心。"
+        },
+        {
+          "name": "脚夫小铁",
+          "persona": "獾族小伙子，靠挑担送货过活，憨厚肯干，认路全凭好记性，爱把路上的见闻讲给大伙听。"
+        }
+      ],
+      "user": "都别急着走，就在这儿说说吧，前山那条老路被落石堵了，绕道的事大伙怎么看？",
+      "before": [
+        {
+          "by": 1,
+          "text": "堵了才好！那条路我采药嫌它荒，草深得能藏蛇。"
+        },
+        {
+          "by": 0,
+          "text": "绕道可以，可别踩我新划的防火带，那不是路。"
+        },
+        {
+          "by": 2,
+          "text": "我上礼拜挑担绕的东坡，能走，就是费鞋底子。"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "小铁你脚下认路，路通不通你说了算。你把东坡那条绕道的宽窄、坡度都说说，青娘你侧耳听着，别插嘴，让年轻人讲。"
+        }
+      ],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "贺松明确点名小铁详细讲东坡绕道情况，并要求青娘听着别插嘴，仅小铁可回应，索引为2。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "贺松明确点名小铁详细讲东坡绕道情况，并要求青娘听着别插嘴，仅小铁可回应，索引为2。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "3b7f2e4494ddd5b36cd46e88ee1e7821d8e5a5227f59d04b60ff5fa15e25ce17",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-open_conversation-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "open_conversation",
+    "batch": "train-1-open_conversation",
+    "generator_sha256": "8dfef08d6cce6453de35d5e124fec4494d6a7ba8bbead012f33c53cdde19c99c",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "铜簧",
+          "persona": "钟楼齿轮间的老精灵，说话慢条斯理，最爱擦拭黄铜齿牙，把每个报时都当仪式"
+        },
+        {
+          "name": "滴铃",
+          "persona": "住在钟摆下的年轻精灵，性子急，爱数秒针跳动的次数，总嫌老钟走得拖沓"
+        }
+      ],
+      "user": "今晚整点的钟声真好听，铜簧、滴铃，你们俩谁想跟我聊聊钟楼里的夜生活？",
+      "before": [
+        {
+          "by": 0,
+          "text": "十二点的报时刚落，我照例给主齿轮上了油，指尖到现在还留着黄铜的凉意。"
+        },
+        {
+          "by": 1,
+          "text": "我数了今晚最后一下钟声，整整震了七秒才停，比昨天多一秒！"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户点名铜簧、滴铃并邀请聊天，两人均可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户点名铜簧、滴铃并邀请聊天，两人均可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "588f2492d4ad3e41d15bfc93d7ca8f56640b94266b29335dc0977aa7f340382e",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "open_conversation",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-open_conversation-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "open_conversation",
+    "batch": "train-1-open_conversation",
+    "generator_sha256": "8dfef08d6cce6453de35d5e124fec4494d6a7ba8bbead012f33c53cdde19c99c",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "灰烬婆婆",
+          "persona": "照看钟楼油灯的年迈精灵，嗓音沙哑，惯于在灯芯旁打盹，对老钟楼的旧事如数家珍"
+        },
+        {
+          "name": "线轴",
+          "persona": "负责给发条上弦的独臂精灵，做事一丝不苟，午饭永远是一小块薄荷糖"
+        }
+      ],
+      "user": "灰烬婆婆、线轴，晚上窗外的月亮照在钟面上，你们平时这个时候都在做什么呀？随便说说就好。",
+      "before": [
+        {
+          "by": 1,
+          "text": "发条上到第三圈时弦断了根细丝，我用薄荷糖纸把它缠好，现在走得很稳。"
+        },
+        {
+          "by": 0,
+          "text": "灯芯剪了两次，油还剩半盏，够撑到天亮。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户点名灰烬婆婆、线轴并随意聊天，两人均可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户点名灰烬婆婆、线轴并随意聊天，两人均可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "588f2492d4ad3e41d15bfc93d7ca8f56640b94266b29335dc0977aa7f340382e",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "open_conversation",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-open_conversation-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "open_conversation",
+    "batch": "train-1-open_conversation",
+    "generator_sha256": "8dfef08d6cce6453de35d5e124fec4494d6a7ba8bbead012f33c53cdde19c99c",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "墨盖",
+          "persona": "钟楼顶层静修的精灵，常年抱着一本旧乐谱，性格温和内敛，说话轻声细语"
+        },
+        {
+          "name": "雀斑",
+          "persona": "住在钟楼檐下的活泼精灵，爱收集雨滴和落灰，喜欢打断别人又立刻道歉"
+        }
+      ],
+      "user": "墨盖、雀斑，都出来聊两句吧，我想听你们说说钟楼顶上和檐下的日子有什么不一样。",
+      "before": [
+        {
+          "by": 0,
+          "text": "我正把乐谱翻到写满灰尘的那一页，顶层安静得能听见秒针换气的声音。"
+        },
+        {
+          "by": 1,
+          "text": "檐下今天落了一片形状像小铃铛的灰，我把它收进了第三个小瓶子里！"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户点名墨盖、雀斑，请两人各自描述生活，两人均可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户点名墨盖、雀斑，请两人各自描述生活，两人均可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "588f2492d4ad3e41d15bfc93d7ca8f56640b94266b29335dc0977aa7f340382e",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "open_conversation",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-pause_or_listen-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "pause_or_listen",
+    "batch": "train-1-pause_or_listen",
+    "generator_sha256": "2fc8bf2306d4290d2d362f4568a3e4ecd397447d5b947a6a1c7cabc3c29dcc2c",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "灰枝",
+          "persona": "獾族木匠，话少但心思细，喜欢边刨木边琢磨事"
+        },
+        {
+          "name": "蒲团",
+          "persona": "兔族茶摊老板娘，热心肠，爱打听邻里新鲜事"
+        },
+        {
+          "name": "石半山",
+          "persona": "山羊族老邮差，腿脚利索，记性极好，全镇的门牌都背得出"
+        },
+        {
+          "name": "晚棠",
+          "persona": "狐族绣娘，嘴快爱开玩笑，和蒲团是多年斗嘴的老朋友"
+        }
+      ],
+      "user": "我想想啊，你们先别急着替我拿主意，等我回来再说。",
+      "before": [
+        {
+          "by": "user",
+          "text": "我在犹豫要不要把老屋的东厢改成杂货铺，你们觉得呢？"
+        },
+        {
+          "by": 1,
+          "text": "要我说改成铺子好啊，以后买针头线脑都不用下山了。"
+        },
+        {
+          "by": 3,
+          "text": "蒲团你就是想多个人陪你唠嗑，改不改还得看主家自己。"
+        },
+        {
+          "by": 0,
+          "text": "东厢的地基我上回看过，结实着呢，改造不算难事。"
+        },
+        {
+          "by": 2,
+          "text": "要是开了铺子，我送信顺路也能帮你捎货。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确说'先别急着替我拿主意，等我回来再说'，请求暂停等待用户回来，众人不应继续推进拿主意或重复建议，wait最合适。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确说'先别急着替我拿主意，等我回来再说'，请求暂停等待用户回来，众人不应继续推进拿主意或重复建议，wait最合适。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "827fead3dc4decfd550cf3e44fc2f6f03e44acb7fe12af4d2fe24af0c3adce41",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-quiet_text-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "quiet_text",
+    "batch": "train-1-quiet_text",
+    "generator_sha256": "63b260501d70b9177f196fb7fa8bf3e3a26394dbd94783880a88063273a4ad03",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "陈屿帆",
+          "persona": "灯塔看守人之弟，寡言但心细，习惯用短句回应，和哥哥陈屿舟一起长大在码头边。"
+        },
+        {
+          "name": "陈屿舟",
+          "persona": "陈屿帆的哥哥，渔船大副，嗓门大爱讲节庆见闻，总担心弟弟一个人守塔太闷。"
+        }
+      ],
+      "user": "今晚灯会人太多，我有点累，不想说话，但能不能让陈屿帆用文字陪我待一会儿就好。",
+      "before": [
+        {
+          "by": 0,
+          "text": "我在塔顶能看见整片灯河，你要看就说一声。"
+        },
+        {
+          "by": 1,
+          "text": "我在码头上，人挤得像涨潮，回头给你们带烤鱿鱼！"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名陈屿帆用文字陪伴，属安静但请求文字陪伴的情形，陈屿帆可继续发言陪伴，不宜wait/finish。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名陈屿帆用文字陪伴，属安静但请求文字陪伴的情形，陈屿帆可继续发言陪伴，不宜wait/finish。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "93dbd83c7e52e189562a1f234e623d673b12e0287e218398e30a4c6cf895eb7f",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-quiet_text-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "open_conversation",
+    "batch": "train-1-quiet_text",
+    "generator_sha256": "63b260501d70b9177f196fb7fa8bf3e3a26394dbd94783880a88063273a4ad03",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "白栀橹",
+          "persona": "船家女儿，会做桂花糖藕，节庆时帮家里摆渡，说话软但主意正。"
+        },
+        {
+          "name": "宋灯洲",
+          "persona": "河灯铺学徒，做纸灯手巧，性子急，总怕错过放灯的好时辰。"
+        },
+        {
+          "name": "白栀桨",
+          "persona": "白栀橹的堂弟，撑船少年，话不多但眼尖，节庆夜负责引客人上船。"
+        }
+      ],
+      "user": "宋灯洲说河灯铺赶不出新灯了，这事到底该怎么办，谁来拿个主意。",
+      "before": [
+        {
+          "by": 0,
+          "text": "渡口这边人排队排到石阶下了，我这船都快载不动了。"
+        },
+        {
+          "by": 1,
+          "text": "别提了，火漆不干了，今晚新灯赶不出来，急死我。"
+        },
+        {
+          "by": 2,
+          "text": "桥下风大，我先把老弱先扶上船，回头说灯的事。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户未点名具体人，只问谁来拿主意；白栀橹主意正、宋灯洲是当事灯铺学徒，均为合理候选；白栀桨忙于扶人上船且无拿主意的公开依据，不列。新问题无暂停/完成依据，不允许wait/finish/abstain。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户未点名具体人，只问谁来拿主意；白栀橹主意正、宋灯洲是当事灯铺学徒，均为合理候选；白栀桨忙于扶人上船且无拿主意的公开依据，不列。新问题无暂停/完成依据，不允许wait/finish/abstain。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "93dbd83c7e52e189562a1f234e623d673b12e0287e218398e30a4c6cf895eb7f",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-relationship_reference-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "relationship_reference",
+    "batch": "train-1-relationship_reference",
+    "generator_sha256": "ee7caf92fd97d8b53f41bd63cda3d12582f788c5219aaf172e06004a3d430ad9",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "栗婆婆",
+          "persona": "山货铺的獾族老太，记性极好，谁家欠了一勺盐都记得清楚"
+        },
+        {
+          "name": "灰枝",
+          "persona": "栗婆婆的孙子，松鼠族少年，嘴快心热，总爱替铺子跑腿"
+        }
+      ],
+      "user": "想问问那位总记得各家赊账的老人，上个月我拿走的一罐蜂蜜还没结钱吧？",
+      "before": [
+        {
+          "by": 0,
+          "text": "铺子刚开门，灰枝先把门口的松果扫了扫。"
+        },
+        {
+          "by": 1,
+          "text": "奶奶，今天溪边那几户说要来买笋干。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名记赊账的老人即栗婆婆，after为空，决策点在user之后，栗婆婆被明确要求回答赊账问题。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名记赊账的老人即栗婆婆，after为空，决策点在user之后，栗婆婆被明确要求回答赊账问题。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "4d4c52ca5b8263c1ff256566223ffb151769d9b983e6b2f8e55ac92e69d3548b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-relationship_reference-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "relationship_reference",
+    "batch": "train-1-relationship_reference",
+    "generator_sha256": "ee7caf92fd97d8b53f41bd63cda3d12582f788c5219aaf172e06004a3d430ad9",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "石鸣",
+          "persona": "守林厂的熊族壮汉，话少，但看到受伤的小兽一定会停下来包扎"
+        },
+        {
+          "name": "柳絮",
+          "persona": "镇上的绣娘，兔族，爱凑热闹，消息比风跑得还快"
+        }
+      ],
+      "user": "请那位见不得小兽受伤的护林人说说，北坡那个狐狸洞最近安全吗？",
+      "before": [
+        {
+          "by": 1,
+          "text": "听说昨天有人看见坡上有套索，绣花针都吓掉了。"
+        },
+        {
+          "by": 0,
+          "text": "我巡到的时候已经拆了。"
+        }
+      ],
+      "after": [
+        {
+          "by": 1,
+          "text": "哎，那套索到底是谁下的呀？"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "after中柳絮追问套索是谁下的，问题指向实际巡坡拆套索的石鸣，石鸣作为被问对象可回应；用户原请求已在before中得到回答，无需重复。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "after中柳絮追问套索是谁下的，问题指向实际巡坡拆套索的石鸣，石鸣作为被问对象可回应；用户原请求已在before中得到回答，无需重复。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "4d4c52ca5b8263c1ff256566223ffb151769d9b983e6b2f8e55ac92e69d3548b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-relationship_reference-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "relationship_reference",
+    "batch": "train-1-relationship_reference",
+    "generator_sha256": "ee7caf92fd97d8b53f41bd63cda3d12582f788c5219aaf172e06004a3d430ad9",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "陆青芜",
+          "persona": "铁匠铺的狼族女匠，脾气火爆，敲铁越重心里越痛快"
+        },
+        {
+          "name": "白露",
+          "persona": "陆青芜收的学徒，羊族姑娘，手轻心细，专管淬火和记账"
+        }
+      ],
+      "user": "想请那位记帐最细的徒弟帮个忙，把上次修柴刀的钱再算一遍给我听。",
+      "before": [],
+      "after": [
+        {
+          "by": 0,
+          "text": "算几遍都是一个数，别磨蹭，白露你念。"
+        }
+      ],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名记账徒弟白露，且after中陆青芜已指定白露念账，下一位应由白露发言。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确点名记账徒弟白露，且after中陆青芜已指定白露念账，下一位应由白露发言。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "4d4c52ca5b8263c1ff256566223ffb151769d9b983e6b2f8e55ac92e69d3548b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-unfinished_or_done-s1",
+    "local_id": "s1",
+    "split": "train",
+    "slice": "author_continuation",
+    "batch": "train-1-unfinished_or_done",
+    "generator_sha256": "02f7c25b3a3f7bcfa1e89f5672e6e845808c977642272f6a882ea133fa0fd1ea",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林晚舟",
+          "persona": "云海信使站的站长，沉稳细心，习惯把每件事记在小本子上"
+        },
+        {
+          "name": "赵青帆",
+          "persona": "年轻的飞行信使，性子急但心热，总抢着送最远的包裹"
+        },
+        {
+          "name": "苏眠雾",
+          "persona": "站里的炊事员，说话慢悠悠，爱在雾天煮姜茶"
+        },
+        {
+          "name": "陈拾星",
+          "persona": "退休的老信使，爱讲当年云海上的旧事"
+        }
+      ],
+      "user": "林晚舟，你刚才说到那封差点被风吹走的信，请继续把这段讲完吧。",
+      "before": [
+        {
+          "by": 0,
+          "text": "昨天的雾太大，我背着邮包走到鹰嘴崖，一阵风差点把那封信吹进云里。"
+        },
+        {
+          "by": 1,
+          "text": "我记得那封！是你跳起来抓住的吧？"
+        },
+        {
+          "by": 3,
+          "text": "当年我们在鹰嘴崖送信，都是用绳子拴着邮包的。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名林晚舟继续讲他第一人称经历的信件故事，仅他可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名林晚舟继续讲他第一人称经历的信件故事，仅他可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c6dafc9665294d17fa3918514e3a0334ddd6c110a13eb0b8dae65b4c30d7896b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": false
+  },
+  {
+    "id": "train-1-unfinished_or_done-s2",
+    "local_id": "s2",
+    "split": "train",
+    "slice": "end_or_wait",
+    "batch": "train-1-unfinished_or_done",
+    "generator_sha256": "02f7c25b3a3f7bcfa1e89f5672e6e845808c977642272f6a882ea133fa0fd1ea",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "顾云梯",
+          "persona": "信使站的老调度，做事一板一眼，讲究按顺序排班"
+        },
+        {
+          "name": "白鹭洲",
+          "persona": "爱幻想的见习信使，说话总带着比喻"
+        },
+        {
+          "name": "江扫云",
+          "persona": "站里的清洁工，话少但记性好，谁丢东西都问她"
+        },
+        {
+          "name": "温朝雾",
+          "persona": "急性子的调度助手，喜欢插话接话茬"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "今天排班表贴出来了，白鹭洲你跟江扫云一组。"
+        },
+        {
+          "by": 1,
+          "text": "好呀，雾里的走廊像一条没写完的云路。"
+        },
+        {
+          "by": 3,
+          "text": "哎还没完呢，顾云梯你后面是不是还有交接的安排？你倒是接着说呀。"
+        },
+        {
+          "by": 0,
+          "text": "交接的安排我下午再补上，这个话题就先到这里，散了吧。"
+        },
+        {
+          "by": 2,
+          "text": "好，我去把东廊的灯点上。"
+        }
+      ],
+      "user": "好，那这段排班的事就算说完了，大家忙去吧。",
+      "after": [],
+      "gold": [
+        "finish"
+      ],
+      "why": "用户明确表示排班话题说完、散了吧，本轮明确结束，无新提问"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "finish"
+      ],
+      "why": "用户明确表示排班话题说完、散了吧，本轮明确结束，无新提问",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c6dafc9665294d17fa3918514e3a0334ddd6c110a13eb0b8dae65b4c30d7896b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": true
+  },
+  {
+    "id": "train-1-unfinished_or_done-s3",
+    "local_id": "s3",
+    "split": "train",
+    "slice": "author_continuation",
+    "batch": "train-1-unfinished_or_done",
+    "generator_sha256": "02f7c25b3a3f7bcfa1e89f5672e6e845808c977642272f6a882ea133fa0fd1ea",
+    "scene": {
+      "id": "s3",
+      "cast": [
+        {
+          "name": "贺长风",
+          "persona": "资深信使，说话干脆，收工前必检查背带"
+        },
+        {
+          "name": "陶小满",
+          "persona": "活泼的新信使，总缠着前辈问东问西"
+        },
+        {
+          "name": "齐落霞",
+          "persona": "安静的气象观察员，喜欢看晚霞预报明天的风"
+        },
+        {
+          "name": "孟云归",
+          "persona": "站里管账的，算盘打得快，人也机灵"
+        }
+      ],
+      "user": "贺长风，请你接着把去年风谷救援那段讲完，其他人先听。",
+      "before": [
+        {
+          "by": 1,
+          "text": "贺前辈，风谷那次到底怎么把人背出来的呀？"
+        },
+        {
+          "by": 2,
+          "text": "那天晚霞是橘红色的，风要变。"
+        },
+        {
+          "by": 0,
+          "text": "那天背带断了两次，我靠着崖壁换绳，风就在耳边叫。"
+        },
+        {
+          "by": 3,
+          "text": "后来账本上还记着你赔的两条绳子呢。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名贺长风接着讲去年风谷救援经历，且要求其他人先听，仅贺长风可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s3",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名贺长风接着讲去年风谷救援经历，且要求其他人先听，仅贺长风可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c6dafc9665294d17fa3918514e3a0334ddd6c110a13eb0b8dae65b4c30d7896b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-author_continuation-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "author_continuation",
+    "batch": "val-0-author_continuation",
+    "generator_sha256": "b5d1e4393dc14f8f3a9d119e15e51f765a9c1092ffd730d302e0e37475d0215c",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "柳春荷",
+          "persona": "湖边卖菱角的摊主，性子爽利，讲话爱从头细数"
+        },
+        {
+          "name": "程砚舟",
+          "persona": "摆渡船的年轻船夫，话不多但心细，常听春荷讲趣事"
+        },
+        {
+          "name": "温阿满",
+          "persona": "集市上做糖画的姑娘，嘴快爱起哄，和春荷是好姐妹"
+        },
+        {
+          "name": "老崔",
+          "persona": "修渔网的老把式，稳重爱笑，看着集市上的年轻人们长大"
+        }
+      ],
+      "before": [
+        {
+          "by": "user",
+          "text": "春荷，昨儿你不是碰上个大客户吗？后来怎么样了？"
+        },
+        {
+          "by": 0,
+          "text": "哎，说来话长，那位客官一口气要了二十斤菱角，我正乐着呢，他忽然又说要现剥——"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "我蹲在摊边剥得手都酸了，眼看天要下雨，他突然又冒出一句……"
+        }
+      ],
+      "user": "别停别停，春荷你自己接着往下说，后来那客官到底怎么了？",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名春荷接着讲，春荷宣布要讲而未讲完，应继续发言"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名春荷接着讲，春荷宣布要讲而未讲完，应继续发言",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "98ade826811d2f6f73a1bb3af64cb37d80129d3daea9c940be5c8218aa3e156b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "author_continuation",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-author_continuation-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "author_continuation",
+    "batch": "val-0-author_continuation",
+    "generator_sha256": "b5d1e4393dc14f8f3a9d119e15e51f765a9c1092ffd730d302e0e37475d0215c",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "祝小满",
+          "persona": "集市上撑伞棚的姑娘，胆大嘴甜，爱冒险"
+        },
+        {
+          "name": "沈芦生",
+          "persona": "收荷叶的少年，慢性子，和小满总斗嘴却最合拍"
+        },
+        {
+          "name": "罗七婶",
+          "persona": "湖心茶棚的老板娘，热心肠，什么都懂一点"
+        },
+        {
+          "name": "杜九",
+          "persona": "补船匠，沉默寡言，但遇到水上的事最有发言权"
+        }
+      ],
+      "before": [
+        {
+          "by": "user",
+          "text": "小满，听说你昨晚一个人划船去追风筝了？"
+        },
+        {
+          "by": 0,
+          "text": "对！那风筝线断了我心疼得不行，趁着月亮亮就划出去了，划到一半雾就起来了——"
+        }
+      ],
+      "after": [
+        {
+          "by": 0,
+          "text": "雾越来越浓，我听见芦苇丛里窸窸窣窣的，正想着要不要回头，忽然前面飘来一点灯火……"
+        }
+      ],
+      "user": "小满接着讲，后来那灯火是人是鬼？我们都等着呢。",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名小满继续讲，小满故事讲到悬念处未讲完，应由小满继续"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名小满继续讲，小满故事讲到悬念处未讲完，应由小满继续",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "98ade826811d2f6f73a1bb3af64cb37d80129d3daea9c940be5c8218aa3e156b",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "author_continuation",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-explicit_handoff-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "explicit_handoff",
+    "batch": "val-0-explicit_handoff",
+    "generator_sha256": "67c68c17472652542f5c5097337a255b6a7a905551c27f415d400a3fe1a940e8",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "陈叙冬",
+          "persona": "老站长，话不多但心细，惯于照看驿站里的炉火和过客"
+        },
+        {
+          "name": "洛小满",
+          "persona": "年轻的邮差，性子急、爱说话，常在驿站歇脚，与陈叙冬处得像忘年交"
+        }
+      ],
+      "user": "屋里就你们俩，随便聊聊呗，我烤火听着。",
+      "before": [],
+      "after": [
+        {
+          "by": 0,
+          "text": "炉子上坐着水，小满，你今天送件走到哪儿了？"
+        },
+        {
+          "by": 1,
+          "text": "走到北坡就折回来了，雪太深。陈叙冬，我看你炉火烧得比昨天旺，说说你砍柴的事嘛。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "洛小满明确点名陈叙冬讲砍柴的事，陈叙冬是下一位回应者"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "洛小满明确点名陈叙冬讲砍柴的事，陈叙冬是下一位回应者",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "939a638cd3622b86622f988b8e05dd2ab21b251b9f8840b4e89b7380c8ccc929",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-explicit_handoff-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "explicit_handoff",
+    "batch": "val-0-explicit_handoff",
+    "generator_sha256": "67c68c17472652542f5c5097337a255b6a7a905551c27f415d400a3fe1a940e8",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "白芷",
+          "persona": "驿店老板娘，爽利爱笑，做饭一绝，爱打听外头的消息"
+        },
+        {
+          "name": "贺远山",
+          "persona": "常驻驿站的雪橇夫，沉稳寡言，对山里路线烂熟于心，与白芷互相照应多年"
+        }
+      ],
+      "user": "你们两位边吃饭边聊聊这雪要下多久吧，我坐旁边听。",
+      "before": [],
+      "after": [
+        {
+          "by": 1,
+          "text": "看云的走法，少说还有三天。白芷，你这汤炖得香，讲讲你哪学的手艺。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "贺远山明确点名白芷讲学手艺的经历，白芷是下一位回应者"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "贺远山明确点名白芷讲学手艺的经历，白芷是下一位回应者",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "939a638cd3622b86622f988b8e05dd2ab21b251b9f8840b4e89b7380c8ccc929",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "explicit_handoff",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-interrupt_redirect-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "interrupt_redirect",
+    "batch": "val-0-interrupt_redirect",
+    "generator_sha256": "f520b67ee32ccc5ebce2e1c837378da7db7623c6dc156903d81a55145d0aaeb9",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "苔青",
+          "persona": "苔青是园里最细心的水管工，说话慢，爱替别人操心，和菌铃是老邻居"
+        },
+        {
+          "name": "菌铃",
+          "persona": "菌铃是发光菌圃的看护人，性子急，嗓门大，总嫌园里夜里太暗"
+        },
+        {
+          "name": "石萝",
+          "persona": "石萝是种苔藓的姑娘，安静，喜欢记录园里的天气，和苔青是表兄妹"
+        }
+      ],
+      "user": "先别说灯的事了，苔青，你就说说上个月那条主水道堵住的时候，你到底是怎么疏通的？",
+      "before": [
+        {
+          "by": 1,
+          "text": "今晚照明的孢子又暗了一半，我看是时候找园务换一批新的了。"
+        },
+        {
+          "by": 0,
+          "text": "先别急着换，昨晚我路过菌圃，闻着有点潮气，说不定是通风的事。"
+        },
+        {
+          "by": 2,
+          "text": "我记了一笔，这周苔藓长势不错，就是照明的光确实弱了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名苔青讲述其本人疏通主水道的经历，第一人称经历归苔青，仅其可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名苔青讲述其本人疏通主水道的经历，第一人称经历归苔青，仅其可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "e3ad7ae376544961de3e16d52a0616f0e4e3a7cf0dacafd0bd540067b7e5818a",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": true
+  },
+  {
+    "id": "val-0-interrupt_redirect-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "interrupt_redirect",
+    "batch": "val-0-interrupt_redirect",
+    "generator_sha256": "f520b67ee32ccc5ebce2e1c837378da7db7623c6dc156903d81a55145d0aaeb9",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "芜根伯",
+          "persona": "芜根伯是地下花园最老的堆肥师傅，固执又热心，总爱管年轻人的伙食"
+        },
+        {
+          "name": "露芽",
+          "persona": "露芽是刚搬来的种菜学徒，胆小爱问问题，把芜根伯当师父"
+        },
+        {
+          "name": "岑藤",
+          "persona": "岑藤是负责藤架修理的乐天派，嘴上没正经，和露芽住同一层洞穴"
+        }
+      ],
+      "user": "别问堆肥了，我想听岑藤讲讲他上次爬到顶层修藤架差点摔下来的事。",
+      "before": [
+        {
+          "by": 2,
+          "text": "今天藤架第三层又松了，钉子吃不住土墙。"
+        },
+        {
+          "by": 0,
+          "text": "露芽啊，你先记着，堆肥翻第三次的时候最臭，可不能偷懒。"
+        },
+        {
+          "by": 1,
+          "text": "师父，那第三次翻完是不是就能埋种子了？"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名要听岑藤讲其本人修藤架差点摔下的事，仅岑藤可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名要听岑藤讲其本人修藤架差点摔下的事，仅岑藤可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "e3ad7ae376544961de3e16d52a0616f0e4e3a7cf0dacafd0bd540067b7e5818a",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "interrupt_redirect",
+    "rename_safe": true
+  },
+  {
+    "id": "val-0-mention_not_address-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "mention_not_address",
+    "batch": "val-0-mention_not_address",
+    "generator_sha256": "db29d5b2e446b7ccc8b07748cda2b5ba3b0766d1be0af7320c1f90b2d792196f",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "苔枝",
+          "persona": "地下花园的老园丁，说话慢悠悠，总惦记着光照和浇水的事"
+        },
+        {
+          "name": "石南",
+          "persona": "苔枝的邻居，性子急，负责管道维修，爱抢着接话"
+        },
+        {
+          "name": "露芽",
+          "persona": "新来的种苗员，胆小细致，和苔枝一起打理东边花床"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "今晚轮到苔枝守菌圃，露芽你别惦记，我替你看着呢。"
+        },
+        {
+          "by": 1,
+          "text": "水管我也顺手修好了，这个月的活儿总算清了。"
+        }
+      ],
+      "user": "苔枝刚才说的事，露芽你自己怎么看？",
+      "after": [],
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名露芽发表看法，仅露芽可回应"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:2"
+      ],
+      "why": "用户明确点名露芽发表看法，仅露芽可回应",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c8617634c39504226696cdb907d4621fd8189e1571f202e4d449157a16e609e6",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "mention_not_address",
+    "rename_safe": true
+  },
+  {
+    "id": "val-0-mention_not_address-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "open_conversation",
+    "batch": "val-0-mention_not_address",
+    "generator_sha256": "db29d5b2e446b7ccc8b07748cda2b5ba3b0766d1be0af7320c1f90b2d792196f",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "青藤婶",
+          "persona": "地下花园市集的摊主，热心快嘴，谁都认识"
+        },
+        {
+          "name": "岩豆",
+          "persona": "青藤婶的侄子，安静寡言，帮着搬货记账"
+        },
+        {
+          "name": "暖砂",
+          "persona": "市集对面的茶铺主人，温和爱打圆场，和青藤婶交情深"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "岩豆这孩子把账目理得清清楚楚，一块蘑菇干都没错过。"
+        },
+        {
+          "by": 2,
+          "text": "怪不得今天他茶铺那边一声不吭，原来忙这个去了。"
+        }
+      ],
+      "user": "市集里大家平时怎么分工的？都来说说呗。",
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1",
+        "respond:2"
+      ],
+      "why": "用户请'大家'都说说分工，三位角色均在市集场景中且都可合理回应，应完整列出候选"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:0",
+        "respond:1",
+        "respond:2"
+      ],
+      "why": "用户请'大家'都说说分工，三位角色均在市集场景中且都可合理回应，应完整列出候选",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "c8617634c39504226696cdb907d4621fd8189e1571f202e4d449157a16e609e6",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "mention_not_address",
+    "rename_safe": true
+  },
+  {
+    "id": "val-0-quiet_text-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "quiet_text",
+    "batch": "val-0-quiet_text",
+    "generator_sha256": "2b562550647b7c316efdf8edd60d9afb010550501c05634d4be56d71fd9367b2",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "沈慕舟",
+          "persona": "驿站老板，温和健谈，喜欢给过路客讲雪原上的旧事"
+        },
+        {
+          "name": "霍青梧",
+          "persona": "赶路多年的老镖师，话少心细，与沈慕舟是多年老友"
+        }
+      ],
+      "user": "今晚屋里就我一个人，心里发慌，谁能陪我随便聊几句都行，别让我一个人干坐着。",
+      "before": [
+        {
+          "by": 0,
+          "text": "炉子上煨着姜茶，夜里冷，你多喝两口。"
+        },
+        {
+          "by": 1,
+          "text": "他把窗缝塞好了，今晚风小不了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户明确请求文字陪伴，允许respond；未点名特定人物，沈慕舟健谈爱陪聊、霍青梧细心且刚安排过住处细节，两人都是合理候选，应完整列出。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0",
+        "respond:1"
+      ],
+      "why": "用户明确请求文字陪伴，允许respond；未点名特定人物，沈慕舟健谈爱陪聊、霍青梧细心且刚安排过住处细节，两人都是合理候选，应完整列出。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "f91c704547df6101c9298842da667f0e46e281af742f267299e1677795ef7056",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "quiet_text",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-relationship_reference-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "relationship_reference",
+    "batch": "val-0-relationship_reference",
+    "generator_sha256": "b44bd6e8e0fdc4f89857c590eee57db548792c9e5a29c11cc80f7e398310be17",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "阿澜",
+          "persona": "湖上撑船的船夫，性子爽快，撑船时总爱在船头哼渔歌，湖面人都认得这调子"
+        },
+        {
+          "name": "老蚌婶",
+          "persona": "湖边卖珍珠饰品的老摊主，眼尖嘴利，最会看人还价"
+        },
+        {
+          "name": "小鹭",
+          "persona": "阿澜的妹妹，跟着哥哥跑船卖鱼，手脚麻利，嗓门清亮"
+        },
+        {
+          "name": "灰哥",
+          "persona": "码头上补网修篙的师傅，话不多，手艺却是集市里最好的"
+        }
+      ],
+      "user": "想问问那位撑船时总在船头哼渔歌的大哥，今早的湖虾鲜不鲜，几时靠岸？",
+      "before": [
+        {
+          "by": 0,
+          "text": "（远远传来一段渔歌调子，混着摇橹声）"
+        },
+        {
+          "by": 1,
+          "text": "这歌一响，就知道阿澜的船快到码头了。"
+        },
+        {
+          "by": 3,
+          "text": "他昨天的虾卖得快，今天怕是收得更早。"
+        }
+      ],
+      "after": [
+        {
+          "by": 2,
+          "text": "那是俺哥的歌，等他靠了岸他自己说最准。"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名哼渔歌的撑船大哥即阿澜，问题问今早湖虾与靠岸时间，只有本人能给出第一人称准确回答；小鹭只是代为转述并建议等靠岸，非用户指定，故下一位应是阿澜本人回应。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户明确点名哼渔歌的撑船大哥即阿澜，问题问今早湖虾与靠岸时间，只有本人能给出第一人称准确回答；小鹭只是代为转述并建议等靠岸，非用户指定，故下一位应是阿澜本人回应。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "2b9821c2a3cbadba3973b20cd0b249eb860adf571942db94046f8494e9c0cf9f",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-relationship_reference-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "relationship_reference",
+    "batch": "val-0-relationship_reference",
+    "generator_sha256": "b44bd6e8e0fdc4f89857c590eee57db548792c9e5a29c11cc80f7e398310be17",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "春杏",
+          "persona": "集市里摆干货摊的摊主，算账分毫不含糊，名声一贯公道"
+        },
+        {
+          "name": "阿满",
+          "persona": "春杏的弟弟，平时守摊总爱靠着货垛打瞌睡，可从没耽误过一件买卖"
+        },
+        {
+          "name": "柳姨",
+          "persona": "编蒲扇的手艺人，春杏家的老邻居，看着姐弟俩长大"
+        },
+        {
+          "name": "石头",
+          "persona": "常帮柳姨递蒲草的半大孩子，勤快嘴甜，集市里人人喜欢"
+        }
+      ],
+      "user": "麻烦叫一下你们这儿那个守着摊子打瞌睡却从不误事的小伙子，我家积的河蚌壳他收不收？",
+      "before": [
+        {
+          "by": 1,
+          "text": "（靠着苇席垛打起了小呼噜）"
+        },
+        {
+          "by": 2,
+          "text": "这孩子，睡得香，账倒是从没错过一笔。"
+        },
+        {
+          "by": 0,
+          "text": "让他睡会儿，等下了湖他要划船收货去。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确只请守摊打瞌睡却不误事的小伙子即阿满回答收不收河蚌壳；属于明确点名，仅此人有回应许可，春杏、柳姨等知道情况也不能代答，故仅respond:1。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "respond:1"
+      ],
+      "why": "用户明确只请守摊打瞌睡却不误事的小伙子即阿满回答收不收河蚌壳；属于明确点名，仅此人有回应许可，春杏、柳姨等知道情况也不能代答，故仅respond:1。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "2b9821c2a3cbadba3973b20cd0b249eb860adf571942db94046f8494e9c0cf9f",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "relationship_reference",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-same_name-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "same_name",
+    "batch": "val-0-same_name",
+    "generator_sha256": "f090867f19c355eef0e858c4bf10d459305f72892ead40d8d582b1b0f1e0edee",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "林秀",
+          "persona": "驿站里的老掌柜，话不多，心细，认路认人，待旅伴像家人"
+        },
+        {
+          "name": "林秀",
+          "persona": "年轻的新伙计，性子急，爱打趣，是老掌柜远房侄子，常被唤作小林秀"
+        }
+      ],
+      "user": "今晚炉火归谁添？林秀你说一声。",
+      "before": [
+        {
+          "by": 0,
+          "text": "柴房快空了，明早得去背新柴。"
+        },
+        {
+          "by": 1,
+          "text": "我来背！叔，你歇着。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "abstain"
+      ],
+      "why": "两人都叫林秀（老掌柜与小林秀），用户只点名'林秀'无消歧依据，公开信息不足以可靠选择。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "abstain"
+      ],
+      "why": "两人都叫林秀（老掌柜与小林秀），用户只点名'林秀'无消歧依据，公开信息不足以可靠选择。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "db1da7c909bba8020c45b31cbe4b0439c9e627da9d3900a7f1cc7a58561c8335",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "same_name",
+    "rename_safe": false
+  },
+  {
+    "id": "val-0-unfinished_or_done-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "author_continuation",
+    "batch": "val-0-unfinished_or_done",
+    "generator_sha256": "a6c10bb6107d1a45b928cecdcb91fd91d417c300e003986327b5478129035d88",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "苔娘",
+          "persona": "苔藓园的老园丁，说话慢悠悠，爱讲地下花园旧事，从不急躁"
+        },
+        {
+          "name": "小菌",
+          "persona": "新来的蘑菇学徒，性子急，总想抢话，很敬重苔娘"
+        },
+        {
+          "name": "石叔",
+          "persona": "看守水渠的沉默汉子，只在小菌被水呛到时才多嘴"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "要说这地下花园最早的荧光苔，得从三百年前那次塌方讲起……"
+        },
+        {
+          "by": 1,
+          "text": "苔娘，您又说这一段！我都听过八遍了。"
+        }
+      ],
+      "user": "小菌别打岔，让苔娘把这段塌方的旧事慢慢讲完，我就爱听她从头讲。",
+      "after": [
+        {
+          "by": 0,
+          "text": "好嘞，那我就不急了。那年洞顶塌了半边，黑得伸手不见五指……"
+        },
+        {
+          "by": 0,
+          "text": "当时老园长带着大家往深处撤，水漫了上来，眼看就要没过膝盖，苔藓忽然自己亮了起来……"
+        }
+      ],
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名让苔娘把塌方旧事讲完，苔娘已开讲且尚在中途未讲完，应继续由苔娘（索引0）发言。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "respond:0"
+      ],
+      "why": "用户点名让苔娘把塌方旧事讲完，苔娘已开讲且尚在中途未讲完，应继续由苔娘（索引0）发言。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "879c89b69b6af51fc9a1c7ce2e98f6667cf517ae2f9b425dedb6f89efa15b5e1",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": true
+  },
+  {
+    "id": "val-0-unfinished_or_done-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "unfinished_or_done",
+    "batch": "val-0-unfinished_or_done",
+    "generator_sha256": "a6c10bb6107d1a45b928cecdcb91fd91d417c300e003986327b5478129035d88",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "藤二",
+          "persona": "种夜香藤的年轻人，爱吹牛，但手脚麻利，和小满是一对欢喜冤家"
+        },
+        {
+          "name": "小满",
+          "persona": "管虫舍的姑娘，心细嘴利，最看不惯藤二吹牛，常当场拆台"
+        },
+        {
+          "name": "老壶",
+          "persona": "烧陶修灯的老匠人，慢吞吞地劝和，谁的事都爱插一句"
+        }
+      ],
+      "before": [
+        {
+          "by": 0,
+          "text": "我这批夜香藤，开出的花比上个月大一圈，不信今晚来看！"
+        },
+        {
+          "by": 1,
+          "text": "又吹，上回说大两圈，结果比指甲盖还小。"
+        },
+        {
+          "by": 2,
+          "text": "吵什么，花开花小，都是园子里的福气。"
+        }
+      ],
+      "user": "藤二，你今晚到底开不开花？开的话我就来看，一句话说清楚就行。",
+      "after": [
+        {
+          "by": 0,
+          "text": "开！今晚肯定开，亥时三刻准亮香，我说到做到。"
+        },
+        {
+          "by": 1,
+          "text": "行，那我亥时也去盯着，你要是放鸽子，我就把这事记到年底。"
+        }
+      ],
+      "gold": [
+        "finish",
+        "respond:0"
+      ],
+      "why": "用户明确只请藤二一句话说清，藤二已答完，请求已满足，不宜让其无故重复，可finish；但小满放话威胁，藤二作为欢喜冤家自然接话也合理，故respond:0与finish均为合理候选。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "finish",
+        "respond:0"
+      ],
+      "why": "用户明确只请藤二一句话说清，藤二已答完，请求已满足，不宜让其无故重复，可finish；但小满放话威胁，藤二作为欢喜冤家自然接话也合理，故respond:0与finish均为合理候选。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "879c89b69b6af51fc9a1c7ce2e98f6667cf517ae2f9b425dedb6f89efa15b5e1",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "unfinished_or_done",
+    "rename_safe": true
+  },
+  {
+    "id": "val_wait-supplement-s1",
+    "local_id": "s1",
+    "split": "val",
+    "slice": "pause_or_listen",
+    "batch": "val_wait-supplement",
+    "generator_sha256": "89b226cc4e12c0213078e9cb8b98c9c01f38682ef1b1d53f5ddf5c94eec7caae",
+    "scene": {
+      "id": "s1",
+      "cast": [
+        {
+          "name": "陈雪梅",
+          "persona": "驿站老板娘，说话干脆热心，总惦记着旅人吃饱穿暖"
+        },
+        {
+          "name": "洛长风",
+          "persona": "赶路多日的行商，话不多但心细，习惯先看人再开口"
+        },
+        {
+          "name": "小满",
+          "persona": "驿站帮工的少年，性子急嘴快，最喜欢听旅人讲外面的事"
+        }
+      ],
+      "user": "都先停一下，你们仨谁也别接话，等我下一条消息来了再继续聊，现在先安静着。",
+      "before": [
+        {
+          "by": 0,
+          "text": "炉子上炖着热汤，各位先把湿斗篷烘一烘再赶路。"
+        },
+        {
+          "by": 2,
+          "text": "洛大叔你从南边来，见过海没有？我这辈子还没出过雪原呢。"
+        },
+        {
+          "by": 1,
+          "text": "见过，等你长大自己去看看，比我讲一百遍都强。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求三人都不接话，等下一条消息再继续，属于明确暂停，应wait。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s1",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户明确要求三人都不接话，等下一条消息再继续，属于明确暂停，应wait。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "d2fe76060b57f926bc4d53c1267a92dd39fd34f1eaeaba7be1550fe56de18304",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": false
+  },
+  {
+    "id": "val_wait-supplement-s2",
+    "local_id": "s2",
+    "split": "val",
+    "slice": "pause_or_listen",
+    "batch": "val_wait-supplement",
+    "generator_sha256": "89b226cc4e12c0213078e9cb8b98c9c01f38682ef1b1d53f5ddf5c94eec7caae",
+    "scene": {
+      "id": "s2",
+      "cast": [
+        {
+          "name": "秦九斤",
+          "persona": "老车夫，嗓门大爱打趣，跟掌柜的是多年老相识"
+        },
+        {
+          "name": "苏杏儿",
+          "persona": "驿站掌柜，做事稳当，说话轻但句句有分量"
+        },
+        {
+          "name": "白砚",
+          "persona": "借宿的教书先生，斯文怕冷，随身带着一摞书"
+        }
+      ],
+      "user": "各位听着，现在谁都不许回复我，包括苏杏儿、秦九斤和白砚，等我下一条输入再说，这不是散伙，就是暂时停一停。",
+      "before": [
+        {
+          "by": 1,
+          "text": "白先生，你的屋子添了第二个炭盆，夜里冷得很。"
+        },
+        {
+          "by": 2,
+          "text": "多谢掌柜，我这双手到现在还没缓过来。"
+        },
+        {
+          "by": 0,
+          "text": "城里教书的人金贵，哪像我们这些赶车的，风雪里睡车板都习惯了。"
+        }
+      ],
+      "after": [],
+      "gold": [
+        "wait"
+      ],
+      "why": "用户点名禁止包括三位角色在内的一切回复，等下一条输入再继续，属明确暂停，应wait。"
+    },
+    "status": "annotated_pending_audit",
+    "review": {
+      "id": "s2",
+      "gold": [
+        "wait"
+      ],
+      "why": "用户点名禁止包括三位角色在内的一切回复，等下一条输入再继续，属明确暂停，应wait。",
+      "valid": true,
+      "issue": ""
+    },
+    "reviewer_sha256": "d2fe76060b57f926bc4d53c1267a92dd39fd34f1eaeaba7be1550fe56de18304",
+    "annotation_mode": "public_facts_then_blind_glm_labels_then_assistant_audit",
+    "planned_slice": "pause_or_listen",
+    "rename_safe": false
+  }
+]

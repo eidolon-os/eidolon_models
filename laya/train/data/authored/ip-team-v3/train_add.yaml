@@ -1,0 +1,513 @@
+- id: v3_community_garden
+  history_stress: "街区公告栏"
+  mode: group
+  tag: content_handoff
+  cast: {a: "擅长提出社区活动点子", b: "熟悉场地与维护成本", c: "负责把讨论收束给用户"}
+  user: "邻里想建一个小花圃，你们商量个简单的起步办法。"
+  steps:
+    - {action: respond, speaker: a, brief: "提出一个小规模花圃点子"}
+    - heard: {speaker: a, text: "先用两个旧木箱种容易养的香草。"}
+      action: respond
+      speaker: b
+      brief: "补充场地日照和浇水责任"
+    - heard: {speaker: b, text: "放在有半日照的角落，先约好谁轮流浇水。"}
+      action: respond
+      speaker: c
+      brief: "总结可执行的试点"
+    - heard: {speaker: c, text: "先用两个木箱试种，确定位置和轮值后再扩大。"}
+      action: finish
+- id: v3_wheelchair_museum
+  mode: group
+  tag: content_handoff
+  cast: {a: "了解展览活动", b: "关注无障碍与路程", c: "善于形成具体计划"}
+  user: "带轮椅出行的朋友去看展，安排别太累。"
+  steps:
+    - {action: respond, speaker: b, brief: "先提出无障碍路线需要核实的要点"}
+    - heard: {speaker: b, text: "先确认展馆入口、电梯与卫生间是否无障碍。"}
+      action: respond
+      speaker: a
+      brief: "在无障碍约束下提出一个短时看展方式"
+    - heard: {speaker: a, text: "选一个交通方便的展馆，只看一层重点展区。"}
+      action: respond
+      speaker: c
+      brief: "整合核实项目与短时行程"
+- id: v3_children_weather
+  mode: group
+  tag: content_handoff
+  cast: {a: "善于给儿童活动点子", b: "关注天气和安全", c: "善于比较室内外方案"}
+  user: "周六陪孩子活动一小时，室内外都可以。"
+  steps:
+    - {action: respond, speaker: a, brief: "先给一个一小时儿童活动"}
+    - heard: {speaker: a, text: "可以去公园观察树叶和小昆虫。"}
+      action: respond
+      speaker: b
+      brief: "补充雨天与安全条件"
+    - heard: {speaker: b, text: "要看天气，雨天别在湿滑小路上跑。"}
+      action: respond
+      speaker: c
+      brief: "比较公园与室内备选"
+- id: v3_local_history
+  mode: discuss
+  tag: factual_check
+  cast: {a: "爱讲地方故事", b: "谨慎核实史料", c: "善于总结可信结论"}
+  user: "讲一个老街故事，但请区分记载和传闻。"
+  steps:
+    - {action: respond, speaker: a, brief: "提出一个当地传闻并标明性质"}
+    - heard: {speaker: a, text: "据说这条巷子曾经有夜间书市。"}
+      action: respond
+      speaker: b
+      brief: "说明需核对哪些来源"
+    - heard: {speaker: b, text: "目前只有口述，不能断言当年真的有固定书市。"}
+      action: respond
+      speaker: c
+      brief: "收束为审慎表述"
+- id: v3_novel_character
+  mode: discuss
+  tag: role_relationship
+  cast: {a: "擅长提出人物设定", b: "善于质疑动机", c: "擅长把冲突整合进情节"}
+  user: "给小说主人公设计一个转折，要让动机可信。"
+  steps:
+    - {action: respond, speaker: a, brief: "提出一个角色转折"}
+    - heard: {speaker: a, text: "一位总想离家的木匠突然决定留下。"}
+      action: respond
+      speaker: b
+      brief: "指出转折缺乏动机"
+    - heard: {speaker: b, text: "他为什么改变主意？只说舍不得还太空。"}
+      action: respond
+      speaker: c
+      brief: "把留下的原因整合为具体事件"
+- id: v3_named_two_people
+  history_stress: "旧照片归档"
+  mode: named
+  tag: named_request
+  cast: {a: "擅长数学解释", b: "擅长生活化举例", c: "负责主持"}
+  user: "先让{a}解释百分比，再让{b}举生活例子，其他人不用说。"
+  steps:
+    - {action: respond, speaker: a, brief: "解释百分比"}
+    - heard: {speaker: a, text: "百分之二十，就是把整体分成一百份时取二十份。"}
+      action: respond
+      speaker: b
+      brief: "承接百分比解释举例"
+    - heard: {speaker: b, text: "一百元打八折，付八十元，相当于少付百分之二十。"}
+      action: finish
+- id: v3_named_with_same_name
+  mode: named
+  tag: clarify
+  cast: {a: "擅长画画", b: "擅长编曲", c: "负责提澄清问题"}
+  same_name: {b: a}
+  user: "请{a}回答我，别让其他人说。"
+  steps:
+    - {action: clarify, speaker: c, brief: "有两位同名成员，询问用户指擅长画画还是编曲的那位"}
+- id: v3_named_unique_id
+  mode: named
+  tag: named_request
+  cast: {a: "擅长绘本阅读", b: "擅长电脑设置", c: "擅长运动计划"}
+  user: "{c}，你先告诉我散步前怎样热身，只有你说。"
+  steps:
+    - {action: respond, speaker: c, brief: "给简短的散步前热身建议"}
+    - heard: {speaker: c, text: "先缓慢走几分钟，让身体逐渐活动开。"}
+      action: finish
+- id: v3_named_wrong_specialty
+  mode: named
+  tag: named_request
+  cast: {a: "善于解释科学", b: "善于写诗", c: "擅长主持"}
+  user: "虽然{a}更懂科学，但这次只想听{b}给一个诗意的说法。"
+  steps:
+    - {action: respond, speaker: b, brief: "用诗意语言回应，不进行科学讲解"}
+    - heard: {speaker: b, text: "夜空像一页慢慢翻开的蓝色书。"}
+      action: finish
+- id: v3_named_then_wait
+  mode: named
+  tag: wait
+  cast: {a: "擅长回答植物问题", b: "善于补充建议"}
+  user: "请{a}先回答，之后等我追问，不让别人补充。"
+  steps:
+    - {action: respond, speaker: a, brief: "答复植物浇水问题"}
+    - heard: {speaker: a, text: "先摸一摸土壤，表层干了再少量浇水。"}
+      action: wait
+- id: v3_silent_before_anyone
+  mode: quiet
+  tag: wait
+  cast: {a: "温和陪伴", b: "热情给建议", c: "负责主持"}
+  user: "我先想一想，你们任何人都别回应。"
+  steps:
+    - {action: wait}
+- id: v3_silent_after_one
+  history_stress: "厨房储物架"
+  mode: quiet
+  tag: wait
+  cast: {a: "善于轻声安慰", b: "喜欢解释原因"}
+  user: "先陪我说一句，然后安静等我。"
+  steps:
+    - {action: respond, speaker: a, brief: "说一句陪伴的话"}
+    - heard: {speaker: a, text: "我在这里，不着急。"}
+      action: wait
+- id: v3_sleep_text
+  mode: quiet
+  tag: wait
+  cast: {a: "沉稳而简洁", b: "活跃，喜欢话题"}
+  user: "晚安，别继续聊天了，我要休息。"
+  steps:
+    - {action: finish}
+- id: v3_topic_complete
+  mode: discuss
+  tag: finish
+  cast: {a: "爱提方案", b: "擅长归纳", c: "常补充实例"}
+  user: "你们已经把两个方案说明白了，这轮讨论结束。"
+  steps:
+    - {action: finish}
+- id: v3_wait_for_user_choice
+  mode: group
+  tag: wait
+  cast: {a: "善于比较选项", b: "爱继续推荐"}
+  prelude:
+    - {author: user, text: "帮我比较桌灯和落地灯。"}
+    - {author: a, text: "桌灯更聚焦，落地灯适合整体氛围。"}
+  user: "我自己先选一下，等我说了再继续。"
+  steps:
+    - {action: wait}
+- id: v3_finish_after_answer
+  mode: group
+  tag: finish
+  cast: {a: "擅长说明概念", b: "喜欢补充例子"}
+  user: "一个人说清‘候鸟’的意思就结束，不要补充。"
+  steps:
+    - {action: respond, speaker: a, brief: "解释候鸟"}
+    - heard: {speaker: a, text: "候鸟会随着季节变化在不同地区之间迁徙。"}
+      action: finish
+- id: v3_clarify_destination
+  history_stress: "周末的阅读角"
+  mode: group
+  tag: clarify
+  cast: {a: "擅长路线规划", b: "善于先澄清地点"}
+  user: "帮我规划去那里的路。"
+  steps:
+    - {action: clarify, speaker: b, brief: "询问目的地具体是哪里"}
+- id: v3_clarify_reference
+  mode: group
+  tag: clarify
+  cast: {a: "会讲故事", b: "擅长澄清指代", c: "负责总结"}
+  user: "让前面那位把它再说一遍。"
+  steps:
+    - {action: clarify, speaker: b, brief: "问清是哪位成员和哪件事"}
+- id: v3_clarify_budget
+  mode: group
+  tag: clarify
+  cast: {a: "擅长购物建议", b: "善于问清必要条件"}
+  user: "替我挑一份合适的礼物，价格随便。"
+  steps:
+    - {action: clarify, speaker: b, brief: "先问礼物送给谁，不重复追问已放开的价格条件"}
+- id: v3_clarify_restriction
+  mode: group
+  tag: clarify
+  cast: {a: "爱推荐食品", b: "重视饮食限制", c: "擅长总结"}
+  user: "帮一位朋友安排晚餐，但我还没说他能不能吃辣和有没有忌口。"
+  steps:
+    - {action: clarify, speaker: b, brief: "询问忌口与辣度偏好"}
+- id: v3_clarify_then_answer
+  mode: group
+  tag: clarification_answer
+  cast: {a: "擅长室内活动", b: "擅长户外活动", c: "擅长问清条件"}
+  prelude:
+    - {author: user, text: "周末做点什么？"}
+    - {author: c, text: "更想在室内还是户外？"}
+  user: "室内，而且不要吵。"
+  steps:
+    - {action: respond, speaker: a, brief: "按室内和安静条件给活动建议"}
+- id: v3_interrupt_food_to_time
+  history_stress: "楼下小花圃"
+  mode: interrupt
+  tag: user_override
+  cast: {a: "喜欢讲美食", b: "擅长行程时间", c: "负责总结"}
+  prelude:
+    - {author: user, text: "先聊聊午饭吃什么。"}
+    - {author: a, text: "可以找一家面馆。"}
+  user: "不用再说吃的了，告诉我明早几点出发。"
+  steps:
+    - {action: respond, speaker: b, brief: "只回应新的出发时间问题"}
+- id: v3_interrupt_stop_only
+  mode: interrupt
+  tag: wait
+  cast: {a: "擅长讲故事", b: "善于倾听"}
+  prelude:
+    - {author: user, text: "先讲一个故事。"}
+    - {author: a, text: "一只小船从河边出发。"}
+  user: "停，我现在不想听，等我再说。"
+  steps:
+    - {action: wait}
+- id: v3_interrupt_changed_need
+  mode: interrupt
+  tag: user_override
+  cast: {a: "擅长热闹活动", b: "擅长安静陪伴", c: "负责主持"}
+  prelude:
+    - {author: user, text: "周末一起去热闹的市集吧。"}
+    - {author: a, text: "市集有音乐和手作摊位。"}
+  user: "我突然想安静点，先陪我待着，不要继续推荐市集。"
+  steps:
+    - {action: respond, speaker: b, brief: "先回应安静陪伴需求"}
+    - heard: {speaker: b, text: "我在，这会儿不聊计划也可以。"}
+      action: wait
+- id: v3_same_speaker_example
+  history_stress: "社区留言箱"
+  mode: named
+  tag: same_member
+  cast: {a: "擅长解释天文", b: "善于提出不同看法"}
+  user: "{a}先解释月相，再由你自己举例，不用别人插话。"
+  steps:
+    - {action: respond, speaker: a, brief: "解释月相"}
+    - heard: {speaker: a, text: "我们看到的亮面随着位置变化而变化。"}
+      action: respond
+      speaker: a
+      brief: "承接自己刚才的话举例"
+    - heard: {speaker: a, text: "像从不同角度看被灯照亮的球。"}
+      action: finish
+- id: v3_no_round_robin
+  mode: group
+  tag: early_stop
+  cast: {a: "擅长给简洁建议", b: "善于补充细节", c: "擅长主持"}
+  user: "一个有用建议就够了，不要每个人都说一遍。"
+  steps:
+    - {action: respond, speaker: a, brief: "给出一条实用建议"}
+    - heard: {speaker: a, text: "今晚先写下明天最重要的两件事。"}
+      action: finish
+- id: v3_limited_budget
+  mode: group
+  tag: budget
+  budget: 1
+  cast: {a: "喜欢提出很多想法", b: "善于一次说清核心选择", c: "喜欢补充例子"}
+  user: "只有一个发言机会，直接给我主要建议。"
+  steps:
+    - {action: respond, speaker: b, brief: "一次给出简洁主建议"}
+- id: v3_allowed_no_clarify
+  mode: group
+  tag: constrained_actions
+  cast: {a: "擅长提问", b: "擅长直接解释"}
+  user: "现在不要再反问，直接解释什么是蒸发。"
+  steps:
+    - {action: respond, speaker: b, allowed_actions: [respond, wait, finish], brief: "直接回答当前要求"}
+- id: v3_allowed_wait_only
+  mode: quiet
+  tag: constrained_actions
+  cast: {a: "善于共情", b: "习惯继续聊"}
+  user: "暂停发言，等我回来。"
+  steps:
+    - {action: wait, allowed_actions: [wait, finish]}
+- id: v3_rainy_branch
+  history_stress: "旧书捐赠"
+  pair_id: v3_weather_pair
+  branch: rain
+  mode: discuss
+  tag: counterfactual
+  cast: {a: "擅长提出户外活动", b: "重视天气风险", c: "擅长综合条件"}
+  user: "你们商量明天户外散步是否合适。"
+  steps:
+    - heard: {speaker: a, text: "预报有大雨，散步可能会湿滑。"}
+      action: respond
+      speaker: b
+      brief: "按大雨事实评估安全"
+- id: v3_sunny_branch
+  history_stress: "旧书捐赠"
+  pair_id: v3_weather_pair
+  branch: clear
+  mode: discuss
+  tag: counterfactual
+  cast: {a: "擅长提出户外活动", b: "重视天气风险", c: "擅长综合条件"}
+  user: "你们商量明天户外散步是否合适。"
+  steps:
+    - heard: {speaker: a, text: "预报晴朗，附近公园刚好有林荫步道。"}
+      action: respond
+      speaker: c
+      brief: "基于晴朗天气综合散步安排"
+- id: v3_fact_branch_false
+  pair_id: v3_fact_pair
+  branch: doubtful
+  mode: discuss
+  tag: counterfactual
+  cast: {a: "爱讲趣闻", b: "擅长核实事实", c: "善于总结"}
+  user: "聊一个地方传说，别误导我。"
+  steps:
+    - heard: {speaker: a, text: "听说这座塔是一天建成的，我也不知道真假。"}
+      action: respond
+      speaker: b
+      brief: "核查不确定的建塔传闻"
+- id: v3_fact_branch_verified
+  pair_id: v3_fact_pair
+  branch: checked
+  mode: discuss
+  tag: counterfactual
+  cast: {a: "爱讲趣闻", b: "擅长核实事实", c: "善于总结"}
+  user: "聊一个地方传说，别误导我。"
+  steps:
+    - heard: {speaker: a, text: "我核对了博物馆介绍：这座塔是分五年修成的。"}
+      action: respond
+      speaker: c
+      brief: "把已核实的信息简要告知用户"
+- id: v3_public_prior_long
+  history_stress: "家庭相册整理"
+  mode: interrupt
+  tag: long_context
+  cast: {a: "擅长讲园艺", b: "擅长安排修理", c: "负责主持", d: "擅长安静陪伴"}
+  prelude:
+    - {author: user, text: "我们原本想把阳台改成小花园，请分几步讨论。"}
+    - {author: a, text: "先看光照时长，再挑容易养的植物。上午阳光短，薄荷和迷迭香不能随便混种。"}
+    - {author: b, text: "木架承重也要算进去，花盆装满湿土后比想象中重，最好先确认阳台的安全边界。"}
+    - {author: c, text: "我们先处理安全和位置，再谈买哪种花，不用一下子把所有选择做完。"}
+    - {author: a, text: "如果日照不足，就从耐阴绿植开始，每周检查叶片和土壤变化。"}
+    - {author: b, text: "浇水要留排水空间，别让水沿窗台流到楼下，也别挡住消防通道。"}
+    - {author: c, text: "这些条件合在一起：先量尺寸和光照，确认承重、排水，再买少量植物试养。"}
+  user: "等一下，先别说花园了。我想知道那个松动的窗扣明天怎么找人修。"
+  steps:
+    - {action: respond, speaker: b, brief: "按新窗扣问题回应，旧花园计划不续接"}
+- id: v3_long_round
+  history_stress: "城市步道规划"
+  mode: discuss
+  tag: long_context
+  budget: 8
+  cast: {a: "擅长提出计划", b: "谨慎考虑费用", c: "善于沟通与组织", d: "负责总结"}
+  user: "我们想办一场小型读书交换会，四位分步想清楚，够了就停。"
+  steps:
+    - {action: respond, speaker: a, brief: "先提出读书交换会的方式"}
+    - heard: {speaker: a, text: "每人带两本愿意交换的书，先用书签写一句推荐语。"}
+      action: respond
+      speaker: b
+      brief: "补充低成本安排"
+    - heard: {speaker: b, text: "借社区活动室比租场地省钱，可以先问是否免费。"}
+      action: respond
+      speaker: c
+      brief: "补充报名与人数上限"
+    - heard: {speaker: c, text: "先开放十个名额，避免第一场人数太多。"}
+      action: respond
+      speaker: d
+      brief: "整理已有条件并检查缺项"
+    - heard: {speaker: d, text: "两本书、推荐语、活动室和十个名额都定了，还要确认时间。"}
+      action: respond
+      speaker: c
+      brief: "补充具体时间征询"
+    - heard: {speaker: c, text: "可以请报名的人在周六上午与周日下午之间投票。"}
+      action: respond
+      speaker: b
+      brief: "指出免费场地时段需先核实"
+    - heard: {speaker: b, text: "投票前先问活动室哪天能借，避免选出一个借不到的时间。"}
+      action: respond
+      speaker: d
+      brief: "把时间确认顺序与整体方案收束"
+    - heard: {speaker: d, text: "先确认活动室空档，再给十位参与者投票；每人带两本书和推荐语。"}
+      action: wait
+- id: v3_wait_user_reading
+  history_stress: "手工小集市"
+  mode: quiet
+  tag: wait
+  cast: {a: "喜欢继续解释", b: "懂得安静等候"}
+  user: "我先看一下你们刚写的文字，等我读完再说。"
+  steps:
+    - {action: wait}
+- id: v3_wait_user_typing
+  mode: group
+  tag: wait
+  cast: {a: "擅长提方案", b: "负责主持"}
+  user: "我正在补充条件，先不要回答。"
+  steps:
+    - {action: wait}
+- id: v3_wait_pending_choice
+  mode: discuss
+  tag: wait
+  cast: {a: "会比较方案", b: "爱继续补充"}
+  prelude:
+    - {author: user, text: "比较纸质日记和电子日记。"}
+    - {author: a, text: "纸质更有手感，电子更方便搜索。"}
+  user: "我先自己决定用哪一种，你们别继续了。"
+  steps:
+    - {action: wait}
+- id: v3_wait_after_empathy
+  mode: quiet
+  tag: wait
+  cast: {a: "善于共情", b: "善于分析问题"}
+  user: "我今天情绪不太好，只要一句陪伴，然后安静一会儿。"
+  steps:
+    - {action: respond, speaker: a, brief: "简短陪伴"}
+    - heard: {speaker: a, text: "我陪着你，想说话时再叫我。"}
+      action: wait
+- id: v3_finish_explicit_thanks
+  mode: group
+  tag: finish
+  cast: {a: "会给建议", b: "善于总结"}
+  user: "谢谢，刚才的事情解决了，这轮就到这里。"
+  steps:
+    - {action: finish}
+- id: v3_finish_named_answer
+  mode: named
+  tag: finish
+  cast: {a: "懂图书分类", b: "喜欢继续举例"}
+  user: "{a}只回答一次‘科幻小说’是什么，回答后结束。"
+  steps:
+    - {action: respond, speaker: a, brief: "简要解释科幻小说"}
+    - heard: {speaker: a, text: "科幻小说以科学想象为线索，写可能的世界或技术。"}
+      action: finish
+- id: v3_finish_enough_detail
+  mode: discuss
+  tag: finish
+  cast: {a: "善于提出点子", b: "善于指出限制", c: "善于归纳"}
+  user: "我们只要一条可行的早起办法，不用展开讨论。"
+  steps:
+    - {action: respond, speaker: c, brief: "一次给出可行建议"}
+    - heard: {speaker: c, text: "今晚把闹钟放远一点，并把明早要穿的衣服备好。"}
+      action: finish
+- id: v3_finish_round_done
+  mode: discuss
+  tag: finish
+  cast: {a: "热心发言", b: "善于收尾"}
+  user: "两种看法我都听到了，可以结束本轮讨论。"
+  steps:
+    - {action: finish}
+- id: v3_clarify_which_book
+  history_stress: "雨天出行安排"
+  mode: group
+  tag: clarify
+  cast: {a: "爱推荐图书", b: "擅长澄清目标"}
+  user: "你们说的那本书是什么？"
+  steps:
+    - {action: clarify, speaker: b, brief: "公开历史没有具体书名，问用户指哪本书"}
+- id: v3_clarify_unknown_member
+  mode: named
+  tag: clarify
+  cast: {a: "擅长写作", b: "擅长运动", c: "擅长主持澄清"}
+  user: "请小刚接着说。"
+  steps:
+    - {action: clarify, speaker: c, brief: "候选成员中没有小刚，询问用户指谁"}
+- id: v3_clarify_two_topics
+  mode: group
+  tag: clarify
+  cast: {a: "善于讲故事", b: "善于比较", c: "善于澄清"}
+  prelude:
+    - {author: user, text: "前面讨论过阅读和运动两个话题。"}
+  user: "让你们继续讲那个。"
+  steps:
+    - {action: clarify, speaker: c, brief: "问用户要继续阅读还是运动话题"}
+- id: v3_clarify_event_date
+  mode: group
+  tag: clarify
+  cast: {a: "会设计活动", b: "擅长询问时间安排"}
+  user: "帮我为那一天做一个上午安排，但我还没说是哪一天。"
+  steps:
+    - {action: clarify, speaker: b, brief: "询问具体日期"}
+- id: v3_clarify_medical_not_answer
+  mode: group
+  tag: clarify
+  cast: {a: "喜欢给生活建议", b: "善于识别信息缺口"}
+  user: "我问的是前面那条建议，你们能再解释一下吗？"
+  steps:
+    - {action: clarify, speaker: b, brief: "公开历史未给建议内容，询问用户指哪条"}
+- id: v3_wait_not_yet_question
+  mode: group
+  tag: wait
+  cast: {a: "善于回答问题", b: "擅长主持"}
+  user: "我还没把问题打完，先等一等。"
+  steps:
+    - {action: wait}
+- id: v3_finish_user_says_done
+  mode: quiet
+  tag: finish
+  cast: {a: "温和陪伴", b: "善于提出新话题"}
+  user: "今天不再继续聊了，这轮结束。"
+  steps:
+    - {action: finish}

@@ -202,6 +202,33 @@ def test_assemble_excludes_locked_eval_and_splits_deterministically(tmp_path):
             assert splits[r.id] == name
 
 
+def test_assemble_keeps_augmentation_families_and_identical_states_together(tmp_path):
+    recs = []
+    for i in range(20):
+        original = Record(
+            id=f"s/{i}", scenario="s", source="t", state={"utterance": f"sentence {i}"},
+            questions={"intent": _q()}, labels={"intent": {"gold": "a"}},
+        )
+        derived = Record.from_dict(json.loads(original.to_json()))
+        derived.id = f"{original.id}~asr"
+        derived.meta = {"derived_from": original.id}
+        nested = Record.from_dict(json.loads(original.to_json()))
+        nested.id = f"{derived.id}~subset"
+        nested.meta = {"derived_from": derived.id}
+        duplicate = Record.from_dict(json.loads(original.to_json()))
+        duplicate.id = f"s/duplicate-{i}"
+        recs.extend([original, derived, nested, duplicate])
+    write_jsonl(tmp_path / "g.jsonl", recs)
+    assemble({"sources": [{"path": "g.jsonl"}], "split": {"val": 0.2, "calib": 0.2}},
+             tmp_path / "ds", tmp_path)
+    splits = {r.id: r.split for name in ("train", "val", "calib")
+              for r in read_jsonl(tmp_path / "ds" / f"{name}.jsonl")}
+    assert len(set(splits.values())) > 1
+    for i in range(20):
+        assert len({splits[f"s/{i}"], splits[f"s/{i}~asr"],
+                    splits[f"s/{i}~asr~subset"], splits[f"s/duplicate-{i}"]}) == 1
+
+
 def test_option_shuffle_keeps_target_aligned():
     pytest.importorskip("torch")
     from eidolon_laya_train.model import record_items
@@ -341,11 +368,12 @@ def test_external_logits_are_scored_like_the_model(tmp_path):
     write_jsonl(path, records)
     loaded = Loaded(model=None, tok=AutoTokenizer.from_pretrained(tok_dir),
                     cfg={"max_len": 1024, "head_max_len": 512, "temperature": [2.0, 1.0, 1.0]}, device="cpu")
-    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
+    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg, require_label=False)]
     logits = {item_key(it): [float(j == len(it["markers"]) - 1) * 4 for j in range(len(it["markers"]))] for it in items}
     report = evaluate(loaded, path, logits=logits)
-    assert len(report["rows"]) == len(items)
-    for row, it in zip(report["rows"], items):
+    assert len(report["policy_rows"]) == len(items)
+    assert len(report["rows"]) == sum(bool(r.labels.get(qid)) for r in records for qid in r.questions)
+    for row, it in zip(report["policy_rows"], items, strict=True):
         assert row["pred"] == it["names"][-1]  # the option we gave the largest logit
         assert abs(row["p_top"] - 1 / (1 + (len(it["markers"]) - 1) * 2.718281828 ** -2)) < 1e-3  # T = 2 applied
     with pytest.raises(ValueError, match="no logits"):
@@ -380,8 +408,9 @@ def test_policy_metrics_split_execute_confirm_ignore():
     def rec(rid, gold, pc, slot_p, correct=True):
         rows = [{"record_id": rid, "qid": "intent", "gold": [gold], "pred": "控制" if pc >= 0.5 else "无关",
                  "p_top": max(pc, 1 - pc), "probabilities": {"控制": pc}, "correct": (gold == "控制") == (pc >= 0.5)}]
-        if gold == "控制":
-            rows.append({"record_id": rid, "qid": "device", "gold": ["灯"], "pred": "灯", "p_top": slot_p, "correct": correct})
+        for qid in ("device", "action"):
+            rows.append({"record_id": rid, "qid": qid, "gold": ["灯"] if gold == "控制" else None,
+                         "pred": "灯", "p_top": slot_p, "correct": correct if gold == "控制" else None})
         return rows
 
     rows = (rec("a", "控制", 0.99, 0.95) + rec("b", "控制", 0.99, 0.6) + rec("c", "控制", 0.7, 0.99)
@@ -391,3 +420,40 @@ def test_policy_metrics_split_execute_confirm_ignore():
     assert (c["execute_correct"], c["confirm"], c["ignore"]) == (0.25, 0.5, 0.25)  # a / b,c / d
     assert m["false_execute_无关"]["rate"] == round(1 / 3, 4) and m["confirm_无关"] == round(1 / 3, 4)  # e / f
     assert m["execute"]["n"] == 2 and m["execute"]["precision"] == 0.5  # a right, e a non-command acted on
+    assert m["false_execute_无关"]["upper95_one_sided_exact"] > 1 / 3
+    assert m["execute"]["lower95_one_sided_exact"] < 0.5
+
+
+def test_policy_never_executes_device_exit_even_at_high_confidence():
+    from eidolon_laya_train.evaluate import policy_branch
+
+    for device in ("没有对应的设备", "多个设备或整屋"):
+        questions = {
+            "intent": {"pred": "控制", "p_top": 0.999, "probabilities": {"控制": 0.999}},
+            "device": {"pred": device, "p_top": 0.999},
+            "action": {"pred": "打开或启动", "p_top": 0.999},
+        }
+        assert policy_branch(questions, 0.95, 0.95) == "confirm"
+
+
+def test_decision_metrics_use_unlabelled_slot_confidence_and_report_unknown_gold():
+    from eidolon_laya_train.evaluate import decision_metrics
+
+    def rec(rid, gold, device_p, action_p, action_gold=True):
+        return [
+            {"record_id": rid, "qid": "intent", "gold": [gold], "pred": "控制",
+             "p_top": 0.99, "correct": gold == "控制"},
+            {"record_id": rid, "qid": "device", "gold": ["灯"] if gold == "控制" else None,
+             "pred": "灯", "p_top": device_p, "correct": True if gold == "控制" else None},
+            {"record_id": rid, "qid": "action", "gold": ["开"] if action_gold and gold == "控制" else None,
+             "pred": "开", "p_top": action_p, "correct": True if action_gold and gold == "控制" else None},
+        ]
+
+    rows = (rec("low-slot", "无关", 0.3, 0.99)
+            + rec("false-execute", "无关", 0.99, 0.99)
+            + rec("unknown-action", "控制", 0.99, 0.99, action_gold=False)
+            + rec("correct", "控制", 0.99, 0.99))
+    auto = decision_metrics(rows)["auto_execute"]
+    assert auto["n"] == 3 and auto["n_unverified"] == 1
+    assert auto["precision"] is None and auto["precision_bounds"] == [0.3333, 0.6667]
+    assert auto["wrong"] == ["false-execute"]

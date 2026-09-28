@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ip-team-v2/weekend_halfday~v00-s02",
+    "qid": "move",
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M1"
+  },
+  {
+    "id": "ip-team-v2/weekend_halfday~v01-s01",
+    "qid": "move",
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M1"
+  },
+  {
+    "id": "ip-team-v2/weekend_halfday~v02-s01",
+    "qid": "move",
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M1"
+  },
+  {
+    "id": "ip-team-v2/weekend_halfday~v03-s00",
+    "qid": "move",
+    "gold": [
+      "respond:M1"
+    ],
+    "pred": "respond:M2"
+  },
+  {
+    "id": "ip-team-v2/weekend_halfday~v03-s01",
+    "qid": "move",
+    "gold": [
+      "respond:M2"
+    ],
+    "pred": "respond:M1"
+  },
+  {
+    "id": "ip-team-v2/weekend_halfday~v03-s02",
+    "qid": "move",
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M1"
+  }
+]

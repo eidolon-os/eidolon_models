@@ -1,0 +1,15 @@
+init: ../../runs/r14/checkpoint
+model_name: laya-ip-ensemble-v2-pilot
+epochs: 3
+batch_size: 16
+lr_encoder: 1.0e-5
+lr_head: 5.0e-5
+unfreeze_layers: 8
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.06
+weight_decay: 0.01
+max_len: 1024
+head_max_len: 384
+seed: 41
+device: mps

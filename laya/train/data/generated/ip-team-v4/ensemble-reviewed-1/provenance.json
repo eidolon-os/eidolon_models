@@ -1,0 +1,146 @@
+{
+  "review_version": "ip-team-v4-glm53-flash-ensemble-1-review-1",
+  "source_plan_version": "ip-team-v4-glm53-flash-ensemble-1",
+  "selected_calls": [
+    {
+      "call_id": "named_finish-001",
+      "slice": "named_finish",
+      "response_sha256": "a823cb6295ea9bfd4eb14b29f08336eb5c01dfd424bd772780fb683c18e2d85e",
+      "review_reason": "点名伙伴已说完完整故事，用户要求本轮到此为止。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_finish-003",
+      "slice": "named_finish",
+      "response_sha256": "1b7542928a8afa468b5f5f4e9e8793c7a8479adde72ff07e9e56b5202f9e6fe8",
+      "review_reason": "点名伙伴已说完完整回忆，用户要求本轮到此为止。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-003",
+      "slice": "named_unique",
+      "response_sha256": "ff8fb548f38314141ed5574079ef044b0672956ce65838df3ee6ef28e2c1d1f3",
+      "review_reason": "用户明确点名性格温和的伙伴陪聊。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-005",
+      "slice": "named_unique",
+      "response_sha256": "86415ee615d25ca53cc02a51633b63fddbbd4abf928664beb9f168c2725ce7d9",
+      "review_reason": "用户明确点名古风伙伴独自陪伴散步。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-001",
+      "slice": "same_member",
+      "response_sha256": "3c487629c4218d20a63783414605c93989d30d0f94cf9e0fde11f9d263f5554d",
+      "review_reason": "用户要求同一伙伴连续两段讲完故事。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-003",
+      "slice": "same_member",
+      "response_sha256": "7da86e7b00b856f003f49682aaede270bbcc8fcabe95dd29a294df3e2518d8c5",
+      "review_reason": "用户要求同一伙伴连续讲完礁石故事。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-003",
+      "slice": "speaker_handoff",
+      "response_sha256": "d050a8f647e8c67117f5ac1798a1da129f0431bb085a2033038546129472527f",
+      "review_reason": "已公开发言的 a 直接点名 b 补充不同看法。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-004",
+      "slice": "speaker_handoff",
+      "response_sha256": "92b3b616d26654051033a8742ea92076dea572d6c4fdfd9afaec6892b9a2a56d",
+      "review_reason": "a 已给排队观点并直接点名 b 从吃的角度接话。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-005",
+      "slice": "speaker_handoff",
+      "response_sha256": "45ef31ecbbf214dac45534de5bc4c8d821e526cde2f8d245681bdbba8c8a79cc",
+      "review_reason": "a 已给旧书屋观点并直接点名 b 接话。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-001",
+      "slice": "user_override",
+      "response_sha256": "8107d82ee4f70393968660bafd8ba03f30a92568857de7af3971b32ec008e128",
+      "review_reason": "用户打断旧话题并明确点名 b 回答新问题。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-003",
+      "slice": "user_override",
+      "response_sha256": "424ccc6d84fcee2a858c4e071805f50c5fb3567c71e2cfb825e1b6981ed847df",
+      "review_reason": "用户打断旧话题并明确点名 b 回答新问题。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-004",
+      "slice": "user_override",
+      "response_sha256": "aad91df61085708cfb49e05cf84a59f16cf632b19173b67bb336aacd66e2bac1",
+      "review_reason": "用户打断旧话题并明确点名 b 回答新问题。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-002",
+      "slice": "wait_after_peer",
+      "response_sha256": "45e9f75734237af573e5e8b9d7fa04dfc63607f2522e23ed52a0940039736ceb",
+      "review_reason": "点名伙伴已回答，用户要求其他人等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_after_peer-003",
+      "slice": "wait_after_peer",
+      "response_sha256": "1fe827a52fb25973a2441e734a35a7ca9c1cac99d79a52d74913281a161b7491",
+      "review_reason": "点名伙伴已回答，用户要求其他人等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-001",
+      "slice": "wait_or_finish",
+      "response_sha256": "7cf7ad97ceabad579a02c6f428a4f2d2ff1b630e596f0cef4d66e2f734a88b6b",
+      "review_reason": "用户要求先安静，等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-002",
+      "slice": "wait_or_finish",
+      "response_sha256": "fa4f7e2cd2b5397fa5af99d18fbb4fa8e9cd92fab921fd576edfe6d084594b99",
+      "review_reason": "用户明确今天先结束讨论。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-003",
+      "slice": "wait_or_finish",
+      "response_sha256": "0a0d9a9ddb6fea1974e60de09032f5b5e257ed139ff54936cb3ea979a4c3417f",
+      "review_reason": "用户要求先安静，等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-004",
+      "slice": "wait_or_finish",
+      "response_sha256": "8c1c24b798a56edbb9d46bfb5f909a7dfda4df1698f862aec0e938b65f707ad0",
+      "review_reason": "用户明确今天先结束讨论。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "named_unique-001": "候选仍是行程和内容专业人员，不是故事角色本人。",
+    "named_unique-002": "人物关系含未渲染的裸槽位字母。",
+    "named_unique-004": "与同切片另一条情绪陪聊请求高度相近，避免重复模板。",
+    "speaker_handoff-001": "候选仍是行程和餐饮专业人员，且接话邀请不明确。",
+    "speaker_handoff-002": "本次生成时含一个缺乏唯一性的首位发言金标；后续脚本已改为只标已公开发言后的接话。",
+    "same_member-002": "响应引用了不存在的第三位候选，结构校验拒绝。",
+    "user_override-002": "与其他打断换话题样本过于接近。",
+    "named_finish-002": "用户未明确结束本轮，答完后 finish 与 wait 不唯一。",
+    "named_finish-004": "用户未明确结束本轮，角色回复还邀请大家后续跟上。",
+    "wait_after_peer-001": "用户实际邀请其他两位一起商量，没有要求答完等待。",
+    "wait_after_peer-004": "响应含未渲染的成员槽位，结构校验拒绝。"
+  },
+  "families": 18
+}

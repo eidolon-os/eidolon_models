@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 话多爱讲往事，一开口就收不住，总拉着{b}听她絮叨
+    b: 懒洋洋，喜欢搭腔调侃，常被{a}的长时间讲述磨得打哈欠
+  user: '{a}，你之前说山城邻居那事还没讲完呢，就讲到爬到一半。你接着连讲两段吧，中间别停，我正好听完整个'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 那天石阶湿漉漉的，我爬到一半就听见隔壁院的老陈在喊我，说他家橘子熟了非要我上去摘，我回他说等下坡再说，他就搬个小凳坐在院口等
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_002_0

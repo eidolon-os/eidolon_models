@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 爱回忆往事，说话慢悠悠爱拖长音，总被 {c} 催着讲重点
+    b: 嘴硬心软，喜欢抬杠但从不真生气，被 {a} 逗得直翻白眼
+    c: 好奇心旺盛，问题一个接一个，常拉着 {b} 一起瞎琢磨
+  user: 停停停，那个先不聊了。{b} 你快说，舷窗右边那颗发蓝的星星，咱们绕过去看看行不行？
+  prelude:
+  - author: a
+    text: 我之前就一直念叨着要把那箱旧星图翻出来整理一遍，结果拖到现在还堆在舱角，唉，越想越懒。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_002_0

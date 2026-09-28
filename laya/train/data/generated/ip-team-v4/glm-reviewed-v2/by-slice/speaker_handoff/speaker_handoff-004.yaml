@@ -1,0 +1,19 @@
+- mode: group
+  cast:
+    a: IP角色世界观与人物关系梳理
+    b: IP角色台词风格与语言习惯设计
+    c: IP角色视觉形象与配色方案
+  user: 我们团的原创角色最近人设老打架，a你已经把三个角色的时间线和关系理清了吗？接下来我还想让他们的说话方式更有辨识度，谁接一下
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 先由 a 处理其专长部分
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 我已经把三位主角的时间线对齐了，发现二人与三号的师徒关系前后矛盾，已统一为十年前结缘，另外把各角色的阵营归属也标注好了
+    brief: a 已公开完成自己的部分，交给 b
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_004_0

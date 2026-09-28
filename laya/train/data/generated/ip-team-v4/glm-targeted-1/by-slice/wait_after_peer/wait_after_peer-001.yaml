@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 擅长IP角色世界观设定与背景故事搭建
+    b: 擅长角色性格弧线与对话风格打磨
+    c: 擅长周边衍生企划与受众定位分析
+  user: '{a} 你先把新角色和主线故事的关联讲一下，讲得具体点。说完大家就先停一停，我听完再决定下一步怎么办。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 好，我来说新角色和主线的关联：她其实是主角童年失踪的旧友，三年前被反派组织改造，如今带着半敌半友的立场回归，关键转折点会安排在第七章揭示。我先讲到这里，先停在这里，等你下一条指示。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_001_0

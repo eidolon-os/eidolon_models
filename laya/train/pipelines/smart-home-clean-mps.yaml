@@ -1,0 +1,82 @@
+# 智能家居：硬金标数据 → 增强 → 分组切分 → 微调 → 校准 → 开发集与历史测试集评测。
+# 教师服务未启用；本配方明确使用现有金标，不尝试失败后静默跳过的 label 阶段。
+runs_dir: ../runs
+
+steps:
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen.yaml
+    out: "{run}/cases.jsonl"
+
+  - stage: augment
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/augment.yaml
+    input: "{run}/cases.jsonl"
+    out: "{run}/augmented.jsonl"
+
+  # 撰写数据（train/data/authored/smart-home）：主体来源
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-authored.yaml
+    out: "{run}/authored.jsonl"
+
+  - stage: augment
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/augment.yaml
+    input: "{run}/authored.jsonl"
+    out: "{run}/authored-augmented.jsonl"
+
+  # 外部数据集（同域回放）：每个来源单独一个文件，assemble 分别给权重
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-external-zhihao.yaml
+    out: "{run}/external-zhihao.jsonl"
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-external-scenic.yaml
+    out: "{run}/external-scenic.jsonl"
+  - stage: gen
+    scenario: ../scenarios/smart-home
+    config: ../scenarios/smart-home/gen-external-massive.yaml
+    out: "{run}/external-massive.jsonl"
+
+  - stage: assemble
+    config: ../scenarios/smart-home/assemble.yaml
+    out: "{run}/dataset"
+
+  - stage: train
+    config: ../scenarios/smart-home/train.yaml
+    dataset: "{run}/dataset"
+    out: "{run}/checkpoint"
+
+  - stage: calibrate
+    checkpoint: "{run}/checkpoint"
+    calib: "{run}/dataset/calib.jsonl"
+
+  # 开发集（v1 全部 + v2-dev）：误差分析、门槛比较都只看它们
+  - stage: eval
+    checkpoint: "{run}/checkpoint"
+    eval_set:
+      - ../scenarios/smart-home/eval/locked-182.jsonl
+      - ../scenarios/smart-home/eval/locked-v2-dev.jsonl
+      - ../scenarios/smart-home/eval/locked-v3-dev.jsonl    # 开发集 v3（误触发为主，2026-09-26 起）
+    out: "{run}/eval"
+    baseline: ../runs/r14/eval              # 上一版（通过门槛的最近版本）
+    tolerance: 0.03
+    alpha: 0.1                              # 配对符号检验：只拦显著的退步
+    continue_on_error: true                 # 门槛不过也照样 package，方便对比；上线前看 gate.json
+
+  # 测试集（v2-test）：只报汇总数字，不做门槛、不逐条看，完成标准以它为准
+  - stage: eval
+    checkpoint: "{run}/checkpoint"
+    eval_set:
+      - ../scenarios/smart-home/eval/locked-v2-test.jsonl
+    out: "{run}/eval-test"
+    no_rows: true
+
+  # 打包成 models/<name>/<rev>/：之后 eidolon-laya serve / export-onnx / doctor 都直接认它，
+  # evals/smart-home/run_all.sh 也能用 MODEL_DIR= 指向它打服务。
+  - stage: package
+    checkpoint: "{run}/checkpoint"
+    models_root: ../../models
+    name: laya-smart-home

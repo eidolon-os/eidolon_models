@@ -1,0 +1,144 @@
+{
+  "review_version": "ip-team-v3-glm53-flash-2-review-1",
+  "source_plan_version": "ip-team-v3-glm53-flash-2",
+  "selected_calls": [
+    {
+      "call_id": "clarify-001",
+      "slice": "clarify",
+      "response_sha256": "99313e482f0257968ded04d26576a5a7df09d1fa9955a262dc79c9cf9ef58390",
+      "review_reason": "缺少要修改的新角色和当前稿件。",
+      "episodes": 1
+    },
+    {
+      "call_id": "clarify-002",
+      "slice": "clarify",
+      "response_sha256": "0fe1d5ba1dafcb4d4fbb2af6b7bd01b7beb2564237df0d87afc5fd2e8728b1a2",
+      "review_reason": "没提供所指对话稿，点名成员先问清材料。",
+      "episodes": 1
+    },
+    {
+      "call_id": "clarify-003",
+      "slice": "clarify",
+      "response_sha256": "fef60c3be6ff3e0abb7582e4758f77dbd76c689ca932e12b4a76209822a9d591",
+      "review_reason": "没提供所指草稿，点名成员先问清材料。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-001",
+      "slice": "named_unique",
+      "response_sha256": "c28a0ea6b7c05966633660f1cec16ff22781613f4e4c2b843c930843d58cada1",
+      "review_reason": "用户明确点名，目标和成员专长一致。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-002",
+      "slice": "named_unique",
+      "response_sha256": "522f96cde38cecec715b14221788f6c90ae84286f595b20fefc396bf9bb0cb96",
+      "review_reason": "用户明确点名，世界观冲突对应成员专长。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-003",
+      "slice": "named_unique",
+      "response_sha256": "cc16bc17abb7ae4250c07d1ff10b524928db98b2d57b5215c17e9a9752f00c9d",
+      "review_reason": "用户明确点名，台词规范对应成员专长。",
+      "episodes": 1
+    },
+    {
+      "call_id": "named_unique-004",
+      "slice": "named_unique",
+      "response_sha256": "7b2ef361ef8b2933630325af6f620544ca5323fb199e40e13ceeac07ca241b84",
+      "review_reason": "用户明确点名，人设审校对应成员专长。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-002",
+      "slice": "same_member",
+      "response_sha256": "6f3cbff2d60c0e625e69dcb01d4d685d065db5914aa49d2e48163d33aa97db28",
+      "review_reason": "明确要求同一成员连续讲完两段。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-003",
+      "slice": "same_member",
+      "response_sha256": "6651efb7aa2b755cdc34a4526bcaf3820b2cbe280d9f1d373ca237241298f641",
+      "review_reason": "明确要求同一成员继续第二段。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-001",
+      "slice": "speaker_handoff",
+      "response_sha256": "bfb3a71c1a88dc07f17b3f5e60a88a6e978a25d53d4075ff036ff5ae2731ea44",
+      "review_reason": "已公开故事主线后接角色视觉设定。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-002",
+      "slice": "speaker_handoff",
+      "response_sha256": "7820d9e57767297a3932e2c19ddaa6119c7a753692ac7e02b77a84d316741ac9",
+      "review_reason": "已公开世界观后接雕塑材质。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-004",
+      "slice": "speaker_handoff",
+      "response_sha256": "5ac02f8896aab84735dc6d39ac9d78d14651156f6bde05be3406fe9a9b082aa8",
+      "review_reason": "已公开时间线后接台词风格。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-002",
+      "slice": "user_override",
+      "response_sha256": "2643dab09945ac8413360c237e2eeca69e6f1ea75bd7cc8606dc4518d48dbe9d",
+      "review_reason": "用户停下旧的仙侠目标并点名新目标成员。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-003",
+      "slice": "user_override",
+      "response_sha256": "1246442eb99e4a22684a867ce2708c0e46ae55f74ca35cce21ca1dac9958be17",
+      "review_reason": "用户停下旧的仙侠目标并点名新目标成员。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-001",
+      "slice": "wait_or_finish",
+      "response_sha256": "ab3f875d943ed0c45f524b56fe2b1b111b4f7ea37b67801992709e0b4528b87f",
+      "review_reason": "明确暂停发言，等待下一条用户消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-002",
+      "slice": "wait_or_finish",
+      "response_sha256": "bc793f371246afb2cc15168444c522408654d99ded437f7c256b5a6dec245217",
+      "review_reason": "明确本轮讨论结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-003",
+      "slice": "wait_or_finish",
+      "response_sha256": "df9dbb1dac44190c0e7b19b58780f07eec12854410f918e39e8ad2515f1ca225",
+      "review_reason": "明确暂停发言，等待角色资料。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-004",
+      "slice": "wait_or_finish",
+      "response_sha256": "be9079077444d3f43ceb1ae92a3dd8b611ac04a381e370b52ea5254e87fb5c75",
+      "review_reason": "明确本轮讨论结束。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "same_member-001": "用户要求等确认后继续，第二步应等待而非直接发言。",
+    "user_override-001": "内容偏企业年会，脱离 IP 角色创作目标。",
+    "same_name-001": "同名情况下所选澄清者缺乏唯一性。",
+    "same_name-002": "用户的任务内容可区分同名成员，澄清标注不成立。",
+    "speaker_handoff-003": "用户说视觉稿已定，第一步再让视觉成员发言缺乏必要性。",
+    "counterfactual-001": "两分支改变不止一个事实，且下一位没有唯一性。",
+    "counterfactual-002": "API 输出额外字段，结构校验拒绝；语义也不足以支持 b/c 切换。",
+    "counterfactual-003": "首次登场年份变化不足以支持编剧/数据分析师切换。",
+    "counterfactual-004": "出身地域变化不足以支持形象/配音负责人切换。"
+  },
+  "families": 18
+}

@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 胆小谨慎，出发前总要确认三遍路，总被 {c} 说想太多
+    b: 话少，喜欢观察林子里的动静，偶尔冒一句让 {a} 愣住的话
+    c: 嗓门大爱带头走岔路，常回头催 {a} 别磨蹭，跟 {b} 处得随意
+  user: '{a}，我们仨半日进林子的话，你想先走哪条道？这次就你一个人说，别让 {b} 和 {c} 插嘴，说到你说完为止'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 那……我想先走左边那条有松针味的路吧，坡缓，天黑前也容易折回来。你们别嫌我啰嗦，我确实想把岔口都记一遍再走，心里踏实
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_001_0

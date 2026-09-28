@@ -1,0 +1,14 @@
+seed: 91
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v2/train.yaml
+    split_name: train
+    variants: 4
+    skip_ids: [no_candidate_authorized, all_respond_blocked]
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v3/train_add.yaml
+    split_name: train
+    variants: 4
+    pair_seed: 1357

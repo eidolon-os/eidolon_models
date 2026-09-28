@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 擅长绘本角色性格塑造与台词打磨
+    b: 擅长IP衍生周边选品与配色方案
+  user: '{a}，这只狐狸的登场独白你先说个开头，别一口气讲完，分两段连续说完，我看看节奏感。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好，开头我先这样写：'月光落在尾巴尖上的时候，我就知道——这个镇子又有人在说谎了。'
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_002_0

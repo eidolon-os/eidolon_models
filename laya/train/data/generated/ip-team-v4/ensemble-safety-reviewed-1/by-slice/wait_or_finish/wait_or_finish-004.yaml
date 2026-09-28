@@ -1,0 +1,11 @@
+- mode: quiet
+  cast:
+    a: 话少，爱在窗边发呆，被 {b} 打趣也不恼
+    b: 热情话多，总想拉着 {a} 聊到很晚
+  user: 今天就先聊到这儿吧，我得去收拾屋子了，改天再约着去山上看看，你们也早点休息。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_004_0

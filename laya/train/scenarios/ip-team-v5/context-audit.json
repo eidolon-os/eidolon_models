@@ -1,0 +1,129 @@
+{
+  "purpose": "capacity stress only, generated public text repeated; no semantic score or latency claim",
+  "cases": [
+    {
+      "members": 2,
+      "public_messages": 1,
+      "quality_evidence": false,
+      "full_input_tokens": 266,
+      "actual_tokens": 266,
+      "status": "fits"
+    },
+    {
+      "members": 2,
+      "public_messages": 9,
+      "quality_evidence": false,
+      "full_input_tokens": 976,
+      "actual_tokens": 976,
+      "status": "fits"
+    },
+    {
+      "members": 2,
+      "public_messages": 32,
+      "quality_evidence": false,
+      "full_input_tokens": 3046,
+      "status": "explicit_rejection",
+      "reason": "public context would be truncated"
+    },
+    {
+      "members": 2,
+      "public_messages": 64,
+      "quality_evidence": false,
+      "full_input_tokens": 5926,
+      "status": "explicit_rejection",
+      "reason": "public context would be truncated"
+    },
+    {
+      "members": 4,
+      "public_messages": 1,
+      "quality_evidence": false,
+      "full_input_tokens": 346,
+      "actual_tokens": 346,
+      "status": "fits"
+    },
+    {
+      "members": 4,
+      "public_messages": 9,
+      "quality_evidence": false,
+      "full_input_tokens": 1056,
+      "actual_tokens": 1056,
+      "status": "fits"
+    },
+    {
+      "members": 4,
+      "public_messages": 32,
+      "quality_evidence": false,
+      "full_input_tokens": 3126,
+      "status": "explicit_rejection",
+      "reason": "public context would be truncated"
+    },
+    {
+      "members": 4,
+      "public_messages": 64,
+      "quality_evidence": false,
+      "full_input_tokens": 6006,
+      "status": "explicit_rejection",
+      "reason": "public context would be truncated"
+    },
+    {
+      "members": 6,
+      "public_messages": 1,
+      "quality_evidence": false,
+      "full_input_tokens": 429,
+      "actual_tokens": 429,
+      "status": "fits"
+    },
+    {
+      "members": 6,
+      "public_messages": 9,
+      "quality_evidence": false,
+      "full_input_tokens": 1139,
+      "actual_tokens": 1139,
+      "status": "fits"
+    },
+    {
+      "members": 6,
+      "public_messages": 32,
+      "quality_evidence": false,
+      "full_input_tokens": 3209,
+      "status": "explicit_rejection",
+      "reason": "public context would be truncated"
+    },
+    {
+      "members": 6,
+      "public_messages": 64,
+      "quality_evidence": false,
+      "full_input_tokens": 6089,
+      "status": "explicit_rejection",
+      "reason": "public context would be truncated"
+    },
+    {
+      "members": 16,
+      "public_messages": 1,
+      "quality_evidence": false,
+      "status": "explicit_rejection",
+      "reason": "v5 supports 1–6 candidates and complete unsummarized text"
+    },
+    {
+      "members": 16,
+      "public_messages": 9,
+      "quality_evidence": false,
+      "status": "explicit_rejection",
+      "reason": "v5 supports 1–6 candidates and complete unsummarized text"
+    },
+    {
+      "members": 16,
+      "public_messages": 32,
+      "quality_evidence": false,
+      "status": "explicit_rejection",
+      "reason": "v5 supports 1–6 candidates and complete unsummarized text"
+    },
+    {
+      "members": 16,
+      "public_messages": 64,
+      "quality_evidence": false,
+      "status": "explicit_rejection",
+      "reason": "v5 supports 1–6 candidates and complete unsummarized text"
+    }
+  ]
+}

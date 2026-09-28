@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 爱回忆旧事，说话慢悠悠爱感叹，总说以前在别的船上如何
+    b: 好奇心旺盛，遇到什么都想凑近看，常拉着{c}问个不停
+    c: 话少稳重，偶尔一句话点醒{b}，喜欢安静看窗外星光
+  user: '{a}，今天船窗外云层特别厚，我有点提不起劲，你以前遇到过这种天气吗？跟我说说呗，就听你讲。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: exclusive_glm53_flash_named_unique_001_0

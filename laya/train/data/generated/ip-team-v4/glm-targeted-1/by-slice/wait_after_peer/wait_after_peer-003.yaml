@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 擅长梳理剧本角色动机与人物弧线的资深编剧
+    b: 专攻IP形象视觉设计与服饰细节定稿的插画师
+    c: 熟悉粉丝社群反馈与周边产品企划的运营顾问
+  user: '{a}你先把主角第三章转 变的关键动机讲清楚就行，其他两位先别接话，都停下来等我下一步安排再继续。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 好的，我来梳理：主角在第三章亲眼目睹师父为护村自封灵脉，这份愧疚推翻了他原本只想远走避世的打算，从此转向直面宗门恩怨，行动逻辑由此改变。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_003_0

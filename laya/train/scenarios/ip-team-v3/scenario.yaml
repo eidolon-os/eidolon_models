@@ -1,0 +1,6 @@
+name: ip-team-v3
+questions:
+  move:
+    type: choice
+    instructions: "根据当前用户请求、真实已公开发言、角色资料与剩余预算，决定唯一下一步。每步最多一位成员；用户要求安静或已获得足够答案时不要继续发言。"
+    criteria_from: moves

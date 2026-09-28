@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 擅长古风仙侠角色的世界观与背景设定撰写
+    b: 擅长拟人化动物IP角色的外形设计与表情动作演绎
+    c: 擅长科幻机甲IP角色的技能体系与数值设定
+  user: '{b}，之前的仙侠设定先放一放吧，我们新签了个项目，要做一只能拟人互动的橘猫IP角色，表情和动作要特别可爱，这块只有你最拿手，帮我出一版设计思路。'
+  prelude:
+  - author: a
+    text: '{a}：仙侠角色这块我已经把世界观和门派背景初稿整理出来了，等大家评审后我再细化人物关系。'
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_002_0

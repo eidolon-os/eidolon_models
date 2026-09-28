@@ -1,0 +1,8 @@
+seed: 157
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/generated/ip-team-v4/ensemble-dev-reviewed-2/dev.yaml
+    split_name: val
+    variants: 3
+    pair_seed: 1357

@@ -1,0 +1,47 @@
+# Each quota is a maximum number of API calls, not a promise of accepted data.
+# Counterfactual calls request two related dialogue families; other calls request one.
+version: ip-team-v3-glm53-flash-2
+slices:
+  - id: named_unique
+    quota: 4
+    mode: named
+    candidates: 3
+    focus: 用户点名一位成员；后续应由这位成员回答或按用户约束收束，不能仅按专业领域换人。
+  - id: speaker_handoff
+    quota: 4
+    mode: group
+    candidates: 3
+    focus: 一位成员已公开说出具体内容，下一位利用自己的专长接力，而不是重复或抢答。
+  - id: same_member
+    quota: 3
+    mode: named
+    candidates: 2
+    focus: 用户明确要求同一位成员先说开头再继续，不应因为已有该成员发言就自动换人。
+  - id: user_override
+    quota: 3
+    mode: interrupt
+    candidates: 3
+    focus: 旧话题已有人发言，用户输入新目标；只依据新目标选择下一步，旧内容仍是真实公开历史。
+  - id: clarify
+    quota: 3
+    mode: group
+    candidates: 3
+    focus: 关键指代、时间或范围缺失，选最合适的人提出澄清；不要替用户编造答案。
+  - id: wait_or_finish
+    quota: 4
+    mode: quiet
+    candidates: 2
+    decisions: [wait, finish]
+    focus: 区分本轮保持开放的等待与讨论已结束；用户要求安静时绝不安排成员继续说话。
+  - id: same_name
+    quota: 2
+    mode: named
+    candidates: 3
+    focus: 两位成员展示名相同，用户只点了展示名且无足够线索；必须澄清要哪位，候选以稳定槽位区分。
+    same_name: true
+  - id: counterfactual
+    quota: 4
+    mode: discuss
+    candidates: 3
+    pair: true
+    focus: 两个分支共享用户问题和成员资料，仅一位成员最新公开发言中的事实不同，导致下一位应发言的成员不同。

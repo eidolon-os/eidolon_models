@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 慢性子，说话慢悠悠爱拖长音，喜欢先看海再行动
+    b: 好奇心重，一有新点子就坐不住，总和 {a} 抢着发言
+    c: 话少但记得牢，偶尔一句冷幽默让 {b} 笑个不停
+  user: '{a}，下午想退潮捡贝壳，你先说一句想不想去，先别让 {b} 和 {c} 接话，说完等我下一条消息再叫他们。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 退潮啊……我想去，最好带个小桶，慢慢走过去，先踩踩湿沙试试凉不凉……我这就等你们下一条消息再继续。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: exclusive_glm53_flash_wait_after_peer_001_0

@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 爱翻老照片怀旧，说话慢悠悠带口头禅'想当年'，总被{b}催
+    b: 嗓门大性子急，想到什么喊什么，爱跟{a}抬杠却听{c}劝
+    c: 话少心细，偶尔一句点醒全场，和{a}能安静待一下午
+  user: '{a}，你之前说山城的老巷子里有家开了几十年的豆花店，给我讲讲呗，就你一个人说，说完这次先到这儿。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 想当年啊，那家豆花店藏在坡坡上，木门吱呀响。老板娘总多舀一勺辣子，说爬坡的人耗力气。下雨天屋檐滴水，我们蹲在门槛上吃，碗底都暖的。好了，就说到这儿。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_003_0

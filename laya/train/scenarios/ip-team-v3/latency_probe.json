@@ -1,0 +1,12 @@
+{
+  "checkpoint": "laya/train/runs/ip-ensemble-v3-b4/checkpoint",
+  "device": "mps",
+  "load_s": 1.37,
+  "repeats_per_case": 20,
+  "cases": [
+    {"case": "short", "input_tokens": 512, "median_ms": 46.8, "p95_ms": 47.9, "min_ms": 46.2, "max_ms": 47.9},
+    {"case": "normal", "input_tokens": 941, "median_ms": 97.1, "p95_ms": 102.5, "min_ms": 94.6, "max_ms": 102.6},
+    {"case": "default_budget", "input_tokens": 1756, "median_ms": 213.4, "p95_ms": 228.2, "min_ms": 208.0, "max_ms": 248.9},
+    {"case": "many_members", "input_tokens": 1946, "median_ms": 245.0, "p95_ms": 252.1, "min_ms": 244.2, "max_ms": 254.0}
+  ]
+}

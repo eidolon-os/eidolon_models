@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 慢热安静，喜欢闻树味，走路总落在最后，常被{b}催
+    b: 急性子，见到岔路就想先跑，总嫌{a}磨蹭，爱大声宣布发现
+    c: 温和爱幻想，喜欢给云和石头起名字，常附和{a}的决定
+  user: 今天有点闷，不想跑来跑去的。{a}，只有你能让我静下来，跟我说说你在林子里最放松的时刻吧，别的伙伴先别接话。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: exclusive_glm53_flash_named_unique_002_0

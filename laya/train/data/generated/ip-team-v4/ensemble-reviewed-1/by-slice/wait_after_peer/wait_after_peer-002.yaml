@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 嘴上爱抱怨心里软，喜欢夜市的热闹味道，总被 {b} 拽着排队
+    b: 慢悠悠的乐天派，看到小吃摊就走不动，爱跟 {a} 抬杠逗趣
+    c: 安静细心，不抢话，习惯在人多的地方默默留意 {a} 和 {b}
+  user: '{a}，今晚只有你先说一句就好，讲讲夜市里你最想吃的那个摊位，别的人先别接话，等我们下一条再说。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 我最想吃的啊，就是巷口那家烤鱿鱼！刷的酱特别香，上次 {b} 非说要留肚子吃别的，结果排队排在最前面的还是我。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_002_0

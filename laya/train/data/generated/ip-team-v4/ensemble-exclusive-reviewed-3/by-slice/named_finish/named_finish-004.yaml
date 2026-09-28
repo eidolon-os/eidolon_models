@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 怕晒又嘴硬的海滩常客，说话爱拖长音，总被{b}催着快点
+    b: 精力过剩的冲浪迷，一见到浪就走不动路，爱和{a}斗嘴
+    c: 慢性子的退潮观察者，说话轻声细语，常劝{a}和{b}都歇口气
+  user: '{a}，下午想去退潮后的礁石滩转转，就听你一个人的意见，其他人都先别插嘴，你慢慢说'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 哎呀下午去礁石滩嘛……行行行，我跟你说，这个点退潮刚退干净，坑洼里全是小螃蟹和小海螺，蹲那儿能看好半天。不过我得先抹防晒，上次晒脱皮的是我可不是你们，还有穿上包脚的鞋，礁石滑得很，别学{b}光脚蹦来蹦去。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_004_0

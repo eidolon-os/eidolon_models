@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-28T02:42:23.057370+00:00",
+  "free_before_bytes": 5483905024,
+  "entries": [
+    {
+      "path": "laya/train/runs/ip-ensemble-v4-glm-r1/checkpoint/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "39c5112fec765544ef5e4628c756d663f0a7d8f089ecaa11bbf2c2474271064d",
+      "reason": "obsolete failed experimental weight; reports/config/data retained",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/ip-ensemble-v4-glm-r2/checkpoint/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "a8091bb9bc23763353234183d9bf865029120ec5c7069ff91589a7ba65305283",
+      "reason": "obsolete failed experimental weight; reports/config/data retained",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/ip-ensemble-v4-characters-r2/checkpoint/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "b99130107285fcb4ba4a32777730c077e2936a1b6d525fc3411d6e7963b1a6f1",
+      "reason": "obsolete failed experimental weight; reports/config/data retained",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/ip-ensemble-v4-characters-r4/checkpoint/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "5a01a63815de58de7d2ae80701b6aef0accdb32b1afe62dd47057692241af1f4",
+      "reason": "obsolete failed experimental weight; reports/config/data retained",
+      "deleted": true
+    }
+  ],
+  "removed_bytes": 5150614880,
+  "free_after_bytes": 10636390400
+}

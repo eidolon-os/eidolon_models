@@ -27,6 +27,8 @@ scenario.yaml ──gen──▶ cases.jsonl ──label──▶ labeled.jsonl 
 
 **统一的部分**：从场景到 `models/<name>/<rev>/` 全部与推理平台无关——同一个打包目录，torch 后端直接加载，
 ONNX 由 `export` 生成，RKNN / AXERA / CoreML 之类是各自平台的导出器，读同一个目录、写到它旁边的子目录。
+真实家庭 ASR 转写的独立验收导入与统计门槛见 [REAL-WORLD-EVAL-PLAN.md](REAL-WORLD-EVAL-PLAN.md)；
+`real-prepare` 和 `real-gate` 只处理离线数据，不发送设备命令。
 平台上的精度用同一套评测验：`items` 导出每道题的输入和参考 logits → 平台跑出 `<set>.logits.jsonl` →
 `eval --logits` 用**同样的校准和指标**打分，和 torch 的报告直接可比。RK3588 的做法：
 
@@ -229,7 +231,7 @@ Open-Jev 数据集里的中文行——写一个 adapter 就能接。
 - **同音错字**（`char_confusion`）：按表替换（灯→登、空调→空掉）。模拟 ASR 错字；更好的做法是 TTS → ASR 回环，
   写成一个 transform 插件就能换。
 
-增强的产物带 `derived_from`，切分时和原记录走同一个哈希，不会一个进 train 一个进 val。
+增强的产物带 `derived_from`。当前 `assemble` 按原句家族和完全相同的状态分组切分，避免原句、增强版或同状态副本跨 train / val / calib。**r14–r16 使用的是修复前的按完整 ID 切分，旧验证集和校准集有同源交叉；旧指标不可当作修复后独立切分的结果。**
 
 ### 2.6 数据配比的经验
 

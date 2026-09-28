@@ -1,0 +1,75 @@
+{
+  "review_version": "ip-team-v4-glm53-flash-ensemble-dev-1-review-1",
+  "source_plan_version": "ip-team-v4-glm53-flash-ensemble-dev-1",
+  "selected_calls": [
+    {
+      "call_id": "named_unique-002",
+      "slice": "named_unique",
+      "response_sha256": "6cf417b90eecf6de31249d49600c547d3bcaa627189a99e81b6f6d1cc3b7cb2c",
+      "review_reason": "用户只点名慢性子的角色陪同散步，其他成员不参与。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-001",
+      "slice": "same_member",
+      "response_sha256": "4aa380c9b9bf1a5d6174096e1f5a1df1216dd958838350d4f39ed373abc5173d",
+      "review_reason": "用户明确要求同一角色连讲两段灯塔经历。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-002",
+      "slice": "same_member",
+      "response_sha256": "1e72da7347a7bd147c26168622efa793b909ba363206b8f61fea3f2cd0136f0d",
+      "review_reason": "用户明确要求同一角色连讲两段海岛经历。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-001",
+      "slice": "speaker_handoff",
+      "response_sha256": "2a42e857767b1a6c87a5fc6726fddf710eab508d4f3397943a110d6b6a8d7070",
+      "review_reason": "已公开发言者直接邀请另一位角色回应。",
+      "episodes": 1
+    },
+    {
+      "call_id": "speaker_handoff-002",
+      "slice": "speaker_handoff",
+      "response_sha256": "1d555a81cc1dac4e38e8650345f286c59c51b103923e261d1ae677faaf1a5d95",
+      "review_reason": "已公开发言者直接邀请另一位角色回应。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-001",
+      "slice": "user_override",
+      "response_sha256": "1a67760a23fb8493043945921c9a7febc34ad455bae59345e8738f9893ad9e53",
+      "review_reason": "用户打断旧话题，点名另一位角色答新问题。",
+      "episodes": 1
+    },
+    {
+      "call_id": "user_override-002",
+      "slice": "user_override",
+      "response_sha256": "c46d6b00d09d9ea39322daebd7f585a22ae5f63be9ea707febd36604ac74d9ff",
+      "review_reason": "用户打断旧话题，点名另一位角色答新问题。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-001",
+      "slice": "wait_or_finish",
+      "response_sha256": "c7dafde4cfaf690d8a70617b79f4acb558f102635483079532357b3b50fbfac7",
+      "review_reason": "用户明确暂停，等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-002",
+      "slice": "wait_or_finish",
+      "response_sha256": "75d18a177eec58ed557a5dfb33daed85d6483774eb816778336eab1c4b938796",
+      "review_reason": "用户明确本轮结束。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "named_unique-001": "人物描述存在自我关系错误，且两条林间散步点名请求过近。",
+    "named_finish-001": "用户只说一次讲完，回复又追问用户，finish 与 wait 不唯一。",
+    "wait_after_peer-001": "用户措辞与角色接话安排不清，等待标签有歧义。"
+  },
+  "families": 9
+}

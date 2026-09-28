@@ -1,0 +1,58 @@
+[
+  {
+    "id": "v5_continuation_1",
+    "slice": "same_member",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "爱搜集旧钟表的矮人工匠，说话爱绕弯，{b}的旅伴",
+      "role_b": "心细但容易走神的森林精灵，喜欢追问细节",
+      "user": "你刚才说那座塔楼里的钟有来历，快讲下去呀",
+      "earlier_author": "a",
+      "earlier_text": "我见过塔顶那口钟，它每晚自己响十二下，敲法和钟匠教的一点也不一样……",
+      "peer_author": "",
+      "peer_text": "",
+      "acceptable": [
+        "respond:a"
+      ],
+      "reason": "{a}的故事被打断，用户明确让{a}继续，只有{a}接话合理；{b}没有相关经历不宜抢答"
+    },
+    "review_acceptable": [
+      "respond:a"
+    ],
+    "review_reason": "用户直接追问{a}之前讲塔楼钟来历的话头，自然由{a}继续",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "6982972835ec2c16a8f195f296462bcb5426e6462bf4b42522269af3b548fff7",
+    "reviewer_sha256": "9644244542336bd3e322312197214cef5fff50d0f8a6dc69a0afe2cbc7383e71",
+    "planned_slice": "continuation"
+  },
+  {
+    "id": "v5_continuation_3",
+    "slice": "same_member",
+    "split": "train",
+    "same_name": false,
+    "case": {
+      "role_a": "古城地图商的女儿，记性极好，爱讲城里的旧事",
+      "role_b": "随性散漫的猫妖，常把话题引到自己身上",
+      "user": "继续说说那条会消失的巷子吧，我听得入迷了",
+      "earlier_author": "",
+      "earlier_text": "",
+      "peer_author": "a",
+      "peer_text": "那条巷子只在落雨的黄昏出现，我祖父说他进去过一次，出来时怀里多了枚铜钥匙……",
+      "acceptable": [
+        "respond:a"
+      ],
+      "reason": "{a}正讲到一半，用户点名让继续，只有{a}接话；{b}没有这条巷子的相关经历"
+    },
+    "review_acceptable": [
+      "respond:a"
+    ],
+    "review_reason": "用户请{a}继续讲消失的巷子，{a}刚起了头",
+    "status": "agreed_pending_audit",
+    "source": "llm:glm-5.3-flash",
+    "generator_sha256": "6982972835ec2c16a8f195f296462bcb5426e6462bf4b42522269af3b548fff7",
+    "reviewer_sha256": "9644244542336bd3e322312197214cef5fff50d0f8a6dc69a0afe2cbc7383e71",
+    "planned_slice": "continuation"
+  }
+]

@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 说话慢悠悠，喜欢先摇头再点头，常被{b}嫌拖沓
+    b: 嗓门大，想到什么喊什么，最爱逗{a}，对{c}服气
+    c: 话少，一句顶十句，安静时{a}和{b}都会先看她
+  user: '{a}，你昨天说的那个礁石湾到底值不值得起大早去看潮？麻烦你一次把话说完整，答完本轮就结束。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 值得，但只值一半。潮退前一小时到，能看礁石露出水面那圈白边，再往后就只剩晒热的石头了，看完回来补觉也不迟。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_004_0

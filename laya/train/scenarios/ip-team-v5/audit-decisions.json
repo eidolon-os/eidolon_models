@@ -1,0 +1,255 @@
+{
+  "v5_continuation_1": {
+    "decision": "accept",
+    "observed_slice": "same_member",
+    "reason": "公开作者a的故事被用户要求继续，原始单成员标签有直接文本依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_continuation_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_continuation_3": {
+    "decision": "accept",
+    "observed_slice": "same_member",
+    "reason": "当前公开发言a尚未讲完用户请求的故事，续讲合理，b没有同一故事依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_continuation_4": {
+    "decision": "reject",
+    "reason": "双审一致仍拒收：b会接故事尾巴不等于知道a的木匣经历，允许b替讲缺少具体上下文依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_end_1": {
+    "decision": "accept",
+    "observed_slice": "soft_closure",
+    "reason": "没有禁止回复，简短告别或直接收束均合理；这是自然告别，不充当硬静默金标。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_end_2": {
+    "decision": "accept",
+    "observed_slice": "soft_closure",
+    "reason": "夸奖后的简短回应与自然收束都合理，不能把它算成必须静默。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_end_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_end_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_interrupt_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_interrupt_2": {
+    "decision": "reject",
+    "reason": "双审一致仍拒收：标注理由捏造a修过屋顶的经历，且无依据排除c。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_interrupt_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_interrupt_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_mention_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_mention_2": {
+    "decision": "accept",
+    "observed_slice": "mention",
+    "reason": "询问引用的灯语含义，原话作者或灯匠之女都可自然解释；并非明确要求只有原作者。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_mention_3": {
+    "decision": "accept",
+    "observed_slice": "mention",
+    "reason": "询问a是否说过某话，a与关系密切的b均可自然回应；没有强制只让a说。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_mention_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_named_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_named_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_named_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_named_4": {
+    "decision": "accept",
+    "observed_slice": "open_group",
+    "reason": "问题并未明确点名；磨坊主或原发言学徒均可回应。保留原多标签，纠正统计切片。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_open_group_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_open_group_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_open_group_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_open_group_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_pause_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_pause_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_pause_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_pause_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_quiet_text_1": {
+    "decision": "accept",
+    "observed_slice": "quiet_text",
+    "reason": "明确请求文字陪伴，三个允许参与的人物均可回应，禁声不影响文字。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_quiet_text_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_quiet_text_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_quiet_text_4": {
+    "decision": "accept",
+    "observed_slice": "quiet_text",
+    "reason": "用户询问诸位是否醒着，文字回应合适；不把禁声变成wait。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_relation_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_relation_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_relation_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_relation_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_same_name_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_same_name_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_same_name_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_same_name_4": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_sufficient_1": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_sufficient_2": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_sufficient_3": {
+    "decision": "reject",
+    "reason": "两次GLM标注不一致或结构非法，隔离；不以切片目标覆盖文本或标签。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_sufficient_4": {
+    "decision": "accept",
+    "observed_slice": "content_handoff",
+    "reason": "旧公开发言把点灯问题交给b，新用户追问同一事，b有直接关系依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_boundaries_1": {
+    "decision": "accept",
+    "observed_slice": "explicit_wait",
+    "reason": "用户明确禁止任何回复；区分永久结束本轮与等用户完成后再说，原GLM标签和复审一致且有原文依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_boundaries_2": {
+    "decision": "accept",
+    "observed_slice": "explicit_finish",
+    "reason": "用户明确禁止任何回复；区分永久结束本轮与等用户完成后再说，原GLM标签和复审一致且有原文依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_boundaries_3": {
+    "decision": "reject",
+    "reason": "用户文本出现未渲染的裸槽位小b；不由本地编辑补写姓名。",
+    "reviewer": "current_assistant_not_independent_human"
+  },
+  "v5_boundaries_4": {
+    "decision": "accept",
+    "observed_slice": "explicit_wait",
+    "reason": "用户明确禁止任何回复；区分永久结束本轮与等用户完成后再说，原GLM标签和复审一致且有原文依据。",
+    "reviewer": "current_assistant_not_independent_human"
+  }
+}

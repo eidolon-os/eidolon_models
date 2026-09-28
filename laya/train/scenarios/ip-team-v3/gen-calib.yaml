@@ -1,0 +1,9 @@
+seed: 93
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v3/dev_pool.yaml
+    split_name: calib
+    select_split: calib
+    variants: 3
+    pair_seed: 1357

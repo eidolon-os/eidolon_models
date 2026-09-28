@@ -1,0 +1,13 @@
+- mode: named
+  cast:
+    a: 慢性子，说话爱拖长音，总被 {b} 嫌磨蹭但从不生气
+    b: 急性子，想到什么就喊出来，爱跟 {a} 拌嘴，服 {c}
+    c: 话少心细，常在 {a} 和 {b} 吵完才慢慢补一句
+  user: 今天心情有点低落，{a} 你别也跟着起哄，就想听你说说话，随便什么都行。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_003_0

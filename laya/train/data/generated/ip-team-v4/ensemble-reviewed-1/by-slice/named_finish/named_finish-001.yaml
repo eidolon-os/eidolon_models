@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 慢性子，说话慢悠悠爱加语气词，常被 {b} 催促也不恼
+    b: 急性子，遇新鲜事就想先试，动不动和 {a} 拌嘴两句
+    c: 安静温和，话不多，喜欢在 {a} 和 {b} 争执时轻轻打圆场
+  user: '{a}，今天就你一个人说哈，跟我讲讲你昨天出去晒太阳那件事，从头到尾一次说完，别留尾巴。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 好呀……昨天太阳可好了嘛，我趴在窗边晒了小半天呢，暖得都快睡着了，中途风一吹，窗帘飘起来蹭我一下，我就顺手把它掖了掖，接着又眯了一会儿，醒来的时候天都有点发红了，心里美滋滋的，就这么回事，讲完啦。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_001_0

@@ -1,0 +1,193 @@
+{
+  "families": {
+    "test": 14,
+    "train": 25,
+    "val": 12
+  },
+  "records": {
+    "test": 84,
+    "train": 150,
+    "val": 72
+  },
+  "action_family_counts": {
+    "test": {
+      "respond": 14,
+      "stop": 14,
+      "abstain": 14
+    },
+    "train": {
+      "respond": 25,
+      "stop": 25,
+      "abstain": 25
+    },
+    "val": {
+      "respond": 12,
+      "stop": 12,
+      "abstain": 12
+    }
+  },
+  "min_tokens": 288,
+  "max_tokens": 546,
+  "parity_records": 306,
+  "audit_sha256": "c2f7b2c51610e2ee4e1f8daae109f099cf34b3675094cd357b8e95790c0f568c",
+  "prepare_sha256": "92e672e8d569f5da8f10b1ade2939a73c23943307a574dc0f7a063fefdbcc77e",
+  "source_sha256": {
+    "test-00.json": "f5661f68f1ace5c196a2684e83c925a08ab077e287a1b71d850efc8b544ba3ed",
+    "test-01.json": "028bd099ca4941aeae6e2ec93c1b0c30ae0e2e31ef6015330730dbde854b00a7",
+    "test-02.json": "e73023166f4737af1746aa3aeb6b14361d7ed99c7025b774776818868e89809c",
+    "test-03.json": "dccbd5b559b8ad31a658a535e5e12bee45413d54a01a1f17cae37b38219b84e3",
+    "test-04.json": "65e0118a350fe1bc27778ae10080de60d7b2d172f02577d927da1cbf62fdfb20",
+    "test-05.json": "2d6688150ccfb3047e4f1b61f03164abe10a2843d450448db16225e2b8e08c8b",
+    "test-06.json": "33083d6b95daedb8965653b714a264cf5a9cd7644a2cc6bea114652513e3e7a9",
+    "test-07.json": "a31e9d2d124557ed2caf2a355d9271ddea8d6f69e818dd2da3fee44f0c21731a",
+    "test-08.json": "b215d383c12ec281c07d0036f690b40272010e1d31eabcf8946460b275956507",
+    "test-09.json": "cd4da605d7c438ae0fd067c503e16605e1683ba1bb56d5736805f38d5799c960",
+    "test-10.json": "dbc8797ba439e40363adc86e173317000ea450b0fa77a195459be341376f2012",
+    "test-11.json": "4d7e3205aabc23044abef25e332b1909b00a9d871407ad699eeca6643807f793",
+    "test-12.json": "56bddfbc1fb702a80381249528cfac357c0f947ef617ddc02ad3c17c299da607",
+    "test-13.json": "5594744e4440425fbf53b69a800da91963ead76186537b80d59e4c2eca9fd821",
+    "test-14.json": "9b20bd78127a33a040344ca0212b749419d4aa78d449e9b4e337e849707f5b65",
+    "test-15.json": "39fa68b371a598962dbf98057ec26370aa3cc649ac0819d94775ad3013bdb476",
+    "train-00.json": "dd6011f2b4529c3ebd9e73d749ffee1eb6aa2136857c72928582ddb0eafb2bcb",
+    "train-01.json": "883483d006dcfa579222296c398cb7423d6ed781c186ccbd1322320ce6c166ac",
+    "train-02.json": "2ad4384bdeb2b9773cd33bd95ad1b145ba646a73252e59ba625ee6b8b2619a46",
+    "train-03.json": "494d0709f29abf549f2f3e301896ce0a7f1a3ca531e0f1f12ae796148d4dae89",
+    "train-04.json": "04baed7d138a1802308f8a02177e1c19cd4700a1672865a032d0620010011b50",
+    "train-05.json": "5b4704803a3f88a004d6af5e9236b7c47caf8f202e9bc435cd58b11b5a676f3c",
+    "train-06.json": "6be64080c22de1d8916347d3704dd9bef0dea2a2bb3337b2f136b4af365e974e",
+    "train-07.json": "bba7a68ce1196e21bf0368e24b213f3d9e45fba749788b5a87bdc54e084e4a6a",
+    "train-08.json": "86f9d122885dcf596ae9fbd0e8c58d8a6349844211bbf17df6651b7ff52d4a2d",
+    "train-09.json": "9277944ea5bb5bb6603114f4cbfadfd04d9ce1298e1402f2241ca0a4fa9cf691",
+    "train-10.json": "397e16ab5121c471233a7d8384ea1a776e6a0c2168cb743138025f0b3cdd2b43",
+    "train-11.json": "07460761d024e8424f2996baeeb9b9164dd78422e7bf90146bfaf30741221f67",
+    "train-12.json": "cc76a6282a4884aea954d4717af4aa7be2944f7024896b49f5631b651c40d1f3",
+    "train-13.json": "7ab33530f50a1cf477d7644eb365779cb4e7400267ef8528ab201f0ba603bdea",
+    "train-14.json": "2e5bd33238d3d8009d11b29afcf9367ae2afae718e9781ab0fa86914a54d88b4",
+    "train-15.json": "27705a68206be879f03d6e7dbc651631be424e6c25c99bf915613f6e91d6f238",
+    "train-16.json": "cf62746188f22447827adadc259d628ed7e99f1b30517dcf7d6860d570c3192c",
+    "train-17.json": "3b39ad6f28028d780dbeade5e2631dcea57d515ff9c640bdc979cce26e5438bc",
+    "train-18.json": "c03d1cb98afcaf8044d60abc65aed95472c55dc7bb1c298bff8058e218ddb85d",
+    "train-19.json": "9dfc2d7c3dd5df35312bc8f326e5c4c7116c1eb4eaad5677ff407d6f1c514652",
+    "train-20.json": "948dec712de7b357c480d41d04904b487de511b0ff68aac23a22346cab81417a",
+    "train-21.json": "3f9cee7e7027abe924f7e395505a48b0d45776099d90314273dc717c89ea978a",
+    "train-22.json": "b47cdd1ada2f81327b80ab3ca708d392f0e1ed276b7beb16ed2a5df0932a799f",
+    "train-23.json": "ab1dd6d4068d7b8e493ef7b123e27c8579156eed4a535670ad18e715c0831bce",
+    "train-24.json": "18d66895e8852467331db7c75a2488c23ea26312ccfbef81e3054e04060a5490",
+    "train-25.json": "3d6d3157a8f3db4a565f0479e6ce51e028d491e446232d1bb5b1dc072044e161",
+    "train-26.json": "3d859397e1cc5c30e2ff40e6ccbfdca3be07478ad0f18ca85409301650214d83",
+    "train-27.json": "c9ae332cf5a91b8223dc5f591743fabbd25a370e4e54db9acab868b0b144cdb8",
+    "train-28.json": "c34643228ce03f40dfea5c0eaca9849d20c0bb7b35fcd620b48c13e1ba7be5b6",
+    "train-29.json": "3276dd6e7b03bac1d9647a68e468455cec7cbd642242fff5879fcf9363419160",
+    "train-30.json": "7773bdeed45e2a5fee00e71671b4dcd0a90856c6a8c6c3a6564958d926064b1d",
+    "train-31.json": "021868f60267db5d04e73a102ef728bac0c3eb9752e49d9a554033d4c1d732af",
+    "val-00.json": "cfb2268b07e5fa1d9e7d8d0ab6c131202735df6ec8ccda5739d47bd3bbd0cccf",
+    "val-01.json": "8c0c3eb3ef439d9a87a560a2c36b262549310c7d113f60b0d9945817d4204b26",
+    "val-02.json": "b50b0c15bbd1db4d2ac539d6a58693dcf76e5c6dfb98ba1cd9bab66085c72d6f",
+    "val-03.json": "53ebbfaed60ab1cf8e18871823c7f78b7e60694a8ae6d0f6aa025dfa16c847c1",
+    "val-04.json": "ef76323a7a86166d0c9784a0ab023b3cd2ade90014a08ceec97b7ea5d96ecb2a",
+    "val-05.json": "ba5ed5cd1e81fb04a284d64cbfb2b582ec2a57bd605ae8ebf63ba2b52ecb3551",
+    "val-06.json": "76cea7b74f9eeee47c74276d3b80832ae95df77e039cb3c36f9dd6fa22f8ebaf",
+    "val-07.json": "528137ff31e2be2cc3f907fea702b64789d947d604ceb2eae20d3738e357593a",
+    "val-08.json": "9350f0ab702fe8bd2779236aa91076633cff04bcf81c65fc040dbfa8a8829599",
+    "val-09.json": "a62b0f65d4cbd753d1a5cb0c0ce9a142d89a1ed13097a1bd2ce01310c95e1eae",
+    "val-10.json": "b702e47a688e2be127567fa0e3d870c9e96ab20540ff433bd4fd66bdf0258cdf",
+    "val-11.json": "69b6d765b0daa3818076bc1bed7d260f46415623133648ea0a2e8aba7d012e20",
+    "val-12.json": "852c34def095901676f1401de2894d0d5348ff2ad0cd515740789f4aab5a60c9",
+    "val-13.json": "4bfebc77d3e9504db165860343e2ffbdccfec36fafc9465d30d49ad8133d46e7",
+    "val-14.json": "b2554fe2beada85052e5a0b9b69a11561ca565b09995c6af4552bc732d305f41",
+    "val-15.json": "a1565ec1a4446cada7a18c8cc342a02407298157b11f0278913d3c063315568b"
+  },
+  "cross_split_near_user_text": [],
+  "files": {
+    "sealed/named/test.jsonl": {
+      "records": 84,
+      "sha256": "d884b280728b048f459de3ad53eb3d2fd41af60b46b5fe588b70969ea7e01b43"
+    },
+    "named/train.jsonl": {
+      "records": 150,
+      "sha256": "d57aab0b03a6b536c0306d13d93d1738e75c579f4433cccaf40a05284797c3fb"
+    },
+    "named/val.jsonl": {
+      "records": 72,
+      "sha256": "b5347b5de86c3598a82a79ed8518ac941bd10d474cb771c6b1917dcd2601fef5"
+    }
+  },
+  "shared_display_names": {
+    "train/val": [
+      "林小满",
+      "林晚",
+      "林晚晴",
+      "林晚舟",
+      "沈砚"
+    ],
+    "train/test": [
+      "林晚",
+      "林晚晴",
+      "林晚舟",
+      "沈青梧",
+      "洛小满",
+      "白砚舟",
+      "青梧"
+    ],
+    "val/test": [
+      "林晚",
+      "林晚晴",
+      "林晚秋",
+      "林晚舟"
+    ]
+  },
+  "candidate_count_families": {
+    "test": {
+      "2": 4,
+      "3": 3,
+      "4": 2,
+      "6": 3,
+      "5": 2
+    },
+    "train": {
+      "2": 5,
+      "4": 4,
+      "5": 6,
+      "6": 5,
+      "3": 5
+    },
+    "val": {
+      "2": 4,
+      "3": 2,
+      "6": 3,
+      "5": 2,
+      "4": 1
+    }
+  },
+  "world_families": {
+    "test": {
+      "星海旅途中归家的伙伴": 2,
+      "老戏院里的木偶朋友": 2,
+      "冰湖边相伴过冬的邻居": 2,
+      "群岛渡船上的旅伴": 2,
+      "会移动的沙漠集市居民": 2,
+      "云端图书馆里的故事人物": 2,
+      "苔藓古城里结伴的精灵": 1,
+      "山间小村的异兽朋友": 1
+    },
+    "train": {
+      "苔藓古城里结伴的精灵": 4,
+      "会移动的沙漠集市居民": 4,
+      "云端图书馆里的故事人物": 3,
+      "山间小村的异兽朋友": 3,
+      "老戏院里的木偶朋友": 4,
+      "冰湖边相伴过冬的邻居": 3,
+      "星海旅途中归家的伙伴": 3,
+      "群岛渡船上的旅伴": 1
+    },
+    "val": {
+      "云端图书馆里的故事人物": 2,
+      "山间小村的异兽朋友": 2,
+      "冰湖边相伴过冬的邻居": 2,
+      "苔藓古城里结伴的精灵": 2,
+      "群岛渡船上的旅伴": 2,
+      "星海旅途中归家的伙伴": 1,
+      "会移动的沙漠集市居民": 1
+    }
+  }
+}

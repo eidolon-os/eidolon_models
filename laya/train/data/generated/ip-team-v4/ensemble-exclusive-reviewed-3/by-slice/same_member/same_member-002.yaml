@@ -1,0 +1,19 @@
+- mode: named
+  cast:
+    a: 急性子，遇新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子，说话爱引经据典，总被 {a} 催促
+    c: 话少心细，默默收尾，偶尔一语点醒 {a} 和 {b}
+  user: '{a}，你不是去年走过那段古道吗？别卖关子，一口气分两段讲讲当时的事，中间别停下来等我'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 行，那我从头说！去年秋天我跟着商队走那段古道，天不亮就出发，山口风大得能把人吹个趔趄。走到半路遇上一座破亭子，牌匾上字都磨没了
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: exclusive_glm53_flash_same_member_002_0

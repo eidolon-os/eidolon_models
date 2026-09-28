@@ -1,0 +1,258 @@
+- mode: group
+  cast:
+    a: IP角色背景故事策划，擅长梳理人物经历与关系脉络
+    b: IP角色台词打磨师，擅长对白润色与情绪语气把控
+    c: IP角色美术设定顾问，擅长外观造型与风格描述
+  user: '{a}，帮我把团队里那个新角色的背景故事改一版吧，重点突出羁绊感，这一版我想尽快定稿，你先看看哪里最需要动。'
+  prelude: []
+  steps:
+  - action: clarify
+    speaker: a
+    brief: 缺少用户必须提供的信息
+  tag: clarify
+  id: glm53_flash_clarify_001_0
+- mode: group
+  cast:
+    a: 擅长IP世界观与角色背景设定梳理，能分辨不同版本设定差异
+    b: 擅长角色台词打磨与口语化改写，熟悉人物语气风格
+    c: 擅长IP商业化文案撰写与周边策划
+  user: 帮我把这段角色对话稿再润一下，这版念起来还是不太像那个角色本人说话的感觉，麻烦{a}先看看哪里不对
+  prelude: []
+  steps:
+  - action: clarify
+    speaker: a
+    brief: 缺少用户必须提供的信息
+  tag: clarify
+  id: glm53_flash_clarify_002_0
+- mode: group
+  cast:
+    a: 擅长IP角色世界观与人物小传的编辑
+    b: 负责角色台词风格与口癖打磨的文案
+    c: 主理角色周边选品与联名方案的运营
+  user: 我们团队想给新的角色团做一轮文本决策评审，{a}你说下这版草稿的问题吧？
+  prelude: []
+  steps:
+  - action: clarify
+    speaker: a
+    brief: 缺少用户必须提供的信息
+  tag: clarify
+  id: glm53_flash_clarify_003_0
+- mode: named
+  cast:
+    a: 擅长梳理IP角色团人设关系与角色定位冲突
+    b: 擅长撰写短篇故事与角色出场桥段
+    c: 擅长设计周边商品与视觉风格方案
+  user: '{a}，我们角色团里狐狸和獾两位的角色定位感觉撞了，都是机灵讨喜挂的，帮我理一下各自边界和差异化吧。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_001_0
+- mode: named
+  cast:
+    a: 擅长IP角色世界观架构与人设一致性审校
+    b: 擅长IP角色周边商品设计与供应链落地
+    c: 擅长IP角色短视频脚本与传播节奏策划
+  user: '{a}，我们角色团的三个成员人设写完后有点互相矛盾，老二设定怕水但剧情里他要在雨夜登场，帮我从世界观角度理一下怎么改才不崩设定？'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_002_0
+- mode: named
+  cast:
+    a: 擅长为IP角色设计统一话术风格与语言规范
+    b: 专注多平台粉丝社群运营与活动策划
+    c: 负责IP形象视觉设计与周边产品开发
+  user: '{a}，我们团里那个新角色总说话前后不搭，一会儿高冷一会儿卖萌，帮我定一套角色语气规范吧，把用词、句式和禁忌都写清楚。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_003_0
+- mode: named
+  cast:
+    a: 擅长IP角色性格设定与世界观一致性审校
+    b: 擅长短篇漫画分镜节奏与画面构图设计
+    c: 擅长周边商品选品与联名授权条款谈判
+  user: 我们新推的团宠狐狸角色最近台词越来越毒舌，人设文档里明明写的是温柔治愈系，{a}你帮我查一下哪些章节的口癖已经跑偏了，列出来我好让写手改。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确点名 a
+  tag: named_unique
+  id: glm53_flash_named_unique_004_0
+- mode: named
+  cast:
+    a: 擅长绘本角色性格塑造与台词打磨
+    b: 擅长IP衍生周边选品与配色方案
+  user: '{a}，这只狐狸的登场独白你先说个开头，别一口气讲完，分两段连续说完，我看看节奏感。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好，开头我先这样写：'月光落在尾巴尖上的时候，我就知道——这个镇子又有人在说谎了。'
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_002_0
+- mode: named
+  cast:
+    a: 擅长世界观设定与角色背景考据的IP故事策划
+    b: 专攻对话语气润色与台词节奏把控的编剧
+  user: '{a}，上次你说的那个大陆分裂的设定挺有意思，麻烦你先讲讲两族起源的开头，然后紧接着再把后面仇恨怎么结下的也一口气说完，别换人讲。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 好，我先把开头讲完：那片大陆原本是一个完整王朝，两族本是同源，后来一场天灾让南北两地彻底断联，各自发展出了不同的历法和信仰。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: glm53_flash_same_member_003_0
+- mode: group
+  cast:
+    a: 擅长IP角色世界观梳理与故事主线拆解
+    b: 擅长角色人设细节与视觉符号设计
+    c: 擅长衍生内容排期与粉丝社群运营
+  user: 我们团要做一只原创松鼠IP，我脑子有点乱，能帮我把世界观故事线和角色外观设定一起理顺吗？下周就要给客户过一版。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 先由 a 处理其专长部分
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 先把主线定下来：松鼠因藏松果引发森林存亡之争，我已拆出三幕结构，第一幕它误藏了能唤醒季节的种子，故事线部分可以先确认。
+    brief: a 已公开完成自己的部分，交给 b
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_001_0
+- mode: group
+  cast:
+    a: 擅长国潮IP角色世界观与背景故事设定
+    b: 擅长IP角色周边产品的材质与工艺选型
+    c: 擅长IP角色的短视频脚本与传播策划
+  user: 我们即将推出的狐狸 IP 角色“雪团”要办一场快闪展，世界观文案 a 你们已经定稿了吗？另外展台上的大型雕塑用什么材质比较耐撞？两个问题都挺急的，帮忙看看。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 先由 a 处理其专长部分
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 雪团的世界观已经定稿：它是雪山脚下的报恩灵狐，核心记忆是雪夜里的一盏灯笼，故事分三幕展开，快闪展可以用三面墙呈现这三幕。
+    brief: a 已公开完成自己的部分，交给 b
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_002_0
+- mode: group
+  cast:
+    a: IP角色世界观与人物关系梳理
+    b: IP角色台词风格与语言习惯设计
+    c: IP角色视觉形象与配色方案
+  user: 我们团的原创角色最近人设老打架，a你已经把三个角色的时间线和关系理清了吗？接下来我还想让他们的说话方式更有辨识度，谁接一下
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 先由 a 处理其专长部分
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 我已经把三位主角的时间线对齐了，发现二人与三号的师徒关系前后矛盾，已统一为十年前结缘，另外把各角色的阵营归属也标注好了
+    brief: a 已公开完成自己的部分，交给 b
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_004_0
+- mode: interrupt
+  cast:
+    a: 擅长古风仙侠角色的世界观与背景设定撰写
+    b: 擅长拟人化动物IP角色的外形设计与表情动作演绎
+    c: 擅长科幻机甲IP角色的技能体系与数值设定
+  user: '{b}，之前的仙侠设定先放一放吧，我们新签了个项目，要做一只能拟人互动的橘猫IP角色，表情和动作要特别可爱，这块只有你最拿手，帮我出一版设计思路。'
+  prelude:
+  - author: a
+    text: '{a}：仙侠角色这块我已经把世界观和门派背景初稿整理出来了，等大家评审后我再细化人物关系。'
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_002_0
+- mode: interrupt
+  cast:
+    a: 擅长设计古风仙侠类角色外观与服饰设定
+    b: 专精科幻机甲角色的世界观与技能体系构建
+    c: 负责角色台词打磨与配音情绪指导
+  user: 各位，之前仙侠那个角色先放一放，我现在想做一个赛博废土里的机甲猎人角色，得有完整世界观和战斗技能设定，这块还是{b}来牵头吧
+  prelude:
+  - author: a
+    text: '{a}：关于古风仙侠角色，我已经公开说过会出三套外观方案，配水墨风服饰细节，下周先交第一版草稿给大家看'
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_003_0
+- mode: quiet
+  cast:
+    a: 擅长IP世界观设定与角色背景故事的策划编剧
+    b: 负责IP角色台词风格与性格一致性校对的文本编辑
+  user: 你俩先别急着说话，我想想{a}和{b}的出场方式，等我再输入你们再讨论，现在先安静等着
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_001_0
+- mode: quiet
+  cast:
+    a: 擅长小说人物性格塑造与台词打磨的文字策划
+    b: 擅长角色背景设定与世界观逻辑自洽性审核的编辑
+  user: 本轮讨论就到这里吧，{a}和{b}都不用再补充了，全部安静下来，等我有新的想法再叫你们。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_002_0
+- mode: quiet
+  cast:
+    a: 擅长IP角色世界观设定与背景故事搭建的策划
+    b: 擅长角色台词风格打磨与对话节奏的编剧
+  user: 先别急着讨论 {a} {b}，我先把手里的角色资料发给你们，等我下一条消息再开始分析，现在都保持安静就好
+  prelude: []
+  steps:
+  - action: wait
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_003_0
+- mode: quiet
+  cast:
+    a: 擅长绘制角色立绘与表情差分，负责团内视觉形象定稿
+    b: 擅长编写角色背景故事与台词风格指南，负责设定文本
+  user: 这轮大家讨论得差不多了吧，就先到这吧，{a}和{b}都别再发了，我去整理一下笔记，回头有结论再来找你们，安静一下就好
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_004_0

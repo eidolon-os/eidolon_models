@@ -1,0 +1,17 @@
+# Warm-start from product-aligned r1 and reduce update magnitude; same reviewed r2 data.
+init: ../../runs/ip-ensemble-v4-characters-r1/checkpoint
+model_name: laya-ip-team-v4-characters-r3
+epochs: 4
+batch_size: 4
+grad_accum: 2
+lr_encoder: 1.0e-5
+lr_head: 5.0e-5
+unfreeze_layers: 8
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.04
+weight_decay: 0.01
+max_len: 2048
+head_max_len: 256
+seed: 53
+device: mps

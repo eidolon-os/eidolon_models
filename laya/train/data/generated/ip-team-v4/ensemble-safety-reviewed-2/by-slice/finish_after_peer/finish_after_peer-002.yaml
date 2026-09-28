@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 爱观察云和天气，说话慢悠悠爱打比方，喜欢跟{c}猜云的形状
+    b: 话少但眼光毒，常一句话戳破{a}的浪漫想象，两人互相看不顺眼又合拍
+    c: 好奇心爆棚，看到什么都想凑近，总拉着{a}分头探索，吵吵闹闹却是好搭档
+  user: '{a}，听说星船会在傍晚经过上空，你之前在甲板上看到的那个亮光是不是它？就你一个人说完这一轮就好，答完就到这，{b}和{c}先别插话。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 嗯，那个亮光八成就是它。当时云层裂了条缝，它像一枚别在夜幕上的银别针，缓缓划过去，比流星沉得多，也有底气得多。我盯着看了快一分钟，脖子都酸了。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: safety_glm53_flash_finish_after_peer_002_0

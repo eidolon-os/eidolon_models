@@ -1,0 +1,16 @@
+{
+  "records_per_configuration": {
+    "laya": 114,
+    "laya-r6": 114,
+    "laya-r7": 114,
+    "openjev": 114,
+    "decider": 114,
+    "jevk5": 114
+  },
+  "total_primary_predictions": 684,
+  "unit_tests_passed": 4,
+  "data_hashes_unchanged": true,
+  "cpu_mps_same_answers": 4,
+  "max_cpu_mps_probability_difference": 0.0013506412506103516,
+  "no_test_inputs_in_runner": true
+}

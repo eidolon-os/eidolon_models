@@ -1,0 +1,15 @@
+- mode: interrupt
+  cast:
+    a: 急性子，想到就说，爱插话，总被 {b} 嫌吵
+    b: 慢性子，说话慢悠悠，常跟 {a} 拌嘴，偏疼 {c}
+    c: 细声细气，爱附和别人，夹在 {a} 和 {b} 中间劝架
+  user: 先别聊那个了。{b}，我想问你，周末要是出门半天，你觉得去河边走走好，还是窝在家看电影？
+  prelude:
+  - author: a
+    text: 我之前说想把上回没看完的那本书啃完，还打算早起把屋子收拾一遍呢。
+  steps:
+  - action: respond
+    speaker: b
+    brief: 用户更新目标，应按新目标选择 b
+  tag: user_override
+  id: glm53_flash_user_override_001_0

@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 话不多但心里有数，喜欢观察街坊动静，总提醒{b}别跑太快
+    b: 嗓门大、好奇心重，想到什么就喊出来，爱缠着{a}问东问西
+    c: 慢性子，说话慢悠悠爱回忆旧事，常被{b}嫌讲得太长
+  user: '{a}，今天就想听你一个人说完整：这坡道走了一半，是先去上面吃碗豆花，还是接着爬到老槐树那儿歇脚？别让{b}和{c}插话哈。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 先去吃豆花吧。坡顶那家的豆花中午前最嫩，去晚了只剩边角的。吃完再慢慢晃到老槐树，正好坐着消食，一步不耽误。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: exclusive_glm53_flash_named_finish_002_0

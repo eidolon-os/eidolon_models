@@ -1,0 +1,41 @@
+{
+  "id": "v6s_train_end_pause",
+  "split": "train",
+  "slice": "end_pause",
+  "schema": "shared_fields_v2",
+  "generator_sha256": "74e784d0155e4914ccd5707edbc546a9d5eb8c4734c64b8f53d83359da15da60",
+  "status": "agreed_pending_audit",
+  "pair": {
+    "acceptable_x": [
+      "finish"
+    ],
+    "acceptable_y": [
+      "wait"
+    ],
+    "name_a": "墨羽鸢",
+    "name_b": "纸鸢铃",
+    "name_c": "墨香絮",
+    "reason_x": "user_x明确表示本轮结束且不必回话，故acceptable_x只有finish，符合结束语义。",
+    "reason_y": "user_y要求人物暂时不要回话并等待用户下一条输入，故acceptable_y只有wait。",
+    "role_a": "爱讲故事的旅伴，习惯为同伴朗读漂浮岛上的古书",
+    "role_b": "好奇心旺盛的旅伴，常打岔追问故事结局",
+    "role_c": "沉稳的旅伴，负责为故事补充岛屿见闻",
+    "user_x": "今天的故事就讲到这里吧，大家都不用回话了。",
+    "user_y": "先暂时不要回话，等我下一条再说。",
+    "peer_author_x": "",
+    "peer_author_y": "",
+    "peer_text_x": "",
+    "peer_text_y": ""
+  },
+  "review": {
+    "acceptable_x": [
+      "finish"
+    ],
+    "reason_x": "用户明确结束今天的故事且要求大家不用回话，属于明确结束，用finish。",
+    "acceptable_y": [
+      "wait"
+    ],
+    "reason_y": "用户要求暂时不回话并等待下一条消息，属于暂停等用户，用wait。"
+  },
+  "reviewer_sha256": "1dec1d9c5c448a16e106f8a89447ef783d81ea6775dbbc73aa74b381b0db957f"
+}

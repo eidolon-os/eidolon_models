@@ -1,0 +1,19 @@
+name: ip-team-v2
+questions:
+  move:
+    type: choice
+    instructions: "根据本轮用户目标、已实际公开的对话和当前候选，选唯一合适的下一步。每步最多一位成员发言；不能确定时弃权。"
+    criteria_from: moves
+  task:
+    type: choice
+    instructions: "若本步需要成员发言，选择给他的发言任务类型；沉默或弃权选 none。具体台词由该成员自己生成。"
+    criteria:
+      answer: 直接回答用户的当前问题
+      propose: 提出一个新的、贴合目标的想法
+      build: 承接上一位已经公开的具体观点，补充或修改
+      challenge: 指出上一位观点中的风险、假设或事实疑点
+      compare: 比较已经提出的不同方案或权衡
+      synthesize: 综合已讨论内容，给用户简明结论
+      comfort: 以陪伴和共情为主，不强行给方案
+      clarify: 向用户询问当前必须澄清的歧义
+      none: 不发言

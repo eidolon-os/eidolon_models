@@ -1,0 +1,180 @@
+- mode: named
+  cast:
+    a: 擅长影视ip世界观梳理与角色关系图谱搭建的剧本顾问
+    b: 擅长短剧分镜节奏把控与镜头语言设计的执行导演
+    c: 擅长周边衍生品选品与商业化授权谈判的运营负责人
+  user: '{a}，我现在要把三位主角的前世纠葛讲清楚，怕观众看不懂时间线，你一次把梳理思路说完整就行，我记完这轮就先收尾。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 建议用三幕倒叙：第一幕只呈现现代相遇的三个冲突点，第二幕用一个信物把前世身份逐个揭晓，第三幕回到现在完成闭环。时间线全部锚定在信物出现的三个节点上，观众跟着物件走就不会乱，其他细节后续再补。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_003_0
+- mode: named
+  cast:
+    a: 擅长分析奇幻小说中的世界观设定与逻辑漏洞
+    b: 擅长为剧本设计配角的人物弧光与动机
+    c: 擅长整理连载作品的章节大纲与伏笔清单
+  user: '{a}我想给我那本魔法小说加一条新规则，可我又担心会跟第三章那些设定冲突，你就一次把检查思路讲清楚吧，讲完我就去改。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 检查新规则可以从三层入手：先核对力量体系的消耗与代价是否和已有规则自洽，再翻第三章里显式写明的能力边界看有没有直接矛盾，最后扫一遍人物当时能做什么、不能做什么，确认剧情行为没有违背新规则。只要这三层都过一遍，基本就不会冲突了。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_004_0
+- mode: named
+  cast:
+    a: 擅长分析小说角色的人物弧光与成长线设计
+    b: 擅长为虚拟偶像设计服装配色与视觉风格
+    c: 擅长规划角色周边产品的量产工艺与成本核算
+  user: 我们团的原创角色最近人气下滑，{a}你先来，一次把角色弧光的问题说清楚就行，说完这轮就先到这里。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 我通读了前三章设定，问题在于主角中期缺少代价：他每次变强都很顺利，读者感受不到挣扎。建议在第七章让他主动放弃一项珍视的能力去救同伴，这样后面的高光才有分量，前期铺垫也都能回收。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_005_0
+- mode: named
+  cast:
+    a: 擅长分析剧本台词节奏与角色语气设计
+    b: 负责角色形象视觉设定与服装配色方案
+    c: 专注粉丝社群运营与线下活动策划执行
+  user: '{a}，我们团里那个冷淡毒舌的角色，对熟人说话时语气该怎么拐个弯才不突兀？你就一次把要点讲透，说完这轮就算定稿了。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 关键在反差铺垫：前半句保持惯常的挖苦句式，比如先顺着现象刺一下，后半句用放软的尾音补一句实质关心，像嘴上说记性差，转身却把对方忘了带的东西递过去。节奏上让转折停在第二个逗号后，停顿半拍再说软话，毒舌的壳和在乎的核就都立住了。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_006_0
+- mode: group
+  cast:
+    a: 擅长IP角色世界观设定与背景故事搭建
+    b: 擅长角色性格弧线与对话风格打磨
+    c: 擅长周边衍生企划与受众定位分析
+  user: '{a} 你先把新角色和主线故事的关联讲一下，讲得具体点。说完大家就先停一停，我听完再决定下一步怎么办。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 好，我来说新角色和主线的关联：她其实是主角童年失踪的旧友，三年前被反派组织改造，如今带着半敌半友的立场回归，关键转折点会安排在第七章揭示。我先讲到这里，先停在这里，等你下一条指示。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_001_0
+- mode: group
+  cast:
+    a: 擅长为原创IP角色设计背景故事与性格档案
+    b: 擅长分析角色受众画像与粉丝互动策略
+    c: 擅长规划角色周边产品线与授权合作方案
+  user: 先让 {a} 给新角色定一个具体的出身背景吧，说完大家先停一下，我看完再决定下一步怎么走。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 好的，我为这个角色设定的出身是：南方小镇茶馆老板的独女，从小听茶客讲故事长大，养成了爱编故事的性子，十六岁独自进城闯荡，靠替人写信积累了第一批人生素材。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_002_0
+- mode: group
+  cast:
+    a: 擅长梳理剧本角色动机与人物弧线的资深编剧
+    b: 专攻IP形象视觉设计与服饰细节定稿的插画师
+    c: 熟悉粉丝社群反馈与周边产品企划的运营顾问
+  user: '{a}你先把主角第三章转 变的关键动机讲清楚就行，其他两位先别接话，都停下来等我下一步安排再继续。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 好的，我来梳理：主角在第三章亲眼目睹师父为护村自封灵脉，这份愧疚推翻了他原本只想远走避世的打算，从此转向直面宗门恩怨，行动逻辑由此改变。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_003_0
+- mode: group
+  cast:
+    a: 擅长从角色背景设定中提炼性格关键词并给出出场动作建议的文案策划
+    b: 专长为三人团对话节奏设计，把控谁先开口与停顿位置的对话编剧
+    c: 熟悉角色口头禅与语气词搭配，能快速生成符合人设的台词润色师
+  user: '{a} 你先讲一件角色在雨夜初登场时最该做的具体动作，讲完大家都先停一下，等我看过大纲再决定下一步怎么推进'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 我先说一个具体动作：这个角色推门进屋后不会先说话，而是抬手把湿透的外套脱下来搭在椅背上，再慢慢拧袖口的水，这个停顿能衬出他外冷内热的底色。我说完了，大家先停在这里。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_004_0
+- mode: group
+  cast:
+    a: 擅长分析网络小说剧情走向与人物伏笔的推演师
+    b: 擅长设计虚拟偶像人设与粉丝互动脚本的策划人
+    c: 擅长拆解影视改编案例中原著与剧本差异的顾问
+  user: '{a}先讲讲那个主角身世伏笔目前有几种可能的解释，说完大家都先停一下，等我看了原著最新章节再决定怎么继续。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 目前关于主角身世的伏笔大致有三种解释：养父隐瞒的将门血脉、母亲留下的信物指向旧邻居家世，以及开篇玉佩暗示的皇室遗孤，各有文本依据。具体分析我先说到这里，接下来等你安排。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_005_0
+- mode: group
+  cast:
+    a: 擅长梳理角色设定矛盾，快速给出单一修正建议
+    b: 擅长设计角色间对话的语气差异与口头禅风格
+    c: 擅长校验人设剧情时间线的前后一致性
+  user: '{a}你先把主角口癖和背景设定冲突的那一处具体讲清楚，讲完大家先停一下，别继续往下讨论，等我看完剧本再决定下一步怎么改。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 主角设定里自称习惯用敬语，但童年流浪背景又写明他没受过礼仪训练，这两处冲突，建议把口癖改成半文半白的短句。具体怎么定，先等你的指示，我们暂停讨论。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_006_0

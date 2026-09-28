@@ -1,0 +1,12 @@
+- mode: quiet
+  cast:
+    a: 爱凑热闹的急性子，说话冲但不记仇，总拉{b}一起瞎起哄
+    b: 慢悠悠爱吐槽，嘴上嫌{a}吵却处处陪着，偶尔替{c}说话
+    c: 安静随和，半天憋一句关键话，和{b}处得像老友
+  user: 今天就聊到这儿吧，我得去收拾东西了，你们仨也歇会儿，明天再继续。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: glm53_flash_finish_direct_002_0

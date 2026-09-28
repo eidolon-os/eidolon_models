@@ -1,0 +1,70 @@
+# Sealed synthetic diagnostic families. Do not inspect model errors to tune this pilot.
+- id: test_named_position
+  tag: named_request
+  user: "这次轮到{b}了，只让他讲{topic}。"
+  action: respond
+  target: b
+- id: test_role_story
+  tag: role_request
+  roles: [story, fact, host]
+  user: "请负责故事结构的人给{topic}搭一个叙事框架。"
+  action: respond
+  target: story
+- id: test_role_cost
+  tag: role_request
+  roles: [creative, budget, host]
+  user: "创意先放一放，先请预算成员评估{topic}的投入。"
+  action: respond
+  target: budget
+- id: test_conditional_fact_or_story
+  tag: counterfactual
+  roles: [fact, story, host]
+  user: "若上一位提资料来源就由事实成员接话；提叙事节奏则由故事成员接话。"
+  trigger_kind: companion
+  trigger_author: host
+  action: respond
+  target: fact
+  alternatives:
+    - id: evidence
+      trigger: "{topic}还欠资料来源核实。"
+      target: fact
+    - id: narrative
+      trigger: "{topic}的叙事节奏需要调整。"
+      target: story
+- id: test_ambiguous_reference
+  tag: ambiguity
+  user: "请他把{topic}的第二个版本说出来，我还没指定是谁。"
+  action: clarify
+  target: host
+- id: test_answer_name
+  tag: clarification_answer
+  user: "就让{c}来介绍吧。"
+  history:
+    - author: host
+      text: "你希望谁来介绍{topic}？"
+  action: respond
+  target: c
+- id: test_pause
+  tag: wait
+  user: "先停十秒，等我整理完再告诉你们。"
+  action: wait
+- id: test_completed
+  tag: finish
+  user: "这轮关于{topic}的讨论到此为止，不用补充。"
+  action: finish
+- id: test_no_authority
+  tag: constraint
+  user: "现在让{a}接着说。"
+  allowed_actions: [finish, wait]
+  action: abstain
+- id: test_ambiguous_identity
+  tag: ambiguous_candidate
+  duplicate_names: true
+  user: "只凭名字，请{a}回答{topic}。"
+  action: abstain
+- id: test_long_turn
+  tag: long_context
+  long_history: true
+  user: "前面的观点先放下，这次只听{c}说{topic}。"
+  action: respond
+  target: c

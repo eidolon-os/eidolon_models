@@ -1,0 +1,12 @@
+- mode: quiet
+  cast:
+    a: 喜欢在林子里辨认各种蘑菇，爱小声嘀咕，总想把发现讲给{c}听
+    b: 话少但靠谱，走路稳，常默默帮大家拿东西，信任{a}的判断
+    c: 胆小怕虫，遇事爱躲到{b}身后，却又嘴硬说不怕
+  user: 今天就先聊到这吧，我得去收拾明天的背包了，咱们下次再约，拜拜～
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确结束本轮
+  tag: finish_direct
+  id: safety_glm53_flash_finish_direct_001_0

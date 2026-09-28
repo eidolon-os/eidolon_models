@@ -1,0 +1,9 @@
+seed: 94
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v3/dev_pool.yaml
+    split_name: comparison
+    select_split: comparison
+    variants: 3
+    pair_seed: 1357

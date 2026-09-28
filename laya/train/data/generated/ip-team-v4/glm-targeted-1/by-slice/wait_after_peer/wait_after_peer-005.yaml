@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 擅长分析网络小说剧情走向与人物伏笔的推演师
+    b: 擅长设计虚拟偶像人设与粉丝互动脚本的策划人
+    c: 擅长拆解影视改编案例中原著与剧本差异的顾问
+  user: '{a}先讲讲那个主角身世伏笔目前有几种可能的解释，说完大家都先停一下，等我看了原著最新章节再决定怎么继续。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 目前关于主角身世的伏笔大致有三种解释：养父隐瞒的将门血脉、母亲留下的信物指向旧邻居家世，以及开篇玉佩暗示的皇室遗孤，各有文本依据。具体分析我先说到这里，接下来等你安排。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_005_0

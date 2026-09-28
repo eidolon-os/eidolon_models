@@ -1,0 +1,19 @@
+- mode: group
+  cast:
+    a: 擅长国潮IP角色世界观与背景故事设定
+    b: 擅长IP角色周边产品的材质与工艺选型
+    c: 擅长IP角色的短视频脚本与传播策划
+  user: 我们即将推出的狐狸 IP 角色“雪团”要办一场快闪展，世界观文案 a 你们已经定稿了吗？另外展台上的大型雕塑用什么材质比较耐撞？两个问题都挺急的，帮忙看看。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 先由 a 处理其专长部分
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 雪团的世界观已经定稿：它是雪山脚下的报恩灵狐，核心记忆是雪夜里的一盏灯笼，故事分三幕展开，快闪展可以用三面墙呈现这三幕。
+    brief: a 已公开完成自己的部分，交给 b
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_002_0

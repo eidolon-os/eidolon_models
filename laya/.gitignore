@@ -4,3 +4,4 @@ models/*/*/onnx/
 models/*/*/npu/
 .venv/
 .env
+train/private/

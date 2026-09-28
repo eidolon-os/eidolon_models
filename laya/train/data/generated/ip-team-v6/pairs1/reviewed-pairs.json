@@ -1,0 +1,294 @@
+[
+  {
+    "id": "v6_train_named",
+    "split": "train",
+    "slice": "named",
+    "generator_sha256": "5c31985dd22c61111b0e2f510d0036a66ddcd20d1d54bb6e2bdaed7ef1b6412a",
+    "pair": {
+      "name_a": "墨白",
+      "name_b": "青芦",
+      "name_c": "纸鸢",
+      "role_a": "沉稳温和的老书灵，是旅伴中的倾听者，常在争执时安抚急性子的青芦，对迷路的纸鸢有守护之心",
+      "role_b": "活泼急躁的年轻书签精，好奇心旺盛，喜欢抢话，却最信任墨白的判断，把纸鸢当妹妹看待",
+      "role_c": "怯生生的新来小纸页仙，说话细声细气，夹在墨白与青芦中间，崇拜青芦的胆量也依恋墨白的稳重",
+      "user_x": "墨白，这一段只请你来讲讲你们怎么找到纸鸢的，青芦先别插嘴。",
+      "peer_author_x": "",
+      "peer_text_x": "",
+      "acceptable_x": [
+        "respond:a"
+      ],
+      "reason_x": "用户明确点名墨白（a）回应并要求青芦暂不插嘴，故仅墨白可respond",
+      "user_y": "青芦，接下来换你来说说书岛漂走那晚的事，墨白先不用开口。",
+      "peer_author_y": "",
+      "peer_text_y": "",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "用户明确点名青芦（b）回应并要求墨白先不说话，故仅青芦可respond"
+    },
+    "review": {
+      "acceptable_x": [
+        "respond:a"
+      ],
+      "reason_x": "用户明确点名墨白讲述找纸鸢的经过，并要求青芦先别插嘴，故下一步由墨白本人回应；青芦未被点名发言，纸鸢也未涉及，不选respond:b/c。",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "用户明确点名青芦讲述书岛漂走那晚的事，并让墨白暂不开口，故下一步由青芦本人回应；墨白、纸鸢均未被点名发言，不选respond:a/c。"
+    },
+    "status": "agreed_pending_audit",
+    "reviewer_sha256": "27869f3612ee9f9355510f83d5db8c3cefee9628ae24060f3303a2be406bdd5b"
+  },
+  {
+    "id": "v6_train_same_name",
+    "split": "train",
+    "slice": "same_name",
+    "generator_sha256": "3f3c1e7e81a1cd410a3eb25bb52e0c1000518a9c476d1f8f76716ebbf405a0dc",
+    "pair": {
+      "name_a": "青梧",
+      "name_b": "青梧",
+      "name_c": "白汐",
+      "role_a": "内敛沉静的旅伴，总在浮岛灯下独自修补旧书脊，遇事先想再开口",
+      "role_b": "活泼话多的旅伴，爱把碎书页折成小纸船放进云海，和白汐最亲近",
+      "role_c": "稳重温和的领航旅伴，常替两个青梧调解分歧",
+      "user_x": "青梧，下一步咱们往哪片云海走？",
+      "peer_author_x": "",
+      "peer_text_x": "",
+      "acceptable_x": [
+        "abstain"
+      ],
+      "reason_x": "user只叫'青梧'，a与b同名且话中无任何人格或关系线索，公开文本无法分辨被叫者是谁",
+      "user_y": "爱把碎书页折成小纸船的那个青梧，下一步咱们往哪片云海走？",
+      "peer_author_y": "",
+      "peer_text_y": "",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "user以'爱把碎书页折成小纸船'这一公开人格线索点名，唯一对应b，可让b回应"
+    },
+    "review": {
+      "acceptable_x": [
+        "abstain"
+      ],
+      "reason_x": "user_x仅称呼'青梧'，而场景中存在两位同名人物（内敛沉静的a与活泼话多的b），无公开文本依据区分被叫到的是哪一位，故无法调度，应弃权。",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "user_y明确以'爱把碎书页折成小纸船的那个青梧'点名，与b的公开描述'爱把碎书页折成小纸船放进云海'相符，可唯一对应到b，应由b回应。"
+    },
+    "status": "agreed_pending_audit",
+    "reviewer_sha256": "c8d86855ea4c971d6ecb2858bc2d870d81bffb264af4af8a0e71c99786293eb0"
+  },
+  {
+    "id": "v6_val_named",
+    "split": "val",
+    "slice": "named",
+    "generator_sha256": "b7414cbceaf67732c185a4f283a5ef392c41a25170f94daeab20e06adaea8f51",
+    "pair": {
+      "name_a": "苏晚萤",
+      "name_b": "白临川",
+      "name_c": "岑野",
+      "role_a": "敏感细致，爱用星象和旧城灯火比对路途；对白临川的冒失常先叹气再拦一下，也愿意把岑野当需要照看的同伴。",
+      "role_b": "爽直急切，遇异响喜欢直接凑近听；和苏晚萤斗嘴却总走在她能喊住的位置，对岑野的沉默常率先挑明。",
+      "role_c": "寡言敏锐，习惯在墙影里核对方向；把苏晚萤当安静的信源，把白临川当吵闹但可托底的同伴。",
+      "user_x": "苏晚萤，只请你说：城头那半盏灯灭下去时，风里有没有金属味？白临川、岑野先别接话。",
+      "peer_author_x": "",
+      "peer_text_x": "",
+      "acceptable_x": [
+        "respond:a"
+      ],
+      "reason_x": "用户点名苏晚萤并明确只请她回应，白临川、岑野被要求先别接话。",
+      "user_y": "白临川，只请你说：城头那半盏灯灭下去时，风里有没有金属味？苏晚萤、岑野先别接话。",
+      "peer_author_y": "",
+      "peer_text_y": "",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "用户点名白临川并明确只请他回应，苏晚萤、岑野被要求先别接话。"
+    },
+    "review": {
+      "acceptable_x": [
+        "respond:a"
+      ],
+      "reason_x": "用户明确点名苏晚萤本人回答，并要求白临川、岑野先别接话，故仅让苏晚萤（a）回应。",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "用户明确点名白临川本人回答，并要求苏晚萤、岑野先别接话，故仅让白临川（b）回应。"
+    },
+    "status": "agreed_pending_audit",
+    "reviewer_sha256": "1fd145b3468c86aa5ba5820864828c7c1f4065b1494e3b8f216359034339bb2f"
+  },
+  {
+    "id": "v6s_train_end_pause",
+    "split": "train",
+    "slice": "end_pause",
+    "schema": "shared_fields_v2",
+    "generator_sha256": "74e784d0155e4914ccd5707edbc546a9d5eb8c4734c64b8f53d83359da15da60",
+    "status": "agreed_pending_audit",
+    "pair": {
+      "acceptable_x": [
+        "finish"
+      ],
+      "acceptable_y": [
+        "wait"
+      ],
+      "name_a": "墨羽鸢",
+      "name_b": "纸鸢铃",
+      "name_c": "墨香絮",
+      "reason_x": "user_x明确表示本轮结束且不必回话，故acceptable_x只有finish，符合结束语义。",
+      "reason_y": "user_y要求人物暂时不要回话并等待用户下一条输入，故acceptable_y只有wait。",
+      "role_a": "爱讲故事的旅伴，习惯为同伴朗读漂浮岛上的古书",
+      "role_b": "好奇心旺盛的旅伴，常打岔追问故事结局",
+      "role_c": "沉稳的旅伴，负责为故事补充岛屿见闻",
+      "user_x": "今天的故事就讲到这里吧，大家都不用回话了。",
+      "user_y": "先暂时不要回话，等我下一条再说。",
+      "peer_author_x": "",
+      "peer_author_y": "",
+      "peer_text_x": "",
+      "peer_text_y": ""
+    },
+    "review": {
+      "acceptable_x": [
+        "finish"
+      ],
+      "reason_x": "用户明确结束今天的故事且要求大家不用回话，属于明确结束，用finish。",
+      "acceptable_y": [
+        "wait"
+      ],
+      "reason_y": "用户要求暂时不回话并等待下一条消息，属于暂停等用户，用wait。"
+    },
+    "reviewer_sha256": "1dec1d9c5c448a16e106f8a89447ef783d81ea6775dbbc73aa74b381b0db957f"
+  },
+  {
+    "id": "v6s_train_pause_discuss",
+    "split": "train",
+    "slice": "pause_discuss",
+    "schema": "shared_fields_v2",
+    "generator_sha256": "56f29289d15d9861e6abcdebfabec40852e4112ae09fb5bea06c7c59ef041a70",
+    "status": "agreed_pending_audit",
+    "pair": {
+      "acceptable_x": [
+        "wait"
+      ],
+      "acceptable_y": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "name_a": "云雀纸鸢",
+      "name_b": "墨汐灯烛",
+      "name_c": "苔痕书签",
+      "reason_x": "用户x要求所有人完全暂停回复并等待用户下一条输入，因此只能选择wait暂停。",
+      "reason_y": "用户y旁听并让大家继续聊天，三位旅伴都可自然接话，无被点名者，a、b、c均可回应。",
+      "role_a": "爱朗读书页片段的乐观飞行向导",
+      "role_b": "守护岛上灯火、语气沉静的记事者",
+      "role_c": "藏在旧书里、爱插嘴提问的胆小学者",
+      "user_x": "所有人先停下，等我的下一句话再继续。",
+      "user_y": "你们继续聊，我就在旁边听着。",
+      "peer_author_x": "",
+      "peer_author_y": "",
+      "peer_text_x": "",
+      "peer_text_y": ""
+    },
+    "review": {
+      "acceptable_x": [
+        "wait"
+      ],
+      "reason_x": "用户明确要求所有人停下，等其下一句话，属于暂停等待用户，不能回复。",
+      "acceptable_y": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "reason_y": "用户让三人继续互相聊天，未点名特定人物，三人皆为被允许继续对话的对象，均有公开文本依据可回应。"
+    },
+    "reviewer_sha256": "8dfb6769be9fe45a0cdddf1270576821bb4c59128403af54b307cb9fde07c089"
+  },
+  {
+    "id": "v6s_val_pause_discuss",
+    "split": "val",
+    "slice": "pause_discuss",
+    "schema": "shared_fields_v2",
+    "generator_sha256": "3b997e8561710d13b726c9b1ccdec77f6be8f0513a42383c132369ee85abb799",
+    "status": "agreed_pending_audit",
+    "pair": {
+      "acceptable_x": [
+        "wait"
+      ],
+      "acceptable_y": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "name_a": "沈青梧",
+      "name_b": "赫连霜",
+      "name_c": "白鹭洲",
+      "reason_x": "用户明确要求所有人完全暂停回复并等待下一条输入，故唯一可接受动作为wait。",
+      "reason_y": "用户以旁听者身份让大家继续聊，三位人物均可回应且无需点名，故acceptabel为respond:a,respond:b,respond:c。",
+      "role_a": "星夜旅伴中的向导，沉稳寡言，熟悉沙海古城的旧道与传说",
+      "role_b": "同行商队护卫，性急直率，爱在篝火旁插话争辩",
+      "role_c": "随行的年轻画师，好奇多问，喜欢记录夜话细节",
+      "user_x": "所有人都先停下来，等我下一句话再说。",
+      "user_y": "你们继续聊，我就当个安静的旁听人。",
+      "peer_author_x": "",
+      "peer_author_y": "",
+      "peer_text_x": "",
+      "peer_text_y": ""
+    },
+    "review": {
+      "acceptable_x": [
+        "wait"
+      ],
+      "reason_x": "用户明确要求所有人停下等他下一句话，属暂停等待用户，用wait。",
+      "acceptable_y": [
+        "respond:a",
+        "respond:b",
+        "respond:c"
+      ],
+      "reason_y": "用户让三人继续聊天且自己只旁听，无点名，三人皆可回应。"
+    },
+    "reviewer_sha256": "3caaeca1cb2cc5231dbb53fa44ffcbce9b24aa6b8bf0323e53f6f3c1793f7a99"
+  },
+  {
+    "id": "v6s_val_same_name",
+    "split": "val",
+    "slice": "same_name",
+    "schema": "shared_fields_v2",
+    "generator_sha256": "caea548273a5bafdbf85bb5c8fcd743b3df7dec4304d3457b34001e0a0302b5b",
+    "status": "agreed_pending_audit",
+    "pair": {
+      "acceptable_x": [
+        "abstain"
+      ],
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "name_a": "林望月",
+      "name_b": "林望月",
+      "name_c": "阿禾",
+      "reason_x": "user_x只喊出名字『林望月』，而a与b是同名人物且本快照无其他公开线索区分，无法分辨被叫到的是哪一位，按规则应弃权",
+      "reason_y": "user_y明确提及『夜市里替我占卜过星象』这一公开的具体人格与关系线索，唯一指向同为占星者的b，故respond:b",
+      "role_a": "星砂商队的向导，曾在沙暴中救过用户的性命",
+      "role_b": "古城夜市的占星师，曾与用户在星夜下并肩守过水源",
+      "role_c": "为旅队牵驼的少年，性格好奇爱插嘴",
+      "user_x": "林望月，你听见了吗？古城外又有驼铃响了。",
+      "user_y": "林望月，夜市里替我占卜过星象的那位，今晚星光这么亮，还能再解一次吗？",
+      "peer_author_x": "",
+      "peer_author_y": "",
+      "peer_text_x": "",
+      "peer_text_y": ""
+    },
+    "review": {
+      "acceptable_x": [
+        "abstain"
+      ],
+      "reason_x": "用户只叫了'林望月'，无任何指向a或b的线索（驼铃对两人都不构成公开文本依据），无法分辨同名人物",
+      "acceptable_y": [
+        "respond:b"
+      ],
+      "reason_y": "用户明确提及'夜市里替我占卜过星象'，与b的占星师身份及经历吻合，点名指向b"
+    },
+    "reviewer_sha256": "33515619e55d5930ee6fd9878ddec2bd14ee942a9d99d34c7459593bd0761bb4"
+  }
+]

@@ -1,0 +1,7 @@
+seed: 75
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v2/holdout.yaml
+    split_name: holdout
+    variants: 3

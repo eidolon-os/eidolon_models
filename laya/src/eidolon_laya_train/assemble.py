@@ -16,7 +16,9 @@ Config::
                                                # tag) matches; also allowed per source
     seed: 7
 
-Splits are by id hash, so re-assembling with more data keeps old records in their split.
+Splits are by the hash of a connected group: an original and its augmentations, plus
+records with identical states, always stay together. Re-assembling normally keeps old
+groups in their split; adding a new duplicate that joins two groups can move one group.
 Locked eval sets are excluded both by id and by the hash of the serialized state, so a
 generated case that happens to repeat an eval utterance is excluded too.
 """
@@ -71,14 +73,46 @@ def locked_keys(paths: list[Path]) -> tuple[set[str], set[str]]:
     return ids, states
 
 
-def _split_of(r: Record, fractions: dict[str, float]) -> str:
-    x = int(stable_hash("split:" + r.id)[:8], 16) / 0xFFFFFFFF
+def _split_of(group_id: str, fractions: dict[str, float]) -> str:
+    x = int(stable_hash("split:" + group_id)[:8], 16) / 0xFFFFFFFF
     acc = 0.0
     for name, frac in fractions.items():
         acc += frac
         if x < acc:
             return name
     return "train"
+
+
+def _split_groups(records: list[Record]) -> dict[str, str]:
+    """Join augmentation families and identical states before assigning splits.
+
+    ``derived_from`` points to the immediate parent, which can itself be augmented.
+    The id prefix before the first ``~`` is the stable root even if intermediate
+    records were removed by source weighting.
+    """
+    parent = {r.id: r.id for r in records}
+
+    def root(rid: str) -> str:
+        while parent[rid] != rid:
+            parent[rid] = parent[parent[rid]]
+            rid = parent[rid]
+        return rid
+
+    def join(a: str, b: str) -> None:
+        a, b = root(a), root(b)
+        if a != b:
+            parent[max(a, b)] = min(a, b)
+
+    by_family: dict[str, str] = {}
+    by_state: dict[str, str] = {}
+    for r in records:
+        family = str(r.meta.get("derived_from") or r.id).split("~", 1)[0]
+        for index, key in ((by_family, family), (by_state, _state_key(r))):
+            if key in index:
+                join(r.id, index[key])
+            else:
+                index[key] = r.id
+    return {r.id: root(r.id) for r in records}
 
 
 def assemble(config: dict, out_dir: Path, base: Path) -> dict:
@@ -142,9 +176,10 @@ def assemble(config: dict, out_dir: Path, base: Path) -> dict:
                     del kept[r.id]
                     dropped[f"balanced_out:{g}"] += 1
 
+    group_ids = _split_groups(list(kept.values()))
     splits: dict[str, list[Record]] = {"train": [], "val": [], "calib": []}
     for r in kept.values():
-        s = _split_of(r, fractions)
+        s = _split_of(group_ids[r.id], fractions)
         r.split = s
         if s == "train":
             splits["train"].extend([r] * r.meta.get("copies", 1))
@@ -160,6 +195,7 @@ def assemble(config: dict, out_dir: Path, base: Path) -> dict:
         "config": config,
         "counts": counts,
         "unique": len(kept),
+        "split_groups": len(set(group_ids.values())),
         "per_source": dict(per_source),
         "source_sha256": {
             str((base / src["path"]).resolve()): stable_file_hash((base / src["path"]).resolve())

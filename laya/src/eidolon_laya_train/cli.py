@@ -140,10 +140,16 @@ def cmd_calibrate(args) -> int:
 
 
 def cmd_eval(args) -> int:
+    from .assemble import stable_file_hash
     from .evaluate import evaluate, gate, write_report
     from .model import load_checkpoint
 
     loaded = load_checkpoint(args.checkpoint, args.device)
+    checkpoint = Path(args.checkpoint)
+    provenance = {
+        "checkpoint_sha256": stable_file_hash(checkpoint / "model.safetensors"),
+        "checkpoint_config_sha256": stable_file_hash(checkpoint / "rl_agent_config.json"),
+    }
     out_dir = Path(args.out)
     rc = 0
     for path in args.eval_set:
@@ -156,6 +162,7 @@ def cmd_eval(args) -> int:
                     d = json.loads(line)
                     logits[d["key"]] = d["logits"]
         report = evaluate(loaded, Path(path), logits=logits)
+        report.update(provenance)
         write_report(report, out_dir / f"{name}.json", keep_rows=not args.no_rows)
         _log(f"{name}: {json.dumps(report['overall'], ensure_ascii=False)}")
         d = report["decision"]
@@ -195,19 +202,19 @@ def cmd_policy(args) -> int:
     grid_s = [float(x) for x in args.tau_slots.split(",")]
     out = {}
     for path in args.report:
-        rows = json.loads(Path(path).read_text(encoding="utf-8")).get("rows")
+        rows = json.loads(Path(path).read_text(encoding="utf-8")).get("policy_rows")
         if not rows:
-            _log(f"{path}: no rows (evaluated with --no-rows?); skipped")
+            _log(f"{path}: no full policy rows (re-evaluate with the current evaluator and without --no-rows); skipped")
             continue
         name = Path(path).stem
         out[name] = []
-        _log(f"{name}: τ意图 τ槽位 | 无关直接执行 [95%] 无关要确认 | 执行精度 (n) | 控制: 直接执行对 / 执行错 / 确认 / 漏掉")
+        _log(f"{name}: τ意图 τ槽位 | 无关直接执行 [95%精确上界] 无关要确认 | 执行精度 [95%精确下界] (n) | 控制: 直接执行对 / 执行错 / 确认 / 漏掉")
         for ti in grid_i:
             for ts in grid_s:
                 m = policy_metrics(rows, ti, ts, args.tau_confirm)
                 out[name].append(m)
                 fe, c = m["false_execute_无关"], m["控制"]
-                _log(f"  {ti:.2f} {ts:.2f} | {fe['rate']} {fe['ci95']} {m['confirm_无关']} | {m['execute']['precision']} "
+                _log(f"  {ti:.2f} {ts:.2f} | {fe['rate']} {fe['upper95_one_sided_exact']} {m['confirm_无关']} | {m['execute']['precision']} [{m['execute']['lower95_one_sided_exact']}] "
                      f"({m['execute']['n']}) | {c['execute_correct']} / {c['execute_wrong']} / {c['confirm']} / {c['ignore']}")
     if args.out:
         Path(args.out).write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -229,6 +236,42 @@ def cmd_items(args) -> int:
         )
         _log(f"{name}: {len(items)} items -> {out_dir / f'{name}.items.jsonl'}")
     return 0
+
+
+def cmd_real_prepare(args) -> int:
+    from .real_data import prepare_real_eval
+
+    manifest = prepare_real_eval(
+        Path(args.events),
+        Path(args.scenario),
+        Path(args.out_dir),
+        labels_path=Path(args.labels) if args.labels else None,
+        reference_paths=[Path(p) for p in args.reference],
+        test_fraction=args.test_fraction,
+        require_complete=args.require_complete,
+        pilot_only=args.pilot_only,
+    )
+    _log(json.dumps({"counts": manifest["counts"], "label_counts": manifest["label_counts"]}, ensure_ascii=False))
+    return 0
+
+
+def cmd_real_gate(args) -> int:
+    from .real_data import real_safety_gate
+
+    result = real_safety_gate(
+        Path(args.freeze_dir),
+        Path(args.report),
+        tau_intent=args.tau_intent,
+        tau_slots=args.tau_slots,
+        tau_confirm=args.tau_confirm,
+    )
+    out = Path(args.out)
+    if out.exists():
+        raise FileExistsError(f"{out} already exists; preserve the first sealed result")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    _log(f"real-gate {result['status']} -> {out}")
+    return 0 if result["status"] == "MODEL_DECISION_GATES_PASS" else 4
 
 
 def cmd_package(args) -> int:
@@ -449,6 +492,26 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", required=True)
     p.add_argument("--device")
     p.set_defaults(func=cmd_items)
+
+    p = sub.add_parser("real-prepare", help="freeze pseudonymous real ASR events into household-separated eval sets")
+    p.add_argument("--events", required=True, help="consented final ASR events JSONL")
+    p.add_argument("--scenario", required=True, help="smart-home scenario.yaml")
+    p.add_argument("--out-dir", required=True, help="new, private freeze directory")
+    p.add_argument("--labels", help="separate adjudicated human labels JSONL")
+    p.add_argument("--reference", action="append", default=[], help="historical record JSONL or eval directory for exact text overlap audit")
+    p.add_argument("--test-fraction", type=float, default=0.3, help="fraction of households reserved for final test")
+    p.add_argument("--pilot-only", action="store_true", help="one or more households, development only; no final test")
+    p.add_argument("--require-complete", action="store_true", help="fail unless every event has sufficient adjudicated gold")
+    p.set_defaults(func=cmd_real_prepare)
+
+    p = sub.add_parser("real-gate", help="one-sided exact safety bounds on a frozen real test report")
+    p.add_argument("--freeze-dir", required=True)
+    p.add_argument("--report", required=True, help="eval JSON with full policy_rows for freeze/test.jsonl")
+    p.add_argument("--tau-intent", type=float, required=True, help="pre-frozen control threshold")
+    p.add_argument("--tau-slots", type=float, required=True, help="pre-frozen device/action threshold")
+    p.add_argument("--tau-confirm", type=float, default=0.5)
+    p.add_argument("--out", required=True, help="new result file")
+    p.set_defaults(func=cmd_real_gate)
 
     p = sub.add_parser(
         "package", help="checkpoint -> models/<name>/<rev>/ (what serve / export-onnx read)"

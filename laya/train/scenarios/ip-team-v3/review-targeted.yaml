@@ -1,0 +1,17 @@
+version: ip-team-v4-glm53-flash-targeted-1-review-1
+source_plan_version: ip-team-v4-glm53-flash-targeted-1
+source: ../../private/ip-team-v4-glm-targeted
+selected:
+  named_finish-003: 用户明确一次答完，公开回复已给完整时间线思路。
+  named_finish-004: 用户明确一次答完，公开回复已给完整检查步骤。
+  named_finish-005: 用户明确一次答完，公开回复已给完整角色弧光建议。
+  named_finish-006: 用户明确一次答完，公开回复已给完整语气建议。
+  wait_after_peer-001: 成员说完角色与主线关联，用户明确等待下一指示。
+  wait_after_peer-002: 成员说完角色出身，用户明确等待下一指示。
+  wait_after_peer-003: 成员说完角色转变动机，用户明确等待下一指示。
+  wait_after_peer-004: 成员说完出场动作，用户明确等待下一指示。
+  wait_after_peer-005: 成员说完身世解释，用户明确等待下一指示。
+  wait_after_peer-006: 成员说完设定冲突，用户明确等待下一指示。
+rejected:
+  named_finish-001: 用户文本含未渲染的裸槽位字母，偏离自然键入。
+  named_finish-002: 公开回复给出未经核实的儿童发展量化事实，不适合作为本任务素材。

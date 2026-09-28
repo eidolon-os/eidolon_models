@@ -1,0 +1,51 @@
+{
+  "source": [
+    "laya/train/private/ip-team-v5-text-pilot1",
+    "laya/train/private/ip-team-v5-boundaries"
+  ],
+  "audit_sha256": "52722d338b13fabb92e7be726c4ea317e61b94c91eb14f810473baf081856422",
+  "source_files": {
+    "laya/train/private/ip-team-v5-boundaries/reviewed/boundaries.json": "9e58b8f9d8525cb300e00208c34591137e0685d3d3127dc51ed193a94deb3eba",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/continuation.json": "33ab627530801d591aafcb6a8214b6355d18f1d8d0c8804d4e6d6cd5437d51b7",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/end.json": "e4937a8de487d96a998f6b19f3905c7715c534a34e086690bdc829c5472e73d4",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/interrupt.json": "6cf2b97874440753b58e807254e72462751713c9d78bce269a8b4df7959c249d",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/mention.json": "bec509c87320cadc83ce4cf0aece9166dd365ed76445ba22dc17456ad74e5eb4",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/named.json": "da2841379f0d8690bf5ec0ff054ea6e651ddbde3ee0dc0ec2e70373a62d43203",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/open_group.json": "7d39c672991737fa7108dd6c84eedd526915db18da71feb347e461ff126dcde4",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/pause.json": "f4a3900f0c2275ecb63349e6f67d20a83db2ddb11efbe4adb094af9fb2e90fe0",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/quiet_text.json": "31d4d9d52c415ba8b7cf755c299a72dd22298a3a77f0e1d63118a412ba18ed0a",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/relation.json": "9a70899689a240ca841781d0ceddc7de05fd7ad1aeecdcbf48f0b7eb331e0465",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/same_name.json": "b79afe420fde20522ff117deae2335780f2354e3bd2c7637df31ac602fb73bc3",
+    "laya/train/private/ip-team-v5-text-pilot1/reviewed/sufficient.json": "da7c974928545c4ebdb2d6183c5ebf523eaa513e88b4128e8826800504bc7332"
+  },
+  "old_data_inherited": false,
+  "split_policy": "case index4 dev; other indices train; all variants stay within family; no independent test claim",
+  "max_input_tokens": 339,
+  "min_input_tokens": 279,
+  "families": {
+    "v5_boundaries_1": "train",
+    "v5_boundaries_2": "train",
+    "v5_boundaries_4": "val",
+    "v5_continuation_1": "train",
+    "v5_continuation_3": "train",
+    "v5_end_1": "train",
+    "v5_end_2": "train",
+    "v5_mention_2": "train",
+    "v5_mention_3": "train",
+    "v5_named_4": "val",
+    "v5_quiet_text_1": "train",
+    "v5_quiet_text_4": "val",
+    "v5_sufficient_4": "val"
+  },
+  "projection_sha256": "4efcf24c54b7d83ffc76c3fce1cee5a622b560285f9fe55f41ce56f1dc1b9d56",
+  "train": {
+    "records": 36,
+    "families": 9,
+    "sha256": "502f85c2d8eef43c6c3f7c2f9591692ca2925d144f12a3536a9ad593579ea5d5"
+  },
+  "val": {
+    "records": 16,
+    "families": 4,
+    "sha256": "d04cadd9ff9f6c3fef2f1f1191886add70d29abd6ad5e5ba886ae6e5c35df3e0"
+  }
+}

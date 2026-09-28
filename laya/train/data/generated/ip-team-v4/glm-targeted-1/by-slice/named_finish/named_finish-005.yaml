@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 擅长分析小说角色的人物弧光与成长线设计
+    b: 擅长为虚拟偶像设计服装配色与视觉风格
+    c: 擅长规划角色周边产品的量产工艺与成本核算
+  user: 我们团的原创角色最近人气下滑，{a}你先来，一次把角色弧光的问题说清楚就行，说完这轮就先到这里。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 我通读了前三章设定，问题在于主角中期缺少代价：他每次变强都很顺利，读者感受不到挣扎。建议在第七章让他主动放弃一项珍视的能力去救同伴，这样后面的高光才有分量，前期铺垫也都能回收。
+    brief: a 已完成回答，按用户要求结束
+  tag: named_finish
+  id: glm53_flash_named_finish_005_0

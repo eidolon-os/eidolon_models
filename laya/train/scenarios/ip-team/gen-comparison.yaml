@@ -1,0 +1,7 @@
+seed: 2301
+generators:
+  - kind: template
+    module: authored_families:generate
+    path: ../../data/authored/ip-team/comparison_families.yaml
+    variants: 10
+    split_name: comparison

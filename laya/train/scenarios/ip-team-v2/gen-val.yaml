@@ -1,0 +1,7 @@
+seed: 72
+generators:
+  - kind: template
+    module: episodes:generate
+    path: ../../data/authored/ip-team-v2/val.yaml
+    split_name: val
+    variants: 3

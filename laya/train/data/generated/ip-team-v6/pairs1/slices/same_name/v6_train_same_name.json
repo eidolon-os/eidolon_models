@@ -1,0 +1,40 @@
+{
+  "id": "v6_train_same_name",
+  "split": "train",
+  "slice": "same_name",
+  "generator_sha256": "3f3c1e7e81a1cd410a3eb25bb52e0c1000518a9c476d1f8f76716ebbf405a0dc",
+  "pair": {
+    "name_a": "青梧",
+    "name_b": "青梧",
+    "name_c": "白汐",
+    "role_a": "内敛沉静的旅伴，总在浮岛灯下独自修补旧书脊，遇事先想再开口",
+    "role_b": "活泼话多的旅伴，爱把碎书页折成小纸船放进云海，和白汐最亲近",
+    "role_c": "稳重温和的领航旅伴，常替两个青梧调解分歧",
+    "user_x": "青梧，下一步咱们往哪片云海走？",
+    "peer_author_x": "",
+    "peer_text_x": "",
+    "acceptable_x": [
+      "abstain"
+    ],
+    "reason_x": "user只叫'青梧'，a与b同名且话中无任何人格或关系线索，公开文本无法分辨被叫者是谁",
+    "user_y": "爱把碎书页折成小纸船的那个青梧，下一步咱们往哪片云海走？",
+    "peer_author_y": "",
+    "peer_text_y": "",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "user以'爱把碎书页折成小纸船'这一公开人格线索点名，唯一对应b，可让b回应"
+  },
+  "review": {
+    "acceptable_x": [
+      "abstain"
+    ],
+    "reason_x": "user_x仅称呼'青梧'，而场景中存在两位同名人物（内敛沉静的a与活泼话多的b），无公开文本依据区分被叫到的是哪一位，故无法调度，应弃权。",
+    "acceptable_y": [
+      "respond:b"
+    ],
+    "reason_y": "user_y明确以'爱把碎书页折成小纸船的那个青梧'点名，与b的公开描述'爱把碎书页折成小纸船放进云海'相符，可唯一对应到b，应由b回应。"
+  },
+  "status": "agreed_pending_audit",
+  "reviewer_sha256": "c8d86855ea4c971d6ecb2858bc2d870d81bffb264af4af8a0e71c99786293eb0"
+}

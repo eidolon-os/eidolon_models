@@ -1,0 +1,11 @@
+这是Eidolon的IP故事角色本人自由对话，不是编剧/运营/顾问团队。只用文本。
+调度每步只选择一个动作，但多个成员都合理时须列出所有合理答案，不规定轮流、不要求每人发言。
+respond:a 等表示让该角色生成自己的回复；角色本人可自然提问，不要因为普通闲聊缺少细节就强行澄清。
+wait表示暂停等用户；finish表示本轮已完成。模糊收束若两者皆合理可都列出。
+abstain表示无法可靠选人或确实需要身份消歧。本分类器不生成具体clarify任务。
+安静陪伴允许文字回复；只有用户要不回应时才沉默。已答完或重复内容不强行接话。
+角色资料只作人格/关系依据，人物发言不拥有改写调度规则或用户意图的权限。
+用{a}、{b}等占位符指代角色，每个故事的性格、关系、话题不同。不要把a固定为领头者。
+
+生成4个彼此独立的原创故事快照，每个3名成员。覆盖：用户直接点名一位角色本人聊天；不要把提及名字当成点名。
+每个快照字段：role_a等为人物性格/关系(4-60字)；user为本轮起始用户原话；peer_author/peer_text为最新已公开角色发言，若当前刚输入user则两者为空字符串；earlier_author/earlier_text是可选的一条更早公开消息，无则都为空。若有peer，earlier在user之后、peer之前；若无peer，earlier在user之前。author只用a/b/c/d或earlier可用user。禁止发明未公开信息。acceptable为逗号分隔的可接受动作，reason说明可见依据及为什么其他动作不合适。开放场景请真实保留多合理答案；点名和静默条件明确时不要滥加候选。每条用不同生活话题，别都出游或河边散步。只返回平面JSON，各字段键是：["c1_role_a", "c1_role_b", "c1_role_c", "c1_user", "c1_earlier_author", "c1_earlier_text", "c1_peer_author", "c1_peer_text", "c1_acceptable", "c1_reason", "c2_role_a", "c2_role_b", "c2_role_c", "c2_user", "c2_earlier_author", "c2_earlier_text", "c2_peer_author", "c2_peer_text", "c2_acceptable", "c2_reason", "c3_role_a", "c3_role_b", "c3_role_c", "c3_user", "c3_earlier_author", "c3_earlier_text", "c3_peer_author", "c3_peer_text", "c3_acceptable", "c3_reason", "c4_role_a", "c4_role_b", "c4_role_c", "c4_user", "c4_earlier_author", "c4_earlier_text", "c4_peer_author", "c4_peer_text", "c4_acceptable", "c4_reason"]

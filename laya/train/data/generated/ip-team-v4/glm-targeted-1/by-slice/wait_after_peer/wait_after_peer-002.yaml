@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 擅长为原创IP角色设计背景故事与性格档案
+    b: 擅长分析角色受众画像与粉丝互动策略
+    c: 擅长规划角色周边产品线与授权合作方案
+  user: 先让 {a} 给新角色定一个具体的出身背景吧，说完大家先停一下，我看完再决定下一步怎么走。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 好的，我为这个角色设定的出身是：南方小镇茶馆老板的独女，从小听茶客讲故事长大，养成了爱编故事的性子，十六岁独自进城闯荡，靠替人写信积累了第一批人生素材。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_002_0

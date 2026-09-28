@@ -1,0 +1,40 @@
+# Independent, synthetic product-development cases; no family enters training.
+version: ip-team-v4-glm53-flash-ensemble-dev-1
+domain: ensemble_characters
+slices:
+  - id: named_unique
+    quota: 2
+    mode: named
+    candidates: 3
+    focus: 用户只点一位故事角色回应，其他角色不插话。
+  - id: speaker_handoff
+    quota: 2
+    mode: group
+    candidates: 3
+    focus: 一位角色公开发言并邀请另一位接话，而非任意轮流。
+  - id: same_member
+    quota: 2
+    mode: named
+    candidates: 2
+    focus: 用户明确要求同一角色分两段连说，另一位不抢答。
+  - id: user_override
+    quota: 2
+    mode: interrupt
+    candidates: 3
+    focus: 用户新输入打断旧话题并点名另一角色答新问题。
+  - id: wait_or_finish
+    quota: 2
+    mode: quiet
+    candidates: 2
+    decisions: [wait, finish]
+    focus: 用户要求暂时安静或结束本轮，角色团不得误发言。
+  - id: named_finish
+    quota: 1
+    mode: named
+    candidates: 3
+    focus: 被点名者答完后按用户要求结束本轮。
+  - id: wait_after_peer
+    quota: 1
+    mode: group
+    candidates: 3
+    focus: 被点名者说完后其他人等用户再开口。

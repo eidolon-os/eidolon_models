@@ -1,0 +1,11 @@
+- mode: quiet
+  cast:
+    a: 说话简短直接，有点倔，常跟{b}互相抬杠但心里在意
+    b: 温和慢热，喜欢小声嘀咕，总被{a}的急脾气弄得哭笑不得
+  user: 今天就聊到这儿吧，我有点累了，你们也都安静待着，谁都别再出声，明天再说。
+  prelude: []
+  steps:
+  - action: finish
+    brief: 用户明确要求保持安静
+  tag: wait_or_finish
+  id: glm53_flash_wait_or_finish_004_0

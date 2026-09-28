@@ -1,0 +1,13 @@
+# Developed after r1 train/val error diagnosis; no frozen comparison/holdout examples used.
+version: ip-team-v4-glm53-flash-targeted-1
+slices:
+  - id: named_finish
+    quota: 6
+    mode: named
+    candidates: 3
+    focus: 用户指定一位成员一次答完；真实公开答复已满足问题后，下一步结束本轮，而非再次安排成员。
+  - id: wait_after_peer
+    quota: 6
+    mode: group
+    candidates: 3
+    focus: 成员已公开完成指定内容，用户要求暂停讨论等待自己后续选择；区分等待与结束。

@@ -1,0 +1,129 @@
+- id: cmp_school_fair
+  mode: group
+  tag: content_handoff
+  cast: {a: "擅长创意活动", b: "关注场地和天气", c: "善于总结"}
+  user: "学校义卖会想做得有趣又简单，你们议一议。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "给出一个易执行的义卖创意"}
+    - heard: {speaker: a, text: "做二手绘本交换和小摊。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "承接绘本摊位，补场地和雨天条件"
+    - heard: {speaker: b, text: "放在有雨棚的走廊，不占教学通道。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "用一句话整合活动与场地"
+    - heard: {speaker: c, text: "在不挡通道的走廊做绘本交换小摊。"}
+      action: finish
+      task: none
+- id: cmp_named_code
+  mode: named
+  tag: named_request
+  cast: {a: "擅长写代码", b: "擅长烹饪", c: "擅长主持"}
+  user: "{a}，你一人解释什么是变量，其他人不用补充。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "用初学者听得懂的话解释变量"}
+    - heard: {speaker: a, text: "变量就像一个有名字的盒子，里面可以放一个值。"}
+      action: finish
+      task: none
+- id: cmp_name_then_peer
+  mode: named
+  tag: named_request
+  cast: {a: "擅长交通", b: "关注无障碍路线", c: "擅长讲故事"}
+  user: "让{a}先介绍去海边的车程，再让{b}看看轮椅能否方便到达。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "说明车程需要核实实时班次"}
+    - heard: {speaker: a, text: "坐城际车大约一小时，但班次要出发前确认。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "承接城际车建议，提醒核实无障碍设施"
+- id: cmp_self_continuation
+  mode: group
+  tag: same_member
+  cast: {a: "擅长构思谜题", b: "擅长查事实", c: "负责总结"}
+  user: "请{a}出一个小谜题，然后由他自己揭晓答案。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "出一个简短谜题"}
+    - heard: {speaker: a, text: "什么东西越洗越脏？"}
+      action: respond
+      speaker: a
+      task: build
+      brief: "接着自己揭晓谜底"
+- id: cmp_stop_when_enough
+  mode: discuss
+  tag: early_stop
+  cast: {a: "擅长读书推荐", b: "善于追加问题", c: "负责收束"}
+  user: "给我一个通勤时听书的建议，足够就停。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出一个适合通勤时段的听书办法"}
+    - heard: {speaker: a, text: "先选二十分钟一集的短篇，戴耳机时注意路况。"}
+      action: finish
+      task: none
+- id: cmp_user_override
+  mode: interrupt
+  tag: user_override
+  cast: {a: "善于计划旅行", b: "善于安抚情绪", c: "善于总结"}
+  prelude:
+    - {author: user, text: "给我安排一个出游计划。"}
+    - {author: a, text: "早上可以坐车去湖边。"}
+  user: "先别谈出游，我刚才心情很差，想有人陪我说说话。"
+  steps:
+    - {action: respond, speaker: b, task: comfort, brief: "回应用户当前的情绪需求，不延续行程"}
+- id: cmp_ambiguous_people
+  mode: group
+  tag: clarify
+  cast: {a: "擅长讲故事", b: "擅长澄清问题", c: "擅长安排活动"}
+  user: "让那两个人接着说，别让另外那个说。"
+  steps:
+    - {action: clarify, speaker: b, task: clarify, brief: "询问用户具体指哪两位和哪一位"}
+- id: cmp_wait_requested
+  mode: quiet
+  tag: wait
+  cast: {a: "会安静陪伴", b: "爱给建议"}
+  user: "我去倒杯水，别说话，等我回来。"
+  steps:
+    - {action: wait, task: none}
+- id: cmp_done_requested
+  mode: group
+  tag: finish
+  cast: {a: "喜欢提主意", b: "喜欢总结"}
+  user: "刚才的问题解决了，这轮就结束吧。"
+  steps:
+    - {action: finish, task: none}
+- id: cmp_abstain_no_actions
+  mode: group
+  tag: abstain
+  cast: {a: "会做计划", b: "善于解释"}
+  user: "继续给出下一步。"
+  steps:
+    - {action: abstain, task: none, allowed_actions: []}
+- id: cmp_factual_caution
+  mode: discuss
+  tag: factual_check
+  cast: {a: "擅长历史趣闻", b: "善于核实来源", c: "负责总结"}
+  user: "说说古代那座城墙，别把传闻说成事实。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "介绍一个有待核实的城墙传说"}
+    - heard: {speaker: a, text: "有人传说这段城墙一天就修好了。"}
+      action: respond
+      speaker: b
+      task: challenge
+      brief: "指出一天修好的说法需核对可靠资料"
+    - heard: {speaker: b, text: "我没有查到可信的史料，不能把它当事实。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "说明传闻与可证事实的区别"
+- id: cmp_quiet_comfort
+  mode: quiet
+  tag: emotional_support
+  cast: {a: "善于倾听", b: "习惯马上给方案", c: "擅长总结"}
+  user: "今天有些难过，不想分析原因，只想有人在。"
+  steps:
+    - {action: respond, speaker: a, task: comfort, brief: "简短地表达陪伴，不分析原因"}
+    - heard: {speaker: a, text: "我陪你待一会儿。"}
+      action: wait
+      task: none

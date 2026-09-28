@@ -1,0 +1,14 @@
+{
+  "version": "ip-team-v5-boundaries-20260928",
+  "model": "glm-5.3-flash",
+  "cases_per_call": 4,
+  "max_paid_calls": 2,
+  "reasoning_effort": "high",
+  "slices": [
+    [
+      "boundaries",
+      "严格四条：c1用户明确要求所有人暂时完全不要回复、等待其下一次输入；c2用户明确结束这次讨论且不要告别或确认；c3用户明确点名{b}回答日常问题（其余不要插话）；c4用户明确要求所有人先别回复任何内容、等用户下一条。全部peer为空。每条原创不同措辞，不用上述规范原句当用户文本。用户禁止任何回复时，不能以礼貌确认或个性为由添加respond。请先核实字段完整，再返回JSON。",
+      3
+    ]
+  ]
+}

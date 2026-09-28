@@ -1,0 +1,78 @@
+- id: cal_city_walk
+  mode: group
+  tag: content_handoff
+  cast: {a: "擅长寻找文化地点", b: "关注老人步行负担", c: "善于收束"}
+  user: "带长辈在城里散步，别太累。"
+  steps:
+    - {action: respond, speaker: a, task: propose, brief: "提出交通方便的文化散步地点"}
+    - heard: {speaker: a, text: "去河边的老书店和小广场。"}
+      action: respond
+      speaker: b
+      task: build
+      brief: "承接地点，增加休息和少走路的条件"
+    - heard: {speaker: b, text: "坐车到书店门口，路上留一处坐下休息。"}
+      action: respond
+      speaker: c
+      task: synthesize
+      brief: "收束为低体力散步建议"
+    - heard: {speaker: c, text: "先到书店，再在广场坐一坐，不必走远。"}
+      action: wait
+      task: none
+- id: cal_named_art
+  mode: named
+  tag: named_request
+  cast: {a: "擅长画画入门", b: "负责主持"}
+  user: "{a}，只请你解释水彩和油画的基本区别。"
+  steps:
+    - {action: respond, speaker: a, task: answer, brief: "简要说明两种画材和干燥特征"}
+    - heard: {speaker: a, text: "水彩用水稀释且透明，油画颜料更厚，干燥通常较慢。"}
+      action: finish
+      task: none
+- id: cal_need_clarify
+  mode: group
+  tag: clarify
+  cast: {a: "爱做计划", b: "擅长问清楚条件"}
+  user: "帮我给他们选一份礼物。"
+  steps:
+    - {action: clarify, speaker: b, task: clarify, brief: "询问‘他们’是谁、礼物预算大约多少"}
+- id: cal_wait
+  mode: quiet
+  tag: wait
+  cast: {a: "善于倾听", b: "喜欢推荐音乐"}
+  user: "暂停一下，不需要回应，我稍后继续。"
+  steps:
+    - {action: wait, task: none}
+- id: cal_finish
+  mode: discuss
+  tag: finish
+  cast: {a: "爱提点子", b: "善于总结"}
+  user: "好的，方案已经够了，今天先结束这个话题。"
+  steps:
+    - {action: finish, task: none}
+- id: cal_interrupt
+  mode: interrupt
+  tag: user_override
+  cast: {a: "会推荐电影", b: "擅长收纳", c: "负责主持"}
+  prelude:
+    - {author: user, text: "聊聊电影。"}
+    - {author: a, text: "可以从经典喜剧开始。"}
+  user: "先停，帮我想一下书桌怎么整理。"
+  steps:
+    - {action: respond, speaker: b, task: propose, brief: "针对新的书桌整理问题给建议"}
+- id: cal_none_allowed
+  mode: group
+  tag: abstain
+  cast: {a: "擅长故事", b: "擅长总结"}
+  user: "谁都不能接话了，但继续做决策。"
+  steps:
+    - {action: abstain, task: none, allowed_actions: []}
+- id: cal_comfort
+  mode: quiet
+  tag: emotional_support
+  cast: {a: "善于共情", b: "习惯迅速给建议"}
+  user: "今天心里有点闷，不想现在解决问题。"
+  steps:
+    - {action: respond, speaker: a, task: comfort, brief: "简短共情并允许用户不继续说"}
+    - heard: {speaker: a, text: "我在这里，不用急着解释。"}
+      action: wait
+      task: none

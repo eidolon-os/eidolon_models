@@ -1,0 +1,388 @@
+[
+  {
+    "split": "v8",
+    "id": "val-00-s1~v0",
+    "state": {
+      "user_request": "我想听听云海上那些书漂流的故事，但我不太喜欢太吵太闹的讲法。让那个安静一点、说话细声细气的林小满来给我讲讲吧。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林小满",
+          "character": "安静内敛的书页修补师，说话轻声细语，喜欢慢慢琢磨字句。"
+        },
+        "M1": {
+          "name": "林小满",
+          "character": "活泼爱笑的导览精灵，嗓门大，爱在书架间蹦来蹦去讲趣事。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    },
+    "gold": [
+      "respond:M0"
+    ],
+    "predictions": {
+      "laya-r7": {
+        "split": "v8",
+        "id": "val-00-s1~v0",
+        "family": "val-00",
+        "slice": "respond",
+        "gold": [
+          "respond:M0"
+        ],
+        "capacity": {
+          "full_information": true,
+          "input_tokens": 310
+        },
+        "common_full_information": true,
+        "pred": "wait",
+        "probabilities": {
+          "respond:M0": 0.174,
+          "respond:M1": 0.2281,
+          "wait": 0.2624,
+          "finish": 0.0772,
+          "abstain": 0.2583
+        },
+        "p_top": 0.2624,
+        "correct": false,
+        "elapsed_ms": 73.10312503250316,
+        "first_call": false
+      },
+      "decider": {
+        "split": "v8",
+        "id": "val-00-s1~v0",
+        "family": "val-00",
+        "slice": "respond",
+        "gold": [
+          "respond:M0"
+        ],
+        "capacity": {
+          "state_tokens": 170,
+          "state_unknown_tokens": 0,
+          "full_information": true,
+          "input_tokens": 304,
+          "untruncated": true
+        },
+        "common_full_information": false,
+        "pred": "respond:M0",
+        "probabilities": {
+          "respond:M0": 0.874954342842102,
+          "respond:M1": 0.007606104481965303,
+          "wait": 0.06737516820430756,
+          "finish": 0.018079334869980812,
+          "abstain": 0.031985092908144
+        },
+        "p_top": 0.874954342842102,
+        "correct": true,
+        "elapsed_ms": 270.7919579697773,
+        "first_call": false
+      },
+      "jevk5": {
+        "split": "v8",
+        "id": "val-00-s1~v0",
+        "family": "val-00",
+        "slice": "respond",
+        "gold": [
+          "respond:M0"
+        ],
+        "capacity": {
+          "state_tokens": 170,
+          "state_unknown_tokens": 0,
+          "full_information": true,
+          "input_tokens": 2,
+          "untruncated": true
+        },
+        "common_full_information": false,
+        "pred": "respond:M0",
+        "probabilities": {
+          "respond:M0": 0.9876601099967957,
+          "respond:M1": 0.0016142046079039574,
+          "wait": 0.0022810634691268206,
+          "finish": 0.0037110757548362017,
+          "abstain": 0.004733492154628038
+        },
+        "p_top": 0.9876601099967957,
+        "correct": true,
+        "elapsed_ms": 1730.6406670249999,
+        "first_call": false
+      }
+    }
+  },
+  {
+    "split": "v8",
+    "id": "val-00-s3~v0",
+    "state": {
+      "user_request": "林小满，你平时在云端图书馆里早餐都吃点什么呀？随便聊聊就行。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林小满",
+          "character": "安静内敛的书页修补师，说话轻声细语，喜欢慢慢琢磨字句。"
+        },
+        "M1": {
+          "name": "林小满",
+          "character": "活泼爱笑的导览精灵，嗓门大，爱在书架间蹦来蹦去讲趣事。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    },
+    "gold": [
+      "abstain"
+    ],
+    "predictions": {
+      "laya-r7": {
+        "split": "v8",
+        "id": "val-00-s3~v0",
+        "family": "val-00",
+        "slice": "abstain",
+        "gold": [
+          "abstain"
+        ],
+        "capacity": {
+          "full_information": true,
+          "input_tokens": 291
+        },
+        "common_full_information": true,
+        "pred": "abstain",
+        "probabilities": {
+          "respond:M0": 0.0358,
+          "respond:M1": 0.315,
+          "wait": 0.1416,
+          "finish": 0.0546,
+          "abstain": 0.453
+        },
+        "p_top": 0.453,
+        "correct": true,
+        "elapsed_ms": 52.19370900886133,
+        "first_call": false
+      },
+      "decider": {
+        "split": "v8",
+        "id": "val-00-s3~v0",
+        "family": "val-00",
+        "slice": "abstain",
+        "gold": [
+          "abstain"
+        ],
+        "capacity": {
+          "state_tokens": 151,
+          "state_unknown_tokens": 0,
+          "full_information": true,
+          "input_tokens": 285,
+          "untruncated": true
+        },
+        "common_full_information": false,
+        "pred": "respond:M0",
+        "probabilities": {
+          "respond:M0": 0.38531506061553955,
+          "respond:M1": 0.3627288341522217,
+          "wait": 0.14269648492336273,
+          "finish": 0.03778034821152687,
+          "abstain": 0.07147924602031708
+        },
+        "p_top": 0.38531506061553955,
+        "correct": false,
+        "elapsed_ms": 253.15270898863673,
+        "first_call": false
+      },
+      "jevk5": {
+        "split": "v8",
+        "id": "val-00-s3~v0",
+        "family": "val-00",
+        "slice": "abstain",
+        "gold": [
+          "abstain"
+        ],
+        "capacity": {
+          "state_tokens": 151,
+          "state_unknown_tokens": 0,
+          "full_information": true,
+          "input_tokens": 2,
+          "untruncated": true
+        },
+        "common_full_information": false,
+        "pred": "respond:M0",
+        "probabilities": {
+          "respond:M0": 0.9127681851387024,
+          "respond:M1": 0.02628079056739807,
+          "wait": 0.017002981156110764,
+          "finish": 0.022536808624863625,
+          "abstain": 0.021411333233118057
+        },
+        "p_top": 0.9127681851387024,
+        "correct": false,
+        "elapsed_ms": 1439.0439999988303,
+        "first_call": false
+      }
+    }
+  },
+  {
+    "split": "v7",
+    "id": "recovered-val-0-end_or_wait-s1~v0",
+    "state": {
+      "user_request": "那就这么定了，都去忙吧，雨停再见。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "苇青",
+          "character": "船缆铺老板娘，热心快嘴，爱张罗湖上集市的大小事"
+        },
+        "M1": {
+          "name": "周砚",
+          "character": "沉默寡言的修船匠，苇青多年的老邻居，话少但实在"
+        },
+        "M2": {
+          "name": "小汀",
+          "character": "苇青的侄女，十五岁，帮着看摊，好奇心旺盛"
+        },
+        "M3": {
+          "name": "老鳜鱼",
+          "character": "卖鱼干的老翁，风趣爱讲古，和集市人人都熟"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M0",
+          "text": "明早雨要是停了，咱们把渡口那排摊位挪个位置吧"
+        },
+        {
+          "author": "M3",
+          "text": "挪可以，鱼干摊得靠水边，老规矩"
+        },
+        {
+          "author": "M1",
+          "text": "缆绳架我提前搬过去就是"
+        },
+        {
+          "author": "M2",
+          "text": "姑妈，那我现在收摊啦？"
+        }
+      ],
+      "trigger": {
+        "author": "M0",
+        "text": "收吧收吧，路上滑，慢点走"
+      }
+    },
+    "gold": [
+      "finish"
+    ],
+    "predictions": {
+      "laya-r7": {
+        "split": "v7",
+        "id": "recovered-val-0-end_or_wait-s1~v0",
+        "family": "recovered-val-0-end_or_wait-s1",
+        "slice": "end_or_wait",
+        "gold": [
+          "finish"
+        ],
+        "capacity": {
+          "full_information": true,
+          "input_tokens": 476
+        },
+        "common_full_information": false,
+        "pred": "wait",
+        "probabilities": {
+          "respond:M0": 0.0502,
+          "respond:M1": 0.0214,
+          "respond:M2": 0.0091,
+          "respond:M3": 0.0086,
+          "wait": 0.7792,
+          "finish": 0.0841,
+          "abstain": 0.0474
+        },
+        "p_top": 0.7792,
+        "correct": false,
+        "elapsed_ms": 65.58358296751976,
+        "first_call": false
+      },
+      "decider": {
+        "split": "v7",
+        "id": "recovered-val-0-end_or_wait-s1~v0",
+        "family": "recovered-val-0-end_or_wait-s1",
+        "slice": "end_or_wait",
+        "gold": [
+          "finish"
+        ],
+        "capacity": {
+          "state_tokens": 309,
+          "state_unknown_tokens": 0,
+          "full_information": true,
+          "input_tokens": 475,
+          "untruncated": true
+        },
+        "common_full_information": false,
+        "pred": "finish",
+        "probabilities": {
+          "respond:M0": 0.09867185354232788,
+          "respond:M1": 0.1098579540848732,
+          "respond:M2": 0.07007037848234177,
+          "respond:M3": 0.12396515905857086,
+          "wait": 0.24092015624046326,
+          "finish": 0.31091275811195374,
+          "abstain": 0.04560175538063049
+        },
+        "p_top": 0.31091275811195374,
+        "correct": true,
+        "elapsed_ms": 449.90970799699426,
+        "first_call": false
+      },
+      "jevk5": {
+        "split": "v7",
+        "id": "recovered-val-0-end_or_wait-s1~v0",
+        "family": "recovered-val-0-end_or_wait-s1",
+        "slice": "end_or_wait",
+        "gold": [
+          "finish"
+        ],
+        "capacity": {
+          "state_tokens": 309,
+          "state_unknown_tokens": 0,
+          "full_information": true,
+          "input_tokens": 2,
+          "untruncated": true
+        },
+        "common_full_information": false,
+        "pred": "respond:M2",
+        "probabilities": {
+          "respond:M0": 0.2592979371547699,
+          "respond:M1": 0.018299080431461334,
+          "respond:M2": 0.39065131545066833,
+          "respond:M3": 0.027218058705329895,
+          "wait": 0.10579071193933487,
+          "finish": 0.19068078696727753,
+          "abstain": 0.008062141016125679
+        },
+        "p_top": 0.39065131545066833,
+        "correct": false,
+        "elapsed_ms": 2440.0102499639615,
+        "first_call": false
+      }
+    }
+  }
+]

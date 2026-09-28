@@ -1,0 +1,17 @@
+version: ip-team-v4-glm53-flash-ensemble-dev-1-review-1
+source_plan_version: ip-team-v4-glm53-flash-ensemble-dev-1
+source: ../../private/ip-team-v4-glm-ensemble-dev
+selected:
+  named_unique-002: 用户只点名慢性子的角色陪同散步，其他成员不参与。
+  speaker_handoff-001: 已公开发言者直接邀请另一位角色回应。
+  speaker_handoff-002: 已公开发言者直接邀请另一位角色回应。
+  same_member-001: 用户明确要求同一角色连讲两段灯塔经历。
+  same_member-002: 用户明确要求同一角色连讲两段海岛经历。
+  user_override-001: 用户打断旧话题，点名另一位角色答新问题。
+  user_override-002: 用户打断旧话题，点名另一位角色答新问题。
+  wait_or_finish-001: 用户明确暂停，等下一条消息。
+  wait_or_finish-002: 用户明确本轮结束。
+rejected:
+  named_unique-001: 人物描述存在自我关系错误，且两条林间散步点名请求过近。
+  named_finish-001: 用户只说一次讲完，回复又追问用户，finish 与 wait 不唯一。
+  wait_after_peer-001: 用户措辞与角色接话安排不清，等待标签有歧义。

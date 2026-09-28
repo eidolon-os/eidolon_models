@@ -1,0 +1,162 @@
+{
+  "passed": false,
+  "dev_summary_sha256": "14f9563b310167df553ce79872905d9f4491f660019d4d3f6b596c76cc775a9a",
+  "regression_summary_sha256": "86a0460f9c6a4b7f9a52020aaddd39bc7e45c5e9793e7d985878696ac8545a40",
+  "regression": {
+    "records": 42,
+    "generation_batches": 12,
+    "families": 21,
+    "correct": 9,
+    "family_accuracy": 0.21428571428571427,
+    "slice_macro_accuracy": 0.18055555555555555,
+    "worst_slice_accuracy": 0.0,
+    "exploratory_family_bootstrap_95": [
+      0.1111111111111111,
+      0.25
+    ],
+    "interval_caveat": "descriptive family resampling only; same-batch/teacher correlation and distribution shift not captured; not a release confidence bound",
+    "generation_batches_by_slice": {
+      "direct_address": 1,
+      "end_or_wait": 1,
+      "explicit_handoff": 2,
+      "pause_or_listen": 2,
+      "author_continuation": 2,
+      "interrupt_redirect": 1,
+      "mention_not_address": 1,
+      "open_conversation": 1,
+      "quiet_text": 1,
+      "relationship_reference": 1,
+      "same_name": 1,
+      "unfinished_or_done": 1
+    },
+    "slices": {
+      "direct_address": {
+        "families": 2,
+        "accuracy": 0.0
+      },
+      "end_or_wait": {
+        "families": 1,
+        "accuracy": 0.0
+      },
+      "explicit_handoff": {
+        "families": 3,
+        "accuracy": 0.16666666666666666
+      },
+      "pause_or_listen": {
+        "families": 3,
+        "accuracy": 0.6666666666666666
+      },
+      "author_continuation": {
+        "families": 3,
+        "accuracy": 0.3333333333333333
+      },
+      "interrupt_redirect": {
+        "families": 2,
+        "accuracy": 0.0
+      },
+      "mention_not_address": {
+        "families": 1,
+        "accuracy": 0.0
+      },
+      "open_conversation": {
+        "families": 1,
+        "accuracy": 0.0
+      },
+      "quiet_text": {
+        "families": 1,
+        "accuracy": 0.0
+      },
+      "relationship_reference": {
+        "families": 2,
+        "accuracy": 0.0
+      },
+      "same_name": {
+        "families": 1,
+        "accuracy": 0.0
+      },
+      "unfinished_or_done": {
+        "families": 1,
+        "accuracy": 1.0
+      }
+    },
+    "must_stop": {
+      "n": 6,
+      "correct": 4,
+      "wrong_speech": 0
+    },
+    "must_speak": {
+      "n": 32,
+      "correct": 3,
+      "missed_speech": 29
+    },
+    "unique_member": {
+      "n": 28,
+      "correct": 3,
+      "wrong_member": 0
+    },
+    "must_abstain": {
+      "n": 2,
+      "correct": 0
+    },
+    "multi_gold": {
+      "n": 6,
+      "correct": 2
+    },
+    "exact_equivariant_families": 17,
+    "all_variants_correct_families": 4,
+    "confidence": {
+      "0.5": {
+        "covered": 23,
+        "correct": 7,
+        "errors": 16,
+        "coverage": 0.5476190476190477
+      },
+      "0.7": {
+        "covered": 14,
+        "correct": 5,
+        "errors": 9,
+        "coverage": 0.3333333333333333
+      },
+      "0.8": {
+        "covered": 7,
+        "correct": 4,
+        "errors": 3,
+        "coverage": 0.16666666666666666
+      },
+      "0.9": {
+        "covered": 2,
+        "correct": 2,
+        "errors": 0,
+        "coverage": 0.047619047619047616
+      }
+    },
+    "candidate_counts": {
+      "2": {
+        "n": 12,
+        "correct": 1
+      },
+      "3": {
+        "n": 18,
+        "correct": 8
+      },
+      "4": {
+        "n": 12,
+        "correct": 0
+      }
+    },
+    "constant_baselines": {
+      "respond:M0": 0.4523809523809524,
+      "wait": 0.09523809523809523,
+      "finish": 0.09523809523809523,
+      "abstain": 0.047619047619047616
+    },
+    "sdk_replay": {
+      "valid_results": 42,
+      "decided": 7,
+      "median_ms": 44.292728998698294
+    }
+  },
+  "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v8-boundary-r7",
+  "rule": "Every action >=70%; stop wrong speech <=10%; abstain recall >=70%; old dev correct >=27/42 and wrong speech <=4/6",
+  "test_inference_permitted": false
+}

@@ -1,0 +1,31 @@
+{
+  "projection": "named",
+  "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6",
+  "dev_macro": 0.6319444444444445,
+  "dev_wrong_speech": 4,
+  "dev_summary_sha256": "34d008eb96d9bec063238a52e9ed043c0c7630488c7608b1947e94555827c5f1",
+  "candidates": [
+    {
+      "projection": "compact",
+      "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-compact-r5",
+      "dev_macro": 0.5763888888888888,
+      "dev_wrong_speech": 6,
+      "dev_summary_sha256": "6b241b3934ce536404fa07a735f4a424e034e7628f6d63e1049780ffbe6d4e0d"
+    },
+    {
+      "projection": "named",
+      "run": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6",
+      "dev_macro": 0.6319444444444445,
+      "dev_wrong_speech": 4,
+      "dev_summary_sha256": "34d008eb96d9bec063238a52e9ed043c0c7630488c7608b1947e94555827c5f1"
+    }
+  ],
+  "selection_rule": "highest dev slice macro, ties fewer must-stop wrong responses, then compact",
+  "test_not_used_for_selection": true,
+  "dataset_lineage_sha256": "7f09815e9cac0fee3c583138b6114b497884ed09dab61fc0817e918af10f0ac3",
+  "sealed_test_sha256": "c58ed6e67a46001243dfd4d1e7201439977aea75410eca53822b0f96b29892b2",
+  "allowed_test_checkpoints": {
+    "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/ip-ensemble-v7-named-r6/checkpoint": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+    "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-multilingual/1c5edc17/torch": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+  }
+}

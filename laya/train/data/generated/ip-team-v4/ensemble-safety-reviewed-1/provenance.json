@@ -1,0 +1,145 @@
+{
+  "review_version": "ip-team-v4-glm53-flash-ensemble-safety-1-review-1",
+  "source_plan_version": "ip-team-v4-glm53-flash-ensemble-safety-1",
+  "selected_calls": [
+    {
+      "call_id": "finish_after_peer-002",
+      "slice": "finish_after_peer",
+      "response_sha256": "234e1a90b3c42b004cca7569a1fcfbb80117434e9673538f5b88f493eb549cb0",
+      "review_reason": "用户明确答完就到这，一位伙伴已完整答复；曾因词面校验过严拒稿，按更新规则离线重验，无额外 API 调用。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_after_peer-003",
+      "slice": "finish_after_peer",
+      "response_sha256": "968e4607e6c04c713749c6641b561ac4af8ed2c753ff2f748416330f95499ec8",
+      "review_reason": "用户明确答完本轮结束，伙伴已完整答复。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_after_peer-004",
+      "slice": "finish_after_peer",
+      "response_sha256": "3d49531200bb8290e67bf00454a3a39d9f4153bc24763c7183de7c2131643d39",
+      "review_reason": "用户明确答完本轮结束，伙伴已完整答复。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_after_peer-006",
+      "slice": "finish_after_peer",
+      "response_sha256": "1c4d975ba9c87b4db1b2ead2f06b4dd5b4b9655adc7984e63230d3ef12ee5954",
+      "review_reason": "用户明确答完本轮结束，伙伴已完整答复。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_after_peer-007",
+      "slice": "finish_after_peer",
+      "response_sha256": "21dee57f410dced382d32077ca389843dec99230d2d60367b315ed9fd39238ec",
+      "review_reason": "用户明确答完本轮结束，伙伴已完整答复。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-001",
+      "slice": "finish_direct",
+      "response_sha256": "1fdb890e7607d939b610a6cf096a81192613e35c473b74ffa97fb99d3e4bcc98",
+      "review_reason": "用户明确今天聊到此处，角色团直接结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-002",
+      "slice": "finish_direct",
+      "response_sha256": "3830123e088fcc026891e26eb4bd2c974fe77eabc5ef1cd388354210f9a92d36",
+      "review_reason": "用户明确今天结束，明天再继续。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-003",
+      "slice": "finish_direct",
+      "response_sha256": "3559232ae533c7d088d83043fe1bf118c8fd985b6d2e9ca720cd8936a88459ef",
+      "review_reason": "用户明确现在结束，回来另起一轮。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-005",
+      "slice": "finish_direct",
+      "response_sha256": "1de28c569eb180c575dfdc166cb279a9c0df790d682f41088312f2aa26f2b997",
+      "review_reason": "用户明确现在结束，改天再邀伙伴。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-006",
+      "slice": "finish_direct",
+      "response_sha256": "900c4e8457e2d4a454daceb755efb1db1531bfa392f0e4b4502157ed023360e5",
+      "review_reason": "用户明确现在结束，之后再找伙伴。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-007",
+      "slice": "finish_direct",
+      "response_sha256": "27510f252051bc5eaa7809fcda8b6225d7ab9d3db2b20d7478f14717cdc5ff11",
+      "review_reason": "用户明确今天说到这里，改天再聊。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-001",
+      "slice": "same_member",
+      "response_sha256": "7f4c6e7d0f562412a20ce3879f6cc8d953fee21a5574497bca050eba0b810c47",
+      "review_reason": "用户明确要同一伙伴继续第二段故事，不能过早结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-002",
+      "slice": "same_member",
+      "response_sha256": "346b068f343f70793064cb71ff00fb799bd45f2cf0155c3f3832bd4a460ddb4e",
+      "review_reason": "用户明确要同一伙伴连续两段，不能过早结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-003",
+      "slice": "same_member",
+      "response_sha256": "5306e935900334ffd4babd70cb92065d5c270b860092b89dcb938fb8909a590f",
+      "review_reason": "用户明确要同一伙伴继续后事，不能过早结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "same_member-004",
+      "slice": "same_member",
+      "response_sha256": "870f63d93b95639877d6abb650fec719e3d72e98755cd61601c2583f4bd76e16",
+      "review_reason": "用户明确要同一伙伴连讲两段，不能过早结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-001",
+      "slice": "wait_or_finish",
+      "response_sha256": "459dda30761416986dae691c4551c8d223b2b267e2ba380a349199911747fa95",
+      "review_reason": "用户只要求暂时安静，等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-002",
+      "slice": "wait_or_finish",
+      "response_sha256": "5c9df0f0991b184363e05c72a7ef3f89fe5187f9f21c2127c63f37e7271fbf4e",
+      "review_reason": "用户明确今日讨论结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-003",
+      "slice": "wait_or_finish",
+      "response_sha256": "2e2c60b55a60866fcdb472d1c016f56776f6bf58439ca1c22f2c373ae0db9d68",
+      "review_reason": "用户只要求暂时安静，等下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-004",
+      "slice": "wait_or_finish",
+      "response_sha256": "ff184a4c692cb2660b9954d92f31db0c9debeb40c9870a5b9f629fc8ffe72abb",
+      "review_reason": "用户明确今日讨论结束。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "finish_direct-004": "与同切片另一条收束措辞高度近似。",
+    "finish_after_peer-001": "用户只说不问其他角色，未明确本轮结束，结构校验拒绝。",
+    "finish_after_peer-005": "一位人物描述错误地自指，人物关系不成立。"
+  },
+  "families": 19
+}

@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 话慢但一开口就说得细，喜欢林子里旧路牌，总和 {c} 抢背包侧袋
+    b: 爱哼歌，走路蹦蹦跳跳，常拿 {a} 的慢悠悠打趣但不惹人生气
+    c: 心思细，出发前总要多看一眼天色，偶尔替 {b} 收拾落下的东西
+  user: '{a}，刚才聊到林子里那条岔路，你干脆一次说完想走哪边、带什么干粮，别插话别停顿，答完本轮就结束，我想照着准备。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 那就走左边岔路，老路牌写着去松木坡。干粮带两个硬面包、一袋盐渍梅，水壶灌满。那边路滑，鞋带绑紧点，晌午前出发就行，我自己就说这些，够了。
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: glm53_flash_finish_after_peer_007_0

@@ -1,0 +1,16 @@
+- mode: group
+  cast:
+    a: 急性子，遇到新鲜事就想先试，常和 {b} 拌嘴
+    b: 慢性子，说话前爱停顿，总觉得 {a} 跑太快
+    c: 心细爱观察，喜欢顺着 {a} {b} 的话题补一句
+  user: 难得半天空闲，你们说我是去河边走走还是窝在家看电影？最近有点累，又怕在家躺着更闷。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 那必须出门啊！河边风一吹人就精神了，躺一天才更累。{b} 你肯定有不一样的想法，快说说？
+    brief: a 已公开发言并点名 b 接话
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_003_0

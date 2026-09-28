@@ -1,0 +1,119 @@
+{
+  "sources": {
+    "openjev": {
+      "repo": "com-kotobalabs/open-jev-deberta-v3-large",
+      "revision": "188ee67a5c93122b916e5acd5bdb0cb3623e380a"
+    },
+    "decider": {
+      "repo": "Mapika/decider-2b",
+      "revision": "533964dae8be954c5b5e19fa4948e48408094c1e"
+    },
+    "jevk5": {
+      "repo": "alibiserikbay/JevK5",
+      "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d"
+    }
+  },
+  "jevk5_code_commit": "1e5ae1b533b9eb80c0cbe3fbd010607d0b4e26ae",
+  "source_sha256": {
+    "models/decider/decider/prompt_fast.py": "fbfcc3a381a89785174cb9d29083ed14d404c7273d123ba8fe2b69584649ef25",
+    "models/decider/decider/mps_ops.py": "58a2fc17e692e8402568ac53a63d96632524abef79280dd6e0b53e1fec54f66f",
+    "models/decider/decider/metrics.py": "da9fc1758e74f348145dbdd72509a8b644b238e728e7a9ea9342c78269eee0ed",
+    "models/decider/decider/shared_prefix.py": "c37aac37f1f45b133c325d7838ade78bff581bd6de6a54941a8324d28f07052d",
+    "models/decider/decider/batching.py": "c0c6f001850c3bc73d0707bf9309790cc00860a56dd22811be9bcae946861a99",
+    "models/decider/decider/fp8.py": "b0450e71249a85cf3a2c758214074a2deebd53e2b66e32589a1aece056311b4c",
+    "models/decider/decider/mps_moe.py": "9bbc924787c23e2ca848c4671d9fce3937ae909dd17a7ee3eb9e86b17553f93e",
+    "models/decider/decider/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/decider/decider/serve.py": "5a159804bda8eab98b9afbb4026d44abbed7b8e5e95879823623d3bdfaecf6a4",
+    "models/decider/decider/temperature.py": "1b88c270b788a21b01dd31803dadfcc3a61ba0246576c1de04881b1db10a8735",
+    "models/decider/decider/model.py": "2feae466895e84b7637ee3504522d809d88dded0b290f6c87b071e4b7f43e027",
+    "models/decider/decider/engine.py": "829032095e4590152a8f1499ec110edd8004b011a1ee31c2908f3293d0a3b0ba",
+    "models/decider/decider/infer.py": "6359e5989fe922054c99446115a25d22acf1a943f0dea097409eaa49e2ef84f1",
+    "models/decider/decider/prompt.py": "46f8158cd00c708408f6340340517c5a0c50fb0a339d0e46cd0a30f8801624cd",
+    "models/decider/decider/calibrate.py": "9d01463ac07681d55a77b56098522c93cb449dd1701a8f6b24c1d209f98da6c9",
+    "models/decider/decider/schema_engine.py": "6872d2ccc0a91673e5d1583de7f390115075bdfc9403f3b9edd6ccf964937c4a",
+    "models/decider/decider/systemone.py": "884e4b0bae36f5e09dbd689b4390e94320cbbd77f7b8d675e50490b1d7c61d34",
+    "models/decider/decider/engine_v2.py": "2686f994dce11d39de40e2ccdb0c6f7df7e43a08686050bf475e4d08b0e77a2b",
+    "models/openjev/typed_decisions/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/openjev/typed_decisions/encoder.py": "59ae43a157575cd09ae31afd691156ee4a66ad8929d317970404dd9fe6bbfc53",
+    "models/openjev/typed_decisions/open_jev.py": "15759988c5eb99a41347b4b3f948c0b5ef19dfc6630cc9158bcd4ae80bb2df0d",
+    "models/openjev/typed_decisions/schema.py": "976eca07aceae8e3c1b2ee9911c614359a1b1e04b590837491816cc93e469c3a",
+    "jevk5-source/jevk5/gguf.py": "6505de497ce115f0bf85f110cf708fc8535a774f1361b811e3415b3e91a10d03",
+    "jevk5-source/jevk5/server.py": "2ebde38db58a1603ee390f72eb8737d5e969003973788640fa0e1edd58d75977",
+    "jevk5-source/jevk5/__init__.py": "3ec8170fe224e7b9b2ce0333a58ba1cb8066effd4e9d825fc913ef033b907e2b",
+    "jevk5-source/jevk5/runtime.py": "b05f2816135237b36694198bb3b8ffac1abc044ad23c70caa867b3be59a81be6",
+    "jevk5-source/jevk5/lite.py": "8ca027ea70e9ddb30b1fe9e93e9f808d3cc2dd65fbb6562f6096b464f598e56d",
+    "jevk5-source/jevk5/prompt.py": "322d69ba6abea83602f27b7a5aa0d3e6ab00847fd03ddccd35a28ae5b23acc1a"
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.13",
+  "memory_bytes": 38654705664,
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "huggingface-hub": "1.32.0",
+    "tokenizers": "0.23.2",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.3"
+  },
+  "isolated_packages": {
+    "accelerate": "1.15.0",
+    "psutil": "7.2.2"
+  },
+  "weight_downloads": {
+    "openjev": {
+      "size": 1736094384,
+      "sha256": "3f1d5bc3b6d3dc412ea2c499446fcbd212242d79baf16bc0eda155b4ebbac806",
+      "reused_prefix_bytes": 912261120
+    },
+    "decider": {
+      "size": 3763692048,
+      "sha256": "acaef2228b134dcdc20cad4ee79219482c927ec819aa3687b9b8a575c338817f",
+      "reused_prefix_bytes": 1142947840
+    },
+    "jevk5": {
+      "size": 8411558400,
+      "sha256": "13824e47f2e40fe052f06943976cf742cb366ba305741a111e75a8ebae907a9c",
+      "reused_prefix_bytes": 1384120320
+    }
+  },
+  "data_sha256": {
+    "v7": "4a75cb7644ef9b102aceff938486cc61bbbe5fd2c9f7a63b8800d4f9e8573ae4",
+    "v8": "b5347b5de86c3598a82a79ed8518ac941bd10d474cb771c6b1917dcd2601fef5"
+  },
+  "laya_checkpoints": {
+    "laya": {
+      "path": "laya/models/laya-multilingual/1c5edc17/torch",
+      "weights_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+      "config_sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+      "tokenizer_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+    },
+    "laya-r6": {
+      "path": "laya/train/runs/ip-ensemble-v7-named-r6/checkpoint",
+      "weights_sha256": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+      "config_sha256": "6de1c9d6a8daa7f88cefe2eb865d7d64f0ca3778c2f6c395cc4dce963092b996",
+      "tokenizer_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+    },
+    "laya-r7": {
+      "path": "laya/train/runs/ip-ensemble-v8-boundary-r7/checkpoint",
+      "weights_sha256": "b39bd66ad724aa720506428a4978d744dbfc8b12ee41507ff7b88e2b4bcfc273",
+      "config_sha256": "5533a13ad909eac46e1f7e23b40943e4f3f2909e544e833bf42a9940060df859",
+      "tokenizer_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+    }
+  },
+  "openjev_head_sha256": "f101be67c5808a810abbcede9ebe702f7e4af4aa6f7298bb243842ce9e3a295a",
+  "comparison_code_sha256": {
+    "fetch_weights.py": "e60b17316fae49ffda4398a40058130899c914ee0db680d100e30ef30de2072f",
+    "check_backend.py": "49bbceb6fd2077c971f2444c0f5b267552cdedad8fc0843024cc72370bd3ca6a",
+    "compare.py": "b93161448c2f14037925d4222d730d3053db02192d841208b4d76861578b6646",
+    "report.py": "c8111dd31ff37456ee6a4d92ce216a0fe3b7d7c9500b8713794d8e72d074e28b"
+  },
+  "raw_predictions_sha256": {
+    "laya": "435e0ada3f9ffd2e30c1c7563d11eb2afc1fcaafb881c8a73b613f4b8ed6b38e",
+    "laya-r6": "fb604299baaeb885de7a2bf86e26f1e4b22114f851f5f85313968cfd4be20033",
+    "laya-r7": "8d60241095ca476142ef8ce9984b77841146432f6fe3359c8f5d0d21e71e33ed",
+    "openjev": "061e82e6d47bb08d88f7104d8b28f949c6ba80ff423b0b0a4e6882670faf0616",
+    "decider": "fbe6b7b40f9cf5b9cea9b86be4cb56e2dfe1c1f26cf16956cb3971a198fbcacc",
+    "jevk5": "a914e5d76576548ed3464b4d3eaf135bbe8a5f810595d77874b6c9dc54dc78b1"
+  },
+  "runtime_adjustment": "JevK5 direct device_map=mps load SIGSEGV; same official model/scorer successfully CPU-staged then moved to MPS. See failed log and CPU parity checks."
+}

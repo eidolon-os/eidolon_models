@@ -24,8 +24,10 @@ from eidolon_models_laya.vendor.laya.common import (
 
 from .model import Loaded, record_items, score_items
 from .records import Record, gold_names, read_jsonl
+from .stats import exact_one_sided_bound
 
 THRESHOLDS = (0.5, 0.7, 0.9)
+NONEXECUTABLE_DEVICE_EXITS = {"多个设备或整屋", "没有对应的设备"}
 
 
 def _softmax(z: list[float]) -> list[float]:
@@ -54,7 +56,9 @@ def score_records(
     """``logits`` (item key → raw logits) replaces the model forward: that is how a platform runner's
     output (``export`` → device → ``*.logits.jsonl``) is scored with exactly the same calibration and metrics."""
     by_id = {r.id: r for r in records}
-    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
+    # Policy decisions need slot confidences even when the reference set has no
+    # gold label for a slot (e.g. device/action on a non-command).
+    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg, require_label=False)]
     if logits is None:
         scored = score_items(loaded, items, batch_size)
     else:
@@ -69,7 +73,8 @@ def score_records(
         T = temperature_for(loaded.cfg, it["qtype"], len(it["markers"]))
         p = _softmax([x / T for x in it["logits"]])
         j = max(range(len(p)), key=p.__getitem__)
-        golds = gold_names(q, r.labels[it["qid"]])
+        label = r.labels.get(it["qid"])
+        golds = gold_names(q, label) if label else None
         rows.append(
             {
                 "record_id": r.id,
@@ -80,8 +85,8 @@ def score_records(
                 "pred": it["names"][j],
                 "p_top": round(p[j], 4),
                 "probabilities": {n: round(x, 4) for n, x in zip(it["names"], p, strict=True)},
-                "gold": sorted(golds),
-                "correct": it["names"][j] in golds,
+                "gold": sorted(golds) if golds is not None else None,
+                "correct": it["names"][j] in golds if golds is not None else None,
                 "n_options": len(p),
             }
         )
@@ -113,13 +118,39 @@ def _bootstrap_ci(values: list[float], n: int = 1000, seed: int = 7) -> list[flo
     return [round(float(np.percentile(means, 2.5)), 4), round(float(np.percentile(means, 97.5)), 4)]
 
 
-def decision_metrics(rows: list[dict], threshold: float = 0.9) -> dict:
+def _answer_status(q: dict[str, dict], required: set[str]) -> bool | None:
+    """Whether an executed decision is correct; None means gold is incomplete."""
+    known = [q[k]["correct"] for k in required if k in q]
+    if False in known:
+        return False
+    if any(k not in q or q[k]["correct"] is None for k in required):
+        return None
+    return True
+
+
+def _precision(statuses: list[bool | None]) -> dict:
+    verified = [float(x) for x in statuses if x is not None]
+    unknown = len(statuses) - len(verified)
+    n = len(statuses)
+    return {
+        "n": n,
+        "n_verified": len(verified),
+        "n_unverified": unknown,
+        "precision": round(float(np.mean(verified)), 4) if n and not unknown else None,
+        "precision_verified": round(float(np.mean(verified)), 4) if verified else None,
+        "precision_bounds": [round(sum(verified) / n, 4), round((sum(verified) + unknown) / n, 4)] if n else [None, None],
+        "ci95": _bootstrap_ci(verified) if n and not unknown else [None, None],
+        "lower95_one_sided_exact": round(exact_one_sided_bound(int(sum(verified)), n, lower=True), 4) if n and not unknown else None,
+    }
+
+
+def decision_metrics(rows: list[dict], threshold: float = 0.9, required_qids: set[str] | None = None) -> dict:
     """Record-level numbers that decide whether the model may act on its own.
 
-    - ``control_e2e``: gold-控制 records with every scored question right.
+    - ``control_e2e``: gold-控制 records with every required question right.
     - ``auto_execute``: the record the model would execute without asking — intent predicted
-      控制 and every question's top probability ≥ ``threshold``. ``precision`` = all its answers
-      right; ``coverage`` = share of gold-控制 records executed this way.
+      控制 and every required question's top probability ≥ ``threshold``. Missing predictions
+      prevent execution; missing gold makes correctness unknown rather than correct.
     - ``false_trigger``: gold 无关 (and gold 查询) records predicted 控制.
     Intervals are 95% bootstrap over records.
     """
@@ -127,32 +158,41 @@ def decision_metrics(rows: list[dict], threshold: float = 0.9) -> dict:
     for r in rows:
         by[r["record_id"]][r["qid"]] = r
     recs = [q for q in by.values() if "intent" in q]
+    required = required_qids or {"intent", "device", "action"}
     gold_ctrl = [q for q in recs if q["intent"]["gold"] == ["控制"]]
-    e2e = [float(all(x["correct"] for x in q.values())) for q in gold_ctrl]
+    e2e = [_answer_status(q, required) for q in gold_ctrl]
+    e2e_verified = [float(x) for x in e2e if x is not None]
     auto = [
         q
         for q in recs
-        if q["intent"]["pred"] == "控制" and min(x["p_top"] for x in q.values()) >= threshold
+        if q["intent"]["pred"] == "控制"
+        and required <= q.keys()
+        and all(q[k]["p_top"] >= threshold for k in required)
     ]
-    auto_ok = [float(all(x["correct"] for x in q.values())) for q in auto]
+    auto_status = [_answer_status(q, required) for q in auto]
     auto_ctrl = [q for q in auto if q["intent"]["gold"] == ["控制"]]
     out = {
         "records": len(recs),
         "control_e2e": {
             "n": len(gold_ctrl),
-            "acc": round(float(np.mean(e2e)), 4) if e2e else None,
-            "ci95": _bootstrap_ci(e2e),
+            "n_verified": len(e2e_verified),
+            "n_unverified": len(e2e) - len(e2e_verified),
+            # Accuracy is over fully labelled controls; bounds cover all controls.
+            "acc": round(float(np.mean(e2e_verified)), 4) if e2e_verified else None,
+            "acc_bounds": [
+                round(sum(e2e_verified) / len(e2e), 4),
+                round((sum(e2e_verified) + len(e2e) - len(e2e_verified)) / len(e2e), 4),
+            ] if e2e else [None, None],
+            "ci95": _bootstrap_ci(e2e_verified),
         },
         "auto_execute": {
             "threshold": threshold,
-            "n": len(auto),
-            "precision": round(float(np.mean(auto_ok)), 4) if auto_ok else None,
-            "ci95": _bootstrap_ci(auto_ok),
+            **_precision(auto_status),
             "coverage": round(len(auto_ctrl) / len(gold_ctrl), 4) if gold_ctrl else None,
             "wrong": [
                 next(iter(q.values()))["record_id"]
-                for q in auto
-                if not all(x["correct"] for x in q.values())
+                for q, status in zip(auto, auto_status, strict=True)
+                if status is False
             ],
         },
     }
@@ -167,11 +207,14 @@ def decision_metrics(rows: list[dict], threshold: float = 0.9) -> dict:
     return out
 
 
-def policy_metrics(rows: list[dict], tau_intent: float, tau_slots: float, tau_confirm: float = 0.5) -> dict:
+def policy_metrics(
+    rows: list[dict], tau_intent: float, tau_slots: float, tau_confirm: float = 0.5,
+    required_qids: set[str] | None = None,
+) -> dict:
     """What a caller that acts on the answers would do (the product policy, 2026-09-26):
 
-    - **execute** without asking: intent is 控制 with p(控制) ≥ ``tau_intent`` and every other question's
-      top probability ≥ ``tau_slots``;
+    - **execute** without asking: intent is 控制 with p(控制) ≥ ``tau_intent``, every other
+      required question's top probability ≥ ``tau_slots``, and device is a single named target;
     - **confirm** (hand back to the agent, which asks): not executed, but intent is 控制 or p(控制) ≥ ``tau_confirm``;
     - **ignore**: everything else.
 
@@ -183,44 +226,68 @@ def policy_metrics(rows: list[dict], tau_intent: float, tau_slots: float, tau_co
     for r in rows:
         by[r["record_id"]][r["qid"]] = r
     recs = [q for q in by.values() if "intent" in q]
+    required = required_qids or {"intent", "device", "action"}
 
     def branch(q):
-        it = q["intent"]
-        pc = it["probabilities"].get("控制", 0.0)
-        slots = [x["p_top"] for k, x in q.items() if k != "intent"]
-        if it["pred"] == "控制" and pc >= tau_intent and all(p >= tau_slots for p in slots):
-            return "execute"
-        return "confirm" if it["pred"] == "控制" or pc >= tau_confirm else "ignore"
+        return policy_branch(q, tau_intent, tau_slots, tau_confirm, required)
 
     def share(qs, pred):
         return round(sum(pred(q) for q in qs) / len(qs), 4) if qs else None
 
-    ok = lambda q: all(x["correct"] for x in q.values())  # noqa: E731
     executed = [q for q in recs if branch(q) == "execute"]
+    statuses = [_answer_status(q, required) for q in executed]
     ctrl = [q for q in recs if q["intent"]["gold"] == ["控制"]]
     irr = [q for q in recs if q["intent"]["gold"] == ["无关"]]
     qry = [q for q in recs if q["intent"]["gold"] == ["查询"]]
+    false_executed = sum(branch(q) == "execute" for q in irr)
     return {
         "tau_intent": tau_intent, "tau_slots": tau_slots, "tau_confirm": tau_confirm,
-        "execute": {"n": len(executed), "precision": share(executed, ok),
-                    "ci95": _bootstrap_ci([float(ok(q)) for q in executed])},
-        "false_execute_无关": {"n": len(irr), "rate": share(irr, lambda q: branch(q) == "execute"),
-                              "ci95": _bootstrap_ci([float(branch(q) == "execute") for q in irr])},
+        "execute": _precision(statuses),
+        "false_execute_无关": {"n": len(irr), "count": false_executed,
+                              "rate": share(irr, lambda q: branch(q) == "execute"),
+                              "ci95": _bootstrap_ci([float(branch(q) == "execute") for q in irr]),
+                              "upper95_one_sided_exact": round(exact_one_sided_bound(false_executed, len(irr), lower=False), 4) if irr else None},
         "confirm_无关": share(irr, lambda q: branch(q) == "confirm"),
         "false_execute_查询": share(qry, lambda q: branch(q) == "execute"),
         "控制": {"n": len(ctrl),
-                 "execute_correct": share(ctrl, lambda q: branch(q) == "execute" and ok(q)),
-                 "execute_wrong": share(ctrl, lambda q: branch(q) == "execute" and not ok(q)),
+                 "execute_correct": share(ctrl, lambda q: branch(q) == "execute" and _answer_status(q, required) is True),
+                 "execute_wrong": share(ctrl, lambda q: branch(q) == "execute" and _answer_status(q, required) is False),
+                 "execute_unverified": share(ctrl, lambda q: branch(q) == "execute" and _answer_status(q, required) is None),
                  "confirm": share(ctrl, lambda q: branch(q) == "confirm"),
                  "ignore": share(ctrl, lambda q: branch(q) == "ignore")},
     }
+
+
+def policy_branch(
+    questions: dict[str, dict],
+    tau_intent: float,
+    tau_slots: float,
+    tau_confirm: float = 0.5,
+    required_qids: set[str] | None = None,
+) -> str:
+    """Single-record branch shared by policy reports and frozen real-data safety checks."""
+    required = required_qids or {"intent", "device", "action"}
+    intent = questions["intent"]
+    p_control = intent["probabilities"].get("控制", 0.0)
+    slots = required - {"intent"}
+    if (
+        intent["pred"] == "控制"
+        and p_control >= tau_intent
+        and slots <= questions.keys()
+        # An exit describes no single executable target. Send it for confirmation
+        # even if the classifier is very confident.
+        and questions.get("device", {}).get("pred") not in NONEXECUTABLE_DEVICE_EXITS
+        and all(questions[k]["p_top"] >= tau_slots for k in slots)
+    ):
+        return "execute"
+    return "confirm" if intent["pred"] == "控制" or p_control >= tau_confirm else "ignore"
 
 
 def dump_items(loaded: Loaded, eval_path: Path, *, batch_size: int = 16) -> list[dict]:
     """Model inputs for every question of an eval set, with the reference (this backend's) logits:
     what a platform runner consumes, and what it is checked against."""
     records = list(read_jsonl(eval_path))
-    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg)]
+    items = [it for r in records for it in record_items(r, loaded.tok, loaded.cfg, require_label=False)]
     return [
         {"key": item_key(it), "qtype": it["qtype"], "ids": list(it["ids"]), "markers": list(it["markers"]),
          "names": list(it["names"]), "ref_logits": [round(x, 5) for x in it["logits"]]}
@@ -232,7 +299,8 @@ def evaluate(
     loaded: Loaded, eval_path: Path, *, batch_size: int = 16, logits: dict[str, list[float]] | None = None
 ) -> dict:
     records = list(read_jsonl(eval_path))
-    rows = score_records(loaded, records, batch_size, logits)
+    policy_rows = score_records(loaded, records, batch_size, logits)
+    rows = [r for r in policy_rows if r["correct"] is not None]
     by_scn, by_qt, by_qid, by_tag = (
         defaultdict(list),
         defaultdict(list),
@@ -256,12 +324,13 @@ def evaluate(
         "eval_set": str(eval_path),
         "n_records": len(records),
         "overall": overall,
-        "decision": decision_metrics(rows),
+        "decision": decision_metrics(policy_rows),
         "by_scenario": {k: _agg(v) for k, v in sorted(by_scn.items())},
         "by_qtype": {k: _agg(v) for k, v in sorted(by_qt.items())},
         "by_question": {k: _agg(v) for k, v in sorted(by_qid.items())},
         "by_tag": {k: _agg(v) for k, v in sorted(by_tag.items()) if len(v) >= 5},
         "rows": rows,
+        "policy_rows": policy_rows,
     }
 
 
@@ -337,4 +406,5 @@ def write_report(report: dict, path: Path, *, keep_rows: bool = True) -> None:
     data = dict(report)
     if not keep_rows:
         data.pop("rows", None)
+        data.pop("policy_rows", None)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

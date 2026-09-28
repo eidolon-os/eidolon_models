@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 性子沉稳，走路爱数树影，习惯一句说完就闭嘴，和{b}不对付
+    b: 好奇心重，看见没见过的蘑菇就喊，常被{a}泼冷水，跟{c}关系好
+    c: 话少心细，走路总落在最后，偶尔插一句打趣{a}和{b}
+  user: '{a}，你刚刚是不是想说什么？这次好好说完行吗，别又只说一半，答完本轮就结束，我先记下来'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: finish
+    heard:
+      speaker: a
+      text: 我是想说，这条路走到岔口后往左边那棵歪脖子松树走，那条小道泥少、树荫密，走起来凉快，比右边那条舒服得多
+    brief: a 已完成回答，按用户要求结束
+  tag: finish_after_peer
+  id: safety_check_glm53_flash_finish_after_peer_003_0

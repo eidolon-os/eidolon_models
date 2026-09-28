@@ -1,0 +1,19 @@
+- mode: group
+  cast:
+    a: 擅长IP角色世界观梳理与故事主线拆解
+    b: 擅长角色人设细节与视觉符号设计
+    c: 擅长衍生内容排期与粉丝社群运营
+  user: 我们团要做一只原创松鼠IP，我脑子有点乱，能帮我把世界观故事线和角色外观设定一起理顺吗？下周就要给客户过一版。
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 先由 a 处理其专长部分
+  - action: respond
+    speaker: b
+    heard:
+      speaker: a
+      text: 先把主线定下来：松鼠因藏松果引发森林存亡之争，我已拆出三幕结构，第一幕它误藏了能唤醒季节的种子，故事线部分可以先确认。
+    brief: a 已公开完成自己的部分，交给 b
+  tag: speaker_handoff
+  id: glm53_flash_speaker_handoff_001_0

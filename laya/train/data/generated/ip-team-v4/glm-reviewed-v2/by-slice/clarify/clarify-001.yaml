@@ -1,0 +1,13 @@
+- mode: group
+  cast:
+    a: IP角色背景故事策划，擅长梳理人物经历与关系脉络
+    b: IP角色台词打磨师，擅长对白润色与情绪语气把控
+    c: IP角色美术设定顾问，擅长外观造型与风格描述
+  user: '{a}，帮我把团队里那个新角色的背景故事改一版吧，重点突出羁绊感，这一版我想尽快定稿，你先看看哪里最需要动。'
+  prelude: []
+  steps:
+  - action: clarify
+    speaker: a
+    brief: 缺少用户必须提供的信息
+  tag: clarify
+  id: glm53_flash_clarify_001_0

@@ -1,0 +1,18 @@
+- mode: group
+  cast:
+    a: 温吞慢性子，说话爱引诗句，总被 {b} 催促快些
+    b: 爽利泼辣，嗓门大，嫌 {a} 拖沓却事事先问他
+    c: 懒洋洋爱打盹，偶尔冒一句冷幽默，和谁都处得来
+  user: '{a}，明日我想出城去山寺看半日，你说先走东边石阶还是绕水路过去？其他人先别接话，等我问了再说。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户明确先让 a 完成回答
+  - action: wait
+    heard:
+      speaker: a
+      text: 依我之见，明日天若晴，走水路最妙。晨雾未散时登船，两岸芦花拂面，到了码头再拾级而上，山中桂香应还未散尽呢。
+    brief: a 已完成回答，等用户下一条指示
+  tag: wait_after_peer
+  id: glm53_flash_wait_after_peer_003_0

@@ -1,0 +1,60 @@
+{
+  "review_version": "ip-team-v4-glm53-flash-ensemble-safety-check-1-review-1",
+  "source_plan_version": "ip-team-v4-glm53-flash-ensemble-safety-check-1",
+  "selected_calls": [
+    {
+      "call_id": "finish_after_peer-001",
+      "slice": "finish_after_peer",
+      "response_sha256": "19c8bf6fed1b24b3b883bddcecc89ca61828ba91ed471a2c67b7039622147d3d",
+      "review_reason": "用户要求一位角色说完整后本轮结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_after_peer-002",
+      "slice": "finish_after_peer",
+      "response_sha256": "6b4f1f61fa926c35ba1b4fc6daec8a2a5e0c18a3e17dc85972e8a35e74479fbb",
+      "review_reason": "用户要求一位角色说完整后本轮结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_after_peer-003",
+      "slice": "finish_after_peer",
+      "response_sha256": "a235f5f0845785232a363c0ca171c6c81676006c01155191e547bc2197e7ead7",
+      "review_reason": "用户要求一位角色说完整后本轮结束。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-002",
+      "slice": "finish_direct",
+      "response_sha256": "60582068bc954e586bf7963d7b4b14ef98123d413f4b2b97d0dc076b68885f75",
+      "review_reason": "用户明确这轮结束，改日再和角色团说话。",
+      "episodes": 1
+    },
+    {
+      "call_id": "finish_direct-003",
+      "slice": "finish_direct",
+      "response_sha256": "3a6c60cfc05672d0886060d945c2666fb8a36df1219f3746927532b90a00de00",
+      "review_reason": "用户明确这轮结束，改日再和角色团说话。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-001",
+      "slice": "wait_or_finish",
+      "response_sha256": "5da21ef133b658eacddaf5b6c4301d11c1a0b587313ff39eaec9ce6e80f84c07",
+      "review_reason": "用户只要求暂停并等待下一条消息。",
+      "episodes": 1
+    },
+    {
+      "call_id": "wait_or_finish-002",
+      "slice": "wait_or_finish",
+      "response_sha256": "cdb178e18addbdf4740248b0e17d6bd0b917c8262fbcb11ff6ec4e194b160a3b",
+      "review_reason": "用户明确本轮结束。",
+      "episodes": 1
+    }
+  ],
+  "rejected_calls": {
+    "finish_direct-001": "响应字段不符合扁平 JSON 格式，结构校验拒绝。"
+  },
+  "families": 7,
+  "namespace": "safety_check_"
+}

@@ -1,0 +1,18 @@
+- mode: named
+  cast:
+    a: 慢性子，说话爱分段留悬念，最烦被 {b} 拖着赶进度
+    b: 话密嘴快，爱插嘴追问，常把 {a} 的慢节奏打乱
+  user: '{a}，昨天你说去环岛捡贝壳那事才讲一半就停了，接着把它分两段讲完吧，别让人催你。'
+  prelude: []
+  steps:
+  - action: respond
+    speaker: a
+    brief: 用户先指定 a 发言
+  - action: respond
+    speaker: a
+    heard:
+      speaker: a
+      text: 行，那我先讲上半段。船靠西岸的时候潮刚退，礁石缝里全是闪光的小片，我以为捡到了宝贝，凑近一看，竟是一片碎镜子。
+    brief: 用户要求 a 继续第二段
+  tag: same_member
+  id: ensemble_dev_glm53_flash_same_member_002_0
