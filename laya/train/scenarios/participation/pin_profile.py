@@ -5,7 +5,9 @@
 
 Writes <model-dir>/participation.json (schema 2, state format participation-laya-v1: the questions
 exactly as scenario.yaml trained them, plus the bounded clarification task per reason) and pins its
-sha256 in the model's manifest.json under task_profiles. min_confidence is the calibrated action
+sha256 in the model's manifest.json under task_profiles. Whether a clarify may carry these per-reason
+tasks (the reply model words the question from the public history) or must abstain is a policy choice
+(docs/IP团队/决策模型集成边界审查-20260928.md §4); --no-clarify-tasks gives the abstaining profile. min_confidence is the calibrated action
 confidence below which the service abstains and the agent decides (choose it on p-dev, PLAN.md §3).
 """
 
@@ -36,6 +38,8 @@ def main() -> int:
     ap.add_argument("--min-confidence", type=float, required=True)
     ap.add_argument("--max-candidates", type=int, default=5, help="largest team the release was trained on")
     ap.add_argument("--policy-version", help="default: participation-laya-v1/<revision>/min<conf>")
+    ap.add_argument("--no-clarify-tasks", action="store_true",
+                    help="write no clarification tasks: every clarify then abstains (as ip-team-v3 does)")
     a = ap.parse_args()
     model_dir = Path(a.model_dir)
     manifest_path = model_dir / "manifest.json"
@@ -59,7 +63,7 @@ def main() -> int:
         "min_confidence": a.min_confidence,
         "max_candidates": a.max_candidates,
         "questions": questions,
-        "clarify_instructions": CLARIFY_INSTRUCTIONS,
+        "clarify_instructions": {} if a.no_clarify_tasks else CLARIFY_INSTRUCTIONS,
     }
     raw = (json.dumps(profile, ensure_ascii=False, indent=1) + "\n").encode("utf-8")
     (model_dir / "participation.json").write_bytes(raw)

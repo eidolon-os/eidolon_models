@@ -245,7 +245,12 @@ class LayaParticipationPredictor:
     (laya/train/scenarios/participation): action, then speaker, then clarify_about.
 
     The state is built exactly as the training snapshots were; the questions come frozen from the
-    model's pinned profile. A clarify carries the profile's bounded task for its reason.
+    model's pinned profile. A clarify carries the profile's bounded task for its reason; a reason the
+    profile gives no task for (or an empty ``clarify_instructions``) abstains, as ip-team-v3 does.
+
+    Capacity: the model was trained on the last 16 public messages. The current round (the pinned
+    user request and everything after it) must fit in that window, or the request abstains; earlier
+    rounds beyond it are not shown to the model.
     """
 
     HISTORY = 16  # public entries the model was trained on (episodes.py HISTORY)
@@ -270,7 +275,8 @@ class LayaParticipationPredictor:
             or speaker.get("type") != "choice"
             or "criteria" in speaker
             or about.get("type") != "choice"
-            or set(about.get("criteria") or {}) != set(clarify_instructions)
+            or not about.get("criteria")
+            or not set(clarify_instructions) <= set(about["criteria"])
             or not all(isinstance(v, str) and v.strip() for v in clarify_instructions.values())
         ):
             raise ValueError("participation-laya-v1 profile questions do not match the trained task")
@@ -294,6 +300,8 @@ class LayaParticipationPredictor:
         history = request.context.recent_messages
         if not history or history[-1] != request.trigger:
             raise ContextTooLong("trigger is not the latest public message")
+        if request.user_request not in history[-self.HISTORY:]:
+            raise ContextTooLong("the current round does not fit the trained public window")
         public = []
         for message in history:
             if message.author_kind == "user":

@@ -323,14 +323,29 @@ def test_v1_rejects_unsupported_context_before_the_model():
     assert v1_adapter(V1Engine(answers("finish"), truncated=True)).decide(team_request()).status == "abstained"
 
 
-def test_v1_keeps_the_last_sixteen_public_messages():
+def test_v1_keeps_the_last_sixteen_public_messages_but_never_part_of_the_round():
     msgs = tuple(Message(message_id=f"m{i}", author_kind="user", author_id="input", text=f"第{i}句")
                  for i in range(20))
-    req = request(context=Context(recent_messages=msgs)).model_copy(update={"trigger": msgs[-1]})
+    req = request(context=Context(recent_messages=msgs)).model_copy(
+        update={"user_request": msgs[-1], "trigger": msgs[-1]})
     engine = V1Engine(answers("finish"))
-    v1_adapter(engine).decide(req)
+    assert v1_adapter(engine).decide(req).proposal.action == "finish"
     public = engine.calls[0][0]["公开记录"]
     assert len(public) == 16 and public[0]["内容"] == "第4句" and public[-1]["内容"] == "第19句"
+    # the round started 17 messages ago: showing only its tail would hide the request's progress
+    long_round = req.model_copy(update={"user_request": msgs[3]})
+    engine = V1Engine(answers("finish"))
+    assert v1_adapter(engine).decide(long_round).status == "abstained"
+    assert not engine.calls
+
+
+def test_v1_profile_without_clarify_tasks_abstains_on_clarify():
+    from eidolon_models_laya.participation import LayaParticipationPredictor
+    predictor = LayaParticipationPredictor(
+        V1Engine(answers("clarify", speaker="M0", about="指代不明")), questions=QUESTIONS, clarify_instructions={})
+    result = ParticipationAdapter(predictor, model_version="p2", policy_version="no-clarify",
+                                  min_confidence=0.8).decide(team_request())
+    assert result.status == "abstained"
 
 
 def test_v2_profile_loads_the_three_question_predictor(tmp_path):
