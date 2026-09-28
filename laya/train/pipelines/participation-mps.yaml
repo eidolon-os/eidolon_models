@@ -1,0 +1,23 @@
+# 参与决策（陪伴 + IP 角色团）。先运行 train/scenarios/participation/build.py --run <id> 把 episode 转成记录，
+# 再 eidolon-laya-train run --pipeline train/pipelines/participation-mps.yaml --run-id <id>。计划见 scenarios/participation/PLAN.md。
+runs_dir: ../runs
+steps:
+  - stage: assemble
+    config: ../scenarios/participation/assemble.yaml
+    out: "{run}/dataset"
+  - stage: train
+    config: ../scenarios/participation/train.yaml
+    dataset: "{run}/dataset"
+    out: "{run}/checkpoint"
+  - stage: calibrate
+    checkpoint: "{run}/checkpoint"
+    calib: "{run}/dataset/calib.jsonl"
+  - stage: eval
+    checkpoint: "{run}/checkpoint"
+    eval_set:
+      - "{run}/eval-dev.jsonl"
+    out: "{run}/eval"
+  - stage: package
+    checkpoint: "{run}/checkpoint"
+    models_root: ../../models
+    name: laya-participation

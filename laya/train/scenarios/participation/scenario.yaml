@@ -1,0 +1,29 @@
+# 参与决策（陪伴 + IP 角色团）：题目定义。规则见 LABELING.md，计划见 PLAN.md。
+# 模型只回答语义问题；SDK 的 respond / clarify / wait / finish / abstained 由运行时按 PLAN.md §3 映射。
+name: participation
+
+questions:
+  action:
+    type: choice
+    instructions: "在`最新一条`之后，下一步应该怎样？只依据公开记录判断本轮用户请求是否还需要有人说话。"
+    criteria:
+      respond: 本轮请求还需要某位角色说话，而且不缺信息就能说
+      clarify: 不先问清楚就没法正确回应（指代不明、要求不明、点名的角色不在场）
+      wait: 本轮还没完成，但现在不该有人说话（用户要求安静或暂停，或刚问完澄清问题在等回答）
+      finish: 本轮请求已经完成（要的内容都说到了），或用户明确结束这一轮
+
+  speaker:
+    type: choice
+    instructions: "应该由哪一位角色来说？（点名的、被要求继续或回应的、或适合回答开放问题的角色）"
+    criteria_from: candidates      # 生成器按样本给 {M0: "阿舟：角色说明", ...}
+
+  clarify_about:
+    type: choice
+    instructions: "需要先问清楚的是什么？"
+    criteria:
+      指代不明: 不确定用户说的是哪一位或哪一个
+      要求不明: 不确定用户要做什么
+      对象不在场: 用户点名的角色不在候选里
+
+eval_sets:
+  - ../../../evals/participation-laya

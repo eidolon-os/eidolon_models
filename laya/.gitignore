@@ -5,3 +5,7 @@ models/*/*/npu/
 .venv/
 .env
 train/private/
+
+# participation: raw GLM responses and the call ledger stay local (accepted episodes are committed)
+train/data/participation/glm-ledger/
+train/data/participation/*/raw/

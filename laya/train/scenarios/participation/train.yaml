@@ -1,0 +1,15 @@
+# 参与决策 p1：沿用家居 r14 配方（全部 22 层解冻、3 epoch、验证集 NLL 选轮），见 PLAN.md §7。
+init: ../../../models/laya-multilingual/1c5edc17/torch
+model_name: laya-participation
+epochs: 3
+batch_size: 16
+lr_encoder: 2.5e-5
+lr_head: 1.0e-4
+unfreeze_layers: -1
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.06
+weight_decay: 0.01
+max_len: 1024        # 实测最长约 720 token（团队 5 人 + 16 条历史）
+head_max_len: 512
+seed: 7

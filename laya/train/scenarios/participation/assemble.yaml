@@ -1,0 +1,13 @@
+# 参与决策：训练数据来源分开存放，这里按权重混合。records 由 episodes.py 从 episode 文件生成。
+seed: 7
+sources:
+  - path: "{run}/claude.jsonl"      # Claude 写手按 WRITING.md 撰写
+    weight: 1.0
+  - path: "{run}/glm.jsonl"         # glm_generate.py：剧本定金标，GLM 写文字
+    weight: 1.0
+locked_eval:                         # 评测集的记录：按 id 和状态哈希永远排除
+  - "{run}/eval-dev.jsonl"
+  - "{run}/eval-test.jsonl"
+split:
+  val: 0.1
+  calib: 0.1
