@@ -62,3 +62,5 @@
 {"episode": "G2-01541", "event": 2, "gold": {"action": "wait"}, "why": "QA: 角色问用户要继续请求所需的信息（§6 角色问用户）→ wait；用户要聊咖啡和茶，角色没给内容，只问从哪个聊起（选 A 还是 B）；角色本可自己挑一个开讲，略拿不准"}
 {"episode": "G2-01563", "event": 3, "gold": {"action": "wait"}, "why": "QA: 角色问用户要继续请求所需的信息（§6 角色问用户）→ wait；用户要木刻小兔子，角色开刻前问耳朵竖还是垂（要选项），没有回答做不完这个请求"}
 {"episode": "CT4-0043", "event": 5, "gold": {"action": "respond", "speaker": ["dd_b"]}, "why": "QA: 小豆豆当面请扎气球的豆豆再扎一只（§6 角色之间当面提问）→ respond 被请求的那位"}
+{"episode": "CX3-0025", "event": 4, "gold": {"action": "clarify", "speaker": ["lin_doc", "lin_bake", "amay"], "clarify_about": "指代不明"}, "truncate": true, "why": "QA(p3 盲标): 同名 / 共享称呼，上下文指向一位、问题只是落在另一位专长上——不算线索，冲突 → clarify；之后的回答截断"}
+{"episode": "CX3-0028", "event": 2, "gold": {"action": "clarify", "speaker": ["chen", "wang", "xiaoyu"], "clarify_about": "指代不明"}, "truncate": true, "why": "QA(p3 盲标): 同名 / 共享称呼，上下文指向一位、问题只是落在另一位专长上——不算线索，冲突 → clarify；之后的回答截断"}
