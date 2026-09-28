@@ -1,0 +1,1028 @@
+{
+  "device_execution": false,
+  "results": [
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 1,
+      "elapsed_ms": 537.5,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-0",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 505.2
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 1,
+      "elapsed_ms": 423.1,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-1",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9916,
+          "device_p": 0.376,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 410.4
+        }
+      }
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 1,
+      "elapsed_ms": 354.0,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-2",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 341.3
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 1,
+      "elapsed_ms": 347.7,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-3",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5345,
+          "action_p": 0.5997,
+          "backend": "rknn",
+          "server_ms": 335.8
+        }
+      }
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 1,
+      "elapsed_ms": 350.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-4",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 340.6
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 1,
+      "elapsed_ms": 371.7,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-5",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9916,
+          "device_p": 0.376,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 356.1
+        }
+      }
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 1,
+      "elapsed_ms": 465.2,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-6",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 445.9
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 1,
+      "elapsed_ms": 400.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-7",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5345,
+          "action_p": 0.5997,
+          "backend": "rknn",
+          "server_ms": 391.5
+        }
+      }
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 1,
+      "elapsed_ms": 357.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-8",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 338.1
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 1,
+      "elapsed_ms": 398.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-9",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9916,
+          "device_p": 0.376,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 383.0
+        }
+      }
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 1,
+      "elapsed_ms": 339.3,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-10",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 319.5
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 1,
+      "elapsed_ms": 385.3,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-11",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5345,
+          "action_p": 0.5997,
+          "backend": "rknn",
+          "server_ms": 372.2
+        }
+      }
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 1,
+      "elapsed_ms": 494.1,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-12",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 482.5
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 1,
+      "elapsed_ms": 386.2,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-13",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9916,
+          "device_p": 0.376,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 373.6
+        }
+      }
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 1,
+      "elapsed_ms": 453.8,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-14",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 434.8
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 1,
+      "elapsed_ms": 481.0,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-15",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5345,
+          "action_p": 0.5997,
+          "backend": "rknn",
+          "server_ms": 470.9
+        }
+      }
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 1,
+      "elapsed_ms": 460.5,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-16",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 448.4
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 1,
+      "elapsed_ms": 422.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-17",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9916,
+          "device_p": 0.376,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 402.8
+        }
+      }
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 1,
+      "elapsed_ms": 433.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-18",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 418.9
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 1,
+      "elapsed_ms": 2508.1,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-19",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5345,
+          "action_p": 0.5997,
+          "backend": "rknn",
+          "server_ms": 529.3
+        }
+      }
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 1,
+      "elapsed_ms": 445.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-20",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 424.7
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 1,
+      "elapsed_ms": 1601.1,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-21",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9916,
+          "device_p": 0.376,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 437.6
+        }
+      }
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 1,
+      "elapsed_ms": 730.2,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-22",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 441.7
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 1,
+      "elapsed_ms": 408.7,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-1-23",
+        "status": "decided",
+        "proposal": {
+          "intent": "unrelated",
+          "target_status": "none",
+          "targets": [],
+          "action": null,
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9972,
+          "device_p": 0.5345,
+          "action_p": 0.5997,
+          "backend": "rknn",
+          "server_ms": 388.6
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 2,
+      "elapsed_ms": 23.1,
+      "error": "UNAVAILABLE: laya HTTP 503 busy"
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 2,
+      "elapsed_ms": 466.3,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-2-0",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 453.0
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 2,
+      "elapsed_ms": 18.3,
+      "error": "UNAVAILABLE: laya HTTP 503 busy"
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 2,
+      "elapsed_ms": 376.8,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-2-2",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 360.3
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 2,
+      "elapsed_ms": 12.3,
+      "error": "UNAVAILABLE: laya HTTP 503 busy"
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 2,
+      "elapsed_ms": 434.6,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-2-4",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 421.0
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 2,
+      "elapsed_ms": 16.2,
+      "error": "UNAVAILABLE: laya HTTP 503 busy"
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 2,
+      "elapsed_ms": 414.1,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-2-6",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 399.6
+        }
+      }
+    },
+    {
+      "utterance": "关闭主灯",
+      "concurrency": 2,
+      "elapsed_ms": 13.8,
+      "error": "UNAVAILABLE: laya HTTP 503 busy"
+    },
+    {
+      "utterance": "打开客厅灯",
+      "concurrency": 2,
+      "elapsed_ms": 409.1,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-2-8",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.main_light"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.994,
+          "device_p": 0.981,
+          "action_p": 0.9958,
+          "backend": "rknn",
+          "server_ms": 393.3
+        }
+      }
+    },
+    {
+      "utterance": "今天星期几",
+      "concurrency": 2,
+      "elapsed_ms": 14.7,
+      "error": "UNAVAILABLE: laya HTTP 503 busy"
+    },
+    {
+      "utterance": "主卧灯调亮20%",
+      "concurrency": 2,
+      "elapsed_ms": 418.9,
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "formal-npu-2-10",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "master.light"
+          ],
+          "action": {
+            "trait": "level",
+            "command": "step",
+            "slots": [
+              {
+                "name": "delta",
+                "value": 20,
+                "unit": "%",
+                "raw_span": "20%"
+              }
+            ]
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-v1",
+        "model_version": "laya-smart-home@45f3dedb",
+        "diagnostics": {
+          "intent_p": 0.9949,
+          "device_p": 0.9769,
+          "action_p": 0.705,
+          "backend": "rknn",
+          "server_ms": 406.2
+        }
+      }
+    }
+  ]
+}
