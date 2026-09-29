@@ -1,0 +1,92 @@
+{"home": "family3", "text": "老公，你从书房出来的时候把客厅灯关一下", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "family3", "text": "麻烦把客厅灯关一下", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "duplex", "text": "老婆，你上楼顺便把书房灯开一下", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "duplex", "text": "把二楼书房灯开一下", "intent": "控制", "device": "二楼书房灯", "action": "打开或启动", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "family3", "text": "妈，天黑了麻烦你把主卧窗帘拉上", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "duplex", "text": "爸，你要是先到家就把一楼客厅空调开一下", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "duplex", "text": "把一楼客厅空调打开", "intent": "控制", "device": "一楼客厅空调", "action": "打开或启动", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "family3", "text": "姐，你看完节目记得把客厅电视关了", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "family3", "text": "把客厅电视关了", "intent": "控制", "device": "客厅电视", "action": "关闭或停止", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "duplex", "text": "婆婆，太晃眼了，麻烦你把二楼主卧灯调暗一点", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "duplex", "text": "把二楼主卧灯调暗一点", "intent": "控制", "device": "二楼主卧灯", "action": "调低或减小", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "family3", "text": "宝贝，睡觉前记得把儿童房顶灯关掉哦", "intent": "无关", "tags": ["c3-mention-noncommand", "child-imperative"]}
+{"home": "family3", "text": "把儿童房顶灯关掉", "intent": "控制", "device": "儿童房顶灯", "action": "关闭或停止", "tags": ["c3-mention-control", "child-imperative"]}
+{"home": "duplex", "text": "妹妹你写作业呢，把书房音箱声音调小点", "intent": "无关", "tags": ["c3-mention-noncommand", "child-imperative"]}
+{"home": "duplex", "text": "把二楼书房音箱声音调小点", "intent": "控制", "device": "二楼书房音箱", "action": "调低或减小", "tags": ["c3-mention-control", "child-imperative"]}
+{"home": "family3", "text": "囡囡，热的话你自己把儿童房空调温度调低一点", "intent": "无关", "tags": ["c3-mention-noncommand", "child-imperative"]}
+{"home": "family3", "text": "把儿童房空调温度调低一点", "intent": "控制", "device": "儿童房空调", "action": "调低或减小", "tags": ["c3-mention-control", "child-imperative"]}
+{"home": "duplex", "text": "儿子，摸黑别绊倒了，快把主卧灯开开", "intent": "无关", "tags": ["c3-mention-noncommand", "child-imperative"]}
+{"home": "duplex", "text": "把二楼主卧灯开开", "intent": "控制", "device": "二楼主卧灯", "action": "打开或启动", "tags": ["c3-mention-control", "child-imperative"]}
+{"home": "family3", "text": "囡囡起床啦，去把客厅窗帘拉开透透光", "intent": "无关", "tags": ["c3-mention-noncommand", "child-imperative"]}
+{"home": "family3", "text": "喵喵你别趴出风口那儿，妈妈这就把主卧空调关了", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-address"]}
+{"home": "family3", "text": "把主卧空调关了", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["c3-mention-control", "pet-address"]}
+{"home": "duplex", "text": "旺财别追了，我把一楼扫地机关掉就是了", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-address"]}
+{"home": "duplex", "text": "把一楼扫地机关掉", "intent": "控制", "device": "一楼扫地机", "action": "关闭或停止", "tags": ["c3-mention-control", "pet-address"]}
+{"home": "family3", "text": "咪咪你先别闹腾，扫地机器人我让它先停一下", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-address"]}
+{"home": "duplex", "text": "球球你窝里潮不潮呀，要不我把二楼除湿机开上", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-address"]}
+{"home": "duplex", "text": "把二楼除湿机开上", "intent": "控制", "device": "二楼除湿机", "action": "打开或启动", "tags": ["c3-mention-control", "pet-address"]}
+{"home": "family3", "text": "从前有个小姑娘，每天睡前都要把客厅灯关掉才安心", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "family3", "text": "把客厅灯关掉", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "duplex", "text": "故事里的小兔子走夜路，总会先把楼梯灯打开", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "family3", "text": "月亮姐姐说，乖宝宝睡前要把儿童房顶灯调暗一点", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "family3", "text": "把儿童房顶灯调暗一点", "intent": "控制", "device": "儿童房顶灯", "action": "调低或减小", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "duplex", "text": "小熊一家讲的童谣里唱，太阳下山把主卧灯关上", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "duplex", "text": "把二楼主卧灯关上", "intent": "控制", "device": "二楼主卧灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "family3", "text": "故事讲完啦，故事里的哥哥最后把客厅电视关了才睡觉", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "family3", "text": "把客厅电视关掉", "intent": "控制", "device": "客厅电视", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "family3", "text": "等会儿吃完饭我自己去把洗衣机开一下", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "family3", "text": "帮我把洗衣机打开", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "duplex", "text": "我一会儿上楼的时候顺手把二楼洗衣机开了就行，不麻烦你", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "duplex", "text": "把二楼洗衣机打开", "intent": "控制", "device": "二楼洗衣机", "action": "打开或启动", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "family3", "text": "晚点收衣服的时候我自己把电动晾衣架放下来", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "family3", "text": "把电动晾衣架放下来", "intent": "控制", "device": "电动晾衣架", "action": "调低或减小", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "duplex", "text": "衣服晾好我回头自己把二楼晾衣架升上去，不用你操心", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "duplex", "text": "把二楼晾衣架升上去", "intent": "控制", "device": "二楼晾衣架", "action": "调高或增大", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "family3", "text": "太阳下山我自己会记得把主卧窗帘拉上", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "family3", "text": "把主卧窗帘拉上", "intent": "控制", "device": "主卧窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "family3", "text": "老公，要是晚上冷了我们就把主卧空调开开", "intent": "无关", "tags": ["c3-mention-noncommand", "conditional-discussion"]}
+{"home": "family3", "text": "把主卧空调开开", "intent": "控制", "device": "主卧空调", "action": "打开或启动", "tags": ["c3-mention-control", "conditional-discussion"]}
+{"home": "duplex", "text": "媳妇儿，等这波热的过去，咱把二楼主卧空调关了吧", "intent": "无关", "tags": ["c3-mention-noncommand", "conditional-discussion"]}
+{"home": "duplex", "text": "把二楼主卧空调关了", "intent": "控制", "device": "二楼主卧空调", "action": "关闭或停止", "tags": ["c3-mention-control", "conditional-discussion"]}
+{"home": "family3", "text": "老婆你说，要是孩子鼻子又干了，咱们是不是该把儿童房加湿器开上", "intent": "无关", "tags": ["c3-mention-noncommand", "conditional-discussion"]}
+{"home": "family3", "text": "把儿童房加湿器开上", "intent": "控制", "device": "儿童房加湿器", "action": "打开或启动", "tags": ["c3-mention-control", "conditional-discussion"]}
+{"home": "duplex", "text": "老公你看，要是回南天返潮严重，是不是该把二楼除湿机打开", "intent": "无关", "tags": ["c3-mention-noncommand", "conditional-discussion"]}
+{"home": "duplex", "text": "把二楼除湿机打开", "intent": "控制", "device": "二楼除湿机", "action": "打开或启动", "tags": ["c3-mention-control", "conditional-discussion"]}
+{"home": "family3", "text": "妈，要是外头又开始施工扬灰，咱把空气净化器打开吧", "intent": "无关", "tags": ["c3-mention-noncommand", "conditional-discussion"]}
+{"home": "family3", "text": "物业说离开小区超过两小时就得把智能门锁锁上，不然扣物业分", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "family3", "text": "把智能门锁锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "duplex", "text": "房东在群里说走的时候记得把一楼门锁反锁", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "duplex", "text": "把一楼门锁反锁", "intent": "控制", "device": "一楼门锁", "action": "上锁", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "family3", "text": "房东说退租前要把热水器关掉，省着点气费", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "family3", "text": "把热水器关掉", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "duplex", "text": "物业通知说这几天空气质量差，建议把全屋新风打开", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "duplex", "text": "把全屋新风打开", "intent": "控制", "device": "全屋新风", "action": "打开或启动", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "family3", "text": "快递员在楼下喊，说等下要进来验收，让先把洗衣机停一下别太吵", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "family3", "text": "把洗衣机先停一下", "intent": "控制", "device": "洗衣机", "action": "暂停", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "family3", "text": "客厅窗帘我已经拉上了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "duplex", "text": "一楼客厅灯我刚下楼顺手关了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "duplex", "text": "把一楼客厅灯关了", "intent": "控制", "device": "一楼客厅灯", "action": "关闭或停止", "tags": ["c3-mention-control", "already-done"]}
+{"home": "family3", "text": "空气净化器我早上出门前就打开了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "family3", "text": "帮我把空气净化器打开", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["c3-mention-control", "already-done"]}
+{"home": "duplex", "text": "二楼浴霸我洗澡前就开着了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "duplex", "text": "把二楼浴霸打开", "intent": "控制", "device": "二楼浴霸", "action": "打开或启动", "tags": ["c3-mention-control", "already-done"]}
+{"home": "family3", "text": "门我已经锁了，智能门锁刚才反锁的", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "family3", "text": "麻烦把智能门锁锁上", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["c3-mention-control", "already-done"]}
+{"home": "family3", "text": "这台主卧加湿器一般能加湿多大面积啊", "intent": "无关", "tags": ["c3-mention-noncommand", "spec-knowledge"]}
+{"home": "family3", "text": "把主卧加湿器打开", "intent": "控制", "device": "主卧加湿器", "action": "打开或启动", "tags": ["c3-mention-control", "spec-knowledge"]}
+{"home": "duplex", "text": "二楼主卧空调这种型号一般能用几年啊", "intent": "无关", "tags": ["c3-mention-noncommand", "spec-knowledge"]}
+{"home": "duplex", "text": "把二楼主卧空调打开", "intent": "控制", "device": "二楼主卧空调", "action": "打开或启动", "tags": ["c3-mention-control", "spec-knowledge"]}
+{"home": "family3", "text": "洗衣机这种是不是都有个免打结的功能", "intent": "无关", "tags": ["c3-mention-noncommand", "spec-knowledge"]}
+{"home": "duplex", "text": "一楼洗碗机这种一般一次能洗几套餐具", "intent": "无关", "tags": ["c3-mention-noncommand", "spec-knowledge"]}
+{"home": "duplex", "text": "把一楼洗碗机打开", "intent": "控制", "device": "一楼洗碗机", "action": "打开或启动", "tags": ["c3-mention-control", "spec-knowledge"]}
+{"home": "family3", "text": "烘干机这种一般是不是特别费电啊，一小时大概多少度", "intent": "无关", "tags": ["c3-mention-noncommand", "spec-knowledge"]}
+{"home": "family3", "text": "把烘干机打开", "intent": "控制", "device": "烘干机", "action": "打开或启动", "tags": ["c3-mention-control", "spec-knowledge"]}
+{"home": "family3", "text": "喂你等一下，我这把客厅电视声音调小点，开会呢", "intent": "无关", "tags": ["c3-mention-noncommand", "call-aside"]}
+{"home": "duplex", "text": "稍等，视频会议突然响了，我把书房音箱声音调小点", "intent": "无关", "tags": ["c3-mention-noncommand", "call-aside"]}
+{"home": "duplex", "text": "把二楼书房音箱调小声点", "intent": "控制", "device": "二楼书房音箱", "action": "调低或减小", "tags": ["c3-mention-control", "call-aside"]}
+{"home": "family3", "text": "电话那头说太吵了，我先把主卧空调风速调小点", "intent": "无关", "tags": ["c3-mention-noncommand", "call-aside"]}
+{"home": "family3", "text": "把主卧空调风速调小点", "intent": "控制", "device": "主卧空调", "action": "调低或减小", "tags": ["c3-mention-control", "call-aside"]}
+{"home": "duplex", "text": "打着电话呢，你等我一下，我把二楼主卧空调调小点声", "intent": "无关", "tags": ["c3-mention-noncommand", "call-aside"]}
+{"home": "duplex", "text": "把二楼主卧空调调小点声", "intent": "控制", "device": "二楼主卧空调", "action": "调低或减小", "tags": ["c3-mention-control", "call-aside"]}
+{"home": "family3", "text": "开视频会呢，背光太厉害，我把客厅窗帘拉上", "intent": "无关", "tags": ["c3-mention-noncommand", "call-aside"]}
+{"home": "family3", "text": "麻烦把客厅窗帘拉上", "intent": "控制", "device": "客厅窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "call-aside"]}

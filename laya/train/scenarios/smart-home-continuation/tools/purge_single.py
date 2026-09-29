@@ -13,7 +13,7 @@ from purge_training_overlap import hit, locked_texts  # noqa: E402
 locked = locked_texts()
 root = LAYA / "train/data/authored/smart-home-c3"
 purged = []
-for f in sorted(root.glob("b*.jsonl")):
+for f in sorted(root.glob("[bm]*.jsonl")):
     keep = []
     for line in f.read_text("utf-8").splitlines():
         if not line.strip():
@@ -25,5 +25,6 @@ for f in sorted(root.glob("b*.jsonl")):
         else:
             keep.append(line)
     f.write_text("".join(x + "\n" for x in keep), "utf-8")
-(root / "qa" / "purged.jsonl").write_text("".join(json.dumps(p, ensure_ascii=False) + "\n" for p in purged), "utf-8")
+with (root / "qa" / "purged.jsonl").open("a", encoding="utf-8") as fh:  # 追加：每次清理的记录都留着
+    fh.write("".join(json.dumps(p, ensure_ascii=False) + "\n" for p in purged))
 print(f"purged {len(purged)}", purged[:10])

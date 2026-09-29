@@ -22,3 +22,13 @@
 {"file": "b5.jsonl", "text": "我屋的灯除了台灯都关了", "locked": "smart-home-accept:W4-0215"}
 {"file": "b5.jsonl", "text": "门锁上了没", "locked": "smart-home-accept:W2-0296"}
 {"file": "b5.jsonl", "text": "热水器可以关了，洗完了", "locked": "smart-home-accept:W4-0169"}
+{"file": "m1.jsonl", "text": "帮我把主卧窗帘拉上", "locked": "v2-03-050"}
+{"file": "m1.jsonl", "text": "把客厅窗帘拉开", "locked": "01-06"}
+{"file": "m1.jsonl", "text": "让扫地机器人先停一下", "locked": "09-08"}
+{"file": "m1.jsonl", "text": "把楼梯灯打开", "locked": "smart-home-accept:W4-0006"}
+{"file": "m1.jsonl", "text": "把空气净化器打开", "locked": "v2-09-024"}
+{"file": "m1.jsonl", "text": "把客厅窗帘拉上", "locked": "01-06"}
+{"file": "m1.jsonl", "text": "把洗衣机打开", "locked": "smart-home-accept:W2-0199"}
+{"file": "m1.jsonl", "text": "把客厅电视声音调小点", "locked": "v2-08-013"}
+{"file": "m2.jsonl", "text": "帮我把床头灯关了", "locked": "v2-06-007"}
+{"file": "m2.jsonl", "text": "阳台晾衣架降下来,我要晾衣服", "locked": "smart-home-accept:W4-0118"}

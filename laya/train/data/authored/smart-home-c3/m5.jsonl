@@ -1,0 +1,100 @@
+{"home": "studio", "text": "老周，你把空调关了呗，遥控器就在枕头边上", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "studio", "text": "空调帮我关了呗，吹得胳膊凉飕飕的", "intent": "控制", "device": "空调", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "studio", "text": "煤球！别扒拉风扇，开着呢，当心夹着你爪子", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "studio", "text": "风扇先关一下，煤球老凑过去扒拉", "intent": "控制", "device": "风扇", "action": "关闭或停止", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "studio", "text": "豆豆别把投影仪声音开那么大，耳朵要震坏了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "studio", "text": "投影仪声音小一点，豆豆耳朵受不了", "intent": "控制", "device": "投影仪", "action": "调低或减小", "tags": ["c3-mention-control", "to-child"]}
+{"home": "studio", "text": "从前有只小熊，每天晚上都要自己把灯关掉才肯睡觉", "intent": "无关", "tags": ["c3-mention-noncommand", "story"]}
+{"home": "studio", "text": "好啦故事讲完了，把灯关掉睡觉", "intent": "控制", "device": "顶灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story"]}
+{"home": "studio", "text": "绘本里那只小兔子一拉开窗帘，太阳公公就笑眯眯地出来了", "intent": "无关", "tags": ["c3-mention-noncommand", "story"]}
+{"home": "studio", "text": "拉开窗帘让太阳公公进来吧，屋里跟个山洞似的", "intent": "控制", "device": "窗帘", "action": "打开或启动", "tags": ["c3-mention-control", "story"]}
+{"home": "studio", "text": "那电影里主角一进门喊了声开灯，灯就亮了，我那会儿觉得老科幻了", "intent": "无关", "tags": ["c3-mention-noncommand", "story"]}
+{"home": "studio", "text": "开灯开灯，黑咕隆咚啥也看不见", "intent": "控制", "device": "顶灯", "action": "打开或启动", "tags": ["c3-mention-control", "story"]}
+{"home": "studio", "text": "夏天到了，我打算以后晚上只开风扇不开空调，电费太吓人", "intent": "无关", "tags": ["c3-mention-noncommand", "plan"]}
+{"home": "studio", "text": "今晚开风扇就够了，帮我开一下", "intent": "控制", "device": "风扇", "action": "打开或启动", "tags": ["c3-mention-control", "plan"]}
+{"home": "studio", "text": "要是周六出太阳，我就把那堆被罩扔洗衣机里全洗了", "intent": "无关", "tags": ["c3-mention-noncommand", "plan", "conditional"]}
+{"home": "studio", "text": "洗衣机开始洗吧，被罩都塞进去了", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["c3-mention-control", "plan"]}
+{"home": "studio", "text": "物业群里说今晚要停电检修，让各家先把热水器关了", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "studio", "text": "物业说今晚停电检修，那热水器先关了吧", "intent": "控制", "device": "热水器", "action": "关闭或停止", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "studio", "text": "门我出门的时候就锁好了，别惦记了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "studio", "text": "门锁一下吧，我记不清出门锁没锁了", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["c3-mention-control", "already-done"]}
+{"home": "studio", "text": "窗帘我睡前就拉得严严实实的，一点光都不透", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "studio", "text": "窗帘再拉严实点，外头路灯晃眼睛", "intent": "控制", "device": "窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "already-done"]}
+{"home": "studio", "text": "空调睡觉开二十六度是不是最健康啊", "intent": "无关", "tags": ["c3-mention-noncommand", "knowledge"]}
+{"home": "studio", "text": "空调开二十六度，准备睡了", "intent": "控制", "device": "空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-mention-control", "knowledge"]}
+{"home": "studio", "text": "这音箱开到最大音量能有多少分贝啊", "intent": "无关", "tags": ["c3-mention-noncommand", "spec"]}
+{"home": "studio", "text": "音箱开到最大，这首歌就得大声听", "intent": "控制", "device": "音箱", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["c3-mention-control", "spec"]}
+{"home": "studio", "text": "扫地机扫到一半暂停了，再开是接着扫还是从头扫啊", "intent": "无关", "tags": ["c3-mention-noncommand", "knowledge"]}
+{"home": "studio", "text": "扫地机先暂停一下，我下楼拿个快递马上回来", "intent": "控制", "device": "扫地机", "action": "暂停", "tags": ["c3-mention-control", "knowledge"]}
+{"home": "studio", "text": "嗯嗯听见了，你先把你们会议室那台投影仪打开，我这边共享屏幕", "intent": "无关", "tags": ["c3-mention-noncommand", "call-meeting"]}
+{"home": "studio", "text": "投影仪打开，我这边要共享屏幕开会了", "intent": "控制", "device": "投影仪", "action": "打开或启动", "tags": ["c3-mention-control", "call-meeting"]}
+{"home": "studio", "text": "喂，你把你那音响声儿关小点，我电话里全是你那边的歌", "intent": "无关", "tags": ["c3-mention-noncommand", "call-meeting"]}
+{"home": "studio", "text": "音箱声儿关小点，我接个电话", "intent": "控制", "device": "音箱", "action": "调低或减小", "tags": ["c3-mention-control", "call-meeting"]}
+{"home": "studio", "text": "天猫精灵，把灯调暗一点，有点晃眼", "intent": "无关", "tags": ["c3-mention-noncommand", "other-assistant"]}
+{"home": "studio", "text": "小易，把灯调暗一点，有点晃眼", "intent": "控制", "device": "顶灯", "action": "调低或减小", "tags": ["c3-mention-control", "wake-name"]}
+{"home": "studio", "text": "热水器我自己去按开就行，就在门边上", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "studio", "text": "热水器开一下，我待会儿洗澡", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "studio", "text": "说明书上写着扫地机头一回用得先充满电再启动", "intent": "无关", "tags": ["c3-mention-noncommand", "tutorial-quote"]}
+{"home": "studio", "text": "扫地机启动吧，电早就充满了", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["c3-mention-control", "tutorial-quote"]}
+{"home": "studio", "text": "提醒我晚上十一点把音响关了，别吵着隔壁", "intent": "无关", "tags": ["c3-mention-noncommand", "reminder"]}
+{"home": "studio", "text": "晚上十一点把音箱关了，别吵着隔壁", "intent": "控制", "device": "音箱", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["c3-mention-control", "timed"]}
+{"home": "studio", "text": "我同事说他家投影仪天天开八个小时，灯泡半年就烧了", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-past"]}
+{"home": "studio", "text": "投影仪都开一下午了，先关了让它歇歇", "intent": "控制", "device": "投影仪", "action": "关闭或停止", "tags": ["c3-mention-control", "relay-past"]}
+{"home": "studio", "text": "宝，你去把门反锁一下，我这手上全是面膜", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "studio", "text": "门反锁一下，我这手上全是面膜腾不开", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["c3-mention-control", "to-family"]}
+{"home": "studio", "text": "妈你那边要是冷就把空调开开，别舍不得那点电费", "intent": "无关", "tags": ["c3-mention-noncommand", "call-meeting", "to-family"]}
+{"home": "studio", "text": "空调开开吧，不差那点电费", "intent": "控制", "device": "空调", "action": "打开或启动", "tags": ["c3-mention-control", "call-meeting"]}
+{"home": "studio", "text": "等我搬了新家，一定要装那种能慢慢变亮的灯", "intent": "无关", "tags": ["c3-mention-noncommand", "plan"]}
+{"home": "studio", "text": "灯慢慢调亮点，刚睡醒眼睛受不了", "intent": "控制", "device": "顶灯", "action": "调高或增大", "tags": ["c3-mention-control", "plan"]}
+{"home": "studio", "text": "洗衣机刚才一直嘀嘀响，屏幕上显示洗涤完成", "intent": "无关", "tags": ["c3-mention-noncommand", "device-prompt"]}
+{"home": "studio", "text": "洗衣机再洗一遍，显示洗涤完成了可还有股味儿", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["c3-mention-control", "device-prompt"]}
+{"home": "rental", "text": "小张，你走的时候把客厅电视关一下哈，别又开一宿", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "roommate"]}
+{"home": "rental", "text": "客厅电视关一下哈，又开了一宿没人看", "intent": "控制", "device": "客厅公共电视", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "rental", "text": "阿杰你洗完记得把热水器关了啊，上回烧了一整晚", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "roommate"]}
+{"home": "rental", "text": "热水器关了吧，我洗完了，别又烧一整晚", "intent": "控制", "device": "公共热水器", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "rental", "text": "关灯关灯快睡觉，小猪呼噜呼噜叫，我侄女一到晚上就唱这个", "intent": "无关", "tags": ["c3-mention-noncommand", "story", "rhyme"]}
+{"home": "rental", "text": "我屋灯关了吧，快睡觉了", "intent": "控制", "device": "我房间的灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story"]}
+{"home": "rental", "text": "下个月电费涨价，我打算以后晚上少开点我屋空调", "intent": "无关", "tags": ["c3-mention-noncommand", "plan"]}
+{"home": "rental", "text": "今晚我屋空调还是开会儿吧", "intent": "控制", "device": "我房间空调", "action": "打开或启动", "tags": ["c3-mention-control", "plan"]}
+{"home": "rental", "text": "我跟室友说好了，以后大家周末轮流开洗衣机，别撞一块儿", "intent": "无关", "tags": ["c3-mention-noncommand", "plan"]}
+{"home": "rental", "text": "洗衣机现在开吧，趁这会儿没人跟我撞", "intent": "控制", "device": "公共洗衣机", "action": "打开或启动", "tags": ["c3-mention-control", "plan"]}
+{"home": "rental", "text": "房东说公共区空调冬天别开太高，最多开到二十二度", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "rental", "text": "公共区空调开到二十二度吧，房东不让开太高", "intent": "控制", "device": "公共区空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "rental", "text": "外卖小哥打电话说让我把大门锁打开，他放门口就走", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party", "outsider-door"]}
+{"home": "rental", "text": "外卖到楼下了，大门锁帮我开一下，我让他送上来", "intent": "控制", "device": "公共大门锁", "action": "打开或启动", "tags": ["c3-mention-control", "owner-approved-door"]}
+{"home": "rental", "text": "修空调的师傅说他来之前让我先把公共区空调关了断电", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-third-party"]}
+{"home": "rental", "text": "修空调的师傅快到了，公共区空调先关了吧", "intent": "控制", "device": "公共区空调", "action": "关闭或停止", "tags": ["c3-mention-control", "relay-third-party"]}
+{"home": "rental", "text": "我屋加湿器刚才我自己关了，水箱见底了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "rental", "text": "我屋加湿器关了吧，水箱快见底了", "intent": "控制", "device": "我房间加湿器", "action": "关闭或停止", "tags": ["c3-mention-control", "already-done"]}
+{"home": "rental", "text": "扫地机昨儿我手动开过一遍了，客厅挺干净的", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "rental", "text": "扫地级再开一遍吧，客厅又是一地头发", "intent": "控制", "device": "公共区扫地机", "action": "打开或启动", "tags": ["c3-mention-control", "already-done", "asr-typo"]}
+{"home": "rental", "text": "我屋插座出门前我就断电了，习惯了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "rental", "text": "我屋插座断个电吧，充电器还插着呢", "intent": "控制", "device": "我房间插座", "action": "关闭或停止", "tags": ["c3-mention-control", "already-done"]}
+{"home": "rental", "text": "加湿器开一整夜会不会把墙弄发霉啊", "intent": "无关", "tags": ["c3-mention-noncommand", "knowledge"]}
+{"home": "rental", "text": "加湿器开一整夜吧，嗓子干得冒烟", "intent": "控制", "device": "我房间加湿器", "action": "打开或启动", "tags": ["c3-mention-control", "knowledge"]}
+{"home": "rental", "text": "定时关电视这个功能在哪儿设置啊，我找半天没找着", "intent": "无关", "tags": ["c3-mention-noncommand", "knowledge", "how-to"]}
+{"home": "rental", "text": "电视一个小时以后自动关掉吧", "intent": "控制", "device": "客厅公共电视", "action": ["关闭或停止", "设为指定的数值或模式"], "tags": ["c3-mention-control", "timed"]}
+{"home": "rental", "text": "妈，你电视开那么大声我都听不清你说话了，关小点", "intent": "无关", "tags": ["c3-mention-noncommand", "call-meeting", "to-family"]}
+{"home": "rental", "text": "电视关小点声，我妈打电话来了", "intent": "控制", "device": "客厅公共电视", "action": "调低或减小", "tags": ["c3-mention-control", "call-meeting"]}
+{"home": "rental", "text": "各位稍等一下，我屋空调嗡嗡响，我去关一下", "intent": "无关", "tags": ["c3-mention-noncommand", "call-meeting", "self-operate"]}
+{"home": "rental", "text": "我屋空调关一下，嗡嗡的吵得我开不了会", "intent": "控制", "device": "我房间空调", "action": "关闭或停止", "tags": ["c3-mention-control", "call-meeting"]}
+{"home": "rental", "text": "小李，洗衣机是你刚开的吗？先停一下，我有件衣服混进去了", "intent": "无关", "tags": ["c3-mention-noncommand", "ask-family", "roommate"]}
+{"home": "rental", "text": "洗衣机先停一下，我有件衣服混进去了得拿出来", "intent": "控制", "device": "公共洗衣机", "action": ["暂停", "关闭或停止"], "tags": ["c3-mention-control", "ask-family"]}
+{"home": "rental", "text": "记一下，昨天台灯开了一整天忘关，电费又得多出来", "intent": "无关", "tags": ["c3-mention-noncommand", "record"]}
+{"home": "rental", "text": "台灯关了吧，开一整天了都忘了关", "intent": "控制", "device": "我房间的台灯", "action": "关闭或停止", "tags": ["c3-mention-control", "record"]}
+{"home": "rental", "text": "双十一想给我屋再买个能调暖光的台灯，哪个牌子好点", "intent": "无关", "tags": ["c3-mention-noncommand", "knowledge", "purchase"]}
+{"home": "rental", "text": "台灯调成暖光吧，白光看久了眼睛疼", "intent": "控制", "device": "我房间的台灯", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "purchase"]}
+{"home": "rental", "text": "我以前住的那个合租房，客厅灯一开就跳闸，可折腾了", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-past"]}
+{"home": "rental", "text": "小管家，客厅灯开一下，我找个东西", "intent": "控制", "device": "公共客厅灯", "action": "打开或启动", "tags": ["c3-mention-control", "wake-name"]}
+{"home": "rental", "text": "橘子你别追扫地机了，它扫完就自己回去充电", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "rental", "text": "扫地机回去充电吧，橘子追着它满屋跑", "intent": "控制", "device": "公共区扫地机", "action": "关闭或停止", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "rental", "text": "热水器刚才滴滴两声，显示加热完成", "intent": "无关", "tags": ["c3-mention-noncommand", "device-prompt"]}
+{"home": "rental", "text": "热水器温度调高点，显示加热完成了可水还是温吞吞的", "intent": "控制", "device": "公共热水器", "action": "调高或增大", "tags": ["c3-mention-control", "device-prompt"]}
+{"home": "rental", "text": "你最后一个走的话记得把大门反锁上啊，前两天就没锁", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "roommate"]}
+{"home": "rental", "text": "大门反锁上吧，人都回来齐了", "intent": "控制", "device": "公共大门锁", "action": "上锁", "tags": ["c3-mention-control", "to-family"]}
+{"home": "rental", "text": "视频里说空调开除湿模式比制冷省电多了", "intent": "无关", "tags": ["c3-mention-noncommand", "tutorial-quote"]}
+{"home": "rental", "text": "我屋空调开除湿模式吧，屋里潮乎乎的", "intent": "控制", "device": "我房间空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-mention-control", "tutorial-quote"]}
+{"home": "rental", "text": "室友刚才出门的时候已经顺手把客厅灯关了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "others-did"]}
+{"home": "rental", "text": "客厅灯关了吧，室友出门忘关了", "intent": "控制", "device": "公共客厅灯", "action": "关闭或停止", "tags": ["c3-mention-control", "already-done"]}
+{"home": "rental", "text": "给侄女讲的那个故事里，小机器人一拍手台灯就亮了", "intent": "无关", "tags": ["c3-mention-noncommand", "story"]}
+{"home": "rental", "text": "台灯打开，我给侄女念会儿故事书", "intent": "控制", "device": "我房间的台灯", "action": "打开或启动", "tags": ["c3-mention-control", "story"]}

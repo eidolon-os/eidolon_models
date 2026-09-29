@@ -1,0 +1,100 @@
+{"home": "countryside", "text": "强子，出去顺手把大门关上，别让鸡跑了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "pair-m4-01"]}
+{"home": "countryside", "text": "大门给关上，鸡要跑出去了", "intent": "控制", "device": "大门", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-01"]}
+{"home": "countryside", "text": "喂，你到家先把堂屋空调开开，别热着你奶奶", "intent": "无关", "tags": ["c3-mention-noncommand", "phone-call", "pair-m4-02"]}
+{"home": "countryside", "text": "堂屋空调开开，奶奶都热出一身汗了", "intent": "控制", "device": "堂屋空调", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-02"]}
+{"home": "countryside", "text": "送煤气的说让咱把大门开开，他三轮车进不来", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-outsider", "pair-m4-03"]}
+{"home": "countryside", "text": "送煤气的到了，是我叫的，帮他把大门开一下", "intent": "控制", "device": "大门", "action": "打开或启动", "tags": ["c3-mention-control", "owner-approves", "pair-m4-03"]}
+{"home": "countryside", "text": "收粮的老板来电话，说明儿一早来拉玉米，让提前把卷帘门打开", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-request", "pair-m4-04"]}
+{"home": "countryside", "text": "收粮的车到门口了，卷帘门打开吧", "intent": "控制", "device": "卷帘门", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-04"]}
+{"home": "countryside", "text": "卷帘门我吃完晚饭就放下来了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "pair-m4-05"]}
+{"home": "countryside", "text": "小管家，把卷帘门放下来，天黑了", "intent": "控制", "device": "卷帘门", "action": "关闭或停止", "tags": ["c3-mention-control", "wake-name", "pair-m4-05"]}
+{"home": "countryside", "text": "从前有个老爷爷，天一擦黑就去把鸡舍灯点上，黄鼠狼就不敢来偷鸡了", "intent": "无关", "tags": ["c3-mention-noncommand", "story", "pair-m4-06"]}
+{"home": "countryside", "text": "天擦黑了，把鸡舍灯点上，防着点黄鼠狼", "intent": "控制", "device": "鸡舍灯", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-06"]}
+{"home": "countryside", "text": "幼儿园老师教的儿歌：小电视，关一关，眼睛歇歇看青山", "intent": "无关", "tags": ["c3-mention-noncommand", "rhyme", "pair-m4-07"]}
+{"home": "countryside", "text": "电视关一关吧，眼睛都看花了", "intent": "控制", "device": "电视", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-07"]}
+{"home": "countryside", "text": "妞妞，电视声音关小点，你爷爷在里屋睡觉呢", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child", "pair-m4-08"]}
+{"home": "countryside", "text": "电视声音关小点儿，爷爷在里屋睡着呢", "intent": "控制", "device": "电视", "action": "调低或减小", "tags": ["c3-mention-control", "pair-m4-08"]}
+{"home": "countryside", "text": "老头子你去把水泵打开，东边那块菜地都干裂了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "pair-m4-09"]}
+{"home": "countryside", "text": "水泵打开，东边那块菜地都干得裂口子了", "intent": "控制", "device": "水泵", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-09"]}
+{"home": "countryside", "text": "听人说水泵要是一直开着不关，容易把电机烧了，真的假的", "intent": "无关", "tags": ["c3-mention-noncommand", "common-knowledge", "pair-m4-10"]}
+{"home": "countryside", "text": "水泵开了一个多钟头了，关了吧，别把电机烧了", "intent": "控制", "device": "水泵", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-10"]}
+{"home": "countryside", "text": "太阳能热水器一到阴天，一般是不是就烧不热了", "intent": "无关", "tags": ["c3-mention-noncommand", "common-knowledge", "pair-m4-11"]}
+{"home": "countryside", "text": "太阳能热水器开一下，待会儿我洗个头", "intent": "控制", "device": "太阳能热水器", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-11"]}
+{"home": "countryside", "text": "冰柜昨儿个我就调到零下十八度了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "pair-m4-12"]}
+{"home": "countryside", "text": "冰柜调到零下十八度，刚宰的猪肉得冻上", "intent": "控制", "device": "冰柜", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "pair-m4-12"]}
+{"home": "countryside", "text": "说明书上写着，新冰柜头一回用要先空着开两个钟头", "intent": "无关", "tags": ["c3-mention-noncommand", "manual-quote", "pair-m4-13"]}
+{"home": "countryside", "text": "冰柜启动一下，先空着转俩钟头再放肉", "intent": "控制", "device": "冰柜", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-13"]}
+{"home": "countryside", "text": "妈，储物间灯是你开的不？亮了一宿了", "intent": "无关", "tags": ["c3-mention-noncommand", "family-question", "pair-m4-14"]}
+{"home": "countryside", "text": "储物间灯亮了一宿，给它关了", "intent": "控制", "device": "储物间灯", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-14"]}
+{"home": "countryside", "text": "你歇着吧，院子灯我自己出去开", "intent": "无关", "tags": ["c3-mention-noncommand", "self-do", "pair-m4-15"]}
+{"home": "countryside", "text": "院子灯开一下，我出去收苞米", "intent": "控制", "device": "院子灯", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-15"]}
+{"home": "countryside", "text": "村里大喇叭说了，这几天晚上十点以后院子灯都别开了，省电", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-rule", "pair-m4-16"]}
+{"home": "countryside", "text": "都十点多了，院子灯关了吧，省点电", "intent": "控制", "device": "院子灯", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-16"]}
+{"home": "countryside", "text": "婶子，我闺女一放暑假回来，卧室空调就得天天开，电费老贵了", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan", "pair-m4-17"]}
+{"home": "countryside", "text": "闺女放暑假回来了，把卧室空调开上，让她凉快凉快", "intent": "控制", "device": "卧室空调", "action": "打开或启动", "tags": ["c3-mention-control", "chat-then-command", "pair-m4-17"]}
+{"home": "countryside", "text": "喂，爸，你手机上点开那个院子摄像头，就能瞅见大门口了", "intent": "无关", "tags": ["c3-mention-noncommand", "phone-call", "pair-m4-18"]}
+{"home": "countryside", "text": "院子摄像头打开，我瞅瞅大门口有人没", "intent": "控制", "device": "院子摄像头", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-18"]}
+{"home": "countryside", "text": "浴霸这玩意儿一开就是一千多瓦吧", "intent": "无关", "tags": ["c3-mention-noncommand", "spec", "pair-m4-19"]}
+{"home": "countryside", "text": "浴霸开上，洗完澡冻得直哆嗦", "intent": "控制", "device": "浴霸", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-19"]}
+{"home": "countryside", "text": "奶奶，您晚上起夜先把卧室灯开开再下床，别摸黑", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "condition", "pair-m4-20"]}
+{"home": "countryside", "text": "卧室灯给我打开，起个夜", "intent": "控制", "device": "卧室灯", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-20"]}
+{"home": "countryside", "text": "他二叔，今年过年来我家守岁吧，堂屋灯开一宿，热闹", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan", "pair-m4-21"]}
+{"home": "countryside", "text": "今晚守岁，堂屋灯打开，亮亮堂堂的", "intent": "控制", "device": "堂屋灯", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-21"]}
+{"home": "office", "text": "Lisa，你把你那边书桌灯开一下，镜头里脸黑乎乎的", "intent": "无关", "tags": ["c3-mention-noncommand", "online-meeting", "pair-m4-22"]}
+{"home": "office", "text": "书桌灯开一下，视频里我这张脸黑乎乎的", "intent": "控制", "device": "书桌灯", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-22"]}
+{"home": "office", "text": "王姐，你身后窗帘拉一下吧，逆光太厉害，镜头里就一个黑影", "intent": "无关", "tags": ["c3-mention-noncommand", "online-meeting", "pair-m4-23"]}
+{"home": "office", "text": "电动窗帘拉上，逆光太厉害，镜头里我就剩个黑影了", "intent": "控制", "device": "电动窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-23"]}
+{"home": "office", "text": "喂？你把你那边音响声音开大点，再放一遍那段录音", "intent": "无关", "tags": ["c3-mention-noncommand", "phone-call", "pair-m4-24"]}
+{"home": "office", "text": "音响声音开大点，那段录音我再听一遍", "intent": "控制", "device": "音箱", "action": "调高或增大", "tags": ["c3-mention-control", "alias", "pair-m4-24"]}
+{"home": "office", "text": "各位把自己那边的新风关一下哈，噪音都录进会议里了", "intent": "无关", "tags": ["c3-mention-noncommand", "online-meeting", "pair-m4-25"]}
+{"home": "office", "text": "新风机关一下，开着会呢，噪音都录进去了", "intent": "控制", "device": "新风机", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-25"]}
+{"home": "office", "text": "物业说这阵子用电高峰，空调尽量别开到二十四度以下", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-rule", "pair-m4-26"]}
+{"home": "office", "text": "空调给我调到二十六度，别太凉", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "pair-m4-26"]}
+{"home": "office", "text": "外卖小哥打电话说到门口了，让我给他开个门", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-outsider", "pair-m4-27"]}
+{"home": "office", "text": "外卖到门口了，门锁开一下，我去拿", "intent": "控制", "device": "门锁", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-27"]}
+{"home": "office", "text": "团团，别往升降桌上跳，一会儿降下来夹着你", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet", "pair-m4-28"]}
+{"home": "office", "text": "升降桌降下来点，站得腿都酸了", "intent": "控制", "device": "升降桌", "action": "调低或减小", "tags": ["c3-mention-control", "pair-m4-28"]}
+{"home": "office", "text": "这种升降桌一般最高也就升到一米二吧", "intent": "无关", "tags": ["c3-mention-noncommand", "spec", "pair-m4-29"]}
+{"home": "office", "text": "升降桌升到最高，我站着敲会儿代码", "intent": "控制", "device": "升降桌", "action": ["调高或增大", "设为指定的数值或模式"], "tags": ["c3-mention-control", "pair-m4-29"]}
+{"home": "office", "text": "咖啡机我早上开过了，都喝两杯了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "pair-m4-30"]}
+{"home": "office", "text": "困死了，咖啡机再给我来一杯，下午还有俩会", "intent": "控制", "device": "咖啡机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-mention-control", "chat-then-command", "pair-m4-30"]}
+{"home": "office", "text": "故事里那个机器人管家一拍手，窗帘哗啦一下就拉开了", "intent": "无关", "tags": ["c3-mention-noncommand", "story", "pair-m4-31"]}
+{"home": "office", "text": "窗帘拉开吧，太阳都晒屁股了", "intent": "控制", "device": "电动窗帘", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-31"]}
+{"home": "office", "text": "显示器插座我下班那会儿就断了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "pair-m4-32"]}
+{"home": "office", "text": "下班了，显示器插座断个电", "intent": "控制", "device": "显示器插座", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-32"]}
+{"home": "office", "text": "提醒我明早九点前把显示器插座打开", "intent": "无关", "tags": ["c3-mention-noncommand", "reminder", "pair-m4-33"]}
+{"home": "office", "text": "显示器插座打开，要开工了", "intent": "控制", "device": "显示器插座", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-33"]}
+{"home": "office", "text": "老公你出门那会儿门锁锁上没", "intent": "无关", "tags": ["c3-mention-noncommand", "family-question", "pair-m4-34"]}
+{"home": "office", "text": "能帮我把门锁锁一下吗，老怕没锁好", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["c3-mention-control", "question-form", "pair-m4-34"]}
+{"home": "office", "text": "这种扫地机一般开一次能扫多大面积", "intent": "无关", "tags": ["c3-mention-noncommand", "common-knowledge", "pair-m4-35"]}
+{"home": "office", "text": "扫地机开一下，把客厅扫扫", "intent": "控制", "device": "扫地机", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-35"]}
+{"home": "office", "text": "周五朋友来吃火锅，我打算到时候把客厅灯调成暖黄的", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan", "pair-m4-36"]}
+{"home": "office", "text": "火锅要开吃了，客厅灯调成暖黄的", "intent": "控制", "device": "客厅灯", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "pair-m4-36"]}
+{"home": "office", "text": "视频里那个博主说，新风机最好一年到头都开着", "intent": "无关", "tags": ["c3-mention-noncommand", "video-quote", "pair-m4-37"]}
+{"home": "office", "text": "屋里有点闷，新风机开一下吧", "intent": "控制", "device": "新风机", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-37"]}
+{"home": "office", "text": "闺女，你去把卧室灯关了，屋里没人别老开着", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family", "pair-m4-38"]}
+{"home": "office", "text": "卧室灯关了吧，屋里没人别老开着", "intent": "控制", "device": "卧室灯", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-38"]}
+{"home": "office", "text": "你要是比我先到家，就先把空调开开，我大概七点到", "intent": "无关", "tags": ["c3-mention-noncommand", "condition", "to-family", "pair-m4-39"]}
+{"home": "office", "text": "空调先开开，我大概七点到家", "intent": "控制", "device": "空调", "action": "打开或启动", "tags": ["c3-mention-control", "pair-m4-39"]}
+{"home": "office", "text": "音箱我刚才已经调小了，你还嫌吵啊", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "pair-m4-40"]}
+{"home": "office", "text": "音箱调小一点，有点吵", "intent": "控制", "device": "音箱", "action": "调低或减小", "tags": ["c3-mention-control", "pair-m4-40"]}
+{"home": "minimal", "text": "小熊关掉了灯，钻进被窝跟月亮说晚安", "intent": "无关", "tags": ["c3-mention-noncommand", "story", "pair-m4-41"]}
+{"home": "minimal", "text": "故事讲完了，灯关掉吧", "intent": "控制", "device": "灯", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-41"]}
+{"home": "minimal", "text": "宝宝自己编的歌：扫地机，嘟嘟嘟，扫完客厅扫卧室", "intent": "无关", "tags": ["c3-mention-noncommand", "rhyme", "pair-m4-42"]}
+{"home": "minimal", "text": "扫地机先扫客厅，再扫卧室", "intent": "控制", "device": "扫地机", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-mention-control", "pair-m4-42"]}
+{"home": "minimal", "text": "小度小度，把空调调到二十六度", "intent": "无关", "tags": ["c3-mention-noncommand", "other-assistant", "pair-m4-43"]}
+{"home": "minimal", "text": "小易，把空调调到二十六度", "intent": "控制", "device": "空调", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "wake-name", "pair-m4-43"]}
+{"home": "minimal", "text": "房东交代过，走的时候门锁一定得反锁", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-rule", "pair-m4-44"]}
+{"home": "minimal", "text": "我出门了，门锁反锁一下", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["c3-mention-control", "pair-m4-44"]}
+{"home": "minimal", "text": "豆豆，别骑在扫地机上了，快让它回去充电", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child", "pair-m4-45"]}
+{"home": "minimal", "text": "扫地机别扫了，回去充电吧", "intent": "控制", "device": "扫地机", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-45"]}
+{"home": "minimal", "text": "妈，你那边音箱关小点声，我听你说话全是回音", "intent": "无关", "tags": ["c3-mention-noncommand", "phone-call", "pair-m4-46"]}
+{"home": "minimal", "text": "音箱关小点声，我在打电化呢", "intent": "控制", "device": "音箱", "action": "调低或减小", "tags": ["c3-mention-control", "asr-typo", "pair-m4-46"]}
+{"home": "minimal", "text": "空调我睡前就关了，半夜冻醒是被子太薄", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done", "pair-m4-47"]}
+{"home": "minimal", "text": "空调关了吧，半夜老冻醒", "intent": "控制", "device": "空调", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-47"]}
+{"home": "minimal", "text": "这种吸顶灯一般都能调亮度吧", "intent": "无关", "tags": ["c3-mention-noncommand", "common-knowledge", "pair-m4-48"]}
+{"home": "minimal", "text": "灯调亮一点，看书看不清字", "intent": "控制", "device": "灯", "action": "调高或增大", "tags": ["c3-mention-control", "pair-m4-48"]}
+{"home": "minimal", "text": "下个月我准备把音箱挪到卧室去，睡前放点白噪音", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan", "pair-m4-49"]}
+{"home": "minimal", "text": "该睡了，音箱放点白噪音", "intent": "控制", "device": "音箱", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-mention-control", "pair-m4-49"]}
+{"home": "minimal", "text": "你坐着别动，灯我自己去关", "intent": "无关", "tags": ["c3-mention-noncommand", "self-do", "pair-m4-50"]}
+{"home": "minimal", "text": "灯关一下，我懒得起来了", "intent": "控制", "device": "灯", "action": "关闭或停止", "tags": ["c3-mention-control", "pair-m4-50"]}

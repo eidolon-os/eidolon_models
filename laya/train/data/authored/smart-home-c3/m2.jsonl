@@ -1,0 +1,98 @@
+{"home": "townhouse", "text": "老公,你顺手把客厅吊灯关一下呗,我抱着孩子呢", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "townhouse", "text": "小易,把客厅吊灯关一下", "intent": "控制", "device": "客厅吊灯", "action": "关闭或停止", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "townhouse", "text": "宝宝乖,把儿童房灯关了咱们睡觉觉", "intent": "无关", "tags": ["c3-mention-noncommand", "kids-imperative"]}
+{"home": "townhouse", "text": "帮我把儿童房灯关了,准备睡觉了", "intent": "控制", "device": "儿童房灯", "action": "关闭或停止", "tags": ["c3-mention-control", "kids-imperative"]}
+{"home": "townhouse", "text": "旺财,别在花园喷灌那儿刨土了,回来", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-imperative"]}
+{"home": "townhouse", "text": "花园喷灌打开一下,浇会儿花", "intent": "控制", "device": "花园喷灌", "action": "打开或启动", "tags": ["c3-mention-control", "pet-imperative"]}
+{"home": "townhouse", "text": "从前有只小兔子,妈妈每次讲完故事都会把主卧灯关了哄它睡觉", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "townhouse", "text": "故事讲完了,把主卧灯关一下吧", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "townhouse", "text": "物业说这栋楼的车库门下周要统一检修", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-property"]}
+{"home": "townhouse", "text": "麻烦把车库门打开一下,我要出车", "intent": "控制", "device": "车库门", "action": "打开或启动", "tags": ["c3-mention-control", "relay-property"]}
+{"home": "townhouse", "text": "放心吧,入户门锁我出门前已经锁上了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "townhouse", "text": "帮我把入户门锁锁上,我这就睡了", "intent": "控制", "device": "入户门锁", "action": "上锁", "tags": ["c3-mention-control", "already-done"]}
+{"home": "townhouse", "text": "这个全屋新风系统是不是能自动感应雾霾天开启啊", "intent": "无关", "tags": ["c3-mention-noncommand", "trivia-capability"]}
+{"home": "townhouse", "text": "把全屋新风打开一下,感觉屋里闷", "intent": "控制", "device": "全屋新风", "action": "打开或启动", "tags": ["c3-mention-control", "trivia-capability"]}
+{"home": "townhouse", "text": "你那边书房台灯是不是没开,我看你脸黑乎乎的", "intent": "无关", "tags": ["c3-mention-noncommand", "video-call-other-party"]}
+{"home": "townhouse", "text": "书房台灯开一下,暗得写不了字", "intent": "控制", "device": "书房台灯", "action": "打开或启动", "tags": ["c3-mention-control", "video-call-other-party"]}
+{"home": "townhouse", "text": "等这周末天好了,我打算自己把露台遮阳篷收一收", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "townhouse", "text": "露台遮阳篷收一下,风有点大", "intent": "控制", "device": "露台遮阳篷", "action": "关闭或停止", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "townhouse", "text": "干衣机提示烘干完成了,记得及时取衣服", "intent": "无关", "tags": ["c3-mention-noncommand", "device-notification"]}
+{"home": "townhouse", "text": "把干衣机打开,烘一下这批衣服", "intent": "控制", "device": "干衣机", "action": "打开或启动", "tags": ["c3-mention-control", "device-notification"]}
+{"home": "townhouse", "text": "美食博主说炒菜前油烟机得提前开三分钟", "intent": "无关", "tags": ["c3-mention-noncommand", "tutorial-recipe"]}
+{"home": "townhouse", "text": "麻烦把油烟机打开,我要炒菜了", "intent": "控制", "device": "油烟机", "action": "打开或启动", "tags": ["c3-mention-control", "tutorial-recipe"]}
+{"home": "townhouse", "text": "客厅空调先别关,我还感觉有点热", "intent": "无关", "tags": ["c3-mention-noncommand", "keep-as-is"]}
+{"home": "townhouse", "text": "客厅空调关一下,有点冷了", "intent": "控制", "device": "客厅空调", "action": "关闭或停止", "tags": ["c3-mention-control", "keep-as-is"]}
+{"home": "townhouse", "text": "老婆,你把主卧空调关了吧,别费电了", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "townhouse", "text": "小易,主卧空调关一下", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "townhouse", "text": "囡囡,冷的话跟妈妈说,别自己去碰儿童房空调", "intent": "无关", "tags": ["c3-mention-noncommand", "kids-imperative"]}
+{"home": "townhouse", "text": "儿童房空调调高一点,孩子说冷", "intent": "控制", "device": "儿童房空调", "action": "调高或增大", "tags": ["c3-mention-control", "kids-imperative"]}
+{"home": "townhouse", "text": "咪咪,别去碰恒温酒柜的旋钮,我还没调好呢", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-imperative"]}
+{"home": "townhouse", "text": "把恒温酒柜调到十二度", "intent": "控制", "device": "恒温酒柜", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "pet-imperative"]}
+{"home": "townhouse", "text": "童谣里唱,一闪一闪像花园灯,妈妈说该关灯睡觉啦", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "townhouse", "text": "把花园灯关了吧,准备睡了", "intent": "控制", "device": "花园灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "townhouse", "text": "外卖小哥说门口太黑,让我把车库灯开一下方便他找门", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-courier"]}
+{"home": "townhouse", "text": "帮我把车库灯打开,外卖到了", "intent": "控制", "device": "车库灯", "action": "打开或启动", "tags": ["c3-mention-control", "relay-courier"]}
+{"home": "townhouse", "text": "洗碗机我吃完饭就启动了,现在应该已经洗完了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "townhouse", "text": "把洗碗机启动一下,碗都放进去了", "intent": "控制", "device": "洗碗机", "action": "打开或启动", "tags": ["c3-mention-control", "already-done"]}
+{"home": "townhouse", "text": "咱家这恒温酒柜一般是不是得设在十二到十六度之间啊", "intent": "无关", "tags": ["c3-mention-noncommand", "trivia-capability"]}
+{"home": "townhouse", "text": "恒温酒柜设到十四度", "intent": "控制", "device": "恒温酒柜", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "trivia-capability"]}
+{"home": "townhouse", "text": "视频里同事说,你那边过道夜灯还亮着挺温馨的", "intent": "无关", "tags": ["c3-mention-noncommand", "video-call-other-party"]}
+{"home": "townhouse", "text": "把二楼过道夜灯关了,天亮了", "intent": "控制", "device": "二楼过道夜灯", "action": "关闭或停止", "tags": ["c3-mention-control", "video-call-other-party"]}
+{"home": "townhouse", "text": "这周末我打算自己去修一下花园喷灌的水管,先别用了", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "townhouse", "text": "花园喷灌打开一下,该浇水了", "intent": "控制", "device": "花园喷灌", "action": "打开或启动", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "townhouse", "text": "燃气热水器语音提示说水温已经到了,当心烫", "intent": "无关", "tags": ["c3-mention-noncommand", "device-notification"]}
+{"home": "townhouse", "text": "把燃气热水器打开,我准备洗澡", "intent": "控制", "device": "燃气热水器", "action": "打开或启动", "tags": ["c3-mention-control", "device-notification"]}
+{"home": "townhouse", "text": "说明书上写,全屋新风系统建议每天至少运行六小时", "intent": "无关", "tags": ["c3-mention-noncommand", "tutorial-recipe"]}
+{"home": "townhouse", "text": "全屋新风打开,屋里有点闷", "intent": "控制", "device": "全屋新风", "action": "打开或启动", "tags": ["c3-mention-control", "tutorial-recipe"]}
+{"home": "townhouse", "text": "主卧遮光帘先别拉上,我想再看会儿书", "intent": "无关", "tags": ["c3-mention-noncommand", "keep-as-is"]}
+{"home": "townhouse", "text": "把主卧遮光帘拉上,准备睡了", "intent": "控制", "device": "主卧遮光帘", "action": "关闭或停止", "tags": ["c3-mention-control", "keep-as-is"]}
+{"home": "townhouse", "text": "老公,你去把二楼浴霸开一下,我马上洗澡", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "townhouse", "text": "帮我把二楼浴霸打开", "intent": "控制", "device": "二楼浴霸", "action": "打开或启动", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "northflat", "text": "老公,客厅灯关一下呗,我手上一堆东西", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "northflat", "text": "小易,客厅灯关一下", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "northflat", "text": "宝宝,自己把床头灯关了睡觉哦", "intent": "无关", "tags": ["c3-mention-noncommand", "kids-imperative"]}
+{"home": "northflat", "text": "咪咪,别对着电视挠屏幕", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-imperative"]}
+{"home": "northflat", "text": "把电视打开一下", "intent": "控制", "device": "电视", "action": "打开或启动", "tags": ["c3-mention-control", "pet-imperative"]}
+{"home": "northflat", "text": "故事里说,小老鼠踮着脚把过道灯按灭了", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "northflat", "text": "把过道灯关一下,我要睡了", "intent": "控制", "device": "过道灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "northflat", "text": "物业说这周要挨家挨户检修主卧暖气阀", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-property"]}
+{"home": "northflat", "text": "主卧暖气阀调高一点,有点冷", "intent": "控制", "device": "主卧暖气阀", "action": "调高或增大", "tags": ["c3-mention-control", "relay-property"]}
+{"home": "northflat", "text": "别担心,门我出来的时候已经锁了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "northflat", "text": "麻烦把门锁上,我进屋了", "intent": "控制", "device": "门锁", "action": "上锁", "tags": ["c3-mention-control", "already-done"]}
+{"home": "northflat", "text": "小厨宝一般烧开一壶水要多长时间啊", "intent": "无关", "tags": ["c3-mention-noncommand", "trivia-capability"]}
+{"home": "northflat", "text": "把小厨宝打开,我要接热水", "intent": "控制", "device": "小厨宝", "action": "打开或启动", "tags": ["c3-mention-control", "trivia-capability"]}
+{"home": "northflat", "text": "你那边把电视声音开大点呗,我听不清你说啥", "intent": "无关", "tags": ["c3-mention-noncommand", "video-call-other-party"]}
+{"home": "northflat", "text": "电视声音调大点", "intent": "控制", "device": "电视", "action": "调高或增大", "tags": ["c3-mention-control", "video-call-other-party"]}
+{"home": "northflat", "text": "等这两天天晴了,我打算自己把阳台晾衣架收拾一下", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "northflat", "text": "洗衣机提示洗涤完成了,记得去取衣服", "intent": "无关", "tags": ["c3-mention-noncommand", "device-notification"]}
+{"home": "northflat", "text": "把洗衣机打开,脏衣服都放进去了", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["c3-mention-control", "device-notification"]}
+{"home": "northflat", "text": "说明书上写,小厨宝得先接满水才能通电", "intent": "无关", "tags": ["c3-mention-noncommand", "tutorial-recipe"]}
+{"home": "northflat", "text": "小厨宝打开一下,想接杯温水", "intent": "控制", "device": "小厨宝", "action": "打开或启动", "tags": ["c3-mention-control", "tutorial-recipe"]}
+{"home": "northflat", "text": "客厅暖气阀先别关,我还觉得有点凉", "intent": "无关", "tags": ["c3-mention-noncommand", "keep-as-is"]}
+{"home": "northflat", "text": "客厅暖气阀关一下,有点热了", "intent": "控制", "device": "客厅暖气阀", "action": "关闭或停止", "tags": ["c3-mention-control", "keep-as-is"]}
+{"home": "northflat", "text": "媳妇,次卧灯开一下,我找个东西", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "northflat", "text": "帮我把次卧灯打开", "intent": "控制", "device": "次卧灯", "action": "打开或启动", "tags": ["c3-mention-control", "family-imperative"]}
+{"home": "northflat", "text": "囡囡,落地灯晃眼你自己关一下", "intent": "无关", "tags": ["c3-mention-noncommand", "kids-imperative"]}
+{"home": "northflat", "text": "把客厅落地灯关一下,太晃眼了", "intent": "控制", "device": "客厅落地灯", "action": "关闭或停止", "tags": ["c3-mention-control", "kids-imperative"]}
+{"home": "northflat", "text": "狗子,别舔加湿器出雾的地方,烫", "intent": "无关", "tags": ["c3-mention-noncommand", "pet-imperative"]}
+{"home": "northflat", "text": "主卧加湿器打开一下,有点干", "intent": "控制", "device": "主卧加湿器", "action": "打开或启动", "tags": ["c3-mention-control", "pet-imperative"]}
+{"home": "northflat", "text": "睡前哼的童谣里唱,月亮像极了主卧灯,妈妈唱完随手把灯关了", "intent": "无关", "tags": ["c3-mention-noncommand", "story-rhyme"]}
+{"home": "northflat", "text": "把主卧灯关了吧,准备睡觉", "intent": "控制", "device": "主卧灯", "action": "关闭或停止", "tags": ["c3-mention-control", "story-rhyme"]}
+{"home": "northflat", "text": "快递员说让我下楼自己开门锁取个件", "intent": "无关", "tags": ["c3-mention-noncommand", "relay-courier"]}
+{"home": "northflat", "text": "帮我把门锁打开,我下楼取快递", "intent": "控制", "device": "门锁", "action": "打开或启动", "tags": ["c3-mention-control", "relay-courier"]}
+{"home": "northflat", "text": "电暖器我已经开了得有半小时了,屋里暖和多了", "intent": "无关", "tags": ["c3-mention-noncommand", "already-done"]}
+{"home": "northflat", "text": "把电暖器打开,有点冷", "intent": "控制", "device": "电暖器", "action": "打开或启动", "tags": ["c3-mention-control", "already-done"]}
+{"home": "northflat", "text": "卫生间暖风机是不是特别费电啊", "intent": "无关", "tags": ["c3-mention-noncommand", "trivia-capability"]}
+{"home": "northflat", "text": "把卫生间暖风机打开,我要洗澡", "intent": "控制", "device": "卫生间暖风机", "action": "打开或启动", "tags": ["c3-mention-control", "trivia-capability"]}
+{"home": "northflat", "text": "视频通话时朋友说,你把客厅灯开一下,我看看你家挂历", "intent": "无关", "tags": ["c3-mention-noncommand", "video-call-other-party"]}
+{"home": "northflat", "text": "客厅灯打开一下,太暗了", "intent": "控制", "device": "客厅灯", "action": "打开或启动", "tags": ["c3-mention-control", "video-call-other-party"]}
+{"home": "northflat", "text": "等这批用完,我打算换个新款的客厅净化器", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
+{"home": "northflat", "text": "客厅净化器打开,雾霾有点重", "intent": "控制", "device": "客厅净化器", "action": "打开或启动", "tags": ["c3-mention-control", "future-plan-self"]}
+{"home": "northflat", "text": "热水器语音提示说,水已经烧好了", "intent": "无关", "tags": ["c3-mention-noncommand", "device-notification"]}
+{"home": "northflat", "text": "把热水器打开,准备洗澡水", "intent": "控制", "device": "热水器", "action": "打开或启动", "tags": ["c3-mention-control", "device-notification"]}
+{"home": "northflat", "text": "说明书上提醒,电暖器长时间开着要注意通风", "intent": "无关", "tags": ["c3-mention-noncommand", "tutorial-recipe"]}
+{"home": "northflat", "text": "电暖器调高一点,有点凉", "intent": "控制", "device": "电暖器", "action": "调高或增大", "tags": ["c3-mention-control", "tutorial-recipe"]}
+{"home": "northflat", "text": "加湿器先别关,我头发还没吹干呢", "intent": "无关", "tags": ["c3-mention-noncommand", "keep-as-is"]}
+{"home": "northflat", "text": "把主卧加湿器关一下,有点太潮了", "intent": "控制", "device": "主卧加湿器", "action": "关闭或停止", "tags": ["c3-mention-control", "keep-as-is"]}
+{"home": "northflat", "text": "爸,厨房灯还开着呢,你随手关一下", "intent": "无关", "tags": ["c3-mention-noncommand", "family-imperative"]}
+{"home": "northflat", "text": "帮我把厨房灯关一下", "intent": "控制", "device": "厨房灯", "action": "关闭或停止", "tags": ["c3-mention-control", "family-imperative"]}

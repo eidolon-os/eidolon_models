@@ -251,6 +251,9 @@ def cmd_records(args) -> None:
     outputs = {run / "continuation.jsonl": by_split["train"], EVALS / "c-dev.jsonl": by_split["dev"],
                EVALS / "c-test.jsonl": by_split["test"], EVALS / "diag-44.jsonl": diag44()}
     for path, recs in outputs.items():
+        if path.parent == EVALS and path.exists() and not args.write_evals:
+            stats[path.name] = "frozen (exists; --write-evals to rebuild)"  # 评测集冻结后不随训练池变化
+            continue
         seen = set()
         with path.open("w", encoding="utf-8") as fh:
             for r in recs:
@@ -339,6 +342,7 @@ def main() -> None:
     sub = ap.add_subparsers(required=True)
     p = sub.add_parser("records")
     p.add_argument("--run-dir", required=True)
+    p.add_argument("--write-evals", action="store_true", help="重建 evals/ 下的评测集（默认冻结，已存在就不写）")
     p.set_defaults(func=cmd_records)
     p = sub.add_parser("blind")
     p.add_argument("--splits", nargs="+", default=["train", "dev", "test"])

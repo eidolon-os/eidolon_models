@@ -1,0 +1,100 @@
+{"home": "brand", "text": "老公,把易来吸顶灯关一下呗,我都困得睁不开眼了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "brand", "text": "易来吸顶灯关一下,困死了", "intent": "控制", "device": "易来吸顶灯", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "brand", "text": "媳妇儿,你去把小米电视关了呗,我先去洗澡了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "brand", "text": "小米电视关一下,不看了", "intent": "控制", "device": "小米电视", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "kids", "text": "老公,主卧空调你顺手关一下呗,有点冷了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "kids", "text": "主卧空调关一下,有点冷", "intent": "控制", "device": "主卧空调", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "kids", "text": "妈,麻烦把婴儿房加湿器关一下,水都溢出来了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "kids", "text": "婴儿房加湿器关一下,水都溢出来了", "intent": "控制", "device": "婴儿房加湿器", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "brand", "text": "哥,你把史密斯热水器关了吧,大家都洗完澡了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "brand", "text": "史密斯热水器关一下,都洗完澡了", "intent": "控制", "device": "史密斯热水器", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "brand", "text": "爸,苏泊尔电饭煲的保温你去关一下,饭都凉透了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "brand", "text": "苏泊尔电饭煲保温关一下,饭都凉了", "intent": "控制", "device": "苏泊尔电饭煲", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "kids", "text": "妈,你把婴儿房窗帘拉上呗,孩子马上要睡了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "kids", "text": "婴儿房窗帘拉上,孩子要睡了", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "to-family"]}
+{"home": "brand", "text": "弟,石头扫地机你去停一下,我这边打电话呢", "intent": "无关", "tags": ["c3-mention-noncommand", "to-family"]}
+{"home": "brand", "text": "石头扫地机停一下,我打个电话", "intent": "控制", "device": "石头扫地机", "action": "暂停", "tags": ["c3-mention-control", "to-family"]}
+{"home": "kids", "text": "宝宝,咱把婴儿房夜灯关掉睡觉觉好不好呀", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "kids", "text": "婴儿房夜灯关一下,睡觉了", "intent": "控制", "device": "婴儿房夜灯", "action": "关闭或停止", "tags": ["c3-mention-control", "to-child"]}
+{"home": "brand", "text": "乖,把米家台灯Pro关了,作业写完该睡觉喽", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "brand", "text": "米家台灯Pro关一下,准备睡觉", "intent": "控制", "device": "米家台灯Pro", "action": "关闭或停止", "tags": ["c3-mention-control", "to-child"]}
+{"home": "kids", "text": "宝贝乖,电动摇篮先停一下,妈妈抱抱你", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "kids", "text": "电动摇篮停一下", "intent": "控制", "device": "电动摇篮", "action": "暂停", "tags": ["c3-mention-control", "to-child"]}
+{"home": "brand", "text": "闺女,小米电视快关了啊,眼睛都看红了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "brand", "text": "小米电视关了吧,看太久眼睛不舒服", "intent": "控制", "device": "小米电视", "action": "关闭或停止", "tags": ["c3-mention-control", "to-child"]}
+{"home": "kids", "text": "囡囡跟妈妈说晚安,婴儿房灯咱关咯", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "kids", "text": "婴儿房灯关一下,说晚安了", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止", "tags": ["c3-mention-control", "to-child"]}
+{"home": "brand", "text": "儿子,戴森净化风扇你别自己乱按,妈妈来关", "intent": "无关", "tags": ["c3-mention-noncommand", "to-child"]}
+{"home": "brand", "text": "戴森净化风扇关一下", "intent": "控制", "device": "戴森净化风扇", "action": "关闭或停止", "tags": ["c3-mention-control", "to-child"]}
+{"home": "brand", "text": "团子,离小度音箱远点啊,别把音量踩大了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "brand", "text": "小度音箱声音调大点", "intent": "控制", "device": "小度音箱", "action": "调高或增大", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "brand", "text": "咪咪,躲远点,一会儿要把石头扫地机放出来扫地了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "brand", "text": "石头扫地机打开,该扫地了", "intent": "控制", "device": "石头扫地机", "action": "打开或启动", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "brand", "text": "团子,躲开点啊,好太太晾衣架马上要降下来了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "brand", "text": "好太太晾衣架降一下,要晾衣服了", "intent": "控制", "device": "好太太晾衣架", "action": "调低或减小", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "kids", "text": "毛毛,别扒着婴儿房窗帘了,一会儿就要拉上了", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "kids", "text": "婴儿房窗帘拉上一下", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "brand", "text": "旺财,躲远点啊,方太油烟机马上要开了呛着你", "intent": "无关", "tags": ["c3-mention-noncommand", "to-pet"]}
+{"home": "brand", "text": "方太油烟机开一下,准备做饭了", "intent": "控制", "device": "方太油烟机", "action": "打开或启动", "tags": ["c3-mention-control", "to-pet"]}
+{"home": "kids", "text": "从前有只小兔子,天一黑妈妈就把婴儿房灯关掉,兔子就乖乖睡着啦", "intent": "无关", "tags": ["c3-mention-noncommand", "storytelling"]}
+{"home": "kids", "text": "婴儿房灯关一下,天黑了", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止", "tags": ["c3-mention-control", "storytelling"]}
+{"home": "kids", "text": "小星星亮晶晶啊,妈妈把婴儿房夜灯打开,照着宝宝做好梦", "intent": "无关", "tags": ["c3-mention-noncommand", "storytelling"]}
+{"home": "kids", "text": "婴儿房夜灯开一下", "intent": "控制", "device": "婴儿房夜灯", "action": "打开或启动", "tags": ["c3-mention-control", "storytelling"]}
+{"home": "brand", "text": "故事里的公主啊,每天晚上都让仆人把易来吸顶灯关掉才肯睡", "intent": "无关", "tags": ["c3-mention-noncommand", "storytelling"]}
+{"home": "brand", "text": "易来吸顶灯关一下,准备睡了", "intent": "控制", "device": "易来吸顶灯", "action": "关闭或停止", "tags": ["c3-mention-control", "storytelling"]}
+{"home": "brand", "text": "讲个睡前故事哦,小熊每晚都要爸爸把米家台灯Pro关了才敢闭眼", "intent": "无关", "tags": ["c3-mention-noncommand", "storytelling"]}
+{"home": "brand", "text": "米家台灯Pro关一下,要睡了", "intent": "控制", "device": "米家台灯Pro", "action": "关闭或停止", "tags": ["c3-mention-control", "storytelling"]}
+{"home": "kids", "text": "编个故事哄哄你,小猴子每次都让妈妈把婴儿房空调调低一点才凉快", "intent": "无关", "tags": ["c3-mention-noncommand", "storytelling"]}
+{"home": "kids", "text": "婴儿房空调调低一点,有点闷", "intent": "控制", "device": "婴儿房空调", "action": "调低或减小", "tags": ["c3-mention-control", "storytelling"]}
+{"home": "brand", "text": "算了算了,史密斯热水器我自己去关,不麻烦你了", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "brand", "text": "史密斯热水器关一下", "intent": "控制", "device": "史密斯热水器", "action": "关闭或停止", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "brand", "text": "米家台灯Pro我自己起来关就行,你别管了", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "brand", "text": "米家台灯Pro麻烦关一下", "intent": "控制", "device": "米家台灯Pro", "action": "关闭或停止", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "kids", "text": "婴儿房加湿器我自己添完水去关一下就行了", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "kids", "text": "婴儿房加湿器帮我关一下", "intent": "控制", "device": "婴儿房加湿器", "action": "关闭或停止", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "brand", "text": "等会我自己去把好太太晾衣架降下来晾衣服,不用你操心", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "brand", "text": "好太太晾衣架帮我降一下", "intent": "控制", "device": "好太太晾衣架", "action": "调低或减小", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "kids", "text": "智能门锁我自己去锁,你先去忙你的", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "kids", "text": "智能门锁锁一下", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "brand", "text": "方太油烟机我自己去开,炒菜的时候顺手就按了", "intent": "无关", "tags": ["c3-mention-noncommand", "self-operate"]}
+{"home": "brand", "text": "方太油烟机帮我开一下", "intent": "控制", "device": "方太油烟机", "action": "打开或启动", "tags": ["c3-mention-control", "self-operate"]}
+{"home": "brand", "text": "物业刚打电话说线路要检修,让先把海尔冰箱关了", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "brand", "text": "海尔冰箱先关一下", "intent": "控制", "device": "海尔冰箱", "action": "关闭或停止", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "brand", "text": "房东发消息说走之前记得把史密斯热水器关掉", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "brand", "text": "史密斯热水器关一下,要出门了", "intent": "控制", "device": "史密斯热水器", "action": "关闭或停止", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "brand", "text": "外卖小哥在楼下喊,让把鹿客门锁开一下,他放门口就走", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "brand", "text": "鹿客门锁开一下,我朋友到楼下了", "intent": "控制", "device": "鹿客门锁", "action": "打开或启动", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "kids", "text": "月嫂说温奶器该消毒了,让先把电源关一下", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "kids", "text": "温奶器关一下", "intent": "控制", "device": "温奶器", "action": "关闭或停止", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "kids", "text": "装修师傅说吊顶要施工,让先把婴儿房灯关一下", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "kids", "text": "婴儿房灯关一下,要施工了", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "brand", "text": "快递员说包裹放门口了,让把萤石摄像头打开看一下有没有丢", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "brand", "text": "萤石摄像头打开一下,看看门口", "intent": "控制", "device": "萤石摄像头", "action": "打开或启动", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "kids", "text": "邻居托我问一声,能不能把智能门锁的提示音关了,吵到她家孩子了", "intent": "无关", "tags": ["c3-mention-noncommand", "third-party-relay"]}
+{"home": "kids", "text": "智能门锁提示音关一下", "intent": "控制", "device": "智能门锁", "action": "关闭或停止", "tags": ["c3-mention-control", "third-party-relay"]}
+{"home": "brand", "text": "易来吸顶灯我早就关了,你就放心吧", "intent": "无关", "tags": ["c3-mention-noncommand", "past-tense"]}
+{"home": "brand", "text": "易来吸顶灯关一下", "intent": "控制", "device": "易来吸顶灯", "action": "关闭或停止", "tags": ["c3-mention-control", "past-tense"]}
+{"home": "brand", "text": "石头扫地机刚放出去扫过一遍了,客厅挺干净的", "intent": "无关", "tags": ["c3-mention-noncommand", "past-tense"]}
+{"home": "brand", "text": "石头扫地机打开,扫一下客厅", "intent": "控制", "device": "石头扫地机", "action": "打开或启动", "tags": ["c3-mention-control", "past-tense"]}
+{"home": "kids", "text": "婴儿房窗帘我早拉上了,孩子睡得可沉了", "intent": "无关", "tags": ["c3-mention-noncommand", "past-tense"]}
+{"home": "kids", "text": "婴儿房窗帘合上一下", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止", "tags": ["c3-mention-control", "past-tense"]}
+{"home": "kids", "text": "智能门锁刚锁好了,我特意检查了两遍", "intent": "无关", "tags": ["c3-mention-noncommand", "past-tense"]}
+{"home": "kids", "text": "智能门锁锁一下,我不放心", "intent": "控制", "device": "智能门锁", "action": "上锁", "tags": ["c3-mention-control", "past-tense"]}
+{"home": "brand", "text": "苏泊尔电饭煲已经按保温了,饭不会凉的", "intent": "无关", "tags": ["c3-mention-noncommand", "past-tense"]}
+{"home": "brand", "text": "苏泊尔电饭煲设成保温模式", "intent": "控制", "device": "苏泊尔电饭煲", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "past-tense"]}
+{"home": "kids", "text": "婴儿房加湿器加满水打开了,现在屋里挺湿润", "intent": "无关", "tags": ["c3-mention-noncommand", "past-tense"]}
+{"home": "kids", "text": "婴儿房加湿器打开一下", "intent": "控制", "device": "婴儿房加湿器", "action": "打开或启动", "tags": ["c3-mention-control", "past-tense"]}
+{"home": "brand", "text": "美的风尊空调这个型号好像最高能设到30度", "intent": "无关", "tags": ["c3-mention-noncommand", "faq-spec"]}
+{"home": "brand", "text": "美的风尊空调设到30度", "intent": "控制", "device": "美的风尊空调", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "faq-spec"]}
+{"home": "brand", "text": "德尔玛加湿器这款一般能调六档雾量", "intent": "无关", "tags": ["c3-mention-noncommand", "faq-spec"]}
+{"home": "brand", "text": "德尔玛加湿器调到六档", "intent": "控制", "device": "德尔玛加湿器", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "faq-spec"]}
+{"home": "kids", "text": "婴儿房空调这个牌子好像没有睡眠模式吧", "intent": "无关", "tags": ["c3-mention-noncommand", "faq-spec"]}
+{"home": "kids", "text": "婴儿房空调调成睡眠模式", "intent": "控制", "device": "婴儿房空调", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "faq-spec"]}
+{"home": "brand", "text": "戴森净化风扇这种一般吹多大风都不怎么响", "intent": "无关", "tags": ["c3-mention-noncommand", "faq-spec"]}
+{"home": "brand", "text": "戴森净化风扇风调大一点", "intent": "控制", "device": "戴森净化风扇", "action": "调高或增大", "tags": ["c3-mention-control", "faq-spec"]}
+{"home": "kids", "text": "空气净化器这种一般能用个五六年吧", "intent": "无关", "tags": ["c3-mention-noncommand", "faq-spec"]}
+{"home": "kids", "text": "空气净化器打开一下", "intent": "控制", "device": "空气净化器", "action": "打开或启动", "tags": ["c3-mention-control", "faq-spec"]}
+{"home": "brand", "text": "哎你把小度音箱声音开大点,视频这头听不清你说啥", "intent": "无关", "tags": ["c3-mention-noncommand", "call-to-other"]}
+{"home": "brand", "text": "小度音箱声音开大点", "intent": "控制", "device": "小度音箱", "action": "调高或增大", "tags": ["c3-mention-control", "call-to-other"]}
+{"home": "kids", "text": "喂,你把客厅灯关一下呗,晃眼睛,我这边在看视频通话", "intent": "无关", "tags": ["c3-mention-noncommand", "call-to-other"]}
+{"home": "kids", "text": "客厅灯关一下,晃眼睛", "intent": "控制", "device": "客厅灯", "action": "关闭或停止", "tags": ["c3-mention-control", "call-to-other"]}
