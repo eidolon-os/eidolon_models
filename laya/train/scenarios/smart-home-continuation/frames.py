@@ -330,8 +330,8 @@ def pick_context(home: str, devs: list[Device], rng: random.Random, homonym: boo
     }
 
 
-def follow_context(home: str, devs: list[Device], rng: random.Random) -> dict | None:
-    if rng.random() < 0.2:
+def follow_context(home: str, devs: list[Device], rng: random.Random, multi: bool | None = None) -> dict | None:
+    if multi is True or (multi is None and rng.random() < 0.2):
         groups = [g for g in _groups(devs)]
         if not groups:
             return None
@@ -562,6 +562,36 @@ def make_split(split: str) -> list[dict]:
     return frames[:target]
 
 
+# c4：F08（焦点多台只动一部分）在训练池里只有 4 个剧本，c3 在 c-dev 上唯一的高置信错误执行就是它。
+# 只给训练池补，只用焦点多台的上下文；每个上下文配一个“作用于全部焦点”的对照。
+EXTRA_F08 = {"F08": (0.50, REDO), "F01": (0.20, "verb"), "F04": (0.15, "verb"), "F07": (0.15, REDO)}
+
+
+def make_extra_f08(n: int = 200, seed: int = 404) -> list[dict]:
+    rng = random.Random(seed)
+    homes = {h: load_home(h) for h in SPLIT_HOMES["train"]}
+    frames: list[dict] = []
+    ctx_no = 0
+    while len(frames) < n:
+        home = rng.choice(list(homes))
+        ctx = follow_context(home, homes[home], rng, multi=True)
+        if ctx is None or len(ctx["devices"]) < 2:
+            continue
+        chosen = []
+        for fam in ["F08", _weighted(rng, {k: v for k, v in EXTRA_F08.items() if k != "F08"})]:
+            got = follow_spec(fam, ctx, homes[home], rng)
+            if got is not None:
+                chosen.append((fam, *got))
+        if not chosen:
+            continue
+        ctx_no += 1
+        cid = f"train-f08-follow-{ctx_no:04d}"
+        for j, (fam, spec, gold) in enumerate(chosen):
+            frames.append({"frame_id": f"{cid}-{j}", "context_id": cid, "split": "train", "family": fam,
+                           "spec": spec, "gold": gold, **ctx})
+    return frames[:n]
+
+
 def writer_view(f: dict) -> dict:
     """写手看到的：状态、选项和要求，没有金标。"""
     return {"frame_id": f["frame_id"], "题目": f["question"], "context": f["context"],
@@ -571,9 +601,21 @@ def writer_view(f: dict) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True)
+    ap.add_argument("--extra", choices=["f08"], help="只生成补充剧本（不动已有的 frames-{train,dev,test}）")
     args = ap.parse_args()
     out = Path(args.out)
     (out / "writer").mkdir(parents=True, exist_ok=True)
+    if args.extra == "f08":
+        frames = make_extra_f08()
+        with (out / "frames-train-f08.jsonl").open("w", encoding="utf-8") as fh:
+            for f in frames:
+                fh.write(json.dumps(f, ensure_ascii=False) + "\n")
+        for b in range(0, len(frames), 100):
+            with (out / "writer" / f"train-f08-{b // 100:02d}.jsonl").open("w", encoding="utf-8") as fh:
+                for f in frames[b : b + 100]:
+                    fh.write(json.dumps(writer_view(f), ensure_ascii=False) + "\n")
+        print("extra f08", len(frames), dict(sorted(__import__("collections").Counter(f["family"] for f in frames).items())))
+        return
     for split in SIZES:
         frames = make_split(split)
         with (out / f"frames-{split}.jsonl").open("w", encoding="utf-8") as fh:

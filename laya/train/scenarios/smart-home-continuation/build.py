@@ -48,7 +48,11 @@ def read(path: Path) -> list[dict]:
 
 
 def frames(split: str) -> list[dict]:
-    return read(DATA / f"frames-{split}.jsonl")
+    """frames-<split>.jsonl 加上补充剧本 frames-<split>-*.jsonl（c4 起的 F08 补充）。"""
+    out = read(DATA / f"frames-{split}.jsonl")
+    for p in sorted(DATA.glob(f"frames-{split}-*.jsonl")):
+        out += read(p)
+    return out
 
 
 def writes() -> dict[str, dict]:
