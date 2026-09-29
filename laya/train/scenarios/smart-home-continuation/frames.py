@@ -374,6 +374,7 @@ def pick_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> tu
     labels, n, phrase = ctx["labels"], len(cands), ctx["context"]["待执行"]
     i = rng.randrange(n)
     gold, dev = labels[i], cands[i]
+    shared = labels[i].split("（")[0]  # 人为重名时所有候选共用的名字
     j = rng.choice([k for k in range(n) if k != i])
     other = cands[j]
     if fam in HOMONYM_FAMILIES and not ctx["homonym"]:
@@ -400,7 +401,7 @@ def pick_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> tu
     if fam == "P06":
         return (f"句内改口：先说成{other.room}的那台，马上改口，最后落在{dev.room}的「{dev.name}」。"), gold
     if fam == "P07":
-        return (f"候选同名（都叫「{dev.name}」）。用房间或位置线索指出{dev.room}的那一台，不改变动作。"), gold
+        return (f"候选同名（都叫「{shared}」）。用房间或位置线索指出{dev.room}的那一台，不改变动作。"), gold
     if fam == "P08":
         return (f"只否定{other.room}的「{other.name}」，不说要哪一台（不要说“另一个 / 那就剩下的”）。"), REDO
     if fam == "P09":
@@ -425,7 +426,7 @@ def pick_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> tu
     if fam == "P12":
         return "只附和、委托或表示随意，不指出是哪一台（好的 / 嗯 / 随便 / 你决定 / 哪个都行……）。", REDO
     if fam == "P13":
-        return f"候选同名（都叫「{dev.name}」）。只说这个名字或“{dev.name}那个”，不给房间或位置线索。", REDO
+        return f"候选同名（都叫「{shared}」）。只说这个名字或“{shared}那个”，不给房间或位置线索。", REDO
     if fam == "P14":
         return "明确不要这次操作了，也不提别的要求（可以委婉，可以说自己去弄）。", CANCEL
     if fam == "P15":
@@ -452,8 +453,13 @@ def follow_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> 
     names = "、".join(d.name for d in focus)
     if fam == "F01":
         simple = [v for v in opts if v in (ON, OFF, PAUSE)]
-        rev = {ON: OFF, OFF: ON, PAUSE: ON}.get(last)
-        v = rev if rev in simple and rng.random() < 0.7 else rng.choice(simple)
+        agent = ctx["context"]["Agent"]
+        if last == "查询":
+            off = "关着" in agent or "待机" in agent or "已暂停" in agent
+        else:
+            off = last in (OFF, PAUSE)
+        natural = ON if off else (PAUSE if PAUSE in simple and rng.random() < 0.3 else OFF)
+        v = natural if rng.random() < 0.9 else rng.choice(simple)  # 少量照字面的“怪”要求，金标不变
         return f"不说设备名（用代词或省略宾语），要求「{action_phrase(kind, v)}」。", v
     if fam == "F02":
         steps = [v for v in opts if v in (UP, DOWN)]
@@ -474,9 +480,10 @@ def follow_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> 
         target = focus[0].name if len(focus) == 1 else f"这几台（{names}）"
         return f"说出焦点设备本身（{target}，可以简称），要求「{action_phrase(kind, v, val)}」。", v
     if fam == "F05":
-        if last in ("查询", SET) or last not in opts:
+        if last not in (UP, DOWN):
             return None
-        return f"要求再做一次刚才的动作「{action_phrase(kind, last)}」（照字面重复，比如“再…一下”）。", last
+        return (f"不说方向词（不出现高 / 低 / 亮 / 暗 / 大 / 小），要求把刚才的调节「{action_phrase(kind, last)}」"
+                f"再来一次（比如“再来一点”“再一次”）。"), last
     if fam == "F06":
         bad = [v for v in VERBS if v not in opts] + ["上锁"]
         v = rng.choice(bad)
