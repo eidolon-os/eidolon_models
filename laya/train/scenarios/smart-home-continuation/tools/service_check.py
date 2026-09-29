@@ -6,15 +6,15 @@
 
 Each record's state and questions go to POST /v1/systemone exactly as stored (no ask_if, as the Agent adapter
 sends them). A different choice means the service does not see what the model was evaluated on; the largest
-probability difference shows numeric drift (device / backend). Prints one line per pair and exits 1 on any
-choice mismatch.
+probability difference shows numeric drift (device / backend). Also times each request (one at a time, as the
+Agent sends them). Prints one line per pair and exits 1 on any choice mismatch.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import sys
+import time
 import urllib.request
 
 
@@ -28,11 +28,14 @@ def main() -> int:
         want = {(r["record_id"], r["qid"]): r for r in json.load(open(report, encoding="utf-8"))["rows"]}
         n = diff = 0
         worst = 0.0
+        ms = []
         for line in open(records, encoding="utf-8"):
             rec = json.loads(line)
             body = json.dumps({"state": rec["state"], "questions": rec["questions"]}).encode()
             req = urllib.request.Request(a.url.rstrip("/") + "/v1/systemone", body, {"content-type": "application/json"})
+            t = time.perf_counter()
             got = json.loads(urllib.request.urlopen(req, timeout=30).read())["answers"]
+            ms.append((time.perf_counter() - t) * 1000)
             for qid, ans in got.items():
                 w = want.get((rec["id"], qid))
                 if w is None:  # not scored offline (e.g. device for a 无关 record)
@@ -43,7 +46,9 @@ def main() -> int:
                     print(f"  choice differs {rec['id']} {qid}: service {ans['choice']} vs eval {w['pred']}")
                 worst = max(worst, max(abs(ans["probabilities"][k] - p) for k, p in w["probabilities"].items()))
         bad += diff
-        print(f"{records}: {n} answers, {diff} choice differences, max |dp| {worst:.4f}")
+        ms.sort()
+        print(f"{records}: {n} answers, {diff} choice differences, max |dp| {worst:.4f}; "
+              f"{len(ms)} requests p50 {ms[len(ms) // 2]:.0f} / p95 {ms[int(0.95 * (len(ms) - 1))]:.0f} / max {ms[-1]:.0f} ms")
     return 1 if bad else 0
 
 

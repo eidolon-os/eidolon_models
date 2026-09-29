@@ -87,7 +87,8 @@ def cmd_run(args) -> int:
 
     npu_dir, items_dir, out_dir = Path(args.npu_dir), Path(args.items_dir), Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    core = {"0": RKNNLite.NPU_CORE_0, "012": RKNNLite.NPU_CORE_0_1_2, "auto": RKNNLite.NPU_CORE_AUTO}[args.core]
+    core = {"0": RKNNLite.NPU_CORE_0, "1": RKNNLite.NPU_CORE_1, "2": RKNNLite.NPU_CORE_2,
+            "012": RKNNLite.NPU_CORE_0_1_2, "auto": RKNNLite.NPU_CORE_AUTO}[args.core]
     emb = np.load(npu_dir / "tok_emb_fp16.npy", mmap_mode="r")
     type_emb = np.load(npu_dir / "type_emb.npy")
     sc = dict(np.load(npu_dir / "scorer.npz"))
@@ -412,7 +413,8 @@ def main() -> int:
     p.add_argument("npu_dir")
     p.add_argument("items_dir")
     p.add_argument("out_dir")
-    p.add_argument("--core", choices=("0", "012", "auto"), default="0")
+    p.add_argument("--core", choices=("0", "1", "2", "012", "auto"), default="0",
+                   help="a core the deployed services are not using right now, when testing next to them")
     p.set_defaults(func=cmd_run)
     p = sub.add_parser("bench")
     p.add_argument("npu_dir")
