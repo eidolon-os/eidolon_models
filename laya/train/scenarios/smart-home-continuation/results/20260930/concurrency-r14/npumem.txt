@@ -1,0 +1,7 @@
+fd 3 /dev/dri/card1
+pos:	0
+flags:	0400002
+mnt_id:	27
+ino:	185
+
+mapped from NPU device: 20 regions 1128 MiB

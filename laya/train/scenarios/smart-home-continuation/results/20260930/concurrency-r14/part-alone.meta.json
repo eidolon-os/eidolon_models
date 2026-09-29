@@ -1,0 +1,4222 @@
+{
+ "scenario": "part-alone",
+ "wall_s": 526.8,
+ "gap": 0.1,
+ "seed": 7,
+ "cpu_ticks": {
+  "2765844": 0,
+  "2560011": 4191
+ },
+ "clk_tck": 100,
+ "npu_load": [
+  {
+   "t": 500.8,
+   "load": "NPU load:  Core0:  0%, Core1: 54%, Core2:  0%,"
+  },
+  {
+   "t": 1001.6,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 1502.4,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 2002.8,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 2503.1,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 3003.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 3503.8,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 4004.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 4504.3,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 5004.7,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 5505.3,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 6005.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 6506.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 7007.0,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 7507.5,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 8008.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 8508.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 9009.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 9509.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 10010.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 10511.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 11011.7,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 11512.3,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 12013.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 12513.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 13014.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 13515.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 14015.9,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 14516.4,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 15016.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 15517.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 16018.0,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 16518.6,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 17019.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 17519.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 18020.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 18520.8,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 19021.4,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 19521.9,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 20022.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 20523.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 21023.6,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 21524.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 22025.2,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 22527.2,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 23027.8,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 23528.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 24029.0,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 24529.5,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 25030.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 25530.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 26031.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 26531.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 27031.9,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 27532.5,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 28033.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 28533.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 29034.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 29535.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 30035.7,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 30536.3,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 31036.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 31537.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 32038.1,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 32539.0,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 33041.2,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 33541.7,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 34042.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 34543.6,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 35044.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 35544.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 36045.4,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 36546.5,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 37047.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 37549.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 38050.0,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 38550.7,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 39051.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 39551.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 40052.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 40552.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 41053.5,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 41554.1,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 42054.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 42555.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 43055.9,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 43556.6,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 44057.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 44557.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 45058.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 45559.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 46059.7,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 46560.3,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 47060.9,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 47561.5,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 48062.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 48562.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 49063.3,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 49563.7,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 50064.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 50564.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 51065.5,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 51566.8,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 52067.4,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 52568.1,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 53068.6,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 53569.2,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 54069.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 54570.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 55071.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 55571.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 56072.2,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 56572.8,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 57073.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 57575.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 58076.8,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 58577.6,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 59077.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 59578.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 60078.7,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 60579.0,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 61079.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 61579.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 62080.1,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 62580.7,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 63081.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 63581.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 64082.4,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 64583.0,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 65083.6,
+   "load": "NPU load:  Core0: 93%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 65584.7,
+   "load": "NPU load:  Core0: 93%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 66085.3,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 66585.8,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 67086.4,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 67587.1,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 68087.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 68588.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 69088.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 69589.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 70090.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 70590.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 71091.2,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 71591.8,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 72092.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 72593.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 73093.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 73594.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 74094.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 74595.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 75095.6,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 75595.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 76096.2,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 76596.5,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 77096.8,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 77597.1,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 78097.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 78597.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 79097.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 79598.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 80098.4,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 80598.8,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 81099.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 81599.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 82099.7,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 82600.0,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 83100.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 83600.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 84100.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 84601.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 85101.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 85603.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 86103.4,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 86603.6,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 87103.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 87604.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 88104.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 88604.8,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 89105.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 89605.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 90105.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 90606.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 91106.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 91608.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 92108.6,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 92609.1,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 93109.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 93610.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 94110.3,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 94610.6,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 95110.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 95611.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 96111.5,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 96611.8,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 97112.2,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 97612.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 98112.8,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 98613.1,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 99113.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 99613.6,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 100113.9,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 100614.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 101114.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 101614.8,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 102115.1,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 102615.4,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 103115.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 103616.0,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 104116.3,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 104616.7,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 105117.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 105618.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 106118.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 106618.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 107119.5,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 107619.8,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 108120.1,
+   "load": "NPU load:  Core0: 89%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 108620.5,
+   "load": "NPU load:  Core0: 89%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 109121.0,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 109621.4,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 110122.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 110622.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 111122.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 111623.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 112123.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 112624.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 113125.0,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 113625.3,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 114125.6,
+   "load": "NPU load:  Core0: 90%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 114625.9,
+   "load": "NPU load:  Core0: 90%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 115126.1,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 115626.4,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 116126.7,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 116627.0,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 117127.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 117627.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 118128.0,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 118628.7,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 119130.0,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 119630.8,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 120131.6,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 120632.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 121133.0,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 121633.6,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 122134.3,
+   "load": "NPU load:  Core0: 89%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 122635.3,
+   "load": "NPU load:  Core0: 89%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 123135.7,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 123636.0,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 124136.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 124636.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 125137.0,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 125637.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 126137.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 126638.0,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 127138.3,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 127638.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 128138.8,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 128639.1,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 129139.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 129639.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 130140.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 130640.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 131140.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 131640.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 132141.2,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 132641.5,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 133141.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 133642.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 134143.0,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 134643.6,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 135144.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 135644.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 136145.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 136645.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 137146.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 137647.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 138147.5,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 138648.0,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 139148.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 139648.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 140149.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 140649.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 141150.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 141650.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 142151.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 142651.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 143151.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 143652.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 144152.5,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 144652.8,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 145153.1,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 145653.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 146153.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 146654.0,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 147154.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 147654.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 148155.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 148655.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 149156.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 149656.9,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 150157.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 150658.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 151158.8,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 151660.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 152161.3,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 152661.8,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 153162.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 153662.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 154163.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 154663.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 155164.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 155664.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 156164.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 156665.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 157165.6,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 157666.2,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 158166.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 158667.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 159168.0,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 159668.6,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 160169.1,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 160669.6,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 161170.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 161670.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 162171.5,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 162672.0,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 163172.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 163673.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 164173.8,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 164674.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 165175.0,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 165675.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 166176.0,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 166676.4,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 167176.6,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 167676.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 168177.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 168677.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 169177.7,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 169678.1,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 170178.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 170678.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 171179.1,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 171679.7,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 172180.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 172681.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 173182.2,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 173683.0,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 174184.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 174684.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 175184.8,
+   "load": "NPU load:  Core0: 66%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 175685.1,
+   "load": "NPU load:  Core0: 66%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 176185.4,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 176685.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 177186.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 177686.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 178186.6,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 178686.9,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 179187.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 179687.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 180187.8,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 180688.1,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 181188.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 181688.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 182189.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 182689.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 183189.6,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 183690.0,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 184190.5,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 184690.8,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 185191.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 185691.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 186191.7,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 186692.1,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 187192.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 187693.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 188193.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 188694.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 189194.5,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 189694.8,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 190195.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 190695.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 191196.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 191696.8,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 192197.4,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 192698.0,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 193198.6,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 193699.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 194199.9,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 194700.4,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 195201.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 195701.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 196202.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 196702.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 197203.0,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 197703.5,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 198203.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 198704.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 199204.8,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 199705.1,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 200205.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 200705.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 201206.1,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 201706.4,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 202206.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 202706.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 203207.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 203707.5,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 204207.9,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 204708.2,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 205209.0,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 205709.4,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 206209.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 206710.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 207210.4,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 207710.7,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 208211.0,
+   "load": "NPU load:  Core0: 88%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 208711.3,
+   "load": "NPU load:  Core0: 88%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 209211.6,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 209711.9,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 210212.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 210712.6,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 211212.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 211713.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 212213.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 212714.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 213214.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 213714.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 214215.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 214715.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 215215.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 215715.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 216216.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 216716.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 217216.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 217717.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 218217.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 218717.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 219218.3,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 219718.6,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 220218.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 220719.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 221219.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 221719.8,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 222220.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 222720.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 223220.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 223721.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 224221.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 224721.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 225222.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 225722.5,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 226222.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 226723.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 227223.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 227723.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 228224.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 228724.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 229224.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 229724.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 230225.2,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 230725.6,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 231225.9,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 231726.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 232226.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 232726.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 233227.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 233727.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 234227.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 234728.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 235228.3,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 235728.6,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 236228.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 236729.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 237229.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 237729.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 238230.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 238730.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 239230.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 239731.1,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 240231.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 240732.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 241232.5,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 241732.8,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 242233.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 242733.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 243233.7,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 243734.0,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 244234.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 244734.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 245235.0,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 245735.4,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 246235.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 246736.2,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 247236.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 247736.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 248237.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 248737.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 249237.9,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 249738.3,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 250238.6,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 250738.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 251239.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 251739.5,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 252239.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 252740.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 253240.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 253740.7,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 254241.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 254741.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 255241.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 255741.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 256242.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 256742.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 257243.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 257743.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 258243.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 258744.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 259244.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 259745.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 260245.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 260745.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 261246.0,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 261746.6,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 262247.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 262748.0,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 263248.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 263748.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 264248.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 264749.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 265249.5,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 265749.8,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 266250.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 266750.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 267250.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 267750.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 268251.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 268751.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 269251.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 269752.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 270252.5,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 270752.8,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 271253.1,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 271753.4,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 272253.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 272754.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 273254.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 273754.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 274255.0,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 274755.3,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 275255.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 275755.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 276256.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 276756.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 277256.8,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 277757.1,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 278257.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 278757.6,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 279258.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 279758.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 280258.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 280759.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 281259.4,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 281759.7,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 282260.2,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 282760.6,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 283261.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 283761.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 284261.8,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 284762.1,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 285262.4,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 285762.7,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 286263.2,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 286763.5,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 287263.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 287764.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 288264.3,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 288764.6,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 289265.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 289765.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 290265.7,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 290766.0,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 291266.3,
+   "load": "NPU load:  Core0: 88%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 291766.6,
+   "load": "NPU load:  Core0: 88%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 292266.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 292767.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 293267.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 293767.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 294268.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 294768.4,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 295268.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 295769.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 296269.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 296769.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 297270.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 297770.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 298270.8,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 298771.2,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 299271.9,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 299772.9,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 300273.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 300774.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 301274.6,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 301775.0,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 302275.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 302776.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 303276.6,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 303777.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 304277.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 304778.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 305278.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 305779.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 306280.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 306781.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 307281.8,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 307782.4,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 308283.0,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 308783.6,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 309284.1,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 309784.8,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 310285.3,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 310785.7,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 311286.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 311786.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 312287.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 312788.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 313288.7,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 313789.3,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 314289.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 314790.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 315291.0,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 315791.6,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 316292.3,
+   "load": "NPU load:  Core0: 90%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 316793.1,
+   "load": "NPU load:  Core0: 90%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 317293.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 317794.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 318294.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 318795.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 319296.0,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 319796.6,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 320297.2,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 320797.7,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 321298.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 321798.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 322299.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 322800.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 323300.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 323801.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 324302.1,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 324802.7,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 325303.3,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 325803.9,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 326304.5,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 326804.8,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 327305.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 327805.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 328305.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 328806.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 329306.5,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 329806.7,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 330307.1,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 330807.3,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 331307.6,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 331807.9,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 332308.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 332808.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 333309.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 333809.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 334310.4,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 334810.7,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 335311.0,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 335811.3,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 336311.6,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 336811.9,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 337312.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 337812.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 338312.8,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 338813.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 339313.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 339813.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 340314.1,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 340814.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 341314.7,
+   "load": "NPU load:  Core0: 93%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 341815.1,
+   "load": "NPU load:  Core0: 93%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 342315.3,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 342815.6,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 343316.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 343816.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 344316.5,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 344816.8,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 345317.1,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 345817.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 346317.6,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 346817.9,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 347318.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 347818.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 348319.2,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 348819.5,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 349319.8,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 349820.1,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 350320.4,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 350820.7,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 351321.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 351821.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 352321.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 352822.2,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 353322.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 353822.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 354323.3,
+   "load": "NPU load:  Core0: 65%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 354823.7,
+   "load": "NPU load:  Core0: 65%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 355324.0,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 355824.3,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 356324.6,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 356824.9,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 357325.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 357825.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 358325.9,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 358826.4,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 359327.7,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 359828.0,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 360328.5,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 360828.7,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 361329.1,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 361829.4,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 362329.7,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 362830.0,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 363330.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 363830.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 364330.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 364831.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 365332.0,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 365832.5,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 366333.1,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 366833.5,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 367334.1,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 367834.7,
+   "load": "NPU load:  Core0: 95%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 368335.3,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 368835.9,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 369336.9,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 369838.0,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 370338.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 370838.6,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 371338.9,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 371839.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 372339.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 372839.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 373340.1,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 373840.7,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 374341.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 374842.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 375343.0,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 375843.6,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 376344.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 376844.6,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 377345.1,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 377845.8,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 378346.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 378847.0,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 379348.1,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 379849.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 380349.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 380850.6,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 381351.1,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 381851.5,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 382352.1,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 382852.6,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 383353.2,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 383853.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 384354.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 384854.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 385354.6,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 385854.9,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 386355.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 386855.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 387355.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 387856.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 388356.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 388856.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 389357.0,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 389857.3,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 390357.6,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 390858.0,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 391358.5,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 391858.8,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 392359.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 392859.6,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 393359.9,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 393860.2,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 394360.5,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 394860.8,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 395361.1,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 395861.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 396361.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 396862.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 397363.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 397863.7,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 398365.4,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 398866.1,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 399366.7,
+   "load": "NPU load:  Core0: 92%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 399867.3,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 400367.9,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 400868.5,
+   "load": "NPU load:  Core0: 93%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 401369.1,
+   "load": "NPU load:  Core0: 93%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 401869.7,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 402370.2,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 402870.8,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 403371.4,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 403871.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 404372.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 404873.0,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 405373.3,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 405873.7,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 406374.0,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 406874.3,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 407374.6,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 407874.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 408375.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 408875.7,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 409376.1,
+   "load": "NPU load:  Core0: 73%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 409876.3,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 410376.6,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 410876.9,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 411377.3,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 411877.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 412378.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 412879.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 413380.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 413880.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 414381.1,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 414881.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 415382.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 415883.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 416384.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 416884.8,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 417385.4,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 417885.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 418386.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 418886.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 419387.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 419887.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 420388.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 420888.5,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 421389.1,
+   "load": "NPU load:  Core0: 67%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 421889.8,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 422390.9,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 422891.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 423392.0,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 423892.6,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 424393.3,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 424893.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 425394.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 425894.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 426395.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 426896.2,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 427396.7,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 427897.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 428398.0,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 428898.6,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 429399.1,
+   "load": "NPU load:  Core0: 86%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 429899.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 430399.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 430900.1,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 431400.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 431900.6,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 432400.9,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 432901.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 433401.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 433902.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 434402.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 434902.7,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 435403.0,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 435903.3,
+   "load": "NPU load:  Core0: 91%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 436403.6,
+   "load": "NPU load:  Core0: 91%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 436903.9,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 437404.2,
+   "load": "NPU load:  Core0: 74%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 437904.5,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 438404.8,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 438905.1,
+   "load": "NPU load:  Core0: 66%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 439405.4,
+   "load": "NPU load:  Core0: 66%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 439905.7,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 440406.1,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 440906.5,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 441406.8,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 441907.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 442407.7,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 442908.4,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 443408.9,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 443909.4,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 444409.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 444910.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 445411.3,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 445913.1,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 446413.7,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 446914.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 447414.8,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 447915.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 448415.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 448916.3,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 449416.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 449917.6,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 450418.7,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 450919.2,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 451419.7,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 451920.3,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 452421.1,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 452921.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 453422.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 453923.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 454424.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 454925.0,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 455425.5,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 455925.8,
+   "load": "NPU load:  Core0: 91%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 456426.1,
+   "load": "NPU load:  Core0: 91%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 456926.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 457426.7,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 457927.0,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 458427.3,
+   "load": "NPU load:  Core0: 72%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 458927.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 459427.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 459928.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 460428.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 460928.9,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 461429.3,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 461929.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 462429.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 462930.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 463430.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 463930.7,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 464431.0,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 464931.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 465431.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 465932.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 466432.5,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 466932.9,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 467433.3,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 467933.6,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 468434.0,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 468934.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 469434.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 469934.9,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 470435.2,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 470935.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 471435.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 471936.1,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 472436.4,
+   "load": "NPU load:  Core0: 96%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 472936.7,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 473437.0,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 473937.3,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 474437.6,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 474937.9,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 475438.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 475938.7,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 476439.0,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 476939.3,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 477439.6,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 477939.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 478440.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 478940.5,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 479440.8,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 479941.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 480441.5,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 480941.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 481442.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 481942.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 482442.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 482943.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 483443.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 483943.7,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 484444.1,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 484944.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 485444.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 485945.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 486445.3,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 486945.6,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 487446.2,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 487946.5,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 488446.8,
+   "load": "NPU load:  Core0: 71%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 488947.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 489447.5,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 489948.1,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 490448.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 490948.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 491449.1,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 491949.4,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 492449.7,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 492950.0,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 493450.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 493950.8,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 494451.1,
+   "load": "NPU load:  Core0: 83%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 494951.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 495451.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 495952.0,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 496452.3,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 496952.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 497452.9,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 497953.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 498453.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 498954.2,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 499454.9,
+   "load": "NPU load:  Core0: 87%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 499955.4,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 500456.0,
+   "load": "NPU load:  Core0: 81%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 500956.4,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 501457.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 501957.6,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 502458.2,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 502958.7,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 503459.3,
+   "load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 503960.0,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 504460.6,
+   "load": "NPU load:  Core0: 94%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 504961.2,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 505461.8,
+   "load": "NPU load:  Core0: 75%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 505962.4,
+   "load": "NPU load:  Core0: 89%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 506462.9,
+   "load": "NPU load:  Core0: 89%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 506963.5,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 507464.0,
+   "load": "NPU load:  Core0: 68%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 507964.6,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 508465.1,
+   "load": "NPU load:  Core0: 76%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 508965.7,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 509466.2,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 509966.8,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 510467.4,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 510968.1,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 511468.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 511969.2,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 512469.8,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 512970.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 513471.2,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 513971.8,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 514472.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 514973.0,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 515473.5,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 515974.1,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 516474.6,
+   "load": "NPU load:  Core0: 80%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 516975.2,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 517475.7,
+   "load": "NPU load:  Core0: 69%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 517976.0,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 518476.3,
+   "load": "NPU load:  Core0: 77%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 518976.7,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 519477.4,
+   "load": "NPU load:  Core0: 85%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 519977.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 520478.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 520978.3,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 521478.6,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 521979.0,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 522479.7,
+   "load": "NPU load:  Core0: 79%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 522980.3,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 523480.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 523981.5,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 524482.2,
+   "load": "NPU load:  Core0: 82%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 524982.9,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 525483.4,
+   "load": "NPU load:  Core0: 78%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 525983.7,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  },
+  {
+   "t": 526484.0,
+   "load": "NPU load:  Core0: 84%, Core1:  0%, Core2:  0%,"
+  }
+ ],
+ "started_unix": 1790706935.526856
+}
