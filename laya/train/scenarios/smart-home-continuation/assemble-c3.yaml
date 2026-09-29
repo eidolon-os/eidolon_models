@@ -1,0 +1,31 @@
+# c3：c1 的全部来源 + 单句补充（多设备 / 整屋查询与控制，WRITING-single.md）。PLAN.md §7 c3。
+# 以下同 c1：路径相对于本文件；{run} 由 pipeline 替换。
+# r14 数据原样权重 1.0、沿用 r14 的切片加权；切分 val 0.1 / calib 0.15：r14 原来的 val、calib 留在原处，
+# 只有一小部分 r14 train 进 calib（按组哈希切分，续接记录不会并进 r14 的组）。
+seed: 7
+tag_weights:
+  implicit-intent: 1.5
+  multi-device: 1.5
+sources:
+  - path: "{run}/continuation.jsonl"      # build.py records：Claude 写手 + 规则对照副本
+    weight: 2.0                            # 续接每条 1 题、单句每条 3 题：×2 后续接约占训练题目的 10%
+  - path: "{run}/single-c3.jsonl"         # gen-single-c3.yaml：单句补充，权重 1.0
+    weight: 1.0
+  - path: "../../runs/r14/dataset/train.jsonl"
+    weight: 1.0
+  - path: "../../runs/r14/dataset/val.jsonl"
+    weight: 1.0
+  - path: "../../runs/r14/dataset/calib.jsonl"
+    weight: 1.0
+locked_eval:
+  - ../../../evals/smart-home
+  - ../../../evals/smart-home-v2
+  - ../../../evals/smart-home-v3
+  - ../../../evals/smart-home-accept
+  - ../../../evals/smart-home-continuation/c-dev.jsonl
+  - ../../../evals/smart-home-continuation/c-test.jsonl
+  - ../../../evals/smart-home-continuation/diag-44.jsonl
+  - eval/locked.jsonl
+split:
+  val: 0.1
+  calib: 0.15
