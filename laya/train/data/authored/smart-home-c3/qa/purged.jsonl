@@ -32,3 +32,4 @@
 {"file": "m1.jsonl", "text": "把客厅电视声音调小点", "locked": "v2-08-013"}
 {"file": "m2.jsonl", "text": "帮我把床头灯关了", "locked": "v2-06-007"}
 {"file": "m2.jsonl", "text": "阳台晾衣架降下来,我要晾衣服", "locked": "smart-home-accept:W4-0118"}
+{"file": "m2.jsonl", "text": "这周末我打算自己去修一下花园喷灌的水管,先别用了", "locked": null, "reason": "盲标分歧：“先别用了”可读作让助手停用喷灌，也可读作对家人说；两种都合理，丢弃"}

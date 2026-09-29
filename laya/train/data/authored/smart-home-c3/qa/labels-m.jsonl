@@ -1,0 +1,98 @@
+{"qid": "m2:30", "intent": "控制", "device": "恒温酒柜", "action": "设为指定的数值或模式"}
+{"qid": "m4:14", "intent": "控制", "device": "电视", "action": "关闭或停止"}
+{"qid": "m3:89", "intent": "无关"}
+{"qid": "m1:67", "intent": "无关"}
+{"qid": "m2:98", "intent": "控制", "device": "厨房灯", "action": "关闭或停止"}
+{"qid": "m5:79", "intent": "无关"}
+{"qid": "m4:20", "intent": "控制", "device": "水泵", "action": "关闭或停止"}
+{"qid": "m3:53", "intent": "无关"}
+{"qid": "m4:31", "intent": "无关", "note": "第三方规定单独转述（§8），未接着向助手提请求"}
+{"qid": "m4:8", "intent": "控制", "device": "卷帘门", "action": "打开或启动"}
+{"qid": "m1:34", "intent": "控制", "device": "二楼主卧灯", "action": "关闭或停止"}
+{"qid": "m4:21", "intent": "无关"}
+{"qid": "m1:7", "intent": "控制", "device": "一楼客厅空调", "action": "打开或启动"}
+{"qid": "m5:76", "intent": "控制", "device": "客厅公共电视", "action": ["关闭或停止", "设为指定的数值或模式"]}
+{"qid": "m5:39", "intent": "无关"}
+{"qid": "m3:51", "intent": "无关"}
+{"qid": "m2:41", "intent": "控制", "device": "花园喷灌", "action": ["暂停", "关闭或停止"], "note": "“先别用了”无称呼、对助手说，读作停用自动喷灌（修好后再用）；也可读成不改变设备的否定句→无关"}
+{"qid": "m3:93", "intent": "无关"}
+{"qid": "m2:28", "intent": "控制", "device": "儿童房空调", "action": "调高或增大"}
+{"qid": "m2:7", "intent": "无关"}
+{"qid": "m4:78", "intent": "控制", "device": "空调", "action": "打开或启动"}
+{"qid": "m5:85", "intent": "无关"}
+{"qid": "m3:87", "intent": "无关"}
+{"qid": "m5:86", "intent": "控制", "device": "我房间的台灯", "action": "设为指定的数值或模式"}
+{"qid": "m3:92", "intent": "控制", "device": "婴儿房空调", "action": "设为指定的数值或模式"}
+{"qid": "m3:54", "intent": "控制", "device": "婴儿房加湿器", "action": "关闭或停止"}
+{"qid": "m3:14", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止"}
+{"qid": "m4:38", "intent": "控制", "device": "浴霸", "action": "打开或启动"}
+{"qid": "m5:51", "intent": "无关"}
+{"qid": "m1:78", "intent": "控制", "device": "二楼主卧空调", "action": "打开或启动"}
+{"qid": "m2:27", "intent": "无关"}
+{"qid": "m4:36", "intent": "控制", "device": "院子摄像头", "action": "打开或启动"}
+{"qid": "m5:71", "intent": "无关"}
+{"qid": "m5:55", "intent": "无关"}
+{"qid": "m3:78", "intent": "控制", "device": "石头扫地机", "action": "打开或启动"}
+{"qid": "m3:10", "intent": "控制", "device": "史密斯热水器", "action": "关闭或停止"}
+{"qid": "m4:90", "intent": "控制", "device": "扫地机", "action": "关闭或停止"}
+{"qid": "m1:8", "intent": "无关"}
+{"qid": "m4:54", "intent": "控制", "device": "门锁", "action": "打开或启动"}
+{"qid": "m5:8", "intent": "控制", "device": "顶灯", "action": "关闭或停止", "note": "讲完故事后的祈使句可能是对孩子说，但无称呼按默认对助手说（r13）"}
+{"qid": "m1:33", "intent": "无关"}
+{"qid": "m1:82", "intent": "无关"}
+{"qid": "m4:99", "intent": "无关"}
+{"qid": "m4:13", "intent": "无关"}
+{"qid": "m1:22", "intent": "控制", "device": "主卧空调", "action": "关闭或停止"}
+{"qid": "m2:63", "intent": "控制", "device": "小厨宝", "action": "打开或启动"}
+{"qid": "m5:10", "intent": "控制", "device": "窗帘", "action": "打开或启动"}
+{"qid": "m1:16", "intent": "无关"}
+{"qid": "m5:32", "intent": "控制", "device": "音箱", "action": "调低或减小"}
+{"qid": "m2:46", "intent": "控制", "device": "全屋新风", "action": "打开或启动"}
+{"qid": "m5:93", "intent": "无关"}
+{"qid": "m4:15", "intent": "无关"}
+{"qid": "m4:79", "intent": "无关"}
+{"qid": "m3:9", "intent": "无关"}
+{"qid": "m4:76", "intent": "控制", "device": "卧室灯", "action": "关闭或停止"}
+{"qid": "m5:14", "intent": "控制", "device": "风扇", "action": "打开或启动"}
+{"qid": "m3:29", "intent": "无关"}
+{"qid": "m3:13", "intent": "无关"}
+{"qid": "m4:83", "intent": "无关"}
+{"qid": "m5:21", "intent": "无关"}
+{"qid": "m4:6", "intent": "控制", "device": "大门", "action": "打开或启动"}
+{"qid": "m3:38", "intent": "控制", "device": "方太油烟机", "action": "打开或启动"}
+{"qid": "m1:69", "intent": "无关"}
+{"qid": "m2:96", "intent": "控制", "device": "主卧加湿器", "action": "关闭或停止"}
+{"qid": "m1:50", "intent": "控制", "device": "二楼主卧空调", "action": "关闭或停止"}
+{"qid": "m1:19", "intent": "控制", "device": "二楼主卧灯", "action": "打开或启动"}
+{"qid": "m1:70", "intent": "控制", "device": "空气净化器", "action": "打开或启动"}
+{"qid": "m3:64", "intent": "控制", "device": "史密斯热水器", "action": "关闭或停止"}
+{"qid": "m2:20", "intent": "控制", "device": "干衣机", "action": "打开或启动"}
+{"qid": "m5:84", "intent": "控制", "device": "我房间的台灯", "action": "关闭或停止"}
+{"qid": "m4:55", "intent": "无关"}
+{"qid": "m3:34", "intent": "控制", "device": "好太太晾衣架", "action": "调低或减小"}
+{"qid": "m5:9", "intent": "无关"}
+{"qid": "m5:92", "intent": "控制", "device": "公共热水器", "action": "调高或增大"}
+{"qid": "m5:67", "intent": "无关"}
+{"qid": "m3:26", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止"}
+{"qid": "m3:70", "intent": "控制", "device": "婴儿房灯", "action": "关闭或停止"}
+{"qid": "m3:8", "intent": "控制", "device": "婴儿房加湿器", "action": "关闭或停止"}
+{"qid": "m4:4", "intent": "控制", "device": "堂屋空调", "action": "打开或启动"}
+{"qid": "m2:88", "intent": "控制", "device": "客厅灯", "action": "打开或启动"}
+{"qid": "m3:84", "intent": "控制", "device": "苏泊尔电饭煲", "action": "设为指定的数值或模式"}
+{"qid": "m4:10", "intent": "控制", "device": "卷帘门", "action": "关闭或停止"}
+{"qid": "m3:19", "intent": "无关"}
+{"qid": "m5:19", "intent": "无关"}
+{"qid": "m5:70", "intent": "控制", "device": "公共区扫地机", "action": "打开或启动", "note": "“扫地级”按识别错字读作扫地机"}
+{"qid": "m2:81", "intent": "无关"}
+{"qid": "m4:60", "intent": "控制", "device": "咖啡机", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"qid": "m1:15", "intent": "控制", "device": "二楼书房音箱", "action": "调低或减小"}
+{"qid": "m2:52", "intent": "控制", "device": "客厅灯", "action": "关闭或停止"}
+{"qid": "m5:89", "intent": "无关"}
+{"qid": "m5:62", "intent": "控制", "device": "公共区空调", "action": ["打开或启动", "设为指定的数值或模式"]}
+{"qid": "m4:67", "intent": "无关"}
+{"qid": "m1:84", "intent": "无关", "note": "“喂你等一下”是在跟电话那头的人说，“我这把电视声音调小点”读作说话人自己去调；若读成顺带吩咐助手则为控制·客厅电视·调低或减小"}
+{"qid": "m4:68", "intent": "控制", "device": "门锁", "action": "上锁"}
+{"qid": "m2:76", "intent": "控制", "device": "客厅落地灯", "action": "关闭或停止"}
+{"qid": "m3:88", "intent": "控制", "device": "美的风尊空调", "action": "设为指定的数值或模式"}
+{"qid": "m4:3", "intent": "无关"}
+{"qid": "m4:2", "intent": "控制", "device": "大门", "action": "关闭或停止"}

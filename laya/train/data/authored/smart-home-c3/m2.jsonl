@@ -38,7 +38,6 @@
 {"home": "townhouse", "text": "恒温酒柜设到十四度", "intent": "控制", "device": "恒温酒柜", "action": "设为指定的数值或模式", "tags": ["c3-mention-control", "trivia-capability"]}
 {"home": "townhouse", "text": "视频里同事说,你那边过道夜灯还亮着挺温馨的", "intent": "无关", "tags": ["c3-mention-noncommand", "video-call-other-party"]}
 {"home": "townhouse", "text": "把二楼过道夜灯关了,天亮了", "intent": "控制", "device": "二楼过道夜灯", "action": "关闭或停止", "tags": ["c3-mention-control", "video-call-other-party"]}
-{"home": "townhouse", "text": "这周末我打算自己去修一下花园喷灌的水管,先别用了", "intent": "无关", "tags": ["c3-mention-noncommand", "future-plan-self"]}
 {"home": "townhouse", "text": "花园喷灌打开一下,该浇水了", "intent": "控制", "device": "花园喷灌", "action": "打开或启动", "tags": ["c3-mention-control", "future-plan-self"]}
 {"home": "townhouse", "text": "燃气热水器语音提示说水温已经到了,当心烫", "intent": "无关", "tags": ["c3-mention-noncommand", "device-notification"]}
 {"home": "townhouse", "text": "把燃气热水器打开,我准备洗澡", "intent": "控制", "device": "燃气热水器", "action": "打开或启动", "tags": ["c3-mention-control", "device-notification"]}
