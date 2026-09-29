@@ -1,0 +1,9 @@
+seed: 29
+sources:
+  - path: "{run}/seed.jsonl"
+    weight: 1.0
+locked_eval:
+  - eval/locked.jsonl
+split:
+  val: 0.15
+  calib: 0.15

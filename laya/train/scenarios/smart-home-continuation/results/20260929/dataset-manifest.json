@@ -1,0 +1,40 @@
+{
+  "config": {
+    "seed": 29,
+    "sources": [
+      {
+        "path": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/home-continuation-20260929/seed.jsonl",
+        "weight": 1.0
+      }
+    ],
+    "locked_eval": [
+      "eval/locked.jsonl"
+    ],
+    "split": {
+      "val": 0.15,
+      "calib": 0.15
+    }
+  },
+  "counts": {
+    "train": 188,
+    "val": 45,
+    "calib": 29
+  },
+  "unique": 262,
+  "split_groups": 29,
+  "per_source": {
+    "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/home-continuation-20260929/seed.jsonl": 262
+  },
+  "source_sha256": {
+    "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/home-continuation-20260929/seed.jsonl": "3db9929660bc491e7381b9b14c0e4bfda53276a2df29d7b54cb432adbdfe3778"
+  },
+  "dropped": {
+    "duplicate_id": 18
+  },
+  "by_scenario": {
+    "smart-home-continuation": 262
+  },
+  "by_qtype": {
+    "choice": 262
+  }
+}

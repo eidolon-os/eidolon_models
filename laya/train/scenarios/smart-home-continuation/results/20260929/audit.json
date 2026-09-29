@@ -1,0 +1,167 @@
+{
+  "status": "experimental_rejected_for_production",
+  "records": {
+    "train": 188,
+    "val": 45,
+    "calib": 29
+  },
+  "eval_records": 44,
+  "family_split_disjoint": true,
+  "eval_utterance_disjoint": true,
+  "calibration_records": 29,
+  "eval_sha256": "3263a6bac604048d11095a46a02e42c68113783032a4e0f03864572bf8d24ada",
+  "variants": {
+    "baseline": {
+      "correct": 18,
+      "wrong_executable_top1": 22,
+      "unsafe_max_probability": 0.5913,
+      "coverage_at_0_9": 0.0909,
+      "by_tag": {
+        "confirmed-focus": {
+          "n": 8,
+          "acc": 0.75,
+          "ece": 0.2298,
+          "p>=0.5": {
+            "coverage": 0.625,
+            "acc": 0.8
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        },
+        "pending-cancel": {
+          "n": 12,
+          "acc": 0.1667,
+          "ece": 0.3317,
+          "p>=0.5": {
+            "coverage": 0.5833,
+            "acc": 0.2857
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        },
+        "pending-new-request": {
+          "n": 8,
+          "acc": 0.0,
+          "ece": 0.4892,
+          "p>=0.5": {
+            "coverage": 0.125,
+            "acc": 0.0
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        },
+        "pending-selection": {
+          "n": 8,
+          "acc": 1.0,
+          "ece": 0.3704,
+          "p>=0.5": {
+            "coverage": 0.875,
+            "acc": 1.0
+          },
+          "p>=0.7": {
+            "coverage": 0.5,
+            "acc": 1.0
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        }
+      }
+    },
+    "candidate": {
+      "correct": 34,
+      "wrong_executable_top1": 2,
+      "unsafe_max_probability": 0.3414,
+      "coverage_at_0_9": 0.0,
+      "by_tag": {
+        "confirmed-focus": {
+          "n": 8,
+          "acc": 0.875,
+          "ece": 0.5051,
+          "p>=0.5": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        },
+        "pending-cancel": {
+          "n": 12,
+          "acc": 0.9167,
+          "ece": 0.5863,
+          "p>=0.5": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        },
+        "pending-new-request": {
+          "n": 8,
+          "acc": 0.5,
+          "ece": 0.353,
+          "p>=0.5": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        },
+        "pending-selection": {
+          "n": 8,
+          "acc": 1.0,
+          "ece": 0.6602,
+          "p>=0.5": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.7": {
+            "coverage": 0.0,
+            "acc": null
+          },
+          "p>=0.9": {
+            "coverage": 0.0,
+            "acc": null
+          }
+        }
+      }
+    }
+  }
+}

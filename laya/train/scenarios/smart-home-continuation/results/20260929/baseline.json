@@ -1,0 +1,2130 @@
+{
+  "eval_set": "laya/train/scenarios/smart-home-continuation/eval/locked.jsonl",
+  "n_records": 44,
+  "overall": {
+    "n": 44,
+    "acc": 0.4091,
+    "ece": 0.2233,
+    "p>=0.5": {
+      "coverage": 0.6136,
+      "acc": 0.5556
+    },
+    "p>=0.7": {
+      "coverage": 0.1818,
+      "acc": 0.75
+    },
+    "p>=0.9": {
+      "coverage": 0.0909,
+      "acc": 0.5
+    },
+    "ci95": [
+      0.2727,
+      0.5682
+    ]
+  },
+  "decision": {
+    "records": 0,
+    "control_e2e": {
+      "n": 0,
+      "n_verified": 0,
+      "n_unverified": 0,
+      "acc": null,
+      "acc_bounds": [
+        null,
+        null
+      ],
+      "ci95": [
+        null,
+        null
+      ]
+    },
+    "auto_execute": {
+      "threshold": 0.9,
+      "n": 0,
+      "n_verified": 0,
+      "n_unverified": 0,
+      "precision": null,
+      "precision_verified": null,
+      "precision_bounds": [
+        null,
+        null
+      ],
+      "ci95": [
+        null,
+        null
+      ],
+      "lower95_one_sided_exact": null,
+      "coverage": null,
+      "wrong": []
+    },
+    "false_trigger_无关": {
+      "n": 0,
+      "rate": null,
+      "ci95": [
+        null,
+        null
+      ]
+    },
+    "false_trigger_查询": {
+      "n": 0,
+      "rate": null,
+      "ci95": [
+        null,
+        null
+      ]
+    }
+  },
+  "by_scenario": {
+    "smart-home-continuation": {
+      "n": 44,
+      "acc": 0.4091,
+      "ece": 0.2233,
+      "p>=0.5": {
+        "coverage": 0.6136,
+        "acc": 0.5556
+      },
+      "p>=0.7": {
+        "coverage": 0.1818,
+        "acc": 0.75
+      },
+      "p>=0.9": {
+        "coverage": 0.0909,
+        "acc": 0.5
+      }
+    }
+  },
+  "by_qtype": {
+    "choice": {
+      "n": 44,
+      "acc": 0.4091,
+      "ece": 0.2233,
+      "p>=0.5": {
+        "coverage": 0.6136,
+        "acc": 0.5556
+      },
+      "p>=0.7": {
+        "coverage": 0.1818,
+        "acc": 0.75
+      },
+      "p>=0.9": {
+        "coverage": 0.0909,
+        "acc": 0.5
+      }
+    }
+  },
+  "by_question": {
+    "smart-home-continuation/next": {
+      "n": 44,
+      "acc": 0.4091,
+      "ece": 0.2233,
+      "p>=0.5": {
+        "coverage": 0.6136,
+        "acc": 0.5556
+      },
+      "p>=0.7": {
+        "coverage": 0.1818,
+        "acc": 0.75
+      },
+      "p>=0.9": {
+        "coverage": 0.0909,
+        "acc": 0.5
+      }
+    }
+  },
+  "by_tag": {
+    "confirmed-focus": {
+      "n": 8,
+      "acc": 0.75,
+      "ece": 0.2298,
+      "p>=0.5": {
+        "coverage": 0.625,
+        "acc": 0.8
+      },
+      "p>=0.7": {
+        "coverage": 0.0,
+        "acc": null
+      },
+      "p>=0.9": {
+        "coverage": 0.0,
+        "acc": null
+      }
+    },
+    "pending-cancel": {
+      "n": 12,
+      "acc": 0.1667,
+      "ece": 0.3317,
+      "p>=0.5": {
+        "coverage": 0.5833,
+        "acc": 0.2857
+      },
+      "p>=0.7": {
+        "coverage": 0.0,
+        "acc": null
+      },
+      "p>=0.9": {
+        "coverage": 0.0,
+        "acc": null
+      }
+    },
+    "pending-new-request": {
+      "n": 8,
+      "acc": 0.0,
+      "ece": 0.4892,
+      "p>=0.5": {
+        "coverage": 0.125,
+        "acc": 0.0
+      },
+      "p>=0.7": {
+        "coverage": 0.0,
+        "acc": null
+      },
+      "p>=0.9": {
+        "coverage": 0.0,
+        "acc": null
+      }
+    },
+    "pending-selection": {
+      "n": 8,
+      "acc": 1.0,
+      "ece": 0.3704,
+      "p>=0.5": {
+        "coverage": 0.875,
+        "acc": 1.0
+      },
+      "p>=0.7": {
+        "coverage": 0.5,
+        "acc": 1.0
+      },
+      "p>=0.9": {
+        "coverage": 0.0,
+        "acc": null
+      }
+    }
+  },
+  "rows": [
+    {
+      "record_id": "smart-home-continuation/1f41094f7be1",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.5201,
+      "probabilities": {
+        "target_0": 0.5201,
+        "target_1": 0.4174,
+        "cancel": 0.0323,
+        "escalate": 0.0303
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/9edd8ff36812",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.7832,
+      "probabilities": {
+        "target_0": 0.1212,
+        "target_1": 0.7832,
+        "cancel": 0.0485,
+        "escalate": 0.0471
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/a714b966c6ca",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "cancel",
+      "p_top": 0.5644,
+      "probabilities": {
+        "target_0": 0.114,
+        "target_1": 0.2891,
+        "cancel": 0.5644,
+        "escalate": 0.0325
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1bbb330a0881",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5335,
+      "probabilities": {
+        "target_0": 0.2435,
+        "target_1": 0.5335,
+        "cancel": 0.1684,
+        "escalate": 0.0546
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1d279502099d",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5724,
+      "probabilities": {
+        "target_0": 0.2598,
+        "target_1": 0.5724,
+        "cancel": 0.1052,
+        "escalate": 0.0626
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/6406963936fa",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5913,
+      "probabilities": {
+        "target_0": 0.2466,
+        "target_1": 0.5913,
+        "cancel": 0.1143,
+        "escalate": 0.0478
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/39a995c652ec",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4907,
+      "probabilities": {
+        "target_0": 0.2127,
+        "target_1": 0.4907,
+        "cancel": 0.1284,
+        "escalate": 0.1682
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/d76ca22fe12f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "cancel",
+      "p_top": 0.5546,
+      "probabilities": {
+        "target_0": 0.1693,
+        "target_1": 0.225,
+        "cancel": 0.5546,
+        "escalate": 0.0511
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/27ee51b4b4ec",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.5146,
+      "probabilities": {
+        "target_0": 0.5146,
+        "target_1": 0.3798,
+        "cancel": 0.0726,
+        "escalate": 0.0329
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/ac3a8ae7a663",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.7246,
+      "probabilities": {
+        "target_0": 0.1486,
+        "target_1": 0.7246,
+        "cancel": 0.0831,
+        "escalate": 0.0437
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/002cd8ac15bd",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.3778,
+      "probabilities": {
+        "target_0": 0.3088,
+        "target_1": 0.3778,
+        "cancel": 0.2849,
+        "escalate": 0.0285
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/fddff065ce42",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4687,
+      "probabilities": {
+        "target_0": 0.3125,
+        "target_1": 0.4687,
+        "cancel": 0.1702,
+        "escalate": 0.0486
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/242452677859",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4881,
+      "probabilities": {
+        "target_0": 0.3526,
+        "target_1": 0.4881,
+        "cancel": 0.1062,
+        "escalate": 0.0531
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/aa8f31b88899",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5473,
+      "probabilities": {
+        "target_0": 0.3185,
+        "target_1": 0.5473,
+        "cancel": 0.0991,
+        "escalate": 0.0351
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/45cf03938854",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4505,
+      "probabilities": {
+        "target_0": 0.3162,
+        "target_1": 0.4505,
+        "cancel": 0.1171,
+        "escalate": 0.1162
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/4db22a4d616e",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "target_1",
+      "p_top": 0.3444,
+      "probabilities": {
+        "target_0": 0.3221,
+        "target_1": 0.3444,
+        "cancel": 0.1447,
+        "escalate": 0.1888
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/3544cdaf5a8a",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.5319,
+      "probabilities": {
+        "target_0": 0.5319,
+        "target_1": 0.3979,
+        "cancel": 0.0379,
+        "escalate": 0.0324
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/52b0e473ad29",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.7474,
+      "probabilities": {
+        "target_0": 0.1592,
+        "target_1": 0.7474,
+        "cancel": 0.0465,
+        "escalate": 0.0469
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/d1932d122e5d",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "cancel",
+      "p_top": 0.562,
+      "probabilities": {
+        "target_0": 0.2131,
+        "target_1": 0.1948,
+        "cancel": 0.562,
+        "escalate": 0.0301
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/5dc11c53d08f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4531,
+      "probabilities": {
+        "target_0": 0.3745,
+        "target_1": 0.4531,
+        "cancel": 0.1284,
+        "escalate": 0.0441
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/7a0281e91850",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4728,
+      "probabilities": {
+        "target_0": 0.4203,
+        "target_1": 0.4728,
+        "cancel": 0.0642,
+        "escalate": 0.0426
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/e92e58db727a",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5235,
+      "probabilities": {
+        "target_0": 0.3414,
+        "target_1": 0.5235,
+        "cancel": 0.0954,
+        "escalate": 0.0397
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/40758fc6ce9f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4603,
+      "probabilities": {
+        "target_0": 0.2594,
+        "target_1": 0.4603,
+        "cancel": 0.1147,
+        "escalate": 0.1656
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/9455e9c67f62",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "cancel",
+      "p_top": 0.5038,
+      "probabilities": {
+        "target_0": 0.1002,
+        "target_1": 0.3503,
+        "cancel": 0.5038,
+        "escalate": 0.0457
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1729ea4f1b8e",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.477,
+      "probabilities": {
+        "target_0": 0.477,
+        "target_1": 0.3921,
+        "cancel": 0.0907,
+        "escalate": 0.0401
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/360a9385374c",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.738,
+      "probabilities": {
+        "target_0": 0.1617,
+        "target_1": 0.738,
+        "cancel": 0.0634,
+        "escalate": 0.0369
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/50f3daf8e4c4",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.389,
+      "probabilities": {
+        "target_0": 0.3498,
+        "target_1": 0.389,
+        "cancel": 0.2362,
+        "escalate": 0.025
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/852f59a020a1",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4578,
+      "probabilities": {
+        "target_0": 0.3772,
+        "target_1": 0.4578,
+        "cancel": 0.1265,
+        "escalate": 0.0384
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/3572694aaf4b",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4899,
+      "probabilities": {
+        "target_0": 0.3992,
+        "target_1": 0.4899,
+        "cancel": 0.0725,
+        "escalate": 0.0384
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/6d6ce8c84333",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5122,
+      "probabilities": {
+        "target_0": 0.3803,
+        "target_1": 0.5122,
+        "cancel": 0.0794,
+        "escalate": 0.028
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/e125c87d718c",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4887,
+      "probabilities": {
+        "target_0": 0.3146,
+        "target_1": 0.4887,
+        "cancel": 0.0963,
+        "escalate": 0.1004
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/8455b8eb0960",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5731,
+      "probabilities": {
+        "target_0": 0.1707,
+        "target_1": 0.5731,
+        "cancel": 0.091,
+        "escalate": 0.1652
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/7e079e9537b7",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "open",
+      "p_top": 0.6378,
+      "probabilities": {
+        "open": 0.6378,
+        "close": 0.2711,
+        "cancel": 0.0539,
+        "escalate": 0.0372
+      },
+      "gold": [
+        "open"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/9f89c1ec1bbc",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.5862,
+      "probabilities": {
+        "open": 0.1047,
+        "close": 0.5862,
+        "cancel": 0.2826,
+        "escalate": 0.0265
+      },
+      "gold": [
+        "close"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/62edd5a30aa7",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.4741,
+      "probabilities": {
+        "open": 0.0888,
+        "close": 0.4175,
+        "cancel": 0.4741,
+        "escalate": 0.0196
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1b7b4e004909",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.4793,
+      "probabilities": {
+        "open": 0.1402,
+        "close": 0.4793,
+        "cancel": 0.3617,
+        "escalate": 0.0188
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/a0467e4ea5ac",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9674,
+      "probabilities": {
+        "cancel": 0.9674,
+        "escalate": 0.0326
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/03d13455d8cc",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9956,
+      "probabilities": {
+        "cancel": 0.9956,
+        "escalate": 0.0044
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/5acbf44196d0",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9655,
+      "probabilities": {
+        "cancel": 0.9655,
+        "escalate": 0.0345
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/aba75ba247d3",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9092,
+      "probabilities": {
+        "cancel": 0.9092,
+        "escalate": 0.0908
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/e1ca3e666480",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "open",
+      "p_top": 0.5063,
+      "probabilities": {
+        "open": 0.5063,
+        "close": 0.3802,
+        "cancel": 0.0841,
+        "escalate": 0.0294
+      },
+      "gold": [
+        "open"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/05fa48ff1734",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.5068,
+      "probabilities": {
+        "open": 0.1445,
+        "close": 0.5068,
+        "cancel": 0.3246,
+        "escalate": 0.0242
+      },
+      "gold": [
+        "close"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/737ebdfa813f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.4544,
+      "probabilities": {
+        "open": 0.1134,
+        "close": 0.4164,
+        "cancel": 0.4544,
+        "escalate": 0.0159
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/af2cf5e5db5c",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.5168,
+      "probabilities": {
+        "open": 0.1813,
+        "close": 0.5168,
+        "cancel": 0.2877,
+        "escalate": 0.0143
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    }
+  ],
+  "policy_rows": [
+    {
+      "record_id": "smart-home-continuation/1f41094f7be1",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.5201,
+      "probabilities": {
+        "target_0": 0.5201,
+        "target_1": 0.4174,
+        "cancel": 0.0323,
+        "escalate": 0.0303
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/9edd8ff36812",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.7832,
+      "probabilities": {
+        "target_0": 0.1212,
+        "target_1": 0.7832,
+        "cancel": 0.0485,
+        "escalate": 0.0471
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/a714b966c6ca",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "cancel",
+      "p_top": 0.5644,
+      "probabilities": {
+        "target_0": 0.114,
+        "target_1": 0.2891,
+        "cancel": 0.5644,
+        "escalate": 0.0325
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1bbb330a0881",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5335,
+      "probabilities": {
+        "target_0": 0.2435,
+        "target_1": 0.5335,
+        "cancel": 0.1684,
+        "escalate": 0.0546
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1d279502099d",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5724,
+      "probabilities": {
+        "target_0": 0.2598,
+        "target_1": 0.5724,
+        "cancel": 0.1052,
+        "escalate": 0.0626
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/6406963936fa",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5913,
+      "probabilities": {
+        "target_0": 0.2466,
+        "target_1": 0.5913,
+        "cancel": 0.1143,
+        "escalate": 0.0478
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/39a995c652ec",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4907,
+      "probabilities": {
+        "target_0": 0.2127,
+        "target_1": 0.4907,
+        "cancel": 0.1284,
+        "escalate": 0.1682
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/d76ca22fe12f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "cancel",
+      "p_top": 0.5546,
+      "probabilities": {
+        "target_0": 0.1693,
+        "target_1": 0.225,
+        "cancel": 0.5546,
+        "escalate": 0.0511
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/27ee51b4b4ec",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.5146,
+      "probabilities": {
+        "target_0": 0.5146,
+        "target_1": 0.3798,
+        "cancel": 0.0726,
+        "escalate": 0.0329
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/ac3a8ae7a663",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.7246,
+      "probabilities": {
+        "target_0": 0.1486,
+        "target_1": 0.7246,
+        "cancel": 0.0831,
+        "escalate": 0.0437
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/002cd8ac15bd",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.3778,
+      "probabilities": {
+        "target_0": 0.3088,
+        "target_1": 0.3778,
+        "cancel": 0.2849,
+        "escalate": 0.0285
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/fddff065ce42",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4687,
+      "probabilities": {
+        "target_0": 0.3125,
+        "target_1": 0.4687,
+        "cancel": 0.1702,
+        "escalate": 0.0486
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/242452677859",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4881,
+      "probabilities": {
+        "target_0": 0.3526,
+        "target_1": 0.4881,
+        "cancel": 0.1062,
+        "escalate": 0.0531
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/aa8f31b88899",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5473,
+      "probabilities": {
+        "target_0": 0.3185,
+        "target_1": 0.5473,
+        "cancel": 0.0991,
+        "escalate": 0.0351
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/45cf03938854",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4505,
+      "probabilities": {
+        "target_0": 0.3162,
+        "target_1": 0.4505,
+        "cancel": 0.1171,
+        "escalate": 0.1162
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/4db22a4d616e",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "target_1",
+      "p_top": 0.3444,
+      "probabilities": {
+        "target_0": 0.3221,
+        "target_1": 0.3444,
+        "cancel": 0.1447,
+        "escalate": 0.1888
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/3544cdaf5a8a",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.5319,
+      "probabilities": {
+        "target_0": 0.5319,
+        "target_1": 0.3979,
+        "cancel": 0.0379,
+        "escalate": 0.0324
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/52b0e473ad29",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.7474,
+      "probabilities": {
+        "target_0": 0.1592,
+        "target_1": 0.7474,
+        "cancel": 0.0465,
+        "escalate": 0.0469
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/d1932d122e5d",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "cancel",
+      "p_top": 0.562,
+      "probabilities": {
+        "target_0": 0.2131,
+        "target_1": 0.1948,
+        "cancel": 0.562,
+        "escalate": 0.0301
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/5dc11c53d08f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4531,
+      "probabilities": {
+        "target_0": 0.3745,
+        "target_1": 0.4531,
+        "cancel": 0.1284,
+        "escalate": 0.0441
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/7a0281e91850",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4728,
+      "probabilities": {
+        "target_0": 0.4203,
+        "target_1": 0.4728,
+        "cancel": 0.0642,
+        "escalate": 0.0426
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/e92e58db727a",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5235,
+      "probabilities": {
+        "target_0": 0.3414,
+        "target_1": 0.5235,
+        "cancel": 0.0954,
+        "escalate": 0.0397
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/40758fc6ce9f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4603,
+      "probabilities": {
+        "target_0": 0.2594,
+        "target_1": 0.4603,
+        "cancel": 0.1147,
+        "escalate": 0.1656
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/9455e9c67f62",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "cancel",
+      "p_top": 0.5038,
+      "probabilities": {
+        "target_0": 0.1002,
+        "target_1": 0.3503,
+        "cancel": 0.5038,
+        "escalate": 0.0457
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1729ea4f1b8e",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_0",
+      "p_top": 0.477,
+      "probabilities": {
+        "target_0": 0.477,
+        "target_1": 0.3921,
+        "cancel": 0.0907,
+        "escalate": 0.0401
+      },
+      "gold": [
+        "target_0"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/360a9385374c",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-selection"
+      ],
+      "pred": "target_1",
+      "p_top": 0.738,
+      "probabilities": {
+        "target_0": 0.1617,
+        "target_1": 0.738,
+        "cancel": 0.0634,
+        "escalate": 0.0369
+      },
+      "gold": [
+        "target_1"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/50f3daf8e4c4",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.389,
+      "probabilities": {
+        "target_0": 0.3498,
+        "target_1": 0.389,
+        "cancel": 0.2362,
+        "escalate": 0.025
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/852f59a020a1",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4578,
+      "probabilities": {
+        "target_0": 0.3772,
+        "target_1": 0.4578,
+        "cancel": 0.1265,
+        "escalate": 0.0384
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/3572694aaf4b",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4899,
+      "probabilities": {
+        "target_0": 0.3992,
+        "target_1": 0.4899,
+        "cancel": 0.0725,
+        "escalate": 0.0384
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/6d6ce8c84333",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-cancel"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5122,
+      "probabilities": {
+        "target_0": 0.3803,
+        "target_1": 0.5122,
+        "cancel": 0.0794,
+        "escalate": 0.028
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/e125c87d718c",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-new-request"
+      ],
+      "pred": "target_1",
+      "p_top": 0.4887,
+      "probabilities": {
+        "target_0": 0.3146,
+        "target_1": 0.4887,
+        "cancel": 0.0963,
+        "escalate": 0.1004
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/8455b8eb0960",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "pending-action-correction"
+      ],
+      "pred": "target_1",
+      "p_top": 0.5731,
+      "probabilities": {
+        "target_0": 0.1707,
+        "target_1": 0.5731,
+        "cancel": 0.091,
+        "escalate": 0.1652
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/7e079e9537b7",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "open",
+      "p_top": 0.6378,
+      "probabilities": {
+        "open": 0.6378,
+        "close": 0.2711,
+        "cancel": 0.0539,
+        "escalate": 0.0372
+      },
+      "gold": [
+        "open"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/9f89c1ec1bbc",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.5862,
+      "probabilities": {
+        "open": 0.1047,
+        "close": 0.5862,
+        "cancel": 0.2826,
+        "escalate": 0.0265
+      },
+      "gold": [
+        "close"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/62edd5a30aa7",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.4741,
+      "probabilities": {
+        "open": 0.0888,
+        "close": 0.4175,
+        "cancel": 0.4741,
+        "escalate": 0.0196
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/1b7b4e004909",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.4793,
+      "probabilities": {
+        "open": 0.1402,
+        "close": 0.4793,
+        "cancel": 0.3617,
+        "escalate": 0.0188
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/a0467e4ea5ac",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9674,
+      "probabilities": {
+        "cancel": 0.9674,
+        "escalate": 0.0326
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/03d13455d8cc",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9956,
+      "probabilities": {
+        "cancel": 0.9956,
+        "escalate": 0.0044
+      },
+      "gold": [
+        "escalate"
+      ],
+      "correct": false,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/5acbf44196d0",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9655,
+      "probabilities": {
+        "cancel": 0.9655,
+        "escalate": 0.0345
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/aba75ba247d3",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "missing-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.9092,
+      "probabilities": {
+        "cancel": 0.9092,
+        "escalate": 0.0908
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 2
+    },
+    {
+      "record_id": "smart-home-continuation/e1ca3e666480",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "open",
+      "p_top": 0.5063,
+      "probabilities": {
+        "open": 0.5063,
+        "close": 0.3802,
+        "cancel": 0.0841,
+        "escalate": 0.0294
+      },
+      "gold": [
+        "open"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/05fa48ff1734",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.5068,
+      "probabilities": {
+        "open": 0.1445,
+        "close": 0.5068,
+        "cancel": 0.3246,
+        "escalate": 0.0242
+      },
+      "gold": [
+        "close"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/737ebdfa813f",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "cancel",
+      "p_top": 0.4544,
+      "probabilities": {
+        "open": 0.1134,
+        "close": 0.4164,
+        "cancel": 0.4544,
+        "escalate": 0.0159
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": true,
+      "n_options": 4
+    },
+    {
+      "record_id": "smart-home-continuation/af2cf5e5db5c",
+      "scenario": "smart-home-continuation",
+      "qid": "next",
+      "qtype": "choice",
+      "tags": [
+        "confirmed-focus"
+      ],
+      "pred": "close",
+      "p_top": 0.5168,
+      "probabilities": {
+        "open": 0.1813,
+        "close": 0.5168,
+        "cancel": 0.2877,
+        "escalate": 0.0143
+      },
+      "gold": [
+        "cancel"
+      ],
+      "correct": false,
+      "n_options": 4
+    }
+  ],
+  "checkpoint_sha256": "45f3dedbb91d108a90821c8c1c1488baae6b567c4b7769f4e63d460d13178246",
+  "checkpoint_config_sha256": "b8557a6bb691309c5a7d3cbd761c3042e1473ad15263c193351ef0a12fe17d01"
+}

@@ -1,0 +1,15 @@
+name: smart-home-continuation
+questions:
+  next:
+    type: choice
+    instructions: >-
+      根据本轮utterance和Agent提供的可信context选择下一步。
+      只有话语明确支持某个现有选项时才选择它。取消和否定不能执行反向动作；
+      新指令、动作改变、缺少焦点、歧义或无关话题都应重新理解，不能沿用旧动作。
+    criteria_from: decisions
+    exits:
+      cancel: 用户明确取消、禁止操作或保持原状，不执行任何设备动作
+      escalate: 新请求、改口、信息不足、指代不明或闲聊，需要LLM重新理解，不执行旧计划
+# Frozen authored phrasings and held-out rooms; never assembled into train.
+eval_sets:
+  - eval/locked.jsonl

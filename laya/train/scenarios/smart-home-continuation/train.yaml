@@ -1,0 +1,17 @@
+init: ../../../models/laya-smart-home/45f3dedb/torch
+model_name: laya-home-continuation-experiment
+epochs: 2
+batch_size: 2
+lr_encoder: 0.00002
+lr_head: 0.0001
+unfreeze_layers: 2
+brier_weight: 0.5
+warmup: 0.06
+weight_decay: 0.01
+max_len: 512
+head_max_len: 512
+seed: 29
+gold_weights:
+  next:
+    cancel: 2.0
+    escalate: 2.0
