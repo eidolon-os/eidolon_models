@@ -1,0 +1,378 @@
+{
+ "eval_set": "train/scenarios/smart-home/eval/locked-182.jsonl",
+ "n_records": 182,
+ "overall": {
+  "n": 465,
+  "acc": 0.9849,
+  "ece": 0.0418,
+  "p>=0.5": {
+   "coverage": 0.9677,
+   "acc": 0.9867
+  },
+  "p>=0.7": {
+   "coverage": 0.9355,
+   "acc": 0.9908
+  },
+  "p>=0.9": {
+   "coverage": 0.9247,
+   "acc": 0.9953
+  },
+  "ci95": [
+   0.9606,
+   0.9945
+  ]
+ },
+ "decision": {
+  "records": 182,
+  "control_e2e": {
+   "n": 140,
+   "n_verified": 124,
+   "n_unverified": 16,
+   "acc": 0.9597,
+   "acc_bounds": [
+    0.85,
+    0.9643
+   ],
+   "ci95": [
+    0.9194,
+    0.9919
+   ]
+  },
+  "auto_execute": {
+   "threshold": 0.9,
+   "n": 107,
+   "n_verified": 97,
+   "n_unverified": 10,
+   "precision": null,
+   "precision_verified": 0.9897,
+   "precision_bounds": [
+    0.8972,
+    0.9907
+   ],
+   "ci95": [
+    null,
+    null
+   ],
+   "lower95_one_sided_exact": null,
+   "coverage": 0.7643,
+   "wrong": [
+    "smart-home/07-07"
+   ]
+  },
+  "false_trigger_无关": {
+   "n": 22,
+   "rate": 0.0909,
+   "ci95": [
+    0.0,
+    0.2273
+   ]
+  },
+  "false_trigger_查询": {
+   "n": 20,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "by_scenario": {
+  "smart-home": {
+   "n": 465,
+   "acc": 0.9849,
+   "ece": 0.0418,
+   "p>=0.5": {
+    "coverage": 0.9677,
+    "acc": 0.9867
+   },
+   "p>=0.7": {
+    "coverage": 0.9355,
+    "acc": 0.9908
+   },
+   "p>=0.9": {
+    "coverage": 0.9247,
+    "acc": 0.9953
+   }
+  }
+ },
+ "by_qtype": {
+  "choice": {
+   "n": 465,
+   "acc": 0.9849,
+   "ece": 0.0418,
+   "p>=0.5": {
+    "coverage": 0.9677,
+    "acc": 0.9867
+   },
+   "p>=0.7": {
+    "coverage": 0.9355,
+    "acc": 0.9908
+   },
+   "p>=0.9": {
+    "coverage": 0.9247,
+    "acc": 0.9953
+   }
+  }
+ },
+ "by_question": {
+  "smart-home/action": {
+   "n": 123,
+   "acc": 0.9675,
+   "ece": 0.0902,
+   "p>=0.5": {
+    "coverage": 0.9106,
+    "acc": 0.9732
+   },
+   "p>=0.7": {
+    "coverage": 0.813,
+    "acc": 0.99
+   },
+   "p>=0.9": {
+    "coverage": 0.813,
+    "acc": 0.99
+   }
+  },
+  "smart-home/device": {
+   "n": 160,
+   "acc": 1.0,
+   "ece": 0.0417,
+   "p>=0.5": {
+    "coverage": 0.975,
+    "acc": 1.0
+   },
+   "p>=0.7": {
+    "coverage": 0.9563,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.9375,
+    "acc": 1.0
+   }
+  },
+  "smart-home/intent": {
+   "n": 182,
+   "acc": 0.9835,
+   "ece": 0.0133,
+   "p>=0.5": {
+    "coverage": 1.0,
+    "acc": 0.9835
+   },
+   "p>=0.7": {
+    "coverage": 1.0,
+    "acc": 0.9835
+   },
+   "p>=0.9": {
+    "coverage": 0.989,
+    "acc": 0.9944
+   }
+  }
+ },
+ "by_tag": {
+  "01-explicit-control": {
+   "n": 120,
+   "acc": 0.9917,
+   "ece": 0.0279,
+   "p>=0.5": {
+    "coverage": 0.9833,
+    "acc": 0.9915
+   },
+   "p>=0.7": {
+    "coverage": 0.95,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.95,
+    "acc": 1.0
+   }
+  },
+  "02-implicit-intent": {
+   "n": 60,
+   "acc": 0.9667,
+   "ece": 0.1124,
+   "p>=0.5": {
+    "coverage": 0.85,
+    "acc": 0.9804
+   },
+   "p>=0.7": {
+    "coverage": 0.75,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.7167,
+    "acc": 1.0
+   }
+  },
+  "03-room-disambiguation": {
+   "n": 48,
+   "acc": 1.0,
+   "ece": 0.0344,
+   "p>=0.5": {
+    "coverage": 0.9792,
+    "acc": 1.0
+   },
+   "p>=0.7": {
+    "coverage": 0.9583,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.9583,
+    "acc": 1.0
+   }
+  },
+  "04-status-query": {
+   "n": 40,
+   "acc": 1.0,
+   "ece": 0.038,
+   "p>=0.5": {
+    "coverage": 0.975,
+    "acc": 1.0
+   },
+   "p>=0.7": {
+    "coverage": 0.95,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.925,
+    "acc": 1.0
+   }
+  },
+  "05-non-command": {
+   "n": 22,
+   "acc": 0.9091,
+   "ece": 0.0808,
+   "p>=0.5": {
+    "coverage": 1.0,
+    "acc": 0.9091
+   },
+   "p>=0.7": {
+    "coverage": 1.0,
+    "acc": 0.9091
+   },
+   "p>=0.9": {
+    "coverage": 0.9091,
+    "acc": 1.0
+   }
+  },
+  "06-multi-device-scene": {
+   "n": 35,
+   "acc": 0.9714,
+   "ece": 0.0332,
+   "p>=0.5": {
+    "coverage": 0.9714,
+    "acc": 0.9706
+   },
+   "p>=0.7": {
+    "coverage": 0.9714,
+    "acc": 0.9706
+   },
+   "p>=0.9": {
+    "coverage": 0.9714,
+    "acc": 0.9706
+   }
+  },
+  "07-asr-noise": {
+   "n": 60,
+   "acc": 0.9833,
+   "ece": 0.0505,
+   "p>=0.5": {
+    "coverage": 0.9833,
+    "acc": 0.9831
+   },
+   "p>=0.7": {
+    "coverage": 0.95,
+    "acc": 0.9825
+   },
+   "p>=0.9": {
+    "coverage": 0.95,
+    "acc": 0.9825
+   }
+  },
+  "08-large-inventory": {
+   "n": 60,
+   "acc": 1.0,
+   "ece": 0.0232,
+   "p>=0.5": {
+    "coverage": 1.0,
+    "acc": 1.0
+   },
+   "p>=0.7": {
+    "coverage": 0.9833,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.9833,
+    "acc": 1.0
+   }
+  },
+  "09-device-not-in-home": {
+   "n": 20,
+   "acc": 1.0,
+   "ece": 0.0107,
+   "p>=0.5": {
+    "coverage": 1.0,
+    "acc": 1.0
+   },
+   "p>=0.7": {
+    "coverage": 1.0,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 1.0,
+    "acc": 1.0
+   }
+  },
+  "home:apartment": {
+   "n": 241,
+   "acc": 0.9876,
+   "ece": 0.0448,
+   "p>=0.5": {
+    "coverage": 0.9585,
+    "acc": 0.987
+   },
+   "p>=0.7": {
+    "coverage": 0.9295,
+    "acc": 0.9911
+   },
+   "p>=0.9": {
+    "coverage": 0.9212,
+    "acc": 0.991
+   }
+  },
+  "home:house": {
+   "n": 164,
+   "acc": 0.9756,
+   "ece": 0.0508,
+   "p>=0.5": {
+    "coverage": 0.9695,
+    "acc": 0.9811
+   },
+   "p>=0.7": {
+    "coverage": 0.9268,
+    "acc": 0.9868
+   },
+   "p>=0.9": {
+    "coverage": 0.9085,
+    "acc": 1.0
+   }
+  },
+  "home:villa": {
+   "n": 60,
+   "acc": 1.0,
+   "ece": 0.0232,
+   "p>=0.5": {
+    "coverage": 1.0,
+    "acc": 1.0
+   },
+   "p>=0.7": {
+    "coverage": 0.9833,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.9833,
+    "acc": 1.0
+   }
+  }
+ },
+ "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+ "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
+}

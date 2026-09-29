@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "tolerance": 0.0,
+  "alpha": 0.05,
+  "paired": true,
+  "checks": [
+    {
+      "slice": "by_scenario:smart-home",
+      "baseline": 0.9733,
+      "candidate": 0.9737,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/action",
+      "baseline": 0.9965,
+      "candidate": 0.9965,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/device",
+      "baseline": 0.958,
+      "candidate": 0.958,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/intent",
+      "baseline": 0.9711,
+      "candidate": 0.972,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:W1-day",
+      "baseline": 0.9667,
+      "candidate": 0.9667,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:W2-device",
+      "baseline": 0.9792,
+      "candidate": 0.9792,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:W3-people",
+      "baseline": 0.9546,
+      "candidate": 0.9546,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:W4-commands",
+      "baseline": 0.9902,
+      "candidate": 0.9916,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:acc-couple",
+      "baseline": 0.9806,
+      "candidate": 0.9806,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:acc-family4",
+      "baseline": 0.9752,
+      "candidate": 0.9764,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:acc-house",
+      "baseline": 0.9811,
+      "candidate": 0.9811,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:acc-senior",
+      "baseline": 0.9464,
+      "candidate": 0.9464,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    }
+  ]
+}

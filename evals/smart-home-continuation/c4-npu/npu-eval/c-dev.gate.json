@@ -1,0 +1,323 @@
+{
+  "passed": true,
+  "tolerance": 0.0,
+  "alpha": 0.05,
+  "paired": true,
+  "checks": [
+    {
+      "slice": "by_scenario:smart-home-continuation",
+      "baseline": 0.9581,
+      "candidate": 0.9581,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home-continuation/follow",
+      "baseline": 0.9776,
+      "candidate": 0.9776,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home-continuation/pick",
+      "baseline": 0.9479,
+      "candidate": 0.9479,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F01",
+      "baseline": 0.9655,
+      "candidate": 0.9655,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F02",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F03",
+      "baseline": 0.9412,
+      "candidate": 0.9412,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F04",
+      "baseline": 0.9167,
+      "candidate": 0.9167,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F07",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F09",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F10",
+      "baseline": 0.9,
+      "candidate": 0.9,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F11",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F12",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:F13",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P01",
+      "baseline": 0.9176,
+      "candidate": 0.9176,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P03",
+      "baseline": 0.9811,
+      "candidate": 0.9811,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P04",
+      "baseline": 0.9762,
+      "candidate": 0.9762,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P05",
+      "baseline": 0.9091,
+      "candidate": 0.9091,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P06",
+      "baseline": 0.8462,
+      "candidate": 0.8462,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P09",
+      "baseline": 0.9667,
+      "candidate": 0.9667,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P10",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P11",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P12",
+      "baseline": 0.9375,
+      "candidate": 0.9375,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P14",
+      "baseline": 0.9412,
+      "candidate": 0.9412,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P17",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:P18",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:cp-absent",
+      "baseline": 0.931,
+      "candidate": 0.931,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:cp-reorder",
+      "baseline": 0.96,
+      "candidate": 0.96,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:follow",
+      "baseline": 0.9776,
+      "candidate": 0.9776,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:follow-执行",
+      "baseline": 0.9588,
+      "candidate": 0.9588,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:follow-重新理解",
+      "baseline": 0.9921,
+      "candidate": 0.9921,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:pick",
+      "baseline": 0.9479,
+      "candidate": 0.9479,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:pick-取消",
+      "baseline": 0.9412,
+      "candidate": 0.9412,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:pick-执行",
+      "baseline": 0.9305,
+      "candidate": 0.9305,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:pick-重新理解",
+      "baseline": 0.9674,
+      "candidate": 0.9674,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:utt-seen-in-train",
+      "baseline": 0.9855,
+      "candidate": 0.9855,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    }
+  ]
+}

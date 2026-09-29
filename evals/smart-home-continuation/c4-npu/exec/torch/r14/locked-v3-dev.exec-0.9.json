@@ -1,0 +1,59 @@
+{
+ "records": 360,
+ "threshold": 0.9,
+ "executed": 40,
+ "by_kind": {
+  "正确": 38,
+  "错设备": 1,
+  "误触发": 1
+ },
+ "wrong_total": 2,
+ "wrong": [
+  {
+   "id": "smart-home/A-122",
+   "kind": "错设备",
+   "utterance": "修热水器的师傅到了，帮他把门开一下",
+   "gold": {
+    "intent": "控制",
+    "device": "门锁",
+    "action": "打开或启动"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.982
+    ],
+    "device": [
+     "热水器",
+     0.942
+    ],
+    "action": [
+     "打开或启动",
+     0.996
+    ]
+   }
+  },
+  {
+   "id": "smart-home/A-144",
+   "kind": "误触发",
+   "utterance": "打开冰箱，拿出一瓶冰爽可乐",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.985
+    ],
+    "device": [
+     "冰箱",
+     0.997
+    ],
+    "action": [
+     "打开或启动",
+     0.917
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "records": 360,
+ "threshold": 0.8,
+ "executed": 52,
+ "by_kind": {
+  "正确": 49,
+  "误触发": 3
+ },
+ "wrong_total": 3,
+ "wrong": [
+  {
+   "id": "smart-home/A-049",
+   "kind": "误触发",
+   "utterance": "您好，快递，麻烦开一下门",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.938
+    ],
+    "device": [
+     "智能门锁",
+     0.981
+    ],
+    "action": [
+     "打开或启动",
+     0.984
+    ]
+   }
+  },
+  {
+   "id": "smart-home/A-144",
+   "kind": "误触发",
+   "utterance": "打开冰箱，拿出一瓶冰爽可乐",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.984
+    ],
+    "device": [
+     "冰箱",
+     0.99
+    ],
+    "action": [
+     "打开或启动",
+     0.976
+    ]
+   }
+  },
+  {
+   "id": "smart-home/B-134",
+   "kind": "误触发",
+   "utterance": "一句话打开全屋音乐，智能生活从这里开始",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.971
+    ],
+    "device": [
+     "全屋音响",
+     0.909
+    ],
+    "action": [
+     "打开或启动",
+     0.913
+    ]
+   }
+  }
+ ]
+}

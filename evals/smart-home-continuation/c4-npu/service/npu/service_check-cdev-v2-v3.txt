@@ -1,0 +1,4 @@
+check/c-dev.jsonl: 645 answers, 0 choice differences, max |dp| 0.0585; 645 requests p50 270 / p95 283 / max 317 ms
+check/locked-v2-dev.jsonl: 394 answers, 0 choice differences, max |dp| 0.0821; 165 requests p50 451 / p95 692 / max 713 ms
+  choice differs smart-home/B-047 action: service 打开或启动 vs eval 调高或增大
+check/locked-v3-dev.jsonl: 606 answers, 1 choice differences, max |dp| 0.1007; 360 requests p50 447 / p95 685 / max 702 ms

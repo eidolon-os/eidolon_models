@@ -1,0 +1,10 @@
+{
+ "records": 360,
+ "threshold": 0.95,
+ "executed": 33,
+ "by_kind": {
+  "正确": 33
+ },
+ "wrong_total": 0,
+ "wrong": []
+}

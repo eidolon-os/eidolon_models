@@ -1,0 +1,86 @@
+{
+ "c-dev": {
+  "scored_answers": 645,
+  "choice_differences": [],
+  "max_abs_dp_top": 0.0596
+ },
+ "locked-accept": {
+  "scored_answers": 2398,
+  "choice_differences": [
+   {
+    "record": "smart-home/W1-0283",
+    "question": "device",
+    "torch": [
+     "多个设备或整屋",
+     0.555,
+     false
+    ],
+    "npu": [
+     "没有对应的设备",
+     0.496,
+     false
+    ]
+   },
+   {
+    "record": "smart-home/W4-0143",
+    "question": "intent",
+    "torch": [
+     "无关",
+     0.493,
+     false
+    ],
+    "npu": [
+     "控制",
+     0.494,
+     true
+    ]
+   }
+  ],
+  "max_abs_dp_top": 0.3019
+ },
+ "locked-182": {
+  "scored_answers": 465,
+  "choice_differences": [
+   {
+    "record": "smart-home/06-07",
+    "question": "device",
+    "torch": [
+     "床头灯",
+     0.217,
+     false
+    ],
+    "npu": [
+     "多个设备或整屋",
+     0.227,
+     true
+    ]
+   }
+  ],
+  "max_abs_dp_top": 0.0384
+ },
+ "locked-v2-dev": {
+  "scored_answers": 394,
+  "choice_differences": [],
+  "max_abs_dp_top": 0.0816
+ },
+ "locked-v3-dev": {
+  "scored_answers": 606,
+  "choice_differences": [
+   {
+    "record": "smart-home/B-047",
+    "question": "action",
+    "torch": [
+     "调高或增大",
+     0.498,
+     true
+    ],
+    "npu": [
+     "打开或启动",
+     0.497,
+     true
+    ]
+   }
+  ],
+  "max_abs_dp_top": 0.1008
+ }
+}

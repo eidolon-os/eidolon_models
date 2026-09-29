@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "tolerance": 0.0,
+  "alpha": 0.05,
+  "paired": true,
+  "checks": [
+    {
+      "slice": "by_scenario:smart-home",
+      "baseline": 0.9828,
+      "candidate": 0.9849,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/action",
+      "baseline": 0.9675,
+      "candidate": 0.9675,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/device",
+      "baseline": 0.9938,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/intent",
+      "baseline": 0.9835,
+      "candidate": 0.9835,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:01-explicit-control",
+      "baseline": 0.9917,
+      "candidate": 0.9917,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:02-implicit-intent",
+      "baseline": 0.9667,
+      "candidate": 0.9667,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:03-room-disambiguation",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:04-status-query",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:05-non-command",
+      "baseline": 0.9091,
+      "candidate": 0.9091,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:06-multi-device-scene",
+      "baseline": 0.9429,
+      "candidate": 0.9714,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:07-asr-noise",
+      "baseline": 0.9833,
+      "candidate": 0.9833,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:08-large-inventory",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:09-device-not-in-home",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:apartment",
+      "baseline": 0.9834,
+      "candidate": 0.9876,
+      "broke": 0,
+      "fixed": 1,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:house",
+      "baseline": 0.9756,
+      "candidate": 0.9756,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:villa",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+ "records": 165,
+ "threshold": 0.8,
+ "executed": 61,
+ "by_kind": {
+  "正确": 59,
+  "错设备": 1,
+  "误触发": 1
+ },
+ "wrong_total": 2,
+ "wrong": [
+  {
+   "id": "smart-home/v2-09-029",
+   "kind": "错设备",
+   "utterance": "卧室灯带打开",
+   "gold": {
+    "intent": "控制",
+    "device": "没有对应的设备"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.993
+    ],
+    "device": [
+     "卧室吸顶灯",
+     0.967
+    ],
+    "action": [
+     "打开或启动",
+     0.996
+    ]
+   }
+  },
+  {
+   "id": "smart-home/v2-10-004",
+   "kind": "误触发",
+   "utterance": "门口那人说是送水的，让我给他开下门",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.96
+    ],
+    "device": [
+     "智能门锁",
+     0.972
+    ],
+    "action": [
+     "打开或启动",
+     0.996
+    ]
+   }
+  }
+ ]
+}

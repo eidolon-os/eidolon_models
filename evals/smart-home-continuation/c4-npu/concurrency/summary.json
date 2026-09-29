@@ -1,0 +1,359 @@
+{
+ "budgets": {
+  "home_ms": 800,
+  "home_min_p": 0.8,
+  "participation_ms": 1500
+ },
+ "home-alone": {
+  "wall_s": 603.3,
+  "home": {
+   "n": 1170,
+   "p50": 330.4,
+   "p95": 712.6,
+   "p99": 736.6,
+   "max": 753.2,
+   "mean": 415.5,
+   "outcomes": {
+    "decided": 693,
+    "abstain": 477
+   },
+   "not_decided_reasons": {
+    "low_confidence": 97,
+    "multiple_devices": 24,
+    "continuation_to_llm": 356
+   },
+   "decided_accuracy": 0.9654,
+   "server_ms_p50": 326.8,
+   "server_ms_p95": 709.1
+  },
+  "home_single": {
+   "n": 525,
+   "p50": 494.1,
+   "p95": 725.1,
+   "p99": 739.9,
+   "max": 753.2,
+   "mean": 544.4,
+   "outcomes": {
+    "decided": 404,
+    "abstain": 121
+   },
+   "not_decided_reasons": {
+    "low_confidence": 97,
+    "multiple_devices": 24
+   },
+   "decided_accuracy": 0.948
+  },
+  "home_continuation": {
+   "n": 645,
+   "p50": 311.1,
+   "p95": 337.2,
+   "p99": 358.0,
+   "max": 431.1,
+   "mean": 310.5,
+   "outcomes": {
+    "decided": 289,
+    "abstain": 356
+   },
+   "not_decided_reasons": {
+    "continuation_to_llm": 356
+   },
+   "decided_accuracy": 0.9896
+  },
+  "cpu_s_by_pid": {
+   "2674046": 65.26,
+   "2560011": 0.33
+  }
+ },
+ "part-alone": {
+  "wall_s": 528.6,
+  "participation": {
+   "n": 623,
+   "p50": 692.6,
+   "p95": 1259.8,
+   "p99": 1317.1,
+   "max": 1505.6,
+   "mean": 748.4,
+   "outcomes": {
+    "decided": 554,
+    "abstain": 63,
+    "timeout": 2,
+    "busy": 4
+   },
+   "not_decided_reasons": {
+    "abstained": 63,
+    "http_504_deadline": 2,
+    "http_503_busy": 4
+   },
+   "decided_accuracy": 0.9964,
+   "decided_e2e": 0.9874,
+   "stop_violations": 0
+  },
+  "cpu_s_by_pid": {
+   "2674046": 0.0,
+   "2560011": 42.38
+  }
+ },
+ "both": {
+  "wall_s": 533.4,
+  "home": {
+   "n": 322,
+   "p50": 312.9,
+   "p95": 765.7,
+   "p99": 798.1,
+   "max": 806.4,
+   "mean": 420.0,
+   "outcomes": {
+    "decided": 200,
+    "abstain": 119,
+    "timeout": 3
+   },
+   "not_decided_reasons": {
+    "low_confidence": 23,
+    "over_800ms": 3,
+    "continuation_to_llm": 91,
+    "multiple_devices": 5
+   },
+   "decided_accuracy": 0.96,
+   "overlapped_with_other": 322,
+   "overlapped": {
+    "n": 322,
+    "p50": 312.9,
+    "p95": 765.7,
+    "p99": 798.1,
+    "max": 806.4,
+    "mean": 420.0,
+    "outcomes": {
+     "decided": 200,
+     "abstain": 119,
+     "timeout": 3
+    },
+    "not_decided_reasons": {
+     "low_confidence": 23,
+     "over_800ms": 3,
+     "continuation_to_llm": 91,
+     "multiple_devices": 5
+    },
+    "decided_accuracy": 0.96
+   },
+   "server_ms_p50": 308.1,
+   "server_ms_p95": 761.9
+  },
+  "home_single": {
+   "n": 145,
+   "p50": 518.1,
+   "p95": 785.6,
+   "p99": 805.1,
+   "max": 806.4,
+   "mean": 570.3,
+   "outcomes": {
+    "decided": 114,
+    "abstain": 28,
+    "timeout": 3
+   },
+   "not_decided_reasons": {
+    "low_confidence": 23,
+    "over_800ms": 3,
+    "multiple_devices": 5
+   },
+   "decided_accuracy": 0.9474
+  },
+  "home_continuation": {
+   "n": 177,
+   "p50": 295.5,
+   "p95": 327.1,
+   "p99": 351.9,
+   "max": 425.8,
+   "mean": 296.8,
+   "outcomes": {
+    "decided": 86,
+    "abstain": 91
+   },
+   "not_decided_reasons": {
+    "continuation_to_llm": 91
+   },
+   "decided_accuracy": 0.9767
+  },
+  "participation": {
+   "n": 623,
+   "p50": 734.1,
+   "p95": 1257.7,
+   "p99": 1366.2,
+   "max": 1504.9,
+   "mean": 755.9,
+   "outcomes": {
+    "decided": 553,
+    "abstain": 63,
+    "timeout": 2,
+    "busy": 5
+   },
+   "not_decided_reasons": {
+    "abstained": 63,
+    "http_504_deadline": 2,
+    "http_503_busy": 5
+   },
+   "decided_accuracy": 0.9964,
+   "decided_e2e": 0.9873,
+   "stop_violations": 0,
+   "overlapped_with_other": 420,
+   "overlapped": {
+    "n": 420,
+    "p50": 833.2,
+    "p95": 1288.6,
+    "p99": 1381.2,
+    "max": 1504.7,
+    "mean": 799.1,
+    "outcomes": {
+     "decided": 373,
+     "abstain": 44,
+     "timeout": 1,
+     "busy": 2
+    },
+    "not_decided_reasons": {
+     "abstained": 44,
+     "http_504_deadline": 1,
+     "http_503_busy": 2
+    },
+    "decided_accuracy": 0.9946,
+    "decided_e2e": 0.9866,
+    "stop_violations": 0
+   }
+  },
+  "cpu_s_by_pid": {
+   "2674046": 18.78,
+   "2560011": 39.9
+  }
+ },
+ "collide": {
+  "wall_s": 130.7,
+  "home": {
+   "n": 100,
+   "p50": 332.3,
+   "p95": 804.9,
+   "p99": 821.7,
+   "max": 821.7,
+   "mean": 434.8,
+   "outcomes": {
+    "decided": 56,
+    "timeout": 6,
+    "abstain": 38
+   },
+   "not_decided_reasons": {
+    "over_800ms": 6,
+    "continuation_to_llm": 29,
+    "low_confidence": 6,
+    "multiple_devices": 3
+   },
+   "decided_accuracy": 0.9286,
+   "overlapped_with_other": 100,
+   "overlapped": {
+    "n": 100,
+    "p50": 332.3,
+    "p95": 804.9,
+    "p99": 821.7,
+    "max": 821.7,
+    "mean": 434.8,
+    "outcomes": {
+     "decided": 56,
+     "timeout": 6,
+     "abstain": 38
+    },
+    "not_decided_reasons": {
+     "over_800ms": 6,
+     "continuation_to_llm": 29,
+     "low_confidence": 6,
+     "multiple_devices": 3
+    },
+    "decided_accuracy": 0.9286
+   },
+   "server_ms_p50": 328.4,
+   "server_ms_p95": 800.4
+  },
+  "home_single": {
+   "n": 42,
+   "p50": 552.2,
+   "p95": 813.8,
+   "p99": 821.7,
+   "max": 821.7,
+   "mean": 594.5,
+   "outcomes": {
+    "decided": 27,
+    "timeout": 6,
+    "abstain": 9
+   },
+   "not_decided_reasons": {
+    "over_800ms": 6,
+    "low_confidence": 6,
+    "multiple_devices": 3
+   },
+   "decided_accuracy": 0.9259
+  },
+  "home_continuation": {
+   "n": 58,
+   "p50": 320.2,
+   "p95": 338.9,
+   "p99": 340.6,
+   "max": 340.6,
+   "mean": 319.1,
+   "outcomes": {
+    "decided": 29,
+    "abstain": 29
+   },
+   "not_decided_reasons": {
+    "continuation_to_llm": 29
+   },
+   "decided_accuracy": 0.931
+  },
+  "participation": {
+   "n": 100,
+   "p50": 739.7,
+   "p95": 1284.2,
+   "p99": 1346.5,
+   "max": 1346.5,
+   "mean": 798.7,
+   "outcomes": {
+    "decided": 92,
+    "abstain": 8
+   },
+   "not_decided_reasons": {
+    "abstained": 8
+   },
+   "decided_accuracy": 1.0,
+   "decided_e2e": 0.9891,
+   "stop_violations": 0,
+   "overlapped_with_other": 100,
+   "overlapped": {
+    "n": 100,
+    "p50": 739.7,
+    "p95": 1284.2,
+    "p99": 1346.5,
+    "max": 1346.5,
+    "mean": 798.7,
+    "outcomes": {
+     "decided": 92,
+     "abstain": 8
+    },
+    "not_decided_reasons": {
+     "abstained": 8
+    },
+    "decided_accuracy": 1.0,
+    "decided_e2e": 0.9891,
+    "stop_violations": 0
+   }
+  },
+  "cpu_s_by_pid": {
+   "2674046": 6.4,
+   "2560011": 7.13
+  }
+ },
+ "participation_log_reasons": {
+  "part-alone": {
+   "low_confidence": 63
+  },
+  "both": {
+   "low_confidence": 63
+  },
+  "collide": {
+   "low_confidence": 8
+  }
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "eval_set": "train/scenarios/smart-home/eval/locked-v3-dev.jsonl",
+ "n_records": 360,
+ "overall": {
+  "n": 606,
+  "acc": 0.9505,
+  "ece": 0.0393,
+  "p>=0.5": {
+   "coverage": 0.9686,
+   "acc": 0.9523
+  },
+  "p>=0.7": {
+   "coverage": 0.9125,
+   "acc": 0.9693
+  },
+  "p>=0.9": {
+   "coverage": 0.8746,
+   "acc": 0.9774
+  },
+  "ci95": [
+   0.9162,
+   0.963
+  ]
+ },
+ "decision": {
+  "records": 360,
+  "control_e2e": {
+   "n": 108,
+   "n_verified": 104,
+   "n_unverified": 4,
+   "acc": 0.9231,
+   "acc_bounds": [
+    0.8889,
+    0.9259
+   ],
+   "ci95": [
+    0.875,
+    0.9712
+   ]
+  },
+  "auto_execute": {
+   "threshold": 0.9,
+   "n": 56,
+   "n_verified": 56,
+   "n_unverified": 0,
+   "precision": 0.9286,
+   "precision_verified": 0.9286,
+   "precision_bounds": [
+    0.9286,
+    0.9286
+   ],
+   "ci95": [
+    0.8571,
+    0.9821
+   ],
+   "lower95_one_sided_exact": 0.844,
+   "coverage": 0.4815,
+   "wrong": [
+    "smart-home/A-049",
+    "smart-home/A-144",
+    "smart-home/B-031",
+    "smart-home/B-134"
+   ]
+  },
+  "false_trigger_无关": {
+   "n": 216,
+   "rate": 0.0648,
+   "ci95": [
+    0.0324,
+    0.0973
+   ]
+  },
+  "false_trigger_查询": {
+   "n": 36,
+   "rate": 0.0278,
+   "ci95": [
+    0.0,
+    0.0833
+   ]
+  }
+ },
+ "by_scenario": {
+  "smart-home": {
+   "n": 606,
+   "acc": 0.9505,
+   "ece": 0.0393,
+   "p>=0.5": {
+    "coverage": 0.9686,
+    "acc": 0.9523
+   },
+   "p>=0.7": {
+    "coverage": 0.9125,
+    "acc": 0.9693
+   },
+   "p>=0.9": {
+    "coverage": 0.8746,
+    "acc": 0.9774
+   }
+  }
+ },
+ "by_qtype": {
+  "choice": {
+   "n": 606,
+   "acc": 0.9505,
+   "ece": 0.0393,
+   "p>=0.5": {
+    "coverage": 0.9686,
+    "acc": 0.9523
+   },
+   "p>=0.7": {
+    "coverage": 0.9125,
+    "acc": 0.9693
+   },
+   "p>=0.9": {
+    "coverage": 0.8746,
+    "acc": 0.9774
+   }
+  }
+ },
+ "by_question": {
+  "smart-home/action": {
+   "n": 102,
+   "acc": 0.9706,
+   "ece": 0.1903,
+   "p>=0.5": {
+    "coverage": 0.8333,
+    "acc": 0.9647
+   },
+   "p>=0.7": {
+    "coverage": 0.6275,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.5686,
+    "acc": 1.0
+   }
+  },
+  "smart-home/device": {
+   "n": 144,
+   "acc": 0.9444,
+   "ece": 0.0419,
+   "p>=0.5": {
+    "coverage": 0.9931,
+    "acc": 0.951
+   },
+   "p>=0.7": {
+    "coverage": 0.9306,
+    "acc": 0.9851
+   },
+   "p>=0.9": {
+    "coverage": 0.8958,
+    "acc": 0.9922
+   }
+  },
+  "smart-home/intent": {
+   "n": 360,
+   "acc": 0.9472,
+   "ece": 0.03,
+   "p>=0.5": {
+    "coverage": 0.9972,
+    "acc": 0.9499
+   },
+   "p>=0.7": {
+    "coverage": 0.9861,
+    "acc": 0.9577
+   },
+   "p>=0.9": {
+    "coverage": 0.9528,
+    "acc": 0.9679
+   }
+  }
+ },
+ "by_tag": {
+  "A-day-in-life": {
+   "n": 301,
+   "acc": 0.9369,
+   "ece": 0.0541,
+   "p>=0.5": {
+    "coverage": 0.9668,
+    "acc": 0.9416
+   },
+   "p>=0.7": {
+    "coverage": 0.9236,
+    "acc": 0.9532
+   },
+   "p>=0.9": {
+    "coverage": 0.8837,
+    "acc": 0.9624
+   }
+  },
+  "B-device-mentions": {
+   "n": 305,
+   "acc": 0.9639,
+   "ece": 0.047,
+   "p>=0.5": {
+    "coverage": 0.9705,
+    "acc": 0.9628
+   },
+   "p>=0.7": {
+    "coverage": 0.9016,
+    "acc": 0.9855
+   },
+   "p>=0.9": {
+    "coverage": 0.8656,
+    "acc": 0.9924
+   }
+  },
+  "home:bigvilla": {
+   "n": 181,
+   "acc": 0.9558,
+   "ece": 0.0447,
+   "p>=0.5": {
+    "coverage": 0.9779,
+    "acc": 0.9548
+   },
+   "p>=0.7": {
+    "coverage": 0.884,
+    "acc": 0.9875
+   },
+   "p>=0.9": {
+    "coverage": 0.8453,
+    "acc": 0.9935
+   }
+  },
+  "home:loft": {
+   "n": 124,
+   "acc": 0.9758,
+   "ece": 0.0513,
+   "p>=0.5": {
+    "coverage": 0.9597,
+    "acc": 0.9748
+   },
+   "p>=0.7": {
+    "coverage": 0.9274,
+    "acc": 0.9826
+   },
+   "p>=0.9": {
+    "coverage": 0.8952,
+    "acc": 0.991
+   }
+  },
+  "home:smallflat": {
+   "n": 138,
+   "acc": 0.9348,
+   "ece": 0.0668,
+   "p>=0.5": {
+    "coverage": 0.9783,
+    "acc": 0.9333
+   },
+   "p>=0.7": {
+    "coverage": 0.9493,
+    "acc": 0.9466
+   },
+   "p>=0.9": {
+    "coverage": 0.9058,
+    "acc": 0.952
+   }
+  },
+  "home:threegen": {
+   "n": 163,
+   "acc": 0.9387,
+   "ece": 0.0527,
+   "p>=0.5": {
+    "coverage": 0.9571,
+    "acc": 0.9487
+   },
+   "p>=0.7": {
+    "coverage": 0.9018,
+    "acc": 0.9592
+   },
+   "p>=0.9": {
+    "coverage": 0.865,
+    "acc": 0.9716
+   }
+  }
+ },
+ "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+ "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
+}

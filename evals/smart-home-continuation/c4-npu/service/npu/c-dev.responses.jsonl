@@ -1,0 +1,645 @@
+{"id": "smart-home-continuation/1bff3972e999", "ms": 317.4, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0007, "关闭或停止": 0.9955, "调高或增大": 0.001, "调低或减小": 0.0011, "设为指定的数值或模式": 0.0008, "重新理解": 0.0009}}}}
+{"id": "smart-home-continuation/6189ee2de020", "ms": 260.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0052, "关闭或停止": 0.0004, "调高或增大": 0.0003, "调低或减小": 0.0038, "设为指定的数值或模式": 0.0007, "重新理解": 0.9896}}}}
+{"id": "smart-home-continuation/f9d0495e96ad", "ms": 260.1, "answers": {"pick": {"choice": "自动喂食器（阳台）", "probabilities": {"自动喂食器（阳台）": 0.4659, "自动喂食器（客厅）": 0.3996, "取消": 0.0109, "重新理解": 0.1237}}}}
+{"id": "smart-home-continuation/af21d4b29485", "ms": 260.5, "answers": {"pick": {"choice": "取消", "probabilities": {"自动喂食器（阳台）": 0.0338, "自动喂食器（客厅）": 0.02, "取消": 0.7577, "重新理解": 0.1885}}}}
+{"id": "smart-home-continuation/dfa883483e7b", "ms": 268.0, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"床边夜灯": 0.9842, "客厅灯": 0.0023, "老人房灯": 0.0023, "取消": 0.0021, "重新理解": 0.0091}}}}
+{"id": "smart-home-continuation/3cb7d0b27666", "ms": 272.2, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"床边夜灯": 0.1023, "客厅灯": 0.8306, "老人房灯": 0.058, "取消": 0.0038, "重新理解": 0.0052}}}}
+{"id": "smart-home-continuation/4e32efb90cf8", "ms": 262.4, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"床边夜灯": 0.3909, "老人房灯": 0.5097, "客厅灯": 0.0898, "取消": 0.004, "重新理解": 0.0057}}}}
+{"id": "smart-home-continuation/fead30692533", "ms": 270.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0016, "客厅灯": 0.0016, "老人房灯": 0.0016, "取消": 0.0017, "重新理解": 0.9935}}}}
+{"id": "smart-home-continuation/128619ae2098", "ms": 282.5, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"狗粮喂食器": 0.9911, "猫粮喂食器": 0.0022, "取消": 0.0014, "重新理解": 0.0053}}}}
+{"id": "smart-home-continuation/c85c66fb0837", "ms": 276.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0024, "猫粮喂食器": 0.0063, "取消": 0.0023, "重新理解": 0.9889}}}}
+{"id": "smart-home-continuation/9be284b00320", "ms": 265.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0027, "卧室空调": 0.0027, "取消": 0.0051, "重新理解": 0.9894}}}}
+{"id": "smart-home-continuation/85b571a1902e", "ms": 281.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.004, "卧室空调": 0.0036, "取消": 0.0039, "重新理解": 0.9885}}}}
+{"id": "smart-home-continuation/202918bfc673", "ms": 280.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0046, "卧室空调": 0.0038, "取消": 0.0046, "重新理解": 0.987}}}}
+{"id": "smart-home-continuation/6d3f0c5f08fa", "ms": 271.0, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室空调": 0.0027, "客厅空调": 0.0028, "取消": 0.9901, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/2f9c9d1147e8", "ms": 260.0, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0019, "客厅空调": 0.9942, "取消": 0.0016, "重新理解": 0.0023}}}}
+{"id": "smart-home-continuation/e8dfe9b576c9", "ms": 260.6, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9939, "床边夜灯": 0.0014, "走廊夜灯": 0.0013, "取消": 0.0013, "重新理解": 0.0022}}}}
+{"id": "smart-home-continuation/e2b77b5597b1", "ms": 260.3, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"客厅除湿机": 0.9936, "储藏室抽湿机": 0.0014, "取消": 0.0013, "重新理解": 0.0038}}}}
+{"id": "smart-home-continuation/92fcbeb5b823", "ms": 260.5, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅除湿机": 0.0027, "储藏室抽湿机": 0.0025, "取消": 0.9894, "重新理解": 0.0054}}}}
+{"id": "smart-home-continuation/5c1a217f5653", "ms": 260.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅除湿机": 0.0065, "储藏室抽湿机": 0.0059, "取消": 0.0051, "重新理解": 0.9825}}}}
+{"id": "smart-home-continuation/db0fadc83c01", "ms": 259.7, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"客厅除湿机": 0.9911, "储藏室抽湿机": 0.0025, "取消": 0.0012, "重新理解": 0.0052}}}}
+{"id": "smart-home-continuation/310e3811c091", "ms": 260.1, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"客厅除湿机": 0.9788, "储藏室抽湿机": 0.0137, "取消": 0.0025, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/f0da8daee89b", "ms": 267.9, "answers": {"pick": {"choice": "储藏室抽湿机", "probabilities": {"储藏室抽湿机": 0.9712, "客厅除湿机": 0.0219, "取消": 0.0025, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/2f08c796796b", "ms": 275.3, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.0021, "关闭或停止": 0.0016, "调高或增大": 0.9728, "调低或减小": 0.0118, "设为指定的数值或模式": 0.0021, "重新理解": 0.0096}}}}
+{"id": "smart-home-continuation/7222a9107e1d", "ms": 269.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0004, "关闭或停止": 0.0009, "调高或增大": 0.0005, "调低或减小": 0.0058, "设为指定的数值或模式": 0.0004, "重新理解": 0.992}}}}
+{"id": "smart-home-continuation/aaaa46e58bcc", "ms": 273.7, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0011, "关闭或停止": 0.0014, "调高或增大": 0.0009, "调低或减小": 0.0074, "设为指定的数值或模式": 0.973, "重新理解": 0.0161}}}}
+{"id": "smart-home-continuation/aa73d6dbf4aa", "ms": 271.4, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.0046, "客厅灯": 0.9699, "取消": 0.0033, "重新理解": 0.0222}}}}
+{"id": "smart-home-continuation/29d51735dc67", "ms": 275.9, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.0034, "客厅灯": 0.9829, "取消": 0.0027, "重新理解": 0.011}}}}
+{"id": "smart-home-continuation/2c82f6f65945", "ms": 261.6, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9863, "卧室空调": 0.0024, "取消": 0.0021, "重新理解": 0.0092}}}}
+{"id": "smart-home-continuation/9842a4072853", "ms": 271.0, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅灯": 0.0029, "走廊夜灯": 0.0034, "取消": 0.9893, "重新理解": 0.0043}}}}
+{"id": "smart-home-continuation/63da611c2b4b", "ms": 277.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0047, "狗粮喂食器": 0.0036, "取消": 0.0032, "重新理解": 0.9885}}}}
+{"id": "smart-home-continuation/5d576a13cc0c", "ms": 264.3, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"猫粮喂食器": 0.9947, "狗粮喂食器": 0.0015, "取消": 0.0012, "重新理解": 0.0027}}}}
+{"id": "smart-home-continuation/8b1a15e9c3a3", "ms": 261.8, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.0019, "狗粮喂食器": 0.9924, "取消": 0.0013, "重新理解": 0.0043}}}}
+{"id": "smart-home-continuation/4ae089047ac7", "ms": 260.8, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0011, "关闭或停止": 0.9895, "调高或增大": 0.0011, "调低或减小": 0.0011, "设为指定的数值或模式": 0.0012, "重新理解": 0.006}}}}
+{"id": "smart-home-continuation/47fe127492f9", "ms": 261.0, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9975, "关闭或停止": 0.0004, "调高或增大": 0.0009, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0004, "重新理解": 0.0004}}}}
+{"id": "smart-home-continuation/d01bb4134aea", "ms": 261.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0319, "关闭或停止": 0.0006, "调高或增大": 0.0005, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0006, "重新理解": 0.9658}}}}
+{"id": "smart-home-continuation/55fa34281046", "ms": 260.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0043, "关闭或停止": 0.0047, "重新理解": 0.991}}}}
+{"id": "smart-home-continuation/980fe6be9c75", "ms": 264.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0033, "关闭或停止": 0.9906, "重新理解": 0.006}}}}
+{"id": "smart-home-continuation/948600400631", "ms": 273.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0022, "关闭或停止": 0.0061, "重新理解": 0.9917}}}}
+{"id": "smart-home-continuation/4578f0c5dec0", "ms": 282.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0018, "关闭或停止": 0.0029, "重新理解": 0.9954}}}}
+{"id": "smart-home-continuation/00b803a82072", "ms": 282.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0028, "关闭或停止": 0.0022, "重新理解": 0.9951}}}}
+{"id": "smart-home-continuation/b1de46cef448", "ms": 277.4, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0033, "床边夜灯": 0.0028, "老人房灯": 0.0028, "取消": 0.986, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/02babc8fcd5f", "ms": 262.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0021, "床边夜灯": 0.0018, "老人房灯": 0.0016, "取消": 0.0138, "重新理解": 0.9807}}}}
+{"id": "smart-home-continuation/72dd8a5d1eb9", "ms": 270.2, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"走廊夜灯": 0.0073, "床边夜灯": 0.9826, "老人房灯": 0.0024, "取消": 0.0016, "重新理解": 0.0061}}}}
+{"id": "smart-home-continuation/2554626da4fe", "ms": 284.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.4778, "客厅灯": 0.0016, "老人房灯": 0.0017, "取消": 0.0017, "重新理解": 0.5172}}}}
+{"id": "smart-home-continuation/7471d2e5c0aa", "ms": 275.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.002, "床边夜灯": 0.006, "取消": 0.0025, "重新理解": 0.9895}}}}
+{"id": "smart-home-continuation/ec00c83ab331", "ms": 271.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0028, "床边夜灯": 0.0066, "取消": 0.0032, "重新理解": 0.9873}}}}
+{"id": "smart-home-continuation/d1eed6081e96", "ms": 268.3, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0015, "卧室空调": 0.9928, "取消": 0.0014, "重新理解": 0.0042}}}}
+{"id": "smart-home-continuation/b43dbfddcc26", "ms": 263.6, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0021, "卧室空调": 0.993, "取消": 0.002, "重新理解": 0.0029}}}}
+{"id": "smart-home-continuation/5ac3d833fc27", "ms": 133.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0023, "关闭或停止": 0.0113, "重新理解": 0.9864}}}}
+{"id": "smart-home-continuation/97db53557f75", "ms": 268.5, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9962, "关闭或停止": 0.0018, "重新理解": 0.002}}}}
+{"id": "smart-home-continuation/2a4cd786c9cc", "ms": 277.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0019, "关闭或停止": 0.0039, "重新理解": 0.9942}}}}
+{"id": "smart-home-continuation/3378230e10bc", "ms": 271.0, "answers": {"pick": {"choice": "自动喂食器（阳台）", "probabilities": {"自动喂食器（客厅）": 0.0021, "自动喂食器（阳台）": 0.9706, "取消": 0.0021, "重新理解": 0.0252}}}}
+{"id": "smart-home-continuation/d9a01ee20563", "ms": 272.0, "answers": {"pick": {"choice": "取消", "probabilities": {"自动喂食器（客厅）": 0.0029, "自动喂食器（阳台）": 0.0027, "取消": 0.9866, "重新理解": 0.0078}}}}
+{"id": "smart-home-continuation/61e55b7049fb", "ms": 286.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0015, "关闭或停止": 0.0056, "暂停": 0.0012, "重新理解": 0.9917}}}}
+{"id": "smart-home-continuation/55a50f85d3ad", "ms": 283.9, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0037, "关闭或停止": 0.0038, "设为指定的数值或模式": 0.8771, "重新理解": 0.1154}}}}
+{"id": "smart-home-continuation/f161bc7ea306", "ms": 283.9, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.004, "关闭或停止": 0.983, "设为指定的数值或模式": 0.0052, "重新理解": 0.0078}}}}
+{"id": "smart-home-continuation/db520c7118df", "ms": 283.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0017, "关闭或停止": 0.0019, "设为指定的数值或模式": 0.0018, "重新理解": 0.9945}}}}
+{"id": "smart-home-continuation/2dcf131f2632", "ms": 283.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0019, "关闭或停止": 0.0044, "重新理解": 0.9937}}}}
+{"id": "smart-home-continuation/c168a58e5e98", "ms": 283.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.003, "关闭或停止": 0.9926, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/4786a90cd30b", "ms": 285.2, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅除湿机": 0.0046, "储藏室抽湿机": 0.0054, "取消": 0.9773, "重新理解": 0.0128}}}}
+{"id": "smart-home-continuation/54885dada68f", "ms": 275.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0012, "过道感应灯": 0.0006, "院子灯": 0.0004, "卧室灯": 0.0004, "取消": 0.0005, "重新理解": 0.9969}}}}
+{"id": "smart-home-continuation/dd8de14e658e", "ms": 261.7, "answers": {"pick": {"choice": "过道感应灯", "probabilities": {"厨房灯": 0.0004, "过道感应灯": 0.9969, "院子灯": 0.0003, "卧室灯": 0.0003, "取消": 0.0003, "重新理解": 0.0017}}}}
+{"id": "smart-home-continuation/ee45c329aea5", "ms": 272.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0003, "客厅灯": 0.0004, "院子灯": 0.0004, "卧室灯": 0.0003, "取消": 0.0004, "重新理解": 0.9983}}}}
+{"id": "smart-home-continuation/dac9533382c1", "ms": 276.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0014, "客厅空调": 0.0014, "取消": 0.0018, "重新理解": 0.9953}}}}
+{"id": "smart-home-continuation/a38dfe443098", "ms": 261.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0044, "客厅空调": 0.0056, "取消": 0.0076, "重新理解": 0.9824}}}}
+{"id": "smart-home-continuation/c9d27959a2df", "ms": 268.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0016, "走廊夜灯": 0.0016, "客厅灯": 0.0016, "取消": 0.0019, "重新理解": 0.9932}}}}
+{"id": "smart-home-continuation/f1bc100cb47e", "ms": 284.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0019, "走廊夜灯": 0.0035, "客厅灯": 0.0019, "取消": 0.0018, "重新理解": 0.9909}}}}
+{"id": "smart-home-continuation/d1cd0c68c720", "ms": 281.6, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"床边夜灯": 0.0032, "走廊夜灯": 0.9606, "客厅灯": 0.0031, "取消": 0.0029, "重新理解": 0.0302}}}}
+{"id": "smart-home-continuation/309f94da30f4", "ms": 281.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"空调（客厅）": 0.0016, "空调（卧室）": 0.0016, "取消": 0.0055, "重新理解": 0.9913}}}}
+{"id": "smart-home-continuation/7934e48d875e", "ms": 281.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"空调（客厅）": 0.0047, "空调（卧室）": 0.0042, "取消": 0.0034, "重新理解": 0.9877}}}}
+{"id": "smart-home-continuation/4abea21727f2", "ms": 281.1, "answers": {"pick": {"choice": "取消", "probabilities": {"空调（客厅）": 0.0036, "空调（卧室）": 0.0036, "取消": 0.9836, "重新理解": 0.0091}}}}
+{"id": "smart-home-continuation/4fdccddbb81a", "ms": 281.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0004, "关闭或停止": 0.001, "调高或增大": 0.0025, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0004, "重新理解": 0.9951}}}}
+{"id": "smart-home-continuation/b91b4d8081e5", "ms": 273.5, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"床边夜灯": 0.9007, "老人房灯": 0.0055, "客厅灯": 0.0032, "取消": 0.0038, "重新理解": 0.0868}}}}
+{"id": "smart-home-continuation/832ebf2b971e", "ms": 262.9, "answers": {"pick": {"choice": "取消", "probabilities": {"床边夜灯": 0.0025, "老人房灯": 0.0024, "客厅灯": 0.0026, "取消": 0.9852, "重新理解": 0.0073}}}}
+{"id": "smart-home-continuation/909b3e86c629", "ms": 264.4, "answers": {"pick": {"choice": "自动喂食器（阳台）", "probabilities": {"自动喂食器（客厅）": 0.0051, "自动喂食器（阳台）": 0.619, "取消": 0.0022, "重新理解": 0.3737}}}}
+{"id": "smart-home-continuation/919078f24e02", "ms": 268.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"自动喂食器（客厅）": 0.0403, "自动喂食器（阳台）": 0.0098, "取消": 0.0056, "重新理解": 0.9443}}}}
+{"id": "smart-home-continuation/0a8b8c89c7d0", "ms": 279.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"吸顶灯（客厅）": 0.0047, "吸顶灯（卧室）": 0.0041, "取消": 0.0024, "重新理解": 0.9887}}}}
+{"id": "smart-home-continuation/6488d4e8def1", "ms": 278.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"吸顶灯（客厅）": 0.0042, "吸顶灯（卧室）": 0.0033, "取消": 0.0025, "重新理解": 0.9901}}}}
+{"id": "smart-home-continuation/a3dd7334cbe5", "ms": 283.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0024, "床边夜灯": 0.0021, "老人房灯": 0.0015, "走廊夜灯": 0.0019, "取消": 0.001, "重新理解": 0.9912}}}}
+{"id": "smart-home-continuation/6cd3fc72be5b", "ms": 279.9, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9595, "床边夜灯": 0.0176, "老人房灯": 0.0057, "走廊夜灯": 0.01, "取消": 0.0008, "重新理解": 0.0064}}}}
+{"id": "smart-home-continuation/1e1743edcdf5", "ms": 272.5, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"走廊夜灯": 0.927, "客厅灯": 0.0449, "老人房灯": 0.0096, "床边夜灯": 0.0076, "取消": 0.001, "重新理解": 0.0099}}}}
+{"id": "smart-home-continuation/7bae2dad4263", "ms": 268.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0017, "关闭或停止": 0.0034, "调高或增大": 0.0006, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0007, "重新理解": 0.9927}}}}
+{"id": "smart-home-continuation/4f04415fe53d", "ms": 270.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0028, "关闭或停止": 0.0033, "设为指定的数值或模式": 0.0029, "重新理解": 0.991}}}}
+{"id": "smart-home-continuation/e444169144eb", "ms": 270.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0061, "关闭或停止": 0.002, "设为指定的数值或模式": 0.0013, "重新理解": 0.9906}}}}
+{"id": "smart-home-continuation/af954e5a1b11", "ms": 282.3, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0037, "关闭或停止": 0.9873, "设为指定的数值或模式": 0.0045, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/1bbe617433e7", "ms": 281.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0025, "关闭或停止": 0.0012, "调高或增大": 0.0003, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0004, "重新理解": 0.9952}}}}
+{"id": "smart-home-continuation/a5ab8c9cc9ad", "ms": 276.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0007, "关闭或停止": 0.0013, "调高或增大": 0.0036, "调低或减小": 0.0015, "设为指定的数值或模式": 0.0042, "重新理解": 0.9887}}}}
+{"id": "smart-home-continuation/94f95dfce183", "ms": 262.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.0011, "调高或增大": 0.0009, "调低或减小": 0.008, "设为指定的数值或模式": 0.0006, "重新理解": 0.9886}}}}
+{"id": "smart-home-continuation/c6add83a3620", "ms": 260.3, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"老人房灯": 0.0026, "走廊夜灯": 0.9917, "取消": 0.0023, "重新理解": 0.0033}}}}
+{"id": "smart-home-continuation/9ced87a43b80", "ms": 261.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.004, "客厅灯": 0.0045, "取消": 0.0041, "重新理解": 0.9873}}}}
+{"id": "smart-home-continuation/6d80767b9a37", "ms": 263.9, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"老人房灯": 0.0085, "走廊夜灯": 0.951, "取消": 0.0067, "重新理解": 0.0338}}}}
+{"id": "smart-home-continuation/6e63c820a29b", "ms": 260.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0092, "客厅灯": 0.0091, "取消": 0.0092, "重新理解": 0.9726}}}}
+{"id": "smart-home-continuation/181a255297fa", "ms": 271.2, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.0007, "调高或增大": 0.9958, "调低或减小": 0.0012, "设为指定的数值或模式": 0.0008, "重新理解": 0.0007}}}}
+{"id": "smart-home-continuation/cf0d5daf1a56", "ms": 282.9, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0021, "卧室空调": 0.9859, "取消": 0.0018, "重新理解": 0.0101}}}}
+{"id": "smart-home-continuation/ed7c6cb48154", "ms": 283.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"储藏室抽湿机": 0.0029, "客厅除湿机": 0.0043, "取消": 0.0041, "重新理解": 0.9888}}}}
+{"id": "smart-home-continuation/215dc2a3da9e", "ms": 282.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"储藏室抽湿机": 0.0016, "客厅除湿机": 0.0016, "取消": 0.0037, "重新理解": 0.9931}}}}
+{"id": "smart-home-continuation/174b923f479b", "ms": 276.1, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"老人房灯": 0.9961, "走廊夜灯": 0.0012, "取消": 0.0013, "重新理解": 0.0015}}}}
+{"id": "smart-home-continuation/b85e44bb5745", "ms": 263.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0024, "走廊夜灯": 0.0024, "取消": 0.0088, "重新理解": 0.9864}}}}
+{"id": "smart-home-continuation/f7a0b9535b65", "ms": 268.7, "answers": {"pick": {"choice": "取消", "probabilities": {"狗粮喂食器": 0.0034, "猫粮喂食器": 0.0037, "取消": 0.9884, "重新理解": 0.0046}}}}
+{"id": "smart-home-continuation/68c809990f7f", "ms": 272.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0036, "猫粮喂食器": 0.0031, "取消": 0.0086, "重新理解": 0.9847}}}}
+{"id": "smart-home-continuation/d0e26dc417cc", "ms": 271.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0026, "猫粮喂食器": 0.0023, "取消": 0.0032, "重新理解": 0.9919}}}}
+{"id": "smart-home-continuation/3b59cef3cdbd", "ms": 279.3, "answers": {"pick": {"choice": "过道感应灯", "probabilities": {"过道感应灯": 0.9905, "客厅灯": 0.0023, "取消": 0.0022, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/0f0d6e2df01f", "ms": 283.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0025, "客厅灯": 0.0048, "取消": 0.0032, "重新理解": 0.9894}}}}
+{"id": "smart-home-continuation/59f8a24c6280", "ms": 282.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"过道感应灯": 0.0045, "客厅灯": 0.0027, "取消": 0.0027, "重新理解": 0.9901}}}}
+{"id": "smart-home-continuation/c19c7c76e8a8", "ms": 263.6, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.8158, "客厅空调": 0.0024, "取消": 0.0105, "重新理解": 0.1712}}}}
+{"id": "smart-home-continuation/3ed3b0a5e293", "ms": 267.3, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0017, "客厅灯": 0.0009, "老人房灯": 0.0008, "床边夜灯": 0.0008, "取消": 0.9857, "重新理解": 0.01}}}}
+{"id": "smart-home-continuation/e865b3ad381b", "ms": 280.9, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"走廊夜灯": 0.0003, "客厅灯": 0.0003, "老人房灯": 0.9971, "床边夜灯": 0.0015, "取消": 0.0003, "重新理解": 0.0004}}}}
+{"id": "smart-home-continuation/36e1ead62afb", "ms": 282.0, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"走廊夜灯": 0.0003, "客厅灯": 0.9978, "老人房灯": 0.0003, "床边夜灯": 0.0003, "取消": 0.0003, "重新理解": 0.001}}}}
+{"id": "smart-home-continuation/f4d0c50b6366", "ms": 281.2, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"客厅灯": 0.0006, "床边夜灯": 0.0005, "老人房灯": 0.0005, "走廊夜灯": 0.7839, "取消": 0.0006, "重新理解": 0.214}}}}
+{"id": "smart-home-continuation/d0e0d4a9551f", "ms": 280.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0005, "关闭或停止": 0.0023, "调高或增大": 0.0005, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0005, "重新理解": 0.9953}}}}
+{"id": "smart-home-continuation/4ac5346b5ffb", "ms": 281.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0013, "关闭或停止": 0.0028, "调高或增大": 0.0024, "调低或减小": 0.0239, "设为指定的数值或模式": 0.0007, "重新理解": 0.9688}}}}
+{"id": "smart-home-continuation/9486252fe148", "ms": 282.6, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.0013, "调高或增大": 0.0011, "调低或减小": 0.002, "设为指定的数值或模式": 0.9883, "重新理解": 0.0063}}}}
+{"id": "smart-home-continuation/5759aba5d076", "ms": 281.9, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0033, "客厅空调": 0.9695, "取消": 0.0029, "重新理解": 0.0243}}}}
+{"id": "smart-home-continuation/58b310a66069", "ms": 274.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0051, "客厅空调": 0.0054, "取消": 0.0042, "重新理解": 0.9854}}}}
+{"id": "smart-home-continuation/15b95b990cc9", "ms": 270.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.2779, "关闭或停止": 0.0141, "设为指定的数值或模式": 0.0135, "重新理解": 0.6945}}}}
+{"id": "smart-home-continuation/86573f3490f5", "ms": 275.0, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0038, "关闭或停止": 0.0042, "设为指定的数值或模式": 0.9827, "重新理解": 0.0094}}}}
+{"id": "smart-home-continuation/8c71525b2b22", "ms": 273.8, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9966, "关闭或停止": 0.0007, "调高或增大": 0.0006, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0006, "重新理解": 0.0009}}}}
+{"id": "smart-home-continuation/e05d7cf202aa", "ms": 264.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0065, "关闭或停止": 0.0026, "调高或增大": 0.0369, "调低或减小": 0.0024, "设为指定的数值或模式": 0.0049, "重新理解": 0.9467}}}}
+{"id": "smart-home-continuation/5f934d724de2", "ms": 261.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.0085, "调高或增大": 0.0013, "调低或减小": 0.0276, "设为指定的数值或模式": 0.0004, "重新理解": 0.9613}}}}
+{"id": "smart-home-continuation/ed101221a07c", "ms": 262.5, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.9947, "调高或增大": 0.001, "调低或减小": 0.001, "设为指定的数值或模式": 0.001, "重新理解": 0.0013}}}}
+{"id": "smart-home-continuation/0e2842b2e754", "ms": 260.1, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.003, "关闭或停止": 0.9927, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/85dcfdbb9d95", "ms": 260.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0021, "走廊夜灯": 0.002, "取消": 0.0023, "重新理解": 0.9935}}}}
+{"id": "smart-home-continuation/b0208398e67f", "ms": 260.1, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"老人房灯": 0.0018, "走廊夜灯": 0.9904, "取消": 0.0017, "重新理解": 0.0061}}}}
+{"id": "smart-home-continuation/f9b93bbbc4f6", "ms": 260.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0023, "客厅灯": 0.0024, "取消": 0.0028, "重新理解": 0.9925}}}}
+{"id": "smart-home-continuation/f57f422bdaae", "ms": 260.4, "answers": {"pick": {"choice": "取消", "probabilities": {"老人房灯": 0.0029, "走廊夜灯": 0.0034, "取消": 0.9887, "重新理解": 0.0049}}}}
+{"id": "smart-home-continuation/c72a13728c13", "ms": 262.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"灯（老人房）": 0.0287, "灯（走廊）": 0.0026, "灯（客厅）": 0.0021, "取消": 0.0018, "重新理解": 0.9647}}}}
+{"id": "smart-home-continuation/0464f49d9ef4", "ms": 262.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"灯（老人房）": 0.0052, "灯（走廊）": 0.0063, "灯（客厅）": 0.0067, "取消": 0.0025, "重新理解": 0.9793}}}}
+{"id": "smart-home-continuation/5ecc3738c7d8", "ms": 260.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"灯（老人房）": 0.0039, "灯（走廊）": 0.0047, "灯（客厅）": 0.0052, "取消": 0.0022, "重新理解": 0.984}}}}
+{"id": "smart-home-continuation/73ff065beb03", "ms": 261.0, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"客厅除湿机": 0.9923, "储藏室抽湿机": 0.0016, "取消": 0.0011, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/35ecc67cdc03", "ms": 264.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0021, "关闭或停止": 0.0052, "暂停": 0.0015, "重新理解": 0.9912}}}}
+{"id": "smart-home-continuation/df87bedac965", "ms": 262.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0051, "关闭或停止": 0.0044, "暂停": 0.0012, "重新理解": 0.9892}}}}
+{"id": "smart-home-continuation/800ec0f558b3", "ms": 262.7, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0039, "关闭或停止": 0.9877, "暂停": 0.0038, "重新理解": 0.0046}}}}
+{"id": "smart-home-continuation/760bbfea69d3", "ms": 262.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0004, "关闭或停止": 0.0008, "调高或增大": 0.0004, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0004, "重新理解": 0.9973}}}}
+{"id": "smart-home-continuation/5e7be15a938d", "ms": 264.0, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0011, "关闭或停止": 0.0008, "调高或增大": 0.0007, "调低或减小": 0.0023, "设为指定的数值或模式": 0.9927, "重新理解": 0.0025}}}}
+{"id": "smart-home-continuation/43342efe974e", "ms": 262.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0023, "客厅灯": 0.0022, "取消": 0.0023, "重新理解": 0.9932}}}}
+{"id": "smart-home-continuation/6a4d004ecf18", "ms": 267.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.003, "客厅灯": 0.0018, "取消": 0.0023, "重新理解": 0.9929}}}}
+{"id": "smart-home-continuation/7c84137a85c8", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0022, "客厅灯": 0.0019, "取消": 0.0026, "重新理解": 0.9932}}}}
+{"id": "smart-home-continuation/bdc970c54e1d", "ms": 270.4, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9974, "关闭或停止": 0.0005, "调高或增大": 0.0006, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0004, "重新理解": 0.0006}}}}
+{"id": "smart-home-continuation/c2e9bfa68140", "ms": 275.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0006, "关闭或停止": 0.0017, "调高或增大": 0.0004, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0007, "重新理解": 0.9961}}}}
+{"id": "smart-home-continuation/90f89a192adf", "ms": 264.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.004, "关闭或停止": 0.0031, "调高或增大": 0.0003, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0004, "重新理解": 0.9917}}}}
+{"id": "smart-home-continuation/9cec9397639e", "ms": 266.1, "answers": {"pick": {"choice": "取消", "probabilities": {"床边夜灯": 0.0023, "老人房灯": 0.0023, "取消": 0.9892, "重新理解": 0.0062}}}}
+{"id": "smart-home-continuation/a971ae2d07ee", "ms": 263.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0028, "客厅空调": 0.0026, "取消": 0.0033, "重新理解": 0.9913}}}}
+{"id": "smart-home-continuation/0bf478e6467e", "ms": 260.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0067, "客厅灯": 0.01, "取消": 0.004, "重新理解": 0.9793}}}}
+{"id": "smart-home-continuation/6c02333901fa", "ms": 259.9, "answers": {"pick": {"choice": "灯（老人房）", "probabilities": {"灯（走廊）": 0.4458, "灯（老人房）": 0.5289, "取消": 0.012, "重新理解": 0.0133}}}}
+{"id": "smart-home-continuation/191f89561b43", "ms": 268.1, "answers": {"pick": {"choice": "取消", "probabilities": {"灯（走廊）": 0.0035, "灯（老人房）": 0.0033, "取消": 0.9871, "重新理解": 0.0061}}}}
+{"id": "smart-home-continuation/2daeca4d6a67", "ms": 264.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"灯（走廊）": 0.0033, "灯（老人房）": 0.0025, "取消": 0.0066, "重新理解": 0.9876}}}}
+{"id": "smart-home-continuation/8314e6452594", "ms": 264.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0065, "狗粮喂食器": 0.0059, "取消": 0.0103, "重新理解": 0.9773}}}}
+{"id": "smart-home-continuation/4027e0a5d497", "ms": 263.2, "answers": {"pick": {"choice": "取消", "probabilities": {"猫粮喂食器": 0.003, "狗粮喂食器": 0.003, "取消": 0.9899, "重新理解": 0.0042}}}}
+{"id": "smart-home-continuation/dee5c959fe9c", "ms": 262.1, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.0109, "狗粮喂食器": 0.9828, "取消": 0.003, "重新理解": 0.0032}}}}
+{"id": "smart-home-continuation/314349b9d166", "ms": 263.0, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.0081, "猫粮喂食器": 0.9859, "取消": 0.0029, "重新理解": 0.0031}}}}
+{"id": "smart-home-continuation/6d134a45db8f", "ms": 272.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0022, "客厅灯": 0.0055, "取消": 0.0022, "重新理解": 0.9901}}}}
+{"id": "smart-home-continuation/87a1033f1284", "ms": 267.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0045, "客厅灯": 0.0031, "取消": 0.0099, "重新理解": 0.9824}}}}
+{"id": "smart-home-continuation/4083cd2a3f10", "ms": 260.3, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"卧室灯": 0.9973, "院子灯": 0.0004, "过道感应灯": 0.0004, "厨房灯": 0.0004, "取消": 0.0004, "重新理解": 0.0012}}}}
+{"id": "smart-home-continuation/c9dfb8934c07", "ms": 259.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0005, "院子灯": 0.0005, "过道感应灯": 0.0005, "厨房灯": 0.0005, "取消": 0.0014, "重新理解": 0.9964}}}}
+{"id": "smart-home-continuation/6e8e345ce9e8", "ms": 264.5, "answers": {"pick": {"choice": "过道感应灯", "probabilities": {"卧室灯": 0.0085, "院子灯": 0.0092, "过道感应灯": 0.7262, "厨房灯": 0.0084, "取消": 0.0083, "重新理解": 0.2394}}}}
+{"id": "smart-home-continuation/b3868910bfbb", "ms": 266.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0051, "院子灯": 0.0067, "客厅灯": 0.0048, "厨房灯": 0.0047, "取消": 0.0053, "重新理解": 0.9733}}}}
+{"id": "smart-home-continuation/6d4c5a64f173", "ms": 262.9, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.003, "关闭或停止": 0.9926, "重新理解": 0.0043}}}}
+{"id": "smart-home-continuation/b22175885dc5", "ms": 262.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0043, "关闭或停止": 0.0031, "重新理解": 0.9927}}}}
+{"id": "smart-home-continuation/9a03d3565745", "ms": 261.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0051, "关闭或停止": 0.0078, "重新理解": 0.9871}}}}
+{"id": "smart-home-continuation/193ae016921c", "ms": 262.6, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0202, "客厅空调": 0.9718, "取消": 0.0032, "重新理解": 0.0048}}}}
+{"id": "smart-home-continuation/a63c2bcb197a", "ms": 271.5, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0152, "卧室空调": 0.9769, "取消": 0.0031, "重新理解": 0.0047}}}}
+{"id": "smart-home-continuation/e3cca14169e6", "ms": 274.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0014, "客厅灯": 0.0014, "取消": 0.0016, "重新理解": 0.9957}}}}
+{"id": "smart-home-continuation/d49752cb7ebb", "ms": 269.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0026, "老人房灯": 0.0152, "取消": 0.003, "重新理解": 0.9792}}}}
+{"id": "smart-home-continuation/e7003f07a6ba", "ms": 267.8, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"客厅灯": 0.0017, "老人房灯": 0.9949, "取消": 0.0015, "重新理解": 0.0019}}}}
+{"id": "smart-home-continuation/31b172cf2329", "ms": 280.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0015, "走廊夜灯": 0.0014, "取消": 0.0027, "重新理解": 0.9944}}}}
+{"id": "smart-home-continuation/336b197e4607", "ms": 272.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0018, "老人房灯": 0.0042, "取消": 0.0023, "重新理解": 0.9916}}}}
+{"id": "smart-home-continuation/97849fd733c5", "ms": 260.4, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"走廊夜灯": 0.9827, "老人房灯": 0.0006, "床边夜灯": 0.0005, "客厅灯": 0.0006, "取消": 0.0006, "重新理解": 0.015}}}}
+{"id": "smart-home-continuation/44df3605a1ab", "ms": 260.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0003, "老人房灯": 0.0003, "床边夜灯": 0.0003, "客厅灯": 0.0003, "取消": 0.0009, "重新理解": 0.9979}}}}
+{"id": "smart-home-continuation/ac1f3d40b52e", "ms": 261.0, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.001, "老人房灯": 0.001, "床边夜灯": 0.001, "客厅灯": 0.0012, "取消": 0.9928, "重新理解": 0.003}}}}
+{"id": "smart-home-continuation/b97faa44b606", "ms": 266.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0038, "狗粮喂食器": 0.0019, "取消": 0.0036, "重新理解": 0.9906}}}}
+{"id": "smart-home-continuation/ef9ade434b50", "ms": 270.9, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.0176, "狗粮喂食器": 0.9763, "取消": 0.0029, "重新理解": 0.0032}}}}
+{"id": "smart-home-continuation/07a6e6205d36", "ms": 262.9, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.013, "猫粮喂食器": 0.981, "取消": 0.0028, "重新理解": 0.0031}}}}
+{"id": "smart-home-continuation/6715c1540ece", "ms": 259.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0021, "老人房灯": 0.0022, "取消": 0.0022, "重新理解": 0.9935}}}}
+{"id": "smart-home-continuation/c663217d78ad", "ms": 260.3, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"走廊夜灯": 0.9789, "老人房灯": 0.0026, "取消": 0.0025, "重新理解": 0.016}}}}
+{"id": "smart-home-continuation/467f2b588be2", "ms": 269.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0028, "老人房灯": 0.0025, "取消": 0.0029, "重新理解": 0.9918}}}}
+{"id": "smart-home-continuation/a2defd3f504b", "ms": 281.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0078, "走廊夜灯": 0.0084, "床边夜灯": 0.0041, "取消": 0.0042, "重新理解": 0.9754}}}}
+{"id": "smart-home-continuation/0d54b5039f30", "ms": 260.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0028, "走廊夜灯": 0.0032, "床边夜灯": 0.0067, "取消": 0.0028, "重新理解": 0.9845}}}}
+{"id": "smart-home-continuation/97c1fcd0f0af", "ms": 260.6, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9911, "走廊夜灯": 0.0023, "床边夜灯": 0.0018, "取消": 0.0016, "重新理解": 0.0033}}}}
+{"id": "smart-home-continuation/1a8531c3aab3", "ms": 268.6, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.9945, "调高或增大": 0.001, "调低或减小": 0.0014, "设为指定的数值或模式": 0.0009, "重新理解": 0.0013}}}}
+{"id": "smart-home-continuation/1d5a04f6c872", "ms": 278.7, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"客厅灯": 0.0016, "老人房灯": 0.9948, "取消": 0.0015, "重新理解": 0.0021}}}}
+{"id": "smart-home-continuation/c999751d614d", "ms": 277.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0022, "走廊夜灯": 0.0023, "取消": 0.0028, "重新理解": 0.9927}}}}
+{"id": "smart-home-continuation/6c348b379f23", "ms": 278.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0018, "老人房灯": 0.0018, "取消": 0.0021, "重新理解": 0.9943}}}}
+{"id": "smart-home-continuation/27a70104eb11", "ms": 282.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.003, "猫粮喂食器": 0.003, "取消": 0.0083, "重新理解": 0.9857}}}}
+{"id": "smart-home-continuation/211026b40ea4", "ms": 283.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.4211, "关闭或停止": 0.0211, "暂停": 0.0042, "重新理解": 0.5536}}}}
+{"id": "smart-home-continuation/7a242c293244", "ms": 281.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0201, "关闭或停止": 0.0019, "暂停": 0.0014, "重新理解": 0.9767}}}}
+{"id": "smart-home-continuation/12e0aef23b3f", "ms": 283.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0038, "关闭或停止": 0.0069, "暂停": 0.0019, "重新理解": 0.9874}}}}
+{"id": "smart-home-continuation/91a8c6a7198c", "ms": 283.8, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.0008, "调高或增大": 0.995, "调低或减小": 0.001, "设为指定的数值或模式": 0.0008, "重新理解": 0.0014}}}}
+{"id": "smart-home-continuation/b3a88d1c1c54", "ms": 283.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.9954, "调高或增大": 0.0009, "调低或减小": 0.0008, "设为指定的数值或模式": 0.0008, "重新理解": 0.0014}}}}
+{"id": "smart-home-continuation/1e8c56834347", "ms": 282.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0082, "狗粮喂食器": 0.0041, "取消": 0.0036, "重新理解": 0.9842}}}}
+{"id": "smart-home-continuation/33a8df9cb1c9", "ms": 281.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0006, "关闭或停止": 0.0015, "调高或增大": 0.0006, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0005, "重新理解": 0.9958}}}}
+{"id": "smart-home-continuation/f25e0209e875", "ms": 283.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0012, "关闭或停止": 0.0016, "调高或增大": 0.0005, "调低或减小": 0.0006, "设为指定的数值或模式": 0.0005, "重新理解": 0.9957}}}}
+{"id": "smart-home-continuation/711c1352854c", "ms": 272.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0018, "关闭或停止": 0.0016, "重新理解": 0.9966}}}}
+{"id": "smart-home-continuation/f96de6bca0bd", "ms": 275.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0034, "关闭或停止": 0.0032, "重新理解": 0.9934}}}}
+{"id": "smart-home-continuation/78a8e0ec3e43", "ms": 280.8, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"猫粮喂食器": 0.995, "狗粮喂食器": 0.0018, "取消": 0.0012, "重新理解": 0.0021}}}}
+{"id": "smart-home-continuation/672b5013382b", "ms": 281.3, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"猫粮喂食器": 0.9922, "狗粮喂食器": 0.0015, "取消": 0.0013, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/576613ed3287", "ms": 281.1, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"猫粮喂食器": 0.986, "狗粮喂食器": 0.0077, "取消": 0.0026, "重新理解": 0.0037}}}}
+{"id": "smart-home-continuation/3e4d98b94b2e", "ms": 272.3, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"狗粮喂食器": 0.9839, "猫粮喂食器": 0.0098, "取消": 0.0026, "重新理解": 0.0037}}}}
+{"id": "smart-home-continuation/9de8a7ff0084", "ms": 278.3, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0089, "关闭或停止": 0.9381, "暂停": 0.0289, "重新理解": 0.0242}}}}
+{"id": "smart-home-continuation/43fe430d2928", "ms": 272.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0022, "关闭或停止": 0.0053, "暂停": 0.0013, "重新理解": 0.9912}}}}
+{"id": "smart-home-continuation/25777a0be559", "ms": 266.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0068, "床边夜灯": 0.0033, "取消": 0.0089, "重新理解": 0.981}}}}
+{"id": "smart-home-continuation/a69543d50c84", "ms": 271.5, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0135, "床边夜灯": 0.0054, "取消": 0.9337, "重新理解": 0.0474}}}}
+{"id": "smart-home-continuation/c73001434ec2", "ms": 261.5, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9099, "关闭或停止": 0.0061, "暂停": 0.0036, "重新理解": 0.0804}}}}
+{"id": "smart-home-continuation/c1332f4d62d4", "ms": 261.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0148, "关闭或停止": 0.0207, "暂停": 0.0024, "重新理解": 0.9621}}}}
+{"id": "smart-home-continuation/f884a288ad16", "ms": 263.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0018, "关闭或停止": 0.0031, "暂停": 0.0016, "重新理解": 0.9935}}}}
+{"id": "smart-home-continuation/2afce7083ddf", "ms": 272.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0007, "关闭或停止": 0.0008, "调高或增大": 0.0007, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0005, "重新理解": 0.9966}}}}
+{"id": "smart-home-continuation/56435a4ae004", "ms": 277.1, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0012, "关闭或停止": 0.001, "调高或增大": 0.0013, "调低或减小": 0.0014, "设为指定的数值或模式": 0.9919, "重新理解": 0.0032}}}}
+{"id": "smart-home-continuation/8ac086470c60", "ms": 263.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.002, "关闭或停止": 0.0094, "设为指定的数值或模式": 0.0022, "重新理解": 0.9865}}}}
+{"id": "smart-home-continuation/c41b78836bfd", "ms": 263.2, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.988, "卧室空调": 0.0075, "取消": 0.0016, "重新理解": 0.0029}}}}
+{"id": "smart-home-continuation/1ea483c97ad2", "ms": 272.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0015, "卧室空调": 0.0022, "取消": 0.0013, "重新理解": 0.995}}}}
+{"id": "smart-home-continuation/01dae1d0584e", "ms": 280.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅除湿机": 0.0018, "储藏室抽湿机": 0.0016, "取消": 0.0025, "重新理解": 0.9941}}}}
+{"id": "smart-home-continuation/8264c9fba427", "ms": 271.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0021, "关闭或停止": 0.0025, "设为指定的数值或模式": 0.0032, "重新理解": 0.9923}}}}
+{"id": "smart-home-continuation/34f47c158a8d", "ms": 261.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0028, "关闭或停止": 0.0023, "设为指定的数值或模式": 0.0028, "重新理解": 0.9921}}}}
+{"id": "smart-home-continuation/e699bdc9c871", "ms": 260.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0086, "客厅灯": 0.0105, "取消": 0.0044, "重新理解": 0.9765}}}}
+{"id": "smart-home-continuation/0abb19047a77", "ms": 261.2, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.0026, "客厅灯": 0.9867, "取消": 0.0022, "重新理解": 0.0085}}}}
+{"id": "smart-home-continuation/182551d25403", "ms": 261.0, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9946, "卧室空调": 0.0016, "取消": 0.0016, "重新理解": 0.0022}}}}
+{"id": "smart-home-continuation/ea63ccc5d679", "ms": 262.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0065, "卧室空调": 0.0057, "取消": 0.0056, "重新理解": 0.9821}}}}
+{"id": "smart-home-continuation/5d5b823bb7c4", "ms": 263.0, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"老人房灯": 0.0038, "走廊夜灯": 0.9602, "床边夜灯": 0.0054, "取消": 0.003, "重新理解": 0.0276}}}}
+{"id": "smart-home-continuation/2c80bf078d08", "ms": 263.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0114, "客厅灯": 0.0115, "床边夜灯": 0.012, "取消": 0.0114, "重新理解": 0.9538}}}}
+{"id": "smart-home-continuation/b681ba3d433a", "ms": 263.2, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室空调": 0.0044, "客厅空调": 0.0056, "取消": 0.9799, "重新理解": 0.0101}}}}
+{"id": "smart-home-continuation/38e6fb5c8d85", "ms": 262.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0203, "客厅空调": 0.0032, "取消": 0.0049, "重新理解": 0.9716}}}}
+{"id": "smart-home-continuation/8cc30593e34e", "ms": 262.4, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0021, "客厅空调": 0.9929, "取消": 0.0019, "重新理解": 0.0031}}}}
+{"id": "smart-home-continuation/8f5a1e1ac4a1", "ms": 262.7, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9948, "关闭或停止": 0.0025, "重新理解": 0.0027}}}}
+{"id": "smart-home-continuation/100595752557", "ms": 263.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0016, "关闭或停止": 0.0047, "重新理解": 0.9938}}}}
+{"id": "smart-home-continuation/41852d5cbf09", "ms": 262.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.002, "关闭或停止": 0.0027, "重新理解": 0.9953}}}}
+{"id": "smart-home-continuation/93e871471a30", "ms": 262.5, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"院子灯": 0.0038, "客厅灯": 0.9879, "取消": 0.0017, "重新理解": 0.0066}}}}
+{"id": "smart-home-continuation/6f78de7bc669", "ms": 264.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"院子灯": 0.0019, "厨房灯": 0.0017, "取消": 0.0025, "重新理解": 0.9939}}}}
+{"id": "smart-home-continuation/7653904896a7", "ms": 264.9, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"院子灯": 0.0133, "客厅灯": 0.9801, "取消": 0.0032, "重新理解": 0.0033}}}}
+{"id": "smart-home-continuation/9757d72c3fbb", "ms": 285.1, "answers": {"pick": {"choice": "院子灯", "probabilities": {"客厅灯": 0.0081, "院子灯": 0.9849, "取消": 0.0035, "重新理解": 0.0036}}}}
+{"id": "smart-home-continuation/6bd7cccb28e5", "ms": 276.4, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0038, "关闭或停止": 0.0041, "设为指定的数值或模式": 0.9836, "重新理解": 0.0086}}}}
+{"id": "smart-home-continuation/346992feeda2", "ms": 261.3, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.003, "关闭或停止": 0.99, "设为指定的数值或模式": 0.0035, "重新理解": 0.0034}}}}
+{"id": "smart-home-continuation/d93c7312313c", "ms": 269.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0029, "关闭或停止": 0.0078, "暂停": 0.0022, "重新理解": 0.9871}}}}
+{"id": "smart-home-continuation/927b15f7c46c", "ms": 275.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0023, "关闭或停止": 0.0011, "调高或增大": 0.0154, "调低或减小": 0.0042, "设为指定的数值或模式": 0.3334, "重新理解": 0.6436}}}}
+{"id": "smart-home-continuation/82dc2362d0ae", "ms": 269.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0005, "关闭或停止": 0.0019, "调高或增大": 0.0004, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0004, "重新理解": 0.9963}}}}
+{"id": "smart-home-continuation/222c39583dbf", "ms": 281.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0026, "猫粮喂食器": 0.0024, "取消": 0.0136, "重新理解": 0.9815}}}}
+{"id": "smart-home-continuation/88bfca7d14a8", "ms": 273.1, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"狗粮喂食器": 0.9825, "猫粮喂食器": 0.0113, "取消": 0.0025, "重新理解": 0.0037}}}}
+{"id": "smart-home-continuation/376b2b588bf5", "ms": 262.1, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"猫粮喂食器": 0.9847, "狗粮喂食器": 0.009, "取消": 0.0025, "重新理解": 0.0039}}}}
+{"id": "smart-home-continuation/0369b8f6f3f7", "ms": 262.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0057, "关闭或停止": 0.0133, "重新理解": 0.981}}}}
+{"id": "smart-home-continuation/b698badbc64b", "ms": 261.6, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9894, "关闭或停止": 0.0047, "重新理解": 0.0059}}}}
+{"id": "smart-home-continuation/b63ff26382af", "ms": 261.3, "answers": {"pick": {"choice": "取消", "probabilities": {"除湿机（储藏室）": 0.0033, "除湿机（客厅）": 0.0034, "取消": 0.9853, "重新理解": 0.0079}}}}
+{"id": "smart-home-continuation/a7ed89ad8e83", "ms": 261.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"除湿机（储藏室）": 0.005, "除湿机（客厅）": 0.0082, "取消": 0.0039, "重新理解": 0.9829}}}}
+{"id": "smart-home-continuation/179764e202a9", "ms": 261.6, "answers": {"follow": {"choice": "调低或减小", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.001, "调高或增大": 0.0012, "调低或减小": 0.9929, "设为指定的数值或模式": 0.0024, "重新理解": 0.0015}}}}
+{"id": "smart-home-continuation/09e830718c0a", "ms": 261.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0003, "关闭或停止": 0.0052, "调高或增大": 0.0003, "调低或减小": 0.0031, "设为指定的数值或模式": 0.0006, "重新理解": 0.9906}}}}
+{"id": "smart-home-continuation/2da01eae38d8", "ms": 260.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0003, "关闭或停止": 0.0005, "调高或增大": 0.0006, "调低或减小": 0.0022, "设为指定的数值或模式": 0.0024, "重新理解": 0.994}}}}
+{"id": "smart-home-continuation/d341366f9ba2", "ms": 260.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0045, "关闭或停止": 0.9825, "重新理解": 0.013}}}}
+{"id": "smart-home-continuation/ea5c084abb15", "ms": 259.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.003, "关闭或停止": 0.0044, "重新理解": 0.9926}}}}
+{"id": "smart-home-continuation/6dda8d78c540", "ms": 260.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.003, "重新理解": 0.9939}}}}
+{"id": "smart-home-continuation/1d87bce178e8", "ms": 262.1, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"老人房灯": 0.9967, "床边夜灯": 0.0021, "客厅灯": 0.0003, "走廊夜灯": 0.0003, "取消": 0.0003, "重新理解": 0.0004}}}}
+{"id": "smart-home-continuation/cb2794bf5fee", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0008, "床边夜灯": 0.0011, "客厅灯": 0.0016, "走廊夜灯": 0.0026, "取消": 0.0239, "重新理解": 0.9701}}}}
+{"id": "smart-home-continuation/a17ce33168b2", "ms": 262.3, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"老人房灯": 0.0006, "床边夜灯": 0.0013, "客厅灯": 0.0006, "走廊夜灯": 0.9952, "取消": 0.0004, "重新理解": 0.0019}}}}
+{"id": "smart-home-continuation/c91b559c44e4", "ms": 264.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0072, "猫粮喂食器": 0.0098, "取消": 0.0037, "重新理解": 0.9793}}}}
+{"id": "smart-home-continuation/2d9c426f64b1", "ms": 260.5, "answers": {"pick": {"choice": "取消", "probabilities": {"狗粮喂食器": 0.0046, "猫粮喂食器": 0.0063, "取消": 0.9833, "重新理解": 0.0058}}}}
+{"id": "smart-home-continuation/52d9bbf54660", "ms": 261.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0244, "猫粮喂食器": 0.0037, "取消": 0.0044, "重新理解": 0.9675}}}}
+{"id": "smart-home-continuation/e9aa106bf739", "ms": 261.5, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.9905, "重新理解": 0.0064}}}}
+{"id": "smart-home-continuation/c769c13fa45b", "ms": 261.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.002, "关闭或停止": 0.0039, "重新理解": 0.9941}}}}
+{"id": "smart-home-continuation/164e95a91ddc", "ms": 260.5, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0022, "关闭或停止": 0.0012, "调高或增大": 0.0012, "调低或减小": 0.0024, "设为指定的数值或模式": 0.9762, "重新理解": 0.0168}}}}
+{"id": "smart-home-continuation/5e60303bf710", "ms": 261.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0018, "走廊夜灯": 0.0017, "客厅灯": 0.0017, "取消": 0.0021, "重新理解": 0.9927}}}}
+{"id": "smart-home-continuation/d79c1742b4c5", "ms": 260.8, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"老人房灯": 0.0034, "走廊夜灯": 0.8601, "客厅灯": 0.0041, "取消": 0.0036, "重新理解": 0.1288}}}}
+{"id": "smart-home-continuation/4d0ebe2e9115", "ms": 261.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0032, "关闭或停止": 0.9916, "重新理解": 0.0052}}}}
+{"id": "smart-home-continuation/547edf45693b", "ms": 261.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0037, "关闭或停止": 0.0065, "重新理解": 0.9898}}}}
+{"id": "smart-home-continuation/724f1de28370", "ms": 261.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.002, "关闭或停止": 0.0007, "调高或增大": 0.0003, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0003, "重新理解": 0.9964}}}}
+{"id": "smart-home-continuation/366e3aadb05d", "ms": 261.4, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.9951, "调高或增大": 0.0011, "调低或减小": 0.001, "设为指定的数值或模式": 0.0009, "重新理解": 0.001}}}}
+{"id": "smart-home-continuation/c9eafda56b62", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0625, "院子灯": 0.0025, "取消": 0.004, "重新理解": 0.9311}}}}
+{"id": "smart-home-continuation/3d3900a46184", "ms": 261.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"过道感应灯": 0.0021, "院子灯": 0.0019, "取消": 0.0029, "重新理解": 0.9931}}}}
+{"id": "smart-home-continuation/9b90630ec427", "ms": 261.8, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室灯": 0.0032, "客厅灯": 0.0036, "取消": 0.9862, "重新理解": 0.0069}}}}
+{"id": "smart-home-continuation/1e5ab998b2a2", "ms": 261.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0052, "客厅灯": 0.006, "取消": 0.0042, "重新理解": 0.9846}}}}
+{"id": "smart-home-continuation/a1ea52f2b628", "ms": 269.3, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0016, "客厅灯": 0.0012, "老人房灯": 0.001, "床边夜灯": 0.001, "取消": 0.9821, "重新理解": 0.0131}}}}
+{"id": "smart-home-continuation/bbd8ce8abc02", "ms": 271.3, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9938, "关闭或停止": 0.0028, "重新理解": 0.0034}}}}
+{"id": "smart-home-continuation/a376ac4c7916", "ms": 261.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0053, "关闭或停止": 0.0025, "重新理解": 0.9922}}}}
+{"id": "smart-home-continuation/ce1b3b76141b", "ms": 261.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0078, "关闭或停止": 0.0301, "重新理解": 0.9621}}}}
+{"id": "smart-home-continuation/d41cf698e4e2", "ms": 263.0, "answers": {"pick": {"choice": "取消", "probabilities": {"狗粮喂食器": 0.0073, "猫粮喂食器": 0.0063, "取消": 0.9767, "重新理解": 0.0098}}}}
+{"id": "smart-home-continuation/4b5a3c87ddd4", "ms": 270.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.003, "猫粮喂食器": 0.0045, "取消": 0.0025, "重新理解": 0.9899}}}}
+{"id": "smart-home-continuation/24ab280f7d5b", "ms": 275.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0022, "猫粮喂食器": 0.0052, "取消": 0.0026, "重新理解": 0.99}}}}
+{"id": "smart-home-continuation/b59b012b88ac", "ms": 264.2, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.001, "调高或增大": 0.003, "调低或减小": 0.0041, "设为指定的数值或模式": 0.9894, "重新理解": 0.0017}}}}
+{"id": "smart-home-continuation/97265b651feb", "ms": 272.8, "answers": {"follow": {"choice": "调低或减小", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.001, "调高或增大": 0.0021, "调低或减小": 0.9925, "设为指定的数值或模式": 0.0021, "重新理解": 0.0013}}}}
+{"id": "smart-home-continuation/efab86007489", "ms": 280.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0019, "卧室空调": 0.0018, "取消": 0.0034, "重新理解": 0.9929}}}}
+{"id": "smart-home-continuation/bb9ef6bb46c9", "ms": 279.7, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅空调": 0.0034, "卧室空调": 0.0039, "取消": 0.9857, "重新理解": 0.007}}}}
+{"id": "smart-home-continuation/27c01be19141", "ms": 281.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0023, "客厅灯": 0.0022, "走廊夜灯": 0.0022, "取消": 0.0035, "重新理解": 0.9898}}}}
+{"id": "smart-home-continuation/0a9b61b92f81", "ms": 278.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0135, "狗粮喂食器": 0.0106, "取消": 0.0332, "重新理解": 0.9427}}}}
+{"id": "smart-home-continuation/8c2f9dede48a", "ms": 280.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0213, "狗粮喂食器": 0.005, "取消": 0.0024, "重新理解": 0.9712}}}}
+{"id": "smart-home-continuation/34dacd4b5306", "ms": 282.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.0074, "重新理解": 0.9895}}}}
+{"id": "smart-home-continuation/d52ba723baa8", "ms": 282.4, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0022, "卧室空调": 0.9912, "取消": 0.0021, "重新理解": 0.0045}}}}
+{"id": "smart-home-continuation/0d4f48cb298b", "ms": 282.0, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅空调": 0.003, "卧室空调": 0.0031, "取消": 0.9888, "重新理解": 0.0051}}}}
+{"id": "smart-home-continuation/25216fbada6d", "ms": 282.2, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"床边夜灯": 0.9812, "走廊夜灯": 0.0026, "取消": 0.0023, "重新理解": 0.014}}}}
+{"id": "smart-home-continuation/7283ddbe70ed", "ms": 282.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0017, "走廊夜灯": 0.0018, "取消": 0.0024, "重新理解": 0.9942}}}}
+{"id": "smart-home-continuation/328325665104", "ms": 282.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0044, "走廊夜灯": 0.0042, "取消": 0.0041, "重新理解": 0.9873}}}}
+{"id": "smart-home-continuation/7f2da9b5e433", "ms": 283.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.026, "调高或增大": 0.0007, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0006, "重新理解": 0.9708}}}}
+{"id": "smart-home-continuation/4dc0cd176ff4", "ms": 281.8, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"走廊夜灯": 0.0248, "床边夜灯": 0.9659, "取消": 0.0032, "重新理解": 0.0061}}}}
+{"id": "smart-home-continuation/6f0b6ef9da37", "ms": 282.1, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"床边夜灯": 0.0383, "走廊夜灯": 0.9507, "取消": 0.0038, "重新理解": 0.0073}}}}
+{"id": "smart-home-continuation/4a545834c5ee", "ms": 282.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0025, "床边夜灯": 0.0025, "取消": 0.0035, "重新理解": 0.9915}}}}
+{"id": "smart-home-continuation/42e4243a3844", "ms": 282.5, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"走廊夜灯": 0.0021, "床边夜灯": 0.9694, "取消": 0.0022, "重新理解": 0.0263}}}}
+{"id": "smart-home-continuation/1839d7862f8e", "ms": 276.6, "answers": {"pick": {"choice": "取消", "probabilities": {"空调（客厅）": 0.0032, "空调（卧室）": 0.0032, "取消": 0.9857, "重新理解": 0.0079}}}}
+{"id": "smart-home-continuation/966ab6d5354b", "ms": 261.5, "answers": {"pick": {"choice": "空调（卧室）", "probabilities": {"空调（客厅）": 0.0018, "空调（卧室）": 0.9935, "取消": 0.0018, "重新理解": 0.003}}}}
+{"id": "smart-home-continuation/39fd653d84ce", "ms": 265.2, "answers": {"pick": {"choice": "空调（客厅）", "probabilities": {"空调（客厅）": 0.6035, "空调（卧室）": 0.3771, "取消": 0.0072, "重新理解": 0.0121}}}}
+{"id": "smart-home-continuation/14102badaa8a", "ms": 263.1, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.0027, "狗粮喂食器": 0.9901, "取消": 0.0015, "重新理解": 0.0057}}}}
+{"id": "smart-home-continuation/a01bb8a58b50", "ms": 262.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.014, "狗粮喂食器": 0.0456, "取消": 0.0042, "重新理解": 0.9363}}}}
+{"id": "smart-home-continuation/097fa5a21b9d", "ms": 261.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0107, "猫粮喂食器": 0.009, "取消": 0.0135, "重新理解": 0.9668}}}}
+{"id": "smart-home-continuation/65125b5a9bed", "ms": 259.8, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.0156, "猫粮喂食器": 0.976, "取消": 0.0036, "重新理解": 0.0047}}}}
+{"id": "smart-home-continuation/145d11718b8b", "ms": 260.6, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.0191, "狗粮喂食器": 0.9724, "取消": 0.0037, "重新理解": 0.0048}}}}
+{"id": "smart-home-continuation/e44572197d90", "ms": 259.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0022, "老人房灯": 0.0019, "取消": 0.0019, "重新理解": 0.994}}}}
+{"id": "smart-home-continuation/681f305e2445", "ms": 269.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0016, "关闭或停止": 0.0004, "调高或增大": 0.0008, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0003, "重新理解": 0.9966}}}}
+{"id": "smart-home-continuation/44a18b24cba6", "ms": 281.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0004, "关闭或停止": 0.0006, "调高或增大": 0.0003, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0004, "重新理解": 0.9979}}}}
+{"id": "smart-home-continuation/eef488a8261c", "ms": 281.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.1311, "狗粮喂食器": 0.0144, "取消": 0.0057, "重新理解": 0.8488}}}}
+{"id": "smart-home-continuation/b9da832e10bc", "ms": 281.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0033, "狗粮喂食器": 0.0029, "取消": 0.0073, "重新理解": 0.9865}}}}
+{"id": "smart-home-continuation/819bf487d2d4", "ms": 282.2, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.0009, "调高或增大": 0.9944, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0011, "重新理解": 0.0016}}}}
+{"id": "smart-home-continuation/e12c8a8f1e77", "ms": 280.9, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0045, "关闭或停止": 0.9828, "设为指定的数值或模式": 0.0051, "重新理解": 0.0076}}}}
+{"id": "smart-home-continuation/1f27b0e7384d", "ms": 272.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.0029, "设为指定的数值或模式": 0.0088, "重新理解": 0.9853}}}}
+{"id": "smart-home-continuation/005342f2ae4a", "ms": 260.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0019, "关闭或停止": 0.0019, "设为指定的数值或模式": 0.0026, "重新理解": 0.9936}}}}
+{"id": "smart-home-continuation/2f29b2828a71", "ms": 266.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0095, "卧室空调": 0.0041, "取消": 0.0021, "重新理解": 0.9843}}}}
+{"id": "smart-home-continuation/f48880957d6a", "ms": 278.6, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0101, "卧室空调": 0.9821, "取消": 0.0035, "重新理解": 0.0042}}}}
+{"id": "smart-home-continuation/b9980ce010bb", "ms": 262.6, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0143, "客厅空调": 0.978, "取消": 0.0037, "重新理解": 0.0041}}}}
+{"id": "smart-home-continuation/80ecee1a2a22", "ms": 265.6, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0015, "卧室空调": 0.9945, "取消": 0.0013, "重新理解": 0.0026}}}}
+{"id": "smart-home-continuation/17beb7cae93f", "ms": 272.8, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.8757, "床边夜灯": 0.0286, "取消": 0.0185, "重新理解": 0.0772}}}}
+{"id": "smart-home-continuation/ef4b3e47435b", "ms": 272.9, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"床边夜灯": 0.9494, "客厅灯": 0.0054, "取消": 0.0131, "重新理解": 0.0322}}}}
+{"id": "smart-home-continuation/28057b3a8ce9", "ms": 279.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0169, "关闭或停止": 0.0016, "暂停": 0.0012, "重新理解": 0.9803}}}}
+{"id": "smart-home-continuation/b7a80fda03bc", "ms": 281.9, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9906, "关闭或停止": 0.0037, "暂停": 0.0026, "重新理解": 0.0031}}}}
+{"id": "smart-home-continuation/49327a24681a", "ms": 283.0, "answers": {"pick": {"choice": "取消", "probabilities": {"过道感应灯": 0.0043, "院子灯": 0.004, "取消": 0.9766, "重新理解": 0.0151}}}}
+{"id": "smart-home-continuation/882319d515f7", "ms": 275.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"过道感应灯": 0.0025, "院子灯": 0.0023, "取消": 0.0036, "重新理解": 0.9916}}}}
+{"id": "smart-home-continuation/58caf9f92967", "ms": 264.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"过道感应灯": 0.0043, "院子灯": 0.0041, "取消": 0.0275, "重新理解": 0.9642}}}}
+{"id": "smart-home-continuation/0dcbbb799eb3", "ms": 263.3, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0055, "关闭或停止": 0.9798, "暂停": 0.0065, "重新理解": 0.0081}}}}
+{"id": "smart-home-continuation/9acbd7fa3a8e", "ms": 260.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.002, "关闭或停止": 0.0026, "暂停": 0.0017, "重新理解": 0.9937}}}}
+{"id": "smart-home-continuation/2a4aa5f1d2a0", "ms": 262.3, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9885, "关闭或停止": 0.0043, "暂停": 0.0034, "重新理解": 0.0038}}}}
+{"id": "smart-home-continuation/b75f11c11087", "ms": 260.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0103, "关闭或停止": 0.0018, "暂停": 0.0014, "重新理解": 0.9866}}}}
+{"id": "smart-home-continuation/a9f4187f1fe2", "ms": 265.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0024, "关闭或停止": 0.0029, "暂停": 0.0013, "重新理解": 0.9934}}}}
+{"id": "smart-home-continuation/0822150f3791", "ms": 277.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0035, "关闭或停止": 0.0041, "暂停": 0.0031, "重新理解": 0.9892}}}}
+{"id": "smart-home-continuation/b1f23712874d", "ms": 277.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0109, "关闭或停止": 0.0038, "暂停": 0.0013, "重新理解": 0.984}}}}
+{"id": "smart-home-continuation/dde1d8844477", "ms": 270.4, "answers": {"pick": {"choice": "自动喂食器（阳台）", "probabilities": {"自动喂食器（阳台）": 0.9932, "自动喂食器（客厅）": 0.0016, "取消": 0.0014, "重新理解": 0.0038}}}}
+{"id": "smart-home-continuation/401833a3f3b5", "ms": 262.1, "answers": {"pick": {"choice": "取消", "probabilities": {"自动喂食器（阳台）": 0.0043, "自动喂食器（客厅）": 0.0045, "取消": 0.9852, "重新理解": 0.006}}}}
+{"id": "smart-home-continuation/8abe79fa2f74", "ms": 268.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"自动喂食器（阳台）": 0.0041, "自动喂食器（客厅）": 0.0036, "取消": 0.0039, "重新理解": 0.9883}}}}
+{"id": "smart-home-continuation/0600bf2340cb", "ms": 273.0, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0034, "关闭或停止": 0.9911, "重新理解": 0.0055}}}}
+{"id": "smart-home-continuation/07420b7015e6", "ms": 267.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0037, "关闭或停止": 0.0023, "重新理解": 0.994}}}}
+{"id": "smart-home-continuation/9492b27df72b", "ms": 279.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0017, "关闭或停止": 0.002, "暂停": 0.0025, "重新理解": 0.9938}}}}
+{"id": "smart-home-continuation/f2339fc11be7", "ms": 271.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0028, "关闭或停止": 0.0089, "暂停": 0.011, "重新理解": 0.9772}}}}
+{"id": "smart-home-continuation/d5cfd70c7c45", "ms": 261.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0013, "关闭或停止": 0.0015, "设为指定的数值或模式": 0.0016, "重新理解": 0.9956}}}}
+{"id": "smart-home-continuation/9a00a06450bd", "ms": 262.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0017, "关闭或停止": 0.0027, "设为指定的数值或模式": 0.0031, "重新理解": 0.9925}}}}
+{"id": "smart-home-continuation/0b8e727b0c33", "ms": 263.8, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"老人房灯": 0.0025, "走廊夜灯": 0.0022, "客厅灯": 0.991, "取消": 0.0016, "重新理解": 0.0026}}}}
+{"id": "smart-home-continuation/320f75769670", "ms": 260.9, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"老人房灯": 0.9945, "走廊夜灯": 0.0013, "客厅灯": 0.0013, "取消": 0.0014, "重新理解": 0.0015}}}}
+{"id": "smart-home-continuation/5c4da8b4762b", "ms": 262.6, "answers": {"pick": {"choice": "取消", "probabilities": {"狗粮喂食器": 0.0042, "猫粮喂食器": 0.0058, "取消": 0.9837, "重新理解": 0.0063}}}}
+{"id": "smart-home-continuation/a1aa8ac52c8f", "ms": 272.5, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"狗粮喂食器": 0.9948, "猫粮喂食器": 0.0016, "取消": 0.0012, "重新理解": 0.0024}}}}
+{"id": "smart-home-continuation/f631231b8b31", "ms": 284.9, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.0007, "调高或增大": 0.9943, "调低或减小": 0.0027, "设为指定的数值或模式": 0.0008, "重新理解": 0.0007}}}}
+{"id": "smart-home-continuation/084220e13c83", "ms": 284.2, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.965, "卧室空调": 0.0024, "取消": 0.0023, "重新理解": 0.0304}}}}
+{"id": "smart-home-continuation/10243f9c31be", "ms": 282.8, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅空调": 0.003, "卧室空调": 0.0035, "取消": 0.9895, "重新理解": 0.004}}}}
+{"id": "smart-home-continuation/4807f3f1c748", "ms": 283.9, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"客厅灯": 0.0043, "过道感应灯": 0.1055, "院子灯": 0.0587, "卧室灯": 0.8301, "取消": 0.0006, "重新理解": 0.0007}}}}
+{"id": "smart-home-continuation/c91018793fe3", "ms": 281.9, "answers": {"pick": {"choice": "院子灯", "probabilities": {"卧室灯": 0.005, "客厅灯": 0.0862, "过道感应灯": 0.2075, "院子灯": 0.7, "取消": 0.0006, "重新理解": 0.0007}}}}
+{"id": "smart-home-continuation/44ce8ace2406", "ms": 281.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0003, "过道感应灯": 0.0003, "院子灯": 0.0003, "卧室灯": 0.0003, "取消": 0.0003, "重新理解": 0.9985}}}}
+{"id": "smart-home-continuation/3d781f2f066c", "ms": 279.1, "answers": {"pick": {"choice": "过道感应灯", "probabilities": {"客厅灯": 0.0003, "过道感应灯": 0.9984, "院子灯": 0.0003, "卧室灯": 0.0003, "取消": 0.0003, "重新理解": 0.0004}}}}
+{"id": "smart-home-continuation/039d39737961", "ms": 279.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0012, "厨房灯": 0.001, "院子灯": 0.0023, "卧室灯": 0.0009, "取消": 0.0009, "重新理解": 0.9937}}}}
+{"id": "smart-home-continuation/8a8decb9e8f0", "ms": 278.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0021, "关闭或停止": 0.006, "设为指定的数值或模式": 0.0019, "重新理解": 0.99}}}}
+{"id": "smart-home-continuation/0f36e49cd6e6", "ms": 279.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0017, "关闭或停止": 0.0026, "调高或增大": 0.0014, "调低或减小": 0.0013, "设为指定的数值或模式": 0.0046, "重新理解": 0.9884}}}}
+{"id": "smart-home-continuation/aae8f4ab0033", "ms": 278.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0003, "关闭或停止": 0.0005, "调高或增大": 0.0003, "调低或减小": 0.0091, "设为指定的数值或模式": 0.0005, "重新理解": 0.9892}}}}
+{"id": "smart-home-continuation/3708f758eced", "ms": 278.7, "answers": {"pick": {"choice": "过道感应灯", "probabilities": {"卧室灯": 0.0034, "过道感应灯": 0.9838, "取消": 0.0031, "重新理解": 0.0097}}}}
+{"id": "smart-home-continuation/e559a2167eaa", "ms": 278.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"空调（客厅）": 0.006, "空调（卧室）": 0.0051, "取消": 0.0032, "重新理解": 0.9857}}}}
+{"id": "smart-home-continuation/a000ca937b2b", "ms": 278.0, "answers": {"pick": {"choice": "空调（客厅）", "probabilities": {"空调（客厅）": 0.7471, "空调（卧室）": 0.2384, "取消": 0.0035, "重新理解": 0.011}}}}
+{"id": "smart-home-continuation/2c18bd51344c", "ms": 280.4, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9972, "关闭或停止": 0.0005, "调高或增大": 0.0005, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0005, "重新理解": 0.0008}}}}
+{"id": "smart-home-continuation/7ea3640ace27", "ms": 278.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0076, "关闭或停止": 0.0004, "调高或增大": 0.0003, "调低或减小": 0.0003, "设为指定的数值或模式": 0.0004, "重新理解": 0.991}}}}
+{"id": "smart-home-continuation/122693fb67da", "ms": 279.6, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"床边夜灯": 0.0004, "老人房灯": 0.0004, "走廊夜灯": 0.9948, "客厅灯": 0.0016, "取消": 0.0004, "重新理解": 0.0024}}}}
+{"id": "smart-home-continuation/cd32e5b574cb", "ms": 282.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.001, "老人房灯": 0.0009, "走廊夜灯": 0.0006, "客厅灯": 0.0032, "取消": 0.0006, "重新理解": 0.9938}}}}
+{"id": "smart-home-continuation/ff103e67011d", "ms": 282.7, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"床边夜灯": 0.9344, "老人房灯": 0.0484, "走廊夜灯": 0.0036, "客厅灯": 0.0088, "取消": 0.0008, "重新理解": 0.004}}}}
+{"id": "smart-home-continuation/a421ffe02df3", "ms": 278.4, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"老人房灯": 0.9637, "走廊夜灯": 0.0188, "床边夜灯": 0.0108, "客厅灯": 0.0033, "取消": 0.0007, "重新理解": 0.0027}}}}
+{"id": "smart-home-continuation/d95fc9a64f5b", "ms": 271.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0152, "关闭或停止": 0.0063, "设为指定的数值或模式": 0.0044, "重新理解": 0.9741}}}}
+{"id": "smart-home-continuation/8b5ac993ecd0", "ms": 281.7, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0036, "关闭或停止": 0.9874, "设为指定的数值或模式": 0.0047, "重新理解": 0.0042}}}}
+{"id": "smart-home-continuation/c5b91cee563a", "ms": 284.0, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"客厅灯": 0.0019, "床边夜灯": 0.987, "老人房灯": 0.0049, "取消": 0.0013, "重新理解": 0.0049}}}}
+{"id": "smart-home-continuation/d7e1b244cdef", "ms": 278.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0019, "床边夜灯": 0.0018, "老人房灯": 0.0018, "取消": 0.0046, "重新理解": 0.9899}}}}
+{"id": "smart-home-continuation/5a284d290733", "ms": 276.1, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.9658, "客厅空调": 0.0258, "取消": 0.0029, "重新理解": 0.0056}}}}
+{"id": "smart-home-continuation/e1cd1042b20d", "ms": 276.8, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9649, "卧室空调": 0.0264, "取消": 0.0028, "重新理解": 0.0058}}}}
+{"id": "smart-home-continuation/fc451ce78136", "ms": 276.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0026, "客厅空调": 0.0079, "取消": 0.0022, "重新理解": 0.9873}}}}
+{"id": "smart-home-continuation/ed652147bb7b", "ms": 279.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0048, "客厅空调": 0.0032, "取消": 0.0349, "重新理解": 0.9571}}}}
+{"id": "smart-home-continuation/411bbb1c747c", "ms": 280.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0018, "客厅空调": 0.0018, "取消": 0.0021, "重新理解": 0.9943}}}}
+{"id": "smart-home-continuation/a31fdc7f8dec", "ms": 280.3, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0035, "客厅空调": 0.9365, "取消": 0.003, "重新理解": 0.0569}}}}
+{"id": "smart-home-continuation/aabe0d97a1ea", "ms": 277.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0003, "关闭或停止": 0.0044, "调高或增大": 0.0003, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0005, "重新理解": 0.9942}}}}
+{"id": "smart-home-continuation/c3680f3d70f1", "ms": 278.7, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0011, "关闭或停止": 0.9938, "调高或增大": 0.0013, "调低或减小": 0.0013, "设为指定的数值或模式": 0.001, "重新理解": 0.0015}}}}
+{"id": "smart-home-continuation/5d15eb7bb098", "ms": 279.8, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0012, "关闭或停止": 0.9853, "调高或增大": 0.0011, "调低或减小": 0.0013, "设为指定的数值或模式": 0.0012, "重新理解": 0.0099}}}}
+{"id": "smart-home-continuation/12d47a407f8f", "ms": 280.3, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"储藏室抽湿机": 0.0015, "客厅除湿机": 0.9932, "取消": 0.0015, "重新理解": 0.0038}}}}
+{"id": "smart-home-continuation/97512ad74f17", "ms": 279.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"储藏室抽湿机": 0.0021, "客厅除湿机": 0.0023, "取消": 0.0028, "重新理解": 0.9927}}}}
+{"id": "smart-home-continuation/04b8e35801ad", "ms": 279.1, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0006, "关闭或停止": 0.9962, "调高或增大": 0.0008, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0006, "重新理解": 0.001}}}}
+{"id": "smart-home-continuation/c87eb421b345", "ms": 280.4, "answers": {"pick": {"choice": "除湿机（客厅）", "probabilities": {"除湿机（储藏室）": 0.0033, "除湿机（客厅）": 0.9721, "取消": 0.0025, "重新理解": 0.0222}}}}
+{"id": "smart-home-continuation/e7a51426649f", "ms": 280.6, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0017, "卧室空调": 0.9947, "取消": 0.0017, "重新理解": 0.0018}}}}
+{"id": "smart-home-continuation/371d92cfcaf1", "ms": 269.9, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0092, "卧室空调": 0.7732, "取消": 0.0056, "重新理解": 0.2119}}}}
+{"id": "smart-home-continuation/ee95763fa782", "ms": 265.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.011, "卧室空调": 0.0112, "取消": 0.1384, "重新理解": 0.8394}}}}
+{"id": "smart-home-continuation/ca75d7706091", "ms": 277.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0005, "关闭或停止": 0.0014, "调高或增大": 0.0004, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0008, "重新理解": 0.9963}}}}
+{"id": "smart-home-continuation/814ddf65b935", "ms": 269.2, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9946, "关闭或停止": 0.0009, "调高或增大": 0.001, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0008, "重新理解": 0.002}}}}
+{"id": "smart-home-continuation/bbf54199656d", "ms": 271.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0004, "关闭或停止": 0.0045, "调高或增大": 0.0003, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0004, "重新理解": 0.9939}}}}
+{"id": "smart-home-continuation/58cae8b885d2", "ms": 261.8, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅空调": 0.0028, "卧室空调": 0.0029, "取消": 0.9879, "重新理解": 0.0064}}}}
+{"id": "smart-home-continuation/1ed52f889b12", "ms": 268.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0051, "卧室空调": 0.0041, "取消": 0.0038, "重新理解": 0.9871}}}}
+{"id": "smart-home-continuation/0c20f67122e7", "ms": 279.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0024, "狗粮喂食器": 0.0023, "取消": 0.0049, "重新理解": 0.9904}}}}
+{"id": "smart-home-continuation/e0954502855c", "ms": 277.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0029, "狗粮喂食器": 0.0024, "取消": 0.0311, "重新理解": 0.9635}}}}
+{"id": "smart-home-continuation/328c1f0066e9", "ms": 278.3, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.9898, "设为指定的数值或模式": 0.0035, "重新理解": 0.0036}}}}
+{"id": "smart-home-continuation/ba320204d387", "ms": 280.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0017, "关闭或停止": 0.0019, "设为指定的数值或模式": 0.0057, "重新理解": 0.9906}}}}
+{"id": "smart-home-continuation/aa9361f1b8cf", "ms": 281.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0005, "关闭或停止": 0.0027, "调高或增大": 0.0003, "调低或减小": 0.0071, "设为指定的数值或模式": 0.0004, "重新理解": 0.9889}}}}
+{"id": "smart-home-continuation/5a236af65260", "ms": 281.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0263, "关闭或停止": 0.0027, "设为指定的数值或模式": 0.0021, "重新理解": 0.9689}}}}
+{"id": "smart-home-continuation/734c2e81163b", "ms": 274.3, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.002, "客厅空调": 0.9888, "取消": 0.0018, "重新理解": 0.0074}}}}
+{"id": "smart-home-continuation/74b1e0207327", "ms": 260.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0015, "客厅空调": 0.0015, "取消": 0.0017, "重新理解": 0.9952}}}}
+{"id": "smart-home-continuation/487d828196f0", "ms": 266.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0026, "关闭或停止": 0.0037, "暂停": 0.0026, "重新理解": 0.9911}}}}
+{"id": "smart-home-continuation/d322d08e695f", "ms": 275.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0155, "关闭或停止": 0.0022, "暂停": 0.0013, "重新理解": 0.981}}}}
+{"id": "smart-home-continuation/be38ddb8bea1", "ms": 262.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0127, "关闭或停止": 0.0034, "暂停": 0.0022, "重新理解": 0.9817}}}}
+{"id": "smart-home-continuation/2d70d33d7786", "ms": 261.9, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9894, "关闭或停止": 0.0036, "暂停": 0.0033, "重新理解": 0.0036}}}}
+{"id": "smart-home-continuation/24bef9e26149", "ms": 261.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0041, "关闭或停止": 0.9835, "暂停": 0.0078, "重新理解": 0.0046}}}}
+{"id": "smart-home-continuation/927adaf8e521", "ms": 270.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0024, "关闭或停止": 0.0047, "暂停": 0.0015, "重新理解": 0.9914}}}}
+{"id": "smart-home-continuation/96af41d52b9d", "ms": 273.4, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0039, "关闭或停止": 0.987, "暂停": 0.0039, "重新理解": 0.0052}}}}
+{"id": "smart-home-continuation/f5bffb07371d", "ms": 271.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0013, "过道感应灯": 0.001, "院子灯": 0.0005, "客厅灯": 0.0005, "取消": 0.0005, "重新理解": 0.9962}}}}
+{"id": "smart-home-continuation/c3f473e70915", "ms": 281.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0006, "过道感应灯": 0.0011, "院子灯": 0.0004, "客厅灯": 0.0004, "取消": 0.0004, "重新理解": 0.9972}}}}
+{"id": "smart-home-continuation/0af211e5da7d", "ms": 281.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0024, "卧室空调": 0.0025, "取消": 0.0033, "重新理解": 0.9919}}}}
+{"id": "smart-home-continuation/9ab319454df5", "ms": 277.2, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9812, "卧室空调": 0.0112, "取消": 0.0028, "重新理解": 0.0048}}}}
+{"id": "smart-home-continuation/e8297d926620", "ms": 261.9, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.9837, "客厅空调": 0.0094, "取消": 0.0027, "重新理解": 0.0043}}}}
+{"id": "smart-home-continuation/efd8d41267ff", "ms": 263.8, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅空调": 0.0029, "卧室空调": 0.0031, "取消": 0.983, "重新理解": 0.011}}}}
+{"id": "smart-home-continuation/671e37cb350a", "ms": 266.4, "answers": {"pick": {"choice": "厨房灯", "probabilities": {"卧室灯": 0.0031, "过道感应灯": 0.0066, "厨房灯": 0.9604, "取消": 0.0029, "重新理解": 0.0269}}}}
+{"id": "smart-home-continuation/dd3de8fb9f8b", "ms": 279.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0045, "过道感应灯": 0.0045, "院子灯": 0.0043, "取消": 0.0044, "重新理解": 0.9823}}}}
+{"id": "smart-home-continuation/215e9fa1c9fb", "ms": 278.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0054, "过道感应灯": 0.0047, "厨房灯": 0.0047, "取消": 0.0038, "重新理解": 0.9814}}}}
+{"id": "smart-home-continuation/7164d76e749a", "ms": 269.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0013, "过道感应灯": 0.0013, "厨房灯": 0.0013, "取消": 0.0017, "重新理解": 0.9943}}}}
+{"id": "smart-home-continuation/ce44c465b5a9", "ms": 260.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0019, "关闭或停止": 0.0019, "暂停": 0.0018, "重新理解": 0.9944}}}}
+{"id": "smart-home-continuation/82ccacde63d7", "ms": 259.5, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9868, "关闭或停止": 0.0047, "暂停": 0.0035, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/2927d310f2f8", "ms": 260.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0126, "关闭或停止": 0.0022, "暂停": 0.0015, "重新理解": 0.9837}}}}
+{"id": "smart-home-continuation/2e66eccfeb29", "ms": 260.8, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9942, "关闭或停止": 0.0009, "调高或增大": 0.0011, "调低或减小": 0.0008, "设为指定的数值或模式": 0.0009, "重新理解": 0.0022}}}}
+{"id": "smart-home-continuation/7625c2714109", "ms": 261.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0003, "关闭或停止": 0.0004, "调高或增大": 0.0003, "调低或减小": 0.0003, "设为指定的数值或模式": 0.0003, "重新理解": 0.9985}}}}
+{"id": "smart-home-continuation/857b3fbafbe7", "ms": 261.0, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.9953, "调高或增大": 0.001, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0009, "重新理解": 0.0011}}}}
+{"id": "smart-home-continuation/eea1de0b4391", "ms": 261.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0011, "关闭或停止": 0.001, "调高或增大": 0.0008, "调低或减小": 0.0012, "设为指定的数值或模式": 0.0029, "重新理解": 0.9929}}}}
+{"id": "smart-home-continuation/0f4ec0f748de", "ms": 261.7, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"卧室灯": 0.964, "客厅灯": 0.0049, "取消": 0.0107, "重新理解": 0.0205}}}}
+{"id": "smart-home-continuation/72422fa807c4", "ms": 261.4, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9452, "卧室灯": 0.0151, "取消": 0.0108, "重新理解": 0.0289}}}}
+{"id": "smart-home-continuation/89161a265bcf", "ms": 261.0, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.0021, "客厅灯": 0.9926, "取消": 0.0019, "重新理解": 0.0034}}}}
+{"id": "smart-home-continuation/28c4ec2dd11d", "ms": 260.7, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"床边夜灯": 0.008, "老人房灯": 0.9863, "取消": 0.0017, "重新理解": 0.004}}}}
+{"id": "smart-home-continuation/b23a0ffbed78", "ms": 261.1, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"床边夜灯": 0.9477, "走廊夜灯": 0.0025, "取消": 0.0027, "重新理解": 0.0471}}}}
+{"id": "smart-home-continuation/f421e796138f", "ms": 260.9, "answers": {"pick": {"choice": "取消", "probabilities": {"床边夜灯": 0.0026, "老人房灯": 0.0026, "取消": 0.9898, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/80d186b4949d", "ms": 261.9, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.0015, "猫粮喂食器": 0.9917, "取消": 0.0014, "重新理解": 0.0054}}}}
+{"id": "smart-home-continuation/7f5a76723a9d", "ms": 261.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0029, "猫粮喂食器": 0.0028, "取消": 0.0039, "重新理解": 0.9905}}}}
+{"id": "smart-home-continuation/bc810c530367", "ms": 264.3, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"狗粮喂食器": 0.9949, "猫粮喂食器": 0.0012, "取消": 0.0012, "重新理解": 0.0027}}}}
+{"id": "smart-home-continuation/f9f26cc9b540", "ms": 262.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.4037, "狗粮喂食器": 0.0156, "取消": 0.0055, "重新理解": 0.5752}}}}
+{"id": "smart-home-continuation/932e3036328b", "ms": 263.3, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.002, "狗粮喂食器": 0.9921, "取消": 0.0016, "重新理解": 0.0043}}}}
+{"id": "smart-home-continuation/a10617911cc8", "ms": 261.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0009, "过道感应灯": 0.0009, "卧室灯": 0.0009, "客厅灯": 0.0009, "取消": 0.0009, "重新理解": 0.9956}}}}
+{"id": "smart-home-continuation/8965a5b22039", "ms": 261.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"猫粮喂食器": 0.0044, "狗粮喂食器": 0.0255, "取消": 0.0049, "重新理解": 0.9652}}}}
+{"id": "smart-home-continuation/d52290a1bafc", "ms": 261.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"储藏室抽湿机": 0.4726, "客厅除湿机": 0.0014, "取消": 0.0013, "重新理解": 0.5247}}}}
+{"id": "smart-home-continuation/7a14b05e7469", "ms": 261.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0033, "老人房灯": 0.0032, "走廊夜灯": 0.0033, "取消": 0.0032, "重新理解": 0.987}}}}
+{"id": "smart-home-continuation/e82c72f0f521", "ms": 261.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0027, "老人房灯": 0.0027, "走廊夜灯": 0.0026, "取消": 0.003, "重新理解": 0.989}}}}
+{"id": "smart-home-continuation/e5cd21e53181", "ms": 261.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0035, "卧室空调": 0.0154, "取消": 0.0033, "重新理解": 0.9779}}}}
+{"id": "smart-home-continuation/534337273334", "ms": 261.1, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅灯": 0.0045, "走廊夜灯": 0.0058, "取消": 0.9683, "重新理解": 0.0214}}}}
+{"id": "smart-home-continuation/3a5cfc62763f", "ms": 261.4, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"客厅灯": 0.0028, "走廊夜灯": 0.9879, "取消": 0.0025, "重新理解": 0.0069}}}}
+{"id": "smart-home-continuation/9c0839d255f2", "ms": 261.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0026, "床边夜灯": 0.0024, "取消": 0.0029, "重新理解": 0.9921}}}}
+{"id": "smart-home-continuation/2698fb8f4727", "ms": 261.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0033, "走廊夜灯": 0.0036, "取消": 0.0038, "重新理解": 0.9893}}}}
+{"id": "smart-home-continuation/6466287bbfd8", "ms": 261.6, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0035, "床边夜灯": 0.0039, "取消": 0.9863, "重新理解": 0.0063}}}}
+{"id": "smart-home-continuation/65f42c0f7a7c", "ms": 270.2, "answers": {"follow": {"choice": "暂停", "probabilities": {"打开或启动": 0.0053, "关闭或停止": 0.041, "暂停": 0.9135, "重新理解": 0.0402}}}}
+{"id": "smart-home-continuation/b958ee86d31c", "ms": 282.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0034, "关闭或停止": 0.0028, "暂停": 0.0016, "重新理解": 0.9922}}}}
+{"id": "smart-home-continuation/9da22912c22d", "ms": 280.9, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0039, "关闭或停止": 0.9878, "暂停": 0.0037, "重新理解": 0.0046}}}}
+{"id": "smart-home-continuation/ac66155876a9", "ms": 280.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0024, "关闭或停止": 0.0016, "设为指定的数值或模式": 0.0018, "重新理解": 0.9942}}}}
+{"id": "smart-home-continuation/6a7eba1c6518", "ms": 282.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0022, "关闭或停止": 0.0035, "设为指定的数值或模式": 0.0022, "重新理解": 0.9921}}}}
+{"id": "smart-home-continuation/4f447cdd9887", "ms": 273.6, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0067, "关闭或停止": 0.0043, "设为指定的数值或模式": 0.9716, "重新理解": 0.0174}}}}
+{"id": "smart-home-continuation/a9d7e9fbccbe", "ms": 267.2, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.994, "关闭或停止": 0.0031, "重新理解": 0.0029}}}}
+{"id": "smart-home-continuation/28362474754e", "ms": 273.0, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0347, "关闭或停止": 0.6875, "重新理解": 0.2778}}}}
+{"id": "smart-home-continuation/6cc6eb0369e5", "ms": 269.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0257, "关闭或停止": 0.0103, "重新理解": 0.964}}}}
+{"id": "smart-home-continuation/e99b32622b98", "ms": 267.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0037, "关闭或停止": 0.0069, "设为指定的数值或模式": 0.0018, "重新理解": 0.9876}}}}
+{"id": "smart-home-continuation/13fa553692c9", "ms": 267.3, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.0047, "客厅灯": 0.9823, "取消": 0.003, "重新理解": 0.01}}}}
+{"id": "smart-home-continuation/6a7e5f0c2bd8", "ms": 274.4, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0011, "关闭或停止": 0.991, "调高或增大": 0.0012, "调低或减小": 0.0013, "设为指定的数值或模式": 0.0012, "重新理解": 0.0042}}}}
+{"id": "smart-home-continuation/2b2670294906", "ms": 262.8, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0036, "关闭或停止": 0.99, "重新理解": 0.0064}}}}
+{"id": "smart-home-continuation/3602e9ad33fd", "ms": 263.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0139, "关闭或停止": 0.0022, "重新理解": 0.9838}}}}
+{"id": "smart-home-continuation/01ccf1979465", "ms": 272.4, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.0009, "调高或增大": 0.0008, "调低或减小": 0.0232, "设为指定的数值或模式": 0.9725, "重新理解": 0.0017}}}}
+{"id": "smart-home-continuation/29bf38c4d3e4", "ms": 274.6, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0006, "关闭或停止": 0.001, "调高或增大": 0.0006, "调低或减小": 0.0218, "设为指定的数值或模式": 0.0008, "重新理解": 0.9752}}}}
+{"id": "smart-home-continuation/81bbed34e995", "ms": 270.9, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.9916, "调高或增大": 0.0011, "调低或减小": 0.0042, "设为指定的数值或模式": 0.001, "重新理解": 0.0013}}}}
+{"id": "smart-home-continuation/4198d1405a37", "ms": 283.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0048, "客厅灯": 0.005, "取消": 0.0043, "重新理解": 0.9859}}}}
+{"id": "smart-home-continuation/3b3d752c4f8c", "ms": 275.0, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室灯": 0.0034, "客厅灯": 0.0041, "取消": 0.9843, "重新理解": 0.0082}}}}
+{"id": "smart-home-continuation/261eac262fd3", "ms": 269.9, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.0042, "客厅灯": 0.975, "取消": 0.0031, "重新理解": 0.0177}}}}
+{"id": "smart-home-continuation/cbc342beac2c", "ms": 282.3, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"老人房灯": 0.0049, "床边夜灯": 0.0051, "客厅灯": 0.9674, "取消": 0.0033, "重新理解": 0.0193}}}}
+{"id": "smart-home-continuation/3fcf0d99cf14", "ms": 284.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0029, "床边夜灯": 0.0027, "走廊夜灯": 0.0026, "取消": 0.005, "重新理解": 0.9868}}}}
+{"id": "smart-home-continuation/ab7cb6231bb0", "ms": 284.7, "answers": {"pick": {"choice": "院子灯", "probabilities": {"卧室灯": 0.0007, "院子灯": 0.9967, "过道感应灯": 0.0006, "厨房灯": 0.0006, "取消": 0.0006, "重新理解": 0.0008}}}}
+{"id": "smart-home-continuation/8ae1e30bd2d9", "ms": 283.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0006, "客厅灯": 0.0006, "过道感应灯": 0.0006, "厨房灯": 0.0006, "取消": 0.0007, "重新理解": 0.9968}}}}
+{"id": "smart-home-continuation/3d9fd0a6c8b0", "ms": 284.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0013, "院子灯": 0.001, "过道感应灯": 0.0008, "厨房灯": 0.0008, "取消": 0.0007, "重新理解": 0.9954}}}}
+{"id": "smart-home-continuation/3b069d88e40c", "ms": 283.8, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"老人房灯": 0.0038, "客厅灯": 0.9866, "取消": 0.0026, "重新理解": 0.007}}}}
+{"id": "smart-home-continuation/634d413f3778", "ms": 283.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0024, "走廊夜灯": 0.0023, "取消": 0.0027, "重新理解": 0.9925}}}}
+{"id": "smart-home-continuation/b76c25d6c1d7", "ms": 282.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0036, "客厅灯": 0.0074, "取消": 0.0025, "重新理解": 0.9865}}}}
+{"id": "smart-home-continuation/a4c61b155272", "ms": 282.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.1535, "关闭或停止": 0.0036, "暂停": 0.0031, "重新理解": 0.8398}}}}
+{"id": "smart-home-continuation/a9b824dea225", "ms": 281.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0047, "关闭或停止": 0.0142, "暂停": 0.008, "重新理解": 0.9731}}}}
+{"id": "smart-home-continuation/e9f41b1e47ad", "ms": 276.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0033, "卧室灯": 0.0032, "取消": 0.0034, "重新理解": 0.99}}}}
+{"id": "smart-home-continuation/28fa31a0376a", "ms": 264.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0028, "卧室灯": 0.0051, "取消": 0.0032, "重新理解": 0.9889}}}}
+{"id": "smart-home-continuation/3b4cd1642cec", "ms": 264.8, "answers": {"pick": {"choice": "取消", "probabilities": {"老人房灯": 0.005, "床边夜灯": 0.0067, "取消": 0.6757, "重新理解": 0.3126}}}}
+{"id": "smart-home-continuation/3a951739c4e6", "ms": 262.9, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"老人房灯": 0.0043, "床边夜灯": 0.9837, "取消": 0.0026, "重新理解": 0.0094}}}}
+{"id": "smart-home-continuation/41e1f6acfcfa", "ms": 262.2, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.0011, "调高或增大": 0.0004, "调低或减小": 0.0012, "设为指定的数值或模式": 0.0009, "重新理解": 0.9956}}}}
+{"id": "smart-home-continuation/1b19c3948918", "ms": 261.8, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.0008, "调高或增大": 0.9951, "调低或减小": 0.0011, "设为指定的数值或模式": 0.001, "重新理解": 0.001}}}}
+{"id": "smart-home-continuation/3be8380ecede", "ms": 260.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0129, "关闭或停止": 0.0026, "重新理解": 0.9845}}}}
+{"id": "smart-home-continuation/1a906f5429af", "ms": 261.3, "answers": {"pick": {"choice": "厨房灯", "probabilities": {"过道感应灯": 0.0028, "厨房灯": 0.9933, "取消": 0.0015, "重新理解": 0.0024}}}}
+{"id": "smart-home-continuation/28792d157226", "ms": 262.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"过道感应灯": 0.0025, "院子灯": 0.0023, "取消": 0.003, "重新理解": 0.9922}}}}
+{"id": "smart-home-continuation/0fd6cf0df1d2", "ms": 282.4, "answers": {"pick": {"choice": "过道感应灯", "probabilities": {"过道感应灯": 0.9894, "厨房灯": 0.0027, "取消": 0.0027, "重新理解": 0.0052}}}}
+{"id": "smart-home-continuation/4eb8f600b316", "ms": 273.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室灯": 0.0024, "厨房灯": 0.0043, "取消": 0.0029, "重新理解": 0.9904}}}}
+{"id": "smart-home-continuation/8b0877434740", "ms": 261.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0029, "走廊夜灯": 0.0025, "取消": 0.0038, "重新理解": 0.9908}}}}
+{"id": "smart-home-continuation/5361c64e88a6", "ms": 262.1, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"床边夜灯": 0.0034, "走廊夜灯": 0.9764, "取消": 0.0033, "重新理解": 0.0168}}}}
+{"id": "smart-home-continuation/306bcfdf9ce1", "ms": 270.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0037, "客厅灯": 0.0038, "取消": 0.0037, "重新理解": 0.9888}}}}
+{"id": "smart-home-continuation/89e3b91077e2", "ms": 283.2, "answers": {"pick": {"choice": "取消", "probabilities": {"床边夜灯": 0.0081, "走廊夜灯": 0.0054, "取消": 0.8989, "重新理解": 0.0876}}}}
+{"id": "smart-home-continuation/a238be50a759", "ms": 274.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0038, "卧室空调": 0.0031, "取消": 0.0139, "重新理解": 0.9792}}}}
+{"id": "smart-home-continuation/cc21589c5e5e", "ms": 262.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0096, "卧室空调": 0.0027, "取消": 0.0028, "重新理解": 0.9849}}}}
+{"id": "smart-home-continuation/c78802bb8bdc", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0016, "走廊夜灯": 0.0017, "取消": 0.0017, "重新理解": 0.995}}}}
+{"id": "smart-home-continuation/e37ebb5a1a96", "ms": 263.4, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0039, "客厅灯": 0.0041, "取消": 0.9858, "重新理解": 0.0062}}}}
+{"id": "smart-home-continuation/bc75849111b0", "ms": 270.1, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.0008, "调高或增大": 0.0029, "调低或减小": 0.0023, "设为指定的数值或模式": 0.9899, "重新理解": 0.0033}}}}
+{"id": "smart-home-continuation/ffc58d426a60", "ms": 274.0, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.9944, "调高或增大": 0.0013, "调低或减小": 0.0011, "设为指定的数值或模式": 0.0009, "重新理解": 0.0013}}}}
+{"id": "smart-home-continuation/2ab731c30f1d", "ms": 268.4, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0076, "关闭或停止": 0.0048, "设为指定的数值或模式": 0.9655, "重新理解": 0.0222}}}}
+{"id": "smart-home-continuation/4a8d6c2422cb", "ms": 279.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"储藏室抽湿机": 0.0027, "客厅除湿机": 0.0152, "取消": 0.0421, "重新理解": 0.9399}}}}
+{"id": "smart-home-continuation/d57e1078ed07", "ms": 280.9, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"储藏室抽湿机": 0.0014, "客厅除湿机": 0.9937, "取消": 0.0012, "重新理解": 0.0037}}}}
+{"id": "smart-home-continuation/37c2334320a8", "ms": 278.5, "answers": {"pick": {"choice": "取消", "probabilities": {"储藏室抽湿机": 0.0032, "客厅除湿机": 0.0034, "取消": 0.9863, "重新理解": 0.0072}}}}
+{"id": "smart-home-continuation/1d7f9a00da83", "ms": 264.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0004, "床边夜灯": 0.0004, "客厅灯": 0.0004, "走廊夜灯": 0.0007, "取消": 0.0005, "重新理解": 0.9976}}}}
+{"id": "smart-home-continuation/db06bbb75b38", "ms": 262.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"老人房灯": 0.0009, "床边夜灯": 0.001, "客厅灯": 0.0014, "走廊夜灯": 0.0014, "取消": 0.0008, "重新理解": 0.9944}}}}
+{"id": "smart-home-continuation/5bd7d93a1f40", "ms": 262.5, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"老人房灯": 0.0016, "床边夜灯": 0.959, "客厅灯": 0.0013, "走廊夜灯": 0.0013, "取消": 0.0013, "重新理解": 0.0356}}}}
+{"id": "smart-home-continuation/def75a189899", "ms": 262.5, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0042, "关闭或停止": 0.004, "设为指定的数值或模式": 0.9829, "重新理解": 0.0089}}}}
+{"id": "smart-home-continuation/f90aa0acdac5", "ms": 262.1, "answers": {"follow": {"choice": "调低或减小", "probabilities": {"打开或启动": 0.0006, "关闭或停止": 0.0007, "调高或增大": 0.0015, "调低或减小": 0.995, "设为指定的数值或模式": 0.0012, "重新理解": 0.001}}}}
+{"id": "smart-home-continuation/4863822236c7", "ms": 262.0, "answers": {"pick": {"choice": "主灯（老人房）", "probabilities": {"主灯（走廊）": 0.0022, "主灯（客厅）": 0.0022, "主灯（老人房）": 0.9876, "取消": 0.0022, "重新理解": 0.0059}}}}
+{"id": "smart-home-continuation/f1ee4e72224c", "ms": 261.7, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室空调": 0.0029, "客厅空调": 0.0034, "取消": 0.9874, "重新理解": 0.0062}}}}
+{"id": "smart-home-continuation/71e49e3b0b44", "ms": 262.1, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.9945, "客厅空调": 0.0015, "取消": 0.0015, "重新理解": 0.0025}}}}
+{"id": "smart-home-continuation/e7660a4fe54e", "ms": 262.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0048, "客厅空调": 0.0041, "取消": 0.0093, "重新理解": 0.9818}}}}
+{"id": "smart-home-continuation/63114bd19751", "ms": 262.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0025, "卧室灯": 0.0024, "取消": 0.0045, "重新理解": 0.9906}}}}
+{"id": "smart-home-continuation/eb57881e009b", "ms": 261.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0038, "卧室灯": 0.0019, "取消": 0.0019, "重新理解": 0.9924}}}}
+{"id": "smart-home-continuation/78fda0f2d1b0", "ms": 260.2, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9935, "卧室灯": 0.002, "取消": 0.0019, "重新理解": 0.0026}}}}
+{"id": "smart-home-continuation/be27a5669a29", "ms": 260.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"院子灯": 0.0026, "卧室灯": 0.0025, "取消": 0.0027, "重新理解": 0.9922}}}}
+{"id": "smart-home-continuation/bc57e7c4b0ad", "ms": 260.5, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.0089, "猫粮喂食器": 0.9827, "取消": 0.004, "重新理解": 0.0043}}}}
+{"id": "smart-home-continuation/4e927f8a569c", "ms": 259.7, "answers": {"pick": {"choice": "狗粮喂食器", "probabilities": {"猫粮喂食器": 0.0112, "狗粮喂食器": 0.98, "取消": 0.0042, "重新理解": 0.0045}}}}
+{"id": "smart-home-continuation/93efe66e22fb", "ms": 259.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0043, "猫粮喂食器": 0.0241, "取消": 0.0047, "重新理解": 0.9669}}}}
+{"id": "smart-home-continuation/528ad8226005", "ms": 266.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0098, "关闭或停止": 0.0015, "暂停": 0.0012, "重新理解": 0.9875}}}}
+{"id": "smart-home-continuation/dd6e24bfd943", "ms": 277.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0014, "关闭或停止": 0.0014, "暂停": 0.0013, "重新理解": 0.996}}}}
+{"id": "smart-home-continuation/3fbacd7b1aed", "ms": 277.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0015, "关闭或停止": 0.0022, "设为指定的数值或模式": 0.0015, "重新理解": 0.9947}}}}
+{"id": "smart-home-continuation/6b96ce7dccf8", "ms": 271.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0018, "关闭或停止": 0.0057, "设为指定的数值或模式": 0.0019, "重新理解": 0.9907}}}}
+{"id": "smart-home-continuation/f9aea730bf06", "ms": 271.4, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9905, "关闭或停止": 0.0033, "设为指定的数值或模式": 0.003, "重新理解": 0.0033}}}}
+{"id": "smart-home-continuation/6e79407d9c97", "ms": 276.1, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9974, "走廊夜灯": 0.0005, "老人房灯": 0.0004, "床边夜灯": 0.0004, "取消": 0.0004, "重新理解": 0.0008}}}}
+{"id": "smart-home-continuation/df6f27b576eb", "ms": 262.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0028, "走廊夜灯": 0.0015, "老人房灯": 0.0009, "床边夜灯": 0.0007, "取消": 0.0006, "重新理解": 0.9935}}}}
+{"id": "smart-home-continuation/aa3e48939a1d", "ms": 261.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0005, "走廊夜灯": 0.0006, "老人房灯": 0.0005, "床边夜灯": 0.0005, "取消": 0.0016, "重新理解": 0.9962}}}}
+{"id": "smart-home-continuation/101134d19585", "ms": 262.5, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"客厅灯": 0.0014, "老人房灯": 0.9926, "走廊夜灯": 0.0017, "取消": 0.0014, "重新理解": 0.0029}}}}
+{"id": "smart-home-continuation/75b131b87ca5", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0017, "老人房灯": 0.0017, "走廊夜灯": 0.0017, "取消": 0.002, "重新理解": 0.9929}}}}
+{"id": "smart-home-continuation/1aadf018a034", "ms": 268.5, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"客厅灯": 0.0529, "老人房灯": 0.8909, "走廊夜灯": 0.0481, "取消": 0.0034, "重新理解": 0.0046}}}}
+{"id": "smart-home-continuation/bf0621425cb8", "ms": 270.5, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"走廊夜灯": 0.0738, "客厅灯": 0.8708, "老人房灯": 0.0471, "取消": 0.0036, "重新理解": 0.0048}}}}
+{"id": "smart-home-continuation/c99c196ce30d", "ms": 267.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0014, "客厅空调": 0.0014, "取消": 0.0026, "重新理解": 0.9945}}}}
+{"id": "smart-home-continuation/6384507de962", "ms": 277.6, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0019, "客厅空调": 0.9941, "取消": 0.0017, "重新理解": 0.0024}}}}
+{"id": "smart-home-continuation/c4d3b336eba9", "ms": 278.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0015, "走廊夜灯": 0.0015, "取消": 0.0018, "重新理解": 0.9951}}}}
+{"id": "smart-home-continuation/f3542190072e", "ms": 281.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0048, "走廊夜灯": 0.0042, "取消": 0.0039, "重新理解": 0.9872}}}}
+{"id": "smart-home-continuation/209fc438015e", "ms": 283.6, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.9953, "调高或增大": 0.001, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0009, "重新理解": 0.0011}}}}
+{"id": "smart-home-continuation/3b9428663061", "ms": 281.0, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9887, "关闭或停止": 0.0017, "调高或增大": 0.0052, "调低或减小": 0.001, "设为指定的数值或模式": 0.0011, "重新理解": 0.0024}}}}
+{"id": "smart-home-continuation/d2657b9f9375", "ms": 279.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0005, "关闭或停止": 0.0012, "调高或增大": 0.0003, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0004, "重新理解": 0.9971}}}}
+{"id": "smart-home-continuation/b22f7aaebd1e", "ms": 272.1, "answers": {"pick": {"choice": "灯（客厅）", "probabilities": {"灯（卧室）": 0.0026, "灯（客厅）": 0.9913, "取消": 0.0023, "重新理解": 0.0038}}}}
+{"id": "smart-home-continuation/c1b747657d35", "ms": 268.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"灯（卧室）": 0.0097, "灯（客厅）": 0.0031, "取消": 0.002, "重新理解": 0.9852}}}}
+{"id": "smart-home-continuation/6379291bbdd5", "ms": 282.7, "answers": {"pick": {"choice": "取消", "probabilities": {"老人房灯": 0.001, "走廊夜灯": 0.001, "客厅灯": 0.0009, "床边夜灯": 0.0012, "取消": 0.9931, "重新理解": 0.0027}}}}
+{"id": "smart-home-continuation/94f56c45ee43", "ms": 280.4, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"老人房灯": 0.998, "走廊夜灯": 0.0004, "客厅灯": 0.0003, "床边夜灯": 0.0005, "取消": 0.0004, "重新理解": 0.0005}}}}
+{"id": "smart-home-continuation/03b51ee8bab1", "ms": 281.3, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室空调": 0.0069, "客厅空调": 0.0082, "取消": 0.9693, "重新理解": 0.0156}}}}
+{"id": "smart-home-continuation/6aa38e0aca50", "ms": 282.3, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.9959, "客厅空调": 0.0013, "取消": 0.0013, "重新理解": 0.0015}}}}
+{"id": "smart-home-continuation/bbea94fd25d6", "ms": 283.3, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.9893, "客厅空调": 0.0022, "取消": 0.002, "重新理解": 0.0065}}}}
+{"id": "smart-home-continuation/1bfd2e96a3b5", "ms": 284.5, "answers": {"pick": {"choice": "重新理解", "probabilities": {"狗粮喂食器": 0.0063, "猫粮喂食器": 0.0029, "取消": 0.0042, "重新理解": 0.9865}}}}
+{"id": "smart-home-continuation/4a6b2b391aaa", "ms": 285.2, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.0027, "猫粮喂食器": 0.9743, "取消": 0.0026, "重新理解": 0.0203}}}}
+{"id": "smart-home-continuation/9eaa96ccd558", "ms": 283.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0014, "关闭或停止": 0.0011, "调高或增大": 0.0003, "调低或减小": 0.0007, "设为指定的数值或模式": 0.0004, "重新理解": 0.9961}}}}
+{"id": "smart-home-continuation/b9dbb35cc647", "ms": 282.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0029, "关闭或停止": 0.01, "重新理解": 0.9871}}}}
+{"id": "smart-home-continuation/5a51c0231ecd", "ms": 282.7, "answers": {"follow": {"choice": "调低或减小", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.001, "调高或增大": 0.0033, "调低或减小": 0.9915, "设为指定的数值或模式": 0.0014, "重新理解": 0.0018}}}}
+{"id": "smart-home-continuation/3591b9238963", "ms": 282.7, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.001, "调高或增大": 0.0011, "调低或减小": 0.0029, "设为指定的数值或模式": 0.9924, "重新理解": 0.0017}}}}
+{"id": "smart-home-continuation/9561d3dd1fee", "ms": 280.8, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.974, "客厅空调": 0.0184, "取消": 0.0028, "重新理解": 0.0048}}}}
+{"id": "smart-home-continuation/87e1e59a41b2", "ms": 281.5, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9764, "卧室空调": 0.0159, "取消": 0.0028, "重新理解": 0.0049}}}}
+{"id": "smart-home-continuation/e4f8e3ebf894", "ms": 281.1, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室空调": 0.0025, "客厅空调": 0.0028, "取消": 0.9857, "重新理解": 0.009}}}}
+{"id": "smart-home-continuation/8b6fb97874d8", "ms": 275.4, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0008, "关闭或停止": 0.9952, "调高或增大": 0.001, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0008, "重新理解": 0.0013}}}}
+{"id": "smart-home-continuation/c30aa82a1a4e", "ms": 260.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0063, "客厅空调": 0.0015, "取消": 0.0015, "重新理解": 0.9907}}}}
+{"id": "smart-home-continuation/a2d9415a195d", "ms": 262.6, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0031, "客厅空调": 0.9806, "取消": 0.0027, "重新理解": 0.0136}}}}
+{"id": "smart-home-continuation/06311d0e8461", "ms": 268.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0093, "客厅空调": 0.0093, "取消": 0.0092, "重新理解": 0.9722}}}}
+{"id": "smart-home-continuation/1d21bface927", "ms": 275.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0016, "关闭或停止": 0.0068, "调高或增大": 0.0004, "调低或减小": 0.001, "设为指定的数值或模式": 0.0008, "重新理解": 0.9893}}}}
+{"id": "smart-home-continuation/fbcab87e3970", "ms": 269.5, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.0012, "关闭或停止": 0.001, "调高或增大": 0.0009, "调低或减小": 0.0014, "设为指定的数值或模式": 0.9923, "重新理解": 0.003}}}}
+{"id": "smart-home-continuation/297f296d63f5", "ms": 261.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.0011, "调高或增大": 0.0003, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0006, "重新理解": 0.9944}}}}
+{"id": "smart-home-continuation/9bb0383dd6f3", "ms": 259.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0133, "走廊夜灯": 0.0019, "取消": 0.002, "重新理解": 0.9828}}}}
+{"id": "smart-home-continuation/b6c85e0dc148", "ms": 260.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0846, "走廊夜灯": 0.0029, "取消": 0.0034, "重新理解": 0.9091}}}}
+{"id": "smart-home-continuation/a40859349f2d", "ms": 260.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0078, "走廊夜灯": 0.0026, "取消": 0.0022, "重新理解": 0.9873}}}}
+{"id": "smart-home-continuation/5e484c96b733", "ms": 259.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0015, "关闭或停止": 0.0015, "设为指定的数值或模式": 0.0075, "重新理解": 0.9895}}}}
+{"id": "smart-home-continuation/4ed5bd6090bf", "ms": 261.8, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0015, "关闭或停止": 0.0019, "设为指定的数值或模式": 0.0016, "重新理解": 0.995}}}}
+{"id": "smart-home-continuation/0d731bc960cc", "ms": 262.0, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.002, "客厅空调": 0.9916, "取消": 0.002, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/1417f971bf1e", "ms": 267.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.184, "卧室空调": 0.0054, "取消": 0.0044, "重新理解": 0.8062}}}}
+{"id": "smart-home-continuation/d8f5748f81f9", "ms": 268.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.003, "卧室空调": 0.0025, "取消": 0.0038, "重新理解": 0.9907}}}}
+{"id": "smart-home-continuation/e46be1ad6749", "ms": 265.2, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9869, "关闭或停止": 0.0041, "设为指定的数值或模式": 0.0036, "重新理解": 0.0054}}}}
+{"id": "smart-home-continuation/d097b764c231", "ms": 270.7, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9864, "卧室灯": 0.0027, "取消": 0.0018, "重新理解": 0.0091}}}}
+{"id": "smart-home-continuation/e9cac2c786d5", "ms": 267.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.002, "卧室灯": 0.0045, "取消": 0.0027, "重新理解": 0.9908}}}}
+{"id": "smart-home-continuation/ec74d4d3f5e4", "ms": 281.2, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9858, "卧室灯": 0.0031, "取消": 0.0019, "重新理解": 0.0091}}}}
+{"id": "smart-home-continuation/96fce8152cd7", "ms": 281.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0026, "卧室灯": 0.003, "取消": 0.0047, "重新理解": 0.9897}}}}
+{"id": "smart-home-continuation/55d23bb154e3", "ms": 281.6, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"客厅灯": 0.002, "卧室灯": 0.9932, "取消": 0.0019, "重新理解": 0.0029}}}}
+{"id": "smart-home-continuation/b37b6119eb15", "ms": 282.8, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"院子灯": 0.0015, "客厅灯": 0.1296, "卧室灯": 0.3714, "厨房灯": 0.2192, "过道感应灯": 0.2762, "取消": 0.0003, "重新理解": 0.0017}}}}
+{"id": "smart-home-continuation/cdeb89c81764", "ms": 281.7, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"卧室灯": 0.003, "厨房灯": 0.0805, "院子灯": 0.109, "过道感应灯": 0.1604, "客厅灯": 0.6443, "取消": 0.0006, "重新理解": 0.0022}}}}
+{"id": "smart-home-continuation/dca9a00b0305", "ms": 282.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"院子灯": 0.0007, "客厅灯": 0.0005, "卧室灯": 0.0004, "厨房灯": 0.0004, "过道感应灯": 0.0004, "取消": 0.0004, "重新理解": 0.9973}}}}
+{"id": "smart-home-continuation/6358af79503e", "ms": 272.5, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9779, "卧室空调": 0.0028, "取消": 0.0025, "重新理解": 0.0167}}}}
+{"id": "smart-home-continuation/7903c62427e6", "ms": 261.5, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9511, "卧室空调": 0.0026, "取消": 0.0025, "重新理解": 0.0438}}}}
+{"id": "smart-home-continuation/b6d4df1e90f0", "ms": 262.1, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.9942, "调高或增大": 0.0011, "调低或减小": 0.001, "设为指定的数值或模式": 0.0011, "重新理解": 0.0017}}}}
+{"id": "smart-home-continuation/ff0d83710f32", "ms": 262.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0004, "关闭或停止": 0.0003, "调高或增大": 0.0002, "调低或减小": 0.0002, "设为指定的数值或模式": 0.0004, "重新理解": 0.9985}}}}
+{"id": "smart-home-continuation/b4ae0b9b4f91", "ms": 261.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0077, "关闭或停止": 0.0051, "设为指定的数值或模式": 0.008, "重新理解": 0.9792}}}}
+{"id": "smart-home-continuation/a1e892e39abd", "ms": 262.3, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0043, "关闭或停止": 0.9838, "设为指定的数值或模式": 0.0056, "重新理解": 0.0063}}}}
+{"id": "smart-home-continuation/786476799c95", "ms": 260.6, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.0039, "关闭或停止": 0.9872, "设为指定的数值或模式": 0.0045, "重新理解": 0.0045}}}}
+{"id": "smart-home-continuation/a726620b9a26", "ms": 261.5, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0009, "关闭或停止": 0.0017, "调高或增大": 0.0004, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0004, "重新理解": 0.9963}}}}
+{"id": "smart-home-continuation/39508fa565fd", "ms": 261.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.0019, "调高或增大": 0.001, "调低或减小": 0.001, "设为指定的数值或模式": 0.0009, "重新理解": 0.9941}}}}
+{"id": "smart-home-continuation/8e726534f87e", "ms": 263.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅除湿机": 0.0076, "储藏室抽湿机": 0.0055, "取消": 0.0048, "重新理解": 0.9821}}}}
+{"id": "smart-home-continuation/1e3592ec9d96", "ms": 264.7, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9878, "关闭或停止": 0.0045, "设为指定的数值或模式": 0.0035, "重新理解": 0.0042}}}}
+{"id": "smart-home-continuation/b36bbf11f3ff", "ms": 264.1, "answers": {"follow": {"choice": "设为指定的数值或模式", "probabilities": {"打开或启动": 0.004, "关闭或停止": 0.0041, "设为指定的数值或模式": 0.9839, "重新理解": 0.008}}}}
+{"id": "smart-home-continuation/571383d60af3", "ms": 264.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.0027, "卧室灯": 0.0026, "取消": 0.0027, "重新理解": 0.992}}}}
+{"id": "smart-home-continuation/fbea940520ad", "ms": 262.5, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9818, "卧室空调": 0.0022, "取消": 0.0021, "重新理解": 0.0139}}}}
+{"id": "smart-home-continuation/53e15d212d87", "ms": 274.0, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅空调": 0.0037, "卧室空调": 0.004, "取消": 0.9634, "重新理解": 0.0288}}}}
+{"id": "smart-home-continuation/c52ef6286582", "ms": 261.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅灯": 0.002, "卧室灯": 0.0019, "取消": 0.0061, "重新理解": 0.9901}}}}
+{"id": "smart-home-continuation/4beef65b4efc", "ms": 267.9, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"客厅灯": 0.0026, "卧室灯": 0.9865, "取消": 0.0025, "重新理解": 0.0084}}}}
+{"id": "smart-home-continuation/cdf1a2a3f639", "ms": 282.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0045, "关闭或停止": 0.0008, "调高或增大": 0.0086, "调低或减小": 0.0004, "设为指定的数值或模式": 0.0004, "重新理解": 0.9854}}}}
+{"id": "smart-home-continuation/1e66e064687b", "ms": 284.9, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.001, "关闭或停止": 0.0057, "调高或增大": 0.0007, "调低或减小": 0.0009, "设为指定的数值或模式": 0.0006, "重新理解": 0.9911}}}}
+{"id": "smart-home-continuation/1b4b19d7233a", "ms": 285.2, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9964, "关闭或停止": 0.0006, "调高或增大": 0.001, "调低或减小": 0.0005, "设为指定的数值或模式": 0.0005, "重新理解": 0.001}}}}
+{"id": "smart-home-continuation/1aacdfe05f92", "ms": 282.4, "answers": {"pick": {"choice": "厨房灯", "probabilities": {"厨房灯": 0.9735, "卧室灯": 0.0177, "取消": 0.0028, "重新理解": 0.006}}}}
+{"id": "smart-home-continuation/fb71be1c1ecf", "ms": 281.3, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"卧室灯": 0.9736, "厨房灯": 0.0187, "取消": 0.0027, "重新理解": 0.005}}}}
+{"id": "smart-home-continuation/03202983cee9", "ms": 280.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0015, "卧室灯": 0.0018, "取消": 0.0026, "重新理解": 0.9941}}}}
+{"id": "smart-home-continuation/502813615faf", "ms": 280.9, "answers": {"pick": {"choice": "重新理解", "probabilities": {"厨房灯": 0.0018, "卧室灯": 0.0018, "取消": 0.002, "重新理解": 0.9943}}}}
+{"id": "smart-home-continuation/031e5a454198", "ms": 274.9, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9508, "关闭或停止": 0.0034, "调高或增大": 0.0023, "调低或减小": 0.0013, "设为指定的数值或模式": 0.0016, "重新理解": 0.0405}}}}
+{"id": "smart-home-continuation/8d58bfc922b9", "ms": 271.7, "answers": {"follow": {"choice": "调高或增大", "probabilities": {"打开或启动": 0.0013, "关闭或停止": 0.0009, "调高或增大": 0.9883, "调低或减小": 0.0035, "设为指定的数值或模式": 0.0033, "重新理解": 0.0027}}}}
+{"id": "smart-home-continuation/53dff45a5507", "ms": 282.8, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0091, "床边夜灯": 0.0112, "客厅灯": 0.0049, "取消": 0.9495, "重新理解": 0.0253}}}}
+{"id": "smart-home-continuation/acc9c5ba2eb4", "ms": 276.1, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"走廊夜灯": 0.9834, "床边夜灯": 0.003, "客厅灯": 0.0023, "取消": 0.0022, "重新理解": 0.0091}}}}
+{"id": "smart-home-continuation/48cb1559665e", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0057, "床边夜灯": 0.0101, "客厅灯": 0.0034, "取消": 0.0348, "重新理解": 0.946}}}}
+{"id": "smart-home-continuation/798628d1d5ec", "ms": 261.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0329, "床边夜灯": 0.0085, "取消": 0.0063, "重新理解": 0.9522}}}}
+{"id": "smart-home-continuation/0981625f5055", "ms": 259.8, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"走廊夜灯": 0.9264, "床边夜灯": 0.0634, "取消": 0.0019, "重新理解": 0.0083}}}}
+{"id": "smart-home-continuation/76236d8a35e1", "ms": 262.2, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"客厅灯": 0.0037, "床边夜灯": 0.5494, "取消": 0.003, "重新理解": 0.4439}}}}
+{"id": "smart-home-continuation/18856bc1c990", "ms": 261.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0033, "床边夜灯": 0.003, "取消": 0.0204, "重新理解": 0.9733}}}}
+{"id": "smart-home-continuation/c8b11cd41a9a", "ms": 261.4, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"走廊夜灯": 0.0017, "老人房灯": 0.9944, "取消": 0.0016, "重新理解": 0.0022}}}}
+{"id": "smart-home-continuation/757c0cc90650", "ms": 266.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0019, "客厅灯": 0.0022, "取消": 0.0029, "重新理解": 0.993}}}}
+{"id": "smart-home-continuation/46c475600ad9", "ms": 280.3, "answers": {"pick": {"choice": "老人房灯", "probabilities": {"走廊夜灯": 0.0023, "老人房灯": 0.9878, "取消": 0.0022, "重新理解": 0.0077}}}}
+{"id": "smart-home-continuation/467cc6faf199", "ms": 271.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0033, "客厅灯": 0.0036, "取消": 0.0035, "重新理解": 0.9896}}}}
+{"id": "smart-home-continuation/b59eb4112c7c", "ms": 267.7, "answers": {"pick": {"choice": "取消", "probabilities": {"狗粮喂食器": 0.0127, "猫粮喂食器": 0.0194, "取消": 0.9465, "重新理解": 0.0214}}}}
+{"id": "smart-home-continuation/4736bb3135ff", "ms": 281.4, "answers": {"pick": {"choice": "猫粮喂食器", "probabilities": {"狗粮喂食器": 0.0017, "猫粮喂食器": 0.9938, "取消": 0.0015, "重新理解": 0.003}}}}
+{"id": "smart-home-continuation/9b5fc970515c", "ms": 275.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅除湿机": 0.0018, "储藏室抽湿机": 0.0018, "取消": 0.002, "重新理解": 0.9944}}}}
+{"id": "smart-home-continuation/4b5edffc6c49", "ms": 258.8, "answers": {"pick": {"choice": "储藏室抽湿机", "probabilities": {"客厅除湿机": 0.0018, "储藏室抽湿机": 0.9899, "取消": 0.0017, "重新理解": 0.0066}}}}
+{"id": "smart-home-continuation/136d3cde93ae", "ms": 263.0, "answers": {"pick": {"choice": "客厅除湿机", "probabilities": {"客厅除湿机": 0.9849, "储藏室抽湿机": 0.003, "取消": 0.0015, "重新理解": 0.0105}}}}
+{"id": "smart-home-continuation/d6f79b237246", "ms": 258.2, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0023, "客厅空调": 0.0016, "取消": 0.0022, "重新理解": 0.9939}}}}
+{"id": "smart-home-continuation/4ac0c65eb4f0", "ms": 260.5, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"卧室空调": 0.9878, "客厅空调": 0.0024, "取消": 0.0023, "重新理解": 0.0075}}}}
+{"id": "smart-home-continuation/877d6d996b7f", "ms": 276.5, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0018, "客厅灯": 0.001, "老人房灯": 0.001, "床边夜灯": 0.0011, "取消": 0.9928, "重新理解": 0.0023}}}}
+{"id": "smart-home-continuation/9e35776da357", "ms": 280.7, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.004, "关闭或停止": 0.0014, "暂停": 0.0012, "重新理解": 0.9934}}}}
+{"id": "smart-home-continuation/6403cafd3911", "ms": 281.2, "answers": {"follow": {"choice": "暂停", "probabilities": {"打开或启动": 0.0031, "关闭或停止": 0.0111, "暂停": 0.9729, "重新理解": 0.0129}}}}
+{"id": "smart-home-continuation/e52ec295b599", "ms": 281.1, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0014, "关闭或停止": 0.0151, "暂停": 0.0011, "重新理解": 0.9824}}}}
+{"id": "smart-home-continuation/afc8a2ef42ba", "ms": 280.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.002, "卧室空调": 0.0019, "取消": 0.0022, "重新理解": 0.9939}}}}
+{"id": "smart-home-continuation/1e96d31f0d3e", "ms": 283.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.0046, "卧室空调": 0.0043, "取消": 0.0041, "重新理解": 0.987}}}}
+{"id": "smart-home-continuation/bda77039ff33", "ms": 275.0, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.8493, "卧室空调": 0.0026, "取消": 0.0025, "重新理解": 0.1456}}}}
+{"id": "smart-home-continuation/0b0cdbdaa7da", "ms": 270.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"客厅空调": 0.002, "卧室空调": 0.0018, "取消": 0.0025, "重新理解": 0.9938}}}}
+{"id": "smart-home-continuation/ca60bc10d1ce", "ms": 281.4, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"客厅空调": 0.9872, "卧室空调": 0.002, "取消": 0.0017, "重新理解": 0.0091}}}}
+{"id": "smart-home-continuation/edbe9d6ad148", "ms": 273.7, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0017, "卧室空调": 0.995, "取消": 0.0015, "重新理解": 0.0019}}}}
+{"id": "smart-home-continuation/dbe32a5c18c0", "ms": 262.2, "answers": {"follow": {"choice": "关闭或停止", "probabilities": {"打开或启动": 0.003, "关闭或停止": 0.9926, "重新理解": 0.0044}}}}
+{"id": "smart-home-continuation/0633020a4ce5", "ms": 268.4, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0034, "关闭或停止": 0.0028, "重新理解": 0.9938}}}}
+{"id": "smart-home-continuation/96326a36dd81", "ms": 282.3, "answers": {"pick": {"choice": "卧室空调", "probabilities": {"客厅空调": 0.0037, "卧室空调": 0.9773, "取消": 0.0029, "重新理解": 0.0161}}}}
+{"id": "smart-home-continuation/f1a63ea80ebc", "ms": 271.8, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0046, "客厅灯": 0.004, "床边夜灯": 0.0039, "取消": 0.0037, "重新理解": 0.9838}}}}
+{"id": "smart-home-continuation/eea5f4e57a1c", "ms": 267.7, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.053, "客厅灯": 0.0023, "床边夜灯": 0.0037, "取消": 0.0043, "重新理解": 0.9367}}}}
+{"id": "smart-home-continuation/4ba45b6aaeac", "ms": 282.7, "answers": {"pick": {"choice": "取消", "probabilities": {"走廊夜灯": 0.0045, "床边夜灯": 0.0046, "客厅灯": 0.0036, "取消": 0.9807, "重新理解": 0.0067}}}}
+{"id": "smart-home-continuation/8757797fab51", "ms": 281.6, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0022, "床边夜灯": 0.0022, "客厅灯": 0.0022, "取消": 0.0026, "重新理解": 0.9908}}}}
+{"id": "smart-home-continuation/cb8dde76a154", "ms": 281.1, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0089, "床边夜灯": 0.0062, "客厅灯": 0.0068, "取消": 0.0061, "重新理解": 0.972}}}}
+{"id": "smart-home-continuation/d67fe742e191", "ms": 282.3, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0446, "关闭或停止": 0.0012, "调高或增大": 0.0011, "调低或减小": 0.001, "设为指定的数值或模式": 0.001, "重新理解": 0.951}}}}
+{"id": "smart-home-continuation/db19c609a315", "ms": 281.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"自动喂食器（客厅）": 0.0353, "自动喂食器（阳台）": 0.0031, "取消": 0.002, "重新理解": 0.9597}}}}
+{"id": "smart-home-continuation/f7ba20b4bab2", "ms": 281.9, "answers": {"pick": {"choice": "卧室灯", "probabilities": {"客厅灯": 0.0023, "卧室灯": 0.9911, "取消": 0.0019, "重新理解": 0.0046}}}}
+{"id": "smart-home-continuation/a83e502c9e36", "ms": 282.3, "answers": {"pick": {"choice": "取消", "probabilities": {"客厅灯": 0.0045, "卧室灯": 0.0045, "取消": 0.9815, "重新理解": 0.0095}}}}
+{"id": "smart-home-continuation/8db510be55ff", "ms": 274.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"床边夜灯": 0.0055, "客厅灯": 0.0104, "取消": 0.1161, "重新理解": 0.868}}}}
+{"id": "smart-home-continuation/d915669b4ebe", "ms": 260.8, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"床边夜灯": 0.0248, "客厅灯": 0.9674, "取消": 0.0037, "重新理解": 0.004}}}}
+{"id": "smart-home-continuation/bb706873943f", "ms": 269.8, "answers": {"pick": {"choice": "床边夜灯", "probabilities": {"客厅灯": 0.0108, "床边夜灯": 0.9826, "取消": 0.0031, "重新理解": 0.0035}}}}
+{"id": "smart-home-continuation/084f17ae063f", "ms": 283.3, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.001, "床边夜灯": 0.0007, "客厅灯": 0.0007, "老人房灯": 0.003, "取消": 0.0009, "重新理解": 0.9937}}}}
+{"id": "smart-home-continuation/c1ebbc1d02fe", "ms": 276.3, "answers": {"pick": {"choice": "走廊夜灯", "probabilities": {"走廊夜灯": 0.9594, "床边夜灯": 0.0209, "客厅灯": 0.0052, "老人房灯": 0.0086, "取消": 0.0011, "重新理解": 0.0049}}}}
+{"id": "smart-home-continuation/b3f6c092c4a0", "ms": 262.4, "answers": {"pick": {"choice": "客厅灯", "probabilities": {"客厅灯": 0.9788, "走廊夜灯": 0.012, "床边夜灯": 0.0024, "老人房灯": 0.0028, "取消": 0.0008, "重新理解": 0.0032}}}}
+{"id": "smart-home-continuation/3365a5bf4b0d", "ms": 262.0, "answers": {"pick": {"choice": "重新理解", "probabilities": {"走廊夜灯": 0.0008, "床边夜灯": 0.0004, "客厅灯": 0.0004, "老人房灯": 0.0004, "取消": 0.0005, "重新理解": 0.9974}}}}
+{"id": "smart-home-continuation/68ce44b74e54", "ms": 261.2, "answers": {"pick": {"choice": "取消", "probabilities": {"卧室空调": 0.0054, "客厅空调": 0.0066, "取消": 0.8878, "重新理解": 0.1003}}}}
+{"id": "smart-home-continuation/06903fee36b0", "ms": 261.4, "answers": {"pick": {"choice": "重新理解", "probabilities": {"卧室空调": 0.0022, "客厅空调": 0.0022, "取消": 0.0087, "重新理解": 0.9869}}}}
+{"id": "smart-home-continuation/8c18ccc3231b", "ms": 261.8, "answers": {"pick": {"choice": "客厅空调", "probabilities": {"卧室空调": 0.0024, "客厅空调": 0.9871, "取消": 0.0022, "重新理解": 0.0083}}}}
+{"id": "smart-home-continuation/8b66dbe71f21", "ms": 260.9, "answers": {"follow": {"choice": "打开或启动", "probabilities": {"打开或启动": 0.9948, "关闭或停止": 0.0008, "调高或增大": 0.0007, "调低或减小": 0.0006, "设为指定的数值或模式": 0.0006, "重新理解": 0.0025}}}}
+{"id": "smart-home-continuation/1d24e7485763", "ms": 262.0, "answers": {"follow": {"choice": "重新理解", "probabilities": {"打开或启动": 0.0012, "关闭或停止": 0.0733, "调高或增大": 0.001, "调低或减小": 0.0022, "设为指定的数值或模式": 0.001, "重新理解": 0.9214}}}}

@@ -1,0 +1,36 @@
+{
+ "records": 1141,
+ "threshold": 0.95,
+ "executed": 300,
+ "by_kind": {
+  "正确": 299,
+  "错设备": 1
+ },
+ "wrong_total": 1,
+ "wrong": [
+  {
+   "id": "smart-home/W1-0274",
+   "kind": "错设备",
+   "utterance": "闺女到楼下了，给她开下门",
+   "gold": {
+    "intent": "控制",
+    "device": "没有对应的设备",
+    "action": "打开或启动"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.987
+    ],
+    "device": [
+     "紧急呼叫按钮",
+     0.98
+    ],
+    "action": [
+     "打开或启动",
+     0.996
+    ]
+   }
+  }
+ ]
+}

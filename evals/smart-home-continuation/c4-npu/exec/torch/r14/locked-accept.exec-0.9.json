@@ -1,0 +1,127 @@
+{
+ "records": 1141,
+ "threshold": 0.9,
+ "executed": 343,
+ "by_kind": {
+  "正确": 338,
+  "误触发": 3,
+  "错设备": 2
+ },
+ "wrong_total": 5,
+ "wrong": [
+  {
+   "id": "smart-home/W1-0088",
+   "kind": "误触发",
+   "utterance": "碗我摆进去了，你去按一下开始键",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.946
+    ],
+    "device": [
+     "洗碗机",
+     0.984
+    ],
+    "action": [
+     "打开或启动",
+     0.979
+    ]
+   }
+  },
+  {
+   "id": "smart-home/W1-0128",
+   "kind": "误触发",
+   "utterance": "悠悠，九点半了，台灯关了赶紧睡",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.962
+    ],
+    "device": [
+     "大宝台灯",
+     0.935
+    ],
+    "action": [
+     "关闭或停止",
+     0.944
+    ]
+   }
+  },
+  {
+   "id": "smart-home/W1-0144",
+   "kind": "错设备",
+   "utterance": "客卫的灯开一下",
+   "gold": {
+    "intent": "控制",
+    "device": "没有对应的设备",
+    "action": "打开或启动"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.993
+    ],
+    "device": [
+     "客厅主灯",
+     0.915
+    ],
+    "action": [
+     "打开或启动",
+     0.997
+    ]
+   }
+  },
+  {
+   "id": "smart-home/W1-0274",
+   "kind": "错设备",
+   "utterance": "闺女到楼下了，给她开下门",
+   "gold": {
+    "intent": "控制",
+    "device": "没有对应的设备",
+    "action": "打开或启动"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.987
+    ],
+    "device": [
+     "紧急呼叫按钮",
+     0.98
+    ],
+    "action": [
+     "打开或启动",
+     0.996
+    ]
+   }
+  },
+  {
+   "id": "smart-home/W3-0187",
+   "kind": "误触发",
+   "utterance": "猫把喂食器给碰倒了",
+   "gold": {
+    "intent": "无关"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.97
+    ],
+    "device": [
+     "猫咪喂食器",
+     0.992
+    ],
+    "action": [
+     "打开或启动",
+     0.934
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "core": "2",
+ "buckets": [
+  128,
+  256,
+  384,
+  512
+ ],
+ "sets": {
+  "c-dev": {
+   "items": 645,
+   "ran": 645,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 1.0,
+   "max_abs_logit_diff": 0.4632,
+   "npu_ms_by_bucket": {
+    "128": {
+     "n": 1,
+     "p50": 128.5,
+     "p95": 128.5
+    },
+    "256": {
+     "n": 644,
+     "p50": 273.3,
+     "p95": 283.4
+    }
+   },
+   "item_ms_p50": 279.1
+  },
+  "locked-182": {
+   "items": 546,
+   "ran": 546,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 0.9982,
+   "max_abs_logit_diff": 0.6216,
+   "npu_ms_by_bucket": {
+    "128": {
+     "n": 182,
+     "p50": 131.4,
+     "p95": 140.7
+    },
+    "256": {
+     "n": 335,
+     "p50": 274.0,
+     "p95": 283.7
+    },
+    "384": {
+     "n": 9,
+     "p50": 439.4,
+     "p95": 450.2
+    },
+    "512": {
+     "n": 20,
+     "p50": 663.7,
+     "p95": 713.4
+    }
+   },
+   "item_ms_p50": 277.6
+  },
+  "locked-accept": {
+   "items": 3423,
+   "ran": 3423,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 0.9953,
+   "max_abs_logit_diff": 1.8499,
+   "npu_ms_by_bucket": {
+    "128": {
+     "n": 1141,
+     "p50": 132.2,
+     "p95": 142.4
+    },
+    "256": {
+     "n": 1340,
+     "p50": 273.8,
+     "p95": 284.8
+    },
+    "384": {
+     "n": 285,
+     "p50": 441.6,
+     "p95": 455.3
+    },
+    "512": {
+     "n": 657,
+     "p50": 662.4,
+     "p95": 677.3
+    }
+   },
+   "item_ms_p50": 278.9
+  },
+  "locked-v2-dev": {
+   "items": 495,
+   "ran": 495,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 1.0,
+   "max_abs_logit_diff": 0.5512,
+   "npu_ms_by_bucket": {
+    "128": {
+     "n": 165,
+     "p50": 131.7,
+     "p95": 141.3
+    },
+    "256": {
+     "n": 238,
+     "p50": 274.0,
+     "p95": 285.7
+    },
+    "384": {
+     "n": 36,
+     "p50": 442.6,
+     "p95": 455.6
+    },
+    "512": {
+     "n": 56,
+     "p50": 663.5,
+     "p95": 672.8
+    }
+   },
+   "item_ms_p50": 279.1
+  },
+  "locked-v3-dev": {
+   "items": 1080,
+   "ran": 1080,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 0.9944,
+   "max_abs_logit_diff": 0.8002,
+   "npu_ms_by_bucket": {
+    "128": {
+     "n": 360,
+     "p50": 132.7,
+     "p95": 143.3
+    },
+    "256": {
+     "n": 507,
+     "p50": 273.8,
+     "p95": 285.1
+    },
+    "384": {
+     "n": 106,
+     "p50": 442.1,
+     "p95": 452.5
+    },
+    "512": {
+     "n": 107,
+     "p50": 662.6,
+     "p95": 674.3
+    }
+   },
+   "item_ms_p50": 278.2
+  }
+ },
+ "peak_rss_mb": 2331,
+ "npu_load": "NPU load:  Core0:  0%, Core1:  0%, Core2: 33%,",
+ "host": "eidolon-opi5max"
+}

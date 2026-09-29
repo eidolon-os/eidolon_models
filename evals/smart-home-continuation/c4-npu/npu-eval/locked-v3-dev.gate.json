@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "tolerance": 0.0,
+  "alpha": 0.05,
+  "paired": true,
+  "checks": [
+    {
+      "slice": "by_scenario:smart-home",
+      "baseline": 0.9505,
+      "candidate": 0.9505,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/action",
+      "baseline": 0.9706,
+      "candidate": 0.9706,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/device",
+      "baseline": 0.9444,
+      "candidate": 0.9444,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_question:smart-home/intent",
+      "baseline": 0.9472,
+      "candidate": 0.9472,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:A-day-in-life",
+      "baseline": 0.9369,
+      "candidate": 0.9369,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:B-device-mentions",
+      "baseline": 0.9639,
+      "candidate": 0.9639,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:bigvilla",
+      "baseline": 0.9558,
+      "candidate": 0.9558,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:loft",
+      "baseline": 0.9758,
+      "candidate": 0.9758,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:smallflat",
+      "baseline": 0.9348,
+      "candidate": 0.9348,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    },
+    {
+      "slice": "by_tag:home:threegen",
+      "baseline": 0.9387,
+      "candidate": 0.9387,
+      "broke": 0,
+      "fixed": 0,
+      "p": 1.0,
+      "ok": true
+    }
+  ]
+}

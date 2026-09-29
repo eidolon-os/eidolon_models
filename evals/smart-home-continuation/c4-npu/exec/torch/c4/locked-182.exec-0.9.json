@@ -1,0 +1,36 @@
+{
+ "records": 182,
+ "threshold": 0.9,
+ "executed": 90,
+ "by_kind": {
+  "正确": 89,
+  "错动作": 1
+ },
+ "wrong_total": 1,
+ "wrong": [
+  {
+   "id": "smart-home/07-07",
+   "kind": "错动作",
+   "utterance": "把门所上",
+   "gold": {
+    "intent": "控制",
+    "device": "智能门锁",
+    "action": "上锁"
+   },
+   "pred": {
+    "intent": [
+     "控制",
+     0.99
+    ],
+    "device": [
+     "智能门锁",
+     0.964
+    ],
+    "action": [
+     "关闭或停止",
+     0.909
+    ]
+   }
+  }
+ ]
+}

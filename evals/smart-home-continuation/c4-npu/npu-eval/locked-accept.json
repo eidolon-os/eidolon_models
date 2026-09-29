@@ -1,0 +1,319 @@
+{
+ "eval_set": "train/scenarios/smart-home/eval/locked-accept.jsonl",
+ "n_records": 1141,
+ "overall": {
+  "n": 2398,
+  "acc": 0.9737,
+  "ece": 0.0281,
+  "p>=0.5": {
+   "coverage": 0.9741,
+   "acc": 0.9752
+  },
+  "p>=0.7": {
+   "coverage": 0.9362,
+   "acc": 0.9804
+  },
+  "p>=0.9": {
+   "coverage": 0.9099,
+   "acc": 0.984
+  },
+  "ci95": [
+   0.9582,
+   0.9758
+  ]
+ },
+ "decision": {
+  "records": 1141,
+  "control_e2e": {
+   "n": 591,
+   "n_verified": 570,
+   "n_unverified": 21,
+   "acc": 0.9386,
+   "acc_bounds": [
+    0.9052,
+    0.9408
+   ],
+   "ci95": [
+    0.9193,
+    0.9579
+   ]
+  },
+  "auto_execute": {
+   "threshold": 0.9,
+   "n": 414,
+   "n_verified": 410,
+   "n_unverified": 4,
+   "precision": null,
+   "precision_verified": 0.9756,
+   "precision_bounds": [
+    0.9662,
+    0.9758
+   ],
+   "ci95": [
+    null,
+    null
+   ],
+   "lower95_one_sided_exact": null,
+   "coverage": 0.692,
+   "wrong": [
+    "smart-home/W1-0088",
+    "smart-home/W1-0093",
+    "smart-home/W1-0128",
+    "smart-home/W1-0292",
+    "smart-home/W2-0083",
+    "smart-home/W3-0075",
+    "smart-home/W3-0085",
+    "smart-home/W3-0187",
+    "smart-home/W3-0217",
+    "smart-home/W4-0248"
+   ]
+  },
+  "false_trigger_无关": {
+   "n": 450,
+   "rate": 0.0422,
+   "ci95": [
+    0.0267,
+    0.0622
+   ]
+  },
+  "false_trigger_查询": {
+   "n": 100,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "by_scenario": {
+  "smart-home": {
+   "n": 2398,
+   "acc": 0.9737,
+   "ece": 0.0281,
+   "p>=0.5": {
+    "coverage": 0.9741,
+    "acc": 0.9752
+   },
+   "p>=0.7": {
+    "coverage": 0.9362,
+    "acc": 0.9804
+   },
+   "p>=0.9": {
+    "coverage": 0.9099,
+    "acc": 0.984
+   }
+  }
+ },
+ "by_qtype": {
+  "choice": {
+   "n": 2398,
+   "acc": 0.9737,
+   "ece": 0.0281,
+   "p>=0.5": {
+    "coverage": 0.9741,
+    "acc": 0.9752
+   },
+   "p>=0.7": {
+    "coverage": 0.9362,
+    "acc": 0.9804
+   },
+   "p>=0.9": {
+    "coverage": 0.9099,
+    "acc": 0.984
+   }
+  }
+ },
+ "by_question": {
+  "smart-home/action": {
+   "n": 566,
+   "acc": 0.9965,
+   "ece": 0.1049,
+   "p>=0.5": {
+    "coverage": 0.9329,
+    "acc": 0.9981
+   },
+   "p>=0.7": {
+    "coverage": 0.8233,
+    "acc": 1.0
+   },
+   "p>=0.9": {
+    "coverage": 0.7898,
+    "acc": 1.0
+   }
+  },
+  "smart-home/device": {
+   "n": 691,
+   "acc": 0.958,
+   "ece": 0.0227,
+   "p>=0.5": {
+    "coverage": 0.9667,
+    "acc": 0.9626
+   },
+   "p>=0.7": {
+    "coverage": 0.9421,
+    "acc": 0.9724
+   },
+   "p>=0.9": {
+    "coverage": 0.9045,
+    "acc": 0.9808
+   }
+  },
+  "smart-home/intent": {
+   "n": 1141,
+   "acc": 0.972,
+   "ece": 0.0117,
+   "p>=0.5": {
+    "coverage": 0.9991,
+    "acc": 0.9719
+   },
+   "p>=0.7": {
+    "coverage": 0.9886,
+    "acc": 0.977
+   },
+   "p>=0.9": {
+    "coverage": 0.9728,
+    "acc": 0.9793
+   }
+  }
+ },
+ "by_tag": {
+  "W1-day": {
+   "n": 541,
+   "acc": 0.9667,
+   "ece": 0.0427,
+   "p>=0.5": {
+    "coverage": 0.9649,
+    "acc": 0.9674
+   },
+   "p>=0.7": {
+    "coverage": 0.9205,
+    "acc": 0.9719
+   },
+   "p>=0.9": {
+    "coverage": 0.8946,
+    "acc": 0.9731
+   }
+  },
+  "W2-device": {
+   "n": 528,
+   "acc": 0.9792,
+   "ece": 0.0355,
+   "p>=0.5": {
+    "coverage": 0.9754,
+    "acc": 0.9806
+   },
+   "p>=0.7": {
+    "coverage": 0.9375,
+    "acc": 0.9939
+   },
+   "p>=0.9": {
+    "coverage": 0.9186,
+    "acc": 0.9938
+   }
+  },
+  "W3-people": {
+   "n": 617,
+   "acc": 0.9546,
+   "ece": 0.0474,
+   "p>=0.5": {
+    "coverage": 0.9676,
+    "acc": 0.9564
+   },
+   "p>=0.7": {
+    "coverage": 0.9335,
+    "acc": 0.9601
+   },
+   "p>=0.9": {
+    "coverage": 0.8898,
+    "acc": 0.969
+   }
+  },
+  "W4-commands": {
+   "n": 712,
+   "acc": 0.9916,
+   "ece": 0.0332,
+   "p>=0.5": {
+    "coverage": 0.986,
+    "acc": 0.9929
+   },
+   "p>=0.7": {
+    "coverage": 0.9494,
+    "acc": 0.9941
+   },
+   "p>=0.9": {
+    "coverage": 0.9326,
+    "acc": 0.997
+   }
+  },
+  "home:acc-couple": {
+   "n": 619,
+   "acc": 0.9806,
+   "ece": 0.0339,
+   "p>=0.5": {
+    "coverage": 0.9806,
+    "acc": 0.9802
+   },
+   "p>=0.7": {
+    "coverage": 0.9418,
+    "acc": 0.9846
+   },
+   "p>=0.9": {
+    "coverage": 0.9176,
+    "acc": 0.9877
+   }
+  },
+  "home:acc-family4": {
+   "n": 806,
+   "acc": 0.9764,
+   "ece": 0.0322,
+   "p>=0.5": {
+    "coverage": 0.9727,
+    "acc": 0.977
+   },
+   "p>=0.7": {
+    "coverage": 0.9305,
+    "acc": 0.9813
+   },
+   "p>=0.9": {
+    "coverage": 0.8983,
+    "acc": 0.9848
+   }
+  },
+  "home:acc-house": {
+   "n": 581,
+   "acc": 0.9811,
+   "ece": 0.029,
+   "p>=0.5": {
+    "coverage": 0.9793,
+    "acc": 0.9824
+   },
+   "p>=0.7": {
+    "coverage": 0.9449,
+    "acc": 0.9927
+   },
+   "p>=0.9": {
+    "coverage": 0.9225,
+    "acc": 0.9963
+   }
+  },
+  "home:acc-senior": {
+   "n": 392,
+   "acc": 0.9464,
+   "ece": 0.0553,
+   "p>=0.5": {
+    "coverage": 0.9592,
+    "acc": 0.9521
+   },
+   "p>=0.7": {
+    "coverage": 0.926,
+    "acc": 0.9532
+   },
+   "p>=0.9": {
+    "coverage": 0.9031,
+    "acc": 0.9576
+   }
+  }
+ },
+ "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+ "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
+}
