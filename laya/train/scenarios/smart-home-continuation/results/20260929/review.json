@@ -1,0 +1,100 @@
+{
+  "what": "复核：原始logits(T=1)与拟合温度对比（tools/raw_scores.py，CPU）；候选权重在r14单句开发集上的回归（eidolon-laya-train eval --eval-set <locked-182/v2-dev/v3-dev> --baseline train/runs/r14/eval --alpha 0.05）。只用开发集，没有碰v2-test/accept。",
+  "checkpoint": "train/runs/home-continuation-20260929/checkpoint (T=2.4527, temperature_by_options={})",
+  "r14_temperature": {
+    "choice": 1.4077,
+    "by_options": {
+      "choice:3-5": 1.819,
+      "choice:6-10": 1.2833,
+      "choice:11+": 1.3008
+    }
+  },
+  "continuation_splits": {
+    "calib": {
+      "n": 29,
+      "families": {
+        "cancel-1": "8/8",
+        "escalate-0(都行)": "0/8",
+        "escalate-7(别关主卧灯，打开客厅灯)": "0/8",
+        "focus-3": "4/5"
+      },
+      "acc": 0.414,
+      "T1": {
+        "mean_conf": 0.463,
+        "nll": 1.388
+      },
+      "T2.45": {
+        "mean_conf": 0.344,
+        "nll": 1.327
+      }
+    },
+    "val": {
+      "n": 45,
+      "gold": {
+        "target": 32,
+        "cancel": 13,
+        "escalate": 0
+      },
+      "acc": 0.867,
+      "T1": {
+        "mean_conf": 0.666,
+        "nll": 0.526,
+        "p>=0.9": "8 (8 correct)"
+      },
+      "T2.45": {
+        "mean_conf": 0.442,
+        "nll": 0.881,
+        "p>=0.9": 0
+      }
+    },
+    "locked": {
+      "n": 44,
+      "acc": 0.773,
+      "T1": {
+        "mean_conf": 0.492,
+        "nll": 1.019,
+        "p>=0.9": "2 (both wrong: no_focus 把它开一下/那就关了它 -> cancel)"
+      },
+      "T2.45": {
+        "mean_conf": 0.366,
+        "nll": 1.149,
+        "p>=0.9": 0
+      }
+    }
+  },
+  "train_split_gaps": {
+    "no_focus_records_in_train": 4,
+    "duplicate_id_dropped": 18,
+    "change_action_families": 1,
+    "submitted_true": 0
+  },
+  "single_sentence_regression": {
+    "locked-182": {
+      "n": 182,
+      "acc_r14": 0.9935,
+      "acc_candidate": 0.9935,
+      "auto_exec_0.9_coverage_r14": 0.7643,
+      "auto_exec_0.9_coverage_candidate": 0.0,
+      "auto_exec_0.9_precision_r14": 1.0,
+      "existing_gate_passed": true
+    },
+    "locked-v2-dev": {
+      "n": 165,
+      "acc_r14": 0.9645,
+      "acc_candidate": 0.967,
+      "auto_exec_0.9_coverage_r14": 0.7018,
+      "auto_exec_0.9_coverage_candidate": 0.0,
+      "auto_exec_0.9_precision_r14": 0.9753,
+      "existing_gate_passed": true
+    },
+    "locked-v3-dev": {
+      "n": 360,
+      "acc_r14": 0.9406,
+      "acc_candidate": 0.9406,
+      "auto_exec_0.9_coverage_r14": 0.4352,
+      "auto_exec_0.9_coverage_candidate": 0.0,
+      "auto_exec_0.9_precision_r14": 0.8364,
+      "existing_gate_passed": true
+    }
+  }
+}

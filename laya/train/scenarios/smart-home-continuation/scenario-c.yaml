@@ -1,0 +1,24 @@
+# c 系列续接题（LABELING.md）。state_format continuation-laya-v1：
+#   {"utterance": ..., "context": {"上一句": ..., "Agent": ..., "待执行": ...}}   pick
+#   {"utterance": ..., "context": {"上一句": ..., "Agent": ..., "设备": [...]}}   follow
+# 每条记录只问其中一题。2026-09-29 实验的 next 题在 scenario.yaml，不再使用。
+name: smart-home-continuation
+
+questions:
+  pick:
+    type: choice
+    instructions: "Agent 刚问用户要对哪台设备执行 `context.待执行`。`utterance` 是否明确选了其中一台，且没有改动作？"
+    criteria_from: candidates        # {设备名: "房间·类型"}，顺序同 Agent 那句话
+    exits:
+      取消: 用户明确不要执行这次待确认的操作，也没有提出别的要求
+      重新理解: 改了动作或数值、要多台或候选之外的设备、没说清是哪台、提问、闲聊或提出新要求
+
+  follow:
+    type: choice
+    instructions: "`context.设备` 刚被操作或查询过。`utterance` 是否是对这些设备的一个明确操作？"
+    criteria_from: verbs             # 单句 action 题的原名与原说明，只列焦点设备都支持的
+    exits:
+      重新理解: 换了或增加设备、只针对其中一部分、撤销刚才的操作、保持不动、提问、闲聊或其他新要求
+
+eval_sets:
+  - ../../../evals/smart-home-continuation
