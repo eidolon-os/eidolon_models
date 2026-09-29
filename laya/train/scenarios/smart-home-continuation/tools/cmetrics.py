@@ -98,6 +98,10 @@ def main() -> None:
     for f, sub in sorted(fam.items()):
         s = summarize(sub, t_exec, t_cancel)
         out["by_family"][f] = {"n": s["n"], "argmax_acc": s["argmax_acc"], **{k: v for k, v in s["counts"].items() if v}}
+    for name, keep in (("utt-seen-in-train", True), ("utt-novel", False)):
+        sub = [r for r in rows if ("utt-seen-in-train" in r["tags"]) == keep]
+        if sub:
+            out["by_question"][name] = summarize(sub, t_exec, t_cancel)
     for r in rows:
         o = outcome(r, t_exec, t_cancel)
         if o in ("错误执行", "错误取消") or not r["correct"]:

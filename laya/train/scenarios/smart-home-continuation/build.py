@@ -232,6 +232,12 @@ def cmd_records(args) -> None:
             for g, g_gold, kind in counterparts(f, u, gold, homes, random.Random(f["frame_id"])):
                 recs.append(to_record(g, u, g_gold, source="counterpart-rule", extra_tags=[kind], meta=meta))
                 st[kind] += 1
+        if split != "train":  # 评测里与训练池原句相同的话单独打标，报告时分开看
+            seen = {r.state["utterance"] for r in by_split["train"]}
+            for r in recs:
+                if r.state["utterance"] in seen:
+                    r.tags.append("utt-seen-in-train")
+                    st["utt-seen-in-train"] += 1
         by_split[split] = recs
         stats[split] = dict(st) | {"records": len(recs),
                                    "by_gold": dict(Counter(r.tags[0] for r in recs))}
