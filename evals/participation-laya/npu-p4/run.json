@@ -1,0 +1,74 @@
+{
+ "core": "0",
+ "buckets": [
+  256,
+  384,
+  512,
+  640
+ ],
+ "sets": {
+  "eval-dev": {
+   "items": 3738,
+   "ran": 3738,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 0.9936,
+   "max_abs_logit_diff": 2.2827,
+   "npu_ms_by_bucket": {
+    "256": {
+     "n": 874,
+     "p50": 265.0,
+     "p95": 273.9
+    },
+    "384": {
+     "n": 1996,
+     "p50": 422.2,
+     "p95": 433.6
+    },
+    "512": {
+     "n": 842,
+     "p50": 636.8,
+     "p95": 649.9
+    },
+    "640": {
+     "n": 26,
+     "p50": 864.4,
+     "p95": 907.4
+    }
+   },
+   "item_ms_p50": 429.0
+  },
+  "eval-test": {
+   "items": 3630,
+   "ran": 3630,
+   "over_largest_bucket": 0,
+   "argmax_agree_with_ref": 0.997,
+   "max_abs_logit_diff": 2.8895,
+   "npu_ms_by_bucket": {
+    "256": {
+     "n": 756,
+     "p50": 264.5,
+     "p95": 272.9
+    },
+    "384": {
+     "n": 2212,
+     "p50": 421.5,
+     "p95": 431.6
+    },
+    "512": {
+     "n": 652,
+     "p50": 635.9,
+     "p95": 649.2
+    },
+    "640": {
+     "n": 10,
+     "p50": 860.3,
+     "p95": 919.0
+    }
+   },
+   "item_ms_p50": 427.8
+  }
+ },
+ "peak_rss_mb": 2529,
+ "npu_load": "NPU load:  Core0: 70%, Core1:  0%, Core2:  0%,",
+ "host": "eidolon-opi5max"
+}

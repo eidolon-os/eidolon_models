@@ -1,0 +1,104 @@
+{
+ "records": 150,
+ "by_longest_bucket": {
+  "384": 150
+ },
+ "placement_buckets": {
+  "action": [
+   384
+  ],
+  "speaker": [
+   384
+  ],
+  "clarify_about": [
+   384
+  ]
+ },
+ "runtimes_loaded_parallel": 3,
+ "parallel_3cores_pred_respond": {
+  "n": 80,
+  "p50": 582.3,
+  "p95": 626.3
+ },
+ "parallel_3cores_pred_clarify": {
+  "n": 6,
+  "p50": 578.6,
+  "p95": 584.3
+ },
+ "parallel_3cores_pred_wait": {
+  "n": 15,
+  "p50": 583.9,
+  "p95": 612.7
+ },
+ "parallel_3cores_pred_finish": {
+  "n": 49,
+  "p50": 585.7,
+  "p95": 662.8
+ },
+ "early_exit_pred_respond": {
+  "n": 80,
+  "p50": 876.3,
+  "p95": 900.3
+ },
+ "early_exit_pred_clarify": {
+  "n": 6,
+  "p50": 932.4,
+  "p95": 939.9
+ },
+ "early_exit_pred_wait": {
+  "n": 15,
+  "p50": 431.5,
+  "p95": 439.1
+ },
+ "early_exit_pred_finish": {
+  "n": 49,
+  "p50": 430.3,
+  "p95": 450.0
+ },
+ "speculative_pred_respond": {
+  "n": 80,
+  "p50": 567.2,
+  "p95": 606.7
+ },
+ "speculative_pred_clarify": {
+  "n": 6,
+  "p50": 578.4,
+  "p95": 586.5
+ },
+ "speculative_pred_wait": {
+  "n": 15,
+  "p50": 528.5,
+  "p95": 583.1
+ },
+ "speculative_pred_finish": {
+  "n": 49,
+  "p50": 525.1,
+  "p95": 578.1
+ },
+ "seq_core0": {
+  "p50": 1322.6,
+  "p95": 1576.2,
+  "p50_longest_384": 1322.6
+ },
+ "seq_core012": {
+  "p50": 1110.4,
+  "p95": 1149.0,
+  "p50_longest_384": 1110.4
+ },
+ "parallel_3cores": {
+  "p50": 582.9,
+  "p95": 636.8,
+  "p50_longest_384": 582.9
+ },
+ "early_exit": {
+  "p50": 867.2,
+  "p95": 902.9,
+  "p50_longest_384": 867.2
+ },
+ "speculative": {
+  "p50": 557.0,
+  "p95": 603.7,
+  "p50_longest_384": 557.0
+ },
+ "peak_rss_mb": 1857
+}

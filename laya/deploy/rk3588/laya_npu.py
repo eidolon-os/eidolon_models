@@ -7,7 +7,7 @@ mirror ``eidolon_models_laya.export_npu``; ``tests/test_npu.py`` keeps them equa
 
     python laya_npu.py convert <npu_dir>                              # hidden_l<L>.onnx → hidden_l<L>.rknn (fp16)
     python laya_npu.py run <npu_dir> <items_dir> <out_dir> [--core 0|012]
-    python laya_npu.py bench <npu_dir> <set>.items.jsonl [--n 60]    # one decision = all its questions: 3 schedules
+    python laya_npu.py bench <npu_dir> <set>.items.jsonl [--n 60] [--gate participation]    # one decision: 3 schedules
 
 ``run`` reads ``<set>.items.jsonl`` (from ``eidolon-laya-train items``) and writes ``<set>.logits.jsonl``
 (score it on the Mac with ``eidolon-laya-train eval --logits <out_dir>``) plus ``run.json``: latency per
@@ -147,6 +147,14 @@ def cmd_run(args) -> int:
     return 0
 
 
+# Which question decides what else is asked: {"first": qid, "then": {answer of first: [other qids]}}.
+GATES = {
+    "home": {"first": "intent", "then": {"无关": [], "查询": ["device"], "控制": ["device", "action"]}},
+    "participation": {"first": "action", "then": {"respond": ["speaker"], "clarify": ["speaker", "clarify_about"],
+                                                  "wait": [], "finish": []}},
+}
+
+
 def cmd_bench(args) -> int:
     """End-to-end latency of one decision (all questions of a record) under three schedules:
     sequential on core 0, sequential with each model on cores 0-1-2, and one question per core in parallel."""
@@ -159,13 +167,23 @@ def cmd_bench(args) -> int:
     type_emb = np.load(npu_dir / "type_emb.npy")
     sc = dict(np.load(npu_dir / "scorer.npz"))
     paths = buckets_in(npu_dir, "rknn")
+    if args.buckets:  # NPU address space is limited (the parallel placement loads one runtime per question
+        keep = {int(x) for x in args.buckets.split(",")}  # per bucket): time only decisions that fit these
+        paths = {L: p for L, p in paths.items() if L in keep}
     items = [json.loads(x) for x in Path(args.items).read_text("utf-8").splitlines() if x.strip()]
     by_rec: dict[str, list[dict]] = {}
     for it in items:
         by_rec.setdefault(it["key"].rsplit("/", 1)[0], []).append(it)
-    recs = [v for v in by_rec.values() if len(v) == 3][: args.n]
-    if args.all:  # early exit is worth most on non-commands, which have no device/action item
-        recs = list(by_rec.values())
+    by_rec = {k: v for k, v in by_rec.items() if all(len(it["ids"]) <= max(paths) for it in v)}
+    gate = GATES[args.gate]
+    first, then = gate["first"], gate["then"]
+    order = [first] + [q for qs in then.values() for q in qs]
+    order = list(dict.fromkeys(order))
+    full = max(len(v) for v in by_rec.values())
+    recs = [v for v in by_rec.values() if len(v) == full][: args.n]
+    if args.all:  # early exit is worth most on decisions that need only the first question
+        vals = list(by_rec.values())  # evenly spaced, so the mix of decisions matches the set
+        recs = vals[:: max(1, len(vals) // args.n)][: args.n] if args.n else vals
     cores = [RKNNLite.NPU_CORE_0, RKNNLite.NPU_CORE_1, RKNNLite.NPU_CORE_2]
 
     def runtime(L, mask):
@@ -197,7 +215,7 @@ def cmd_bench(args) -> int:
     # Placement used for both parallel schedules (and what a deployment would load): each question id gets
     # its own core and only the buckets it actually needs — intent on core 0 (128), device on core 1
     # (all), action on core 2 (≤ 256). One runtime per core per bucket for every bucket OOMs the NPU.
-    qids = sorted({it["key"].rsplit("/", 1)[1] for rec in recs for it in rec}, key=["intent", "device", "action"].index)
+    qids = sorted({it["key"].rsplit("/", 1)[1] for rec in recs for it in rec}, key=order.index)
     core_of = {q: cores[n] for n, q in enumerate(qids)}
     need = {q: sorted({bucket(it) for rec in recs for it in rec if it["key"].endswith("/" + q)}) for q in qids}
     rt = {(q, L): runtime(L, core_of[q]) for q in qids for L in need[q]}
@@ -213,31 +231,31 @@ def cmd_bench(args) -> int:
             list(pool.map(lambda it: run_q(it["key"].rsplit("/", 1)[1], it), rec))
             ts.append((time.perf_counter() - t) * 1000)
     out["parallel_3cores"] = ts
-    # early exit (what options.ask_if does in the service): intent first; 无关 stops there,
-    # 查询 adds device, 控制 adds device + action in parallel
+    # early exit (what options.ask_if does in the service): the first question alone, then only what its
+    # answer needs, in parallel (home: 无关 stops there, 查询 adds device, 控制 adds device + action)
     ts, kinds = [], []
     with ThreadPoolExecutor(2) as pool:
         for rec in recs:
             q = {it["key"].rsplit("/", 1)[1]: it for it in rec}
             t = time.perf_counter()
-            lo = run_q("intent", q["intent"])
-            intent = q["intent"]["names"][int(lo.argmax())]
-            rest = [x for x in {"无关": [], "查询": ["device"], "控制": ["device", "action"]}[intent] if x in q]
-            # (a record whose gold has no device/action — a gold 无关 — cannot time those; rare, underestimates)
+            lo = run_q(first, q[first])
+            intent = q[first]["names"][int(lo.argmax())]
+            rest = [x for x in then[intent] if x in q]
+            # (a record whose gold does not ask a needed question cannot time it; rare, underestimates)
             list(pool.map(lambda x: run_q(x, q[x]), rest))
             ts.append((time.perf_counter() - t) * 1000)
             kinds.append(intent)
     out["early_exit"] = ts
-    # speculative: all questions start at once; the answer is ready as soon as intent says 无关 (the other
-    # two finish in the background and are dropped), otherwise when the needed ones are done
+    # speculative: all questions start at once; the answer is ready as soon as the first question needs
+    # nothing else (the rest finish in the background and are dropped), otherwise when the needed ones are done
     ts = []
     with ThreadPoolExecutor(3) as pool:
         for rec in recs:
             q = {it["key"].rsplit("/", 1)[1]: it for it in rec}
             t = time.perf_counter()
             fut = {x: pool.submit(run_q, x, it) for x, it in q.items()}
-            intent = q["intent"]["names"][int(fut["intent"].result().argmax())]
-            for x in {"无关": [], "查询": ["device"], "控制": ["device", "action"]}[intent]:
+            intent = q[first]["names"][int(fut[first].result().argmax())]
+            for x in then[intent]:
                 if x in fut:
                     fut[x].result()
             ts.append((time.perf_counter() - t) * 1000)
@@ -250,7 +268,7 @@ def cmd_bench(args) -> int:
     res = {"records": len(recs), "by_longest_bucket": {L: longest.count(L) for L in sorted(set(longest))},
            "placement_buckets": res_place, "runtimes_loaded_parallel": sum(len(v) for v in res_place.values())}
     for sched in ("parallel_3cores", "early_exit", "speculative"):
-        for k in ("无关", "查询", "控制"):
+        for k in then:
             sub = [t for t, kk in zip(out[sched], kinds) if kk == k]
             if sub:
                 res[f"{sched}_pred_{k}"] = {"n": len(sub), "p50": round(statistics.median(sub), 1),
@@ -282,7 +300,10 @@ def main() -> int:
     p.add_argument("npu_dir")
     p.add_argument("items", help="one <set>.items.jsonl; records with all three questions are timed")
     p.add_argument("--n", type=int, default=60)
-    p.add_argument("--all", action="store_true", help="every record (incl. 无关 ones with only an intent item)")
+    p.add_argument("--all", action="store_true",
+                   help="every record (incl. ones with only the first question), --n of them evenly spaced")
+    p.add_argument("--gate", choices=sorted(GATES), default="home", help="which question decides the others")
+    p.add_argument("--buckets", help="comma-separated buckets to load (default all); longer decisions are skipped")
     p.set_defaults(func=cmd_bench)
     args = ap.parse_args()
     return args.func(args)
