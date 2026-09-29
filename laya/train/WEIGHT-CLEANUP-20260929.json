@@ -1,0 +1,206 @@
+{
+ "created_at": "2026-09-29T13:20:04.459035+00:00",
+ "method": "移到废纸篓（/usr/bin/trash），清空废纸篓后才真正释放",
+ "status": "moved_to_trash",
+ "entries": [
+  {
+   "path": "laya/train/runs/p0-smoke/checkpoint/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "2aa7a9a3e39328c7231ac67ab4c9e1db1e5b9762f5b68a01a1dcb37db9ea43e7",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-participation/2aa7a9a3/torch/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "2aa7a9a3e39328c7231ac67ab4c9e1db1e5b9762f5b68a01a1dcb37db9ea43e7",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/p1/checkpoint/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "c46c818cb27f4d33ba7a663cafcaf5a5e17f62a986f54dc0bfe3b2606e6eb92c",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-participation/c46c818c/torch/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "c46c818cb27f4d33ba7a663cafcaf5a5e17f62a986f54dc0bfe3b2606e6eb92c",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/p2/checkpoint/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "d30c01c5d79d9b03c8e83f79b1eea72805517749d0329745e01c59b820a1ba7c",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-participation/d30c01c5/torch/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "d30c01c5d79d9b03c8e83f79b1eea72805517749d0329745e01c59b820a1ba7c",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/p3/checkpoint/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "a1dde0643825dffc8e6deb4fe58c53114dc14c10d3f3e61f625194019b7a4442",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-participation/a1dde064/torch/model.safetensors",
+   "kind": "superseded_participation",
+   "reason": "参与决策被 p4（ae6718a4，已发布）取代的候选；记录在 participation/EXPERIMENTS.md，p-test 已在 p4 用掉，不会再用来选模型",
+   "sha256": "a1dde0643825dffc8e6deb4fe58c53114dc14c10d3f3e61f625194019b7a4442",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/p4/checkpoint/model.safetensors",
+   "kind": "duplicate_checkpoint",
+   "reason": "与保留的打包副本逐字节相同",
+   "retained_copy": "laya/models/laya-participation/ae6718a4/torch/model.safetensors",
+   "sha256": "ae6718a42fc32934d04047bc33bb584f0fab1d1b1f779e4680f5e7f91d7eba98",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/r14/checkpoint/model.safetensors",
+   "kind": "duplicate_checkpoint",
+   "reason": "与保留的打包副本逐字节相同（续接训练只用 runs/r14/dataset 与 r14-reeval）",
+   "retained_copy": "laya/models/laya-smart-home/45f3dedb/torch/model.safetensors",
+   "sha256": "45f3dedbb91d108a90821c8c1c1488baae6b567c4b7769f4e63d460d13178246",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/219b0311/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r2 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r2/eval 与 EXPERIMENTS.md",
+   "run": "r2",
+   "sha256": "219b031137bea0ab4b09a16db41fa5c87e6e890985ce90c8c35e42c85f2981f5",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/6b835acf/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r3 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r3/eval 与 EXPERIMENTS.md",
+   "run": "r3",
+   "sha256": "6b835acf888bc3b1f312d0a0fb99b1a651ebbb8aa79c044ff16cf76d620caf17",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/a0e33df6/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r4 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r4/eval 与 EXPERIMENTS.md",
+   "run": "r4",
+   "sha256": "a0e33df64096bd5c42c1a55d28a0715217f0d43a269feea3048ccb488d0be609",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/5dace5a3/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r5 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r5/eval 与 EXPERIMENTS.md",
+   "run": "r5",
+   "sha256": "5dace5a329dc411d0943eba5a524630f135904684fefc0034ab76f4d7515fd7d",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/92256ee3/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r6 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r6/eval 与 EXPERIMENTS.md",
+   "run": "r6",
+   "sha256": "92256ee3015f84cefde566ffba5950262503513edf84c4e86f0b70c7f60b1a58",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/344c4be5/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r7 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r7/eval 与 EXPERIMENTS.md",
+   "run": "r7",
+   "sha256": "344c4be5e32f7aba424ae9d061c100d57729c2847389bb80ccf54d8993ead8c3",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/f5fde66b/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r8 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r8/eval 与 EXPERIMENTS.md",
+   "run": "r8",
+   "sha256": "f5fde66ba5b8adcefbbd497d0283e63d835b10ef0faa789b335541d9df49ae05",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/ad904d10/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r9 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r9/eval 与 EXPERIMENTS.md",
+   "run": "r9",
+   "sha256": "ad904d10b81c855269ebc933faecb6998b3f8c2a6c4ec8b49e09028e4bf39307",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r10 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r10/eval 与 EXPERIMENTS.md",
+   "run": "r10",
+   "sha256": "94d898b94607254069f1fe07685bb988cfb468be4244eddc92f17295bfd1d98f",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/e2e318af/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r11 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r11/eval 与 EXPERIMENTS.md",
+   "run": "r11",
+   "sha256": "e2e318afd7d1e9209f80d21b1727b8be8e5445db067cff8f9da3566f98e7428a",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/a76720a8/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r12 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r12/eval 与 EXPERIMENTS.md",
+   "run": "r12",
+   "sha256": "a76720a81fcb9fc3fcb77c8f131dccb0fb011a15e8a654bba1362186dd508ce7",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/0bd7ca2b/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 r13 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/r13/eval 与 EXPERIMENTS.md",
+   "run": "r13",
+   "sha256": "0bd7ca2b9c9cfc741ed17b76fbedd63192c446e292ecfe3f56a8d8ee68b1fb1e",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/8ad63553/torch/model.safetensors",
+   "kind": "superseded_smart_home",
+   "reason": "家居 smoke 被 r14（45f3dedb，生产）取代；评测结果留在 train/runs/smoke/eval 与 EXPERIMENTS.md",
+   "run": "smoke",
+   "sha256": "8ad63553a1d4936095e715da5c8ce9d90d739d9a6c179a5852afb267442ed48c",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/8ad63553/onnx/model.onnx.data",
+   "kind": "superseded_smart_home",
+   "reason": "package 阶段冒烟模型的 ONNX 导出",
+   "run": "smoke",
+   "sha256": "e8b063c07fe6b34eadc81daaf9861543de1dd518a1af217833fea4d0ebe81c2c",
+   "bytes": 1287651328
+  },
+  {
+   "path": "laya/models/laya-smart-home/8ad63553/onnx/model.onnx",
+   "kind": "superseded_smart_home",
+   "reason": "上一项的图，没有权重无用",
+   "run": "smoke",
+   "bytes": 3254716
+  }
+ ],
+ "removed_bytes": 30906941604,
+ "kept": {
+  "laya/models/laya-participation/ae6718a4": "参与决策 p4，已发布到 opi5max",
+  "laya/models/laya-smart-home/45f3dedb": "家居 r14，生产；续接 c 系列的初始化",
+  "laya/models/laya-smart-home/edb8e2c7": "r15，续接训练拿它做种子对照",
+  "laya/models/laya-multilingual/1c5edc17": "全部训练的基座",
+  "r16–r18、c1–c4、ip-*、backbone-comparison、第三方对照模型": "不是本会话训练的，不在本次范围"
+ }
+}
