@@ -151,7 +151,9 @@ def counterparts(f: dict, utterance: str, gold: str, homes: dict[str, list[Devic
         pool = [d for d in homes[f["home"]]
                 if family_of(d) == family_of(dev) and d not in cands and not touches(d)
                 and d.room not in {c.room for c in cands}]
-        if mentioned(dev) and pool:
+        # C15：剩下的候选里只要有一台被话里的房间 / 名字碰到，用户可能正是在指它，不生成这条副本
+        others_touched = any(touches(c) for k, c in enumerate(cands) if k != i)
+        if mentioned(dev) and pool and not others_touched:
             rep = rng.choice(pool)
             g = _pick_frame_with(f, cands[:i] + [rep] + cands[i + 1:])
             out.append((g, REDO, "cp-absent"))  # 用户点名的那台不在候选里
