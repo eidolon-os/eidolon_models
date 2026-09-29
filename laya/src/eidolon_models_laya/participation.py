@@ -47,6 +47,8 @@ class ModelChoice:
     instruction: str = ""
     confidence: float = 0.0
     truncated: bool = False
+    #: Why an "abstain" choice abstains. Diagnostics for the service log only; never sent.
+    why: str = ""
 
 
 class ParticipationPredictor(Protocol):
@@ -78,6 +80,14 @@ class ParticipationAdapter:
         self.min_confidence = min_confidence
 
     def decide(self, request: DecisionRequest) -> DecisionResult:
+        return self.decide_explained(request)[0]
+
+    def decide_explained(self, request: DecisionRequest) -> tuple[DecisionResult, dict]:
+        """The result plus why: ``reason`` is ``decided`` or the one thing that made it abstain
+        (``context_unsupported``, ``truncated``, ``invalid_confidence``, ``low_confidence``,
+        ``model_abstain``, ``invalid_proposal``), with ``confidence`` / ``detail`` where known.
+        For the service log (correlation id, versions, action, reason, time — never the dialogue);
+        the SDK result carries none of it."""
         snapshot = {key: getattr(request, key) for key in Snapshot.model_fields}
 
         def result(proposal: Proposal | None = None) -> DecisionResult:
@@ -91,16 +101,17 @@ class ParticipationAdapter:
 
         try:
             choice = self.predictor.predict(request)
-        except ContextTooLong:
-            return result()
-        if (
-            choice.truncated
-            or not math.isfinite(choice.confidence)
-            or choice.confidence < self.min_confidence
-        ):
-            return result()
+        except ContextTooLong as exc:
+            return result(), {"reason": "context_unsupported", "detail": str(exc)}
+        seen = {"confidence": round(float(choice.confidence), 4) if math.isfinite(choice.confidence) else None}
+        if choice.truncated:
+            return result(), {"reason": "truncated", **seen}
+        if not math.isfinite(choice.confidence):
+            return result(), {"reason": "invalid_confidence"}
+        if choice.confidence < self.min_confidence:
+            return result(), {"reason": "low_confidence", "choice": choice.action, **seen}
         if choice.action == "abstain":
-            return result()
+            return result(), {"reason": "model_abstain", "detail": choice.why, **seen}
         participants = (choice.companion_id,) if choice.companion_id else ()
         try:
             proposal = Proposal(
@@ -110,9 +121,9 @@ class ParticipationAdapter:
             )
             decided = result(proposal)
             validate_proposal(request, decided)
-        except ValueError:
-            return result()
-        return decided
+        except ValueError as exc:
+            return result(), {"reason": "invalid_proposal", "choice": choice.action, "detail": str(exc), **seen}
+        return decided, {"reason": "decided", **seen}
 
 
 class LayaMovePredictor:
@@ -202,9 +213,10 @@ class LayaMovePredictor:
         choice = answer.get("choice")
         confidence = answer.get("answer_confidence")
         if choice not in options or type(confidence) not in (int, float):
-            return ModelChoice("abstain")
+            return ModelChoice("abstain", why="answer_not_an_option")
         if choice in {"abstain"} or choice.startswith("clarify:"):
-            return ModelChoice("abstain", confidence=float(confidence))
+            why = "model_chose_abstain" if choice == "abstain" else "clarify_not_supported"
+            return ModelChoice("abstain", confidence=float(confidence), why=why)
         if choice in {"wait", "finish"}:
             return ModelChoice(choice, confidence=float(confidence))
         action, slot = choice.split(":", 1)
@@ -340,18 +352,18 @@ class LayaParticipationPredictor:
         action = answers.get("action", {}).get("choice")
         confidence = answers.get("action", {}).get("answer_confidence")
         if action not in ACTIONS or type(confidence) not in (int, float):
-            return ModelChoice("abstain")
+            return ModelChoice("abstain", why="answer_not_an_option")
         if action in {"wait", "finish"}:
             return ModelChoice(action, confidence=float(confidence))
         slot = answers.get("speaker", {}).get("choice")
         if not isinstance(slot, str) or not slot.startswith("M") or not slot[1:].isdigit() \
                 or int(slot[1:]) >= len(ids):
-            return ModelChoice("abstain", confidence=float(confidence))
+            return ModelChoice("abstain", confidence=float(confidence), why="speaker_not_a_candidate")
         if action == "respond":
             return ModelChoice("respond", ids[int(slot[1:])], confidence=float(confidence))
         instruction = self.clarify_instructions.get(answers.get("clarify_about", {}).get("choice"))
         if not instruction:
-            return ModelChoice("abstain", confidence=float(confidence))
+            return ModelChoice("abstain", confidence=float(confidence), why="clarify_reason_has_no_task")
         return ModelChoice("clarify", ids[int(slot[1:])], instruction, float(confidence))
 
     def _check_input_budget(self, state: dict, questions: dict) -> None:

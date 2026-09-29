@@ -371,3 +371,28 @@ def test_v2_profile_loads_the_three_question_predictor(tmp_path):
             load_participation_adapter(
                 profile, Engine(), model_dir=tmp_path, model_revision="rev-2", expected_sha256=digest,
             )
+
+
+@pytest.mark.parametrize("model_answers,allowed,reason,detail", [
+    (answers("respond", conf=0.5, speaker="M1"), None, "low_confidence", ""),
+    (answers("respond", speaker="M7"), None, "model_abstain", "speaker_not_a_candidate"),
+    (answers("clarify", speaker="M0", about="别的"), None, "model_abstain", "clarify_reason_has_no_task"),
+    (answers("respond", speaker="M1"), ("wait", "finish"), "invalid_proposal", "ACTION_NOT_ALLOWED"),
+    (answers("finish"), None, "decided", ""),
+])
+def test_v1_says_why_it_abstained_without_changing_the_result(model_answers, allowed, reason, detail):
+    ad = v1_adapter(V1Engine(model_answers))
+    req = team_request(allowed=allowed)
+    result, why = ad.decide_explained(req)
+    assert why["reason"] == reason and detail in why.get("detail", "")
+    assert result == ad.decide(req)  # the SDK result is the same either way; the reason is log-only
+    assert "confidence" in why
+
+
+def test_unsupported_context_is_reported_as_such():
+    stranger = Message(message_id="s1", author_kind="system", author_id="sys", text="系统提示")
+    base = team_request()
+    odd = base.model_copy(update={"context": Context(recent_messages=(base.user_request, stranger)), "trigger": stranger})
+    result, why = v1_adapter(V1Engine(answers("finish"))).decide_explained(odd)
+    assert result.status == "abstained" and why["reason"] == "context_unsupported"
+    assert "unsupported author" in why["detail"]

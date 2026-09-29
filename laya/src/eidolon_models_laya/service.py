@@ -128,7 +128,8 @@ async def participation_decide(request: web.Request) -> web.Response:
         return _error(503, "busy", "decision service is busy", **{"Retry-After": "1"})
     state["pending"] += 1
     loop = asyncio.get_running_loop()
-    future = loop.run_in_executor(state["executor"], adapter.decide, decision)
+    started = time.perf_counter()
+    future = loop.run_in_executor(state["executor"], adapter.decide_explained, decision)
     # A request deadline cannot stop a running inference thread. Count it as
     # pending until the worker actually exits, so timed-out callers cannot
     # enqueue work without bound.
@@ -149,11 +150,17 @@ async def participation_decide(request: web.Request) -> web.Response:
         log.exception("participation prediction failed")
         return _error(500, "internal", "prediction failed; see server log")
     state["served"] += 1
+    response, why = response
+    # Correlation id, versions, action, reason and time only — never the public dialogue.
     log.info(
-        "participation decision=%s status=%s action=%s policy=%s model=%s",
+        "participation decision=%s status=%s action=%s reason=%s confidence=%s detail=%s ms=%.0f policy=%s model=%s",
         decision.decision_id,
         response.status,
         response.proposal.action if response.proposal else "-",
+        why.get("reason", "-"),
+        why.get("confidence", "-"),
+        why.get("detail", "-") or "-",
+        (time.perf_counter() - started) * 1000,
         adapter.policy_version,
         adapter.model_version,
     )
