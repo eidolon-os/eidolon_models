@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "name": "laya-smart-home",
+  "source": {
+    "hub": "local",
+    "repo_id": "eidolon-laya-train/laya-smart-home",
+    "subfolder": "",
+    "revision": "7b695ba8",
+    "run_id": "c4",
+    "checkpoint": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c4/checkpoint"
+  },
+  "license": {
+    "checkpoint": "internal",
+    "base": "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-smart-home/45f3dedb/torch"
+  },
+  "runtime": {
+    "code": "laya (vendored, see src/eidolon_models_laya/vendor/laya/VENDOR_VERSION)",
+    "trained_max_len": 1024,
+    "head_max_len": 512,
+    "notes": "c4: r14 + continuation-laya-v1 (pick / follow); candidate per PLAN c4 verdict (accept + c-test)"
+  },
+  "torch": {
+    "dir": "torch",
+    "files": {
+      "model.safetensors": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+      "rl_agent_config.json": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9",
+      "encoder/config.json": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "e8e6a37c189f9dd23976b86b3e1ddb6928472e9f87c94103a1aaff311f45f090"
+    }
+  },
+  "onnx": {
+    "dir": "onnx",
+    "file": "model.onnx",
+    "opset": 18,
+    "produced_by": "eidolon-laya export-onnx"
+  }
+}

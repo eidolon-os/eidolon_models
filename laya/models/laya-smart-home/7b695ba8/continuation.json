@@ -1,0 +1,66 @@
+{
+ "schema_version": 1,
+ "model_revision": "7b695ba8",
+ "state_format": "continuation-laya-v1",
+ "spec": {
+  "path": "laya/train/scenarios/smart-home-continuation/LABELING.md",
+  "sections": "§1 调用前置条件, §2 题目与状态",
+  "git_blob": "70f78f872278880c38ac421c8fac2872184c08a9"
+ },
+ "endpoint": "POST /v1/systemone {state, questions}，同单句；Laya 不保存会话状态",
+ "single_sentence": {
+  "questions": "与 r14 相同（Agent 适配器 INTENT_QUESTION / device / ACTION_QUESTION 原样）",
+  "agent_min_confidence": 0.8
+ },
+ "questions": {
+  "pick": {
+   "type": "choice",
+   "instructions": "Agent 刚问用户要对哪台设备执行 `context.待执行`。`utterance` 是否明确选了其中一台，且没有改动作？",
+   "options": "每台候选设备一个：选项名 = 设备名（重名按 device_options 规则），说明 = 房间·类型（SDK 中文类型）；顺序以 Agent 问句为准；之后接两个出口",
+   "exits": {
+    "取消": "用户明确不要执行这次待确认的操作，也没有提出别的要求",
+    "重新理解": "改了动作或数值、要多台或候选之外的设备、没说清是哪台、提问、闲聊或提出新要求"
+   },
+   "state": {
+    "utterance": "…",
+    "context": {
+     "上一句": "…",
+     "Agent": "Agent 问出去的那句（choose_one）",
+     "待执行": "动作短语（frames.py action_phrase）"
+    }
+   }
+  },
+  "follow": {
+   "type": "choice",
+   "instructions": "`context.设备` 刚被操作或查询过。`utterance` 是否是对这些设备的一个明确操作？",
+   "actions": {
+    "打开或启动": "开启、启动、开始运行",
+    "关闭或停止": "关掉、停止、断电、收起",
+    "调高或增大": "调亮、升温、调大音量或档位",
+    "调低或减小": "调暗、降温、调小、降下",
+    "设为指定的数值或模式": "设到具体的温度、档位、百分比或模式",
+    "暂停": "暂时停下，之后再继续"
+   },
+   "options": "焦点设备都支持的动作（按上表顺序、多台取交集，不含上锁），最后接出口；follow 没有取消",
+   "exits": {
+    "重新理解": "换了或增加设备、只针对其中一部分、撤销刚才的操作、保持不动、提问、闲聊或其他新要求"
+   },
+   "state": {
+    "utterance": "…",
+    "context": {
+     "上一句": "…",
+     "Agent": "Agent 回给用户的那句（done_phrase / 查询状态）",
+     "设备": [
+      "焦点设备名"
+     ]
+    }
+   }
+  }
+ },
+ "policy": {
+  "tau_exec": 0.95,
+  "tau_cancel": 0.5,
+  "rule": "top 是可执行选项且 p ≥ tau_exec → 执行；top 是取消且 p ≥ tau_cancel → 取消；其余交还 LLM",
+  "frozen": "在 c-dev 上按 PLAN §5 取定，c-test 只用这组值跑过一次"
+ }
+}
