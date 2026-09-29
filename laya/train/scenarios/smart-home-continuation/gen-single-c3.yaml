@@ -1,0 +1,10 @@
+# c3（条件执行）：把 train/data/authored/smart-home-c3/*.jsonl（WRITING-single.md）转成单句记录并逐条校验金标。
+# 用法：eidolon-laya-train gen --scenario train/scenarios/smart-home --config <本文件> --out <run>/single-c3.jsonl
+generators:
+  - kind: import
+    adapter: authored_cases
+    name: authored-c3
+    path: ../../data/authored/smart-home-c3
+    homes:
+      - ../../../evals/smart-home
+      - ../../data/homes/smart-home
