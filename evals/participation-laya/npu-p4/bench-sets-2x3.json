@@ -1,0 +1,46 @@
+{
+ "records": 150,
+ "sets": 2,
+ "buckets": [
+  384,
+  512,
+  640
+ ],
+ "runtimes_loaded": 6,
+ "by_longest_bucket": {
+  "384": 104,
+  "512": 45,
+  "640": 1
+ },
+ "by_first_answer": {
+  "respond": 90,
+  "clarify": 5,
+  "wait": 12,
+  "finish": 43
+ },
+ "staged": {
+  "p50": 840.4,
+  "p95": 1080.7,
+  "mean": 778.9,
+  "p50_respond": 856.7,
+  "p50_clarify": 883.7,
+  "p50_wait": 443.0,
+  "p50_finish": 627.7,
+  "p50_longest_384": 840.5,
+  "p50_longest_512": 680.4,
+  "p50_longest_640": 903.1
+ },
+ "speculative": {
+  "p50": 498.0,
+  "p95": 762.5,
+  "mean": 563.7,
+  "p50_respond": 492.5,
+  "p50_clarify": 907.2,
+  "p50_wait": 484.3,
+  "p50_finish": 648.5,
+  "p50_longest_384": 484.3,
+  "p50_longest_512": 691.4,
+  "p50_longest_640": 908.1
+ },
+ "peak_rss_mb": 3555
+}
