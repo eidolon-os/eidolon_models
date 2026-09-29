@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "laya-participation",
+  "source": {
+    "hub": "local",
+    "repo_id": "eidolon-laya-train/laya-participation",
+    "subfolder": "",
+    "revision": "ae6718a4",
+    "run_id": null,
+    "checkpoint": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/p4/checkpoint"
+  },
+  "license": {
+    "checkpoint": "internal",
+    "base": "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-multilingual/1c5edc17/torch"
+  },
+  "runtime": {
+    "code": "laya (vendored, see src/eidolon_models_laya/vendor/laya/VENDOR_VERSION)",
+    "trained_max_len": 1024,
+    "head_max_len": 512,
+    "notes": "fine-tuned from /Users/manson/ai/eidolon/eidolon_models/laya/models/laya-multilingual/1c5edc17/torch; best epoch 3"
+  },
+  "torch": {
+    "dir": "torch",
+    "files": {
+      "model.safetensors": "ae6718a42fc32934d04047bc33bb584f0fab1d1b1f779e4680f5e7f91d7eba98",
+      "rl_agent_config.json": "f35ba08b343e2729453fc1c712c72eb6cd3c1dae116eedba3484ae499346bc37",
+      "encoder/config.json": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
+    }
+  },
+  "onnx": {
+    "dir": "onnx",
+    "file": "model.onnx",
+    "opset": 18,
+    "produced_by": "eidolon-laya export-onnx"
+  },
+  "task_profiles": {
+    "ip_team.participation": {
+      "path": "participation.json",
+      "sha256": "85063d9d0f369a8d1d0539ea729c8597a16ae7c6f995e52e5e313dca7f69cf7c"
+    }
+  }
+}
