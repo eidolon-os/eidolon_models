@@ -1,0 +1,12 @@
+home-alone home          n=1170 p50=326.9 p95=712.3 p99=731.6 max=808.3 {'decided': 458, 'abstain': 711, 'timeout': 1} acc=0.8406
+home-alone home_single   n= 525 p50=488.5 p95=720.6 p99=745.0 max=808.3 {'decided': 399, 'abstain': 125, 'timeout': 1} acc=0.9499
+home-alone home_continuation n= 645 p50=306.9 p95=332.8 p99=345.9 max=418.4 {'abstain': 586, 'decided': 59} acc=0.1017
+part-alone participation n= 623 p50=694.6 p95=1246.9 p99=1312.4 max=1506.2 {'decided': 554, 'abstain': 63, 'timeout': 2, 'busy': 4} acc=0.9964
+both       home          n= 323 p50=320.6 p95=771.5 p99=788.5 max=802.8 {'decided': 136, 'abstain': 186, 'timeout': 1} acc=0.8456
+both       home_single   n= 146 p50=524.9 p95=780.7 p99=793.5 max=802.8 {'decided': 118, 'abstain': 27, 'timeout': 1} acc=0.9576
+both       home_continuation n= 177 p50=295.6 p95=339.6 p99=359.2 max=366.5 {'abstain': 159, 'decided': 18} acc=0.1111
+both       participation n= 623 p50=748.8 p95=1267.8 p99=1374.5 max=1503.9 {'decided': 554, 'abstain': 63, 'timeout': 2, 'busy': 4} acc=0.9964
+collide    home          n= 100 p50=329.1 p95=790.4 p99=833.4 max=833.4 {'decided': 34, 'abstain': 62, 'timeout': 4} acc=0.7647
+collide    home_single   n=  42 p50=536.4 p95=817.9 p99=833.4 max=833.4 {'decided': 28, 'abstain': 10, 'timeout': 4} acc=0.9286
+collide    home_continuation n=  58 p50=315.3 p95=332.5 p99=380.6 max=380.6 {'abstain': 52, 'decided': 6} acc=0.0
+collide    participation n= 100 p50=751.3 p95=1291.3 p99=1388.2 max=1388.2 {'decided': 92, 'abstain': 8} acc=1.0
