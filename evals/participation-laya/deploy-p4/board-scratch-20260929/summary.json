@@ -1,0 +1,285 @@
+{
+ "decision_points": 623,
+ "decided": 558,
+ "abstained": 65,
+ "coverage": 0.8957,
+ "action_accuracy_on_decided": 0.9964,
+ "e2e_accuracy_on_decided": 0.9875,
+ "stop_violations_on_decided": 0,
+ "abstention_reasons": {
+  "low_confidence": 65
+ },
+ "abstained_ids": [
+  "DC-0005#3",
+  "DC-0006#4",
+  "DC-0009#0",
+  "DC-0014#3",
+  "DC-0017#1",
+  "DC-0017#3",
+  "DC-0019#5",
+  "DC-0020#1",
+  "DC-0022#2",
+  "DC-0023#2",
+  "DC-0027#4",
+  "DC-0029#3",
+  "DC-0030#2",
+  "DC-0030#3",
+  "DC-0031#1",
+  "DC-0036#3",
+  "DC-0040#2",
+  "DC-0041#3",
+  "DC-0041#5",
+  "DC-0042#3",
+  "DC-0045#1",
+  "DC-0048#6",
+  "DC-0051#1",
+  "DT-0004#2",
+  "DT-0005#2",
+  "DT-0006#2",
+  "DT-0006#3",
+  "DT-0007#1",
+  "DT-0008#3",
+  "DT-0011#1",
+  "DT-0011#4",
+  "DT-0012#0",
+  "DT-0014#1",
+  "DT-0014#3",
+  "DT-0018#2",
+  "DT-0020#3",
+  "DT-0025#2",
+  "DT-0026#2",
+  "DT-0028#3",
+  "DT-0029#2",
+  "DT-0029#3",
+  "DT-0030#3",
+  "DT-0031#3",
+  "DT-0032#3",
+  "DT-0033#0",
+  "DT-0038#0",
+  "DT-0039#1",
+  "DT-0040#0",
+  "DT-0040#6",
+  "DT-0041#2",
+  "DT-0043#4",
+  "DT-0044#5",
+  "DT-0051#3",
+  "DT-0051#4",
+  "DT-0053#3",
+  "DT-0054#3",
+  "DT-0054#4",
+  "DT-0055#2",
+  "DT-0055#3",
+  "DT-0056#2",
+  "DT-0056#4",
+  "DT-0056#5",
+  "DT-0058#1",
+  "DT-0063#1",
+  "DT-0063#3"
+ ],
+ "abstained_gold_actions": {
+  "finish": 33,
+  "respond": 23,
+  "wait": 3,
+  "clarify": 6
+ },
+ "same_as_pytorch": 614,
+ "differences_from_pytorch": [
+  {
+   "id": "DC-0007#1",
+   "deployed": {
+    "status": "decided",
+    "action": "finish",
+    "participants": [],
+    "confidence": 0.9501
+   },
+   "pytorch": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9473
+   }
+  },
+  {
+   "id": "DC-0007#2",
+   "deployed": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "ailin"
+    ],
+    "confidence": 0.9501
+   },
+   "pytorch": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9496
+   }
+  },
+  {
+   "id": "DC-0027#1",
+   "deployed": {
+    "status": "decided",
+    "action": "finish",
+    "participants": [],
+    "confidence": 0.9505
+   },
+   "pytorch": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9487
+   }
+  },
+  {
+   "id": "DC-0030#2",
+   "deployed": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9483
+   },
+   "pytorch": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "haibo"
+    ],
+    "confidence": 0.9522
+   }
+  },
+  {
+   "id": "DC-0031#0",
+   "deployed": {
+    "status": "decided",
+    "action": "clarify",
+    "participants": [
+     "sun"
+    ],
+    "confidence": 0.9588
+   },
+   "pytorch": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9486
+   }
+  },
+  {
+   "id": "DT-0011#1",
+   "deployed": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9475
+   },
+   "pytorch": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "xi"
+    ],
+    "confidence": 0.9533
+   }
+  },
+  {
+   "id": "DT-0012#0",
+   "deployed": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.9493
+   },
+   "pytorch": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "man"
+    ],
+    "confidence": 0.9538
+   }
+  },
+  {
+   "id": "DT-0024#0",
+   "deployed": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "lv"
+    ],
+    "confidence": 0.9519
+   },
+   "pytorch": {
+    "status": "abstained",
+    "action": null,
+    "participants": [],
+    "confidence": 0.947
+   }
+  },
+  {
+   "id": "DT-0051#0",
+   "deployed": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "yaoyao"
+    ],
+    "confidence": 0.9767
+   },
+   "pytorch": {
+    "status": "decided",
+    "action": "respond",
+    "participants": [
+     "yuhui"
+    ],
+    "confidence": 0.9768
+   }
+  }
+ ],
+ "service_ms": {
+  "p50": 696.0,
+  "p95": 1244.0,
+  "by_action_p50": {
+   "abstained": [
+    65,
+    673.0
+   ],
+   "clarify": [
+    12,
+    1277.0
+   ],
+   "finish": [
+    252,
+    624.0
+   ],
+   "respond": [
+    261,
+    881.0
+   ],
+   "wait": [
+    33,
+    450.0
+   ]
+  }
+ },
+ "policy_version": "participation-laya-v1/ae6718a4/min0.95",
+ "model_version": "ae6718a4",
+ "min_confidence": 0.95,
+ "hashes": {
+  "p_dev_files": {
+   "evals/participation-laya/dev/dev-companion.jsonl": "9b5a32ab6e017775fcc9b0f692101d45e8aacde32e4d9d844dff60d2423beebd",
+   "evals/participation-laya/dev/dev-team.jsonl": "2990a14fa2db755f61cf3c78d491816b3587445dbd37e85ddfa1bf2b7a23a0cd"
+  },
+  "participation.json": "85063d9d0f369a8d1d0539ea729c8597a16ae7c6f995e52e5e313dca7f69cf7c",
+  "manifest.json": "ffd02531c3072e8786c1dbd9ad2107caf329615d3a1b2acb652fee225b146213",
+  "model_files": {
+   "rl_agent_config.json": "f35ba08b343e2729453fc1c712c72eb6cd3c1dae116eedba3484ae499346bc37",
+   "encoder/config.json": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+   "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+  },
+  "responses.jsonl": "d592a5138655ae19c3fd6cafce5a75024ce22a2de8bc6a9311cda8e4f0d302f1",
+  "items.jsonl": "2fb3264c04e351eac45c1cb7ecdfea34d1f7fd5deecfa73c0ee67476436a4bf7"
+ },
+ "eidolon_models_revision": "0aa4921fc3d0cc806ca2f189431695f93bc30260",
+ "laya_src_uncommitted_changes": false
+}
