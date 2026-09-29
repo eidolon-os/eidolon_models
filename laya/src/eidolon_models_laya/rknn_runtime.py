@@ -144,6 +144,31 @@ class RknnRuntime:
                 "rknn_outputs_release",
             )
 
+    def dup(self, core: int) -> RknnRuntime:
+        """Another context of the same model on ``core`` that shares this one's weights (``rknn_dup_context``).
+
+        Every ``rknn_init`` of a Laya graph holds its own ~280 MiB of weights, and the NPU's address space is
+        shared by every model on the board (about 14 such graphs fit on the RK3588). A duplicate adds ~36 MiB
+        and returns bit-identical outputs (measured, participation EXPERIMENTS.md). Close duplicates first.
+        """
+        if core not in (0, 1, 2):
+            raise ValueError("NPU core must be 0, 1 or 2")
+        if not self._ctx.value:
+            raise RuntimeError("RKNN context is closed")
+        function = self._lib.rknn_dup_context
+        function.argtypes = [C.POINTER(C.c_uint64), C.POINTER(C.c_uint64)]
+        function.restype = C.c_int
+        other = object.__new__(RknnRuntime)
+        other._lib, other._ctx = self._lib, C.c_uint64()
+        _check(function(C.byref(self._ctx), C.byref(other._ctx)), "rknn_dup_context")
+        try:
+            _check(self._lib.rknn_set_core_mask(other._ctx, 1 << core), "rknn_set_core_mask")
+        except BaseException:
+            other.close()
+            raise
+        other._inputs, other._output = self._inputs, self._output
+        return other
+
     def close(self) -> None:
         if self._ctx.value:
             self._lib.rknn_destroy(self._ctx)

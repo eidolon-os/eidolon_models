@@ -1,5 +1,5 @@
 [Unit]
-Description=Eidolon local Laya decision suggestions
+Description=Eidolon local Laya participation decisions (companion / role team)
 After=local-fs.target network.target
 StartLimitIntervalSec=0
 
@@ -8,12 +8,12 @@ Type=simple
 User=eidolon
 Group=eidolon
 EnvironmentFile=/etc/eidolon/host.env
-# NPU core placement (EIDOLON_LAYA_RKNN_PLACEMENT) is tuned there, with the participation service's.
+# NPU core placement (EIDOLON_LAYA_PARTICIPATION_RKNN_PLACEMENT) is tuned there, with the smart-home service's.
 EnvironmentFile=-/etc/eidolon/cpu-allocation.env
-Environment=EIDOLON_LAYA_HOST=127.0.0.1
-Environment=EIDOLON_LAYA_PORT=8771
+Environment=EIDOLON_LAYA_PARTICIPATION_HOST=127.0.0.1
+Environment=EIDOLON_LAYA_PARTICIPATION_PORT=8773
 Environment=PATH=/opt/eidolon/current/eidolon_models/.venv/bin:/usr/local/bin:/usr/bin:/bin
-ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-laya serve
+ExecStart=/opt/eidolon/current/eidolon_models/scripts/eidolon-laya-participation serve
 Restart=on-failure
 RestartSec=2
 TimeoutStartSec=180

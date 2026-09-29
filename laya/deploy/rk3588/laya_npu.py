@@ -342,8 +342,15 @@ def cmd_bench_sets(args) -> int:
 
     out = {"staged": [], "speculative": []}
     kinds = []
+    cpu = {"staged": 0.0, "speculative": 0.0}  # process CPU seconds (user + sys) spent in each schedule
+
+    def cpu_now():
+        r = resource.getrusage(resource.RUSAGE_SELF)
+        return r.ru_utime + r.ru_stime
+
     with ThreadPoolExecutor(args.sets) as pool:
         for q in recs:
+            c0 = cpu_now()
             # staged: first alone on set 0, then the needed ones on sets 0.. in parallel
             t = time.perf_counter()
             kind = answer(q[first], run_on(0, q[first]))
@@ -351,6 +358,8 @@ def cmd_bench_sets(args) -> int:
             list(pool.map(lambda kx: run_on(kx[0] % args.sets, q[kx[1]]), enumerate(need)))
             out["staged"].append((time.perf_counter() - t) * 1000)
             kinds.append(kind)
+            cpu["staged"] += cpu_now() - c0
+            c0 = cpu_now()
             # speculative: first on set 0 and the next sets-1 questions of the gate on sets 1..
             spec = [x for x in order[1:args.sets] if x in q]
             t = time.perf_counter()
@@ -369,6 +378,7 @@ def cmd_bench_sets(args) -> int:
             out["speculative"].append((time.perf_counter() - t) * 1000)
             for f in fut.values():  # dropped work finishes before the next decision (not timed)
                 f.result()
+            cpu["speculative"] += cpu_now() - c0
     for rt in sets:
         for r in rt.values():
             r.release()
@@ -378,7 +388,7 @@ def cmd_bench_sets(args) -> int:
            "by_first_answer": {k: kinds.count(k) for k in then if kinds.count(k)}}
     for label, ts in out.items():
         res[label] = {"p50": round(statistics.median(ts), 1), "p95": round(sorted(ts)[int(0.95 * (len(ts) - 1))], 1),
-                      "mean": round(statistics.mean(ts), 1)}
+                      "mean": round(statistics.mean(ts), 1), "cpu_ms_per_decision": round(cpu[label] / len(ts) * 1000, 1)}
         for k in then:
             sub = [x for x, kk in zip(ts, kinds) if kk == k]
             if sub:

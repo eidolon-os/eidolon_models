@@ -110,6 +110,35 @@ class OnnxBackend:
         }
 
 
+def limit_blas_threads(n: int = 1) -> list[str]:
+    """Set numpy's OpenBLAS pool to ``n`` threads, what ``OPENBLAS_NUM_THREADS`` does at startup.
+
+    On the NPU backend the CPU half is a few small matmuls per question (scorer, act head). With OpenBLAS's
+    default pool — one thread per core — each costs ~20 ms and ~160 ms of CPU on the RK3588, and the pool
+    spins between calls: 1.9 s of CPU per smart-home request, against 67 ms with one thread. Returns what was
+    set (empty where numpy is not on OpenBLAS, e.g. macOS's Accelerate)."""
+    import ctypes
+
+    done = []
+    try:
+        maps = Path("/proc/self/maps").read_text()
+    except OSError:
+        return done
+    paths = sorted({f[-1] for f in (line.split() for line in maps.splitlines())
+                    if len(f) > 5 and f[-1].startswith("/") and "openblas" in Path(f[-1]).name.lower()})
+    for path in paths:
+        lib = ctypes.CDLL(path)
+        for name in ("scipy_openblas_set_num_threads64_", "scipy_openblas_set_num_threads",
+                     "openblas_set_num_threads64_", "openblas_set_num_threads"):
+            function = getattr(lib, name, None)
+            if function is not None:
+                function.argtypes, function.restype = [ctypes.c_int], None
+                function(n)
+                done.append(f"{Path(path).name}:{name}({n})")
+                break
+    return done
+
+
 def parse_placement(text: str) -> dict[int, tuple[int, ...]]:
     """``"0:128,256|1:256,384,512"`` -> {0: (128, 256), 1: (256, 384, 512)}."""
     out = {}
@@ -127,8 +156,9 @@ class RknnBackend:
     marker gather, scorer and act head on the CPU (numpy).
 
     The items of one batch (the questions of one request) run in parallel, one queue per NPU core.
-    Each core loads only the buckets in its placement — every bucket on every core runs the NPU out of
-    memory — and an item goes to the least-loaded core that has its bucket.
+    Each core loads only the buckets in its placement and an item goes to the least-loaded core that has its
+    bucket. A bucket placed on several cores is loaded once and duplicated onto the others (shared weights):
+    the NPU address space is shared by every model on the board, so each copy of the weights counts.
     """
 
     name = "rknn"
@@ -153,14 +183,21 @@ class RknnBackend:
         self._buckets = sorted(files)
         self.max_len = max(self._buckets)
         self._rt = {}
+        self._duplicates = 0
+        first = {}
         try:
             for core, bs in self._placement.items():
                 for L in bs:
-                    self._rt[(core, L)] = RknnRuntime(files[L], core)
+                    if L in first and hasattr(first[L], "dup"):
+                        self._rt[(core, L)] = first[L].dup(core)
+                        self._duplicates += 1
+                    else:
+                        first[L] = self._rt[(core, L)] = RknnRuntime(files[L], core)
         except BaseException:
-            for runtime in self._rt.values():
+            for runtime in reversed(list(self._rt.values())):  # duplicates before the originals
                 runtime.close()
             raise
+        self._blas = limit_blas_threads(1)
         self._emb = np.load(npu_dir / "tok_emb_fp16.npy", mmap_mode="r")
         self._type = np.load(npu_dir / "type_emb.npy")
         self._sc = dict(np.load(npu_dir / "scorer.npz"))
@@ -251,4 +288,6 @@ class RknnBackend:
             "precision": {"weights": "float16", "compute": "float16"},
             "buckets": self._buckets,
             "placement": {str(c): list(bs) for c, bs in self._placement.items()},
+            "weight_copies": len(self._rt) - self._duplicates,
+            "cpu_blas": self._blas or "not OpenBLAS",
         }

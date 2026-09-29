@@ -89,7 +89,12 @@ class _FakeRuntime:
     ran: list = []
 
     def __init__(self, model, core):
-        self.path, self.core = str(model), core
+        self.path, self.core, self.dup_of = str(model), core, None
+
+    def dup(self, core):
+        other = _FakeRuntime(self.path, core)
+        other.dup_of = self
+        return other
 
     def infer(self, inputs):
         x, mask, tv = inputs
@@ -142,6 +147,25 @@ def test_rknn_backend_places_buckets_and_matches_the_cpu_half(rknn_dir):
         np.testing.assert_allclose(act[i], export_npu.act_from_logits(h[0], ref, ah), rtol=1e-4, atol=1e-4)
     assert {c for c, _ in _FakeRuntime.ran} == {0, 1, 2}  # three questions, three cores
     assert (1, 384) in _FakeRuntime.ran  # the long one went to the only core with its bucket
+
+
+def test_rknn_backend_loads_each_bucket_once_and_duplicates_it_onto_other_cores(rknn_dir):
+    from eidolon_models_laya.backends import RknnBackend
+
+    be = RknnBackend(rknn_dir)  # default placement: 128 and 256 on two or three cores each
+    originals = {Path(r.path).name: r for r in be._rt.values() if r.dup_of is None}
+    assert sorted(originals) == ["hidden_l128.rknn", "hidden_l256.rknn", "hidden_l384.rknn", "hidden_l512.rknn"]
+    for (core, L), r in be._rt.items():
+        assert r.core == core and Path(r.path).name == f"hidden_l{L}.rknn"
+        assert r.dup_of is None or r.dup_of is originals[f"hidden_l{L}.rknn"]
+    assert be.describe()["weight_copies"] == 4 and len(be._rt) == 7
+
+
+def test_limit_blas_threads_is_harmless_without_openblas(monkeypatch):
+    from eidolon_models_laya import backends
+
+    monkeypatch.setattr(backends.Path, "read_text", lambda self, *a, **k: "")
+    assert backends.limit_blas_threads(1) == []
 
 
 def test_rknn_backend_refuses_a_bucket_on_no_core(rknn_dir):
