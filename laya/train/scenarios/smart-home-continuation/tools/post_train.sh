@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# r14 基线：train/runs/r14-reeval（用当前 evaluate 代码重跑 r14 权重；旧 r14/eval 报告的 auto_execute 口径不同）。
 # 训练后的固定流程（PLAN.md §4–5）：校准 → 分任务温度 → c-dev / diag-44 → 单句三套开发集回归 → 指标 → 换序。
 # 不跑 c-test。用法（在 laya/ 下）：train/scenarios/smart-home-continuation/tools/post_train.sh train/runs/c1 [device]
 set -euo pipefail
@@ -16,7 +17,7 @@ $BIN calibrate --checkpoint "$R/checkpoint" --calib "$R/dataset/calib.jsonl" --d
 $BIN eval --checkpoint "$R/checkpoint" --eval-set $E/c-dev.jsonl --eval-set $E/diag-44.jsonl \
   --out "$R/eval-c" --device "$DEV" > "$R/eval-c.log" 2>&1
 $BIN eval --checkpoint "$R/checkpoint" --eval-set $S/locked-182.jsonl --eval-set $S/locked-v2-dev.jsonl \
-  --eval-set $S/locked-v3-dev.jsonl --out "$R/eval" --baseline train/runs/r14/eval --alpha 0.05 \
+  --eval-set $S/locked-v3-dev.jsonl --out "$R/eval" --baseline train/runs/r14-reeval --alpha 0.05 \
   --device "$DEV" > "$R/eval.log" 2>&1 || true   # 门槛不过时 eval 以非零退出，报告照写
 .venv/bin/python $T/cmetrics.py --report "$R/eval-c/c-dev.json" --out "$R/eval-c/c-dev.metrics.json"
 .venv/bin/python $T/cmetrics.py --report "$R/eval-c/diag-44.json" --out "$R/eval-c/diag-44.metrics.json"
@@ -27,12 +28,12 @@ import json, sys
 R = sys.argv[1]
 out = {}
 for s in ("locked-182", "locked-v2-dev", "locked-v3-dev"):
-    c = json.load(open(f"{R}/eval/{s}.json")); b = json.load(open(f"train/runs/r14/eval/{s}.json"))
+    c = json.load(open(f"{R}/eval/{s}.json")); b = json.load(open(f"train/runs/r14-reeval/{s}.json"))  # r14 用当前 evaluate 代码重跑的报告
     g = json.load(open(f"{R}/eval/{s}.gate.json"))
     ca, ba = c["decision"]["auto_execute"], b["decision"]["auto_execute"]
     out[s] = {"acc": [b["overall"]["acc"], c["overall"]["acc"]],
               "auto_exec_coverage": [ba["coverage"], ca["coverage"]],
-              "auto_exec_precision": [ba["precision"], ca["precision"]],
+              "auto_exec_precision_verified": [ba["precision_verified"], ca["precision_verified"]],
               "control_e2e": [b["decision"]["control_e2e"]["acc"], c["decision"]["control_e2e"]["acc"]],
               "paired_gate_passed": g["passed"]}
 json.dump(out, open(f"{R}/eval/single-sentence.json", "w"), ensure_ascii=False, indent=1)

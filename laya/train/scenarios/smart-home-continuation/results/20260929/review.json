@@ -76,7 +76,8 @@
       "auto_exec_0.9_coverage_r14": 0.7643,
       "auto_exec_0.9_coverage_candidate": 0.0,
       "auto_exec_0.9_precision_r14": 1.0,
-      "existing_gate_passed": true
+      "existing_gate_passed": true,
+      "auto_exec_0.9_coverage_r14_current_code": 0.7214
     },
     "locked-v2-dev": {
       "n": 165,
@@ -85,7 +86,8 @@
       "auto_exec_0.9_coverage_r14": 0.7018,
       "auto_exec_0.9_coverage_candidate": 0.0,
       "auto_exec_0.9_precision_r14": 0.9753,
-      "existing_gate_passed": true
+      "existing_gate_passed": true,
+      "auto_exec_0.9_coverage_r14_current_code": 0.6491
     },
     "locked-v3-dev": {
       "n": 360,
@@ -94,7 +96,9 @@
       "auto_exec_0.9_coverage_r14": 0.4352,
       "auto_exec_0.9_coverage_candidate": 0.0,
       "auto_exec_0.9_precision_r14": 0.8364,
-      "existing_gate_passed": true
+      "existing_gate_passed": true,
+      "auto_exec_0.9_coverage_r14_current_code": 0.4074
     }
-  }
+  },
+  "note_r14_baseline": "auto_exec_0.9_coverage_r14 取自旧 r14/eval 报告；同一 evaluate 代码重跑 r14 的值见 *_current_code（train/runs/r14-reeval）。结论不变：候选为 0。"
 }
