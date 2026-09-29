@@ -1,7 +1,8 @@
 """Home and participation Laya services side by side, as the Agent would see them.
 
     # on the Mac: build the request bodies (home dev sets as the Agent adapter sends them; p-dev as SDK requests)
-    uv run python deploy/rk3588/concurrency.py prepare --model-dir models/laya-participation/ae6718a4 --out <dir>
+    uv run python deploy/rk3588/concurrency.py prepare --model-dir models/laya-participation/ae6718a4 --out <dir> \
+        [--continuation evals/smart-home-continuation/c-dev.jsonl]   # c4：续接题也走家居服务
     # on the board (stdlib only): one scenario per call, results appended to <dir>/<scenario>.jsonl
     python3 concurrency.py run <dir> home-alone | part-alone | both | collide
     # anywhere: summary against the Agent's budgets
@@ -37,6 +38,8 @@ PART_BUDGET_MS = 1500
 HOME_URL = "http://127.0.0.1:8771/v1/systemone"
 PART_URL = "http://127.0.0.1:8773/v1/participation/decide"
 MULTI, NONE = "多个设备或整屋", "没有对应的设备"
+CANCEL, REDO = "取消", "重新理解"
+CONT_EXEC_P, CONT_CANCEL_P = 0.95, 0.5  # models/laya-smart-home/7b695ba8/continuation.json policy
 
 
 def prepare(a) -> int:
@@ -54,6 +57,12 @@ def prepare(a) -> int:
                 body = {"state": r["state"], "questions": r["questions"]}  # the adapter sends no ask_if
                 gold = {q: v["gold"] for q, v in r["labels"].items()}
                 f.write(json.dumps({"id": r["id"], "set": name, "body": body, "gold": gold}, ensure_ascii=False) + "\n")
+        for path in a.continuation or ():  # c4 续接题（pick / follow）走同一个家居服务、同一个 800 ms 预算
+            for line in Path(path).read_text("utf-8").splitlines():
+                r = json.loads(line)
+                body = {"state": r["state"], "questions": r["questions"]}
+                gold = {q: v["gold"] for q, v in r["labels"].items()}
+                f.write(json.dumps({"id": r["id"], "set": Path(path).stem, "body": body, "gold": gold}, ensure_ascii=False) + "\n")
     tasks = json.loads((Path(a.model_dir) / "participation.json").read_text("utf-8"))["clarify_instructions"]
     with (out / "participation.jsonl").open("w", encoding="utf-8") as f:
         for ep in load([str(p) for p in sorted((EVALS / "dev").glob("*.jsonl"))]):
@@ -215,6 +224,14 @@ def home_outcome(r: dict, gold: dict) -> dict:
     ans = r["answers"]
     if r.get("truncated"):
         return {"outcome": "abstain", "reason": "truncated"}
+    cq = next((q for q in ("pick", "follow") if q in ans), None)
+    if cq is not None:
+        choice, p = ans[cq].get("choice"), ans[cq].get("p") or 0
+        if choice not in (CANCEL, REDO) and p >= CONT_EXEC_P:
+            return {"outcome": "decided", "correct": _is_gold(choice, gold.get(cq))}
+        if cq == "pick" and choice == CANCEL and p >= CONT_CANCEL_P:
+            return {"outcome": "decided", "correct": _is_gold(choice, gold.get(cq))}
+        return {"outcome": "abstain", "reason": "continuation_to_llm"}
     intent, device, action = (ans.get(q, {}).get("choice") for q in ("intent", "device", "action"))
     keys = ["intent"]
     if intent != "无关":
@@ -276,11 +293,12 @@ def overlapped(r: dict, others: list[dict]) -> bool:
 
 def report(a) -> int:
     d = Path(a.dir)
-    gold = {}
+    gold, sets = {}, {}
     for name in ("home", "participation"):
         for line in (d / f"{name}.jsonl").read_text("utf-8").splitlines():
             it = json.loads(line)
             gold[it["id"]] = it["gold"]
+            sets[it["id"]] = it.get("set", "")
     tasks = json.loads((d / "clarify_instructions.json").read_text("utf-8"))
     out = {"budgets": {"home_ms": HOME_BUDGET_MS, "home_min_p": HOME_MIN_P, "participation_ms": PART_BUDGET_MS}}
     for sc in ("home-alone", "part-alone", "both", "collide"):
@@ -305,6 +323,11 @@ def report(a) -> int:
             if kind == "home":
                 sm = [r["server_ms"] for r in mine if r.get("server_ms") is not None]
                 res[kind]["server_ms_p50"], res[kind]["server_ms_p95"] = q(sm, .5), q(sm, .95)
+                cont = [i for i, r in enumerate(mine) if sets.get(r["id"], "").startswith("c-")]
+                if cont:
+                    single = [i for i in range(len(mine)) if i not in set(cont)]
+                    for name, idx in (("home_single", single), ("home_continuation", cont)):
+                        res[name] = summarize([mine[i] for i in idx], [oc[i] for i in idx])
         ticks = meta.get("cpu_ticks") or {}
         if ticks:
             res["cpu_s_by_pid"] = {p: t / meta["clk_tck"] for p, t in ticks.items()}
@@ -332,7 +355,7 @@ def report(a) -> int:
     for sc, res in out.items():
         if not isinstance(res, dict) or "wall_s" not in res:
             continue
-        for kind in ("home", "participation"):
+        for kind in ("home", "home_single", "home_continuation", "participation"):
             if kind in res:
                 s = res[kind]
                 print(f"{sc:10s} {kind:13s} n={s['n']:4d} p50={s['p50']} p95={s['p95']} p99={s['p99']} max={s['max']} "
@@ -346,6 +369,7 @@ def main() -> int:
     p = sub.add_parser("prepare")
     p.add_argument("--model-dir", required=True)
     p.add_argument("--out", required=True)
+    p.add_argument("--continuation", action="append", help="续接记录（evals/smart-home-continuation/c-dev.jsonl），加进家居流")
     p = sub.add_parser("run")
     p.add_argument("dir")
     p.add_argument("scenario", choices=("home-alone", "part-alone", "both", "collide"))
