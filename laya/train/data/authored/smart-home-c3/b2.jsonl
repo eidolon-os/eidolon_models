@@ -37,7 +37,7 @@
 {"home": "townhouse", "text": "麻烦把家里窗帘都拉上", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
 {"home": "townhouse", "text": "把地下室那几个设备统统关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
 {"home": "townhouse", "text": "花园灯跟喷灌都给我打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control"]}
-{"home": "townhouse", "text": "把三楼灯全部熄了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "townhouse", "text": "把三楼灯全部熄了", "intent": "控制", "device": "书房台灯", "action": "关闭或停止", "tags": ["c3-multi-control", "single-contrast", "only-one-in-home", "qa-fixed"]}
 {"home": "townhouse", "text": "楼上房间的灯都关一下", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
 {"home": "townhouse", "text": "把客厅餐厅的灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control"]}
 {"home": "townhouse", "text": "全屋新风跟扫地机器人都给我启动一下", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control"]}

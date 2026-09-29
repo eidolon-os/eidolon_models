@@ -1,0 +1,95 @@
+{"qid": "b2:29", "intent": "查询", "device": "儿童房空调"}
+{"qid": "b4:20", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:91", "intent": "控制", "device": "米家台灯Pro", "action": "关闭或停止"}
+{"qid": "b1:67", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:2", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:89", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小"}
+{"qid": "b4:26", "intent": "查询", "device": "储物间灯"}
+{"qid": "b3:55", "intent": "查询", "device": "小度音箱"}
+{"qid": "b4:37", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"qid": "b4:14", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:34", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"qid": "b4:27", "intent": "查询", "device": "水泵"}
+{"qid": "b1:7", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:49", "intent": "控制", "device": "公共洗衣机", "action": ["暂停", "关闭或停止"]}
+{"qid": "b3:53", "intent": "查询", "device": "美的风尊空调"}
+{"qid": "b2:40", "intent": "控制", "device": "书房台灯", "action": "关闭或停止", "note": "三楼只有书房台灯一盏灯（露台无灯），按“只有一台符合时标那一台”；说话人用了“全部”，若金标按字面标多个设备或整屋也说得通"}
+{"qid": "b3:95", "intent": "控制", "device": "婴儿房空调", "action": "设为指定的数值或模式"}
+{"qid": "b2:27", "intent": "查询", "device": "花园喷灌"}
+{"qid": "b2:6", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:84", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:82", "intent": "查询", "device": "窗帘"}
+{"qid": "b3:89", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"qid": "b5:83", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"qid": "b3:94", "intent": "控制", "device": "婴儿房窗帘", "action": "关闭或停止"}
+{"qid": "b3:56", "intent": "查询", "device": "鹿客门锁"}
+{"qid": "b3:16", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:44", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:61", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:78", "intent": "查询", "device": "二楼浴霸"}
+{"qid": "b2:26", "intent": "查询", "device": "花园灯"}
+{"qid": "b4:42", "intent": "控制", "device": "堂屋空调", "action": "关闭或停止"}
+{"qid": "b5:68", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:80", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "note": "“用完都关一下”按“用完了、现在关”读；若读成条件指令（用完后再关）动作可加 设为指定的数值或模式"}
+{"qid": "b3:12", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:96", "intent": "控制", "device": "扫地机", "action": "打开或启动"}
+{"qid": "b1:8", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:60", "intent": "查询", "device": "显示器插座"}
+{"qid": "b5:18", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:33", "intent": "查询", "device": "次卧顶灯"}
+{"qid": "b1:82", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"qid": "b5:9", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:19", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:22", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b2:62", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:20", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:16", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:42", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "note": "无称呼的祈使句默认对助手说；“一起开了”也可读成陈述已开（无关），按控制标"}
+{"qid": "b2:45", "intent": "控制", "device": "客厅吊灯", "action": "关闭或停止"}
+{"qid": "b5:91", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小"}
+{"qid": "b4:21", "intent": "查询", "device": "鸡舍灯"}
+{"qid": "b4:85", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:11", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:82", "intent": "查询", "device": "灯"}
+{"qid": "b5:24", "intent": "查询", "device": "我房间的台灯"}
+{"qid": "b3:31", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:15", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:89", "intent": "查询", "device": "音箱"}
+{"qid": "b5:31", "intent": "查询", "device": "我房间加湿器"}
+{"qid": "b4:12", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:40", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:69", "intent": "查询", "device": "二楼书房灯"}
+{"qid": "b2:95", "intent": "控制", "device": "客厅净化器", "action": "打开或启动"}
+{"qid": "b1:50", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:19", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b1:70", "intent": "查询", "device": "二楼扫地机"}
+{"qid": "b3:66", "intent": "查询", "device": "扫地机器人"}
+{"qid": "b2:19", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:81", "intent": "查询", "device": "顶灯"}
+{"qid": "b4:61", "intent": "查询", "device": "扫地机"}
+{"qid": "b3:36", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:19", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:88", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"qid": "b5:53", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:28", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:72", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式"}
+{"qid": "b3:10", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:10", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b2:87", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "调高或增大", "设为指定的数值或模式"]}
+{"qid": "b3:86", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"qid": "b4:16", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b3:21", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:17", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:67", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b2:80", "intent": "查询", "device": "次卧灯"}
+{"qid": "b4:66", "intent": "查询", "device": "咖啡机"}
+{"qid": "b1:15", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b2:51", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b5:85", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"qid": "b5:60", "intent": "查询", "device": "多个设备或整屋"}
+{"qid": "b4:73", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"qid": "b1:84", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"qid": "b4:74", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止"}
+{"qid": "b2:75", "intent": "查询", "device": "电暖器"}
+{"qid": "b3:90", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动"}
+{"qid": "b4:9", "intent": "查询", "device": "多个设备或整屋"}
