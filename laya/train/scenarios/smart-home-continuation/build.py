@@ -203,7 +203,6 @@ def diag44() -> list[Record]:
 def cmd_records(args) -> None:
     w, fx = writes(), fixes()
     homes = {h: load_home(h) for hs in SPLIT_HOMES.values() for h in hs}
-    rng = random.Random(29)
     stats: dict = {}
     by_split: dict[str, list[Record]] = {}
     for split in ("train", "dev", "test"):
@@ -229,7 +228,8 @@ def cmd_records(args) -> None:
             meta = {"writer_batch": row["writer_batch"]} | ({"rule": rule} if rule else {})
             recs.append(to_record(f, u, gold, source="claude-writer", meta=meta))
             st["written"] += 1
-            for g, g_gold, kind in counterparts(f, u, gold, homes, rng):
+            # 每个剧本自己的随机数：评测集的对照副本不随训练池批次变化
+            for g, g_gold, kind in counterparts(f, u, gold, homes, random.Random(f["frame_id"])):
                 recs.append(to_record(g, u, g_gold, source="counterpart-rule", extra_tags=[kind], meta=meta))
                 st[kind] += 1
         by_split[split] = recs

@@ -7,7 +7,7 @@ tag_weights:
   multi-device: 1.5
 sources:
   - path: "{run}/continuation.jsonl"      # build.py records：Claude 写手 + 规则对照副本
-    weight: 1.0
+    weight: 2.0                            # 续接每条 1 题、单句每条 3 题：×2 后续接约占训练题目的 10%
   - path: "../../runs/r14/dataset/train.jsonl"
     weight: 1.0
   - path: "../../runs/r14/dataset/val.jsonl"

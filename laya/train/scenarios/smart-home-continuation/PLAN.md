@@ -80,6 +80,7 @@
 - 数据：`frames.py`（提交 `95ba747`）生成的剧本；训练池 20 批写手（00–13 Sonnet、14–19 Opus），c-dev 4 批 Opus，c-test 4 批 Sonnet；
   盲标抽检训练池 10%、c-dev 与 c-test 全量。数据哈希见运行目录 `train/runs/c1/dataset/manifest.json`。
 - 配方：`train-c1.yaml`（r14 配方，2 epoch，batch 8 × grad_accum 2）；校准 `assemble-c1.yaml` 的 calib（单句 + 续接混合）。
+  续接训练池权重 2.0（训练前补登记：续接每条 1 题、单句每条 3 题，权重 1.0 时续接只占训练题目约 3.4%，×2 后约 10%）。
 - 写手调用：28 批 + 试点 1 批；盲标约 10 批。GLM 不用。
 - 预期：续接 c-dev argmax ≥ 90%；按 §5 选出的阈值下接管率 ≥ 50%；单句三套开发集不回退。
   最可能的失败：`follow` 里“撤销 / 保持 / 隐含抱怨”被判成动作（错误执行），以及 `pick` 里委托 / 附和被判成某一台。
