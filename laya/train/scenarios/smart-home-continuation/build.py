@@ -67,6 +67,28 @@ def fixes() -> dict[str, dict]:
     return {r["frame_id"]: r for r in read(p)} if p.exists() else {}
 
 
+def _bigrams(text: str) -> set[str]:
+    return {text[k:k + 2] for k in range(len(text) - 1)}
+
+
+def visible_hits(f: dict, utterance: str) -> dict[str, int]:
+    """每个候选在状态里看得见的文字（选项名 + 房间·类型）有几个二字片段出现在话里。"""
+    return {lab: sum(b in utterance for b in _bigrams(lab + f["options"][lab])) for lab in f["labels"]}
+
+
+def check_visible(f: dict, utterance: str, gold: str, split: str) -> tuple[str | None, str | None]:
+    """LABELING C10：返回 (金标, 规则名)；金标为 None 表示丢弃。"""
+    if f["question"] != "pick" or gold in (CANCEL, REDO):
+        return gold, None
+    hits = visible_hits(f, utterance)
+    unique = hits[gold] > 0 and all(v < hits[gold] for k, v in hits.items() if k != gold)
+    if f["family"] == "P02" and not unique:
+        return REDO, "c10-invisible-feature"
+    if split == "train" and f["family"] in SELECT_FAMILIES and hits[gold] == 0:
+        return None, "c10-no-overlap"
+    return gold, None
+
+
 def gold_class(q: str, gold: str) -> str:
     return "取消" if gold == CANCEL else "重新理解" if gold == REDO else "执行"
 
@@ -198,9 +220,13 @@ def cmd_records(args) -> None:
             if fix.get("drop"):
                 st["dropped_by_fix"] += 1
                 continue
-            gold = fix.get("gold", f["gold"])
             u = " ".join(str(row["utterance"]).split())
-            meta = {"writer_batch": row["writer_batch"]}
+            gold, rule = check_visible(f, u, fix.get("gold", f["gold"]), split)
+            if rule:
+                st[rule] += 1
+            if gold is None:
+                continue
+            meta = {"writer_batch": row["writer_batch"]} | ({"rule": rule} if rule else {})
             recs.append(to_record(f, u, gold, source="claude-writer", meta=meta))
             st["written"] += 1
             for g, g_gold, kind in counterparts(f, u, gold, homes, rng):
@@ -275,6 +301,7 @@ def cmd_blind_report(args) -> None:
         for row in read(p):
             f = key[row["frame_id"]]
             gold = fx.get(f["frame_id"], {}).get("gold", f["gold"])
+            gold, _rule = check_visible(f, w[f["frame_id"]]["utterance"], gold, split)
             n += 1
             if row["label"] == gold:
                 agree += 1
