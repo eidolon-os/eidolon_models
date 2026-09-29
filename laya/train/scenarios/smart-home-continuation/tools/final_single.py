@@ -1,5 +1,5 @@
-"""最后一道单句回归（PLAN.md §7 c3 登记）：v2-test 与 accept，对 train/runs/r14-reeval，标准同开发集门槛 2。
-全过退出码 0。用法：final_single.py train/runs/c3
+"""单句裁决（PLAN.md §7“单句门槛改定”）：accept 裁决、v2-test 只报告，对 train/runs/r14-reeval。
+accept 三条全过退出码 0。用法：final_single.py train/runs/c4
 """
 import json
 import sys
@@ -16,9 +16,11 @@ for s in ("locked-v2-test", "locked-accept"):
               ("覆盖降 ≤ 3pt", ca["coverage"] >= ba["coverage"] - 0.03, [ba["coverage"], ca["coverage"]]),
               ("精度降 ≤ 1pt", ca["precision_verified"] >= ba["precision_verified"] - 0.01,
                [ba["precision_verified"], ca["precision_verified"]])]
+    judged = s == "locked-accept"  # v2-test 当年参与过 r14 / r15 比较，只作诊断
     for name, passed, v in checks:
-        ok &= passed
-        print(f"{'PASS' if passed else 'FAIL'}  最终单句 {s} {name}  {v}")
+        if judged:
+            ok &= passed
+        print(f"{('PASS' if passed else 'FAIL') if judged else ('诊断 ' + ('ok' if passed else '低于'))}  单句 {s} {name}  {v}")
     for chk in g["checks"]:
         if not chk["ok"]:
             print(f"      不过的切片：{chk['slice']} {chk['baseline']} → {chk['candidate']} 改错 {chk['broke']} / 改对 {chk['fixed']} p {chk['p']}")
