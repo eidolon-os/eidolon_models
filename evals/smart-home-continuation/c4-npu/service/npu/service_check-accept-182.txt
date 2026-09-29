@@ -1,0 +1,10 @@
+c4 pid 2751816 {"status": "ready", "backend": "rknn"}
+mapped from NPU device: 20 regions 1128 MiB
+  choice differs smart-home/W1-0283 device: service 没有对应的设备 vs eval 多个设备或整屋
+  choice differs smart-home/W4-0143 intent: service 控制 vs eval 无关
+check/locked-accept.jsonl: 2398 answers, 2 choice differences, max |dp| 0.3020; 1141 requests p50 656 / p95 685 / max 731 ms
+  choice differs smart-home/06-07 device: service 多个设备或整屋 vs eval 床头灯
+check/locked-182.jsonl: 465 answers, 1 choice differences, max |dp| 0.0394; 182 requests p50 400 / p95 661 / max 703 ms
+check rc 1
+stopped 2751816
+== done 2026-09-30T02:24:47+08:00
