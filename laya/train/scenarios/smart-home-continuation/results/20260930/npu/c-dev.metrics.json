@@ -1,0 +1,784 @@
+{
+ "report": "train/runs/c4/npu/eval/c-dev.json",
+ "thresholds": "frozen",
+ "overall": {
+  "tau_exec": 0.95,
+  "tau_cancel": 0.5,
+  "n": 645,
+  "counts": {
+   "正确执行": 238,
+   "错误执行": 0,
+   "正确取消": 48,
+   "错误取消": 3,
+   "漏掉续接": 49,
+   "正确交还": 307
+  },
+  "takeover": 0.8537,
+  "takeover_of_all": 0.4434,
+  "wrong_exec_rate_of_auto": 0.0,
+  "wrong_exec_upper95_of_auto": 0.0125,
+  "wrong_cancel_rate": 0.0047,
+  "argmax_acc": 0.9581
+ },
+ "grid": [
+  {
+   "tau_exec": 0.5,
+   "tau_cancel": 0.5,
+   "n": 645,
+   "counts": {
+    "正确执行": 266,
+    "错误执行": 4,
+    "正确取消": 48,
+    "错误取消": 3,
+    "漏掉续接": 20,
+    "正确交还": 304
+   },
+   "takeover": 0.9373,
+   "takeover_of_all": 0.4868,
+   "wrong_exec_rate_of_auto": 0.0148,
+   "wrong_exec_upper95_of_auto": 0.0336,
+   "wrong_cancel_rate": 0.0047,
+   "argmax_acc": 0.9581,
+   "tau": 0.5
+  },
+  {
+   "tau_exec": 0.6,
+   "tau_cancel": 0.6,
+   "n": 645,
+   "counts": {
+    "正确执行": 264,
+    "错误执行": 3,
+    "正确取消": 48,
+    "错误取消": 3,
+    "漏掉续接": 22,
+    "正确交还": 305
+   },
+   "takeover": 0.9313,
+   "takeover_of_all": 0.4837,
+   "wrong_exec_rate_of_auto": 0.0112,
+   "wrong_exec_upper95_of_auto": 0.0288,
+   "wrong_cancel_rate": 0.0047,
+   "argmax_acc": 0.9581,
+   "tau": 0.6
+  },
+  {
+   "tau_exec": 0.7,
+   "tau_cancel": 0.7,
+   "n": 645,
+   "counts": {
+    "正确执行": 262,
+    "错误执行": 1,
+    "正确取消": 48,
+    "错误取消": 2,
+    "漏掉续接": 25,
+    "正确交还": 307
+   },
+   "takeover": 0.9254,
+   "takeover_of_all": 0.4806,
+   "wrong_exec_rate_of_auto": 0.0038,
+   "wrong_exec_upper95_of_auto": 0.0179,
+   "wrong_cancel_rate": 0.0031,
+   "argmax_acc": 0.9581,
+   "tau": 0.7
+  },
+  {
+   "tau_exec": 0.8,
+   "tau_cancel": 0.8,
+   "n": 645,
+   "counts": {
+    "正确执行": 257,
+    "错误执行": 1,
+    "正确取消": 47,
+    "错误取消": 2,
+    "漏掉续接": 31,
+    "正确交还": 307
+   },
+   "takeover": 0.9075,
+   "takeover_of_all": 0.4713,
+   "wrong_exec_rate_of_auto": 0.0039,
+   "wrong_exec_upper95_of_auto": 0.0183,
+   "wrong_cancel_rate": 0.0031,
+   "argmax_acc": 0.9581,
+   "tau": 0.8
+  },
+  {
+   "tau_exec": 0.85,
+   "tau_cancel": 0.85,
+   "n": 645,
+   "counts": {
+    "正确执行": 253,
+    "错误执行": 1,
+    "正确取消": 47,
+    "错误取消": 2,
+    "漏掉续接": 35,
+    "正确交还": 307
+   },
+   "takeover": 0.8955,
+   "takeover_of_all": 0.4651,
+   "wrong_exec_rate_of_auto": 0.0039,
+   "wrong_exec_upper95_of_auto": 0.0185,
+   "wrong_cancel_rate": 0.0031,
+   "argmax_acc": 0.9581,
+   "tau": 0.85
+  },
+  {
+   "tau_exec": 0.9,
+   "tau_cancel": 0.9,
+   "n": 645,
+   "counts": {
+    "正确执行": 248,
+    "错误执行": 1,
+    "正确取消": 46,
+    "错误取消": 1,
+    "漏掉续接": 41,
+    "正确交还": 308
+   },
+   "takeover": 0.8776,
+   "takeover_of_all": 0.4558,
+   "wrong_exec_rate_of_auto": 0.004,
+   "wrong_exec_upper95_of_auto": 0.0189,
+   "wrong_cancel_rate": 0.0016,
+   "argmax_acc": 0.9581,
+   "tau": 0.9
+  },
+  {
+   "tau_exec": 0.95,
+   "tau_cancel": 0.95,
+   "n": 645,
+   "counts": {
+    "正确执行": 238,
+    "错误执行": 0,
+    "正确取消": 44,
+    "错误取消": 0,
+    "漏掉续接": 53,
+    "正确交还": 310
+   },
+   "takeover": 0.8418,
+   "takeover_of_all": 0.4372,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0125,
+   "wrong_cancel_rate": 0.0,
+   "argmax_acc": 0.9581,
+   "tau": 0.95
+  },
+  {
+   "tau_exec": 0.97,
+   "tau_cancel": 0.97,
+   "n": 645,
+   "counts": {
+    "正确执行": 216,
+    "错误执行": 0,
+    "正确取消": 41,
+    "错误取消": 0,
+    "漏掉续接": 78,
+    "正确交还": 310
+   },
+   "takeover": 0.7672,
+   "takeover_of_all": 0.3984,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0138,
+   "wrong_cancel_rate": 0.0,
+   "argmax_acc": 0.9581,
+   "tau": 0.97
+  },
+  {
+   "tau_exec": 0.99,
+   "tau_cancel": 0.99,
+   "n": 645,
+   "counts": {
+    "正确执行": 110,
+    "错误执行": 0,
+    "正确取消": 4,
+    "错误取消": 0,
+    "漏掉续接": 221,
+    "正确交还": 310
+   },
+   "takeover": 0.3403,
+   "takeover_of_all": 0.1767,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0269,
+   "wrong_cancel_rate": 0.0,
+   "argmax_acc": 0.9581,
+   "tau": 0.99
+  }
+ ],
+ "by_question": {
+  "pick": {
+   "tau_exec": 0.95,
+   "tau_cancel": 0.5,
+   "n": 422,
+   "counts": {
+    "正确执行": 149,
+    "错误执行": 0,
+    "正确取消": 48,
+    "错误取消": 3,
+    "漏掉续接": 41,
+    "正确交还": 181
+   },
+   "takeover": 0.8277,
+   "takeover_of_all": 0.4668,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0199,
+   "wrong_cancel_rate": 0.0071,
+   "argmax_acc": 0.9479
+  },
+  "follow": {
+   "tau_exec": 0.95,
+   "tau_cancel": 0.5,
+   "n": 223,
+   "counts": {
+    "正确执行": 89,
+    "错误执行": 0,
+    "正确取消": 0,
+    "错误取消": 0,
+    "漏掉续接": 8,
+    "正确交还": 126
+   },
+   "takeover": 0.9175,
+   "takeover_of_all": 0.3991,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0331,
+   "wrong_cancel_rate": 0.0,
+   "argmax_acc": 0.9776
+  },
+  "utt-seen-in-train": {
+   "tau_exec": 0.95,
+   "tau_cancel": 0.5,
+   "n": 138,
+   "counts": {
+    "正确执行": 72,
+    "错误执行": 0,
+    "正确取消": 8,
+    "错误取消": 0,
+    "漏掉续接": 16,
+    "正确交还": 42
+   },
+   "takeover": 0.8333,
+   "takeover_of_all": 0.5797,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0408,
+   "wrong_cancel_rate": 0.0,
+   "argmax_acc": 0.9855
+  },
+  "utt-novel": {
+   "tau_exec": 0.95,
+   "tau_cancel": 0.5,
+   "n": 507,
+   "counts": {
+    "正确执行": 166,
+    "错误执行": 0,
+    "正确取消": 40,
+    "错误取消": 3,
+    "漏掉续接": 33,
+    "正确交还": 265
+   },
+   "takeover": 0.8619,
+   "takeover_of_all": 0.4063,
+   "wrong_exec_rate_of_auto": 0.0,
+   "wrong_exec_upper95_of_auto": 0.0179,
+   "wrong_cancel_rate": 0.0059,
+   "argmax_acc": 0.9507
+  }
+ },
+ "by_family": {
+  "F01": {
+   "n": 58,
+   "argmax_acc": 0.9655,
+   "正确执行": 54,
+   "漏掉续接": 4
+  },
+  "F02": {
+   "n": 10,
+   "argmax_acc": 1.0,
+   "正确执行": 10
+  },
+  "F03": {
+   "n": 17,
+   "argmax_acc": 0.9412,
+   "正确执行": 15,
+   "漏掉续接": 2
+  },
+  "F04": {
+   "n": 12,
+   "argmax_acc": 0.9167,
+   "正确执行": 10,
+   "漏掉续接": 2
+  },
+  "F06": {
+   "n": 5,
+   "argmax_acc": 1.0,
+   "正确交还": 5
+  },
+  "F07": {
+   "n": 24,
+   "argmax_acc": 1.0,
+   "正确交还": 24
+  },
+  "F08": {
+   "n": 2,
+   "argmax_acc": 1.0,
+   "正确交还": 2
+  },
+  "F09": {
+   "n": 23,
+   "argmax_acc": 1.0,
+   "正确交还": 23
+  },
+  "F10": {
+   "n": 10,
+   "argmax_acc": 0.9,
+   "正确交还": 10
+  },
+  "F11": {
+   "n": 18,
+   "argmax_acc": 1.0,
+   "正确交还": 18
+  },
+  "F12": {
+   "n": 13,
+   "argmax_acc": 1.0,
+   "正确交还": 13
+  },
+  "F13": {
+   "n": 31,
+   "argmax_acc": 1.0,
+   "正确交还": 31
+  },
+  "P01": {
+   "n": 85,
+   "argmax_acc": 0.9176,
+   "正确执行": 60,
+   "漏掉续接": 8,
+   "正确交还": 17
+  },
+  "P02": {
+   "n": 4,
+   "argmax_acc": 0.5,
+   "正确执行": 2,
+   "漏掉续接": 2
+  },
+  "P03": {
+   "n": 53,
+   "argmax_acc": 0.9811,
+   "正确执行": 37,
+   "漏掉续接": 16
+  },
+  "P04": {
+   "n": 42,
+   "argmax_acc": 0.9762,
+   "正确执行": 29,
+   "漏掉续接": 5,
+   "正确交还": 8
+  },
+  "P05": {
+   "n": 11,
+   "argmax_acc": 0.9091,
+   "正确执行": 8,
+   "漏掉续接": 2,
+   "正确交还": 1
+  },
+  "P06": {
+   "n": 13,
+   "argmax_acc": 0.8462,
+   "正确执行": 7,
+   "漏掉续接": 3,
+   "正确交还": 3
+  },
+  "P07": {
+   "n": 8,
+   "argmax_acc": 0.875,
+   "正确执行": 6,
+   "漏掉续接": 2
+  },
+  "P08": {
+   "n": 7,
+   "argmax_acc": 0.8571,
+   "错误取消": 1,
+   "正确交还": 6
+  },
+  "P09": {
+   "n": 30,
+   "argmax_acc": 0.9667,
+   "错误取消": 1,
+   "正确交还": 29
+  },
+  "P10": {
+   "n": 22,
+   "argmax_acc": 1.0,
+   "正确交还": 22
+  },
+  "P11": {
+   "n": 27,
+   "argmax_acc": 1.0,
+   "正确交还": 27
+  },
+  "P12": {
+   "n": 16,
+   "argmax_acc": 0.9375,
+   "错误取消": 1,
+   "正确交还": 15
+  },
+  "P13": {
+   "n": 4,
+   "argmax_acc": 0.75,
+   "正确交还": 4
+  },
+  "P14": {
+   "n": 51,
+   "argmax_acc": 0.9412,
+   "正确取消": 48,
+   "漏掉续接": 3
+  },
+  "P15": {
+   "n": 9,
+   "argmax_acc": 1.0,
+   "正确交还": 9
+  },
+  "P16": {
+   "n": 8,
+   "argmax_acc": 1.0,
+   "正确交还": 8
+  },
+  "P17": {
+   "n": 16,
+   "argmax_acc": 1.0,
+   "正确交还": 16
+  },
+  "P18": {
+   "n": 16,
+   "argmax_acc": 1.0,
+   "正确交还": 16
+  }
+ },
+ "errors": [
+  {
+   "record_id": "smart-home-continuation/f9d0495e96ad",
+   "outcome": "正确交还",
+   "tags": [
+    "pick-重新理解",
+    "pick",
+    "P13"
+   ],
+   "gold": "重新理解",
+   "pred": "自动喂食器（阳台）",
+   "p_top": 0.4659
+  },
+  {
+   "record_id": "smart-home-continuation/e05d7cf202aa",
+   "outcome": "漏掉续接",
+   "tags": [
+    "follow-执行",
+    "follow",
+    "F04"
+   ],
+   "gold": "调高或增大",
+   "pred": "重新理解",
+   "p_top": 0.9475
+  },
+  {
+   "record_id": "smart-home-continuation/211026b40ea4",
+   "outcome": "漏掉续接",
+   "tags": [
+    "follow-执行",
+    "follow",
+    "F01"
+   ],
+   "gold": "打开或启动",
+   "pred": "重新理解",
+   "p_top": 0.5536
+  },
+  {
+   "record_id": "smart-home-continuation/a69543d50c84",
+   "outcome": "错误取消",
+   "tags": [
+    "pick-重新理解",
+    "pick",
+    "P09"
+   ],
+   "gold": "重新理解",
+   "pred": "取消",
+   "p_top": 0.9354
+  },
+  {
+   "record_id": "smart-home-continuation/927b15f7c46c",
+   "outcome": "漏掉续接",
+   "tags": [
+    "follow-执行",
+    "follow",
+    "F03"
+   ],
+   "gold": "设为指定的数值或模式",
+   "pred": "重新理解",
+   "p_top": 0.6405
+  },
+  {
+   "record_id": "smart-home-continuation/c9eafda56b62",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P01",
+    "utt-seen-in-train"
+   ],
+   "gold": "客厅灯",
+   "pred": "重新理解",
+   "p_top": 0.9311
+  },
+  {
+   "record_id": "smart-home-continuation/a01bb8a58b50",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P04"
+   ],
+   "gold": "狗粮喂食器",
+   "pred": "重新理解",
+   "p_top": 0.9363
+  },
+  {
+   "record_id": "smart-home-continuation/eef488a8261c",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P01"
+   ],
+   "gold": "猫粮喂食器",
+   "pred": "重新理解",
+   "p_top": 0.846
+  },
+  {
+   "record_id": "smart-home-continuation/2f29b2828a71",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P01"
+   ],
+   "gold": "客厅空调",
+   "pred": "重新理解",
+   "p_top": 0.9843
+  },
+  {
+   "record_id": "smart-home-continuation/ee95763fa782",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-取消",
+    "pick",
+    "P14"
+   ],
+   "gold": "取消",
+   "pred": "重新理解",
+   "p_top": 0.8394
+  },
+  {
+   "record_id": "smart-home-continuation/5a236af65260",
+   "outcome": "漏掉续接",
+   "tags": [
+    "follow-执行",
+    "follow",
+    "F01"
+   ],
+   "gold": "打开或启动",
+   "pred": "重新理解",
+   "p_top": 0.9692
+  },
+  {
+   "record_id": "smart-home-continuation/f5bffb07371d",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P02"
+   ],
+   "gold": "过道感应灯",
+   "pred": "重新理解",
+   "p_top": 0.9962
+  },
+  {
+   "record_id": "smart-home-continuation/b23a0ffbed78",
+   "outcome": "正确交还",
+   "tags": [
+    "pick-重新理解",
+    "pick",
+    "P01",
+    "cp-absent"
+   ],
+   "gold": "重新理解",
+   "pred": "床边夜灯",
+   "p_top": 0.9477
+  },
+  {
+   "record_id": "smart-home-continuation/f9f26cc9b540",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P01",
+    "utt-seen-in-train"
+   ],
+   "gold": "猫粮喂食器",
+   "pred": "重新理解",
+   "p_top": 0.5767
+  },
+  {
+   "record_id": "smart-home-continuation/8965a5b22039",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P06"
+   ],
+   "gold": "狗粮喂食器",
+   "pred": "重新理解",
+   "p_top": 0.9647
+  },
+  {
+   "record_id": "smart-home-continuation/d52290a1bafc",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P06"
+   ],
+   "gold": "储藏室抽湿机",
+   "pred": "重新理解",
+   "p_top": 0.5248
+  },
+  {
+   "record_id": "smart-home-continuation/28362474754e",
+   "outcome": "正确交还",
+   "tags": [
+    "follow-重新理解",
+    "follow",
+    "F10"
+   ],
+   "gold": "重新理解",
+   "pred": "关闭或停止",
+   "p_top": 0.6875
+  },
+  {
+   "record_id": "smart-home-continuation/3b4cd1642cec",
+   "outcome": "错误取消",
+   "tags": [
+    "pick-重新理解",
+    "pick",
+    "P08"
+   ],
+   "gold": "重新理解",
+   "pred": "取消",
+   "p_top": 0.6757
+  },
+  {
+   "record_id": "smart-home-continuation/89e3b91077e2",
+   "outcome": "错误取消",
+   "tags": [
+    "pick-重新理解",
+    "pick",
+    "P12"
+   ],
+   "gold": "重新理解",
+   "pred": "取消",
+   "p_top": 0.8989
+  },
+  {
+   "record_id": "smart-home-continuation/c78802bb8bdc",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P02"
+   ],
+   "gold": "走廊夜灯",
+   "pred": "重新理解",
+   "p_top": 0.9951
+  },
+  {
+   "record_id": "smart-home-continuation/b6c85e0dc148",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P05"
+   ],
+   "gold": "床边夜灯",
+   "pred": "重新理解",
+   "p_top": 0.905
+  },
+  {
+   "record_id": "smart-home-continuation/1417f971bf1e",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P01"
+   ],
+   "gold": "客厅空调",
+   "pred": "重新理解",
+   "p_top": 0.8062
+  },
+  {
+   "record_id": "smart-home-continuation/cdeb89c81764",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P03",
+    "cp-reorder"
+   ],
+   "gold": "院子灯",
+   "pred": "客厅灯",
+   "p_top": 0.6443
+  },
+  {
+   "record_id": "smart-home-continuation/76236d8a35e1",
+   "outcome": "正确交还",
+   "tags": [
+    "pick-重新理解",
+    "pick",
+    "P01",
+    "cp-absent"
+   ],
+   "gold": "重新理解",
+   "pred": "床边夜灯",
+   "p_top": 0.5494
+  },
+  {
+   "record_id": "smart-home-continuation/0b0cdbdaa7da",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-取消",
+    "pick",
+    "P14"
+   ],
+   "gold": "取消",
+   "pred": "重新理解",
+   "p_top": 0.9938
+  },
+  {
+   "record_id": "smart-home-continuation/db19c609a315",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-执行",
+    "pick",
+    "P07"
+   ],
+   "gold": "自动喂食器（客厅）",
+   "pred": "重新理解",
+   "p_top": 0.9602
+  },
+  {
+   "record_id": "smart-home-continuation/8db510be55ff",
+   "outcome": "漏掉续接",
+   "tags": [
+    "pick-取消",
+    "pick",
+    "P14"
+   ],
+   "gold": "取消",
+   "pred": "重新理解",
+   "p_top": 0.868
+  }
+ ]
+}

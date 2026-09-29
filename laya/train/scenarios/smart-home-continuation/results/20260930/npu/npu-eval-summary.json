@@ -1,0 +1,39 @@
+{
+ "c-dev": {
+  "acc": 0.9581,
+  "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+  "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
+ },
+ "locked-182": {
+  "acc": 0.9849,
+  "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+  "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9",
+  "auto_exec_0.9_coverage": 0.7643,
+  "precision_verified": 0.9897,
+  "control_e2e": 0.9597
+ },
+ "locked-v2-dev": {
+  "acc": 0.9569,
+  "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+  "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9",
+  "auto_exec_0.9_coverage": 0.6316,
+  "precision_verified": 0.9688,
+  "control_e2e": 0.86
+ },
+ "locked-v3-dev": {
+  "acc": 0.9505,
+  "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+  "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9",
+  "auto_exec_0.9_coverage": 0.4815,
+  "precision_verified": 0.9286,
+  "control_e2e": 0.9231
+ },
+ "locked-accept": {
+  "acc": 0.9737,
+  "checkpoint_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+  "checkpoint_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9",
+  "auto_exec_0.9_coverage": 0.692,
+  "precision_verified": 0.9756,
+  "control_e2e": 0.9386
+ }
+}

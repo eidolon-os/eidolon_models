@@ -1,0 +1,410 @@
+{
+ "c-dev": {
+  "items": 645,
+  "missing": 0,
+  "same_choice": 1.0,
+  "by_question": {
+   "follow": {
+    "n": 223,
+    "same": 223
+   },
+   "pick": {
+    "n": 422,
+    "same": 422
+   }
+  },
+  "max_abs_dp_calibrated": 0.06,
+  "max_abs_dlogit": 0.4632,
+  "flips": []
+ },
+ "locked-182": {
+  "items": 546,
+  "missing": 0,
+  "same_choice": 0.99817,
+  "by_question": {
+   "action": {
+    "n": 182,
+    "same": 182
+   },
+   "device": {
+    "n": 182,
+    "same": 181
+   },
+   "intent": {
+    "n": 182,
+    "same": 182
+   }
+  },
+  "max_abs_dp_calibrated": 0.0394,
+  "max_abs_dlogit": 0.6216,
+  "flips": [
+   {
+    "key": "smart-home/06-07/device",
+    "utterance": "开启观影模式",
+    "torch": [
+     "床头灯",
+     0.2172
+    ],
+    "npu": [
+     "多个设备或整屋",
+     0.2269
+    ],
+    "bucket": 256
+   }
+  ]
+ },
+ "locked-v2-dev": {
+  "items": 495,
+  "missing": 0,
+  "same_choice": 1.0,
+  "by_question": {
+   "action": {
+    "n": 165,
+    "same": 165
+   },
+   "device": {
+    "n": 165,
+    "same": 165
+   },
+   "intent": {
+    "n": 165,
+    "same": 165
+   }
+  },
+  "max_abs_dp_calibrated": 0.0816,
+  "max_abs_dlogit": 0.5512,
+  "flips": []
+ },
+ "locked-v3-dev": {
+  "items": 1080,
+  "missing": 0,
+  "same_choice": 0.99444,
+  "by_question": {
+   "action": {
+    "n": 360,
+    "same": 354
+   },
+   "device": {
+    "n": 360,
+    "same": 360
+   },
+   "intent": {
+    "n": 360,
+    "same": 360
+   }
+  },
+  "max_abs_dp_calibrated": 0.1008,
+  "max_abs_dlogit": 0.8002,
+  "flips": [
+   {
+    "key": "smart-home/A-041/action",
+    "utterance": "蒸箱里的鱼你别动，还差一会儿",
+    "torch": [
+     "调高或增大",
+     0.3534
+    ],
+    "npu": [
+     "打开或启动",
+     0.3352
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/A-137/action",
+    "utterance": "这灯怎么一闪一闪的，是不是灯管要换了",
+    "torch": [
+     "调低或减小",
+     0.3706
+    ],
+    "npu": [
+     "关闭或停止",
+     0.3665
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/A-176/action",
+    "utterance": "出差三天，冰箱里的菜得赶紧吃掉",
+    "torch": [
+     "设为指定的数值或模式",
+     0.4928
+    ],
+    "npu": [
+     "打开或启动",
+     0.5061
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/B-033/action",
+    "utterance": "旺财别冲它叫了，它就是个扫地的",
+    "torch": [
+     "关闭或停止",
+     0.438
+    ],
+    "npu": [
+     "设为指定的数值或模式",
+     0.4714
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/B-047/action",
+    "utterance": "楼梯这块儿黑咕隆咚的，给照个亮",
+    "torch": [
+     "调高或增大",
+     0.4976
+    ],
+    "npu": [
+     "打开或启动",
+     0.4975
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/B-089/action",
+    "utterance": "这电视屏幕上有个坏点，应该还在保修期吧",
+    "torch": [
+     "打开或启动",
+     0.2344
+    ],
+    "npu": [
+     "关闭或停止",
+     0.2402
+    ],
+    "bucket": 256
+   }
+  ]
+ },
+ "locked-accept": {
+  "items": 3423,
+  "missing": 0,
+  "same_choice": 0.99533,
+  "by_question": {
+   "action": {
+    "n": 1141,
+    "same": 1133
+   },
+   "device": {
+    "n": 1141,
+    "same": 1134
+   },
+   "intent": {
+    "n": 1141,
+    "same": 1140
+   }
+  },
+  "max_abs_dp_calibrated": 0.302,
+  "max_abs_dlogit": 1.8499,
+  "flips": [
+   {
+    "key": "smart-home/W1-0021/device",
+    "utterance": "你送豆豆去幼儿园，我送悠悠",
+    "torch": [
+     "多个设备或整屋",
+     0.2424
+    ],
+    "npu": [
+     "没有对应的设备",
+     0.186
+    ],
+    "bucket": 512
+   },
+   {
+    "key": "smart-home/W1-0035/device",
+    "utterance": "这段代码谁写的，一行注释都没有",
+    "torch": [
+     "全屋音箱",
+     0.1115
+    ],
+    "npu": [
+     "书房灯",
+     0.0979
+    ],
+    "bucket": 512
+   },
+   {
+    "key": "smart-home/W1-0091/device",
+    "utterance": "咱家电费这个月四百多，空调用得太狠了",
+    "torch": [
+     "二宝房间空调",
+     0.2522
+    ],
+    "npu": [
+     "大宝房间空调",
+     0.2297
+    ],
+    "bucket": 512
+   },
+   {
+    "key": "smart-home/W1-0121/device",
+    "utterance": "宝贝闭上眼睛，妈妈给你讲小熊的故事",
+    "torch": [
+     "没有对应的设备",
+     0.1808
+    ],
+    "npu": [
+     "大宝台灯",
+     0.1794
+    ],
+    "bucket": 512
+   },
+   {
+    "key": "smart-home/W1-0152/device",
+    "utterance": "扫地机又卡沙发底下了，你去把它拽出来",
+    "torch": [
+     "扫地机器人",
+     0.558
+    ],
+    "npu": [
+     "没有对应的设备",
+     0.5781
+    ],
+    "bucket": 512
+   },
+   {
+    "key": "smart-home/W1-0225/action",
+    "utterance": "闺女说空调别开太低，老年人受不了",
+    "torch": [
+     "调低或减小",
+     0.4781
+    ],
+    "npu": [
+     "设为指定的数值或模式",
+     0.477
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W1-0283/device",
+    "utterance": "浩浩他们来了，屋里热，空调开凉快点",
+    "torch": [
+     "多个设备或整屋",
+     0.5552
+    ],
+    "npu": [
+     "没有对应的设备",
+     0.4963
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W2-0140/action",
+    "utterance": "物业说热水器排烟管必须伸到窗外，不然验收不给过",
+    "torch": [
+     "关闭或停止",
+     0.4552
+    ],
+    "npu": [
+     "设为指定的数值或模式",
+     0.4585
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W2-0201/action",
+    "utterance": "客厅吸顶灯是房东留下的，灯罩都发黄了，想换又怕他不让",
+    "torch": [
+     "设为指定的数值或模式",
+     0.2846
+    ],
+    "npu": [
+     "关闭或停止",
+     0.2807
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W2-0208/action",
+    "utterance": "客厅这台柜机是我们结婚那年买的，开了七年还挺好使",
+    "torch": [
+     "关闭或停止",
+     0.3197
+    ],
+    "npu": [
+     "打开或启动",
+     0.3266
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W2-0236/action",
+    "utterance": "主卧空调一开就滴水，上回滴得床头柜上全是水",
+    "torch": [
+     "设为指定的数值或模式",
+     0.378
+    ],
+    "npu": [
+     "关闭或停止",
+     0.3727
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W3-0076/action",
+    "utterance": "这电视遥控器又没电了",
+    "torch": [
+     "打开或启动",
+     0.4524
+    ],
+    "npu": [
+     "关闭或停止",
+     0.4442
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W3-0089/action",
+    "utterance": "喂？喂？听得见不？我这边信号不好",
+    "torch": [
+     "调高或增大",
+     0.3003
+    ],
+    "npu": [
+     "打开或启动",
+     0.3091
+    ],
+    "bucket": 256
+   },
+   {
+    "key": "smart-home/W3-0147/device",
+    "utterance": "老婆……我没喝多……真没喝多",
+    "torch": [
+     "猫咪饮水机",
+     0.5055
+    ],
+    "npu": [
+     "没有对应的设备",
+     0.4611
+    ],
+    "bucket": 384
+   },
+   {
+    "key": "smart-home/W4-0143/intent",
+    "utterance": "大宝屋里的灯除了台灯都关了",
+    "torch": [
+     "无关",
+     0.4931
+    ],
+    "npu": [
+     "控制",
+     0.494
+    ],
+    "bucket": 128
+   },
+   {
+    "key": "smart-home/W4-0299/action",
+    "utterance": "记一下，今天给喂食器加过粮了",
+    "torch": [
+     "设为指定的数值或模式",
+     0.4647
+    ],
+    "npu": [
+     "打开或启动",
+     0.4835
+    ],
+    "bucket": 256
+   }
+  ]
+ }
+}
