@@ -1,5 +1,5 @@
 """只对 train/data/authored/smart-home-c3/ 套用 evals/smart-home-v2/purge_training_overlap.py 的同一规则：
-与锁定评测集（v1、v2、v3 开发集、验收集）相同或近似的行删掉，被删的写进 smart-home-c3/purged.jsonl。不碰别的 authored 目录。
+与锁定评测集（v1、v2、v3 开发集、验收集）相同或近似的行删掉，被删的写进 smart-home-c3/qa/purged.jsonl。不碰别的 authored 目录。
 """
 import json
 import sys
@@ -25,5 +25,5 @@ for f in sorted(root.glob("b*.jsonl")):
         else:
             keep.append(line)
     f.write_text("".join(x + "\n" for x in keep), "utf-8")
-(root / "purged.jsonl").write_text("".join(json.dumps(p, ensure_ascii=False) + "\n" for p in purged), "utf-8")
+(root / "qa" / "purged.jsonl").write_text("".join(json.dumps(p, ensure_ascii=False) + "\n" for p in purged), "utf-8")
 print(f"purged {len(purged)}", purged[:10])

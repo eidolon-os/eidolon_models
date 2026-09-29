@@ -1,0 +1,96 @@
+{"home": "rental", "text": "我屋里两盏灯都灭了没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "same-room-lights"]}
+{"home": "rental", "text": "两个空调现在是不是都开着呢", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all"]}
+{"home": "rental", "text": "公共区那边还有啥开着的", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "region", "which"]}
+{"home": "rental", "text": "现在运行中的设备有多少台", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home", "count"]}
+{"home": "rental", "text": "我屋里的电器全都断电了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "region"]}
+{"home": "rental", "text": "客厅跟我房间的灯是不是都还亮着", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-region"]}
+{"home": "rental", "text": "看一下公共区的东西都关好了没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "region"]}
+{"home": "rental", "text": "洗衣机跟扫地机哪个还在转", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "which", "progress"]}
+{"home": "rental", "text": "两台空调各自设的多少度啊", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "reading"]}
+{"home": "rental", "text": "我出门那会儿灯啊空调啊都关了没，有点不放心", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "所有的灯里头有哪几盏没灭", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all", "which"]}
+{"home": "rental", "text": "整个屋子现在都有哪些在耗电", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home", "which"]}
+{"home": "rental", "text": "公共区域空调电视还开着没有", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "我房间加湿器和空调现在啥状态", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "洗衣机扫地机今天都干完活没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "progress"]}
+{"home": "rental", "text": "三盏灯分别开着还是关着，查一下", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all"]}
+{"home": "rental", "text": "公共的热水器跟洗衣机有人在用吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "大门锁了没，客厅灯关了没，我躺床上懒得起来看", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "我这屋现在开着几样东西", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "region", "count"]}
+{"home": "rental", "text": "家里空调是不是全关了", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all"]}
+{"home": "rental", "text": "报一下全屋设备的状态", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home"]}
+{"home": "rental", "text": "公共区的灯和电视有没有人忘关", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "我房间插座和台灯还通着电没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "rental", "text": "我屋台灯灭了没", "intent": "查询", "device": "我房间的台灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "公共区空调现在开着没", "intent": "查询", "device": "公共区空调", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "扫地鸡今天扫完了没", "intent": "查询", "device": "公共区扫地机", "tags": ["c3-multi-query", "single-contrast", "asr-typo"]}
+{"home": "rental", "text": "我房间插座还通着电吗", "intent": "查询", "device": "我房间插座", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "客厅灯是不是还亮着", "intent": "查询", "device": "公共客厅灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "洗衣机还在转没", "intent": "查询", "device": "公共洗衣机", "tags": ["c3-multi-query", "single-contrast", "progress"]}
+{"home": "rental", "text": "我房间空调设的多少度", "intent": "查询", "device": "我房间空调", "tags": ["c3-multi-query", "single-contrast", "reading"]}
+{"home": "rental", "text": "我房间加湿器现在啥状态", "intent": "查询", "device": "我房间加湿器", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "大门那把锁锁上没", "intent": "查询", "device": "公共大门锁", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "客厅电视还开着没有", "intent": "查询", "device": "客厅公共电视", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "热水器有人在用吗", "intent": "查询", "device": "公共热水器", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "我屋顶上那盏大灯灭了没", "intent": "查询", "device": "我房间的灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "早上走的时候我屋那台空调关没关啊", "intent": "查询", "device": "我房间空调", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "rental", "text": "把我屋里的大灯台灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "same-room-lights"]}
+{"home": "rental", "text": "两台空调都给我调到二十六度", "intent": "控制", "device": "多个设备或整屋", "action": "设为指定的数值或模式", "tags": ["c3-multi-control", "category-all"]}
+{"home": "rental", "text": "公共区的东西全部关掉吧", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "region"]}
+{"home": "rental", "text": "我屋里的电器统统断电", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "region"]}
+{"home": "rental", "text": "所有灯都打开，黑乎乎的啥也看不见", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control", "category-all"]}
+{"home": "rental", "text": "客厅的灯和电视一起开了", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control", "cross-category"]}
+{"home": "rental", "text": "我房间空调家湿器一块儿开起来", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control", "cross-category", "asr-typo"]}
+{"home": "rental", "text": "除了台灯，别的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "except"]}
+{"home": "rental", "text": "俩空调温度都往下降两度", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["c3-multi-control", "category-all"]}
+{"home": "rental", "text": "台灯关了就行，大灯留着", "intent": "控制", "device": "我房间的台灯", "action": "关闭或停止", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "rental", "text": "就公共区那台空调调到二十六度", "intent": "控制", "device": "公共区空调", "action": "设为指定的数值或模式", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "rental", "text": "客厅电视开一下", "intent": "控制", "device": "客厅公共电视", "action": "打开或启动", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "rental", "text": "洗衣机先停一下", "intent": "控制", "device": "公共洗衣机", "action": ["暂停", "关闭或停止"], "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "studio", "text": "空调风扇俩现在都在转吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "studio", "text": "投影仪跟音箱关了没呀", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all"]}
+{"home": "studio", "text": "家里还有哪些电器在跑着", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home", "which"]}
+{"home": "studio", "text": "洗衣机扫地机都忙完了没有", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "progress"]}
+{"home": "studio", "text": "这会儿屋里开了几台机器", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home", "count"]}
+{"home": "studio", "text": "门锁上了没，窗帘拉好没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "studio", "text": "卫生间里那俩都关了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "region"]}
+{"home": "studio", "text": "整个屋子的设备帮我过一遍，看看情况", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home"]}
+{"home": "studio", "text": "放电影那套设备现在都啥情况", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all"]}
+{"home": "studio", "text": "扫地的洗衣服的那俩还在工作吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all", "progress"]}
+{"home": "studio", "text": "我在公司呢，想确认下家里电器全关了没有", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home"]}
+{"home": "studio", "text": "灯和投影仪还亮着没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "studio", "text": "热水器跟空调哪个还开着", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "which"]}
+{"home": "studio", "text": "我是不是有啥东西没关啊", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home"]}
+{"home": "studio", "text": "查查哪几台现在通着电", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home", "which"]}
+{"home": "studio", "text": "空掉风扇现在一个多少度一个几档", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "reading", "asr-typo"]}
+{"home": "studio", "text": "窗帘和灯现在什么状况", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "studio", "text": "屋里能吹风的开了几个", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "count"]}
+{"home": "studio", "text": "能出声儿的那些都停了没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "category-all"]}
+{"home": "studio", "text": "洗衣机和热水器今天各用了多久", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "history"]}
+{"home": "studio", "text": "家里电器一共开着几个，报个数", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "whole-home", "count"]}
+{"home": "studio", "text": "扫地机回没回座儿，窗帘合上没，哦对还有门锁", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query", "cross-category"]}
+{"home": "studio", "text": "风扇开着没", "intent": "查询", "device": "风扇", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "studio", "text": "音箱关了没呀", "intent": "查询", "device": "音箱", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "studio", "text": "洗衣机忙完了没有", "intent": "查询", "device": "洗衣机", "tags": ["c3-multi-query", "single-contrast", "progress"]}
+{"home": "studio", "text": "卫生间的热水器关了吗", "intent": "查询", "device": "热水器", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "studio", "text": "放电影那个投影现在啥情况", "intent": "查询", "device": "投影仪", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "studio", "text": "窗帘现在什么状况", "intent": "查询", "device": "窗帘", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "studio", "text": "空调现在多少度", "intent": "查询", "device": "空调", "tags": ["c3-multi-query", "single-contrast", "reading"]}
+{"home": "studio", "text": "扫地的那个还在工作吗", "intent": "查询", "device": "扫地机", "tags": ["c3-multi-query", "single-contrast", "progress"]}
+{"home": "studio", "text": "顶灯还亮着没", "intent": "查询", "device": "顶灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "studio", "text": "灯都关了吗", "intent": "查询", "device": "顶灯", "tags": ["c3-multi-query", "single-contrast", "only-one"]}
+{"home": "studio", "text": "窗帘都拉上了吗", "intent": "查询", "device": "窗帘", "tags": ["c3-multi-query", "single-contrast", "only-one"]}
+{"home": "studio", "text": "投影以和音箱一起关掉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "category-all", "asr-typo"]}
+{"home": "studio", "text": "空调风扇都给我打开，热死了", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control", "cross-category"]}
+{"home": "studio", "text": "窗帘拉开，灯也开一下", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control", "cross-category"]}
+{"home": "studio", "text": "把家里电器全关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "whole-home"]}
+{"home": "studio", "text": "除了空调，其他的都给我关掉", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "except"]}
+{"home": "studio", "text": "洗衣机扫地机都启动吧", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control", "category-all"]}
+{"home": "studio", "text": "音箱跟投影仪声音都小一点", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["c3-multi-control", "category-all"]}
+{"home": "studio", "text": "卫生间里的洗衣机热水器全给我停了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "region"]}
+{"home": "studio", "text": "空调和风扇都调低一档", "intent": "控制", "device": "多个设备或整屋", "action": "调低或减小", "tags": ["c3-multi-control", "cross-category"]}
+{"home": "studio", "text": "灯和窗帘都关上", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control", "cross-category"]}
+{"home": "studio", "text": "只关投影仪，音箱还要听", "intent": "控制", "device": "投影仪", "action": "关闭或停止", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "studio", "text": "把灯全关了", "intent": "控制", "device": "顶灯", "action": "关闭或停止", "tags": ["c3-multi-control", "single-contrast", "only-one"]}
+{"home": "studio", "text": "空调先不用，开个风扇就行", "intent": "控制", "device": "风扇", "action": "打开或启动", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "studio", "text": "洗衣机启动吧", "intent": "控制", "device": "洗衣机", "action": "打开或启动", "tags": ["c3-multi-control", "single-contrast"]}

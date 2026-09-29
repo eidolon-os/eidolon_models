@@ -1,0 +1,93 @@
+{"home": "family3", "text": "家里的灯都关了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "现在家里还有哪些设备开着", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "空调都开着还是关着", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "两个加湿器都在加湿吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "客厅跟儿童房的灯都亮着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "家里几台空调在运行", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "窗帘都拉开了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "主卧跟儿童房的加湿器水够不够", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "睡觉模式该关的都关了没有", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "出门前家里设备都是关闭状态吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "空气质量这块的设备都正常吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "家里安防这块都设置好了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "客厅这边设备都开着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "洗衣机跟烘干机现在都在工作吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "阳台那几个设备都在运转吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "家里灯光跟窗帘都是什么状态", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "现在家里还有几台设备没关", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "全屋温控设备都开着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "小孩房那边设备都还好吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "家里灯都是啥亮度", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "客厅电视跟空调都开了多久了", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "全家窗帘现在都是关着的吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "家里能制冷的设备都打开了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "family3", "text": "主卧空调开着还是关着", "intent": "查询", "device": "主卧空调", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "儿童房加湿器在加湿吗", "intent": "查询", "device": "儿童房加湿器", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "儿童房的灯亮着吗", "intent": "查询", "device": "儿童房顶灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "主卧窗帘拉开了吗", "intent": "查询", "device": "主卧窗帘", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "智能门锁设置好了吗", "intent": "查询", "device": "智能门锁", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "烘干机现在在工作吗", "intent": "查询", "device": "烘干机", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "儿童房空调开着吗", "intent": "查询", "device": "儿童房空调", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "儿童房摄像头还好用吗", "intent": "查询", "device": "儿童房摄像头", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "客厅窗帘现在是关着的吗", "intent": "查询", "device": "客厅窗帘", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "次卧的灯还开着吗", "intent": "查询", "device": "次卧顶灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "family3", "text": "客厅跟儿童房的灯都关一下", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "把家里的窗帘都拉上", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "空调都开到26度", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "睡觉了，把该关的都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "出门了，家里设备都关一下", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "两个加湿器都开到50%", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "客厅电视跟空调一起关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "阳台那几个设备都停一下", "intent": "控制", "device": "多个设备或整屋", "action": ["暂停", "关闭或停止"], "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "回来了，家里灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "除了儿童房，其他房间的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "family3", "text": "儿童房空调开到26度", "intent": "控制", "device": "儿童房空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "family3", "text": "主卧加湿器开到50%", "intent": "控制", "device": "主卧加湿器", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "family3", "text": "洗衣机先停一下", "intent": "控制", "device": "洗衣机", "action": ["暂停", "关闭或停止"], "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "duplex", "text": "二楼的灯都开着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "两个扫地机都在打扫吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "楼上空调都开了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "家里窗帘都是拉开的吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "现在全屋还有哪些设备开着", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "二楼这几个设备都还好吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "楼梯跟走廊的灯都亮着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "一楼这几个设备都关了没", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "空气这块的设备都开着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "睡觉前该关的都关了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "出门了家里都锁好关好了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "楼下跟楼上的空调都开着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "洗碗机跟洗衣机现在都在运行吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "现在家里几台设备在工作", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "二楼卫生间跟主卧这块设备都正常吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "楼上楼下的窗帘都是什么状态", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "现在家里灯光都是什么亮度", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "书房那边设备都还开着吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "楼下客厅这几个设备都开着多久了", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "早上出门前楼上楼下的灯都检查一遍，都关了吗", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "楼上主卧跟楼下客厅的窗帘现在都开了多少", "intent": "查询", "device": "多个设备或整屋", "tags": ["c3-multi-query"]}
+{"home": "duplex", "text": "一楼客厅灯关了吗", "intent": "查询", "device": "一楼客厅灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "二楼书房灯开着吗", "intent": "查询", "device": "二楼书房灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "二楼扫地机在打扫吗", "intent": "查询", "device": "二楼扫地机", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "二楼主卧空调开了吗", "intent": "查询", "device": "二楼主卧空调", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "一楼客厅窗帘是拉开的吗", "intent": "查询", "device": "一楼客厅窗帘", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "一楼门锁锁了没", "intent": "查询", "device": "一楼门锁", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "二楼除湿机开着吗", "intent": "查询", "device": "二楼除湿机", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "一楼洗碗机现在在运行吗", "intent": "查询", "device": "一楼洗碗机", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "二楼书房音箱还开着吗", "intent": "查询", "device": "二楼书房音箱", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "楼梯灯亮着吗", "intent": "查询", "device": "楼梯灯", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "二楼浴霸正常吗", "intent": "查询", "device": "二楼浴霸", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "一楼客厅电视开着多久了", "intent": "查询", "device": "一楼客厅电视", "tags": ["c3-multi-query", "single-contrast"]}
+{"home": "duplex", "text": "楼下的灯都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "二楼的灯都打开", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "两个扫地机都回去充电", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "楼上空调都开到24度", "intent": "控制", "device": "多个设备或整屋", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "家里窗帘都拉上", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "准备睡了，楼上楼下都关一下灯", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "出门了，家里都锁好关好", "intent": "控制", "device": "多个设备或整屋", "action": ["关闭或停止", "上锁"], "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "楼下跟楼上的空调都关了", "intent": "控制", "device": "多个设备或整屋", "action": "关闭或停止", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "楼上主卧跟一楼客厅的窗帘都拉开点", "intent": "控制", "device": "多个设备或整屋", "action": ["设为指定的数值或模式", "打开或启动"], "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "一楼跟二楼的扫地机都启动一下", "intent": "控制", "device": "多个设备或整屋", "action": "打开或启动", "tags": ["c3-multi-control"]}
+{"home": "duplex", "text": "一楼餐厅灯关了", "intent": "控制", "device": "一楼餐厅灯", "action": "关闭或停止", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "duplex", "text": "二楼走廊灯打开", "intent": "控制", "device": "二楼走廊灯", "action": "打开或启动", "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "duplex", "text": "二楼书房空调开到24度", "intent": "控制", "device": "二楼书房空调", "action": ["打开或启动", "设为指定的数值或模式"], "tags": ["c3-multi-control", "single-contrast"]}
+{"home": "duplex", "text": "一楼扫地机启动一下", "intent": "控制", "device": "一楼扫地机", "action": "打开或启动", "tags": ["c3-multi-control", "single-contrast"]}
