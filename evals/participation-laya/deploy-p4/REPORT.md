@@ -5,10 +5,12 @@
 
 ## 1. 部署对象、状态与 NPU 数据
 
-**状态：已在 opi5max 上按部署形态验证，尚未经 Ops 正式发布。** 验证用的是板上临时实例：同一启动脚本
-`scripts/eidolon-laya-participation`、同一工件字节（`laya-participation-p4-rknn-ae6718a4`）、同一代码，
-端口 8773、NPU 核 0，环境里故意带着家居服务的 `EIDOLON_LAYA_*`（启动脚本全部不继承）。正式发布会重启 eidolond
-与家居 laya，需先协调窗口（见文末）。
+**状态：已发布到 opi5max**——release `rk3588-laya-participation-20260929-1`，2026-09-29 19:45:40 激活（`status=activated`，
+activate / host_application / doctor / app_ready 全部通过，可回滚到 `rk3588-http-pools-20260929-1`）。
+钉住的版本：eidolon_models `7ee49930`、eidolon_kernel `e3e4a35a`、eidolon_agent `a09f5834`（Codex 的兜底组合，已协调），
+其余 admin `60760629`、channel `5551aa9b`、data `8a873297`、hub `c5269396`、memory `5333cb0a`、sdk `c747e2f6` 与上一版相同。
+发布前先在板上临时实例（同启动脚本 / 工件 / 代码）验证过；**发布后对部署实例重跑，623 个决策点的决策与弃权原因与临时实例逐条相同、置信度差 0**
+（`deployed-rk3588-laya-participation-20260929-1/`）。
 
 | 项 | 值 |
 |---|---|
@@ -38,13 +40,15 @@ GET /v1/participation/readyz → {"status": "ready", "task": "ip_team.participat
   "policy_version": "participation-laya-v1/ae6718a4/min0.95", "model_version": "ae6718a4"}
 ```
 
-NPU 映射 894 MiB（3 个图，核 0）；每个决策进程 CPU 70 ms、3 个线程；与常驻 NPU 的家居模型同时加载无地址空间报错。
+部署后：参与决策 NPU 映射 894 MiB（核 0 三档）；家居 1,128 MiB（核 1+2，同档共享权重，原 1,873 MiB）；合计约 2.0 GB（上限约 3.75 GB）。
+每个参与决策进程 CPU 70 ms、3 个线程。参与决策在核 0 持续回放时，家居样例请求 p50 454 / p95 503 ms、每请求 CPU 74 ms——**两者互不拖慢**。
 
 **延迟**（p-dev 623 个决策点逐个请求，服务端计时，`board-scratch-20260929/summary.json`）：
 
-| 全部 | 等待 | 结束 | 回应 | 澄清 | 弃权 |
-|---|---|---|---|---|---|
-| p50 696 / p95 1,244 ms | 450 | 624 | 881 | 1,277 | 673 |
+| | 全部 | 等待 | 结束 | 回应 | 澄清 | 弃权 |
+|---|---|---|---|---|---|---|
+| 部署实例 | p50 698 / p95 1,247 ms | 464 | 625 | 883 | 1,296 | 667 |
+| 发布前临时实例 | p50 696 / p95 1,244 ms | 450 | 624 | 881 | 1,277 | 673 |
 
 同一发布对家居服务的影响：NPU 从三核改为核 1+2，样例请求 p50 337–356 → 454 ms；每请求 CPU 1.9 s → 67 ms（OpenBLAS 空转修复）；同档权重共享。
 
@@ -150,9 +154,12 @@ p-dev 99.79%、p-test 99.89%，配对门槛（α 0.05）通过。**阈值两侧�
   c2 不过；c3（补多设备 / 整屋单句数据）已登记。**没有候选模型、没有 RKNN / NPU 验证、没有作为服务发布、未接入 Agent。**
 - 仍需训练：一个同时过续接门槛与单句回归的候选，c-test 只跑一次；之后才做 RKNN 导出、NPU 一致性与延迟验证。
 
-## 待协调：正式发布
+## 部署后的运行配置（opi5max）
 
-发布内容：`eidolon_models`（含上表提交）、`eidolon_kernel e3e4a35`，其余组件钉在板上当前版本
-（`rk3588-http-pools-20260929-1`：data `8a873297`、hub `c5269396`、admin `60760629`、agent `9eee07b4`、channel `5551aa9b`、memory `5333cb0a`、sdk `c747e2f6`）。
-影响：eidolond 与家居 laya 重启（家居 NPU 分核生效），参与决策服务起在 8773；Agent 的 `participation.url` 仍指 8772 fixture，行为不变。
-发布后在部署实例上重跑本报告的回放，确认与本节结果逐条一致。
+| | 家居 `eidolon-laya` | 参与决策 `eidolon-laya-participation` |
+|---|---|---|
+| 能力 / 端口 | `local_laya` / 8771 `/v1/systemone` | `local_laya_participation` / 8773 `/v1/participation/decide` |
+| 模型 | `laya-smart-home-r14-rknn-45f3dedb` | `laya-participation-p4-rknn-ae6718a4` |
+| NPU | 核 1：128/256/384/512，核 2：128/256，投机 | 核 0：384/512/640，分阶段 |
+| 设置来源 | `/etc/eidolon/cpu-allocation.env` `EIDOLON_LAYA_RKNN_PLACEMENT`；启动脚本默认 | 同文件 `EIDOLON_LAYA_PARTICIPATION_RKNN_PLACEMENT`；unit 的 `EIDOLON_LAYA_PARTICIPATION_*`；不继承任何 `EIDOLON_LAYA_*` |
+| Agent 是否调用 | 否：`EIDOLON_SMARTHOME_INTERPRETER` 未设，默认 `rules` | 否：`participation.url` 仍是 8772 fixture |
