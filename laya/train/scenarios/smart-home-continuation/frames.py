@@ -382,7 +382,11 @@ def pick_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> tu
     if ctx["homonym"] and fam not in HOMONYM_FAMILIES | {"P03", "P09", "P10", "P12", "P14", "P15",
                                                           "P16", "P17", "P18"}:
         return None
+    shared_room = sum(c.room == dev.room for c in cands) > 1
+    who = f"「{shared}」" if ctx["homonym"] else f"「{dev.name}」"  # 写手要念的名字
     if fam == "P01":
+        if shared_room:  # 同房间还有别的候选：只说房间会指到两台
+            return f"用设备名（可以简称）指出「{dev.name}」，不改变动作；同房间还有别的候选，不要只说房间。", gold
         return f"用房间或设备名（可以简称）指出{dev.room}的「{dev.name}」，不改变动作。", gold
     if fam == "P02":
         same = [c for c in cands if c.type == dev.type]
@@ -394,12 +398,13 @@ def pick_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> tu
         return (f"用顺序指出候选：选 Agent 那句里的{_ord(i + 1, n)}（共{n}个）。"
                 f"只用顺序或位置（第几个、前面 / 后面 / 最后那个），不说房间和名字。"), gold
     if fam == "P04":
-        return f"选{dev.room}的「{dev.name}」，同时带附和语气（嗯、对、好）或把动作「{phrase}」再说一遍。", gold
+        how = f"「{dev.name}」（同房间还有别的候选，要说出名字）" if shared_room else f"{dev.room}的「{dev.name}」"
+        return f"选{how}，同时带附和语气（嗯、对、好）或把动作「{phrase}」再说一遍。", gold
     if fam == "P05":
         return (f"先否定{other.room}的「{other.name}」，再明确说要{dev.room}的「{dev.name}」，"
                 f"动作不变。"), gold
     if fam == "P06":
-        return (f"句内改口：先说成{other.room}的那台，马上改口，最后落在{dev.room}的「{dev.name}」。"), gold
+        return (f"句内改口：先说成「{other.name}」，马上改口，最后落在「{dev.name}」。"), gold
     if fam == "P07":
         return (f"候选同名（都叫「{shared}」）。用房间或位置线索指出{dev.room}的那一台，不改变动作。"), gold
     if fam == "P08":
@@ -413,7 +418,7 @@ def pick_spec(fam: str, ctx: dict, devs: list[Device], rng: random.Random) -> tu
             change = f"动作改成「{action_phrase(dev.kind, v)}」"
         else:
             return None
-        return f"选{dev.room}的「{dev.name}」，但{change}。", REDO
+        return f"选{dev.room}的{who}，但{change}。", REDO
     if fam == "P10":
         return f"要不止一台：全部、两个都要，或其中几台，动作「{phrase}」不变。", REDO
     if fam == "P11":
