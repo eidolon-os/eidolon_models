@@ -373,3 +373,6 @@
   未进 Models 模型库、未登记清单。发布时由 Ops 按正式流程出制品并钉哈希，之后再清理板上 `/root/laya-npu/c4*`（约 3.3 GB，用户要求先保留）。
 - 本地 `train/data/continuation/pilot/`（试点 40 条，未参与训练）已移入废纸篓。
 - 下一次发版不能再用 c-test（已在 c4 上用过一次）；错误执行 ≤ 1% 需要真实回放或新的冻结测试集来支撑。
+- **2026-09-30 板上清理（用户要求）**：c4 已上线（`rk3588-laya-home-c4-20260930-1`）后，`/root/laya-npu/{c4,c4-artifact,c4-code,r14}` 与
+  `/var/lib/eidolon/models/laya-smart-home-r14-{onnx,rknn}-45f3dedb` 移入板上 `/root/.trash-20260930`（约 9.2 GB，待用户清空）。
+  板上不再有 r14 制品；工作站 `eidolon_ops/.eidolon-ops/artifact-sources/laya-r14-*` 仍在，回滚到 r14 需要 Ops 重新携带。
