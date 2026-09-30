@@ -1,0 +1,171 @@
+"""JevK5: typed decisions from Qwen3.5-4B (+ a distilled LoRA, merged) in one forward pass.
+
+The prompt and readout follow SemIf (TheoLeeCJ/SemIf, MIT): a fixed system instruction, the
+decision as JSON (evidence, criterion, lettered options), the chat template with thinking off,
+and a softmax over the answer letters' next-token logits. JevK5 adds weights distilled from a
+thinking teacher, one calibration temperature, and a CUDA-graph runtime: one graph is recorded
+per padded input length and replayed, so a decision costs ~13 ms on an H100 instead of ~70 ms.
+Questions with more than 16 options are read in groups of up to 16 and a final between the
+groups' best options (`jevk5.prompt.spread`); up to 16 options, nothing changes.
+
+    from jevk5 import JevK5
+    model = JevK5("alibiserikbay/JevK5")
+    model.decide("I was billed twice, please refund the duplicate.",
+                 {"type": "noul", "instructions": "Does the customer ask for money back?"})
+"""
+
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+
+import numpy as np
+import torch
+
+from .prompt import (  # noqa: F401 - public re-exports
+    LETTERS,
+    METHODS,
+    SYSTEM,
+    answer,
+    decision_options,
+    messages,
+    spread,
+)
+
+GRAPH_LENGTHS = (128, 192, 256, 320, 384, 512, 640, 768, 1024, 1536, 2048, 3072, 4096)
+
+
+def _load_config(source: str) -> dict:
+    """jevk5_config.json next to the weights (local folder or Hub repo); {} for a base model."""
+    path = Path(source) / "jevk5_config.json"
+    if not path.exists():
+        try:
+            from huggingface_hub import hf_hub_download
+
+            path = Path(hf_hub_download(source, "jevk5_config.json"))
+        except Exception:  # noqa: BLE001 - base models have no config
+            return {}
+    return json.loads(path.read_text())
+
+
+def _load_temperature(source: str) -> float:
+    """JevK5's calibration temperature, stored next to the weights in jevk5_config.json."""
+    return float(_load_config(source).get("temperature", 1.0))
+
+
+class JevK5:
+    def __init__(
+        self,
+        source: str = "alibiserikbay/JevK5",
+        device: str = "cuda",
+        dtype=torch.bfloat16,
+        graphs: bool = True,
+        temperature: float | None = None,
+        method: str = "knockout",
+        knockout_temperature: float | None = None,
+    ) -> None:
+        """`method` reads questions with more than 16 options: "knockout" or "tree" (see
+        `jevk5.prompt.spread`). Questions with up to 16 options take one pass either way.
+        `knockout_temperature` sharpens the knockout's combined distribution; it defaults to the
+        model's `knockout_temperature` in jevk5_config.json, else to prompt.TEMPERATURES."""
+        import transformers
+
+        if method not in METHODS:
+            raise ValueError(f"unknown method {method!r}; use one of {METHODS}")
+        self.method = method
+
+        config = transformers.AutoConfig.from_pretrained(source)
+        self.tok = transformers.AutoTokenizer.from_pretrained(source)
+        cls = transformers.AutoModelForCausalLM
+        if config.model_type in {"qwen3_5", "qwen3_5_text"}:
+            cls, config = transformers.Qwen3_5ForCausalLM, config.get_text_config()
+        self.model = cls.from_pretrained(
+            source, config=config, dtype=dtype, device_map={"": device}
+        ).eval()
+        self.device = device
+        slots = [self.tok.encode(letter, add_special_tokens=False) for letter in LETTERS]
+        if any(len(ids) != 1 for ids in slots):
+            raise ValueError("Every answer letter must be one token")
+        self.slots = [ids[0] for ids in slots]
+        self.slot_weight = self.model.lm_head.weight[self.slots].detach().contiguous()
+        config = _load_config(source)
+        self.temperature = (
+            temperature if temperature is not None else float(config.get("temperature", 1.0))
+        )
+        if knockout_temperature is None and "knockout_temperature" in config:
+            knockout_temperature = float(config["knockout_temperature"])
+        self.knockout_temperature = knockout_temperature
+        self.graphs: dict[int, tuple] = {}
+        if graphs and os.environ.get("JEVK5_GRAPHS", "1") != "0":
+            self.capture()
+
+    def _slot_logits(self, ids: torch.Tensor, last: torch.Tensor) -> torch.Tensor:
+        hidden = self.model.model(input_ids=ids, use_cache=False).last_hidden_state
+        return hidden[torch.arange(ids.shape[0], device=ids.device), last] @ self.slot_weight.T
+
+    @torch.inference_mode()
+    def capture(self, lengths=GRAPH_LENGTHS) -> None:
+        """Record one CUDA graph per padded length. Inputs are right-padded, which every
+        (causal) layer keeps away from the last token, the only one read."""
+        for n in lengths:
+            ids = torch.zeros((1, n), dtype=torch.long, device=self.device)
+            last = torch.full((1,), n - 1, dtype=torch.long, device=self.device)
+            stream = torch.cuda.Stream()
+            stream.wait_stream(torch.cuda.current_stream())
+            with torch.cuda.stream(stream):
+                for _ in range(3):
+                    self._slot_logits(ids, last)
+            torch.cuda.current_stream().wait_stream(stream)
+            graph = torch.cuda.CUDAGraph()
+            with torch.cuda.graph(graph):
+                out = self._slot_logits(ids, last)
+            self.graphs[n] = (graph, ids, last, out)
+
+    def encode(self, state, criterion: str, options: list[str]) -> list[int]:
+        prompt = self.tok.apply_chat_template(
+            messages(state, criterion, options),
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
+        )
+        return self.tok.encode(prompt, add_special_tokens=False)
+
+    @torch.inference_mode()
+    def letter_logits(self, ids: list[int], count: int) -> np.ndarray:
+        fits = [n for n in self.graphs if n >= len(ids)]
+        if fits:
+            graph, static_ids, last, out = self.graphs[min(fits)]
+            static_ids.zero_()
+            static_ids[0, : len(ids)] = torch.tensor(ids, device=self.device)
+            last.fill_(len(ids) - 1)
+            graph.replay()
+            return out[0, :count].float().cpu().numpy()
+        tensor = torch.tensor([ids], device=self.device)
+        last = torch.tensor([len(ids) - 1], device=self.device)
+        return self._slot_logits(tensor, last)[0, :count].float().cpu().numpy()
+
+    def probabilities(self, state, question: dict) -> tuple[dict[str, float], int]:
+        """Calibrated probability per option id, and the input token count (summed over passes
+        when a question has more than 16 options; the longest pass is `last_pass_tokens`)."""
+        options = decision_options(question)
+        tokens = self.last_pass_tokens = 0
+
+        def read(texts: list[str]) -> list[float]:
+            nonlocal tokens
+            ids = self.encode(state, question["instructions"], texts)
+            tokens += len(ids)
+            self.last_pass_tokens = max(self.last_pass_tokens, len(ids))
+            logits = self.letter_logits(ids, len(texts)) / self.temperature
+            p = np.exp(logits - logits.max())
+            p /= p.sum()
+            return [float(v) for v in p]
+
+        second = self.knockout_temperature if self.method == "knockout" else None
+        probs = spread(read, [text for _, text in options], self.method, second)
+        return {key: v for (key, _), v in zip(options, probs, strict=True)}, tokens
+
+    def decide(self, state, question: dict) -> dict:
+        """One typed decision in TypeSafe's /v1/systemone answer shape."""
+        probs, tokens = self.probabilities(state, question)
+        return answer(question, probs, tokens)

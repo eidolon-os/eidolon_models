@@ -1,0 +1,488 @@
+{
+  "configuration": "baseline",
+  "n": 12,
+  "reload_parity_passed": true,
+  "max_reload_probability_delta": 0.0,
+  "same_answers": 12,
+  "original_correct": 7,
+  "permuted_correct": 7,
+  "both_correct": 7,
+  "rows": [
+    {
+      "id": "v7:recovered-val-0-direct_address-s1~v0",
+      "dataset": "v7",
+      "group": "respond",
+      "original": "respond:M1",
+      "permuted": "respond:M1",
+      "gold": [
+        "respond:M1"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "respond:M1": 0.7380014657974243,
+        "wait": 0.02415218949317932,
+        "finish": 0.02152273803949356,
+        "respond:M0": 0.19480080902576447,
+        "abstain": 0.02152273803949356
+      }
+    },
+    {
+      "id": "v7:recovered-val-0-end_or_wait-s1~v0",
+      "dataset": "v7",
+      "group": "stop",
+      "original": "respond:M2",
+      "permuted": "respond:M2",
+      "gold": [
+        "finish"
+      ],
+      "original_correct": false,
+      "permuted_correct": false,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "respond:M2": 0.42297297716140747,
+        "respond:M1": 0.013492385856807232,
+        "wait": 0.07040586322546005,
+        "respond:M0": 0.2880367934703827,
+        "respond:M3": 0.007485632784664631,
+        "finish": 0.1911870688199997,
+        "abstain": 0.006419223267585039
+      }
+    },
+    {
+      "id": "v7:val-0-same_name-s1~v0",
+      "dataset": "v7",
+      "group": "abstain",
+      "original": "respond:M0",
+      "permuted": "respond:M0",
+      "gold": [
+        "abstain"
+      ],
+      "original_correct": false,
+      "permuted_correct": false,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "finish": 0.23103801906108856,
+        "respond:M0": 0.5111382603645325,
+        "respond:M1": 0.16141456365585327,
+        "wait": 0.05434480682015419,
+        "abstain": 0.042064398527145386
+      }
+    },
+    {
+      "id": "v8:val-00-s1~v0",
+      "dataset": "v8",
+      "group": "respond",
+      "original": "respond:M0",
+      "permuted": "respond:M0",
+      "gold": [
+        "respond:M0"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "finish": 0.01606522500514984,
+        "respond:M0": 0.9554754495620728,
+        "respond:M1": 0.0039774952456355095,
+        "wait": 0.01395411416888237,
+        "abstain": 0.010527735576033592
+      }
+    },
+    {
+      "id": "v8:val-00-s2~v0",
+      "dataset": "v8",
+      "group": "stop",
+      "original": "wait",
+      "permuted": "wait",
+      "gold": [
+        "wait"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "finish": 0.023187056183815002,
+        "respond:M0": 0.23250752687454224,
+        "respond:M1": 0.007707242388278246,
+        "abstain": 0.009705503471195698,
+        "wait": 0.7268927097320557
+      }
+    },
+    {
+      "id": "v8:val-00-s3~v0",
+      "dataset": "v8",
+      "group": "abstain",
+      "original": "respond:M0",
+      "permuted": "respond:M0",
+      "gold": [
+        "abstain"
+      ],
+      "original_correct": false,
+      "permuted_correct": false,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "respond:M1": 0.15945464372634888,
+        "wait": 0.022760748863220215,
+        "abstain": 0.00848984345793724,
+        "finish": 0.018782535567879677,
+        "respond:M0": 0.790512204170227
+      }
+    },
+    {
+      "id": "new:companion-dev-0:s2~v0",
+      "dataset": "companion",
+      "group": "respond",
+      "original": "respond:M0",
+      "permuted": "respond:M0",
+      "gold": [
+        "respond:M0"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "finish": 0.042681984603405,
+        "wait": 0.044353894889354706,
+        "respond:M0": 0.8656771183013916,
+        "abstain": 0.047287024557590485
+      }
+    },
+    {
+      "id": "new:companion-dev-0:s1~v0",
+      "dataset": "companion",
+      "group": "stop",
+      "original": "wait",
+      "permuted": "wait",
+      "gold": [
+        "wait"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "abstain": 0.002500775968655944,
+        "respond:M0": 0.024442289024591446,
+        "wait": 0.9526268243789673,
+        "finish": 0.020430127158761024
+      }
+    },
+    {
+      "id": "new:ip_team-dev-1:s0~v0",
+      "dataset": "ip_team",
+      "group": "respond",
+      "original": "respond:M2",
+      "permuted": "respond:M2",
+      "gold": [
+        "respond:M2"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "wait": 0.003186962567269802,
+        "respond:M1": 0.001158683793619275,
+        "finish": 0.014079547487199306,
+        "respond:M3": 0.0007992124301381409,
+        "respond:M2": 0.9764911532402039,
+        "abstain": 0.001516249729320407,
+        "respond:M0": 0.0027681710198521614
+      }
+    },
+    {
+      "id": "new:ip_team-dev-1:s1~v0",
+      "dataset": "ip_team",
+      "group": "stop",
+      "original": "wait",
+      "permuted": "wait",
+      "gold": [
+        "wait"
+      ],
+      "original_correct": true,
+      "permuted_correct": true,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "wait": 0.7117526531219482,
+        "abstain": 0.01468895934522152,
+        "respond:M0": 0.13466249406337738,
+        "respond:M2": 0.039380233734846115,
+        "respond:M1": 0.0016438395250588655,
+        "respond:M3": 0.009625853039324284,
+        "finish": 0.08824595808982849
+      }
+    },
+    {
+      "id": "new:companion-dev-authored-absent:s1~v0",
+      "dataset": "companion",
+      "group": "abstain",
+      "original": "respond:M0",
+      "permuted": "respond:M0",
+      "gold": [
+        "abstain"
+      ],
+      "original_correct": false,
+      "permuted_correct": false,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "abstain": 0.021683575585484505,
+        "wait": 0.12535694241523743,
+        "finish": 0.025941895321011543,
+        "respond:M0": 0.7063857316970825,
+        "respond:M1": 0.1206318736076355
+      }
+    },
+    {
+      "id": "new:ip_team-dev-authored-missing-history:s1~v0",
+      "dataset": "ip_team",
+      "group": "abstain",
+      "original": "respond:M0",
+      "permuted": "respond:M0",
+      "gold": [
+        "abstain"
+      ],
+      "original_correct": false,
+      "permuted_correct": false,
+      "same_answer": true,
+      "reload_max_probability_delta": 0.0,
+      "permuted_probabilities": {
+        "abstain": 0.037221550941467285,
+        "finish": 0.02439173310995102,
+        "respond:M0": 0.5768982172012329,
+        "respond:M1": 0.12248317897319794,
+        "wait": 0.1339711993932724,
+        "respond:M2": 0.10503412038087845
+      }
+    }
+  ],
+  "selection": "first DEV record in each dataset/action group, excluding mixed; fixed seed917; no fitting",
+  "script_sha256": "4a537b9d49543b824af9d39244444abf79e45011041e62355c6d157bffcde4ca",
+  "train_probe": {
+    "selection": "first four distinct snapshots per task/action group, or all if fewer; diagnostic subset only",
+    "rows": [
+      {
+        "id": "v7:recovered-train-0-same_name-s1~v0",
+        "task": "ip_team",
+        "group": "abstain",
+        "pred": "respond:M1",
+        "gold": [
+          "abstain"
+        ],
+        "correct": false
+      },
+      {
+        "id": "v7:recovered-train-0-same_name-s2~v0",
+        "task": "ip_team",
+        "group": "respond",
+        "pred": "respond:M1",
+        "gold": [
+          "respond:M1"
+        ],
+        "correct": true
+      },
+      {
+        "id": "v7:recovered-train-0-same_name-s3~v0",
+        "task": "ip_team",
+        "group": "respond",
+        "pred": "respond:M1",
+        "gold": [
+          "respond:M0",
+          "respond:M1"
+        ],
+        "correct": true
+      },
+      {
+        "id": "v7:recovered-train-1-interrupt_redirect-s1~v0",
+        "task": "ip_team",
+        "group": "respond",
+        "pred": "respond:M3",
+        "gold": [
+          "respond:M3"
+        ],
+        "correct": true
+      },
+      {
+        "id": "v7:recovered-train-1-interrupt_redirect-s2~v0",
+        "task": "ip_team",
+        "group": "respond",
+        "pred": "respond:M0",
+        "gold": [
+          "respond:M3"
+        ],
+        "correct": false
+      },
+      {
+        "id": "v7:recovered-train-1-same_name-s1~v0",
+        "task": "ip_team",
+        "group": "abstain",
+        "pred": "respond:M0",
+        "gold": [
+          "abstain"
+        ],
+        "correct": false
+      },
+      {
+        "id": "v7:train-0-author_continuation-s3~v0",
+        "task": "ip_team",
+        "group": "stop",
+        "pred": "respond:M0",
+        "gold": [
+          "finish",
+          "wait"
+        ],
+        "correct": false
+      },
+      {
+        "id": "v7:train-0-end_or_wait-s1~v0",
+        "task": "ip_team",
+        "group": "stop",
+        "pred": "wait",
+        "gold": [
+          "wait"
+        ],
+        "correct": true
+      },
+      {
+        "id": "v7:train-0-end_or_wait-s2~v0",
+        "task": "ip_team",
+        "group": "stop",
+        "pred": "wait",
+        "gold": [
+          "wait"
+        ],
+        "correct": true
+      },
+      {
+        "id": "v7:train-0-pause_or_listen-s1~v0",
+        "task": "ip_team",
+        "group": "stop",
+        "pred": "wait",
+        "gold": [
+          "wait"
+        ],
+        "correct": true
+      },
+      {
+        "id": "v8:train-00-s3~v0",
+        "task": "ip_team",
+        "group": "abstain",
+        "pred": "respond:M0",
+        "gold": [
+          "abstain"
+        ],
+        "correct": false
+      },
+      {
+        "id": "v8:train-02-s3~v0",
+        "task": "ip_team",
+        "group": "abstain",
+        "pred": "respond:M0",
+        "gold": [
+          "abstain"
+        ],
+        "correct": false
+      },
+      {
+        "id": "new:companion-train-0:s2~v0",
+        "task": "companion",
+        "group": "stop",
+        "pred": "respond:M0",
+        "gold": [
+          "finish"
+        ],
+        "correct": false
+      },
+      {
+        "id": "new:companion-train-0:s0~v0",
+        "task": "companion",
+        "group": "respond",
+        "pred": "respond:M0",
+        "gold": [
+          "respond:M0"
+        ],
+        "correct": true
+      },
+      {
+        "id": "new:companion-train-1:s0~v0",
+        "task": "companion",
+        "group": "respond",
+        "pred": "respond:M1",
+        "gold": [
+          "respond:M1"
+        ],
+        "correct": true
+      },
+      {
+        "id": "new:companion-train-1:s1~v0",
+        "task": "companion",
+        "group": "stop",
+        "pred": "wait",
+        "gold": [
+          "wait"
+        ],
+        "correct": true
+      },
+      {
+        "id": "new:companion-train-1:s3~v0",
+        "task": "companion",
+        "group": "stop",
+        "pred": "respond:M0",
+        "gold": [
+          "finish"
+        ],
+        "correct": false
+      },
+      {
+        "id": "new:companion-train-2:s0~v0",
+        "task": "companion",
+        "group": "respond",
+        "pred": "respond:M0",
+        "gold": [
+          "respond:M0"
+        ],
+        "correct": true
+      },
+      {
+        "id": "new:companion-train-2:s3~v0",
+        "task": "companion",
+        "group": "respond",
+        "pred": "wait",
+        "gold": [
+          "respond:M0"
+        ],
+        "correct": false
+      },
+      {
+        "id": "new:companion-train-2:s1~v0",
+        "task": "companion",
+        "group": "stop",
+        "pred": "wait",
+        "gold": [
+          "wait"
+        ],
+        "correct": true
+      },
+      {
+        "id": "new:companion-train-3:s3~v0",
+        "task": "companion",
+        "group": "abstain",
+        "pred": "respond:M0",
+        "gold": [
+          "abstain"
+        ],
+        "correct": false
+      }
+    ]
+  }
+}

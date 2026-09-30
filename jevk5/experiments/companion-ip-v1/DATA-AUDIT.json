@@ -1,0 +1,19 @@
+{
+  "train_records": 300,
+  "dev_records": 152,
+  "train_snapshots": 150,
+  "dev_snapshots": 76,
+  "cross_split_family_overlap": [],
+  "canonical_public_input_collisions": [],
+  "user_3gram_near_duplicates_threshold_0_65": [],
+  "dev_origins": {
+    "legacy_glm": 114,
+    "new_glm_audited": 22,
+    "assistant_authored_diagnostic": 16
+  },
+  "meaning": "No canonical exact collision does not prove semantic/template independence. Near-text check is diagnostic only.",
+  "input_sha256": {
+    "train": "0114dfc7390af3f94a05b0a4fa58b59880a6b537a4c609d7b57cd6ed706820e8",
+    "dev": "82c4c8be8123f7b3dcc179a9f05ae7a77ecd43c703f5c39389d9373993cf8a50"
+  }
+}

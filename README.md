@@ -13,6 +13,8 @@ asr/    语音识别模型
 llm/    大语言模型
 tts/    语音合成模型
 laya/   laya 决策模型服务（独立 uv 项目：PyTorch / ONNX 两个后端，HTTP API，见 laya/README.md）
+jevk5/  JevK5 决策模型独立 uv 项目：本地推理、合成数据审核与小规模适配训练
+evals/  跨模型参与决策评测协议与冻结数据清单
 ```
 
 建议每个模型使用以下目录结构：

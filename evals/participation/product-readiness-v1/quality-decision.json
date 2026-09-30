@@ -1,0 +1,73 @@
+{
+  "deployment": "cloud GPU; hardware unspecified",
+  "selection_basis": "quality only; local latency excluded",
+  "decider_robust_ids": [
+    "c1:0",
+    "c2:0",
+    "c2:1",
+    "c3:0",
+    "c3:1",
+    "c4:0",
+    "c4:1",
+    "c6:1",
+    "t1:0",
+    "t2:0",
+    "t2:1",
+    "t4:0",
+    "t6:1"
+  ],
+  "jevk5_robust_ids": [
+    "c1:0",
+    "c2:0",
+    "c2:1",
+    "c3:0",
+    "c3:1",
+    "c4:1",
+    "c5:0",
+    "c5:1",
+    "c6:0",
+    "c6:1",
+    "t1:0",
+    "t2:0",
+    "t2:1",
+    "t4:0",
+    "t6:1"
+  ],
+  "both_robust": [
+    "c1:0",
+    "c2:0",
+    "c2:1",
+    "c3:0",
+    "c3:1",
+    "c4:1",
+    "c6:1",
+    "t1:0",
+    "t2:0",
+    "t2:1",
+    "t4:0",
+    "t6:1"
+  ],
+  "only_decider_robust": [
+    "c4:0"
+  ],
+  "only_jevk5_robust": [
+    "c5:0",
+    "c5:1",
+    "c6:0"
+  ],
+  "neither_robust": [
+    "c1:1",
+    "t1:1",
+    "t3:0",
+    "t3:1",
+    "t4:1",
+    "t5:0",
+    "t5:1",
+    "t6:0"
+  ],
+  "external_calls": 0,
+  "total_forward_calls": 96,
+  "extra_calls_for_reanalysis": 0,
+  "new_training": false,
+  "conclusion": "Neither existing checkpoint is ready. No reliable quality winner established. Full product-contract supervision has not been tested; base incapability is unproven."
+}

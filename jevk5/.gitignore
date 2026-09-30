@@ -1,0 +1,5 @@
+models/**/weights/
+runs/
+data/
+private/
+

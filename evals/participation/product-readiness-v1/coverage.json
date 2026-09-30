@@ -1,0 +1,31 @@
+{
+  "train": {
+    "sha256": "0114dfc7390af3f94a05b0a4fa58b59880a6b537a4c609d7b57cd6ed706820e8",
+    "records": 300,
+    "unique_snapshot_counts": {
+      "snapshots": 150,
+      "clarify_available": 0,
+      "clarify_gold": 0,
+      "companion_trigger": 15,
+      "user_trigger": 135,
+      "companion_task": 12
+    }
+  },
+  "dev": {
+    "sha256": "82c4c8be8123f7b3dcc179a9f05ae7a77ecd43c703f5c39389d9373993cf8a50",
+    "records": 152,
+    "unique_snapshot_counts": {
+      "snapshots": 76,
+      "clarify_available": 0,
+      "clarify_gold": 0,
+      "companion_trigger": 9,
+      "user_trigger": 67,
+      "companion_task": 11
+    }
+  },
+  "limitations": [
+    "Historical text projection explicitly replaces uncertainty/clarification with abstention; not complete product contract.",
+    "Counts do not establish multi-step rollout correctness or production distribution.",
+    "Existing DEV reused for selection; not final generalization evidence."
+  ]
+}

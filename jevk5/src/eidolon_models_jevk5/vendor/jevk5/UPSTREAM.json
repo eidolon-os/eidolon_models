@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/allebee/jevk5",
+  "commit": "1e5ae1b533b9eb80c0cbe3fbd010607d0b4e26ae",
+  "files": {
+    "__init__.py": "3ec8170fe224e7b9b2ce0333a58ba1cb8066effd4e9d825fc913ef033b907e2b",
+    "runtime.py": "b05f2816135237b36694198bb3b8ffac1abc044ad23c70caa867b3be59a81be6",
+    "prompt.py": "322d69ba6abea83602f27b7a5aa0d3e6ab00847fd03ddccd35a28ae5b23acc1a"
+  },
+  "modifications": "__init__.py absolute imports changed to relative imports for isolated vendoring; runtime.py and prompt.py unchanged",
+  "current_files": {
+    "__init__.py": "0ab76092683568c97b3a58af7dabc918b79a7c21352fa840b0fa0a95bb79f193",
+    "runtime.py": "b05f2816135237b36694198bb3b8ffac1abc044ad23c70caa867b3be59a81be6",
+    "prompt.py": "322d69ba6abea83602f27b7a5aa0d3e6ab00847fd03ddccd35a28ae5b23acc1a"
+  }
+}

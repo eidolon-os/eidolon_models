@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "dev_predictions": 456,
+  "epochs": 2,
+  "train_snapshots_per_epoch": 150,
+  "model_asset_hashes_unchanged": true,
+  "baseline_parity_rows": 114,
+  "standalone_tests_passed": 4,
+  "serialization_replay_rows_per_model": 12,
+  "permutation_diagnostic_rows_per_model": 12,
+  "train_probe_rows_per_model": 21,
+  "test_inference": false,
+  "deployment": false,
+  "selection": {
+    "selected_epoch": null,
+    "release_approved": false,
+    "reason": "No epoch passed all DEV gates"
+  },
+  "adapter_sha256": {
+    "epoch-1": "51a5f9622abaff3410b99d4aa2ec29f0a87b13ccbf05e65283629b9e0ba23600",
+    "epoch-2": "e889622e26e1ce4eeaf5a550048d5c2dd52e141c851c6afe63ce1279f23cd89b"
+  },
+  "verification_inputs": {
+    "DATA-MANIFEST.json": "376aa5dadf1b4ae3eadc1212e74c3faf5a21d666a616eb8c68eb3abaef00bd59",
+    "DATA-AUDIT.json": "73dd240f42770bb7f32572f3ae815431934799aa4ba436c96b1610f869a4c7f6",
+    "BASELINE-PARITY.json": "ce597a8ea828eaae0eac881e9a26a59e43a6bb19ccf5be1d32d3a37b71db1489",
+    "BASELINE-ORDER.json": "be15eb7e6f546f995acd621869e7c612088f9f3ae3f88c3bb15d6a31263b7ddf",
+    "ADAPTER-RELOAD.json": "d1ee9d47dd3a6031eade8c9b92cc3484c94703f8b97031e7441463e87cd3cc07",
+    "comparison.json": "b161ffa7ffb0943a92fb929264b8f90c107ef3748559302bb56d0eecfc9a15af",
+    "CALL-ACCOUNTING.json": "0caf1baf2875db1aa9dc82b299385bdb6819b77b7d97fcd5e5a90a5e1c821f78"
+  }
+}

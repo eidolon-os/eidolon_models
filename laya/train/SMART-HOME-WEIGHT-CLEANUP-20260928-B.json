@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-09-28T15:47:58.165802+00:00",
+  "status": "complete",
+  "free_before_bytes": 12311699456,
+  "entries": [
+    {
+      "path": "laya/train/runs/smoke/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/8ad63553/torch/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "8ad63553a1d4936095e715da5c8ce9d90d739d9a6c179a5852afb267442ed48c",
+      "kind": "duplicate_checkpoint",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/r15/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/edb8e2c7/torch/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "edb8e2c70e099587706ba85b87238a0fded474aa66f40edc90b668790cd7f541",
+      "kind": "duplicate_checkpoint",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/r16/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/0052ba00/torch/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "0052ba00306037e788405e14fc18764a161f86ee0579333f21f3b87ca21d4622",
+      "kind": "duplicate_checkpoint",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/r17/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/685f6c7c/torch/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "685f6c7c38fff14a45eaba491c3e7cca2d176127c750d55c1d595baf89fb3130",
+      "kind": "duplicate_checkpoint",
+      "deleted": true
+    },
+    {
+      "path": "laya/train/runs/r18/checkpoint/model.safetensors",
+      "retained_copy": "laya/models/laya-smart-home/3e1a31d1/torch/model.safetensors",
+      "bytes": 1287653720,
+      "sha256": "3e1a31d10dc083517d34140d801a1d1f038867b2f303a792118e7eed58c00bb5",
+      "kind": "duplicate_checkpoint",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/act_head.npz",
+      "bytes": 794574,
+      "sha256": "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/hidden_l128.onnx",
+      "bytes": 498667529,
+      "sha256": "d57a20bca418c97e65b19ee1b1e797983988e2f14bef3234f25c8d36447ed900",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/hidden_l256.onnx",
+      "bytes": 499064329,
+      "sha256": "4d11d21162c2152181e0722b56b02c081d64941413a55b55fd9f8cbe227159c7",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/hidden_l384.onnx",
+      "bytes": 499723273,
+      "sha256": "0025bd76d5f1f5eb717344dc26aac7dfe7e710ba7dfe49605e7494e5d7a87d43",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/hidden_l512.onnx",
+      "bytes": 500644365,
+      "sha256": "f269bde5bd24f44b91f6b648b26ead2d62a63ad4c395bd88a9185dfdcc2a9d90",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/scorer.npz",
+      "bytes": 2373034,
+      "sha256": "5266f3e58b3bc7f0d1e5267247828987f7cbe36796b1b3415ccac8273a46cd8c",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/tok_emb_fp16.npy",
+      "bytes": 393216128,
+      "sha256": "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    },
+    {
+      "path": "laya/models/laya-smart-home/94d898b9/npu/type_emb.npy",
+      "bytes": 9344,
+      "sha256": "fe6e0e1977a47b5b809654cb0c9324b2d70be6eea5a34ea26f12fead39772fa4",
+      "kind": "obsolete_r10_npu_export",
+      "rebuild_source": "laya/models/laya-smart-home/94d898b9/torch/model.safetensors",
+      "deleted": true
+    }
+  ],
+  "removed_bytes": 8832761176,
+  "free_after_bytes": 22225711104
+}

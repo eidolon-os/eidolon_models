@@ -1,0 +1,465 @@
+{
+  "decider": {
+    "variants": {
+      "False": {
+        "correct": 19,
+        "n": 24,
+        "wrong_speech": 1,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 15
+          },
+          "clarify": {
+            "n": 2,
+            "correct": 0
+          },
+          "wait": {
+            "n": 2,
+            "correct": 2
+          },
+          "finish": {
+            "n": 3,
+            "correct": 2
+          },
+          "abstain": {
+            "n": 1,
+            "correct": 0
+          }
+        },
+        "passed": false,
+        "tasks": {
+          "companion": {
+            "n": 12,
+            "correct": 11
+          },
+          "ip_team": {
+            "n": 12,
+            "correct": 8
+          }
+        }
+      },
+      "True": {
+        "correct": 14,
+        "n": 24,
+        "wrong_speech": 2,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 10
+          },
+          "clarify": {
+            "n": 2,
+            "correct": 1
+          },
+          "wait": {
+            "n": 2,
+            "correct": 2
+          },
+          "finish": {
+            "n": 3,
+            "correct": 1
+          },
+          "abstain": {
+            "n": 1,
+            "correct": 0
+          }
+        },
+        "passed": false,
+        "tasks": {
+          "companion": {
+            "n": 12,
+            "correct": 9
+          },
+          "ip_team": {
+            "n": 12,
+            "correct": 5
+          }
+        }
+      }
+    },
+    "screen_passed": false,
+    "same_answer": 16,
+    "both_orders_correct": 13,
+    "all_family_states_and_orders_correct": 4,
+    "warm_latency": {
+      "n": 47,
+      "p50_ms": 373.6412500147708,
+      "p95_ms": 468.9541659899987
+    },
+    "first_call_ms": 1704.070292005781,
+    "max_observed_driver_bytes": 4372299776,
+    "failures": [
+      {
+        "id": "c1:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M0"
+      },
+      {
+        "id": "c5:0",
+        "reverse": false,
+        "gold": [
+          "clarify:M0"
+        ],
+        "pred": "respond:M0"
+      },
+      {
+        "id": "c5:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M0"
+      },
+      {
+        "id": "c6:0",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M0"
+      },
+      {
+        "id": "t1:1",
+        "reverse": true,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t3:0",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M1"
+      },
+      {
+        "id": "t3:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "wait"
+      },
+      {
+        "id": "t4:1",
+        "reverse": false,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t4:1",
+        "reverse": true,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t5:0",
+        "reverse": false,
+        "gold": [
+          "clarify:M0",
+          "clarify:M1"
+        ],
+        "pred": "wait"
+      },
+      {
+        "id": "t5:0",
+        "reverse": true,
+        "gold": [
+          "clarify:M0",
+          "clarify:M1"
+        ],
+        "pred": "wait"
+      },
+      {
+        "id": "t5:1",
+        "reverse": false,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t5:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M1"
+      },
+      {
+        "id": "t6:0",
+        "reverse": false,
+        "gold": [
+          "abstain"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t6:0",
+        "reverse": true,
+        "gold": [
+          "abstain"
+        ],
+        "pred": "respond:M1"
+      }
+    ],
+    "input_tokens_range": [
+      300,
+      403
+    ],
+    "run_config": {
+      "alias": "decider",
+      "cases_sha256": "b9c959fa854ee1c8c074d53dd1868b6bbea326658050405450bda281fb97f274",
+      "script_sha256": "8c08c901773b8caac8420e2e7d830aa32cfc59c4b14e04b46788ac64b8571867",
+      "design_sha256": "ec5ec734548e268b14fb532b4f78e72c1dd1c9484786168c29eede98ea13f146",
+      "build_sha256": "df02504b277d8b00765bd3c0b8ab812c82f02906b5680a8bef0685a4ad3530eb",
+      "forward_limit": 48,
+      "torch": "2.14.0",
+      "device": "mps",
+      "dtype": "float16",
+      "weight_sha256": "acaef2228b134dcdc20cad4ee79219482c927ec819aa3687b9b8a575c338817f",
+      "load_and_hash_seconds": 6.582236208021641
+    }
+  },
+  "jevk5": {
+    "variants": {
+      "False": {
+        "correct": 19,
+        "n": 24,
+        "wrong_speech": 1,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 14
+          },
+          "clarify": {
+            "n": 2,
+            "correct": 1
+          },
+          "wait": {
+            "n": 2,
+            "correct": 2
+          },
+          "finish": {
+            "n": 3,
+            "correct": 2
+          },
+          "abstain": {
+            "n": 1,
+            "correct": 0
+          }
+        },
+        "passed": false,
+        "tasks": {
+          "companion": {
+            "n": 12,
+            "correct": 11
+          },
+          "ip_team": {
+            "n": 12,
+            "correct": 8
+          }
+        }
+      },
+      "True": {
+        "correct": 15,
+        "n": 24,
+        "wrong_speech": 3,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 12
+          },
+          "clarify": {
+            "n": 2,
+            "correct": 1
+          },
+          "wait": {
+            "n": 2,
+            "correct": 2
+          },
+          "finish": {
+            "n": 3,
+            "correct": 0
+          },
+          "abstain": {
+            "n": 1,
+            "correct": 0
+          }
+        },
+        "passed": false,
+        "tasks": {
+          "companion": {
+            "n": 12,
+            "correct": 10
+          },
+          "ip_team": {
+            "n": 12,
+            "correct": 5
+          }
+        }
+      }
+    },
+    "screen_passed": false,
+    "same_answer": 17,
+    "both_orders_correct": 15,
+    "all_family_states_and_orders_correct": 5,
+    "warm_latency": {
+      "n": 47,
+      "p50_ms": 1908.6957499966957,
+      "p95_ms": 2206.834540993441
+    },
+    "first_call_ms": 2018.9146249904297,
+    "max_observed_driver_bytes": 8836972544,
+    "failures": [
+      {
+        "id": "c1:1",
+        "reverse": false,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M0"
+      },
+      {
+        "id": "c1:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "clarify:M0"
+      },
+      {
+        "id": "c4:0",
+        "reverse": true,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M0"
+      },
+      {
+        "id": "t1:1",
+        "reverse": false,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t1:1",
+        "reverse": true,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t3:0",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t3:1",
+        "reverse": false,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t3:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t4:1",
+        "reverse": true,
+        "gold": [
+          "finish"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t5:0",
+        "reverse": false,
+        "gold": [
+          "clarify:M0",
+          "clarify:M1"
+        ],
+        "pred": "wait"
+      },
+      {
+        "id": "t5:0",
+        "reverse": true,
+        "gold": [
+          "clarify:M0",
+          "clarify:M1"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t5:1",
+        "reverse": true,
+        "gold": [
+          "respond:M0"
+        ],
+        "pred": "respond:M1"
+      },
+      {
+        "id": "t6:0",
+        "reverse": false,
+        "gold": [
+          "abstain"
+        ],
+        "pred": "respond:M0"
+      },
+      {
+        "id": "t6:0",
+        "reverse": true,
+        "gold": [
+          "abstain"
+        ],
+        "pred": "respond:M1"
+      }
+    ],
+    "input_tokens_range": [
+      394,
+      519
+    ],
+    "run_config": {
+      "alias": "jevk5",
+      "cases_sha256": "b9c959fa854ee1c8c074d53dd1868b6bbea326658050405450bda281fb97f274",
+      "script_sha256": "8c08c901773b8caac8420e2e7d830aa32cfc59c4b14e04b46788ac64b8571867",
+      "design_sha256": "ec5ec734548e268b14fb532b4f78e72c1dd1c9484786168c29eede98ea13f146",
+      "build_sha256": "df02504b277d8b00765bd3c0b8ab812c82f02906b5680a8bef0685a4ad3530eb",
+      "forward_limit": 48,
+      "torch": "2.14.0",
+      "device": "mps",
+      "dtype": "float16",
+      "weight_sha256": "13824e47f2e40fe052f06943976cf742cb366ba305741a111e75a8ebae907a9c",
+      "load_and_hash_seconds": 10.193999624985736
+    }
+  },
+  "limitations": [
+    "Authored 24-snapshot diagnostic, not held-out generalization.",
+    "Scripted public replies, not live rollout.",
+    "Measured local tokenize/infer/map, not HTTP/network/cold-load latency.",
+    "Production hardware and latency target remain unresolved.",
+    "Clarification task mapped to generic instruction; real reply chain not tested."
+  ]
+}

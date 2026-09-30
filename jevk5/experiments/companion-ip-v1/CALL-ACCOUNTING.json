@@ -1,0 +1,369 @@
+{
+  "cap": 24,
+  "attempts": 23,
+  "statuses": {
+    "complete": 22,
+    "failed": 1
+  },
+  "calls": [
+    {
+      "name": "companion-dev-0-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 606,
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        },
+        "prompt_tokens": 470,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1076
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-dev-0-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 292,
+        "completion_tokens_details": {
+          "reasoning_tokens": 48
+        },
+        "prompt_tokens": 785,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1077
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-dev-1-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 937,
+        "completion_tokens_details": {
+          "reasoning_tokens": 320
+        },
+        "prompt_tokens": 490,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1427
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-dev-1-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 506,
+        "completion_tokens_details": {
+          "reasoning_tokens": 281
+        },
+        "prompt_tokens": 878,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1384
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-0-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 603,
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "prompt_tokens": 462,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1065
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-0-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 248,
+        "completion_tokens_details": {
+          "reasoning_tokens": 57
+        },
+        "prompt_tokens": 818,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1066
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-1-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 1085,
+        "completion_tokens_details": {
+          "reasoning_tokens": 386
+        },
+        "prompt_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1563
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-1-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 457,
+        "completion_tokens_details": {
+          "reasoning_tokens": 173
+        },
+        "prompt_tokens": 958,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1415
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-2-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 523,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_tokens": 460,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 983
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-2-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 320,
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        },
+        "prompt_tokens": 766,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1086
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-3-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 877,
+        "completion_tokens_details": {
+          "reasoning_tokens": 272
+        },
+        "prompt_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1356
+      },
+      "error_type": null
+    },
+    {
+      "name": "companion-train-3-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 343,
+        "completion_tokens_details": {
+          "reasoning_tokens": 131
+        },
+        "prompt_tokens": 902,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1245
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-dev-0-gen",
+      "status": "failed",
+      "usage": {},
+      "error_type": "TimeoutError"
+    },
+    {
+      "name": "ip_team-dev-1-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 832,
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        },
+        "prompt_tokens": 490,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1322
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-dev-1-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 410,
+        "completion_tokens_details": {
+          "reasoning_tokens": 165
+        },
+        "prompt_tokens": 1122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1532
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-0-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 744,
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_tokens": 480,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1224
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-0-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 245,
+        "completion_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "prompt_tokens": 1048,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1293
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-1-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 1028,
+        "completion_tokens_details": {
+          "reasoning_tokens": 112
+        },
+        "prompt_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1506
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-1-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 418,
+        "completion_tokens_details": {
+          "reasoning_tokens": 168
+        },
+        "prompt_tokens": 1266,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1684
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-2-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 1344,
+        "completion_tokens_details": {
+          "reasoning_tokens": 370
+        },
+        "prompt_tokens": 478,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1822
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-2-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 524,
+        "completion_tokens_details": {
+          "reasoning_tokens": 187
+        },
+        "prompt_tokens": 1356,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1880
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-3-gen",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 1202,
+        "completion_tokens_details": {
+          "reasoning_tokens": 364
+        },
+        "prompt_tokens": 479,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1681
+      },
+      "error_type": null
+    },
+    {
+      "name": "ip_team-train-3-review",
+      "status": "complete",
+      "usage": {
+        "completion_tokens": 369,
+        "completion_tokens_details": {
+          "reasoning_tokens": 137
+        },
+        "prompt_tokens": 1151,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_tokens": 1520
+      },
+      "error_type": null
+    }
+  ],
+  "automatic_approval": "Initial recovery rejected over count/scope concerns; verified17 attempts and remaining7, then reapproved. One later request timed out and was not retried."
+}

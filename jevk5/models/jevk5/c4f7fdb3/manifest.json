@@ -1,0 +1,15 @@
+{
+  "repo": "alibiserikbay/JevK5",
+  "revision": "c4f7fdb3aeab5582336406e78d3bef11bf98833d",
+  "files": {
+    "model.safetensors": "13824e47f2e40fe052f06943976cf742cb366ba305741a111e75a8ebae907a9c",
+    "tokenizer_config.json": "9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d",
+    "config.json": "63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "generation_config.json": "62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73",
+    "README.md": "ae04e164af42c70837b1e79a5d5414c3b9c5641a7651047223756404fd6a2786",
+    "jevk5_config.json": "0d689fd13d15dc962265e2ae10b56359706ab5d05ad24e00e6334e4c19cf83d2",
+    "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+  },
+  "reuse": "local hard links to verified historical cache; weights treated as immutable"
+}

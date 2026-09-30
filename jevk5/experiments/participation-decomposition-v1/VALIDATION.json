@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "new_forwards": 328,
+  "external_calls": 0,
+  "trained": false,
+  "sealed_test_used": false,
+  "deployed": false,
+  "immutable_inputs_verified": true,
+  "public_input_poison_check": "passed before execution",
+  "raw_sha256": "e5ec8e07be3511acb89a58f64eb203900dc1cc909b7c29bbea518086f3ea87f5",
+  "config": {
+    "data_sha256": "82c4c8be8123f7b3dcc179a9f05ae7a77ecd43c703f5c39389d9373993cf8a50",
+    "baseline_sha256": "329a3b02a2ea5e91f96a7315df3cd0fba504a15d6563d278a449cd5fc424f853",
+    "script_sha256": "aa0eb93f5478d4add3795ae46a8f80d913e05e450d057d818c4b6e61decf964b",
+    "design_sha256": "bd8a56af2e43aff894c88bfa2d613baed17aa57f508e557db8c22f077140acdc",
+    "max_new_forwards": 328,
+    "order_probe_ids": [
+      "v7:recovered-val-0-direct_address-s1~v0",
+      "v7:recovered-val-0-end_or_wait-s1~v0",
+      "v7:val-0-same_name-s1~v0",
+      "v8:val-00-s1~v0",
+      "v8:val-00-s2~v0",
+      "v8:val-00-s3~v0",
+      "new:companion-dev-0:s2~v0",
+      "new:companion-dev-0:s1~v0",
+      "new:ip_team-dev-1:s0~v0",
+      "new:ip_team-dev-1:s1~v0",
+      "new:companion-dev-authored-absent:s1~v0",
+      "new:ip_team-dev-authored-missing-history:s1~v0"
+    ],
+    "model": "JevK5 c4f7fdb3, unadapted",
+    "external_calls": 0,
+    "fit": false,
+    "sealed_test": false,
+    "release": false
+  }
+}

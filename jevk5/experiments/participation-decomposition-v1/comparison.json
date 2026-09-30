@@ -1,0 +1,683 @@
+{
+  "baseline": {
+    "metrics": {
+      "v7": {
+        "n": 42,
+        "correct": 36,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 29,
+            "wrong_speech": 0,
+            "missed_response": 1
+          },
+          "stop": {
+            "n": 6,
+            "correct": 5,
+            "wrong_speech": 1,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 21,
+        "complete_families_correct": 17,
+        "latency_ms": {
+          "median": 2427.489103982225,
+          "p95": 2878.1351249781437
+        },
+        "by_origin": {
+          "legacy_glm": {
+            "n": 42,
+            "correct": 36
+          }
+        }
+      },
+      "v8": {
+        "n": 72,
+        "correct": 47,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 24,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "stop": {
+            "n": 24,
+            "correct": 23,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 12,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 2213.0775209807325,
+          "p95": 2926.764208008535
+        },
+        "by_origin": {
+          "legacy_glm": {
+            "n": 72,
+            "correct": 47
+          }
+        }
+      },
+      "companion": {
+        "n": 22,
+        "correct": 13,
+        "groups": {
+          "respond": {
+            "n": 8,
+            "correct": 5,
+            "wrong_speech": 0,
+            "missed_response": 2
+          },
+          "stop": {
+            "n": 12,
+            "correct": 8,
+            "wrong_speech": 4,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 3,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 1630.2442495070864,
+          "p95": 1958.2738329772837
+        },
+        "by_origin": {
+          "assistant_authored_diagnostic": {
+            "n": 8,
+            "correct": 6
+          },
+          "new_glm_audited": {
+            "n": 14,
+            "correct": 7
+          }
+        }
+      },
+      "ip_team": {
+        "n": 16,
+        "correct": 11,
+        "groups": {
+          "respond": {
+            "n": 6,
+            "correct": 5,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "stop": {
+            "n": 8,
+            "correct": 6,
+            "wrong_speech": 2,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 2,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 2032.1831045148429,
+          "p95": 2409.5360419596545
+        },
+        "by_origin": {
+          "assistant_authored_diagnostic": {
+            "n": 8,
+            "correct": 6
+          },
+          "new_glm_audited": {
+            "n": 8,
+            "correct": 5
+          }
+        }
+      }
+    },
+    "gate": {
+      "passed": false,
+      "failures": [
+        "v8_abstain",
+        "companion_respond",
+        "companion_stop",
+        "companion_wrong_speech",
+        "companion_abstain",
+        "ip_team_wrong_speech",
+        "ip_team_abstain"
+      ]
+    }
+  },
+  "order_probe": [
+    {
+      "id": "v7:recovered-val-0-direct_address-s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "v7:recovered-val-0-end_or_wait-s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "v7:val-0-same_name-s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "v8:val-00-s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "v8:val-00-s2~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "v8:val-00-s3~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "new:companion-dev-0:s2~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "new:companion-dev-0:s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "new:ip_team-dev-1:s0~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "new:ip_team-dev-1:s1~v0",
+      "action_same": false,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": false
+    },
+    {
+      "id": "new:companion-dev-authored-absent:s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    },
+    {
+      "id": "new:ip_team-dev-authored-missing-history:s1~v0",
+      "action_same": true,
+      "verify_same": true,
+      "repair_same": true,
+      "decomposed_same": true
+    }
+  ],
+  "latency_note": "Estimated sequential total includes historical baseline proposal pass; not same-run benchmark. Cold load, queue, network excluded.",
+  "stage_latency_ms": {
+    "action": {
+      "median": 2359.07635447802
+    },
+    "verify": {
+      "median": 2369.0052294987254
+    }
+  },
+  "repair": {
+    "metrics": {
+      "v7": {
+        "n": 42,
+        "correct": 36,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 29,
+            "wrong_speech": 0,
+            "missed_response": 1
+          },
+          "stop": {
+            "n": 6,
+            "correct": 5,
+            "wrong_speech": 1,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 21,
+        "complete_families_correct": 17,
+        "latency_ms": {
+          "median": 4604.424916993594,
+          "p95": 5622.511834022589
+        },
+        "by_origin": {
+          "legacy_glm": {
+            "n": 42,
+            "correct": 36
+          }
+        }
+      },
+      "v8": {
+        "n": 72,
+        "correct": 46,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 23,
+            "wrong_speech": 0,
+            "missed_response": 1
+          },
+          "stop": {
+            "n": 24,
+            "correct": 23,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 12,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 4173.732958035544,
+          "p95": 5689.02087607421
+        },
+        "by_origin": {
+          "legacy_glm": {
+            "n": 72,
+            "correct": 46
+          }
+        }
+      },
+      "companion": {
+        "n": 22,
+        "correct": 13,
+        "groups": {
+          "respond": {
+            "n": 8,
+            "correct": 5,
+            "wrong_speech": 0,
+            "missed_response": 2
+          },
+          "stop": {
+            "n": 12,
+            "correct": 8,
+            "wrong_speech": 4,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 3,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 3399.2687920108438,
+          "p95": 4303.972416964825
+        },
+        "by_origin": {
+          "assistant_authored_diagnostic": {
+            "n": 8,
+            "correct": 6
+          },
+          "new_glm_audited": {
+            "n": 14,
+            "correct": 7
+          }
+        }
+      },
+      "ip_team": {
+        "n": 16,
+        "correct": 11,
+        "groups": {
+          "respond": {
+            "n": 6,
+            "correct": 5,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "stop": {
+            "n": 8,
+            "correct": 6,
+            "wrong_speech": 2,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 2,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 4044.4102294859476,
+          "p95": 5135.02950099064
+        },
+        "by_origin": {
+          "assistant_authored_diagnostic": {
+            "n": 8,
+            "correct": 6
+          },
+          "new_glm_audited": {
+            "n": 8,
+            "correct": 5
+          }
+        }
+      }
+    },
+    "gate": {
+      "passed": false,
+      "failures": [
+        "v8_abstain",
+        "companion_respond",
+        "companion_stop",
+        "companion_wrong_speech",
+        "companion_abstain",
+        "ip_team_wrong_speech",
+        "ip_team_abstain"
+      ]
+    },
+    "direction_signal": false,
+    "fixed_baseline_errors": 0,
+    "broke_baseline_correct": 1
+  },
+  "decomposed": {
+    "metrics": {
+      "v7": {
+        "n": 42,
+        "correct": 36,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 30,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "stop": {
+            "n": 6,
+            "correct": 4,
+            "wrong_speech": 2,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 21,
+        "complete_families_correct": 18,
+        "latency_ms": {
+          "median": 7594.470813462976,
+          "p95": 8396.638959064148
+        },
+        "by_origin": {
+          "legacy_glm": {
+            "n": 42,
+            "correct": 36
+          }
+        }
+      },
+      "v8": {
+        "n": 72,
+        "correct": 46,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 23,
+            "wrong_speech": 0,
+            "missed_response": 1
+          },
+          "stop": {
+            "n": 24,
+            "correct": 23,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 12,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 6327.1859784726985,
+          "p95": 8384.298709046561
+        },
+        "by_origin": {
+          "legacy_glm": {
+            "n": 72,
+            "correct": 46
+          }
+        }
+      },
+      "companion": {
+        "n": 22,
+        "correct": 15,
+        "groups": {
+          "respond": {
+            "n": 8,
+            "correct": 7,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "stop": {
+            "n": 12,
+            "correct": 8,
+            "wrong_speech": 4,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 3,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 5409.863437525928,
+          "p95": 6668.7238740269095
+        },
+        "by_origin": {
+          "assistant_authored_diagnostic": {
+            "n": 8,
+            "correct": 6
+          },
+          "new_glm_audited": {
+            "n": 14,
+            "correct": 9
+          }
+        }
+      },
+      "ip_team": {
+        "n": 16,
+        "correct": 11,
+        "groups": {
+          "respond": {
+            "n": 6,
+            "correct": 5,
+            "wrong_speech": 0,
+            "missed_response": 0
+          },
+          "stop": {
+            "n": 8,
+            "correct": 6,
+            "wrong_speech": 2,
+            "missed_response": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": 0,
+            "missed_response": 0
+          }
+        },
+        "families": 2,
+        "complete_families_correct": 0,
+        "latency_ms": {
+          "median": 6130.170415999601,
+          "p95": 7779.1488349903375
+        },
+        "by_origin": {
+          "assistant_authored_diagnostic": {
+            "n": 8,
+            "correct": 6
+          },
+          "new_glm_audited": {
+            "n": 8,
+            "correct": 5
+          }
+        }
+      }
+    },
+    "gate": {
+      "passed": false,
+      "failures": [
+        "v8_abstain",
+        "companion_stop",
+        "companion_wrong_speech",
+        "companion_abstain",
+        "ip_team_wrong_speech",
+        "ip_team_abstain"
+      ]
+    },
+    "direction_signal": false,
+    "fixed_baseline_errors": 3,
+    "broke_baseline_correct": 2
+  },
+  "stages": {
+    "v7": {
+      "action_non_abstain": {
+        "n": 40,
+        "correct": 38
+      },
+      "abstain_rejected": {
+        "n": 2,
+        "correct": 0
+      },
+      "valid_proposal_retained": {
+        "n": 32,
+        "correct": 32
+      }
+    },
+    "v8": {
+      "action_non_abstain": {
+        "n": 48,
+        "correct": 47
+      },
+      "abstain_rejected": {
+        "n": 24,
+        "correct": 0
+      },
+      "valid_proposal_retained": {
+        "n": 24,
+        "correct": 23
+      }
+    },
+    "companion": {
+      "action_non_abstain": {
+        "n": 20,
+        "correct": 16
+      },
+      "abstain_rejected": {
+        "n": 2,
+        "correct": 0
+      },
+      "valid_proposal_retained": {
+        "n": 7,
+        "correct": 7
+      }
+    },
+    "ip_team": {
+      "action_non_abstain": {
+        "n": 14,
+        "correct": 12
+      },
+      "abstain_rejected": {
+        "n": 2,
+        "correct": 0
+      },
+      "valid_proposal_retained": {
+        "n": 5,
+        "correct": 5
+      }
+    }
+  },
+  "completed_forwards": 328
+}

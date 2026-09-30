@@ -1,0 +1,66 @@
+{
+  "sources": {
+    "laya/train/data/generated/ip-team-v7/generalization1/named/train.jsonl": "496482fc24ccf8332d151679734ed273c4633f2f152fabe23a0352233ea4781d",
+    "laya/train/data/generated/ip-team-v7/generalization1/named/val.jsonl": "4a75cb7644ef9b102aceff938486cc61bbbe5fd2c9f7a63b8800d4f9e8573ae4",
+    "laya/train/data/generated/ip-team-v8/boundaries1/named/train.jsonl": "d57aab0b03a6b536c0306d13d93d1738e75c579f4433cccaf40a05284797c3fb",
+    "laya/train/data/generated/ip-team-v8/boundaries1/named/val.jsonl": "b5347b5de86c3598a82a79ed8518ac941bd10d474cb771c6b1917dcd2601fef5",
+    "jevk5/private/companion-ip-v1/reviewed/companion-dev-0.json": "6e87844618d758d9c2675e2bdd9f283a9a9de9cc77aac6d077e93e294f59d14c",
+    "jevk5/private/companion-ip-v1/reviewed/companion-dev-1.json": "bad390ecbdfe0a95b08fca5c2ab30f5d41e535cf195bd241701b2aca7259f58e",
+    "jevk5/private/companion-ip-v1/reviewed/companion-train-0.json": "60ce2ce36a84f642cb1acc353854dc84eac66af95a17eda26c2847cd85df28f5",
+    "jevk5/private/companion-ip-v1/reviewed/companion-train-1.json": "7f3fff40236d424a0f3946e27b45b8fdb38214f92ab6c0c25780e3245c9bb657",
+    "jevk5/private/companion-ip-v1/reviewed/companion-train-2.json": "af02a95ead2ec5a8ab4b9a85108f725089ffcfd762df0163e9bb191a76aa57d7",
+    "jevk5/private/companion-ip-v1/reviewed/companion-train-3.json": "83fe4b40ecab725872ad449884d6f3ef445ad65785bff9c9d7016a4c25400b1d",
+    "jevk5/private/companion-ip-v1/reviewed/ip_team-dev-0.json": "7f9a69d157807543cd2abe5c365ac4bb2b62c475fea30adb0c81f3b0009dc966",
+    "jevk5/private/companion-ip-v1/reviewed/ip_team-dev-1.json": "df911f67deb5083c1d2e0453ae6e004018ccf39dc4205612dd89fe5e11f7dd42",
+    "jevk5/private/companion-ip-v1/reviewed/ip_team-train-0.json": "11eca818bf9f49f784408e3be76b64d7e77579afb73cf1685e462aacafa1af1a",
+    "jevk5/private/companion-ip-v1/reviewed/ip_team-train-1.json": "d346c2c1b6db20a5172e22e2966f3d927e5001fd08cc3f125b66c6799ff9a7e4",
+    "jevk5/private/companion-ip-v1/reviewed/ip_team-train-2.json": "b5b3dbda1bfbbb74a0127e81e90e68d6f3a2e3d01836274753997ef4a70405ed",
+    "jevk5/private/companion-ip-v1/reviewed/ip_team-train-3.json": "b4b2562618933fc5abc12349df3c90ac51d223115446b623b38f2b8728a050a8",
+    "evals/participation/authored/companion-ip-v1.json": "d496e7a08f2c8807e68b2f00ffc47207f54ff43db047aa6fa3d466bb66d28c1c"
+  },
+  "audit_sha256": "6fdfaf7cf258d0a14b76de4097afcf49e0f1dbaeaa82865653dec606a39504db",
+  "prepare_sha256": "18232e632990f799e17329d92878b7dc0a76bf30d9b900eb9681c61a7a5447d8",
+  "files": {
+    "train": {
+      "sha256": "0114dfc7390af3f94a05b0a4fa58b59880a6b537a4c609d7b57cd6ed706820e8",
+      "records": 300,
+      "families": 81
+    },
+    "dev": {
+      "sha256": "82c4c8be8123f7b3dcc179a9f05ae7a77ecd43c703f5c39389d9373993cf8a50",
+      "records": 152,
+      "families": 38
+    }
+  },
+  "coverage": {
+    "train": {
+      "ip_team/abstain": 56,
+      "ip_team/respond": 134,
+      "ip_team/stop": 86,
+      "companion/stop": 12,
+      "companion/respond": 10,
+      "companion/abstain": 2
+    },
+    "dev": {
+      "ip_team/respond": 62,
+      "ip_team/stop": 38,
+      "ip_team/abstain": 28,
+      "ip_team/mixed": 2,
+      "companion/respond": 8,
+      "companion/stop": 12,
+      "companion/abstain": 2
+    }
+  },
+  "rejected_scenes": [
+    "companion-dev-1:s3",
+    "companion-train-0:s3",
+    "companion-train-0:s1",
+    "companion-train-1:s2",
+    "companion-train-2:s2",
+    "ip_team-train-1:s3"
+  ],
+  "quarantined_families": [
+    "ip_team-dev-0"
+  ],
+  "scope": "synthetic train and seen DEV only; no test files imported"
+}

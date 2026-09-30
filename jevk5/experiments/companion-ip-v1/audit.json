@@ -1,0 +1,181 @@
+{
+  "companion-dev-0:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户直接向唯一的在场角色阮棠提问并期待回应，符合其读书会陪伴者身份。"
+  },
+  "companion-dev-0:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求角色安静，让自己先看文本，属于暂停等待用户继续。"
+  },
+  "companion-dev-0:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确说这周聊到这儿，本轮对话结束，应调用finish。"
+  },
+  "companion-dev-0:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户要求安静陪伴但允许'一个字都行'的简短文字确认，可用respond给极简回应；不是完全禁止回复。"
+  },
+  "companion-dev-1:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确说今天就到这儿、先回去歇着，本轮结束信号清晰"
+  },
+  "companion-dev-1:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：before中speaker 0温梨讲过伞骨接头要对齐，用户点名该发言者，唯一确定"
+  },
+  "companion-dev-1:s3": {
+    "decision": "reject",
+    "reason": "历史最后发言者明确自称小梨，但温梨是否也用此外号只有弱暗示；对回应或弃权的解释不唯一，开发金标隔离。"
+  },
+  "companion-dev-1:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户要求都先别说话、自己安静操作，未允许简短文字确认，应暂停等待"
+  },
+  "companion-train-0:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确说今天就到这、去睡了，本轮结束信号清晰"
+  },
+  "companion-train-0:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户点名晚萤并主动要求其说话回应，唯一在场角色"
+  },
+  "companion-train-0:s3": {
+    "decision": "reject",
+    "reason": "要是想回属于可选回应，同时又要求别说话，单一respond集合不足以排除wait。"
+  },
+  "companion-train-0:s1": {
+    "decision": "reject",
+    "reason": "等我倒水、别走开并未明确禁止简短确认，单一wait金标不够稳健；不按生成计划强行补标签。"
+  },
+  "companion-train-1:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户点名铁山，且历史中铁山（speaker 1）自称发现绕湖十公里路线并带队，公开身份线索可唯一确定回应者为铁山。"
+  },
+  "companion-train-1:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求'完全别出声、什么都不用说'，属于明确完全别回复的情形，应保持静默等待。"
+  },
+  "companion-train-1:s2": {
+    "decision": "reject",
+    "reason": "谁走山路最稳/懂行的那个缺少直接事实；两人回应或先澄清均可能，不把职业/性格猜测当可靠金标。"
+  },
+  "companion-train-1:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确说'今天就到这儿''就这样定了啊'，明确宣告本轮结束，应执行finish。"
+  },
+  "companion-train-2:s2": {
+    "decision": "reject",
+    "reason": "画到这儿、先停一下、谢谢可读为结束或暂歇，教师respond+finish集合与停止规则不一致，隔离。"
+  },
+  "companion-train-2:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户点名小澈并请求指导调色，唯一角色应回应。"
+  },
+  "companion-train-2:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户要求安静陪伴但允许简短文字应一声，唯一角色可作简短回应。"
+  },
+  "companion-train-2:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求'别出声'，即完全不要回复，暂停等待用户继续，符合wait。"
+  },
+  "companion-train-3:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：历史中阿澈（speaker 0）提到车票，用户追问“后来怎么着”，应选阿澈继续讲"
+  },
+  "companion-train-3:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求“先别出声”、想一个人静静，属于要求完全别回复，应暂停等待"
+  },
+  "companion-train-3:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户宣布今天收工、让大家回去休息，明确本轮结束"
+  },
+  "companion-train-3:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：“那位啊”无公开身份线索指向具体角色，阿澈与林小满均可能，无法唯一确定"
+  },
+  "ip_team-dev-1:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户点名\"记东西最仔细的\"，历史中路远评价阿枝记性最好且阿枝自述负责记录修理步骤，公开线索唯一指向阿枝。"
+  },
+  "ip_team-dev-1:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求\"谁也别接话，彻底安静\"，属完全不要回复的情形，应保持安静。"
+  },
+  "ip_team-dev-1:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户宣告\"今天伞修到这里就好，收工\"，明确表示本轮结束。"
+  },
+  "ip_team-dev-1:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：无历史时依据公开身份：路远的身份是修伞的老人，\"帮忙修伞的师傅\"唯一指向他，其他人身份均非修伞师傅。"
+  },
+  "ip_team-train-0:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户直接称呼“棉棉姐”并请求陪伴回应，公开身份指向阿棉，唯一明确。"
+  },
+  "ip_team-train-0:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求“一个字也别回”，即完全别回复，应保持沉默等待。"
+  },
+  "ip_team-train-0:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户说“这轮就先到这儿吧，晚安”，明确本轮结束。"
+  },
+  "ip_team-train-0:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户直接称呼“陆哥”，公开身份唯一对应老陆，要求其再次说明助眠法子。"
+  },
+  "ip_team-train-1:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确指向\"蹲下来帮大家看鞋带的\"，与历史中小满（speaker 1）系鞋带的公开行为及小满\"惦记鞋带\"的身份一致，唯一确定"
+  },
+  "ip_team-train-1:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求谁都别接话、安静走完这段路，属于完全不要回复的情形，应wait"
+  },
+  "ip_team-train-1:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确表示今天散步结束、明天再约，本轮明确结束，应finish"
+  },
+  "ip_team-train-1:s3": {
+    "decision": "reject",
+    "reason": "此前用户已点名阿澈，随后你可能继续指阿澈；历史不支持唯一abstain金标。"
+  },
+  "ip_team-train-2:s2": {
+    "decision": "correct",
+    "gold": [
+      "wait"
+    ],
+    "reason": "用户明确先别出声、画完再叫你们，未允许确认；教师理由捏造允许简短文字确认。保留原始错误标签，最终按公开原话修正为wait。"
+  },
+  "ip_team-train-2:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户称呼'棠姐'并指其上次教授的叠色课，历史中说话人0（林晚棠）自称带过日落叠色小课，公开线索可唯一确定回应者为林晚棠"
+  },
+  "ip_team-train-2:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户称呼'老师'但未给出可唯一确定身份的公开线索，历史中苏彻（说话人2）与林晚棠（说话人0）均有指导发言，仅凭'老师'称呼及职能匹配无法消歧，应弃权"
+  },
+  "ip_team-train-2:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确表示今天结束、下周再来，属于明确本轮结束的信号，应执行finish"
+  },
+  "ip_team-train-3:s2": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户点名阿橙并要求别人不说话，公开身份线索（昵称阿橙、怀旧讲旧物）唯一指向洛橙。"
+  },
+  "ip_team-train-3:s0": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确要求所有人彻底别出声，安静陪伴且不许任何回复，应保持沉默等待。"
+  },
+  "ip_team-train-3:s3": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：用户明确说本轮到此结束、都歇着去，属于明确结束本轮。"
+  },
+  "ip_team-train-3:s1": {
+    "decision": "accept",
+    "reason": "本地逐条核对公开文本：历史中小满称speaker1为老哥（催扔东西、囤模型），与老柴直爽可靠大叔形象及发言内容吻合，公开线索唯一指向老柴。"
+  }
+}

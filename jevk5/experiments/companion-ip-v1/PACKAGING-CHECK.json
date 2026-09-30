@@ -1,0 +1,14 @@
+{
+  "eidolon_models_jevk5-0.1.0-py3-none-any.whl": {
+    "bytes": 30125,
+    "sha256": "3174ee4556927dd5f666fa8017e973c9ccab9bc09513b8d6bd420d2fc8a2c3de",
+    "members": 20,
+    "private_or_weights_members": []
+  },
+  "eidolon_models_jevk5-0.1.0.tar.gz": {
+    "bytes": 79261,
+    "sha256": "2f43f1075a30e51d52f08fdab4eb0962f4b69d3838684f29d3cb8c84608ada32",
+    "members": 44,
+    "private_or_weights_members": []
+  }
+}

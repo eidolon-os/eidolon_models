@@ -1,0 +1,541 @@
+{
+  "selection": {
+    "selected_epoch": null,
+    "release_approved": false,
+    "reason": "No epoch passed all DEV gates"
+  },
+  "reports": {
+    "baseline": {
+      "metrics": {
+        "v7": {
+          "n": 42,
+          "correct": 36,
+          "groups": {
+            "respond": {
+              "n": 32,
+              "correct": 29,
+              "wrong_speech": 0,
+              "missed_response": 1
+            },
+            "stop": {
+              "n": 6,
+              "correct": 5,
+              "wrong_speech": 1,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "mixed": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 21,
+          "complete_families_correct": 17,
+          "latency_ms": {
+            "median": 2427.489103982225,
+            "p95": 2878.1351249781437
+          },
+          "by_origin": {
+            "legacy_glm": {
+              "n": 42,
+              "correct": 36
+            }
+          }
+        },
+        "v8": {
+          "n": 72,
+          "correct": 47,
+          "groups": {
+            "respond": {
+              "n": 24,
+              "correct": 24,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "stop": {
+              "n": 24,
+              "correct": 23,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 24,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 12,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 2213.0775209807325,
+            "p95": 2926.764208008535
+          },
+          "by_origin": {
+            "legacy_glm": {
+              "n": 72,
+              "correct": 47
+            }
+          }
+        },
+        "companion": {
+          "n": 22,
+          "correct": 13,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 5,
+              "wrong_speech": 0,
+              "missed_response": 2
+            },
+            "stop": {
+              "n": 12,
+              "correct": 8,
+              "wrong_speech": 4,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 3,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1630.2442495070864,
+            "p95": 1958.2738329772837
+          },
+          "by_origin": {
+            "assistant_authored_diagnostic": {
+              "n": 8,
+              "correct": 6
+            },
+            "new_glm_audited": {
+              "n": 14,
+              "correct": 7
+            }
+          }
+        },
+        "ip_team": {
+          "n": 16,
+          "correct": 11,
+          "groups": {
+            "respond": {
+              "n": 6,
+              "correct": 5,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "stop": {
+              "n": 8,
+              "correct": 6,
+              "wrong_speech": 2,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 2,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 2032.1831045148429,
+            "p95": 2409.5360419596545
+          },
+          "by_origin": {
+            "assistant_authored_diagnostic": {
+              "n": 8,
+              "correct": 6
+            },
+            "new_glm_audited": {
+              "n": 8,
+              "correct": 5
+            }
+          }
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "v8_abstain",
+          "companion_respond",
+          "companion_stop",
+          "companion_wrong_speech",
+          "companion_abstain",
+          "ip_team_wrong_speech",
+          "ip_team_abstain"
+        ]
+      }
+    },
+    "epoch-1.dev": {
+      "metrics": {
+        "v7": {
+          "n": 42,
+          "correct": 35,
+          "groups": {
+            "respond": {
+              "n": 32,
+              "correct": 28,
+              "wrong_speech": 0,
+              "missed_response": 2
+            },
+            "stop": {
+              "n": 6,
+              "correct": 5,
+              "wrong_speech": 1,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "mixed": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 21,
+          "complete_families_correct": 17,
+          "latency_ms": {
+            "median": 1985.6336454977281,
+            "p95": 2235.9795829979703
+          },
+          "by_origin": {
+            "legacy_glm": {
+              "n": 42,
+              "correct": 35
+            }
+          }
+        },
+        "v8": {
+          "n": 72,
+          "correct": 48,
+          "groups": {
+            "respond": {
+              "n": 24,
+              "correct": 24,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "stop": {
+              "n": 24,
+              "correct": 24,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 24,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 12,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1788.342083513271,
+            "p95": 2418.782165972516
+          },
+          "by_origin": {
+            "legacy_glm": {
+              "n": 72,
+              "correct": 48
+            }
+          }
+        },
+        "companion": {
+          "n": 22,
+          "correct": 13,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 5,
+              "wrong_speech": 0,
+              "missed_response": 2
+            },
+            "stop": {
+              "n": 12,
+              "correct": 8,
+              "wrong_speech": 4,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 3,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1333.1850210088305,
+            "p95": 1582.671708019916
+          },
+          "by_origin": {
+            "assistant_authored_diagnostic": {
+              "n": 8,
+              "correct": 6
+            },
+            "new_glm_audited": {
+              "n": 14,
+              "correct": 7
+            }
+          }
+        },
+        "ip_team": {
+          "n": 16,
+          "correct": 11,
+          "groups": {
+            "respond": {
+              "n": 6,
+              "correct": 5,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "stop": {
+              "n": 8,
+              "correct": 6,
+              "wrong_speech": 1,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 2,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1680.1315000047907,
+            "p95": 2005.8291669702157
+          },
+          "by_origin": {
+            "assistant_authored_diagnostic": {
+              "n": 8,
+              "correct": 5
+            },
+            "new_glm_audited": {
+              "n": 8,
+              "correct": 6
+            }
+          }
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "v7_below_36_of_42",
+          "v8_abstain",
+          "companion_respond",
+          "companion_stop",
+          "companion_wrong_speech",
+          "companion_abstain",
+          "ip_team_wrong_speech",
+          "ip_team_abstain"
+        ]
+      }
+    },
+    "epoch-2.dev": {
+      "metrics": {
+        "v7": {
+          "n": 42,
+          "correct": 35,
+          "groups": {
+            "respond": {
+              "n": 32,
+              "correct": 27,
+              "wrong_speech": 0,
+              "missed_response": 4
+            },
+            "stop": {
+              "n": 6,
+              "correct": 6,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "mixed": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 21,
+          "complete_families_correct": 17,
+          "latency_ms": {
+            "median": 1985.085562482709,
+            "p95": 2220.911125012208
+          },
+          "by_origin": {
+            "legacy_glm": {
+              "n": 42,
+              "correct": 35
+            }
+          }
+        },
+        "v8": {
+          "n": 72,
+          "correct": 51,
+          "groups": {
+            "respond": {
+              "n": 24,
+              "correct": 23,
+              "wrong_speech": 0,
+              "missed_response": 1
+            },
+            "stop": {
+              "n": 24,
+              "correct": 23,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 24,
+              "correct": 5,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 12,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1785.234353505075,
+            "p95": 2428.290250012651
+          },
+          "by_origin": {
+            "legacy_glm": {
+              "n": 72,
+              "correct": 51
+            }
+          }
+        },
+        "companion": {
+          "n": 22,
+          "correct": 12,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 5,
+              "wrong_speech": 0,
+              "missed_response": 2
+            },
+            "stop": {
+              "n": 12,
+              "correct": 7,
+              "wrong_speech": 4,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 0,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 3,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1337.5054374919273,
+            "p95": 1557.0265419664793
+          },
+          "by_origin": {
+            "assistant_authored_diagnostic": {
+              "n": 8,
+              "correct": 5
+            },
+            "new_glm_audited": {
+              "n": 14,
+              "correct": 7
+            }
+          }
+        },
+        "ip_team": {
+          "n": 16,
+          "correct": 13,
+          "groups": {
+            "respond": {
+              "n": 6,
+              "correct": 6,
+              "wrong_speech": 0,
+              "missed_response": 0
+            },
+            "stop": {
+              "n": 8,
+              "correct": 6,
+              "wrong_speech": 1,
+              "missed_response": 0
+            },
+            "abstain": {
+              "n": 2,
+              "correct": 1,
+              "wrong_speech": 0,
+              "missed_response": 0
+            }
+          },
+          "families": 2,
+          "complete_families_correct": 0,
+          "latency_ms": {
+            "median": 1659.0842084551696,
+            "p95": 2000.357916986104
+          },
+          "by_origin": {
+            "assistant_authored_diagnostic": {
+              "n": 8,
+              "correct": 6
+            },
+            "new_glm_audited": {
+              "n": 8,
+              "correct": 7
+            }
+          }
+        }
+      },
+      "gate": {
+        "passed": false,
+        "failures": [
+          "v7_below_36_of_42",
+          "v8_abstain",
+          "companion_respond",
+          "companion_stop",
+          "companion_wrong_speech",
+          "companion_abstain",
+          "ip_team_wrong_speech",
+          "ip_team_abstain"
+        ]
+      }
+    }
+  },
+  "verified": true,
+  "raw_sha256": {
+    "baseline.jsonl": "329a3b02a2ea5e91f96a7315df3cd0fba504a15d6563d278a449cd5fc424f853",
+    "epoch-1.dev.jsonl": "93f56fc3bcdfd89dd1796098c53e5dd0b68f89d9bbebd63057995dceae8e1050",
+    "epoch-2.dev.jsonl": "61c66cedd39b185261629bc2eaf9e488cd479c669b5edf742702232619df7356"
+  },
+  "config_sha256": "89d3d9d83a7699dea517d7a66fa7bc9408012ad3059f56d7d646e972df48663a",
+  "dataset_manifest_sha256": "376aa5dadf1b4ae3eadc1212e74c3faf5a21d666a616eb8c68eb3abaef00bd59"
+}
