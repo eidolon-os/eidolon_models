@@ -1,0 +1,54 @@
+{
+ "release_id": "rk3588-laya-home-c4-20260930-1",
+ "status": "activated",
+ "outcome": "applied",
+ "phases": {
+  "bundle": "reused_validated_bundle",
+  "release_reclaim_prepare": "ready",
+  "upload_guard": "already_prepared",
+  "dry_run": "dry_run",
+  "service_identities": "service_identities_ready",
+  "host_cutover_snapshot": "host_cutover_snapshotted",
+  "host_application": "refreshed",
+  "activate": "activated",
+  "converge_running_release": "converged",
+  "doctor": "healthy",
+  "app_ready": "app_ready",
+  "cutover_receipt": "cutover_recorded",
+  "release_reclaim_commit": "committed",
+  "unselected_model_cleanup": "checked",
+  "local_bundle_cleanup": "cleaned"
+ },
+ "revisions": {
+  "eidolon_models": "8213b4e6d31799ab2bcf615ff53d7e2eba58b79a",
+  "eidolon_kernel": "e3e4a35a11c7852bce88755f96a2e5bc3db933fa",
+  "eidolon_data": "8a873297e60c8e34984ebd08254d0e4d371daacc",
+  "eidolon_hub": "c52693960729b5200a6e676a12fbf97ac26426ee",
+  "eidolon_admin": "60760629fd9377964b593ee71192b10731845c17",
+  "eidolon_agent": "a09f5834472bbff4bfecdf3c24248090727a1a84",
+  "eidolon_channel": "5551aa9bf58ca72090c150d649a5d7916b47ecfb",
+  "eidolon_memory": "5333cb0a3f6c2653bfb6f9de4cb25b59f163a667",
+  "eidolon_sdk": "c747e2f67cda7333bbe09168fee21cc6869847a1"
+ },
+ "previous_release": "rk3588-p4-route-20260929-1",
+ "deployed": {
+  "eidolon-laya": {
+   "model_dir": "/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8",
+   "revision": "7b695ba8",
+   "backend": "rknn",
+   "placement": "1:128,256,384,512|2:128,256",
+   "npu_mib": 1128
+  },
+  "eidolon-laya-participation": {
+   "model_dir": "/var/lib/eidolon/models/laya-participation-p4-rknn-ae6718a4",
+   "placement": "0:384,512,640",
+   "npu_mib": 894
+  }
+ },
+ "service_check": {
+  "c-dev": "645 answers, 0 differences; p50 271 / p95 282 / max 286 ms",
+  "locked-v2-dev": "394 answers, 0 differences; p50 444 / p95 681 / max 704 ms",
+  "locked-v3-dev": "606 answers, 1 difference (B-047, 0.50 tie); p50 447 / p95 680 / max 708 ms"
+ },
+ "agent_on_board": "EIDOLON_SMARTHOME_INTERPRETER unset (rules); participation.url 8773 — unchanged by this release"
+}

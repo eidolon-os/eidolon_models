@@ -1,6 +1,8 @@
 # 家居 c4（7b695ba8）在 opi5max NPU 上：一致性、与 p4 并发、单句“误执行”口径
 
-2026-09-30，Models 侧。板上只在临时目录 `/root/laya-npu/c4` 测，**线上 8771（r14）/ 8773（p4）未重启、未改配置**；c4 尚未发布到 8771。
+2026-09-30，Models 侧。测量都在板上临时目录 `/root/laya-npu/c4` 做，期间线上 8771（r14）/ 8773（p4）未重启、未改配置。
+
+**已发布**（10:11）：opi5max release `rk3588-laya-home-c4-20260930-1`（只换 eidolon_models `8213b4e`，其余钉在上一版；可回滚到 `rk3588-p4-route-20260929-1`），8771 = `laya-smart-home-c4-rknn-7b695ba8`（核 1 + 2，1,128 MiB），线上逐题核对与临时实例相同（`deployed-rk3588-laya-home-c4-20260930-1/`）；Mac 产品栈 laya = `models/laya-smart-home/7b695ba8`（MPS，eidolon_ops `128d20f`），c-dev / v2-dev 逐题与 torch 相同。板上 Agent 仍是 rules（家居不调 8771），续接需 Agent 设 `EIDOLON_SMARTHOME_LAYA_CONTINUATION_REVISION=7b695ba8`。
 
 ## 结论
 
@@ -132,7 +134,7 @@
 2. **p4 的 1,500 ms 截止**：两个长历史的澄清决策固定超时（本来也弃权）；超时后立即再发会 503。
 3. **误触发**：c4 的 11 条都是说话对象判断（对家人说、陈述、别人的话、广告语）。涉及门锁的错误 3 条：误触发 2 条（「门口那人说是送水的，让我给他开下门」是转述、「您好，快递，麻烦开一下门」是门外人的话），错动作 1 条（「把门所上」判成关闭）。
    转述由 LLM 误判的部分由 Codex 处理；Laya 这边不在本轮训练。门锁这类设备建议 Agent 侧确认。
-4. **发布**：8771 从 r14 换成 c4 需要一次发布（新增 `laya-smart-home-c4-rknn / onnx-7b695ba8` 工件、改启动脚本默认目录），会重启家居服务，届时先协调。
+4. **发布**：已完成（见文首）。Agent 侧的 1 s 预算、板上家居改用 laya、续接开关由 Codex 接。
 
 ## 7. 数据与复现
 
