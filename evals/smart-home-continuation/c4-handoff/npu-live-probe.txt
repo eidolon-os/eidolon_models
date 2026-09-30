@@ -1,0 +1,30 @@
+# 2026-09-30 10:41 CST，opi5max 线上 8771（release rk3588-laya-home-c4-20260930-1，PID 3045790）
+# 24 条请求逐条发送（c-dev 续接 8 + v2-dev 8 + v3-dev 8，请求体取自 laya/train/runs/c4/concurrency/home.jsonl），间隔 0.3 s；
+# 同时每 20 ms 读 /sys/kernel/debug/rknpu/load，npu_cores_busy = 请求期间出现过非 0 负载的核。核 0 属参与决策 8773。
+Wed Sep 30 10:41:29 AM CST 2026
+idle: NPU load:  Core0:  0%, Core1:  0%, Core2:  0%,
+after: NPU load:  Core0:  0%, Core1: 43%, Core2: 40%,
+{"id": "smart-home-continuation/1bff3972e999", "set": "c-dev", "http": 200, "ms": 297.4, "questions": ["follow"], "npu_cores_busy": [], "samples": 15}
+{"id": "smart-home-continuation/6189ee2de020", "set": "c-dev", "http": 200, "ms": 308.9, "questions": ["follow"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home-continuation/f9d0495e96ad", "set": "c-dev", "http": 200, "ms": 294.1, "questions": ["pick"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home-continuation/af21d4b29485", "set": "c-dev", "http": 200, "ms": 310.3, "questions": ["pick"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home-continuation/dfa883483e7b", "set": "c-dev", "http": 200, "ms": 311.4, "questions": ["pick"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home-continuation/3cb7d0b27666", "set": "c-dev", "http": 200, "ms": 301.6, "questions": ["pick"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home-continuation/4e32efb90cf8", "set": "c-dev", "http": 200, "ms": 300.5, "questions": ["pick"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home-continuation/fead30692533", "set": "c-dev", "http": 200, "ms": 307.6, "questions": ["pick"], "npu_cores_busy": [1], "samples": 15}
+{"id": "smart-home/v2-01-001", "set": "locked-v2-dev", "http": 200, "ms": 435.4, "questions": ["intent", "device", "action"], "npu_cores_busy": [1], "samples": 21}
+{"id": "smart-home/v2-01-007", "set": "locked-v2-dev", "http": 200, "ms": 448.0, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 22}
+{"id": "smart-home/v2-01-008", "set": "locked-v2-dev", "http": 200, "ms": 443.0, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 22}
+{"id": "smart-home/v2-01-013", "set": "locked-v2-dev", "http": 200, "ms": 489.7, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 24}
+{"id": "smart-home/v2-01-017", "set": "locked-v2-dev", "http": 200, "ms": 490.8, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 24}
+{"id": "smart-home/v2-01-018", "set": "locked-v2-dev", "http": 200, "ms": 458.8, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 22}
+{"id": "smart-home/v2-01-020", "set": "locked-v2-dev", "http": 200, "ms": 719.2, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 36}
+{"id": "smart-home/v2-01-023", "set": "locked-v2-dev", "http": 200, "ms": 712.9, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 35}
+{"id": "smart-home/A-001", "set": "locked-v3-dev", "http": 200, "ms": 464.2, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 23}
+{"id": "smart-home/A-002", "set": "locked-v3-dev", "http": 200, "ms": 461.2, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 22}
+{"id": "smart-home/A-003", "set": "locked-v3-dev", "http": 200, "ms": 497.3, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 24}
+{"id": "smart-home/A-004", "set": "locked-v3-dev", "http": 200, "ms": 482.3, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 24}
+{"id": "smart-home/A-005", "set": "locked-v3-dev", "http": 200, "ms": 464.5, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 22}
+{"id": "smart-home/A-006", "set": "locked-v3-dev", "http": 200, "ms": 475.7, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 23}
+{"id": "smart-home/A-007", "set": "locked-v3-dev", "http": 200, "ms": 462.5, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 23}
+{"id": "smart-home/A-008", "set": "locked-v3-dev", "http": 200, "ms": 506.4, "questions": ["intent", "device", "action"], "npu_cores_busy": [1, 2], "samples": 24}
