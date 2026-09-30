@@ -80,7 +80,7 @@ def test_participation_launcher_inherits_none_of_the_home_services_settings(tmp_
     launcher = _fake_release(tmp_path, "eidolon-laya-participation")
     model = _participation_model(tmp_path)
     home = {
-        "EIDOLON_LAYA_MODEL_DIR": "/var/lib/eidolon/models/laya-smart-home-r14-rknn-45f3dedb",
+        "EIDOLON_LAYA_MODEL_DIR": "/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8",
         "EIDOLON_LAYA_RKNN_PLACEMENT": "1:128,256,384,512|2:128,256",
         "EIDOLON_LAYA_PORT": "8771", "EIDOLON_LAYA_API_KEY": "home-key", "EIDOLON_LAYA_DEVICE": "cpu",
         "EIDOLON_LAYA_SPECULATIVE": "1", "EIDOLON_LAYA_THREADS": "4",

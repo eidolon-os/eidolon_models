@@ -10,7 +10,7 @@ esac
 export EIDOLON_LAYA_BACKEND=${EIDOLON_LAYA_BACKEND:-$DEFAULT_BACKEND}
 case "$EIDOLON_LAYA_BACKEND" in
   rknn)
-    MODEL_DIR=${EIDOLON_LAYA_MODEL_DIR:-/var/lib/eidolon/models/laya-smart-home-r14-rknn-45f3dedb}
+    MODEL_DIR=${EIDOLON_LAYA_MODEL_DIR:-/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8}
     REQUIRED_FILE=npu/hidden_l512.rknn
     export EIDOLON_LAYA_RKNN_LIBRARY=${EIDOLON_LAYA_RKNN_LIBRARY:-$MODEL_DIR/librknnrt.so}
     # NPU cores 1 and 2 by default; core 0 belongs to the participation service
@@ -22,7 +22,7 @@ case "$EIDOLON_LAYA_BACKEND" in
     export EIDOLON_LAYA_MAX_PENDING=${EIDOLON_LAYA_MAX_PENDING:-1}
     ;;
   onnx)
-    MODEL_DIR=${EIDOLON_LAYA_MODEL_DIR:-/var/lib/eidolon/models/laya-smart-home-r14-onnx-45f3dedb}
+    MODEL_DIR=${EIDOLON_LAYA_MODEL_DIR:-/var/lib/eidolon/models/laya-smart-home-c4-onnx-7b695ba8}
     REQUIRED_FILE=onnx/model.onnx.data
     ;;
   *) echo "eidolon-laya: unsupported release backend: $EIDOLON_LAYA_BACKEND" >&2; exit 2 ;;
