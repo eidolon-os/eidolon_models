@@ -88,8 +88,8 @@ class _FakeRuntime:
 
     ran: list = []
 
-    def __init__(self, model, core):
-        self.path, self.core, self.dup_of = str(model), core, None
+    def __init__(self, model, core, *, library=None):
+        self.path, self.core, self.dup_of, self.library = str(model), core, None, library
 
     def dup(self, core):
         other = _FakeRuntime(self.path, core)

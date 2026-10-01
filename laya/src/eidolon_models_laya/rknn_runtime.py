@@ -67,11 +67,12 @@ def _check(code: int, operation: str) -> None:
 class RknnRuntime:
     """One synchronous context; the backend serializes calls per NPU core."""
 
-    def __init__(self, model: Path, core: int):
+    def __init__(self, model: Path, core: int, *, library: Path | None = None):
         if core not in (0, 1, 2):
             raise ValueError("NPU core must be 0, 1 or 2")
         self._ctx = C.c_uint64()
-        self._lib = C.CDLL(os.environ.get("EIDOLON_LAYA_RKNN_LIBRARY", "librknnrt.so"))
+        # The pinned runtime beside the model when the artifact carries one, else the system's.
+        self._lib = C.CDLL(str(library) if library else "librknnrt.so")
         ctx = C.c_uint64
         declarations = {
             "rknn_init": [C.POINTER(ctx), C.c_void_p, C.c_uint32, C.c_uint32, C.c_void_p],

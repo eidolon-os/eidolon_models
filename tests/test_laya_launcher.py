@@ -1,115 +1,76 @@
-"""Release selection and backpressure without loading model weights."""
+"""The two Laya launchers hand every setting to the services file, and that file agrees with the contract.
+
+A launcher only names its service and the file; it reads no ``EIDOLON_LAYA_*`` and sets none. The file
+(``laya/deploy/services.toml``) is held here to what the component contract declares: the rknn model
+directories are the pinned artifacts' install roots, the ports are the registered ports, and each
+unit's launcher serves the table it is named for.
+"""
 
 import os
 import shutil
 import subprocess
+import sys
+import tomllib
 from pathlib import Path
 
 import pytest
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SERVICES_FILE = REPO_ROOT / "laya" / "deploy" / "services.toml"
+CONTRACT = tomllib.loads((REPO_ROOT / "ops" / "component.toml").read_text(encoding="utf-8"))
+UNIT_SERVICE = {"eidolon-laya": "smart_home", "eidolon-laya-participation": "participation"}
 
-@pytest.mark.parametrize("explicit_limit,expected", [(None, "1"), ("2", "2")])
-def test_npu_launcher_uses_bounded_admission(tmp_path, explicit_limit, expected):
-    scripts = tmp_path / "scripts"
-    scripts.mkdir()
-    launcher = scripts / "eidolon-laya"
-    shutil.copyfile(Path(__file__).parents[1] / "scripts/eidolon-laya", launcher)
-    binary = tmp_path / ".venv/bin/eidolon-laya"
-    binary.parent.mkdir(parents=True)
-    binary.write_text(
-        '#!/bin/sh\nprintf "%s %s" "$EIDOLON_LAYA_BACKEND" "$EIDOLON_LAYA_MAX_PENDING"\n'
-    )
-    binary.chmod(0o755)
-    model = tmp_path / "model"
-    (model / "npu").mkdir(parents=True)
-    (model / "manifest.json").touch()
-    (model / "npu/hidden_l512.rknn").touch()
-    env = {k: v for k, v in os.environ.items() if not k.startswith("EIDOLON_LAYA_")}
-    env.update(EIDOLON_HOST_CAPABILITIES="local_laya,rknpu2", EIDOLON_LAYA_MODEL_DIR=str(model))
-    if explicit_limit is not None:
-        env["EIDOLON_LAYA_MAX_PENDING"] = explicit_limit
-    result = subprocess.run(
-        ["sh", str(launcher), "serve"], env=env, capture_output=True, text=True, check=True
-    )
-    assert result.stdout == f"rknn {expected}"
+sys.path.insert(0, str(REPO_ROOT / "laya" / "src"))
+from eidolon_models_laya.config import Settings  # noqa: E402
 
 
-def _fake_release(tmp_path, launcher_name):
+def _fake_release(tmp_path: Path, launcher_name: str) -> Path:
     scripts = tmp_path / "scripts"
     scripts.mkdir()
     launcher = scripts / launcher_name
-    shutil.copyfile(Path(__file__).parents[1] / "scripts" / launcher_name, launcher)
+    shutil.copyfile(REPO_ROOT / "scripts" / launcher_name, launcher)
     binary = tmp_path / ".venv/bin/eidolon-laya"
     binary.parent.mkdir(parents=True)
-    binary.write_text("#!/bin/sh\nenv | grep -E '^(EIDOLON_LAYA_|OPENBLAS_)' | sort\n")
+    binary.write_text('#!/bin/sh\necho "$@"\nenv | grep -E "^(EIDOLON_LAYA_|OPENBLAS_)" | sort\n')
     binary.chmod(0o755)
     return launcher
 
 
-def _run(launcher, env, *, check=True):
+@pytest.mark.parametrize(("unit", "service"), sorted(UNIT_SERVICE.items()))
+def test_a_launcher_names_its_service_and_the_file_and_nothing_else(tmp_path, unit, service):
+    launcher = _fake_release(tmp_path, unit)
     base = {k: v for k, v in os.environ.items() if not k.startswith(("EIDOLON_", "OPENBLAS_"))}
-    result = subprocess.run(["sh", str(launcher), "serve"], env=base | env, capture_output=True, text=True, check=check)
-    return dict(line.split("=", 1) for line in result.stdout.splitlines()) if check else result
+    # A stray variable from an older Host must change nothing: none is read or passed on.
+    env = base | {"EIDOLON_HOST_CAPABILITIES": "local_laya,rknpu2", "EIDOLON_LAYA_PORT": "9999"}
+    out = subprocess.run(
+        ["sh", str(launcher), "serve"], env=env, capture_output=True, text=True, check=True
+    ).stdout.splitlines()
+    assert out[0] == f"--config {tmp_path}/laya/deploy/services.toml --service {service} serve"
+    assert out[1:] == ["EIDOLON_LAYA_PORT=9999", "OPENBLAS_NUM_THREADS=1"]  # inherited, not used
 
 
-def test_home_launcher_keeps_npu_cores_1_and_2_and_one_blas_thread(tmp_path):
-    launcher = _fake_release(tmp_path, "eidolon-laya")
-    model = tmp_path / "model"
-    (model / "npu").mkdir(parents=True)
-    (model / "manifest.json").touch()
-    (model / "npu/hidden_l512.rknn").touch()
-    got = _run(launcher, {"EIDOLON_HOST_CAPABILITIES": "local_laya,rknpu2", "EIDOLON_LAYA_MODEL_DIR": str(model)})
-    assert got["EIDOLON_LAYA_RKNN_PLACEMENT"] == "1:128,256,384,512|2:128,256"
-    assert got["OPENBLAS_NUM_THREADS"] == "1"
-    assert "EIDOLON_LAYA_ENABLE_PARTICIPATION" not in got
-
-
-def _participation_model(tmp_path, *, profile=True):
-    model = tmp_path / "participation"
-    (model / "npu").mkdir(parents=True)
-    (model / "onnx").mkdir()
-    for name in ("manifest.json", "npu/hidden_l640.rknn", "onnx/model.onnx.data"):
-        (model / name).touch()
-    if profile:
-        (model / "participation.json").touch()
-    return model
-
-
-def test_participation_launcher_inherits_none_of_the_home_services_settings(tmp_path):
-    """host.env and cpu-allocation.env are shared by every unit: the home service's values must not leak."""
-    launcher = _fake_release(tmp_path, "eidolon-laya-participation")
-    model = _participation_model(tmp_path)
-    home = {
-        "EIDOLON_LAYA_MODEL_DIR": "/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8",
-        "EIDOLON_LAYA_RKNN_PLACEMENT": "1:128,256,384,512|2:128,256",
-        "EIDOLON_LAYA_PORT": "8771", "EIDOLON_LAYA_API_KEY": "home-key", "EIDOLON_LAYA_DEVICE": "cpu",
-        "EIDOLON_LAYA_SPECULATIVE": "1", "EIDOLON_LAYA_THREADS": "4",
+def _artifact_roots(capability: str) -> set[str]:
+    return {
+        item["install_root"]
+        for item in CONTRACT["artifacts"]
+        if item.get("requires_capability") == capability and "-rknn-" in item["id"]
     }
-    got = _run(launcher, home | {
-        "EIDOLON_HOST_CAPABILITIES": "local_laya,local_laya_participation,rknpu2",
-        "EIDOLON_LAYA_PARTICIPATION_MODEL_DIR": str(model),
-        "EIDOLON_LAYA_PARTICIPATION_RKNN_PLACEMENT": "0:384,512,640",
-    })
-    assert got["EIDOLON_LAYA_MODEL_DIR"] == str(model)
-    assert got["EIDOLON_LAYA_BACKEND"] == "rknn"
-    assert got["EIDOLON_LAYA_RKNN_LIBRARY"] == f"{model}/librknnrt.so"
-    assert got["EIDOLON_LAYA_RKNN_PLACEMENT"] == "0:384,512,640"
-    assert got["EIDOLON_LAYA_SPECULATIVE"] == "0"
-    assert got["EIDOLON_LAYA_PORT"] == "8773" and got["EIDOLON_LAYA_HOST"] == "127.0.0.1"
-    assert got["EIDOLON_LAYA_ENABLE_PARTICIPATION"] == "1" and got["EIDOLON_LAYA_MAX_PENDING"] == "1"
-    assert got["OPENBLAS_NUM_THREADS"] == "1"
-    for leaked in ("EIDOLON_LAYA_API_KEY", "EIDOLON_LAYA_DEVICE", "EIDOLON_LAYA_THREADS"):
-        assert leaked not in got
 
 
-def test_participation_launcher_picks_onnx_without_an_npu_and_needs_its_profile(tmp_path):
-    launcher = _fake_release(tmp_path, "eidolon-laya-participation")
-    model = _participation_model(tmp_path)
-    got = _run(launcher, {"EIDOLON_HOST_CAPABILITIES": "local_laya_participation",
-                          "EIDOLON_LAYA_PARTICIPATION_MODEL_DIR": str(model),
-                          "EIDOLON_LAYA_PARTICIPATION_PORT": "8790"})
-    assert got["EIDOLON_LAYA_BACKEND"] == "onnx" and got["EIDOLON_LAYA_PORT"] == "8790"
-    assert "EIDOLON_LAYA_RKNN_PLACEMENT" not in got and "EIDOLON_LAYA_RKNN_LIBRARY" not in got
-    bare = _participation_model(tmp_path / "bare", profile=False)
-    result = _run(launcher, {"EIDOLON_LAYA_PARTICIPATION_MODEL_DIR": str(bare)}, check=False)
-    assert result.returncode == 2 and "participation.json" in result.stderr
+@pytest.mark.parametrize(
+    ("service", "capability", "port"),
+    [("smart_home", "local_laya", "laya_api"), ("participation", "local_laya_participation", "laya_participation_api")],
+)
+def test_the_services_file_is_what_the_contract_pins(service, capability, port):
+    npu = Settings.for_service(service, path=SERVICES_FILE, capabilities=frozenset({"rknpu2"}))
+    assert {str(npu.model_dir)} == _artifact_roots(capability)
+    assert npu.port == CONTRACT["ports"][port]["default"]
+    unit = next(u for u in CONTRACT["units"] if u.get("requires_capability") == capability)
+    assert UNIT_SERVICE[unit["id"]] == service and unit["exec"] == f"scripts/{unit['id']}"
+
+
+@pytest.mark.parametrize("unit", sorted(UNIT_SERVICE))
+def test_the_units_carry_no_laya_settings(unit):
+    text = (REPO_ROOT / "deploy" / "systemd" / f"{unit}.service").read_text(encoding="utf-8")
+    assert "EIDOLON_LAYA" not in text and "cpu-allocation" not in text
+    assert "EnvironmentFile=/etc/eidolon/host.env" in text  # EIDOLON_HOST_CAPABILITIES picks the backend

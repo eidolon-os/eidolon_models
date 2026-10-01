@@ -245,7 +245,9 @@ def load_engine(settings: Settings, log=print) -> tuple[DecisionEngine, Manifest
         from .backends import RknnBackend, parse_placement
 
         placement = parse_placement(settings.rknn_placement) if settings.rknn_placement else None
-        backend = RknnBackend(manifest.root / "npu", placement=placement)
+        pinned = manifest.root / "librknnrt.so"
+        library = settings.rknn_library or (pinned if pinned.is_file() else None)
+        backend = RknnBackend(manifest.root / "npu", placement=placement, library=library)
     else:
         from .backends import OnnxBackend
 

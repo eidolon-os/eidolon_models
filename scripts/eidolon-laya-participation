@@ -1,48 +1,11 @@
 #!/bin/sh
+# The participation Laya service on a released Host. Its settings are the participation table of
+# laya/deploy/services.toml — the one file for every Laya service; the backend there follows from
+# the Host's rknpu2 declaration (EIDOLON_HOST_CAPABILITIES in /etc/eidolon/host.env, written by Ops).
 set -eu
 REPO_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-# The companion / role-team participation model, a service of its own beside the smart-home one
-# (scripts/eidolon-laya): its own port, pinned model, NPU cores and admission. Ops' host.env is shared by
-# every unit on the Host, and the smart-home service's EIDOLON_LAYA_* may reach this process through it
-# or cpu-allocation.env, so none of them is inherited: this launcher reads EIDOLON_LAYA_PARTICIPATION_*
-# only and derives the service's settings from those.
-for name in $(env | sed -n 's/^\(EIDOLON_LAYA_[A-Z0-9_]*\)=.*/\1/p'); do
-  case "$name" in EIDOLON_LAYA_PARTICIPATION_*) ;; *) unset "$name" ;; esac
-done
-case ",${EIDOLON_HOST_CAPABILITIES:-}," in
-  *,rknpu2,*) DEFAULT_BACKEND=rknn ;;
-  *) DEFAULT_BACKEND=onnx ;;
-esac
-BACKEND=${EIDOLON_LAYA_PARTICIPATION_BACKEND:-$DEFAULT_BACKEND}
-case "$BACKEND" in
-  rknn)
-    MODEL_DIR=${EIDOLON_LAYA_PARTICIPATION_MODEL_DIR:-/var/lib/eidolon/models/laya-participation-p4-rknn-ae6718a4}
-    REQUIRED_FILE=npu/hidden_l640.rknn
-    export EIDOLON_LAYA_RKNN_LIBRARY="$MODEL_DIR/librknnrt.so"
-    # NPU core 0 by default; the smart-home service holds 1 and 2 (deploy/cpu-allocation.env), so neither
-    # queues behind the other. One core: questions run staged (action, then speaker only when someone
-    # speaks) rather than speculatively — speculation needs a second core to pay.
-    export EIDOLON_LAYA_RKNN_PLACEMENT="${EIDOLON_LAYA_PARTICIPATION_RKNN_PLACEMENT:-0:384,512,640}"
-    export EIDOLON_LAYA_SPECULATIVE="${EIDOLON_LAYA_PARTICIPATION_SPECULATIVE:-0}"
-    ;;
-  onnx)
-    MODEL_DIR=${EIDOLON_LAYA_PARTICIPATION_MODEL_DIR:-/var/lib/eidolon/models/laya-participation-p4-onnx-ae6718a4}
-    REQUIRED_FILE=onnx/model.onnx.data
-    ;;
-  *) echo "eidolon-laya-participation: unsupported release backend: $BACKEND" >&2; exit 2 ;;
-esac
-for file in manifest.json participation.json "$REQUIRED_FILE"; do
-  if [ ! -f "$MODEL_DIR/$file" ]; then
-    echo "eidolon-laya-participation: pinned model artifact missing: $MODEL_DIR/$file" >&2
-    exit 2
-  fi
-done
-export EIDOLON_LAYA_BACKEND="$BACKEND" EIDOLON_LAYA_MODEL_DIR="$MODEL_DIR" EIDOLON_LAYA_ENABLE_PARTICIPATION=1
-export EIDOLON_LAYA_HOST="${EIDOLON_LAYA_PARTICIPATION_HOST:-127.0.0.1}"
-export EIDOLON_LAYA_PORT="${EIDOLON_LAYA_PARTICIPATION_PORT:-8773}"
-# A decision that would queue behind another is late for the turn; 503 sends it to the Agent's fallback.
-export EIDOLON_LAYA_MAX_PENDING="${EIDOLON_LAYA_PARTICIPATION_MAX_PENDING:-1}"
-if [ -n "${EIDOLON_LAYA_PARTICIPATION_API_KEY:-}" ]; then export EIDOLON_LAYA_API_KEY="$EIDOLON_LAYA_PARTICIPATION_API_KEY"; fi
-# The CPU half is a few small matmuls per question; OpenBLAS's per-core pool only spins (see backends.py).
+# Process-wide library switches, not service settings: the CPU half is a few small matmuls per
+# question and OpenBLAS's per-core pool only spins (backends.py limits it again once loaded), and
+# the weights never come from the network.
 export OPENBLAS_NUM_THREADS=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
-exec "$REPO_ROOT/.venv/bin/eidolon-laya" "$@"
+exec "$REPO_ROOT/.venv/bin/eidolon-laya" --config "$REPO_ROOT/laya/deploy/services.toml" --service participation "$@"

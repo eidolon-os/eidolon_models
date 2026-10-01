@@ -10,11 +10,22 @@ import sys
 from pathlib import Path
 
 from .artifacts import Manifest, fetch_torch, verify_onnx, verify_torch
-from .config import BACKENDS, DEVICES, Settings
+from .config import BACKENDS, DEVICES, SERVICES, Settings
 
 
 def _settings(args: argparse.Namespace) -> Settings:
-    settings = Settings.from_env()
+    """A service's settings from the services file, or a bare model for the tools; flags win."""
+
+    model_dir = Path(args.model_dir).resolve() if getattr(args, "model_dir", None) else None
+    if args.service:
+        settings = Settings.for_service(
+            args.service, path=Path(args.config) if args.config else None,
+            backend=getattr(args, "backend", None),
+        )
+    elif model_dir is not None:
+        settings = Settings(model_dir=model_dir)
+    else:
+        raise ValueError("name a --service (deploy/services.toml) or a --model-dir")
     return settings.with_overrides(
         backend=getattr(args, "backend", None),
         host=getattr(args, "host", None),
@@ -23,7 +34,7 @@ def _settings(args: argparse.Namespace) -> Settings:
         threads=getattr(args, "threads", None),
         max_len=getattr(args, "max_len", None),
         head_max_len=getattr(args, "head_max_len", None),
-        model_dir=Path(args.model_dir).resolve() if getattr(args, "model_dir", None) else None,
+        model_dir=model_dir,
     )
 
 
@@ -114,8 +125,11 @@ def cmd_serve(args: argparse.Namespace) -> int:
     from .service import create_app
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
+    if not args.service:
+        raise ValueError("serve needs --service: one of " + ", ".join(SERVICES))
     settings = _settings(args)
     settings.validate_exposure()
+    settings.require_model()
     engine, manifest = load_engine(settings, log=logging.getLogger("eidolon_laya").info)
     model_info = {
         "model": manifest.name,
@@ -178,7 +192,14 @@ def _runtime_args(p: argparse.ArgumentParser) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="eidolon-laya", description=__doc__)
     parser.add_argument(
-        "--model-dir", help="model version directory (default: EIDOLON_LAYA_MODEL_DIR)"
+        "--service", choices=SERVICES,
+        help="the service's table in the services file (required by serve)",
+    )
+    parser.add_argument(
+        "--config", help="services file (default: deploy/services.toml of this checkout)"
+    )
+    parser.add_argument(
+        "--model-dir", help="model version directory (default: the service's, for its backend)"
     )
     sub = parser.add_subparsers(dest="command", required=True)
 

@@ -41,8 +41,8 @@ def test_generated_config_is_verified_by_content(tmp_path):
 
 
 def test_head_max_len_override():
-    assert Settings.from_env({}).head_max_len is None
-    assert Settings.from_env({"EIDOLON_LAYA_HEAD_MAX_LEN": "1024"}).head_max_len == 1024
+    assert Settings().head_max_len is None
+    assert Settings().with_overrides(head_max_len=1024).head_max_len == 1024
 
 
 def test_hub_defaults_to_huggingface(tmp_path):

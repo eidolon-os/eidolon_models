@@ -5,12 +5,12 @@ import importlib.util
 import pytest
 
 from eidolon_models_laya.artifacts import Manifest, verify_onnx, verify_torch
-from eidolon_models_laya.config import Settings
+from eidolon_models_laya.config import DEFAULT_MODEL, laya_home
 
 
 @pytest.fixture(scope="session")
 def manifest() -> Manifest:
-    return Manifest.load(Settings.from_env({}).model_dir)
+    return Manifest.load(laya_home() / DEFAULT_MODEL)
 
 
 @pytest.fixture(scope="session")

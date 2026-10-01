@@ -164,7 +164,13 @@ class RknnBackend:
     name = "rknn"
     PLACEMENT = {0: (128, 256), 1: (256, 384, 512), 2: (128, 256)}
 
-    def __init__(self, npu_dir: Path, *, placement: dict[int, tuple[int, ...]] | None = None):
+    def __init__(
+        self,
+        npu_dir: Path,
+        *,
+        placement: dict[int, tuple[int, ...]] | None = None,
+        library: Path | None = None,
+    ):
         import re
         import threading
         from concurrent.futures import ThreadPoolExecutor
@@ -192,7 +198,7 @@ class RknnBackend:
                         self._rt[(core, L)] = first[L].dup(core)
                         self._duplicates += 1
                     else:
-                        first[L] = self._rt[(core, L)] = RknnRuntime(files[L], core)
+                        first[L] = self._rt[(core, L)] = RknnRuntime(files[L], core, library=library)
         except BaseException:
             for runtime in reversed(list(self._rt.values())):  # duplicates before the originals
                 runtime.close()

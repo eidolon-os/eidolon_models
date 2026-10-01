@@ -8,12 +8,11 @@ Wants=network-online.target
 Type=simple
 User=eidolon-laya
 Group=eidolon-laya
-# Backend, port, threads and the API key live here (written by deploy/ecs/deploy.sh).
-EnvironmentFile=/etc/eidolon-laya/eidolon-laya.env
-Environment=EIDOLON_LAYA_HOME=/opt/eidolon-laya
+# Backend, listen address, threads and the key file are this server's services file, written once by
+# deploy/ecs/deploy.sh (the format of laya/deploy/services.toml, with one [systemone] table).
 Environment=HF_HOME=/var/lib/eidolon-laya/hf
 StateDirectory=eidolon-laya
-ExecStart=/opt/eidolon-laya/scripts/eidolon-laya serve
+ExecStart=/opt/eidolon-laya/scripts/eidolon-laya --config /etc/eidolon-laya/services.toml --service systemone serve
 Restart=on-failure
 RestartSec=3
 # The host is small and shared: one request with a huge max_len must not take it down.

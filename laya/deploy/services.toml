@@ -1,0 +1,57 @@
+# Every Laya service a Host may run, and how — the one place their settings live.
+#
+# Each service process reads only its own table (`eidolon-laya --service <name> serve`), and under it
+# the table of its backend. Nothing here differs between Hosts:
+#   - which services run is the Host's capability declaration (Ops: local_laya,
+#     local_laya_participation), which decides the units installed and the artifacts carried;
+#   - the backend follows from `rknpu2` in that same declaration (EIDOLON_HOST_CAPABILITIES): rknn on
+#     an NPU board, torch from a source checkout (the Mac). A released Host without an NPU runs no Laya:
+#     ONNX on the A76 cores measured 2.4–3.0 s per request (evals/opi5max-npu-20260929).
+# Ports are the port registry's (ops/component.toml [ports]); rknn model directories are the install
+# roots of the pinned artifacts there. Tests hold both to that file.
+#
+# One-off runs override single values on the command line (--port, --model-dir, --backend); nothing
+# reads an environment variable for these.
+schema_version = 1
+
+[defaults]
+host = "127.0.0.1"
+
+# The smart-home interpreter (/v1/systemone): r14's single-sentence questions plus the pick / follow
+# continuation questions (models/laya-smart-home/7b695ba8/continuation.json).
+[smart_home]
+port = 8771
+
+[smart_home.rknn]
+model_dir = "/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8"
+# NPU cores 1 and 2; core 0 is the participation service's, so neither queues behind the other.
+# A bucket on two cores is loaded once and shared (rknn_dup_context): the NPU address space is
+# board-wide, about 14 Laya graphs. Measured p50 / p95 454 / 476 ms on cores 1+2 (participation
+# EXPERIMENTS.md, coexistence section).
+placement = "1:128,256,384,512|2:128,256"
+speculative = true
+# A second request queued behind the first misses the caller's budget; refusing it at once (503)
+# sends it straight to the Agent's fallback instead.
+max_pending = 1
+
+[smart_home.torch]
+model_dir = "models/laya-smart-home/7b695ba8"
+device = "auto"
+
+# Companion / role-team participation decisions (/v1/participation/decide, SDK participation v2).
+[participation]
+port = 8773
+participation = true
+
+[participation.rknn]
+model_dir = "/var/lib/eidolon/models/laya-participation-p4-rknn-ae6718a4"
+# Core 0 only, staged (the action first, the speaker only when it is needed): speculative questions
+# would need a runtime per question per bucket, which the board's NPU address space cannot hold
+# beside the smart-home model.
+placement = "0:384,512,640"
+speculative = false
+max_pending = 1
+
+[participation.torch]
+model_dir = "models/laya-participation/ae6718a4"
+device = "auto"

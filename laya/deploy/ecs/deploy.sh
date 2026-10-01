@@ -16,8 +16,9 @@
 #                               nginx under this name, 443 + 80->443  listens on 0.0.0.0:8771)
 #   EIDOLON_LAYA_NGINX_SSL_DIR  holds fullchain.pem + privkey.pem    /etc/nginx/ssl/yangtzeailab.com
 #
-# An existing /etc/eidolon-laya/eidolon-laya.env is never overwritten: change
-# the backend there and `systemctl restart eidolon-laya`.
+# An existing /etc/eidolon-laya/services.toml is never overwritten: change the
+# backend there and `systemctl restart eidolon-laya`. A server still on the old
+# eidolon-laya.env is migrated once, keeping its backend, address and key.
 set -eu
 
 TARGET=${1:-root@eidolon}
@@ -45,7 +46,7 @@ if [ "$ONNX_SOURCE" = local ]; then
   rsync -a "$LAYA/$MODEL_REL/onnx/" "$TARGET:$APP/$MODEL_REL/onnx/"
 fi
 
-ssh "$TARGET" APP="$APP" HF_ENDPOINT="$HF_ENDPOINT" BACKEND="$BACKEND" THREADS="$THREADS" \
+ssh "$TARGET" APP="$APP" MODEL_REL="$MODEL_REL" HF_ENDPOINT="$HF_ENDPOINT" BACKEND="$BACKEND" THREADS="$THREADS" \
   ONNX_SOURCE="$ONNX_SOURCE" PYPI_MIRROR="'$PYPI_MIRROR'" NGINX_NAME="'$NGINX_NAME'" \
   NGINX_SSL="$NGINX_SSL" sh -s <<'REMOTE'
 set -eu
@@ -79,40 +80,64 @@ else
 fi
 
 echo "==> weights"
-scripts/eidolon-laya fetch --endpoint "$HF_ENDPOINT"
+scripts/eidolon-laya --model-dir "$MODEL_REL" fetch --endpoint "$HF_ENDPOINT"
 if [ "$ONNX_SOURCE" = server ]; then
   # Export needs the model twice over in RAM; cap it so a small host is not squeezed.
-  systemd-run --scope --quiet -p MemoryMax=5G scripts/eidolon-laya export-onnx \
+  systemd-run --scope --quiet -p MemoryMax=5G scripts/eidolon-laya --model-dir "$MODEL_REL" export-onnx \
     || echo "!! ONNX export failed; torch backend still works. Retry with EIDOLON_LAYA_ONNX_SOURCE=local"
 fi
 
 echo "==> config"
 mkdir -p /etc/eidolon-laya
-ENV=/etc/eidolon-laya/eidolon-laya.env
-if [ ! -f "$ENV" ]; then
-  KEY=$(.venv/bin/python -c 'import secrets; print(secrets.token_hex(24))')
-  # Behind nginx the service only needs loopback; without it, it faces the network.
-  if [ -n "$NGINX_NAME" ]; then LISTEN=127.0.0.1; else LISTEN=0.0.0.0; fi
-  umask 077
-  cat > "$ENV" <<EOF
-EIDOLON_LAYA_BACKEND=$BACKEND
-EIDOLON_LAYA_THREADS=$THREADS
-EIDOLON_LAYA_HOST=$LISTEN
-EIDOLON_LAYA_PORT=8771
-EIDOLON_LAYA_API_KEY=$KEY
-EIDOLON_LAYA_MAX_PENDING=4
-EOF
-  echo "   wrote $ENV (new API key)"
+CONF=/etc/eidolon-laya/services.toml
+KEYFILE=/etc/eidolon-laya/api-key
+OLD_ENV=/etc/eidolon-laya/eidolon-laya.env
+if [ ! -f "$CONF" ]; then
+  # A server deployed before the services file carries its choices in the old env file: keep them.
+  if [ -f "$OLD_ENV" ]; then
+    old() { sed -n "s/^$1=//p" "$OLD_ENV" | tail -1; }
+    BACKEND=$(old EIDOLON_LAYA_BACKEND); BACKEND=${BACKEND:-torch}
+    THREADS=$(old EIDOLON_LAYA_THREADS); THREADS=${THREADS:-1}
+    LISTEN=$(old EIDOLON_LAYA_HOST); LISTEN=${LISTEN:-127.0.0.1}
+    PORT=$(old EIDOLON_LAYA_PORT); PORT=${PORT:-8771}
+    KEY=$(old EIDOLON_LAYA_API_KEY)
+  else
+    # Behind nginx the service only needs loopback; without it, it faces the network.
+    if [ -n "$NGINX_NAME" ]; then LISTEN=127.0.0.1; else LISTEN=0.0.0.0; fi
+    PORT=8771
+    KEY=
+  fi
+  [ -n "$KEY" ] || KEY=$(.venv/bin/python -c 'import secrets; print(secrets.token_hex(24))')
+  umask 027
+  printf '%s\n' "$KEY" > "$KEYFILE"
+  chown root:eidolon-laya "$KEYFILE"
+  chmod 640 "$KEYFILE"
+  {
+    echo "# This server's Laya service (written once by deploy/ecs/deploy.sh; edit and restart eidolon-laya)."
+    echo "schema_version = 1"
+    echo
+    echo "[systemone]"
+    echo "host = \"$LISTEN\""
+    echo "port = $PORT"
+    echo "threads = $THREADS"
+    echo "max_pending = 4"
+    echo "api_key_file = \"$KEYFILE\""
+    echo
+    echo "[systemone.$BACKEND]"
+    echo "model_dir = \"$MODEL_REL\""
+  } > "$CONF"
+  chmod 644 "$CONF"
+  if [ -f "$OLD_ENV" ]; then mv "$OLD_ENV" "$OLD_ENV.migrated"; fi
+  echo "   wrote $CONF and $KEYFILE"
 else
-  echo "   kept existing $ENV"
+  echo "   kept existing $CONF"
 fi
-
 echo "==> systemd"
 install -m 644 deploy/systemd/eidolon-laya.service /etc/systemd/system/eidolon-laya.service
 systemctl daemon-reload
 systemctl enable --quiet eidolon-laya
 systemctl restart eidolon-laya
-PORT=$(sed -n 's/^EIDOLON_LAYA_PORT=//p' "$ENV"); PORT=${PORT:-8771}
+PORT=$(sed -n 's/^port *= *//p' "$CONF" | head -1); PORT=${PORT:-8771}
 for _ in $(seq 1 120); do
   curl -fsS -m 2 "http://127.0.0.1:$PORT/readyz" >/dev/null 2>&1 && break
   sleep 1
@@ -152,8 +177,8 @@ if [ -n "$NGINX_NAME" ]; then
       exit 1
     fi
   fi
-  echo "==> up: https://$NGINX_NAME  (key: grep API_KEY $ENV)"
+  echo "==> up: https://$NGINX_NAME  (key: $KEYFILE)"
 else
-  echo "==> up: http://<public-ip>:$PORT  (key: grep API_KEY $ENV)"
+  echo "==> up: http://<public-ip>:$PORT  (key: $KEYFILE)"
 fi
 REMOTE

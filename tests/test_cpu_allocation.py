@@ -23,7 +23,6 @@ from eidolon_models_host.cpu import hex_mask, parse_cpu_list
 REPO_ROOT = Path(__file__).resolve().parents[1]
 ALLOCATION = REPO_ROOT / "deploy" / "cpu-allocation.env"
 LAUNCHER = REPO_ROOT / "scripts" / "eidolon-llm"
-LAYA_LAUNCHERS = (REPO_ROOT / "scripts" / "eidolon-laya", REPO_ROOT / "scripts" / "eidolon-laya-participation")
 
 # Every list the allocation file could plausibly hold, plus the shapes the
 # syntax allows that it does not currently use -- a single core, a bare pair,
@@ -102,9 +101,6 @@ def test_every_assignment_is_a_variable_a_consumer_reads() -> None:
         for name in re.findall(r"\$\{(EIDOLON_[A-Z_]+):-\}", launcher)
         if "CPU_AFFINITY" in name or name.endswith("_THREADS")
     }
-    # The two Laya services' NPU cores (not CPU cores), read by their launchers.
-    for laya in LAYA_LAUNCHERS:
-        readers |= set(re.findall(r"\$\{(EIDOLON_LAYA_[A-Z_]*RKNN_PLACEMENT):-", laya.read_text(encoding="utf-8")))
     assert set(_allocation()) <= readers, "an assignment here is read by nobody"
     # `EIDOLON_LLM_THREADS` is deliberately commented out -- the count is
     # derived from the mask, and the variable is only an override for probing.
@@ -156,24 +152,3 @@ def test_tts_pins_itself_so_the_engine_inherits() -> None:
         assert sorted(os.sched_getaffinity(0)) == [available[0]]
     finally:
         os.sched_setaffinity(0, available)
-
-
-def test_the_two_laya_services_do_not_share_an_npu_core() -> None:
-    """Smart-home and participation decisions are separate services; neither may queue behind the other.
-
-    Measured (participation EXPERIMENTS.md): on shared cores a busy participation service took the smart-home
-    p50 from 356 to 630 ms. On disjoint cores only memory bandwidth is shared, 6-9% each.
-    """
-    import sys
-
-    sys.path.insert(0, str(REPO_ROOT / "laya" / "src"))
-    from eidolon_models_laya.backends import parse_placement
-
-    home = parse_placement(_allocation()["EIDOLON_LAYA_RKNN_PLACEMENT"])
-    team = parse_placement(_allocation()["EIDOLON_LAYA_PARTICIPATION_RKNN_PLACEMENT"])
-    assert set(home).isdisjoint(team), f"NPU cores shared: {home} / {team}"
-    for laya in LAYA_LAUNCHERS:  # the launchers' own defaults say the same as this file
-        body = laya.read_text(encoding="utf-8")
-        name = "EIDOLON_LAYA_PARTICIPATION_RKNN_PLACEMENT" if "participation" in laya.name else "EIDOLON_LAYA_RKNN_PLACEMENT"
-        default = re.search(r"\$\{" + name + r":-([^}]*)\}", body).group(1)
-        assert default == _allocation()[name], f"{laya.name} defaults {default}, the allocation says {_allocation()[name]}"
