@@ -1,7 +1,16 @@
-# Weights are fetched (torch/) or generated (onnx/), never committed; manifest.json is.
+# Weights are fetched (torch/) or generated (onnx/, npu/) and stay out of Git; manifest.json is
+# committed. The exception is a model a Host runs: its torch weights (the Mac's source run, and the
+# source of every export) and its compiled NPU graphs are LFS objects, and ops/component.toml carries
+# the NPU set to the Host from these paths.
 models/*/*/torch/
 models/*/*/onnx/
 models/*/*/npu/
+!models/laya-smart-home/7b695ba8/torch/
+!models/laya-smart-home/7b695ba8/npu/
+!models/laya-participation/ae6718a4/torch/
+!models/laya-participation/ae6718a4/npu/
+# The NPU converter's inputs; the compiled .rknn are what runs.
+models/*/*/npu/*.onnx
 .venv/
 .env
 train/private/

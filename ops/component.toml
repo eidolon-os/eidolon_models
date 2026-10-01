@@ -179,57 +179,12 @@ purpose = "Laya System One decision suggestions, HTTP at /v1/systemone"
 
 # c4 (7b695ba8): the r14 single-sentence questions plus the continuation-laya-v1 pick / follow questions
 # (laya/models/laya-smart-home/7b695ba8/continuation.json), same graph shapes and buckets as r14.
-# The ONNX export and tokenizer are a frozen local artifact source; the runtime never reads train/runs
-# or models/. Ops verifies every byte before carriage. A later version gets a new root.
-[[artifacts]]
-id = "laya-smart-home-c4-onnx-7b695ba8"
-kind = "model"
-install_root = "/var/lib/eidolon/models/laya-smart-home-c4-onnx-7b695ba8"
-requires_capability = "local_laya"
-
-[[artifacts.files]]
-path = "manifest.json"
-sha256 = "6f39cdf9a5135555b013aee3bf75c5f12f4a615046a6db4d4fc521af4e4144c8"
-url = "local-artifact://laya-c4-onnx/manifest.json"
-
-[[artifacts.files]]
-path = "onnx/model.onnx"
-sha256 = "32a0cc7ebd1f3bfd53ebc7bca81bc0669a6793a0c3ed90e91d84d278f8497f5d"
-url = "local-artifact://laya-c4-onnx/onnx/model.onnx"
-
-[[artifacts.files]]
-path = "onnx/model.onnx.data"
-sha256 = "54ae804aa93d6c4921faaed41968b03bd6149a095b498793bc9ee87b45edbc51"
-url = "local-artifact://laya-c4-onnx/onnx/model.onnx.data"
-
-[[artifacts.files]]
-path = "torch/rl_agent_config.json"
-sha256 = "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
-url = "local-artifact://laya-c4-onnx/torch/rl_agent_config.json"
-
-[[artifacts.files]]
-path = "torch/encoder/config.json"
-sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
-url = "local-artifact://laya-c4-onnx/torch/encoder/config.json"
-
-[[artifacts.files]]
-path = "torch/tokenizer/tokenizer.json"
-sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
-url = "local-artifact://laya-c4-onnx/torch/tokenizer/tokenizer.json"
-
-[[artifacts.files]]
-path = "torch/tokenizer/tokenizer_config.json"
-sha256 = "e8e6a37c189f9dd23976b86b3e1ddb6928472e9f87c94103a1aaff311f45f090"
-url = "local-artifact://laya-c4-onnx/torch/tokenizer/tokenizer_config.json"
-
-[[artifacts.files]]
-path = "onnx/export.json"
-sha256 = "0b80ae767ad8714ec975f355992662fcd5dc0ba6c12cadcf4e6130537e837ba0"
-url = "local-artifact://laya-c4-onnx/onnx/export.json"
-
-# Both inference formats remain pinned for explicit rollback. Selected by local_laya;
-# the launcher uses the Host rknpu2 declaration, never a runtime failure fallback.
 # RKNN fp16 converted on the board with rknn-toolkit2 2.3.2 (evals/smart-home-continuation/c4-npu).
+# Every byte is an LFS object of this repository at the pinned commit (repo://), so any operator's
+# checkout can carry it; Ops verifies each digest, and the Host receives it once, beside releases.
+# laya/deploy/services.toml names this root as the smart_home service's rknn model. There is no CPU
+# format: a Host without rknpu2 runs no Laya (ONNX on the A76 cores measured 2.4–3.0 s per request).
+# A later version gets a new root.
 [[artifacts]]
 id = "laya-smart-home-c4-rknn-7b695ba8"
 kind = "model"
@@ -239,83 +194,82 @@ requires_capability = "local_laya"
 [[artifacts.files]]
 path = "librknnrt.so"
 sha256 = "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8"
-url = "local-artifact://laya-c4-rknn/librknnrt.so"
+url = "repo://laya/deploy/rk3588/librknnrt.so"
 
 [[artifacts.files]]
 path = "manifest.json"
 sha256 = "6f39cdf9a5135555b013aee3bf75c5f12f4a615046a6db4d4fc521af4e4144c8"
-url = "local-artifact://laya-c4-rknn/manifest.json"
+url = "repo://laya/models/laya-smart-home/7b695ba8/manifest.json"
 
 [[artifacts.files]]
 path = "npu/act_head.npz"
 sha256 = "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98"
-url = "local-artifact://laya-c4-rknn/npu/act_head.npz"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/act_head.npz"
 
 [[artifacts.files]]
 path = "npu/export.json"
 sha256 = "dd3cafeb457167fc90f2d0f59db9486c061fdb359375d1dfe36e7bfb017fe712"
-url = "local-artifact://laya-c4-rknn/npu/export.json"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/export.json"
 
 [[artifacts.files]]
 path = "npu/hidden_l128.rknn"
 sha256 = "a2dbb0f2c5e892c735b58657005572006b5f34e6707345980cfd18fa75ef3e2d"
-url = "local-artifact://laya-c4-rknn/npu/hidden_l128.rknn"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l128.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l256.rknn"
 sha256 = "91928c2457ba85286aec1b75f9635c77c448734d9d444d8b225eba20fc1bdf8e"
-url = "local-artifact://laya-c4-rknn/npu/hidden_l256.rknn"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l256.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l384.rknn"
 sha256 = "27b9c39e293a423f52d774e3c6e435d38671afb804c8284034f44d7b12102d61"
-url = "local-artifact://laya-c4-rknn/npu/hidden_l384.rknn"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l384.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l512.rknn"
 sha256 = "4b9965af6f28fd484e85622b6fd0febce40cdc97ced280c67d0a0f7678f34643"
-url = "local-artifact://laya-c4-rknn/npu/hidden_l512.rknn"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l512.rknn"
 
 [[artifacts.files]]
 path = "npu/scorer.npz"
 sha256 = "9ca20aec34478e95ba392b62a6e3ca79513ba4155869f186d183b98ee0c07715"
-url = "local-artifact://laya-c4-rknn/npu/scorer.npz"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/scorer.npz"
 
 [[artifacts.files]]
 path = "npu/tok_emb_fp16.npy"
 sha256 = "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d"
-url = "local-artifact://laya-c4-rknn/npu/tok_emb_fp16.npy"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/tok_emb_fp16.npy"
 
 [[artifacts.files]]
 path = "npu/type_emb.npy"
 sha256 = "4e1d1938fc94299fb41a651600588cd227f01bcb5b1db5d64969a79333c3fb75"
-url = "local-artifact://laya-c4-rknn/npu/type_emb.npy"
+url = "repo://laya/models/laya-smart-home/7b695ba8/npu/type_emb.npy"
 
 [[artifacts.files]]
 path = "torch/encoder/config.json"
 sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
-url = "local-artifact://laya-c4-rknn/torch/encoder/config.json"
+url = "repo://laya/models/laya-smart-home/7b695ba8/torch/encoder/config.json"
 
 [[artifacts.files]]
 path = "torch/rl_agent_config.json"
 sha256 = "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
-url = "local-artifact://laya-c4-rknn/torch/rl_agent_config.json"
+url = "repo://laya/models/laya-smart-home/7b695ba8/torch/rl_agent_config.json"
 
 [[artifacts.files]]
 path = "torch/tokenizer/tokenizer.json"
 sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
-url = "local-artifact://laya-c4-rknn/torch/tokenizer/tokenizer.json"
+url = "repo://laya/models/laya-smart-home/7b695ba8/torch/tokenizer/tokenizer.json"
 
 [[artifacts.files]]
 path = "torch/tokenizer/tokenizer_config.json"
 sha256 = "e8e6a37c189f9dd23976b86b3e1ddb6928472e9f87c94103a1aaff311f45f090"
-url = "local-artifact://laya-c4-rknn/torch/tokenizer/tokenizer_config.json"
+url = "repo://laya/models/laya-smart-home/7b695ba8/torch/tokenizer/tokenizer_config.json"
 
 # The companion / role-team participation model is a service of its own, not a second route on the one
-# above: its own unit, port, capability and pinned weights, configured through its own
-# EIDOLON_LAYA_PARTICIPATION_* (the launcher inherits none of the smart-home service's EIDOLON_LAYA_*).
-# A Host that runs one need not run the other, and either can be updated or rolled back alone.
-# NPU cores are split between the two in deploy/cpu-allocation.env so neither queues behind the other.
+# above: its own unit, port, capability and pinned weights, and its own table in laya/deploy/services.toml
+# (NPU core 0; the smart-home service holds 1 and 2, so neither queues behind the other). A Host that runs
+# one need not run the other, and either can be updated or rolled back alone.
 [[units]]
 id = "eidolon-laya-participation"
 kind = "service"
@@ -332,9 +286,8 @@ purpose = "Laya participation decisions (companion / role team), HTTP at /v1/par
 
 # p4 (laya/train/scenarios/participation/EXPERIMENTS.md): p-test action 96.9%, end-to-end 95.1%; the RKNN
 # graphs match PyTorch on p-dev / p-test (paired gate passed). participation.json pins the task profile the
-# service serves (state format participation-laya-v1, min_confidence 0.95). Both formats are pinned; the
-# launcher picks one from the Host's rknpu2 declaration, never a runtime fallback. A later model gets a new root.
-
+# service serves (state format participation-laya-v1, min_confidence 0.95). LFS objects of this repository,
+# carried as above. A later model gets a new root.
 [[artifacts]]
 id = "laya-participation-p4-rknn-ae6718a4"
 kind = "model"
@@ -344,125 +297,74 @@ requires_capability = "local_laya_participation"
 [[artifacts.files]]
 path = "librknnrt.so"
 sha256 = "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8"
-url = "local-artifact://laya-participation-p4-rknn/librknnrt.so"
+url = "repo://laya/deploy/rk3588/librknnrt.so"
 
 [[artifacts.files]]
 path = "manifest.json"
 sha256 = "ffd02531c3072e8786c1dbd9ad2107caf329615d3a1b2acb652fee225b146213"
-url = "local-artifact://laya-participation-p4-rknn/manifest.json"
+url = "repo://laya/models/laya-participation/ae6718a4/manifest.json"
 
 [[artifacts.files]]
 path = "participation.json"
 sha256 = "85063d9d0f369a8d1d0539ea729c8597a16ae7c6f995e52e5e313dca7f69cf7c"
-url = "local-artifact://laya-participation-p4-rknn/participation.json"
+url = "repo://laya/models/laya-participation/ae6718a4/participation.json"
 
 [[artifacts.files]]
 path = "torch/encoder/config.json"
 sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
-url = "local-artifact://laya-participation-p4-rknn/torch/encoder/config.json"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/encoder/config.json"
 
 [[artifacts.files]]
 path = "torch/rl_agent_config.json"
 sha256 = "f35ba08b343e2729453fc1c712c72eb6cd3c1dae116eedba3484ae499346bc37"
-url = "local-artifact://laya-participation-p4-rknn/torch/rl_agent_config.json"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/rl_agent_config.json"
 
 [[artifacts.files]]
 path = "torch/tokenizer/tokenizer.json"
 sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
-url = "local-artifact://laya-participation-p4-rknn/torch/tokenizer/tokenizer.json"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/tokenizer/tokenizer.json"
 
 [[artifacts.files]]
 path = "torch/tokenizer/tokenizer_config.json"
 sha256 = "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
-url = "local-artifact://laya-participation-p4-rknn/torch/tokenizer/tokenizer_config.json"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/tokenizer/tokenizer_config.json"
 
 [[artifacts.files]]
 path = "npu/act_head.npz"
 sha256 = "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98"
-url = "local-artifact://laya-participation-p4-rknn/npu/act_head.npz"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/act_head.npz"
 
 [[artifacts.files]]
 path = "npu/export.json"
 sha256 = "ec029886ba6520c9dfa7efd7ef79e07a5f39565a70c73a0928fab476e2073a44"
-url = "local-artifact://laya-participation-p4-rknn/npu/export.json"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/export.json"
 
 [[artifacts.files]]
 path = "npu/hidden_l384.rknn"
 sha256 = "5d6f10c301e634ca9ebe81bafeeb1187cb33d1d842cfdf6f2900b34f20d214e8"
-url = "local-artifact://laya-participation-p4-rknn/npu/hidden_l384.rknn"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/hidden_l384.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l512.rknn"
 sha256 = "8f691f6f51f8cc50b607c9e7b82c5dec102c16297b90cbace4eb7e4af911c34b"
-url = "local-artifact://laya-participation-p4-rknn/npu/hidden_l512.rknn"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/hidden_l512.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l640.rknn"
 sha256 = "b775cf5f7878be7c19a2389833573ec3f0f336041fd4a3d6ab8258abb78bceda"
-url = "local-artifact://laya-participation-p4-rknn/npu/hidden_l640.rknn"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/hidden_l640.rknn"
 
 [[artifacts.files]]
 path = "npu/scorer.npz"
 sha256 = "e4427d7911de744706efa17b087d75c295d0cfa79afb89ab4e0bdc7376dac92d"
-url = "local-artifact://laya-participation-p4-rknn/npu/scorer.npz"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/scorer.npz"
 
 [[artifacts.files]]
 path = "npu/tok_emb_fp16.npy"
 sha256 = "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d"
-url = "local-artifact://laya-participation-p4-rknn/npu/tok_emb_fp16.npy"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/tok_emb_fp16.npy"
 
 [[artifacts.files]]
 path = "npu/type_emb.npy"
 sha256 = "a39bc903d899a9047ec56b86cf4aee504e84b1100a972a7bcf06bece210f78a1"
-url = "local-artifact://laya-participation-p4-rknn/npu/type_emb.npy"
-
-[[artifacts]]
-id = "laya-participation-p4-onnx-ae6718a4"
-kind = "model"
-install_root = "/var/lib/eidolon/models/laya-participation-p4-onnx-ae6718a4"
-requires_capability = "local_laya_participation"
-
-[[artifacts.files]]
-path = "manifest.json"
-sha256 = "ffd02531c3072e8786c1dbd9ad2107caf329615d3a1b2acb652fee225b146213"
-url = "local-artifact://laya-participation-p4-onnx/manifest.json"
-
-[[artifacts.files]]
-path = "participation.json"
-sha256 = "85063d9d0f369a8d1d0539ea729c8597a16ae7c6f995e52e5e313dca7f69cf7c"
-url = "local-artifact://laya-participation-p4-onnx/participation.json"
-
-[[artifacts.files]]
-path = "torch/encoder/config.json"
-sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
-url = "local-artifact://laya-participation-p4-onnx/torch/encoder/config.json"
-
-[[artifacts.files]]
-path = "torch/rl_agent_config.json"
-sha256 = "f35ba08b343e2729453fc1c712c72eb6cd3c1dae116eedba3484ae499346bc37"
-url = "local-artifact://laya-participation-p4-onnx/torch/rl_agent_config.json"
-
-[[artifacts.files]]
-path = "torch/tokenizer/tokenizer.json"
-sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
-url = "local-artifact://laya-participation-p4-onnx/torch/tokenizer/tokenizer.json"
-
-[[artifacts.files]]
-path = "torch/tokenizer/tokenizer_config.json"
-sha256 = "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
-url = "local-artifact://laya-participation-p4-onnx/torch/tokenizer/tokenizer_config.json"
-
-[[artifacts.files]]
-path = "onnx/model.onnx"
-sha256 = "4b482837a740239f224ba8242ff9635bd327c89e70c8e62ec8628ab03225cc8c"
-url = "local-artifact://laya-participation-p4-onnx/onnx/model.onnx"
-
-[[artifacts.files]]
-path = "onnx/model.onnx.data"
-sha256 = "23237f584d229fdaf15104576cd79d192586c251e3654131d895c1b400e2358c"
-url = "local-artifact://laya-participation-p4-onnx/onnx/model.onnx.data"
-
-[[artifacts.files]]
-path = "onnx/export.json"
-sha256 = "5ae7d7c94785c6c6fcd6252f168b7817b12a8def6c47f7eabe4d286244cd74f6"
-url = "local-artifact://laya-participation-p4-onnx/onnx/export.json"
+url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"

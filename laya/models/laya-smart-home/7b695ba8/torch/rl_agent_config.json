@@ -1,0 +1,49 @@
+{
+  "encoder": "jhu-clsp/mmBERT-base",
+  "head_layers": 2,
+  "max_len": 1024,
+  "head_max_len": 512,
+  "max_prefixes": 6,
+  "act_costs": {
+    "escalate": 0.5
+  },
+  "cost_wrong_act": 3.0,
+  "amp_dtype": "bf16",
+  "model_name": "laya-smart-home-continuation",
+  "temperature": [
+    1.8501,
+    1.0,
+    1.0
+  ],
+  "temperature_by_options": {
+    "choice:3-5": 2.2259,
+    "choice:6-10": 1.7869,
+    "choice:11+": 1.7212
+  },
+  "training": {
+    "updates": 5134,
+    "epochs_completed": 2,
+    "hours": 1.752,
+    "config": {
+      "init": "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-smart-home/45f3dedb/torch",
+      "model_name": "laya-smart-home-continuation",
+      "epochs": 2,
+      "batch_size": 8,
+      "grad_accum": 2,
+      "lr_encoder": 2.5e-05,
+      "lr_head": 0.0001,
+      "unfreeze_layers": -1,
+      "brier_weight": 0.5,
+      "proper_weight": 0.0,
+      "warmup": 0.06,
+      "weight_decay": 0.01,
+      "max_len": 1024,
+      "head_max_len": 512,
+      "seed": 7,
+      "pad_multiple": 64,
+      "log_every": 200
+    }
+  },
+  "fine_tuned": true,
+  "fine_tuned_from": "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-smart-home/45f3dedb/torch"
+}

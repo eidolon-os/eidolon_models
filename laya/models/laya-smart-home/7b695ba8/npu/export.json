@@ -1,0 +1,42 @@
+{
+ "source_revision": "7b695ba8",
+ "buckets": [
+  128,
+  256,
+  384,
+  512
+ ],
+ "opset": 17,
+ "split": "cpu: tok_emb_fp16 + type_emb | npu: hidden_l<L>.onnx | cpu: scorer.npz on h[markers], act_head.npz on h[0]",
+ "files": {
+  "act_head.npz": "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98",
+  "hidden_l128.onnx": "a7cae0d1bab1c167df4867636c82c592485c69c6b1f881f2039961334ca97aa1",
+  "hidden_l256.onnx": "953fba533d25ec0d6fdc83492fcbf4b8db54d6ebf5543d5ac4c78e363a41e497",
+  "hidden_l384.onnx": "38ee50d80e56132b98728ec69178855d60c01f3a252cc34957f1fd1d532a1c52",
+  "hidden_l512.onnx": "2b4888f6279201052aa224264a5a1f40905fa39cca3d8cfe128a5637b6117f39",
+  "scorer.npz": "9ca20aec34478e95ba392b62a6e3ca79513ba4155869f186d183b98ee0c07715",
+  "tok_emb_fp16.npy": "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d",
+  "type_emb.npy": "4e1d1938fc94299fb41a651600588cd227f01bcb5b1db5d64969a79333c3fb75"
+ },
+ "parity": {
+  "l128": {
+   "items": 12,
+   "max_abs_logit_diff": 6.096708398484196e-05
+  },
+  "l256": {
+   "items": 6,
+   "max_abs_logit_diff": 3.0302764740142152e-05
+  },
+  "l384": {
+   "items": 0,
+   "max_abs_logit_diff": 0.0
+  },
+  "l512": {
+   "items": 6,
+   "max_abs_logit_diff": 3.227340456346539e-05
+  }
+ },
+ "torch": "2.14.0",
+ "onnxruntime": "1.30.0",
+ "exported_at": "2026-09-29T15:49:46+00:00"
+}
