@@ -1,0 +1,32 @@
+seed: 7
+tag_weights:
+  implicit-intent: 1.5
+  multi-device: 1.5
+sources:
+  - path: ../../runs/c4/continuation.jsonl
+    weight: 2.0
+  - path: ../../runs/c4/single-c3.jsonl
+    weight: 1.0
+  - path: ../../runs/r14/dataset/train.jsonl
+    weight: 1.0
+  - path: ../../runs/r14/dataset/val.jsonl
+    weight: 1.0
+  - path: ../../runs/r14/dataset/calib.jsonl
+    weight: 1.0
+  - path: "{run}/data/target-pool.jsonl"
+    weight: 2.0
+locked_eval:
+  - ../../../evals/smart-home
+  - ../../../evals/smart-home-v2
+  - ../../../evals/smart-home-v3
+  - ../../../evals/smart-home-accept
+  - ../../../evals/smart-home-continuation/c-dev.jsonl
+  - ../../../evals/smart-home-continuation/c-test.jsonl
+  - ../../../evals/smart-home-continuation/diag-44.jsonl
+  - eval/locked.jsonl
+  - "{run}/data/target-dev.jsonl"
+  - "{run}/data/target-accept.jsonl"
+  - "{run}/data/mined-regression.jsonl"
+split:
+  val: 0.1
+  calib: 0.15

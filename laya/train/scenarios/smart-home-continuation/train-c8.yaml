@@ -1,0 +1,22 @@
+# Offline c4 preservation anchor; registered in C8-PLAN.md before training.
+init: ../../runs/c7/checkpoint
+model_name: laya-smart-home-continuation
+epochs: 1
+batch_size: 8
+grad_accum: 2
+lr_encoder: 5.0e-6
+lr_head: 2.0e-5
+unfreeze_layers: -1
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.06
+weight_decay: 0.01
+max_len: 1024
+head_max_len: 512
+seed: 7
+pad_multiple: 64
+log_every: 100
+distill:
+  checkpoint: ../../../models/laya-smart-home/7b695ba8/torch
+  questions: [intent, device, action, pick]
+  weight: 0.1

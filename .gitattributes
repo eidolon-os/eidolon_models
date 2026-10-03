@@ -35,3 +35,6 @@ tts/**/model/** -diff -text
 # they reach a Host as component artifacts (ops/component.toml: carried once, verified by digest),
 # never inside a release archive.
 laya/models/** export-ignore
+
+# Generated tokenizer copies are byte-identical artifacts; avoid multi-million-line diffs.
+laya/**/tokenizer/tokenizer.json -diff -text

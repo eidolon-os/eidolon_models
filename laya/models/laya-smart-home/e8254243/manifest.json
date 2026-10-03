@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "name": "laya-smart-home",
+  "source": {
+    "hub": "local",
+    "repo_id": "eidolon-laya-train/laya-smart-home",
+    "subfolder": "",
+    "revision": "e8254243",
+    "run_id": "c10-mac-fp32",
+    "checkpoint": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c10/checkpoint"
+  },
+  "license": {
+    "checkpoint": "internal",
+    "base": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c9/checkpoint"
+  },
+  "runtime": {
+    "code": "laya (vendored, see src/eidolon_models_laya/vendor/laya/VENDOR_VERSION)",
+    "trained_max_len": 1024,
+    "head_max_len": 512,
+    "notes": "Mac FP32 candidate: development/history and frozen synthetic acceptance passed; residual historical errors documented; board/NPU validation deferred by user."
+  },
+  "torch": {
+    "dir": "torch",
+    "files": {
+      "model.safetensors": "e825424341b894860ee63cee349420a9d4c245853f95ddd2113964ec5ed8698c",
+      "rl_agent_config.json": "e8bb13def12bc0647cc596326e4d46dbc16b7f253b28c8aa7437b32e852ea208",
+      "encoder/config.json": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "e8e6a37c189f9dd23976b86b3e1ddb6928472e9f87c94103a1aaff311f45f090"
+    }
+  },
+  "onnx": {
+    "dir": "onnx",
+    "file": "model.onnx",
+    "opset": 18,
+    "produced_by": "eidolon-laya export-onnx"
+  }
+}

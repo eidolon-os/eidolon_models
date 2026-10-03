@@ -1,0 +1,82 @@
+{
+  "encoder": "jhu-clsp/mmBERT-base",
+  "head_layers": 2,
+  "max_len": 1024,
+  "head_max_len": 512,
+  "max_prefixes": 6,
+  "act_costs": {
+    "escalate": 0.5
+  },
+  "cost_wrong_act": 3.0,
+  "amp_dtype": "bf16",
+  "model_name": "laya-smart-home-continuation",
+  "temperature": [
+    1.8608,
+    1.0,
+    1.0
+  ],
+  "temperature_by_options": {
+    "choice:3-5": 2.3157,
+    "choice:6-10": 1.7312,
+    "choice:11+": 1.6808
+  },
+  "fine_tuned": true,
+  "fine_tuned_from": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c9/checkpoint",
+  "weight_mean": {
+    "experiment_type": "fixed_equal_weight_mean",
+    "training_performed": false,
+    "sources": [
+      {
+        "checkpoint": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c5/checkpoint",
+        "weight": 0.5,
+        "weights_sha256": "35936fe43c1dac9056bcb57055363de408faf62aa799ac22ccbce7f2e6cec65f",
+        "config_sha256": "93c8542398a6af73cfddfe219978f0c4c3e61ad1b126ba4ec76a2903d78fa909"
+      },
+      {
+        "checkpoint": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c6/checkpoint",
+        "weight": 0.5,
+        "weights_sha256": "ff080b01fb7f9ab22707c088290888e939d155e478b51d1fc0d51db3a18a2026",
+        "config_sha256": "6ee913490688b706fbc752fc9decf641b30b39a88a892dbbc60520cc93b04370"
+      }
+    ],
+    "tensor_count": 170,
+    "torch_version": "2.14.0",
+    "selection": "fixed 50/50 before evaluation; no new acceptance used"
+  },
+  "training": {
+    "updates": 3508,
+    "epochs_completed": 1,
+    "hours": 0.733,
+    "config": {
+      "init": "/Users/manson/ai/eidolon/eidolon_models/laya/train/runs/c9/checkpoint",
+      "model_name": "laya-smart-home-continuation",
+      "epochs": 1,
+      "batch_size": 8,
+      "grad_accum": 2,
+      "lr_encoder": 2e-06,
+      "lr_head": 2e-05,
+      "unfreeze_layers": 2,
+      "brier_weight": 0.5,
+      "proper_weight": 0.0,
+      "warmup": 0.06,
+      "weight_decay": 0.01,
+      "max_len": 1024,
+      "head_max_len": 512,
+      "seed": 7,
+      "pad_multiple": 64,
+      "log_every": 100,
+      "distill": {
+        "checkpoint": "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-smart-home/7b695ba8/torch",
+        "questions": [
+          "intent",
+          "device",
+          "action",
+          "pick"
+        ],
+        "weight": 0.1,
+        "teacher_weights_sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+        "teacher_config_sha256": "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
+      }
+    }
+  }
+}

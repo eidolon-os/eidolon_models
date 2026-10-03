@@ -1,0 +1,7 @@
+# Raw evidence stays available locally and is committed as a checksummed LFS bundle.
+/*
+!/*.md
+!/.gitignore
+!/evidence.tar.gz
+!/evidence.sha256
+!/initialization/

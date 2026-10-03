@@ -1,0 +1,22 @@
+# c9: frozen encoder, broad intent contrasts; see C9-PLAN.md.
+init: ../../runs/c8/checkpoint
+model_name: laya-smart-home-continuation
+epochs: 1
+batch_size: 8
+grad_accum: 2
+lr_encoder: 0.0
+lr_head: 2.0e-5
+unfreeze_layers: 0
+brier_weight: 0.5
+proper_weight: 0.0
+warmup: 0.06
+weight_decay: 0.01
+max_len: 1024
+head_max_len: 512
+seed: 7
+pad_multiple: 64
+log_every: 100
+distill:
+  checkpoint: ../../../models/laya-smart-home/7b695ba8/torch
+  questions: [intent, device, action, pick]
+  weight: 0.1

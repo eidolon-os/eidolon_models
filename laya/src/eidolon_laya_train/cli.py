@@ -115,6 +115,10 @@ def cmd_train(args) -> int:
     cfg = _load_yaml(args.config)
     if cfg.get("init"):  # relative to the config file, like every other path in a stage config
         cfg["init"] = str((Path(args.config).resolve().parent / cfg["init"]).resolve())
+    if cfg.get("distill"):
+        cfg["distill"]["checkpoint"] = str(
+            (Path(args.config).resolve().parent / cfg["distill"]["checkpoint"]).resolve()
+        )
     if args.init:
         cfg["init"] = args.init
     if args.device:

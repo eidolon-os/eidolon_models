@@ -7,6 +7,9 @@ Loss per question = soft cross-entropy against the target distribution
   ``pg_weight: 1, brier_weight: 0`` reproduces the notebook, σ annealed pg_sigma_start → pg_sigma_end).
 Optional ``gold_weights: {question: {gold option: w}}`` makes the loss cost-sensitive (e.g. intent 无关 × 2
 so that treating a non-command as a command costs more); the val NLL used to pick the epoch stays unweighted.
+Optional ``distill: {checkpoint: path, questions: [qid, ...], weight: 0.1}`` anchors selected
+questions to a frozen checkpoint using centered-logit MSE on the identical shuffled input.
+Gold labels and validation selection are unchanged; this adds no inference-time component.
 Choice and noul options are shuffled every epoch (score levels keep their order); the last
 ``unfreeze_layers`` encoder layers and the head train, the rest stays frozen (``unfreeze_layers: -1``
 trains the whole encoder, as the notebook does). The act head is never trained (it is unused).
@@ -32,6 +35,7 @@ Config (yaml)::
 
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import random
@@ -54,6 +58,48 @@ from .model import (
     to_device,
 )
 from .records import read_jsonl
+
+
+def distillation_loss(
+    logits: torch.Tensor, teacher: torch.Tensor, mask: torch.Tensor, selected: torch.Tensor
+) -> torch.Tensor:
+    """Preserve logit margins, ignoring padding, unselected rows and common logit offsets."""
+    if logits.shape != teacher.shape or logits.shape != mask.shape or selected.shape != logits.shape[:1]:
+        raise ValueError("distillation tensors have incompatible shapes")
+    eligible = selected & mask.any(-1)
+    if not eligible.any():
+        return logits.masked_fill(~mask, 0).sum() * 0
+    delta = (logits - teacher.detach()).masked_fill(~mask, 0)
+    count = mask.sum(-1).clamp_min(1)
+    centered = (delta - delta.sum(-1, keepdim=True) / count[:, None]).masked_fill(~mask, 0)
+    return (centered.square().sum(-1) / count)[eligible].mean()
+
+
+def load_distillation_teacher(spec: dict, student: Loaded) -> Loaded:
+    """Load a separate frozen model; reject incompatible tokenization or architecture."""
+    teacher = load_checkpoint(spec["checkpoint"], str(student.device))
+    if teacher.tok.backend_tokenizer.to_str() != student.tok.backend_tokenizer.to_str():
+        raise ValueError("distillation teacher tokenizer differs from student")
+    if teacher.tok.pad_token_id != student.tok.pad_token_id:
+        raise ValueError("distillation teacher padding differs from student")
+    for key in ("head_layers", "max_len", "head_max_len", "max_prefixes"):
+        if teacher.cfg.get(key) != student.cfg.get(key):
+            raise ValueError(f"distillation teacher configuration differs: {key}")
+    left, right = student.model.state_dict(), teacher.model.state_dict()
+    if left.keys() != right.keys() or any(left[k].shape != right[k].shape for k in left):
+        raise ValueError("distillation teacher tensor architecture differs from student")
+    metadata = {"transformers_version", "_name_or_path"}
+    configs = [{k: v for k, v in m.encoder.config.to_dict().items() if k not in metadata}
+               for m in (student.model, teacher.model)]
+    if configs[0] != configs[1]:
+        raise ValueError("distillation teacher encoder configuration differs from student")
+    teacher.model.eval()
+    teacher.model.requires_grad_(False)
+    for filename, key in (("model.safetensors", "teacher_weights_sha256"),
+                          ("rl_agent_config.json", "teacher_config_sha256")):
+        with (Path(spec["checkpoint"]) / filename).open("rb") as f:
+            spec[key] = hashlib.file_digest(f, "sha256").hexdigest()
+    return teacher
 
 
 def question_loss(
@@ -226,6 +272,24 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
         raise ValueError("accuracy selection requires nonempty validation items")
     log(f"train records {len(train_records)}, val items {len(val_items)}")
 
+    distill = config.get("distill")
+    teacher = None
+    distill_questions: set[str] = set()
+    distill_weight = 0.0
+    if distill:
+        distill_weight = float(distill.get("weight", 0))
+        questions = distill.get("questions")
+        if not math.isfinite(distill_weight) or distill_weight <= 0:
+            raise ValueError("distill weight must be finite and positive")
+        if not isinstance(questions, list) or not questions or not all(isinstance(q, str) for q in questions):
+            raise ValueError("distill questions must be a nonempty list of question ids")
+        distill_questions = set(questions)
+        present = {q for r in train_records for q in r.labels}
+        if not distill_questions <= present:
+            raise ValueError(f"distill questions absent from training: {distill_questions - present}")
+        teacher = load_distillation_teacher(distill, loaded)
+        log("distill " + json.dumps(distill, ensure_ascii=False))
+
     enc_params, head_params = set_trainable(model, int(config.get("unfreeze_layers", 8)))
     wd = float(config.get("weight_decay", 0.01))
     opt = torch.optim.AdamW(
@@ -308,6 +372,27 @@ def train(config: dict, dataset_dir: Path, out_dir: Path, log=print) -> dict:
                 ),
                 loss_mode=loss_mode,
             )
+            if teacher is not None:
+                selected = torch.tensor(
+                    [it["qid"] in distill_questions for it in chunk], device=device, dtype=torch.bool
+                )
+                anchor = logits.float().masked_fill(~b["marker_mask"], 0).sum() * 0
+                if selected.any():
+                    # Same batch includes the same shuffled option text and markers. A cached
+                    # canonical-option teacher would incorrectly assume position invariance.
+                    with torch.no_grad(), torch.autocast(
+                        device_type="cuda", dtype=torch.bfloat16, enabled=amp
+                    ):
+                        reference, _ = teacher.model(
+                            b["input_ids"], b["attention_mask"], b["marker_pos"],
+                            b["marker_mask"], b["qtype"]
+                        )
+                    anchor = distillation_loss(
+                        logits.float(), reference.float(), b["marker_mask"], selected
+                    )
+                loss = loss + distill_weight * anchor
+                parts["distill"] = anchor.item()
+                parts["distill_items_per_batch"] = selected.sum().item()
             (loss / accum).backward()
             running += loss.item()
             for k, v in parts.items():

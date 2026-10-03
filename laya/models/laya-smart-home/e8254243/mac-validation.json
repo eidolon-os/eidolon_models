@@ -1,0 +1,26 @@
+{
+  "candidate_only": true,
+  "weights_sha256": "e825424341b894860ee63cee349420a9d4c245853f95ddd2113964ec5ed8698c",
+  "config_sha256": "e8bb13def12bc0647cc596326e4d46dbc16b7f253b28c8aa7437b32e852ea208",
+  "policy_source_revision": "7b695ba8",
+  "report": "laya/train/scenarios/smart-home-continuation/results/20261002-c5/C10-RESULTS.md",
+  "backend_status": {
+    "torch_mac_fp32": "verified",
+    "onnx": "not_exported",
+    "npu_opi5max": "deferred_by_user"
+  },
+  "historical_single_wrong_execute": {
+    "baseline": 8,
+    "candidate": 8,
+    "new_errors": [
+      "smart-home/W2-0040",
+      "smart-home/W3-0086"
+    ],
+    "fixed_errors": [
+      "smart-home/W3-0166",
+      "smart-home/W3-0217"
+    ]
+  },
+  "frozen_synthetic_acceptance": "passed",
+  "production_pins_changed": false
+}

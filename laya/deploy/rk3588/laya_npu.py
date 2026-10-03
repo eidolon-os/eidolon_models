@@ -12,7 +12,8 @@ mirror ``eidolon_models_laya.export_npu``; ``tests/test_npu.py`` keeps them equa
 
 ``run`` reads ``<set>.items.jsonl`` (from ``eidolon-laya-train items``) and writes ``<set>.logits.jsonl``
 (score it on the Mac with ``eidolon-laya-train eval --logits <out_dir>``) plus ``run.json``: latency per
-bucket and agreement with the reference logits the items file carries.
+bucket and agreement with the reference logits the items file carries. Runtime initialization
+and the three existing warmup calls per bucket are timed separately from evaluated items.
 """
 
 from __future__ import annotations
@@ -92,18 +93,25 @@ def cmd_run(args) -> int:
     emb = np.load(npu_dir / "tok_emb_fp16.npy", mmap_mode="r")
     type_emb = np.load(npu_dir / "type_emb.npy")
     sc = dict(np.load(npu_dir / "scorer.npz"))
-    runtimes = {}
+    runtimes, startup = {}, {}
     for L, path in buckets_in(npu_dir, "rknn").items():
+        init_start = time.perf_counter()
         r = RKNNLite(verbose=False)
         assert r.load_rknn(str(path)) == 0, f"load_rknn {path}"
         assert r.init_runtime(core_mask=core) == 0, "init_runtime"
+        init_ms = (time.perf_counter() - init_start) * 1000
         warm = npu_inputs([0, 1], 0, L, emb, type_emb)
+        warm_ms = []
         for _ in range(3):
+            warm_start = time.perf_counter()
             r.inference(inputs=warm)
+            warm_ms.append(round((time.perf_counter() - warm_start) * 1000, 2))
+        startup[L] = {"load_and_init_ms": round(init_ms, 2), "warmup_ms": warm_ms}
         runtimes[L] = r
     if not runtimes:
         sys.exit(f"no hidden_l*.rknn in {npu_dir}; run convert first")
-    summary = {"core": args.core, "buckets": list(runtimes), "sets": {}}
+    summary = {"core": args.core, "buckets": list(runtimes), "startup_by_bucket": startup,
+               "sets": {}}
     for items_path in sorted(items_dir.glob("*.items.jsonl")):
         name = items_path.name[: -len(".items.jsonl")]
         items = [json.loads(x) for x in items_path.read_text("utf-8").splitlines() if x.strip()]

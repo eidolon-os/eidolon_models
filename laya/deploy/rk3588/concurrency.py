@@ -4,7 +4,7 @@
     uv run python deploy/rk3588/concurrency.py prepare --model-dir models/laya-participation/ae6718a4 --out <dir> \
         [--continuation evals/smart-home-continuation/c-dev.jsonl]   # c4：续接题也走家居服务
     # on the board (stdlib only): one scenario per call, results appended to <dir>/<scenario>.jsonl
-    python3 concurrency.py run <dir> home-alone | part-alone | both | collide
+    python3 concurrency.py run <dir> home-alone | part-alone | both | collide | home-collide
     # anywhere: summary against the Agent's budgets
     python3 concurrency.py report <dir> [--service-log <journal of eidolon-laya-participation>]
 
@@ -18,6 +18,8 @@ counts as a timeout. Nothing is restarted or reconfigured.
 Scenarios: home-alone (home dev sets one at a time); part-alone (p-dev one at a time); both (p-dev back to back,
 as a team deciding every turn, while home commands arrive every 0.5-2 s); collide (a home command and a
 participation decision released at the same instant).
+home-collide releases two home requests together against the same endpoint. The report's
+--home-budget-ms overrides the historical 800 ms reporting budget without changing requests.
 """
 
 from __future__ import annotations
@@ -146,7 +148,10 @@ def run(a) -> int:
     HOME_URL, PART_URL = a.home_url, a.part_url
     d = Path(a.dir)
     home = [json.loads(line) for line in (d / "home.jsonl").read_text("utf-8").splitlines()][: a.limit]
-    part = [json.loads(line) for line in (d / "participation.jsonl").read_text("utf-8").splitlines()][: a.limit]
+    part = []
+    if a.scenario not in ("home-alone", "home-collide"):
+        part = [json.loads(line) for line in
+                (d / "participation.jsonl").read_text("utf-8").splitlines()][: a.limit]
     rng = random.Random(a.seed)
     clock, lock, rows, npu = Clock(), threading.Lock(), [], []
     stop = threading.Event()
@@ -183,7 +188,7 @@ def run(a) -> int:
             call("home", order[i % len(order)], clock, rows, lock, "both")
             i += 1
         t.join()
-    elif a.scenario == "collide":
+    elif a.scenario in ("collide", "home-collide"):
         order = home[:]
         rng.shuffle(order)
         step = max(1, len(part) // a.pairs)
@@ -194,8 +199,10 @@ def run(a) -> int:
                 gate.wait()
                 call(kind, it, clock, rows, lock, tag)
 
+            second = (("home", order[(k + 1) % len(order)]) if a.scenario == "home-collide"
+                      else ("participation", part[(k * step) % len(part)]))
             ts = [threading.Thread(target=go, args=("home", order[k % len(order)])),
-                  threading.Thread(target=go, args=("participation", part[(k * step) % len(part)]))]
+                  threading.Thread(target=go, args=second)]
             for t in ts:
                 t.start()
             for t in ts:
@@ -208,6 +215,7 @@ def run(a) -> int:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     meta = {"scenario": a.scenario, "wall_s": round(wall, 1), "gap": a.gap, "seed": a.seed,
+            "home_url": HOME_URL, "part_url": PART_URL,
             "cpu_ticks": {p: cpu1.get(p, 0) - cpu0.get(p, 0) for p in cpu0}, "clk_tck": 100,
             "npu_load": npu, "started_unix": time.time() - wall}
     (d / f"{a.scenario}.meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), "utf-8")
@@ -215,12 +223,12 @@ def run(a) -> int:
     return 0
 
 
-def home_outcome(r: dict, gold: dict) -> dict:
+def home_outcome(r: dict, gold: dict, budget_ms: int = HOME_BUDGET_MS) -> dict:
     """What the Agent's LayaInterpreter + SmartHomeCommand would do with this reply."""
     if r["http"] != 200:
         return {"outcome": "error", "reason": f"http_{r['http']}_{r['error']}"}
-    if r["ms"] > HOME_BUDGET_MS:
-        return {"outcome": "timeout", "reason": "over_800ms"}
+    if r["ms"] > budget_ms:
+        return {"outcome": "timeout", "reason": f"over_{budget_ms}ms"}
     ans = r["answers"]
     if r.get("truncated"):
         return {"outcome": "abstain", "reason": "truncated"}
@@ -295,13 +303,19 @@ def report(a) -> int:
     d = Path(a.dir)
     gold, sets = {}, {}
     for name in ("home", "participation"):
-        for line in (d / f"{name}.jsonl").read_text("utf-8").splitlines():
+        path = d / f"{name}.jsonl"
+        if not path.is_file():
+            continue
+        for line in path.read_text("utf-8").splitlines():
             it = json.loads(line)
             gold[it["id"]] = it["gold"]
             sets[it["id"]] = it.get("set", "")
-    tasks = json.loads((d / "clarify_instructions.json").read_text("utf-8"))
-    out = {"budgets": {"home_ms": HOME_BUDGET_MS, "home_min_p": HOME_MIN_P, "participation_ms": PART_BUDGET_MS}}
-    for sc in ("home-alone", "part-alone", "both", "collide"):
+    tasks_path = d / "clarify_instructions.json"
+    tasks = (json.loads(tasks_path.read_text("utf-8"))
+             if (d / "participation.jsonl").is_file() else {})
+    out = {"budgets": {"home_ms": a.home_budget_ms, "home_min_p": HOME_MIN_P,
+                       "participation_ms": PART_BUDGET_MS}}
+    for sc in ("home-alone", "part-alone", "both", "collide", "home-collide"):
         f = d / f"{sc}.jsonl"
         if not f.is_file():
             continue
@@ -313,7 +327,8 @@ def report(a) -> int:
             if not mine:
                 continue
             other = [r for r in rows if r["kind"] != kind]
-            oc = [home_outcome(r, gold[r["id"]]) if kind == "home" else part_outcome(r, gold[r["id"]], tasks) for r in mine]
+            oc = [home_outcome(r, gold[r["id"]], a.home_budget_ms) if kind == "home"
+                  else part_outcome(r, gold[r["id"]], tasks) for r in mine]
             res[kind] = summarize(mine, oc)
             if other:
                 both_ = [(r, o) for r, o in zip(mine, oc, strict=True) if overlapped(r, other)]
@@ -372,7 +387,8 @@ def main() -> int:
     p.add_argument("--continuation", action="append", help="续接记录（evals/smart-home-continuation/c-dev.jsonl），加进家居流")
     p = sub.add_parser("run")
     p.add_argument("dir")
-    p.add_argument("scenario", choices=("home-alone", "part-alone", "both", "collide"))
+    p.add_argument("scenario", choices=(
+        "home-alone", "part-alone", "both", "collide", "home-collide"))
     p.add_argument("--gap", type=float, default=0.1, help="seconds between calls of one stream")
     p.add_argument("--pairs", type=int, default=100)
     p.add_argument("--gap-pairs", type=float, default=0.5)
@@ -384,6 +400,7 @@ def main() -> int:
     p = sub.add_parser("report")
     p.add_argument("dir")
     p.add_argument("--service-log")
+    p.add_argument("--home-budget-ms", type=int, default=HOME_BUDGET_MS)
     a = ap.parse_args()
     return {"prepare": prepare, "run": run, "report": report}[a.cmd](a)
 
