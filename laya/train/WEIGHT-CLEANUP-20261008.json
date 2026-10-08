@@ -1,0 +1,271 @@
+{
+ "created_at": "2026-10-08T02:48:44.638670+00:00",
+ "method": "移到废纸篓（/usr/bin/trash），清空废纸篓后才真正释放",
+ "status": "moved_to_trash",
+ "purpose": "为本机测试 kev-4b / StartLux-Decision-9B 腾空间；只删 gitignore 的训练副本、已排除候选与可再生导出",
+ "kept": [
+  "runs/*/ 的日志、评测、数据集",
+  "models/laya-smart-home/45f3dedb/torch（c1 的初始化、r14 评测基线）",
+  "runs/backbone-comparison-v1/models/{decider,jevk5}（质量对照 / 硬链接基座）",
+  "models/laya-smart-home/45f3dedb/torch",
+  "runs/backbone-comparison-v1/models/{decider,jevk5}"
+ ],
+ "total_bytes": 36348960266,
+ "entries": [
+  {
+   "path": "laya/train/runs/c10/checkpoint/model.safetensors",
+   "kind": "duplicate",
+   "reason": "与 models/laya-smart-home/e8254243/torch/model.safetensors 逐字节相同（sha256 e8254243…），候选权重已入 LFS",
+   "sha256": "e825424341b894860ee63cee349420a9d4c245853f95ddd2113964ec5ed8698c",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c4/checkpoint/model.safetensors",
+   "kind": "duplicate",
+   "reason": "与 models/laya-smart-home/7b695ba8/torch/model.safetensors 逐字节相同（生产 c4，已入 LFS）",
+   "sha256": "7b695ba8f2e8a37f388eb118bcf065689d5f9c4480c8ba6677d05d8a2e91cb26",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c9/checkpoint/model.safetensors",
+   "kind": "duplicate",
+   "reason": "与 results/20261002-c5/initialization/c9/model.safetensors 逐字节相同（sha256 4a521b4f…，已入 LFS）",
+   "sha256": "4a521b4fee44f8ec0cf40cd6d9247c3174ef52507a4f62a8ab712a5a48348de8",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c1/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c1 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c1，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "48c2feb7b7e6c54c97ed0c5a34f76ea13ff1c07d20b526a690be91154eb3c310",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c2/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c2 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c2，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "2e39e62bc3f924d597a9e1e1e495d9c69a04f9a0e924a17b22f23fca15735283",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c3/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c3 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c3，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "f430af70b4fee6b7a1dbadc62fce1ce392a9ce6a298d61029a520aa0bb089c4f",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c5/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c5 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c5，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "35936fe43c1dac9056bcb57055363de408faf62aa799ac22ccbce7f2e6cec65f",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c6/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c6 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c6，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "ff080b01fb7f9ab22707c088290888e939d155e478b51d1fc0d51db3a18a2026",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/c7/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c7 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c7，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "6b3a2f0ef2f8b25a4bd8a7b941f34341acac5e7881f52c59bb26c1146e9adb55",
+   "bytes": 1287653752
+  },
+  {
+   "path": "laya/train/runs/c8/checkpoint/model.safetensors",
+   "kind": "superseded_home_continuation",
+   "reason": "家居续接 c8 未通过门槛的中间轮，已被 c4（生产）/ c10（候选 e8254243）取代；日志、评测与数据保留在 runs/c8，证据包在 results/20261002-c5/evidence.tar.gz（LFS）",
+   "sha256": "9d9faaa7bd22e153e4cd4c89c9447a7b20110086f4efefb7205e081f6ee1a649",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/train/runs/backbone-comparison-v1/models/openjev",
+   "kind": "ruled_out_candidate",
+   "reason": "open-jev DeBERTa 在 backbone-comparison-v1 中因中文未知词元与截断被排除，不再作为候选；来源与哈希在 PROVENANCE.json",
+   "files": {
+    "model.safetensors": {
+     "sha256": "3f1d5bc3b6d3dc412ea2c499446fcbd212242d79baf16bc0eda155b4ebbac806",
+     "bytes": 1736094384
+    },
+    "head.safetensors": {
+     "sha256": "f101be67c5808a810abbcede9ebe702f7e4af4aa6f7298bb243842ce9e3a295a",
+     "bytes": 12591412
+    },
+    "tokenizer.json": {
+     "sha256": "cd119378b0160677b7a1e561ba29ada83918c1d420b326516a585382e83d9d39",
+     "bytes": 8657170
+    },
+    "spm.model": {
+     "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+     "bytes": 2464616
+    }
+   },
+   "bytes": 1759870273
+  },
+  {
+   "path": "laya/models/laya-smart-home/45f3dedb/onnx",
+   "kind": "derived_artifact",
+   "reason": "r14 的 ONNX 导出，可由保留的 torch 权重用 export-onnx 重新生成；r14 不再部署",
+   "files": {
+    "model.onnx": {
+     "sha256": "aafa0a973725af5b0f392c2bcdd60bee60b5cd24092160026c879d36bb713275",
+     "bytes": 3254716
+    },
+    "model.onnx.data": {
+     "sha256": "50d7163e0871b79d6e4ff2d70ba4ff0eedd90eadb6036c0ad97921254617489f",
+     "bytes": 1287651328
+    }
+   },
+   "bytes": 1290906763
+  },
+  {
+   "path": "laya/models/laya-smart-home/45f3dedb/npu",
+   "kind": "derived_artifact",
+   "reason": "r14 的 NPU 分档导出，可由保留的 torch 权重用 export-npu 重新生成；板上已换 c4",
+   "files": {
+    "hidden_l512.onnx": {
+     "sha256": "9192c8b99b9c0523d04f5080adc245834cee5025815222975eb42e7ff9ae9eb3",
+     "bytes": 500644365
+    },
+    "scorer.npz": {
+     "sha256": "c6f524896408c33e3378f53ae8118348fe3b39441d0156280e0c757bc01ce6ac",
+     "bytes": 2373034
+    },
+    "hidden_l128.onnx": {
+     "sha256": "d88f6d34b1653ee0695764c9a2905529b9e9e0fa34170a233efe8e853393341b",
+     "bytes": 498667529
+    },
+    "hidden_l256.onnx": {
+     "sha256": "7598c21e2c9a70016186a597355543663ff4c419fba13e72a4109d44db50f2a6",
+     "bytes": 499064329
+    },
+    "hidden_l384.onnx": {
+     "sha256": "adcd44d98417c02df75844b60151a28a8c429394ed6e3be0bbdc4133fd18ed46",
+     "bytes": 499723273
+    },
+    "tok_emb_fp16.npy": {
+     "sha256": "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d",
+     "bytes": 393216128
+    }
+   },
+   "bytes": 2394493918
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v2/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "98b67434c16a02c16a69ea41906e07828f32b42bed5446be94c156b08b152925",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v3-b4/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "dcdd9096a7b9baf5f8bc772eaccb4548d0ed487e076789d0e5f9c931c0318a78",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v4-characters-r1/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "4660062bc674d70ce32acf6e008ef8e225f87948e47fffa29825c47ca701b9a0",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v4-characters-r3/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "336500d83f72ff315136ff6bab20a499cb1d81928d71f92a09f766839d58a076",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v5-base-r1/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "459db6d5bef28d5fa6532be7848ab6e00910c36a875b2d4cffaa97c3e46a1cc5",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v5-transfer-r2/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "b9a1aa184941b2b7917be9381d7a16fff4e68611c5884cd7661a54bc6fb47aa5",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v6-distribution-r3/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "612c478a392efddd69246b2b314585f74042795ea7b269970052f6d8c9a061e3",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v6-set-r4/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "f8befecdc9810af6d593df9f6bf9884d96acf2b7ef32ce5358cb73130aa149e8",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v7-compact-r5/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "a5ae76f3b44ab810fa2b1939cb2a60afafc1b792d68c75e1846438ee987361d3",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v7-named-r6/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "62d08741fe4098282ab188a3730dd1f4fb2ef61df98352d640118dc32c9ca535",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-ensemble-v8-boundary-r7/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "b39bd66ad724aa720506428a4978d744dbfc8b12ee41507ff7b88e2b4bcfc273",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-pilot-ip-only/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "9d09903cedd9562cb9d87651f3ca2e8c4c1252d70cefde42efe1eda659650498",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/ip-pilot-joint/checkpoint/model.safetensors",
+   "kind": "superseded_ip_team",
+   "reason": "IP 团 v2–v8 / pilot 的 laya 实验权重，参与决策已改走 p4（ae6718a4，已发布）；评测记录、日志、数据保留在同目录与 scenarios/ip-team-v*/RESULTS.md",
+   "sha256": "2577c873a88e4f7bd73bdfd6ba94beaf1d513fb195037b75fbdaf60cea991cbf",
+   "bytes": 1287653720,
+   "batch": 2
+  },
+  {
+   "path": "laya/train/runs/home-continuation-20260929/checkpoint/model.safetensors",
+   "kind": "unreferenced",
+   "reason": "无任何文档引用的 9-29 续接试跑权重；baseline/candidate/dataset 保留",
+   "sha256": "4420a081b762e70f990d5cc647e519786bc8e694eb2fbfe78945699d3c235d25",
+   "bytes": 1287653720,
+   "batch": 2
+  }
+ ],
+ "batch2_at": "2026-10-08T02:50:41.456481+00:00"
+}
