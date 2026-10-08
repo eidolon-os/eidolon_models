@@ -1,0 +1,592 @@
+{
+  "provenance": "20 actual ASR transcripts, reviewed expected semantics; humidifier initial state is synthetic 30%, not a recovered physical state. Additional cases are authored regression, not statistically independent validation. No training use.",
+  "conversation": [
+    {
+      "id": "korvo-01",
+      "text": "关灯。",
+      "expected": "clarify",
+      "targets": [
+        "living.main_light",
+        "master.light",
+        "master.bedside"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-02",
+      "text": "客厅的。",
+      "expected": "execute",
+      "targets": [
+        "living.main_light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-03",
+      "text": "开灯。",
+      "expected": "execute",
+      "targets": [
+        "living.main_light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-04",
+      "text": "不开客厅的。",
+      "expected": "cancel"
+    },
+    {
+      "id": "korvo-05",
+      "text": "关灯。",
+      "expected": "clarify",
+      "targets": [
+        "living.main_light",
+        "master.light",
+        "master.bedside"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-06",
+      "text": "床头的。",
+      "expected": "execute",
+      "targets": [
+        "master.bedside"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-07",
+      "text": "客厅的吧。",
+      "expected": "execute",
+      "targets": [
+        "living.main_light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-08",
+      "text": "开灯。",
+      "expected": "execute",
+      "targets": [
+        "living.main_light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-09",
+      "text": "不开客厅的，开主卧的。",
+      "expected": "execute",
+      "targets": [
+        "master.light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-10",
+      "text": "关主卧的。",
+      "expected": "execute",
+      "targets": [
+        "master.light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-11",
+      "text": "开床头的。",
+      "expected": "execute",
+      "targets": [
+        "master.bedside"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-12",
+      "text": "关客厅的。",
+      "expected": "execute",
+      "targets": [
+        "living.main_light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-13",
+      "text": "加湿器调大一点儿。",
+      "expected": "execute",
+      "targets": [
+        "master.humidifier"
+      ],
+      "action": {
+        "trait": "fan_speed",
+        "command": "step",
+        "slots": [
+          {
+            "name": "delta",
+            "value": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "korvo-14",
+      "text": "加湿器调大一点儿。",
+      "expected": "execute",
+      "targets": [
+        "master.humidifier"
+      ],
+      "action": {
+        "trait": "fan_speed",
+        "command": "step",
+        "slots": [
+          {
+            "name": "delta",
+            "value": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "korvo-15",
+      "text": "加湿器再调大一点儿。",
+      "expected": "execute",
+      "targets": [
+        "master.humidifier"
+      ],
+      "action": {
+        "trait": "fan_speed",
+        "command": "step",
+        "slots": [
+          {
+            "name": "delta",
+            "value": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "korvo-16",
+      "text": "加湿器调小。",
+      "expected": "execute",
+      "targets": [
+        "master.humidifier"
+      ],
+      "action": {
+        "trait": "fan_speed",
+        "command": "step",
+        "slots": [
+          {
+            "name": "delta",
+            "value": -10
+          }
+        ]
+      }
+    },
+    {
+      "id": "korvo-17",
+      "text": "开飞机。",
+      "expected": "unrelated"
+    },
+    {
+      "id": "korvo-18",
+      "text": "开洗衣机。",
+      "expected": "execute",
+      "targets": [
+        "balcony.washer"
+      ],
+      "action": {
+        "trait": "operational",
+        "command": "start",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-19",
+      "text": "关空调。",
+      "expected": "clarify",
+      "targets": [
+        "living.ac",
+        "master.ac"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    },
+    {
+      "id": "korvo-20",
+      "text": "客厅。",
+      "expected": "execute",
+      "targets": [
+        "living.ac"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      }
+    }
+  ],
+  "independent": [
+    {
+      "id": "negative-01",
+      "text": "不要打开客厅灯",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-02",
+      "text": "别关闭窗帘",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-03",
+      "text": "我刚才说打开客厅灯",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-04",
+      "text": "如果天黑就打开客厅灯",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-05",
+      "text": "我想买能打开窗帘的机器",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-06",
+      "text": "我没说关闭窗帘",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-07",
+      "text": "关闭窗帘也取消",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-08",
+      "text": "昨天打开客厅灯了",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-09",
+      "text": "妈妈说打开客厅灯",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-10",
+      "text": "打开客厅灯以后再关闭窗帘",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-11",
+      "text": "不开客厅的",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-12",
+      "text": "打开它",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": false
+    },
+    {
+      "id": "negative-13",
+      "text": "算了",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-14",
+      "text": "等一下",
+      "expected": "no_execution",
+      "split": "development",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-15",
+      "text": "昨天我关掉了电视",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-16",
+      "text": "爸爸昨天打开了洗衣机",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-17",
+      "text": "我在考虑买加湿器",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-18",
+      "text": "怎么把客厅灯关掉",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-19",
+      "text": "假如我把电视打开会怎样",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-20",
+      "text": "不要把加湿器调大",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-21",
+      "text": "我没有让你开洗衣机",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-22",
+      "text": "以后再打开客厅灯",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-23",
+      "text": "刚刚让你开客厅灯来着",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-24",
+      "text": "他让我把灯打开",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-25",
+      "text": "客厅灯已经关了",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-26",
+      "text": "先别动主卧灯",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-27",
+      "text": "讨论一下打开空调的方法",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "negative-28",
+      "text": "我记得上次关了主卧灯",
+      "expected": "no_execution",
+      "split": "additional_regression",
+      "context_safety_case": true
+    },
+    {
+      "id": "positive-01",
+      "text": "把客厅主灯打开",
+      "expected": "execute",
+      "targets": [
+        "living.main_light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-02",
+      "text": "关闭床头灯",
+      "expected": "execute",
+      "targets": [
+        "master.bedside"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-03",
+      "text": "打开主卧灯",
+      "expected": "execute",
+      "targets": [
+        "master.light"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-04",
+      "text": "打开电视",
+      "expected": "execute",
+      "targets": [
+        "living.tv"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-05",
+      "text": "关闭电视",
+      "expected": "execute",
+      "targets": [
+        "living.tv"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-06",
+      "text": "开洗衣机",
+      "expected": "execute",
+      "targets": [
+        "balcony.washer"
+      ],
+      "action": {
+        "trait": "operational",
+        "command": "start",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-07",
+      "text": "关闭客厅空调",
+      "expected": "execute",
+      "targets": [
+        "living.ac"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "off",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    },
+    {
+      "id": "positive-08",
+      "text": "打开主卧空调",
+      "expected": "execute",
+      "targets": [
+        "master.ac"
+      ],
+      "action": {
+        "trait": "on_off",
+        "command": "on",
+        "slots": []
+      },
+      "split": "additional_regression",
+      "context_safety_case": false
+    }
+  ]
+}

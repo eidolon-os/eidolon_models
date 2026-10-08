@@ -1,0 +1,2932 @@
+{
+  "scope": "2026-10-08 00:00–18:09 日志；识别出 18:02–18:05 单会话 20 轮",
+  "metrics": {
+    "final_to_delivery_ms": {
+      "n": 20,
+      "median": 1185.5,
+      "p95_nearest_rank": 1951.0,
+      "max": 2285.0
+    },
+    "vad_to_delivery_ms": {
+      "n": 20,
+      "median": 1534.0,
+      "p95_nearest_rank": 2538.0,
+      "max": 2579.0
+    },
+    "asr_tail_ms": {
+      "n": 20,
+      "median": 289.0,
+      "p95_nearest_rank": 789.0,
+      "max": 1706.0
+    },
+    "pre_agent_ms": {
+      "n": 20,
+      "median": 13.2,
+      "p95_nearest_rank": 741.6,
+      "max": 1265.0
+    },
+    "understanding_ms": {
+      "n": 20,
+      "median": 843.0,
+      "p95_nearest_rank": 1047.5,
+      "max": 1193.3
+    },
+    "execution_ms": {
+      "n": 15,
+      "median": 28.5,
+      "p95_nearest_rank": 42.7,
+      "max": 42.7
+    },
+    "routes": {
+      "primary": {
+        "n": 1,
+        "median": 726.0,
+        "p95_nearest_rank": 726.0,
+        "max": 726.0
+      },
+      "laya_continuation": {
+        "n": 2,
+        "median": 489.5,
+        "p95_nearest_rank": 495.0,
+        "max": 495.0
+      },
+      "llm": {
+        "n": 17,
+        "median": 1222.0,
+        "p95_nearest_rank": 2285.0,
+        "max": 2285.0
+      }
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "turn_id": "75afa9e6cdb14d4e",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "75afa9e6cdb14d4e",
+        "utterance": "关灯。",
+        "outcome": "ambiguous",
+        "message": "客厅主灯、主卧灯、床头灯，要哪一个？",
+        "candidates": [
+          {
+            "device_id": "living.main_light",
+            "name": "客厅主灯"
+          },
+          {
+            "device_id": "master.light",
+            "name": "主卧灯"
+          },
+          {
+            "device_id": "master.bedside",
+            "name": "床头灯"
+          }
+        ],
+        "command": {
+          "trait": "on_off",
+          "command": "off",
+          "params": {}
+        }
+      },
+      "agent_authority_ms": 11,
+      "agent_ms": 1462,
+      "agent_end": 1791453755.074825,
+      "agent_start": 1791453753.6128252,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453753770508,
+          "event_time": "2026-10-08 18:02:33.770242+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=75afa9e6cdb14d4e route=llm reason=semantic_required",
+          "ts": 1791453753.770242
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453754143565,
+          "event_time": "2026-10-08 18:02:34.143055+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=75afa9e6cdb14d4e model=openai/deepseek-v4-flash connect_ms=334 raw_ttft_ms=371 idle_ms=-1 choices=1",
+          "ts": 1791453754.143055
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453754626981,
+          "event_time": "2026-10-08 18:02:34.626422+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=75afa9e6cdb14d4e model=openai/deepseek-v4-flash connect_ms=334 ttft_ms=855 raw_ttft_ms=371 raw_chunks_before_effective=1 idle_ms=-1 kind=tool_call",
+          "ts": 1791453754.626422
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453754959195,
+          "event_time": "2026-10-08 18:02:34.958795+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=75afa9e6cdb14d4e model=openai/deepseek-v4-flash outcome=completed connect_ms=334 raw_ttft_ms=371 tool_ready_ms=1167 finish_ms=1167 stream_end_ms=1187 close_ms=0 tokens_in=4421 tokens_out=125 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453754.958795
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453754960295,
+          "event_time": "2026-10-08 18:02:34.959947+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=75afa9e6cdb14d4e outcome=clarification",
+          "ts": 1791453754.959947
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453754961379,
+          "event_time": "2026-10-08 18:02:34.961173+08:00",
+          "pid": "44781",
+          "message": "home stage turn=75afa9e6cdb14d4e stage=understanding elapsed_ms=1193.3",
+          "ts": 1791453754.961173
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453755075048,
+          "event_time": "2026-10-08 18:02:35.074825+08:00",
+          "pid": "44781",
+          "message": "home turn=75afa9e6cdb14d4e session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=11 elapsed_ms=1462 result={\"schema_version\":1,\"turn_id\":\"75afa9e6cdb14d4e\",\"utterance\":\"关灯。\",\"outcome\":\"ambiguous\",\"message\":\"客厅主灯、主卧灯、床头灯，要哪一个？\",\"candidates\":[{\"device_id\":\"living.main_light\",\"name\":\"客厅主灯\"},{\"device_id\":\"master.light\",\"name\":\"主卧灯\"},{\"device_id\":\"master.bedside\",\"name\":\"床头灯\"}],\"command\":{\"trait\":\"on_off\",\"command\":\"off\",\"params\":{}}}",
+          "ts": 1791453755.074825
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453755099538,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:35,098 INFO eidolon.livekit.agent.smarthome smart-home turn=75afa9e6cdb14d4e outcome=ambiguous delivered",
+          "ts": 1791453755.098
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453753595222,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:33,581 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='关灯。' start=4.020s end=4.980s",
+          "ts": 1791453753.581
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453753168919,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:33,165 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453753.165
+        }
+      ],
+      "route": "llm",
+      "fallback": "home fallback turn=75afa9e6cdb14d4e outcome=clarification",
+      "understanding_ms": 1193.3,
+      "delivered": 1791453755.098,
+      "final": 1791453753.581,
+      "vad_end": 1791453753.165,
+      "asr_tail_ms": 416.0,
+      "final_to_delivery_ms": 1517.0,
+      "vad_to_delivery_ms": 1933.0,
+      "pre_agent_ms": 31.8,
+      "laya": [],
+      "hub_execute_http200": 0,
+      "time": "18:02:33.581",
+      "command_summary": "无；追问灯具",
+      "note": "",
+      "command_evidence": "Agent 结果；本轮无 Hub execute"
+    },
+    {
+      "n": 2,
+      "turn_id": "a3b31b8ae9284a08",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "a3b31b8ae9284a08",
+        "utterance": "客厅的。",
+        "outcome": "executed",
+        "message": "已关闭客厅主灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 13,
+      "agent_ms": 454,
+      "agent_end": 1791453759.12755,
+      "agent_start": 1791453758.67355,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453759088478,
+          "event_time": "2026-10-08 18:02:39.088243+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=a3b31b8ae9284a08 question=pick model=7b695ba8 choice='客厅主灯' probability=0.9883 outcome=proposed reason=pick_target proposal={\"intent\":\"control\",\"target_status\":\"resolved\",\"targets\":[\"living.main_light\"],\"action\":{\"trait\":\"on_off\",\"command\":\"off\",\"slots\":[]},\"mention\":null}",
+          "ts": 1791453759.088243
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453759089142,
+          "event_time": "2026-10-08 18:02:39.088925+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=a3b31b8ae9284a08 route=laya_continuation",
+          "ts": 1791453759.088925
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453759089565,
+          "event_time": "2026-10-08 18:02:39.089419+08:00",
+          "pid": "44781",
+          "message": "home stage turn=a3b31b8ae9284a08 stage=continuation elapsed_ms=307.5",
+          "ts": 1791453759.089419
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453759089905,
+          "event_time": "2026-10-08 18:02:39.089792+08:00",
+          "pid": "44781",
+          "message": "home stage turn=a3b31b8ae9284a08 stage=understanding elapsed_ms=308.3",
+          "ts": 1791453759.089792
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453759127025,
+          "event_time": "2026-10-08 18:02:39.126777+08:00",
+          "pid": "44781",
+          "message": "home stage turn=a3b31b8ae9284a08 stage=execution elapsed_ms=22.7",
+          "ts": 1791453759.126777
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453759127723,
+          "event_time": "2026-10-08 18:02:39.127550+08:00",
+          "pid": "44781",
+          "message": "home turn=a3b31b8ae9284a08 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=13 elapsed_ms=454 result={\"schema_version\":1,\"turn_id\":\"a3b31b8ae9284a08\",\"utterance\":\"客厅的。\",\"outcome\":\"executed\",\"message\":\"已关闭客厅主灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453759.12755
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453759153644,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:39,152 INFO eidolon.livekit.agent.smarthome smart-home turn=a3b31b8ae9284a08 outcome=executed delivered",
+          "ts": 1791453759.152
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453758672557,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:38,668 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='客厅的。' start=9.540s end=10.220s",
+          "ts": 1791453758.668
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453758460037,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:38,457 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453758.457
+        },
+        {
+          "unit": "eidolon-laya.service",
+          "time_us": 1791453759086589,
+          "event_time": null,
+          "pid": "44361",
+          "message": "2026-10-08 18:02:39,086 INFO eidolon_laya systemone q=1 skipped=0 tokens=168 forward=298ms total=300ms truncated=-",
+          "ts": 1791453759.086
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453759124998,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:46872 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453759.124998
+        }
+      ],
+      "continuation_decision": "home continuation turn=a3b31b8ae9284a08 question=pick model=7b695ba8 choice='客厅主灯' probability=0.9883 outcome=proposed reason=pick_target proposal={\"intent\":\"control\",\"target_status\":\"resolved\",\"targets\":[\"living.main_light\"],\"action\":{\"trait\":\"on_off\",\"command\":\"off\",\"slots\":[]},\"mention\":null}",
+      "route": "laya_continuation",
+      "continuation_ms": 307.5,
+      "understanding_ms": 308.3,
+      "execution_ms": 22.7,
+      "delivered": 1791453759.152,
+      "final": 1791453758.668,
+      "vad_end": 1791453758.457,
+      "asr_tail_ms": 211.0,
+      "final_to_delivery_ms": 484.0,
+      "vad_to_delivery_ms": 695.0,
+      "pre_agent_ms": 5.5,
+      "laya": [
+        "2026-10-08 18:02:39,086 INFO eidolon_laya systemone q=1 skipped=0 tokens=168 forward=298ms total=300ms truncated=-"
+      ],
+      "hub_execute_http200": 1,
+      "time": "18:02:38.668",
+      "command_summary": "客厅主灯 off",
+      "note": "",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 3,
+      "turn_id": "83c554dd885d4b44",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "83c554dd885d4b44",
+        "utterance": "开灯。",
+        "outcome": "executed",
+        "message": "已打开客厅主灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 16,
+      "agent_ms": 1254,
+      "agent_end": 1791453764.609658,
+      "agent_start": 1791453763.355658,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453763474096,
+          "event_time": "2026-10-08 18:02:43.473542+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=83c554dd885d4b44 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453763.473542
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453763475535,
+          "event_time": "2026-10-08 18:02:43.474951+08:00",
+          "pid": "44781",
+          "message": "home stage turn=83c554dd885d4b44 stage=continuation elapsed_ms=2.2",
+          "ts": 1791453763.474951
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453763476415,
+          "event_time": "2026-10-08 18:02:43.476107+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=83c554dd885d4b44 route=llm reason=continuation_not_accepted",
+          "ts": 1791453763.476107
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453763598711,
+          "event_time": "2026-10-08 18:02:43.597982+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=83c554dd885d4b44 model=openai/deepseek-v4-flash connect_ms=115 raw_ttft_ms=120 idle_ms=9706 choices=1",
+          "ts": 1791453763.597982
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453764231969,
+          "event_time": "2026-10-08 18:02:44.231375+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=83c554dd885d4b44 model=openai/deepseek-v4-flash connect_ms=115 ttft_ms=753 raw_ttft_ms=120 raw_chunks_before_effective=1 idle_ms=9706 kind=tool_call",
+          "ts": 1791453764.231375
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453764448429,
+          "event_time": "2026-10-08 18:02:44.448128+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=83c554dd885d4b44 model=openai/deepseek-v4-flash outcome=completed connect_ms=115 raw_ttft_ms=120 tool_ready_ms=960 finish_ms=960 stream_end_ms=970 close_ms=0 tokens_in=4525 tokens_out=93 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453764.448128
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453764454355,
+          "event_time": "2026-10-08 18:02:44.452943+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=83c554dd885d4b44 outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'on')",
+          "ts": 1791453764.452943
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453764454355,
+          "event_time": "2026-10-08 18:02:44.453680+08:00",
+          "pid": "44781",
+          "message": "home stage turn=83c554dd885d4b44 stage=understanding elapsed_ms=982.6",
+          "ts": 1791453764.45368
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453764609176,
+          "event_time": "2026-10-08 18:02:44.608947+08:00",
+          "pid": "44781",
+          "message": "home stage turn=83c554dd885d4b44 stage=execution elapsed_ms=28.5",
+          "ts": 1791453764.608947
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453764610403,
+          "event_time": "2026-10-08 18:02:44.609658+08:00",
+          "pid": "44781",
+          "message": "home turn=83c554dd885d4b44 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=16 elapsed_ms=1254 result={\"schema_version\":1,\"turn_id\":\"83c554dd885d4b44\",\"utterance\":\"开灯。\",\"outcome\":\"executed\",\"message\":\"已打开客厅主灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453764.609658
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453764648795,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:44,648 INFO eidolon.livekit.agent.smarthome smart-home turn=83c554dd885d4b44 outcome=executed delivered",
+          "ts": 1791453764.648
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453763348274,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:43,345 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='开灯。' start=13.900s end=14.900s",
+          "ts": 1791453763.345
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453762946690,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:42,944 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453762.944
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453764607511,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:46872 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453764.607511
+        }
+      ],
+      "continuation_decision": "home continuation turn=83c554dd885d4b44 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 2.2,
+      "route": "llm",
+      "fallback": "home fallback turn=83c554dd885d4b44 outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'on')",
+      "understanding_ms": 982.6,
+      "execution_ms": 28.5,
+      "delivered": 1791453764.648,
+      "final": 1791453763.345,
+      "vad_end": 1791453762.944,
+      "asr_tail_ms": 401.0,
+      "final_to_delivery_ms": 1303.0,
+      "vad_to_delivery_ms": 1704.0,
+      "pre_agent_ms": 10.7,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:02:43.345",
+      "command_summary": "客厅主灯 on",
+      "note": "",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 4,
+      "turn_id": "4ffed4ea1ef440d8",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "4ffed4ea1ef440d8",
+        "utterance": "不开客厅的。",
+        "outcome": "answered",
+        "message": "已取消，本次没有执行设备操作",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 20,
+      "agent_ms": 906,
+      "agent_end": 1791453769.621401,
+      "agent_start": 1791453768.7154012,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453768840703,
+          "event_time": "2026-10-08 18:02:48.840012+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=4ffed4ea1ef440d8 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453768.840012
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453768842499,
+          "event_time": "2026-10-08 18:02:48.841792+08:00",
+          "pid": "44781",
+          "message": "home stage turn=4ffed4ea1ef440d8 stage=continuation elapsed_ms=2.9",
+          "ts": 1791453768.841792
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453768843859,
+          "event_time": "2026-10-08 18:02:48.843500+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=4ffed4ea1ef440d8 route=llm reason=continuation_not_accepted",
+          "ts": 1791453768.8435
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453768969576,
+          "event_time": "2026-10-08 18:02:48.968923+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=4ffed4ea1ef440d8 model=openai/deepseek-v4-flash connect_ms=121 raw_ttft_ms=123 idle_ms=5367 choices=1",
+          "ts": 1791453768.968923
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453769572219,
+          "event_time": "2026-10-08 18:02:49.571738+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=4ffed4ea1ef440d8 model=openai/deepseek-v4-flash connect_ms=121 ttft_ms=726 raw_ttft_ms=123 raw_chunks_before_effective=1 idle_ms=5367 kind=tool_call",
+          "ts": 1791453769.571738
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453769615302,
+          "event_time": "2026-10-08 18:02:49.614628+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=4ffed4ea1ef440d8 model=openai/deepseek-v4-flash outcome=completed connect_ms=121 raw_ttft_ms=123 tool_ready_ms=760 finish_ms=760 stream_end_ms=769 close_ms=0 tokens_in=4526 tokens_out=23 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453769.614628
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453769616645,
+          "event_time": "2026-10-08 18:02:49.616339+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=4ffed4ea1ef440d8 outcome=cancelled",
+          "ts": 1791453769.616339
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453769620460,
+          "event_time": "2026-10-08 18:02:49.620161+08:00",
+          "pid": "44781",
+          "message": "home stage turn=4ffed4ea1ef440d8 stage=understanding elapsed_ms=782.7",
+          "ts": 1791453769.620161
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453769621676,
+          "event_time": "2026-10-08 18:02:49.621401+08:00",
+          "pid": "44781",
+          "message": "home turn=4ffed4ea1ef440d8 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=20 elapsed_ms=906 result={\"schema_version\":1,\"turn_id\":\"4ffed4ea1ef440d8\",\"utterance\":\"不开客厅的。\",\"outcome\":\"answered\",\"message\":\"已取消，本次没有执行设备操作\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453769.621401
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453769647902,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:49,646 INFO eidolon.livekit.agent.smarthome smart-home turn=4ffed4ea1ef440d8 outcome=answered delivered",
+          "ts": 1791453769.646
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453768708781,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:48,705 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='不开客厅的。' start=18.920s end=19.800s",
+          "ts": 1791453768.705
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453768008960,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:48,007 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453768.007
+        }
+      ],
+      "continuation_decision": "home continuation turn=4ffed4ea1ef440d8 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 2.9,
+      "route": "llm",
+      "fallback": "home fallback turn=4ffed4ea1ef440d8 outcome=cancelled",
+      "understanding_ms": 782.7,
+      "delivered": 1791453769.646,
+      "final": 1791453768.705,
+      "vad_end": 1791453768.007,
+      "asr_tail_ms": 698.0,
+      "final_to_delivery_ms": 941.0,
+      "vad_to_delivery_ms": 1639.0,
+      "pre_agent_ms": 10.4,
+      "laya": [],
+      "hub_execute_http200": 0,
+      "time": "18:02:48.705",
+      "command_summary": "无；取消当前请求",
+      "note": "上轮客厅灯已经打开；取消本轮不会撤销上轮。",
+      "command_evidence": "Agent 结果；本轮无 Hub execute"
+    },
+    {
+      "n": 5,
+      "turn_id": "d13b54c6ef1240e3",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "d13b54c6ef1240e3",
+        "utterance": "关灯。",
+        "outcome": "ambiguous",
+        "message": "客厅主灯、主卧灯、床头灯，要哪一个？",
+        "candidates": [
+          {
+            "device_id": "living.main_light",
+            "name": "客厅主灯"
+          },
+          {
+            "device_id": "master.light",
+            "name": "主卧灯"
+          },
+          {
+            "device_id": "master.bedside",
+            "name": "床头灯"
+          }
+        ],
+        "command": {
+          "trait": "on_off",
+          "command": "off",
+          "params": {}
+        }
+      },
+      "agent_authority_ms": 25,
+      "agent_ms": 1269,
+      "agent_end": 1791453779.033332,
+      "agent_start": 1791453777.764332,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453777911859,
+          "event_time": "2026-10-08 18:02:57.911156+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=d13b54c6ef1240e3 route=llm reason=semantic_required",
+          "ts": 1791453777.911156
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453778070914,
+          "event_time": "2026-10-08 18:02:58.070287+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=d13b54c6ef1240e3 model=openai/deepseek-v4-flash connect_ms=150 raw_ttft_ms=156 idle_ms=9068 choices=1",
+          "ts": 1791453778.070287
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453778516481,
+          "event_time": "2026-10-08 18:02:58.515697+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=d13b54c6ef1240e3 model=openai/deepseek-v4-flash connect_ms=150 ttft_ms=601 raw_ttft_ms=156 raw_chunks_before_effective=1 idle_ms=9068 kind=tool_call",
+          "ts": 1791453778.515697
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453778888467,
+          "event_time": "2026-10-08 18:02:58.888068+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=d13b54c6ef1240e3 model=openai/deepseek-v4-flash outcome=completed connect_ms=150 raw_ttft_ms=156 tool_ready_ms=963 finish_ms=963 stream_end_ms=974 close_ms=0 tokens_in=4421 tokens_out=126 cached_tokens_in=4224 configured_max_retries=2",
+          "ts": 1791453778.888068
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453778889193,
+          "event_time": "2026-10-08 18:02:58.888840+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=d13b54c6ef1240e3 outcome=clarification",
+          "ts": 1791453778.88884
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453778889745,
+          "event_time": "2026-10-08 18:02:58.889574+08:00",
+          "pid": "44781",
+          "message": "home stage turn=d13b54c6ef1240e3 stage=understanding elapsed_ms=981.0",
+          "ts": 1791453778.889574
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453779033652,
+          "event_time": "2026-10-08 18:02:59.033332+08:00",
+          "pid": "44781",
+          "message": "home turn=d13b54c6ef1240e3 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=25 elapsed_ms=1269 result={\"schema_version\":1,\"turn_id\":\"d13b54c6ef1240e3\",\"utterance\":\"关灯。\",\"outcome\":\"ambiguous\",\"message\":\"客厅主灯、主卧灯、床头灯，要哪一个？\",\"candidates\":[{\"device_id\":\"living.main_light\",\"name\":\"客厅主灯\"},{\"device_id\":\"master.light\",\"name\":\"主卧灯\"},{\"device_id\":\"master.bedside\",\"name\":\"床头灯\"}],\"command\":{\"trait\":\"on_off\",\"command\":\"off\",\"params\":{}}}",
+          "ts": 1791453779.033332
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453779081022,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:59,079 INFO eidolon.livekit.agent.smarthome smart-home turn=d13b54c6ef1240e3 outcome=ambiguous delivered",
+          "ts": 1791453779.079
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453777744168,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:57,742 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='关灯。' start=27.780s end=28.700s",
+          "ts": 1791453777.742
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453776958430,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:02:56,953 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453776.953
+        }
+      ],
+      "route": "llm",
+      "fallback": "home fallback turn=d13b54c6ef1240e3 outcome=clarification",
+      "understanding_ms": 981.0,
+      "delivered": 1791453779.079,
+      "final": 1791453777.742,
+      "vad_end": 1791453776.953,
+      "asr_tail_ms": 789.0,
+      "final_to_delivery_ms": 1337.0,
+      "vad_to_delivery_ms": 2126.0,
+      "pre_agent_ms": 22.3,
+      "laya": [],
+      "hub_execute_http200": 0,
+      "time": "18:02:57.742",
+      "command_summary": "无；追问灯具",
+      "note": "",
+      "command_evidence": "Agent 结果；本轮无 Hub execute"
+    },
+    {
+      "n": 6,
+      "turn_id": "ee060568b9a04a2b",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "ee060568b9a04a2b",
+        "utterance": "床头的。",
+        "outcome": "executed",
+        "message": "已关闭床头灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 13,
+      "agent_ms": 456,
+      "agent_end": 1791453782.734557,
+      "agent_start": 1791453782.2785568,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453782681249,
+          "event_time": "2026-10-08 18:03:02.681006+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=ee060568b9a04a2b question=pick model=7b695ba8 choice='床头灯' probability=0.9623 outcome=proposed reason=pick_target proposal={\"intent\":\"control\",\"target_status\":\"resolved\",\"targets\":[\"master.bedside\"],\"action\":{\"trait\":\"on_off\",\"command\":\"off\",\"slots\":[]},\"mention\":null}",
+          "ts": 1791453782.681006
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453782682458,
+          "event_time": "2026-10-08 18:03:02.681627+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=ee060568b9a04a2b route=laya_continuation",
+          "ts": 1791453782.681627
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453782682458,
+          "event_time": "2026-10-08 18:03:02.682089+08:00",
+          "pid": "44781",
+          "message": "home stage turn=ee060568b9a04a2b stage=continuation elapsed_ms=288.6",
+          "ts": 1791453782.682089
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453782682992,
+          "event_time": "2026-10-08 18:03:02.682373+08:00",
+          "pid": "44781",
+          "message": "home stage turn=ee060568b9a04a2b stage=understanding elapsed_ms=289.4",
+          "ts": 1791453782.682373
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453782734137,
+          "event_time": "2026-10-08 18:03:02.733847+08:00",
+          "pid": "44781",
+          "message": "home stage turn=ee060568b9a04a2b stage=execution elapsed_ms=42.7",
+          "ts": 1791453782.733847
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453782734749,
+          "event_time": "2026-10-08 18:03:02.734557+08:00",
+          "pid": "44781",
+          "message": "home turn=ee060568b9a04a2b session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=13 elapsed_ms=456 result={\"schema_version\":1,\"turn_id\":\"ee060568b9a04a2b\",\"utterance\":\"床头的。\",\"outcome\":\"executed\",\"message\":\"已关闭床头灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453782.734557
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453782758466,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:02,757 INFO eidolon.livekit.agent.smarthome smart-home turn=ee060568b9a04a2b outcome=executed delivered",
+          "ts": 1791453782.757
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453782266966,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:02,262 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='床头的。' start=33.160s end=33.800s",
+          "ts": 1791453782.262
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453782009119,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:02,007 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453782.007
+        },
+        {
+          "unit": "eidolon-laya.service",
+          "time_us": 1791453782679490,
+          "event_time": null,
+          "pid": "44361",
+          "message": "2026-10-08 18:03:02,679 INFO eidolon_laya systemone q=1 skipped=0 tokens=168 forward=279ms total=281ms truncated=-",
+          "ts": 1791453782.679
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453782732510,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:34144 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453782.73251
+        }
+      ],
+      "continuation_decision": "home continuation turn=ee060568b9a04a2b question=pick model=7b695ba8 choice='床头灯' probability=0.9623 outcome=proposed reason=pick_target proposal={\"intent\":\"control\",\"target_status\":\"resolved\",\"targets\":[\"master.bedside\"],\"action\":{\"trait\":\"on_off\",\"command\":\"off\",\"slots\":[]},\"mention\":null}",
+      "route": "laya_continuation",
+      "continuation_ms": 288.6,
+      "understanding_ms": 289.4,
+      "execution_ms": 42.7,
+      "delivered": 1791453782.757,
+      "final": 1791453782.262,
+      "vad_end": 1791453782.007,
+      "asr_tail_ms": 255.0,
+      "final_to_delivery_ms": 495.0,
+      "vad_to_delivery_ms": 750.0,
+      "pre_agent_ms": 16.6,
+      "laya": [
+        "2026-10-08 18:03:02,679 INFO eidolon_laya systemone q=1 skipped=0 tokens=168 forward=279ms total=281ms truncated=-"
+      ],
+      "hub_execute_http200": 1,
+      "time": "18:03:02.262",
+      "command_summary": "床头灯 off",
+      "note": "",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 7,
+      "turn_id": "896a7e7bdb8b4885",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "896a7e7bdb8b4885",
+        "utterance": "客厅的吧。",
+        "outcome": "executed",
+        "message": "已关闭客厅主灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 25,
+      "agent_ms": 974,
+      "agent_end": 1791453787.228906,
+      "agent_start": 1791453786.254906,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453786403064,
+          "event_time": "2026-10-08 18:03:06.402612+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=896a7e7bdb8b4885 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453786.402612
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453786405239,
+          "event_time": "2026-10-08 18:03:06.403648+08:00",
+          "pid": "44781",
+          "message": "home stage turn=896a7e7bdb8b4885 stage=continuation elapsed_ms=1.4",
+          "ts": 1791453786.403648
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453786405239,
+          "event_time": "2026-10-08 18:03:06.404285+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=896a7e7bdb8b4885 route=llm reason=continuation_not_accepted",
+          "ts": 1791453786.404285
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453786503484,
+          "event_time": "2026-10-08 18:03:06.502996+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=896a7e7bdb8b4885 model=openai/deepseek-v4-flash connect_ms=93 raw_ttft_ms=97 idle_ms=8491 choices=1",
+          "ts": 1791453786.502996
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453786958913,
+          "event_time": "2026-10-08 18:03:06.958218+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=896a7e7bdb8b4885 model=openai/deepseek-v4-flash connect_ms=93 ttft_ms=552 raw_ttft_ms=97 raw_chunks_before_effective=1 idle_ms=8491 kind=tool_call",
+          "ts": 1791453786.958218
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453787185716,
+          "event_time": "2026-10-08 18:03:07.185310+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=896a7e7bdb8b4885 model=openai/deepseek-v4-flash outcome=completed connect_ms=93 raw_ttft_ms=97 tool_ready_ms=771 finish_ms=771 stream_end_ms=780 close_ms=0 tokens_in=4524 tokens_out=93 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453787.18531
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453787187981,
+          "event_time": "2026-10-08 18:03:07.187803+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=896a7e7bdb8b4885 outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'off')",
+          "ts": 1791453787.187803
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453787188432,
+          "event_time": "2026-10-08 18:03:07.188323+08:00",
+          "pid": "44781",
+          "message": "home stage turn=896a7e7bdb8b4885 stage=understanding elapsed_ms=786.7",
+          "ts": 1791453787.188323
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453787228312,
+          "event_time": "2026-10-08 18:03:07.228006+08:00",
+          "pid": "44781",
+          "message": "home stage turn=896a7e7bdb8b4885 stage=execution elapsed_ms=26.2",
+          "ts": 1791453787.228006
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453787229043,
+          "event_time": "2026-10-08 18:03:07.228906+08:00",
+          "pid": "44781",
+          "message": "home turn=896a7e7bdb8b4885 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=25 elapsed_ms=974 result={\"schema_version\":1,\"turn_id\":\"896a7e7bdb8b4885\",\"utterance\":\"客厅的吧。\",\"outcome\":\"executed\",\"message\":\"已关闭客厅主灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453787.228906
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453787294354,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:07,293 INFO eidolon.livekit.agent.smarthome smart-home turn=896a7e7bdb8b4885 outcome=executed delivered",
+          "ts": 1791453787.293
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453786247311,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:06,244 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='客厅的吧。' start=36.920s end=37.680s",
+          "ts": 1791453786.244
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453785814008,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:05,811 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453785.811
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453787225731,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:34144 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453787.225731
+        }
+      ],
+      "continuation_decision": "home continuation turn=896a7e7bdb8b4885 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 1.4,
+      "route": "llm",
+      "fallback": "home fallback turn=896a7e7bdb8b4885 outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'off')",
+      "understanding_ms": 786.7,
+      "execution_ms": 26.2,
+      "delivered": 1791453787.293,
+      "final": 1791453786.244,
+      "vad_end": 1791453785.811,
+      "asr_tail_ms": 433.0,
+      "final_to_delivery_ms": 1049.0,
+      "vad_to_delivery_ms": 1482.0,
+      "pre_agent_ms": 10.9,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:06.244",
+      "command_summary": "客厅主灯 off",
+      "note": "换房间继承 off；正确执行，但明确目标规则绕过 NPU。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 8,
+      "turn_id": "3b8e65bf4608431e",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "3b8e65bf4608431e",
+        "utterance": "开灯。",
+        "outcome": "executed",
+        "message": "已打开客厅主灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 20,
+      "agent_ms": 713,
+      "agent_end": 1791453794.116282,
+      "agent_start": 1791453793.403282,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453793557027,
+          "event_time": "2026-10-08 18:03:13.556414+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=3b8e65bf4608431e question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453793.556414
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453793558959,
+          "event_time": "2026-10-08 18:03:13.557510+08:00",
+          "pid": "44781",
+          "message": "home stage turn=3b8e65bf4608431e stage=continuation elapsed_ms=1.4",
+          "ts": 1791453793.55751
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453793558959,
+          "event_time": "2026-10-08 18:03:13.558290+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=3b8e65bf4608431e route=llm reason=continuation_not_accepted",
+          "ts": 1791453793.55829
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453793673685,
+          "event_time": "2026-10-08 18:03:13.673316+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=3b8e65bf4608431e model=openai/deepseek-v4-flash connect_ms=112 raw_ttft_ms=114 idle_ms=7153 choices=1",
+          "ts": 1791453793.673316
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453793871602,
+          "event_time": "2026-10-08 18:03:13.870848+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=3b8e65bf4608431e model=openai/deepseek-v4-flash connect_ms=112 ttft_ms=311 raw_ttft_ms=114 raw_chunks_before_effective=1 idle_ms=7153 kind=tool_call",
+          "ts": 1791453793.870848
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453794058479,
+          "event_time": "2026-10-08 18:03:14.057883+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=3b8e65bf4608431e model=openai/deepseek-v4-flash outcome=completed connect_ms=112 raw_ttft_ms=114 tool_ready_ms=485 finish_ms=485 stream_end_ms=498 close_ms=0 tokens_in=4525 tokens_out=93 cached_tokens_in=4224 configured_max_retries=2",
+          "ts": 1791453794.057883
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453794061532,
+          "event_time": "2026-10-08 18:03:14.061299+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=3b8e65bf4608431e outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'on')",
+          "ts": 1791453794.061299
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453794062082,
+          "event_time": "2026-10-08 18:03:14.061952+08:00",
+          "pid": "44781",
+          "message": "home stage turn=3b8e65bf4608431e stage=understanding elapsed_ms=506.5",
+          "ts": 1791453794.061952
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453794115709,
+          "event_time": "2026-10-08 18:03:14.115406+08:00",
+          "pid": "44781",
+          "message": "home stage turn=3b8e65bf4608431e stage=execution elapsed_ms=32.3",
+          "ts": 1791453794.115406
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453794116423,
+          "event_time": "2026-10-08 18:03:14.116282+08:00",
+          "pid": "44781",
+          "message": "home turn=3b8e65bf4608431e session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=20 elapsed_ms=713 result={\"schema_version\":1,\"turn_id\":\"3b8e65bf4608431e\",\"utterance\":\"开灯。\",\"outcome\":\"executed\",\"message\":\"已打开客厅主灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453794.116282
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453794173843,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:14,172 INFO eidolon.livekit.agent.smarthome smart-home turn=3b8e65bf4608431e outcome=executed delivered",
+          "ts": 1791453794.172
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453793386953,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:13,383 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='开灯。' start=43.840s end=44.920s",
+          "ts": 1791453793.383
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453793110093,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:13,106 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453793.106
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453794113180,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:41654 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453794.11318
+        }
+      ],
+      "continuation_decision": "home continuation turn=3b8e65bf4608431e question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 1.4,
+      "route": "llm",
+      "fallback": "home fallback turn=3b8e65bf4608431e outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'on')",
+      "understanding_ms": 506.5,
+      "execution_ms": 32.3,
+      "delivered": 1791453794.172,
+      "final": 1791453793.383,
+      "vad_end": 1791453793.106,
+      "asr_tail_ms": 277.0,
+      "final_to_delivery_ms": 789.0,
+      "vad_to_delivery_ms": 1066.0,
+      "pre_agent_ms": 20.3,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:13.383",
+      "command_summary": "客厅主灯 on",
+      "note": "",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 9,
+      "turn_id": "70e74d64bc554ccc",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "70e74d64bc554ccc",
+        "utterance": "不开客厅的，开主卧的。",
+        "outcome": "executed",
+        "message": "已打开主卧灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 25,
+      "agent_ms": 807,
+      "agent_end": 1791453800.625116,
+      "agent_start": 1791453799.8181162,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453799875754,
+          "event_time": "2026-10-08 18:03:19.875094+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=70e74d64bc554ccc question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453799.875094
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453799876992,
+          "event_time": "2026-10-08 18:03:19.876662+08:00",
+          "pid": "44781",
+          "message": "home stage turn=70e74d64bc554ccc stage=continuation elapsed_ms=2.6",
+          "ts": 1791453799.876662
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453799877818,
+          "event_time": "2026-10-08 18:03:19.877553+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=70e74d64bc554ccc route=llm reason=continuation_not_accepted",
+          "ts": 1791453799.877553
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800061149,
+          "event_time": "2026-10-08 18:03:20.060360+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=70e74d64bc554ccc model=openai/deepseek-v4-flash connect_ms=175 raw_ttft_ms=180 idle_ms=6320 choices=1",
+          "ts": 1791453800.06036
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800278558,
+          "event_time": "2026-10-08 18:03:20.277881+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=70e74d64bc554ccc model=openai/deepseek-v4-flash connect_ms=175 ttft_ms=398 raw_ttft_ms=180 raw_chunks_before_effective=1 idle_ms=6320 kind=tool_call",
+          "ts": 1791453800.277881
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800470125,
+          "event_time": "2026-10-08 18:03:20.469743+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=70e74d64bc554ccc model=openai/deepseek-v4-flash outcome=completed connect_ms=175 raw_ttft_ms=180 tool_ready_ms=580 finish_ms=580 stream_end_ms=590 close_ms=0 tokens_in=4531 tokens_out=92 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453800.469743
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800474236,
+          "event_time": "2026-10-08 18:03:20.474046+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=70e74d64bc554ccc outcome=proposed intent=control target_status=resolved targets=('master.light',) action=('on_off', 'on')",
+          "ts": 1791453800.474046
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800474807,
+          "event_time": "2026-10-08 18:03:20.474685+08:00",
+          "pid": "44781",
+          "message": "home stage turn=70e74d64bc554ccc stage=understanding elapsed_ms=603.4",
+          "ts": 1791453800.474685
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800624458,
+          "event_time": "2026-10-08 18:03:20.624158+08:00",
+          "pid": "44781",
+          "message": "home stage turn=70e74d64bc554ccc stage=execution elapsed_ms=30.1",
+          "ts": 1791453800.624158
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453800625266,
+          "event_time": "2026-10-08 18:03:20.625116+08:00",
+          "pid": "44781",
+          "message": "home turn=70e74d64bc554ccc session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=25 elapsed_ms=807 result={\"schema_version\":1,\"turn_id\":\"70e74d64bc554ccc\",\"utterance\":\"不开客厅的，开主卧的。\",\"outcome\":\"executed\",\"message\":\"已打开主卧灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453800.625116
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453800682641,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:20,681 INFO eidolon.livekit.agent.smarthome smart-home turn=70e74d64bc554ccc outcome=executed delivered",
+          "ts": 1791453800.681
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453799810923,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:19,808 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='不开客厅的，开主卧的。' start=48.220s end=49.900s",
+          "ts": 1791453799.808
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453798104625,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:18,102 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453798.102
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453800622238,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:36600 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453800.622238
+        }
+      ],
+      "continuation_decision": "home continuation turn=70e74d64bc554ccc question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 2.6,
+      "route": "llm",
+      "fallback": "home fallback turn=70e74d64bc554ccc outcome=proposed intent=control target_status=resolved targets=('master.light',) action=('on_off', 'on')",
+      "understanding_ms": 603.4,
+      "execution_ms": 30.1,
+      "delivered": 1791453800.681,
+      "final": 1791453799.808,
+      "vad_end": 1791453798.102,
+      "asr_tail_ms": 1706.0,
+      "final_to_delivery_ms": 873.0,
+      "vad_to_delivery_ms": 2579.0,
+      "pre_agent_ms": 10.1,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:19.808",
+      "command_summary": "主卧灯 on",
+      "note": "仅打开主卧灯；不自动关闭已打开的客厅灯。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 10,
+      "turn_id": "4cb7ce09cb054e87",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "4cb7ce09cb054e87",
+        "utterance": "关主卧的。",
+        "outcome": "executed",
+        "message": "已关闭主卧灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 15,
+      "agent_ms": 1040,
+      "agent_end": 1791453806.379712,
+      "agent_start": 1791453805.3397121,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453805366941,
+          "event_time": "2026-10-08 18:03:25.366597+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=4cb7ce09cb054e87 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453805.366597
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453805367786,
+          "event_time": "2026-10-08 18:03:25.367323+08:00",
+          "pid": "44781",
+          "message": "home stage turn=4cb7ce09cb054e87 stage=continuation elapsed_ms=1.1",
+          "ts": 1791453805.367323
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453805368003,
+          "event_time": "2026-10-08 18:03:25.367888+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=4cb7ce09cb054e87 route=llm reason=continuation_not_accepted",
+          "ts": 1791453805.367888
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453805477004,
+          "event_time": "2026-10-08 18:03:25.476699+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=4cb7ce09cb054e87 model=openai/deepseek-v4-flash connect_ms=106 raw_ttft_ms=108 idle_ms=5489 choices=1",
+          "ts": 1791453805.476699
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453806024837,
+          "event_time": "2026-10-08 18:03:26.024464+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=4cb7ce09cb054e87 model=openai/deepseek-v4-flash connect_ms=106 ttft_ms=655 raw_ttft_ms=108 raw_chunks_before_effective=1 idle_ms=5489 kind=tool_call",
+          "ts": 1791453806.024464
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453806215049,
+          "event_time": "2026-10-08 18:03:26.214620+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=4cb7ce09cb054e87 model=openai/deepseek-v4-flash outcome=completed connect_ms=106 raw_ttft_ms=108 tool_ready_ms=835 finish_ms=835 stream_end_ms=845 close_ms=0 tokens_in=4532 tokens_out=92 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453806.21462
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453806219173,
+          "event_time": "2026-10-08 18:03:26.218901+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=4cb7ce09cb054e87 outcome=proposed intent=control target_status=resolved targets=('master.light',) action=('on_off', 'off')",
+          "ts": 1791453806.218901
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453806219800,
+          "event_time": "2026-10-08 18:03:26.219675+08:00",
+          "pid": "44781",
+          "message": "home stage turn=4cb7ce09cb054e87 stage=understanding elapsed_ms=854.0",
+          "ts": 1791453806.219675
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453806379165,
+          "event_time": "2026-10-08 18:03:26.378843+08:00",
+          "pid": "44781",
+          "message": "home stage turn=4cb7ce09cb054e87 stage=execution elapsed_ms=29.6",
+          "ts": 1791453806.378843
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453806380761,
+          "event_time": "2026-10-08 18:03:26.379712+08:00",
+          "pid": "44781",
+          "message": "home turn=4cb7ce09cb054e87 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=15 elapsed_ms=1040 result={\"schema_version\":1,\"turn_id\":\"4cb7ce09cb054e87\",\"utterance\":\"关主卧的。\",\"outcome\":\"executed\",\"message\":\"已关闭主卧灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453806.379712
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453806424689,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:26,423 INFO eidolon.livekit.agent.smarthome smart-home turn=4cb7ce09cb054e87 outcome=executed delivered",
+          "ts": 1791453806.423
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453805331034,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:25,327 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='关主卧的。' start=56.180s end=56.980s",
+          "ts": 1791453805.327
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453805161829,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:25,159 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453805.159
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453806376737,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:36600 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453806.376737
+        }
+      ],
+      "continuation_decision": "home continuation turn=4cb7ce09cb054e87 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 1.1,
+      "route": "llm",
+      "fallback": "home fallback turn=4cb7ce09cb054e87 outcome=proposed intent=control target_status=resolved targets=('master.light',) action=('on_off', 'off')",
+      "understanding_ms": 854.0,
+      "execution_ms": 29.6,
+      "delivered": 1791453806.423,
+      "final": 1791453805.327,
+      "vad_end": 1791453805.159,
+      "asr_tail_ms": 168.0,
+      "final_to_delivery_ms": 1096.0,
+      "vad_to_delivery_ms": 1264.0,
+      "pre_agent_ms": 12.7,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:25.327",
+      "command_summary": "主卧灯 off",
+      "note": "",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 11,
+      "turn_id": "5ae13dfce1d947f5",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "5ae13dfce1d947f5",
+        "utterance": "开床头的。",
+        "outcome": "executed",
+        "message": "已打开床头灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 22,
+      "agent_ms": 983,
+      "agent_end": 1791453812.809032,
+      "agent_start": 1791453811.826032,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812229796,
+          "event_time": "2026-10-08 18:03:32.229325+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=5ae13dfce1d947f5 question=follow model=7b695ba8 choice='打开或启动' probability=0.7533 outcome=abstained reason=low_probability proposal=-",
+          "ts": 1791453812.229325
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812230983,
+          "event_time": "2026-10-08 18:03:32.230615+08:00",
+          "pid": "44781",
+          "message": "home stage turn=5ae13dfce1d947f5 stage=continuation elapsed_ms=293.1",
+          "ts": 1791453812.230615
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812232296,
+          "event_time": "2026-10-08 18:03:32.231991+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=5ae13dfce1d947f5 route=llm reason=continuation_not_accepted",
+          "ts": 1791453812.231991
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812334389,
+          "event_time": "2026-10-08 18:03:32.333813+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=5ae13dfce1d947f5 model=openai/deepseek-v4-flash connect_ms=96 raw_ttft_ms=100 idle_ms=6864 choices=1",
+          "ts": 1791453812.333813
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812619985,
+          "event_time": "2026-10-08 18:03:32.619313+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=5ae13dfce1d947f5 model=openai/deepseek-v4-flash connect_ms=96 ttft_ms=385 raw_ttft_ms=100 raw_chunks_before_effective=1 idle_ms=6864 kind=tool_call",
+          "ts": 1791453812.619313
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812763492,
+          "event_time": "2026-10-08 18:03:32.763046+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=5ae13dfce1d947f5 model=openai/deepseek-v4-flash outcome=completed connect_ms=96 raw_ttft_ms=100 tool_ready_ms=518 finish_ms=517 stream_end_ms=529 close_ms=0 tokens_in=4527 tokens_out=93 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453812.763046
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812767459,
+          "event_time": "2026-10-08 18:03:32.767143+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=5ae13dfce1d947f5 outcome=proposed intent=control target_status=resolved targets=('master.bedside',) action=('on_off', 'on')",
+          "ts": 1791453812.767143
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812768295,
+          "event_time": "2026-10-08 18:03:32.768109+08:00",
+          "pid": "44781",
+          "message": "home stage turn=5ae13dfce1d947f5 stage=understanding elapsed_ms=831.9",
+          "ts": 1791453812.768109
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812808332,
+          "event_time": "2026-10-08 18:03:32.807974+08:00",
+          "pid": "44781",
+          "message": "home stage turn=5ae13dfce1d947f5 stage=execution elapsed_ms=28.1",
+          "ts": 1791453812.807974
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812809238,
+          "event_time": "2026-10-08 18:03:32.809032+08:00",
+          "pid": "44781",
+          "message": "home turn=5ae13dfce1d947f5 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=22 elapsed_ms=983 result={\"schema_version\":1,\"turn_id\":\"5ae13dfce1d947f5\",\"utterance\":\"开床头的。\",\"outcome\":\"executed\",\"message\":\"已打开床头灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453812.809032
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453812849390,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:32,846 INFO eidolon.livekit.agent.smarthome smart-home turn=5ae13dfce1d947f5 outcome=executed delivered",
+          "ts": 1791453812.846
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453810564242,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:30,561 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='开床头的。' start=61.160s end=62.120s",
+          "ts": 1791453810.561
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453810312762,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:30,308 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453810.308
+        },
+        {
+          "unit": "eidolon-laya.service",
+          "time_us": 1791453812226234,
+          "event_time": null,
+          "pid": "44361",
+          "message": "2026-10-08 18:03:32,226 INFO eidolon_laya systemone q=1 skipped=0 tokens=193 forward=276ms total=277ms truncated=-",
+          "ts": 1791453812.226
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453812805354,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:40988 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453812.805354
+        }
+      ],
+      "continuation_decision": "home continuation turn=5ae13dfce1d947f5 question=follow model=7b695ba8 choice='打开或启动' probability=0.7533 outcome=abstained reason=low_probability proposal=-",
+      "continuation_ms": 293.1,
+      "route": "llm",
+      "fallback": "home fallback turn=5ae13dfce1d947f5 outcome=proposed intent=control target_status=resolved targets=('master.bedside',) action=('on_off', 'on')",
+      "understanding_ms": 831.9,
+      "execution_ms": 28.1,
+      "delivered": 1791453812.846,
+      "final": 1791453810.561,
+      "vad_end": 1791453810.308,
+      "asr_tail_ms": 253.0,
+      "final_to_delivery_ms": 2285.0,
+      "vad_to_delivery_ms": 2538.0,
+      "pre_agent_ms": 1265.0,
+      "laya": [
+        "2026-10-08 18:03:32,226 INFO eidolon_laya systemone q=1 skipped=0 tokens=193 forward=276ms total=277ms truncated=-"
+      ],
+      "hub_execute_http200": 1,
+      "time": "18:03:30.561",
+      "command_summary": "床头灯 on",
+      "note": "最终转写到 Agent 开始约 1.265 秒；邻接语音/轮次提交等待，不能全归因于模型。NPU follow 置信度 0.7533 后转 LLM。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 12,
+      "turn_id": "af54127a01e3453c",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "af54127a01e3453c",
+        "utterance": "关客厅的。",
+        "outcome": "executed",
+        "message": "已关闭客厅主灯",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 18,
+      "agent_ms": 1160,
+      "agent_end": 1791453814.009621,
+      "agent_start": 1791453812.8496208,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812949559,
+          "event_time": "2026-10-08 18:03:32.949296+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=af54127a01e3453c question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453812.949296
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812950066,
+          "event_time": "2026-10-08 18:03:32.949849+08:00",
+          "pid": "44781",
+          "message": "home stage turn=af54127a01e3453c stage=continuation elapsed_ms=0.9",
+          "ts": 1791453812.949849
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453812950298,
+          "event_time": "2026-10-08 18:03:32.950164+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=af54127a01e3453c route=llm reason=continuation_not_accepted",
+          "ts": 1791453812.950164
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453813067738,
+          "event_time": "2026-10-08 18:03:33.067403+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=af54127a01e3453c model=openai/deepseek-v4-flash connect_ms=114 raw_ttft_ms=116 idle_ms=717 choices=1",
+          "ts": 1791453813.067403
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453813588783,
+          "event_time": "2026-10-08 18:03:33.588305+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=af54127a01e3453c model=openai/deepseek-v4-flash connect_ms=114 ttft_ms=637 raw_ttft_ms=116 raw_chunks_before_effective=1 idle_ms=717 kind=tool_call",
+          "ts": 1791453813.588305
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453813859154,
+          "event_time": "2026-10-08 18:03:33.858759+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=af54127a01e3453c model=openai/deepseek-v4-flash outcome=completed connect_ms=114 raw_ttft_ms=116 tool_ready_ms=895 finish_ms=895 stream_end_ms=907 close_ms=0 tokens_in=4526 tokens_out=93 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453813.858759
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453813864466,
+          "event_time": "2026-10-08 18:03:33.864221+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=af54127a01e3453c outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'off')",
+          "ts": 1791453813.864221
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453813865106,
+          "event_time": "2026-10-08 18:03:33.864957+08:00",
+          "pid": "44781",
+          "message": "home stage turn=af54127a01e3453c stage=understanding elapsed_ms=916.5",
+          "ts": 1791453813.864957
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453814007778,
+          "event_time": "2026-10-08 18:03:34.006768+08:00",
+          "pid": "44781",
+          "message": "home stage turn=af54127a01e3453c stage=execution elapsed_ms=28.1",
+          "ts": 1791453814.006768
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453814010117,
+          "event_time": "2026-10-08 18:03:34.009621+08:00",
+          "pid": "44781",
+          "message": "home turn=af54127a01e3453c session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=18 elapsed_ms=1160 result={\"schema_version\":1,\"turn_id\":\"af54127a01e3453c\",\"utterance\":\"关客厅的。\",\"outcome\":\"executed\",\"message\":\"已关闭客厅主灯\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453814.009621
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453814060964,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:34,059 INFO eidolon.livekit.agent.smarthome smart-home turn=af54127a01e3453c outcome=executed delivered",
+          "ts": 1791453814.059
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453812111361,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:32,108 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='关客厅的。' start=62.660s end=63.580s",
+          "ts": 1791453812.108
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453811809189,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:31,807 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453811.807
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453814001908,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:40988 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453814.001908
+        }
+      ],
+      "continuation_decision": "home continuation turn=af54127a01e3453c question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 0.9,
+      "route": "llm",
+      "fallback": "home fallback turn=af54127a01e3453c outcome=proposed intent=control target_status=resolved targets=('living.main_light',) action=('on_off', 'off')",
+      "understanding_ms": 916.5,
+      "execution_ms": 28.1,
+      "delivered": 1791453814.059,
+      "final": 1791453812.108,
+      "vad_end": 1791453811.807,
+      "asr_tail_ms": 301.0,
+      "final_to_delivery_ms": 1951.0,
+      "vad_to_delivery_ms": 2252.0,
+      "pre_agent_ms": 741.6,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:32.108",
+      "command_summary": "客厅主灯 off",
+      "note": "最终转写时上一轮仍未完成；进入 Agent 前约 0.742 秒。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 13,
+      "turn_id": "7d664197d48240f4",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "7d664197d48240f4",
+        "utterance": "加湿器调大一点儿。",
+        "outcome": "executed",
+        "message": "加湿器 风速已调到 10%",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 15,
+      "agent_ms": 1034,
+      "agent_end": 1791453824.775484,
+      "agent_start": 1791453823.7414842,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453823890472,
+          "event_time": "2026-10-08 18:03:43.890161+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=7d664197d48240f4 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453823.890161
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453823891207,
+          "event_time": "2026-10-08 18:03:43.890942+08:00",
+          "pid": "44781",
+          "message": "home stage turn=7d664197d48240f4 stage=continuation elapsed_ms=1.1",
+          "ts": 1791453823.890942
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453823891646,
+          "event_time": "2026-10-08 18:03:43.891500+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=7d664197d48240f4 route=llm reason=continuation_not_accepted",
+          "ts": 1791453823.8915
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453823993390,
+          "event_time": "2026-10-08 18:03:43.993008+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=7d664197d48240f4 model=openai/deepseek-v4-flash connect_ms=96 raw_ttft_ms=100 idle_ms=10941 choices=1",
+          "ts": 1791453823.993008
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453824460698,
+          "event_time": "2026-10-08 18:03:44.460326+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=7d664197d48240f4 model=openai/deepseek-v4-flash connect_ms=96 ttft_ms=567 raw_ttft_ms=100 raw_chunks_before_effective=1 idle_ms=10941 kind=tool_call",
+          "ts": 1791453824.460326
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453824718285,
+          "event_time": "2026-10-08 18:03:44.717789+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=7d664197d48240f4 model=openai/deepseek-v4-flash outcome=completed connect_ms=96 raw_ttft_ms=100 tool_ready_ms=812 finish_ms=812 stream_end_ms=825 close_ms=0 tokens_in=4530 tokens_out=117 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453824.717789
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453824719464,
+          "event_time": "2026-10-08 18:03:44.719291+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=7d664197d48240f4 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+          "ts": 1791453824.719291
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453824719919,
+          "event_time": "2026-10-08 18:03:44.719803+08:00",
+          "pid": "44781",
+          "message": "home stage turn=7d664197d48240f4 stage=understanding elapsed_ms=830.6",
+          "ts": 1791453824.719803
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453824774896,
+          "event_time": "2026-10-08 18:03:44.774588+08:00",
+          "pid": "44781",
+          "message": "home stage turn=7d664197d48240f4 stage=execution elapsed_ms=32.8",
+          "ts": 1791453824.774588
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453824775635,
+          "event_time": "2026-10-08 18:03:44.775484+08:00",
+          "pid": "44781",
+          "message": "home turn=7d664197d48240f4 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=15 elapsed_ms=1034 result={\"schema_version\":1,\"turn_id\":\"7d664197d48240f4\",\"utterance\":\"加湿器调大一点儿。\",\"outcome\":\"executed\",\"message\":\"加湿器 风速已调到 10%\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453824.775484
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453824954276,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:44,953 INFO eidolon.livekit.agent.smarthome smart-home turn=7d664197d48240f4 outcome=executed delivered",
+          "ts": 1791453824.953
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453823734165,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:43,731 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='加湿器调大一点儿。' start=73.200s end=75.240s",
+          "ts": 1791453823.731
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453823369859,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:43,367 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453823.367
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453824772397,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:40152 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453824.772397
+        }
+      ],
+      "continuation_decision": "home continuation turn=7d664197d48240f4 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 1.1,
+      "route": "llm",
+      "fallback": "home fallback turn=7d664197d48240f4 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+      "understanding_ms": 830.6,
+      "execution_ms": 32.8,
+      "delivered": 1791453824.953,
+      "final": 1791453823.731,
+      "vad_end": 1791453823.367,
+      "asr_tail_ms": 364.0,
+      "final_to_delivery_ms": 1222.0,
+      "vad_to_delivery_ms": 1586.0,
+      "pre_agent_ms": 10.5,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:43.731",
+      "command_summary": "加湿器 fan_speed.set(value=10)",
+      "note": "首次结果 10%，初始值无历史快照，不能判断是否反向调小。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 14,
+      "turn_id": "66777b52389e45c5",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "66777b52389e45c5",
+        "utterance": "加湿器调大一点儿。",
+        "outcome": "executed",
+        "message": "加湿器 风速已调到 10%",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 12,
+      "agent_ms": 944,
+      "agent_end": 1791453835.225357,
+      "agent_start": 1791453834.281357,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453834408951,
+          "event_time": "2026-10-08 18:03:54.407825+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=66777b52389e45c5 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453834.407825
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453834410590,
+          "event_time": "2026-10-08 18:03:54.410147+08:00",
+          "pid": "44781",
+          "message": "home stage turn=66777b52389e45c5 stage=continuation elapsed_ms=3.3",
+          "ts": 1791453834.410147
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453834411948,
+          "event_time": "2026-10-08 18:03:54.411585+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=66777b52389e45c5 route=llm reason=continuation_not_accepted",
+          "ts": 1791453834.411585
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453834541661,
+          "event_time": "2026-10-08 18:03:54.540954+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=66777b52389e45c5 model=openai/deepseek-v4-flash connect_ms=122 raw_ttft_ms=126 idle_ms=10521 choices=1",
+          "ts": 1791453834.540954
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453834892720,
+          "event_time": "2026-10-08 18:03:54.891934+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=66777b52389e45c5 model=openai/deepseek-v4-flash connect_ms=122 ttft_ms=477 raw_ttft_ms=126 raw_chunks_before_effective=1 idle_ms=10521 kind=tool_call",
+          "ts": 1791453834.891934
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453835167240,
+          "event_time": "2026-10-08 18:03:55.166882+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=66777b52389e45c5 model=openai/deepseek-v4-flash outcome=completed connect_ms=122 raw_ttft_ms=126 tool_ready_ms=738 finish_ms=738 stream_end_ms=752 close_ms=0 tokens_in=4567 tokens_out=122 cached_tokens_in=4224 configured_max_retries=2",
+          "ts": 1791453835.166882
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453835171508,
+          "event_time": "2026-10-08 18:03:55.171210+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=66777b52389e45c5 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+          "ts": 1791453835.17121
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453835172218,
+          "event_time": "2026-10-08 18:03:55.172038+08:00",
+          "pid": "44781",
+          "message": "home stage turn=66777b52389e45c5 stage=understanding elapsed_ms=766.7",
+          "ts": 1791453835.172038
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453835224718,
+          "event_time": "2026-10-08 18:03:55.224249+08:00",
+          "pid": "44781",
+          "message": "home stage turn=66777b52389e45c5 stage=execution elapsed_ms=34.0",
+          "ts": 1791453835.224249
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453835225602,
+          "event_time": "2026-10-08 18:03:55.225357+08:00",
+          "pid": "44781",
+          "message": "home turn=66777b52389e45c5 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=12 elapsed_ms=944 result={\"schema_version\":1,\"turn_id\":\"66777b52389e45c5\",\"utterance\":\"加湿器调大一点儿。\",\"outcome\":\"executed\",\"message\":\"加湿器 风速已调到 10%\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453835.225357
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453835270365,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:55,269 INFO eidolon.livekit.agent.smarthome smart-home turn=66777b52389e45c5 outcome=executed delivered",
+          "ts": 1791453835.269
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453834267816,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:54,265 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='加湿器调大一点儿。' start=83.440s end=85.760s",
+          "ts": 1791453834.265
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453833997119,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:03:53,994 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453833.994
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453835222101,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:35088 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453835.222101
+        }
+      ],
+      "continuation_decision": "home continuation turn=66777b52389e45c5 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 3.3,
+      "route": "llm",
+      "fallback": "home fallback turn=66777b52389e45c5 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+      "understanding_ms": 766.7,
+      "execution_ms": 34.0,
+      "delivered": 1791453835.269,
+      "final": 1791453834.265,
+      "vad_end": 1791453833.994,
+      "asr_tail_ms": 271.0,
+      "final_to_delivery_ms": 1004.0,
+      "vad_to_delivery_ms": 1275.0,
+      "pre_agent_ms": 16.4,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:03:54.265",
+      "command_summary": "加湿器 fan_speed.set(value=10)",
+      "note": "重复“调大”仍为 10%；没有再次增加。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 15,
+      "turn_id": "06206021b5854915",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "06206021b5854915",
+        "utterance": "加湿器再调大一点儿。",
+        "outcome": "executed",
+        "message": "加湿器 风速已调到 20%",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 19,
+      "agent_ms": 1285,
+      "agent_end": 1791453844.104871,
+      "agent_start": 1791453842.819871,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453842984919,
+          "event_time": "2026-10-08 18:04:02.984302+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=06206021b5854915 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453842.984302
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453842986089,
+          "event_time": "2026-10-08 18:04:02.985782+08:00",
+          "pid": "44781",
+          "message": "home stage turn=06206021b5854915 stage=continuation elapsed_ms=2.4",
+          "ts": 1791453842.985782
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453842987075,
+          "event_time": "2026-10-08 18:04:02.986806+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=06206021b5854915 route=llm reason=continuation_not_accepted",
+          "ts": 1791453842.986806
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453843170212,
+          "event_time": "2026-10-08 18:04:03.169619+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=06206021b5854915 model=openai/deepseek-v4-flash connect_ms=176 raw_ttft_ms=180 idle_ms=8574 choices=1",
+          "ts": 1791453843.169619
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453843623393,
+          "event_time": "2026-10-08 18:04:03.622945+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=06206021b5854915 model=openai/deepseek-v4-flash connect_ms=176 ttft_ms=634 raw_ttft_ms=180 raw_chunks_before_effective=1 idle_ms=8574 kind=tool_call",
+          "ts": 1791453843.622945
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453843943395,
+          "event_time": "2026-10-08 18:04:03.943008+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=06206021b5854915 model=openai/deepseek-v4-flash outcome=completed connect_ms=176 raw_ttft_ms=180 tool_ready_ms=940 finish_ms=940 stream_end_ms=954 close_ms=0 tokens_in=4568 tokens_out=123 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453843.943008
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453843946545,
+          "event_time": "2026-10-08 18:04:03.946329+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=06206021b5854915 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+          "ts": 1791453843.946329
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453843947558,
+          "event_time": "2026-10-08 18:04:03.947202+08:00",
+          "pid": "44781",
+          "message": "home stage turn=06206021b5854915 stage=understanding elapsed_ms=965.1",
+          "ts": 1791453843.947202
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453844103246,
+          "event_time": "2026-10-08 18:04:04.102761+08:00",
+          "pid": "44781",
+          "message": "home stage turn=06206021b5854915 stage=execution elapsed_ms=18.5",
+          "ts": 1791453844.102761
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453844105290,
+          "event_time": "2026-10-08 18:04:04.104871+08:00",
+          "pid": "44781",
+          "message": "home turn=06206021b5854915 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=19 elapsed_ms=1285 result={\"schema_version\":1,\"turn_id\":\"06206021b5854915\",\"utterance\":\"加湿器再调大一点儿。\",\"outcome\":\"executed\",\"message\":\"加湿器 风速已调到 20%\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453844.104871
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453844141978,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:04,141 INFO eidolon.livekit.agent.smarthome smart-home turn=06206021b5854915 outcome=executed delivered",
+          "ts": 1791453844.141
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453842801322,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:02,796 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='加湿器再调大一点儿。' start=92.140s end=94.340s",
+          "ts": 1791453842.796
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453842403259,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:02,400 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453842.4
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453844099844,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:41022 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453844.099844
+        }
+      ],
+      "continuation_decision": "home continuation turn=06206021b5854915 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 2.4,
+      "route": "llm",
+      "fallback": "home fallback turn=06206021b5854915 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+      "understanding_ms": 965.1,
+      "execution_ms": 18.5,
+      "delivered": 1791453844.141,
+      "final": 1791453842.796,
+      "vad_end": 1791453842.4,
+      "asr_tail_ms": 396.0,
+      "final_to_delivery_ms": 1345.0,
+      "vad_to_delivery_ms": 1741.0,
+      "pre_agent_ms": 23.9,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:04:02.796",
+      "command_summary": "加湿器 fan_speed.set(value=20)",
+      "note": "加入“再”才得到 20%，相对控制依赖对话措辞。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 16,
+      "turn_id": "8a09edfb9a9e42e8",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "8a09edfb9a9e42e8",
+        "utterance": "加湿器调小。",
+        "outcome": "executed",
+        "message": "加湿器 风速已调到 10%",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 28,
+      "agent_ms": 1353,
+      "agent_end": 1791453855.478136,
+      "agent_start": 1791453854.1251361,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453854284904,
+          "event_time": "2026-10-08 18:04:14.284169+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=8a09edfb9a9e42e8 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453854.284169
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453854286110,
+          "event_time": "2026-10-08 18:04:14.285793+08:00",
+          "pid": "44781",
+          "message": "home stage turn=8a09edfb9a9e42e8 stage=continuation elapsed_ms=2.5",
+          "ts": 1791453854.285793
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453854287255,
+          "event_time": "2026-10-08 18:04:14.286978+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=8a09edfb9a9e42e8 route=llm reason=continuation_not_accepted",
+          "ts": 1791453854.286978
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453854416269,
+          "event_time": "2026-10-08 18:04:14.415601+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=8a09edfb9a9e42e8 model=openai/deepseek-v4-flash connect_ms=121 raw_ttft_ms=126 idle_ms=11300 choices=1",
+          "ts": 1791453854.415601
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453855013044,
+          "event_time": "2026-10-08 18:04:15.012348+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=8a09edfb9a9e42e8 model=openai/deepseek-v4-flash connect_ms=121 ttft_ms=723 raw_ttft_ms=126 raw_chunks_before_effective=1 idle_ms=11300 kind=tool_call",
+          "ts": 1791453855.012348
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453855325058,
+          "event_time": "2026-10-08 18:04:15.324599+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=8a09edfb9a9e42e8 model=openai/deepseek-v4-flash outcome=completed connect_ms=121 raw_ttft_ms=126 tool_ready_ms=1022 finish_ms=1022 stream_end_ms=1035 close_ms=0 tokens_in=4568 tokens_out=121 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453855.324599
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453855328564,
+          "event_time": "2026-10-08 18:04:15.327985+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=8a09edfb9a9e42e8 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+          "ts": 1791453855.327985
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453855329628,
+          "event_time": "2026-10-08 18:04:15.329402+08:00",
+          "pid": "44781",
+          "message": "home stage turn=8a09edfb9a9e42e8 stage=understanding elapsed_ms=1047.5",
+          "ts": 1791453855.329402
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453855476901,
+          "event_time": "2026-10-08 18:04:15.476570+08:00",
+          "pid": "44781",
+          "message": "home stage turn=8a09edfb9a9e42e8 stage=execution elapsed_ms=29.3",
+          "ts": 1791453855.47657
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453855478497,
+          "event_time": "2026-10-08 18:04:15.478136+08:00",
+          "pid": "44781",
+          "message": "home turn=8a09edfb9a9e42e8 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=28 elapsed_ms=1353 result={\"schema_version\":1,\"turn_id\":\"8a09edfb9a9e42e8\",\"utterance\":\"加湿器调小。\",\"outcome\":\"executed\",\"message\":\"加湿器 风速已调到 10%\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453855.478136
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453855514843,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:15,514 INFO eidolon.livekit.agent.smarthome smart-home turn=8a09edfb9a9e42e8 outcome=executed delivered",
+          "ts": 1791453855.514
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453854116017,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:14,113 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='加湿器调小。' start=103.840s end=105.560s",
+          "ts": 1791453854.113
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453853861750,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:13,859 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453853.859
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453855474311,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:41912 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453855.474311
+        }
+      ],
+      "continuation_decision": "home continuation turn=8a09edfb9a9e42e8 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 2.5,
+      "route": "llm",
+      "fallback": "home fallback turn=8a09edfb9a9e42e8 outcome=proposed intent=control target_status=resolved targets=('master.humidifier',) action=('fan_speed', 'set')",
+      "understanding_ms": 1047.5,
+      "execution_ms": 29.3,
+      "delivered": 1791453855.514,
+      "final": 1791453854.113,
+      "vad_end": 1791453853.859,
+      "asr_tail_ms": 254.0,
+      "final_to_delivery_ms": 1401.0,
+      "vad_to_delivery_ms": 1655.0,
+      "pre_agent_ms": 12.1,
+      "laya": [],
+      "hub_execute_http200": 1,
+      "time": "18:04:14.113",
+      "command_summary": "加湿器 fan_speed.set(value=10)",
+      "note": "",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 17,
+      "turn_id": "b28a8c1ce0214084",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "b28a8c1ce0214084",
+        "utterance": "开飞机。",
+        "outcome": "unrelated",
+        "message": "这里只处理家里的设备",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 19,
+      "agent_ms": 1020,
+      "agent_end": 1791453865.924357,
+      "agent_start": 1791453864.904357,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865343230,
+          "event_time": "2026-10-08 18:04:25.343032+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=b28a8c1ce0214084 question=follow model=7b695ba8 choice='重新理解' probability=0.8326 outcome=abstained reason=reinterpret proposal=-",
+          "ts": 1791453865.343032
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865343625,
+          "event_time": "2026-10-08 18:04:25.343515+08:00",
+          "pid": "44781",
+          "message": "home stage turn=b28a8c1ce0214084 stage=continuation elapsed_ms=312.9",
+          "ts": 1791453865.343515
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865344058,
+          "event_time": "2026-10-08 18:04:25.343959+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=b28a8c1ce0214084 route=llm reason=continuation_not_accepted",
+          "ts": 1791453865.343959
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865429573,
+          "event_time": "2026-10-08 18:04:25.429242+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=b28a8c1ce0214084 model=openai/deepseek-v4-flash connect_ms=82 raw_ttft_ms=84 idle_ms=11055 choices=1",
+          "ts": 1791453865.429242
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865791979,
+          "event_time": "2026-10-08 18:04:25.791631+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=b28a8c1ce0214084 model=openai/deepseek-v4-flash connect_ms=82 ttft_ms=446 raw_ttft_ms=84 raw_chunks_before_effective=1 idle_ms=11055 kind=tool_call",
+          "ts": 1791453865.791631
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865921597,
+          "event_time": "2026-10-08 18:04:25.921265+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=b28a8c1ce0214084 model=openai/deepseek-v4-flash outcome=completed connect_ms=82 raw_ttft_ms=84 tool_ready_ms=570 finish_ms=570 stream_end_ms=576 close_ms=0 tokens_in=4561 tokens_out=69 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453865.921265
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865923418,
+          "event_time": "2026-10-08 18:04:25.923276+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=b28a8c1ce0214084 outcome=proposed intent=unrelated target_status=none targets=() action=None",
+          "ts": 1791453865.923276
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865923997,
+          "event_time": "2026-10-08 18:04:25.923887+08:00",
+          "pid": "44781",
+          "message": "home stage turn=b28a8c1ce0214084 stage=understanding elapsed_ms=893.9",
+          "ts": 1791453865.923887
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453865924466,
+          "event_time": "2026-10-08 18:04:25.924357+08:00",
+          "pid": "44781",
+          "message": "home turn=b28a8c1ce0214084 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=19 elapsed_ms=1020 result={\"schema_version\":1,\"turn_id\":\"b28a8c1ce0214084\",\"utterance\":\"开飞机。\",\"outcome\":\"unrelated\",\"message\":\"这里只处理家里的设备\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453865.924357
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453866053953,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:26,051 INFO eidolon.livekit.agent.smarthome smart-home turn=b28a8c1ce0214084 outcome=unrelated delivered",
+          "ts": 1791453866.051
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453864894411,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:24,890 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='开飞机。' start=115.720s end=116.720s",
+          "ts": 1791453864.89
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453864758365,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:24,755 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453864.755
+        },
+        {
+          "unit": "eidolon-laya.service",
+          "time_us": 1791453865341585,
+          "event_time": null,
+          "pid": "44361",
+          "message": "2026-10-08 18:04:25,341 INFO eidolon_laya systemone q=1 skipped=0 tokens=162 forward=306ms total=307ms truncated=-",
+          "ts": 1791453865.341
+        }
+      ],
+      "continuation_decision": "home continuation turn=b28a8c1ce0214084 question=follow model=7b695ba8 choice='重新理解' probability=0.8326 outcome=abstained reason=reinterpret proposal=-",
+      "continuation_ms": 312.9,
+      "route": "llm",
+      "fallback": "home fallback turn=b28a8c1ce0214084 outcome=proposed intent=unrelated target_status=none targets=() action=None",
+      "understanding_ms": 893.9,
+      "delivered": 1791453866.051,
+      "final": 1791453864.89,
+      "vad_end": 1791453864.755,
+      "asr_tail_ms": 135.0,
+      "final_to_delivery_ms": 1161.0,
+      "vad_to_delivery_ms": 1296.0,
+      "pre_agent_ms": 14.4,
+      "laya": [
+        "2026-10-08 18:04:25,341 INFO eidolon_laya systemone q=1 skipped=0 tokens=162 forward=306ms total=307ms truncated=-"
+      ],
+      "hub_execute_http200": 0,
+      "time": "18:04:24.890",
+      "command_summary": "无；非家居请求",
+      "note": "文本是“开飞机”；是否为 ASR 误识别需原音频，不能凭下一句断言。",
+      "command_evidence": "Agent 结果；本轮无 Hub execute"
+    },
+    {
+      "n": 18,
+      "turn_id": "07450dc7467b42b6",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "07450dc7467b42b6",
+        "utterance": "开洗衣机。",
+        "outcome": "executed",
+        "message": "洗衣机 已启动",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 23,
+      "agent_ms": 662,
+      "agent_end": 1791453871.084969,
+      "agent_start": 1791453870.422969,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453871054271,
+          "event_time": "2026-10-08 18:04:31.054061+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=07450dc7467b42b6 route=primary proposal={\"intent\":\"control\",\"target_status\":\"resolved\",\"targets\":[\"balcony.washer\"],\"action\":{\"trait\":\"operational\",\"command\":\"start\",\"slots\":[]},\"mention\":null}",
+          "ts": 1791453871.054061
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453871054773,
+          "event_time": "2026-10-08 18:04:31.054590+08:00",
+          "pid": "44781",
+          "message": "home stage turn=07450dc7467b42b6 stage=understanding elapsed_ms=463.8",
+          "ts": 1791453871.05459
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453871084410,
+          "event_time": "2026-10-08 18:04:31.084211+08:00",
+          "pid": "44781",
+          "message": "home stage turn=07450dc7467b42b6 stage=execution elapsed_ms=21.6",
+          "ts": 1791453871.084211
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453871085096,
+          "event_time": "2026-10-08 18:04:31.084969+08:00",
+          "pid": "44781",
+          "message": "home turn=07450dc7467b42b6 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=23 elapsed_ms=662 result={\"schema_version\":1,\"turn_id\":\"07450dc7467b42b6\",\"utterance\":\"开洗衣机。\",\"outcome\":\"executed\",\"message\":\"洗衣机 已启动\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453871.084969
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453871137588,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:31,137 INFO eidolon.livekit.agent.smarthome smart-home turn=07450dc7467b42b6 outcome=executed delivered",
+          "ts": 1791453871.137
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453870416197,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:30,411 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='开洗衣机。' start=120.500s end=121.700s",
+          "ts": 1791453870.411
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453869860192,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:29,857 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453869.857
+        },
+        {
+          "unit": "eidolon-laya.service",
+          "time_us": 1791453871052211,
+          "event_time": null,
+          "pid": "44361",
+          "message": "2026-10-08 18:04:31,052 INFO eidolon_laya systemone q=3 skipped=0 tokens=463 forward=453ms total=457ms truncated=-",
+          "ts": 1791453871.052
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453871082775,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:44036 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453871.082775
+        }
+      ],
+      "route": "primary",
+      "understanding_ms": 463.8,
+      "execution_ms": 21.6,
+      "delivered": 1791453871.137,
+      "final": 1791453870.411,
+      "vad_end": 1791453869.857,
+      "asr_tail_ms": 554.0,
+      "final_to_delivery_ms": 726.0,
+      "vad_to_delivery_ms": 1280.0,
+      "pre_agent_ms": 12.0,
+      "laya": [
+        "2026-10-08 18:04:31,052 INFO eidolon_laya systemone q=3 skipped=0 tokens=463 forward=453ms total=457ms truncated=-"
+      ],
+      "hub_execute_http200": 1,
+      "time": "18:04:30.411",
+      "command_summary": "洗衣机 operational.start",
+      "note": "“开”被解释为启动洗衣程序；需产品明确开机/启动语义。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    },
+    {
+      "n": 19,
+      "turn_id": "60a6f807e2214c38",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "60a6f807e2214c38",
+        "utterance": "关空调。",
+        "outcome": "ambiguous",
+        "message": "客厅空调、主卧空调，要哪一个？",
+        "candidates": [
+          {
+            "device_id": "living.ac",
+            "name": "客厅空调"
+          },
+          {
+            "device_id": "master.ac",
+            "name": "主卧空调"
+          }
+        ],
+        "command": {
+          "trait": "on_off",
+          "command": "off",
+          "params": {}
+        }
+      },
+      "agent_authority_ms": 17,
+      "agent_ms": 1158,
+      "agent_end": 1791453891.596732,
+      "agent_start": 1791453890.438732,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453890594561,
+          "event_time": "2026-10-08 18:04:50.593842+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=60a6f807e2214c38 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+          "ts": 1791453890.593842
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453890595564,
+          "event_time": "2026-10-08 18:04:50.595065+08:00",
+          "pid": "44781",
+          "message": "home stage turn=60a6f807e2214c38 stage=continuation elapsed_ms=1.7",
+          "ts": 1791453890.595065
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453890595905,
+          "event_time": "2026-10-08 18:04:50.595731+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=60a6f807e2214c38 route=llm reason=continuation_not_accepted",
+          "ts": 1791453890.595731
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453890694759,
+          "event_time": "2026-10-08 18:04:50.694245+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=60a6f807e2214c38 model=openai/deepseek-v4-flash connect_ms=90 raw_ttft_ms=97 idle_ms=25252 choices=1",
+          "ts": 1791453890.694245
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453891209945,
+          "event_time": "2026-10-08 18:04:51.209509+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=60a6f807e2214c38 model=openai/deepseek-v4-flash connect_ms=90 ttft_ms=612 raw_ttft_ms=97 raw_chunks_before_effective=1 idle_ms=25252 kind=tool_call",
+          "ts": 1791453891.209509
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453891461971,
+          "event_time": "2026-10-08 18:04:51.461356+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=60a6f807e2214c38 model=openai/deepseek-v4-flash outcome=completed connect_ms=90 raw_ttft_ms=97 tool_ready_ms=852 finish_ms=852 stream_end_ms=864 close_ms=0 tokens_in=4524 tokens_out=112 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453891.461356
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453891465016,
+          "event_time": "2026-10-08 18:04:51.464868+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=60a6f807e2214c38 outcome=clarification",
+          "ts": 1791453891.464868
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453891465706,
+          "event_time": "2026-10-08 18:04:51.465588+08:00",
+          "pid": "44781",
+          "message": "home stage turn=60a6f807e2214c38 stage=understanding elapsed_ms=873.0",
+          "ts": 1791453891.465588
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453891597392,
+          "event_time": "2026-10-08 18:04:51.596732+08:00",
+          "pid": "44781",
+          "message": "home turn=60a6f807e2214c38 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=17 elapsed_ms=1158 result={\"schema_version\":1,\"turn_id\":\"60a6f807e2214c38\",\"utterance\":\"关空调。\",\"outcome\":\"ambiguous\",\"message\":\"客厅空调、主卧空调，要哪一个？\",\"candidates\":[{\"device_id\":\"living.ac\",\"name\":\"客厅空调\"},{\"device_id\":\"master.ac\",\"name\":\"主卧空调\"}],\"command\":{\"trait\":\"on_off\",\"command\":\"off\",\"params\":{}}}",
+          "ts": 1791453891.596732
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453891640562,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:51,639 INFO eidolon.livekit.agent.smarthome smart-home turn=60a6f807e2214c38 outcome=ambiguous delivered",
+          "ts": 1791453891.639
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453890432885,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:50,429 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='关空调。' start=141.300s end=142.060s",
+          "ts": 1791453890.429
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453890301135,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:50,297 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453890.297
+        }
+      ],
+      "continuation_decision": "home continuation turn=60a6f807e2214c38 question=none model=7b695ba8 choice=None probability=- outcome=abstained reason=explicit_reference proposal=-",
+      "continuation_ms": 1.7,
+      "route": "llm",
+      "fallback": "home fallback turn=60a6f807e2214c38 outcome=clarification",
+      "understanding_ms": 873.0,
+      "delivered": 1791453891.639,
+      "final": 1791453890.429,
+      "vad_end": 1791453890.297,
+      "asr_tail_ms": 132.0,
+      "final_to_delivery_ms": 1210.0,
+      "vad_to_delivery_ms": 1342.0,
+      "pre_agent_ms": 9.7,
+      "laya": [],
+      "hub_execute_http200": 0,
+      "time": "18:04:50.429",
+      "command_summary": "无；追问空调",
+      "note": "",
+      "command_evidence": "Agent 结果；本轮无 Hub execute"
+    },
+    {
+      "n": 20,
+      "turn_id": "b3a194726b354373",
+      "result": {
+        "schema_version": 1,
+        "turn_id": "b3a194726b354373",
+        "utterance": "客厅。",
+        "outcome": "executed",
+        "message": "已关闭客厅空调",
+        "candidates": [],
+        "command": null
+      },
+      "agent_authority_ms": 14,
+      "agent_ms": 1185,
+      "agent_end": 1791453896.14665,
+      "agent_start": 1791453894.9616501,
+      "evidence": [
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453895373625,
+          "event_time": "2026-10-08 18:04:55.373423+08:00",
+          "pid": "44781",
+          "message": "home continuation turn=b3a194726b354373 question=pick model=7b695ba8 choice='客厅空调' probability=0.9408 outcome=abstained reason=low_probability proposal=-",
+          "ts": 1791453895.373423
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453895374042,
+          "event_time": "2026-10-08 18:04:55.373904+08:00",
+          "pid": "44781",
+          "message": "home stage turn=b3a194726b354373 stage=continuation elapsed_ms=289.4",
+          "ts": 1791453895.373904
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453895374342,
+          "event_time": "2026-10-08 18:04:55.374188+08:00",
+          "pid": "44781",
+          "message": "home interpretation turn=b3a194726b354373 route=llm reason=continuation_not_accepted",
+          "ts": 1791453895.374188
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453895462806,
+          "event_time": "2026-10-08 18:04:55.462596+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_first_chunk req=b3a194726b354373 model=openai/deepseek-v4-flash connect_ms=84 raw_ttft_ms=87 idle_ms=4778 choices=1",
+          "ts": 1791453895.462596
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453895920105,
+          "event_time": "2026-10-08 18:04:55.919319+08:00",
+          "pid": "44781",
+          "message": "litellm_timings req=b3a194726b354373 model=openai/deepseek-v4-flash connect_ms=84 ttft_ms=544 raw_ttft_ms=87 raw_chunks_before_effective=1 idle_ms=4778 kind=tool_call",
+          "ts": 1791453895.919319
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453896115245,
+          "event_time": "2026-10-08 18:04:56.114898+08:00",
+          "pid": "44781",
+          "message": "litellm_stream_summary req=b3a194726b354373 model=openai/deepseek-v4-flash outcome=completed connect_ms=84 raw_ttft_ms=87 tool_ready_ms=729 finish_ms=729 stream_end_ms=739 close_ms=0 tokens_in=4531 tokens_out=91 cached_tokens_in=2560 configured_max_retries=2",
+          "ts": 1791453896.114898
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453896120006,
+          "event_time": "2026-10-08 18:04:56.119753+08:00",
+          "pid": "44781",
+          "message": "home fallback turn=b3a194726b354373 outcome=proposed intent=control target_status=resolved targets=('living.ac',) action=('on_off', 'off')",
+          "ts": 1791453896.119753
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453896120584,
+          "event_time": "2026-10-08 18:04:56.120450+08:00",
+          "pid": "44781",
+          "message": "home stage turn=b3a194726b354373 stage=understanding elapsed_ms=1036.5",
+          "ts": 1791453896.12045
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453896146031,
+          "event_time": "2026-10-08 18:04:56.145711+08:00",
+          "pid": "44781",
+          "message": "home stage turn=b3a194726b354373 stage=execution elapsed_ms=14.4",
+          "ts": 1791453896.145711
+        },
+        {
+          "unit": "eidolon-agent.service",
+          "time_us": 1791453896146809,
+          "event_time": "2026-10-08 18:04:56.146650+08:00",
+          "pid": "44781",
+          "message": "home turn=b3a194726b354373 session=esp32-e4d6f4c2-e7d3f1c5-00000001 companion=c_129153685f855ff3b2062301fb3ceda0 authority_ms=14 elapsed_ms=1185 result={\"schema_version\":1,\"turn_id\":\"b3a194726b354373\",\"utterance\":\"客厅。\",\"outcome\":\"executed\",\"message\":\"已关闭客厅空调\",\"candidates\":[],\"command\":null}",
+          "ts": 1791453896.14665
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453896183074,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:56,182 INFO eidolon.livekit.agent.smarthome smart-home turn=b3a194726b354373 outcome=executed delivered",
+          "ts": 1791453896.182
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453894952596,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:54,948 INFO bailian.stt_stream [Bailian STT] FINAL_TRANSCRIPT text='客厅。' start=146.020s end=146.580s",
+          "ts": 1791453894.948
+        },
+        {
+          "unit": "eidolon-channel.service",
+          "time_us": 1791453894802658,
+          "event_time": null,
+          "pid": "45442",
+          "message": "2026-10-08 18:04:54,800 INFO eidolon.livekit.plugins.vad.firered VAD: end of speech",
+          "ts": 1791453894.8
+        },
+        {
+          "unit": "eidolon-laya.service",
+          "time_us": 1791453895371782,
+          "event_time": null,
+          "pid": "44361",
+          "message": "2026-10-08 18:04:55,371 INFO eidolon_laya systemone q=1 skipped=0 tokens=152 forward=280ms total=281ms truncated=-",
+          "ts": 1791453895.371
+        },
+        {
+          "unit": "eidolon-hub.service",
+          "time_us": 1791453896143818,
+          "event_time": null,
+          "pid": "44346",
+          "message": "INFO:     127.0.0.1:49072 - \"POST /api/smarthome/v1/execute HTTP/1.1\" 200 OK",
+          "ts": 1791453896.143818
+        }
+      ],
+      "continuation_decision": "home continuation turn=b3a194726b354373 question=pick model=7b695ba8 choice='客厅空调' probability=0.9408 outcome=abstained reason=low_probability proposal=-",
+      "continuation_ms": 289.4,
+      "route": "llm",
+      "fallback": "home fallback turn=b3a194726b354373 outcome=proposed intent=control target_status=resolved targets=('living.ac',) action=('on_off', 'off')",
+      "understanding_ms": 1036.5,
+      "execution_ms": 14.4,
+      "delivered": 1791453896.182,
+      "final": 1791453894.948,
+      "vad_end": 1791453894.8,
+      "asr_tail_ms": 148.0,
+      "final_to_delivery_ms": 1234.0,
+      "vad_to_delivery_ms": 1382.0,
+      "pre_agent_ms": 13.7,
+      "laya": [
+        "2026-10-08 18:04:55,371 INFO eidolon_laya systemone q=1 skipped=0 tokens=152 forward=280ms total=281ms truncated=-"
+      ],
+      "hub_execute_http200": 1,
+      "time": "18:04:54.948",
+      "command_summary": "客厅空调 off",
+      "note": "选对客厅空调但 0.9408 < 0.95，转 LLM 增加等待。",
+      "command_evidence": "Agent 提案/结果与 Hub execute HTTP 200；参数按结果及已核对源码反推，非抓包请求体"
+    }
+  ]
+}

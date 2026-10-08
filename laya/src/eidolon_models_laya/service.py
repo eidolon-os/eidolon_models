@@ -224,6 +224,7 @@ async def systemone(request: web.Request) -> web.Response:
     )
     return _json({
         "contract_version": "eidolon.models.laya.systemone.v1",
+        "features": {"question_state": True},
         "revision": request.app[INFO].get("revision"),
         **prediction.as_response(engine.name, engine.backend.name),
     })

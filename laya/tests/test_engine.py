@@ -158,3 +158,23 @@ def test_speculative_matches_staged_answers():
 def test_speculative_needs_a_backend_that_can_submit():
     e = engine(0)
     assert not DecisionEngine(e.backend, e.tokenizer, e.cfg, speculative=True).speculative
+
+
+def test_question_state_override_isolated_in_one_batch():
+    e = engine(0)
+    q = QUESTIONS["intent"]
+    state = {"utterance": "关灯"}
+    history = {"utterance": "客厅的", "context": {"Agent": "关哪盏？"}}
+    _, _, items, cut = e._prepare(state, {"plain": q, "context": {**q, "state": history}}, False)
+    _, _, expected, _ = e._prepare(history, {"only": q}, False)
+    assert items[1]["ids"] == expected[0]["ids"]
+    assert items[0]["ids"] != items[1]["ids"] and not cut
+    e.predict(state, {"plain": q, "context": {**q, "state": history}})
+    assert e.backend.calls == [2]
+
+
+def test_question_override_truncation_is_reported_per_question():
+    e = engine(0)
+    p = e.predict("短句", {"plain": QUESTIONS["intent"],
+                  "long": {**QUESTIONS["intent"], "state": "历史对话" * 1000}})
+    assert p.truncated == ["long"]

@@ -93,6 +93,7 @@ async def test_systemone_round_trip(client, engine):
     body = await resp.json()
     assert body["contract_version"] == "eidolon.models.laya.systemone.v1"
     assert body["revision"] == "abc"
+    assert body["features"]["question_state"] is True
     assert body["answers"]["who"]["choice"] == "a"
     assert body["usage"] == {"input_tokens": 42, "output_tokens": 0}
     assert body["truncated"] == ["who"] and body["backend"] == "fake"

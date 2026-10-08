@@ -57,6 +57,17 @@ scripts/eidolon-laya --service smart_home serve    # 127.0.0.1:8771，torch（MP
 国内网络拉权重：`scripts/eidolon-laya fetch --endpoint https://hf-mirror.com`
 （走镜像时自动关闭 Xet，否则 Xet 会直连官方 CAS 返回 401）。
 
+## 按问题分配上下文（2026-10-08）
+
+`POST /v1/systemone` 的每个 question 可选 `state`，覆盖本次请求的公共 state；未提供时行为不变。
+一次请求仍按原有 engine 批处理/并行机制运行，token 上限、截断记录按问题独立计算。
+回复 `features.question_state=true` 表示支持该能力。客户端不得假设旧服务已支持；新版 Agent
+在能力缺失或输入截断时交给 LLM，不执行基于不完整上下文的提案。
+
+用途：当前句 intent/device/action 保持原输入，上下文消歧题才读取有限历史；避免历史中的动作
+污染当前句分类。没有训练、修改权重或变更部署固定版本。
+实际 Mac c4/c10 回放、失败探索与复跑方法见 [模型优先验证报告](evals/model-first-20261008/README.md)。
+
 ## 调用
 
 ```bash

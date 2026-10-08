@@ -163,7 +163,7 @@ class DecisionEngine:
         for qid, qdef in questions.items():
             q = to_internal(qdef)
             seq, markers, cut = build_sequence(
-                self.tokenizer, state, q, self.max_len, self.head_max_len, truncate_left
+                self.tokenizer, qdef.get("state", state), q, self.max_len, self.head_max_len, truncate_left
             )
             if len(markers) != len(render_options(q)):
                 raise ValueError(
