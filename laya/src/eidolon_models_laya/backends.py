@@ -43,21 +43,16 @@ class TorchBackend:
         agent = laya.load(str(torch_dir), device=None if device == "auto" else device)
         self._model = agent.model
         self._device = agent.device
-        self._dtype = agent.dtype
         self._threads = torch.get_num_threads()
         del agent  # keep the model, drop laya's own transformers tokenizer
 
     def forward(self, batch: dict[str, np.ndarray]) -> tuple[np.ndarray, np.ndarray]:
+        # No autocast, on CUDA either: the temperatures and thresholds were fitted on
+        # fp32 logits (the eval pipeline's), and upstream laya's bf16 autocast moved
+        # calibrated probabilities by up to 0.14 on A100, enough to flip gated decisions.
         torch = self._torch
         tensors = [torch.from_numpy(batch[k]).to(self._device) for k in INPUT_NAMES]
-        with (
-            torch.no_grad(),
-            torch.autocast(
-                device_type=self._device.type,
-                dtype=self._dtype,
-                enabled=self._device.type == "cuda",
-            ),
-        ):
+        with torch.no_grad():
             logits, act = self._model(*tensors)
         if self._device.type == "mps":
             torch.mps.synchronize()
@@ -65,14 +60,12 @@ class TorchBackend:
 
     def describe(self) -> dict:
         # The checkpoint ships fp16 weights; laya upcasts them to fp32 when it builds
-        # the model, and only autocasts (to fp16/bf16) on CUDA.
+        # the model, and the forward runs in that precision on every device.
         weights = str(next(self._model.parameters()).dtype).removeprefix("torch.")
-        on_cuda = self._device.type == "cuda"
-        compute = str(self._dtype).removeprefix("torch.") if on_cuda else weights
         return {
             "backend": self.name,
             "device": str(self._device),
-            "precision": {"weights": weights, "compute": compute},
+            "precision": {"weights": weights, "compute": weights},
             "threads": self._threads,
             "torch": self._torch.__version__,
         }
