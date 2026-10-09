@@ -42,7 +42,7 @@ laya/
 ```bash
 cd laya
 uv sync --all-extras                 # torch + onnx + 导出工具
-git lfs pull                         # 产品模型（家居 c4、参与决策 p4）的权重是 LFS 对象
+git lfs pull                         # 产品模型（家居 c10、参与决策 p4）的权重是 LFS 对象
 scripts/eidolon-laya --service smart_home doctor
 scripts/eidolon-laya --service smart_home serve    # 127.0.0.1:8771，torch（MPS），本机无需 key
 ```

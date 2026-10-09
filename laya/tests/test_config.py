@@ -36,7 +36,7 @@ def test_the_product_services_on_an_npu_board():
     home = Settings.for_service("smart_home", capabilities=frozenset({"rknpu2", "local_laya"}))
     assert home.backend == "rknn" and home.port == 8771 and home.max_pending == 1
     assert home.rknn_placement == "1:128,256,384,512|2:128,256" and home.speculative
-    assert home.model_dir == Path("/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8")
+    assert home.model_dir == Path("/var/lib/eidolon/models/laya-smart-home-c10-rknn-e8254243")
     assert not home.enable_participation
     team = Settings.for_service("participation", capabilities=frozenset({"rknpu2"}))
     assert team.backend == "rknn" and team.port == 8773 and team.enable_participation
@@ -46,7 +46,7 @@ def test_the_product_services_on_an_npu_board():
 def test_the_product_services_from_a_source_checkout():
     home = Settings.for_service("smart_home", capabilities=frozenset())
     assert home.backend == "torch" and home.device == "auto"
-    assert home.model_dir == laya_home() / "models" / "laya-smart-home" / "7b695ba8"
+    assert home.model_dir == laya_home() / "models" / "laya-smart-home" / "e8254243"
     assert home.rknn_placement is None and home.max_pending == 4
 
 

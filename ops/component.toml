@@ -177,18 +177,14 @@ default = 8771
 bind = "loopback"
 purpose = "Laya System One decision suggestions, HTTP at /v1/systemone"
 
-# c4 (7b695ba8): the r14 single-sentence questions plus the continuation-laya-v1 pick / follow questions
-# (laya/models/laya-smart-home/7b695ba8/continuation.json), same graph shapes and buckets as r14.
-# RKNN fp16 converted on the board with rknn-toolkit2 2.3.2 (evals/smart-home-continuation/c4-npu).
-# Every byte is an LFS object of this repository at the pinned commit (repo://), so any operator's
-# checkout can carry it; Ops verifies each digest, and the Host receives it once, beside releases.
-# laya/deploy/services.toml names this root as the smart_home service's rknn model. There is no CPU
-# format: a Host without rknpu2 runs no Laya (ONNX on the A76 cores measured 2.4–3.0 s per request).
-# A later version gets a new root.
+# c10 (e8254243), RK3588 FP16; fixed-weight parity and policy validation:
+# laya/evals/c10-npu-20261009. Long-context requests can still exceed the 1s client budget.
+# The previous c4 release and model root remain available for rollback.
+# Each version uses a separate checksum-verified installation root.
 [[artifacts]]
-id = "laya-smart-home-c4-rknn-7b695ba8"
+id = "laya-smart-home-c10-rknn-e8254243"
 kind = "model"
-install_root = "/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8"
+install_root = "/var/lib/eidolon/models/laya-smart-home-c10-rknn-e8254243"
 requires_capability = "local_laya"
 
 [[artifacts.files]]
@@ -198,73 +194,73 @@ url = "repo://laya/deploy/rk3588/librknnrt.so"
 
 [[artifacts.files]]
 path = "manifest.json"
-sha256 = "6f39cdf9a5135555b013aee3bf75c5f12f4a615046a6db4d4fc521af4e4144c8"
-url = "repo://laya/models/laya-smart-home/7b695ba8/manifest.json"
+sha256 = "75bc596eb7448708167e079d9a26136176622ffbcfbee2005b0a167402a16f8a"
+url = "repo://laya/models/laya-smart-home/e8254243/manifest.json"
 
 [[artifacts.files]]
 path = "npu/act_head.npz"
 sha256 = "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/act_head.npz"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/act_head.npz"
 
 [[artifacts.files]]
 path = "npu/export.json"
-sha256 = "dd3cafeb457167fc90f2d0f59db9486c061fdb359375d1dfe36e7bfb017fe712"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/export.json"
+sha256 = "612a17009d2aba2bfcc9387f2c5e4fdc05c42b4ce2adbaff987b7ed2ad341d10"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/export.json"
 
 [[artifacts.files]]
 path = "npu/hidden_l128.rknn"
-sha256 = "a2dbb0f2c5e892c735b58657005572006b5f34e6707345980cfd18fa75ef3e2d"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l128.rknn"
+sha256 = "c763ffab53b9fc8b6e9894d50f7aabe1a36d8f99bd40b95a4d922d72b0be2870"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/hidden_l128.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l256.rknn"
-sha256 = "91928c2457ba85286aec1b75f9635c77c448734d9d444d8b225eba20fc1bdf8e"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l256.rknn"
+sha256 = "7fadff0a2150217ed9f82f70fdc87f1db90d9a0c651256058e89b05d0c99f490"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/hidden_l256.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l384.rknn"
-sha256 = "27b9c39e293a423f52d774e3c6e435d38671afb804c8284034f44d7b12102d61"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l384.rknn"
+sha256 = "43dfbad214e7b86fec43a99e067a53c810a38fdcef67e77a1dd127c33c3c5bb4"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/hidden_l384.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l512.rknn"
-sha256 = "4b9965af6f28fd484e85622b6fd0febce40cdc97ced280c67d0a0f7678f34643"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/hidden_l512.rknn"
+sha256 = "91a2eca7af0fd596b59b515474c9fcf23275c543321ba85cc7ed50b8e2e9a6d2"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/hidden_l512.rknn"
 
 [[artifacts.files]]
 path = "npu/scorer.npz"
-sha256 = "9ca20aec34478e95ba392b62a6e3ca79513ba4155869f186d183b98ee0c07715"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/scorer.npz"
+sha256 = "1bf125a92682911add126e5620f9aa49a1b967018e19c083c262bfa9ce401724"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/scorer.npz"
 
 [[artifacts.files]]
 path = "npu/tok_emb_fp16.npy"
 sha256 = "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/tok_emb_fp16.npy"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/tok_emb_fp16.npy"
 
 [[artifacts.files]]
 path = "npu/type_emb.npy"
-sha256 = "4e1d1938fc94299fb41a651600588cd227f01bcb5b1db5d64969a79333c3fb75"
-url = "repo://laya/models/laya-smart-home/7b695ba8/npu/type_emb.npy"
+sha256 = "d5112eba3678dc06c9d62d11c537fe08297b72e733d5b100a70b32f910ce5afd"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/type_emb.npy"
 
 [[artifacts.files]]
 path = "torch/encoder/config.json"
 sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
-url = "repo://laya/models/laya-smart-home/7b695ba8/torch/encoder/config.json"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/encoder/config.json"
 
 [[artifacts.files]]
 path = "torch/rl_agent_config.json"
-sha256 = "15f04f0753ce226e90ff49762b1f29160e5cfd7af1ee5efe344a3ad57276f7a9"
-url = "repo://laya/models/laya-smart-home/7b695ba8/torch/rl_agent_config.json"
+sha256 = "e8bb13def12bc0647cc596326e4d46dbc16b7f253b28c8aa7437b32e852ea208"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/rl_agent_config.json"
 
 [[artifacts.files]]
 path = "torch/tokenizer/tokenizer.json"
 sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
-url = "repo://laya/models/laya-smart-home/7b695ba8/torch/tokenizer/tokenizer.json"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/tokenizer/tokenizer.json"
 
 [[artifacts.files]]
 path = "torch/tokenizer/tokenizer_config.json"
 sha256 = "e8e6a37c189f9dd23976b86b3e1ddb6928472e9f87c94103a1aaff311f45f090"
-url = "repo://laya/models/laya-smart-home/7b695ba8/torch/tokenizer/tokenizer_config.json"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/tokenizer/tokenizer_config.json"
 
 # The companion / role-team participation model is a service of its own, not a second route on the one
 # above: its own unit, port, capability and pinned weights, and its own table in laya/deploy/services.toml

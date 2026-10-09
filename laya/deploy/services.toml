@@ -17,13 +17,13 @@ schema_version = 1
 [defaults]
 host = "127.0.0.1"
 
-# The smart-home interpreter (/v1/systemone): r14's single-sentence questions plus the pick / follow
-# continuation questions (models/laya-smart-home/7b695ba8/continuation.json).
+# Smart-home c10: single-sentence and bounded-context questions in one request.
+# RK3588 validation: evals/c10-npu-20261009; retain the prior c4 release for rollback.
 [smart_home]
 port = 8771
 
 [smart_home.rknn]
-model_dir = "/var/lib/eidolon/models/laya-smart-home-c4-rknn-7b695ba8"
+model_dir = "/var/lib/eidolon/models/laya-smart-home-c10-rknn-e8254243"
 # NPU cores 1 and 2; core 0 is the participation service's, so neither queues behind the other.
 # A bucket on two cores is loaded once and shared (rknn_dup_context): the NPU address space is
 # board-wide, about 14 Laya graphs. Measured p50 / p95 454 / 476 ms on cores 1+2 (participation
@@ -35,7 +35,7 @@ speculative = true
 max_pending = 1
 
 [smart_home.torch]
-model_dir = "models/laya-smart-home/7b695ba8"
+model_dir = "models/laya-smart-home/e8254243"
 device = "auto"
 
 # Companion / role-team participation decisions (/v1/participation/decide, SDK participation v2).
