@@ -1,0 +1,9 @@
+{
+  "revision": "e8254243",
+  "precision": "float16",
+  "new_bucket": 160,
+  "rknn_sha256": "591f6cf439e673f6c94c2630b65fd5b5cbc3e591f8747ad6420051cc6480de45",
+  "onnx_sha256": "927f8b89f63b68109e961333d98fdd6910d3caf81bf5dfc70266480080f57299",
+  "board_path": "/tmp/laya-efficiency-20261009/hidden_l160.rknn",
+  "production_changed": false
+}

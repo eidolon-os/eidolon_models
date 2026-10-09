@@ -1,0 +1,7 @@
+{
+  "laya/evals/c10-efficiency-20261009/bench.py": "be027efefd71b6b8a74682d870d1db0042faa929e6d5c3daf42c714d0ed43748",
+  "laya/evals/c10-efficiency-20261009/export160.py": "c6c3cca1f89f049218fc074e86a0f9bea36dd7ec38dbbe00381d8998fa429802",
+  "laya/evals/c10-npu-20261009/requests.jsonl": "2c65988ff99ffcdffcf1675473b16585bd0c0ac0c811c53bd9cfc25651dbd04f",
+  "laya/src/eidolon_models_laya/backends.py": "07ebdd5e833d57e3a1ec349c66887c5ae9457b071ff7b65192217082b9506dcc",
+  "laya/src/eidolon_models_laya/engine.py": "c07173dd40c2b8cc166e8ba099ff99316f4204a5946155dc4d68775ae6db4be2"
+}

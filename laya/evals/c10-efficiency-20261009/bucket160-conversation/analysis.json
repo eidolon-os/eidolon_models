@@ -1,0 +1,27 @@
+{
+  "pairs": 60,
+  "question_pairs": 288,
+  "choice_differences": [],
+  "max_probability_difference": 0.003599999999999992,
+  "model_first_pairs": 60,
+  "model_first_decision_differences": [],
+  "legacy_decision_differences": [],
+  "by_set": {
+    "conversation": {
+      "baseline": {
+        "n": 60,
+        "mean": 707.3836815000353,
+        "p50": 718.633365000187,
+        "p95": 762.2413850003795,
+        "max": 960.4911559999891
+      },
+      "measured": {
+        "n": 60,
+        "mean": 650.9770829165822,
+        "p50": 664.7321399996144,
+        "p95": 722.4629849997655,
+        "max": 844.7687259995291
+      }
+    }
+  }
+}

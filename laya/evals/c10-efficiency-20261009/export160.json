@@ -1,0 +1,24 @@
+{
+ "source_revision": "e8254243",
+ "buckets": [
+  160
+ ],
+ "opset": 17,
+ "split": "cpu: tok_emb_fp16 + type_emb | npu: hidden_l<L>.onnx | cpu: scorer.npz on h[markers], act_head.npz on h[0]",
+ "files": {
+  "act_head.npz": "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98",
+  "hidden_l160.onnx": "927f8b89f63b68109e961333d98fdd6910d3caf81bf5dfc70266480080f57299",
+  "scorer.npz": "1bf125a92682911add126e5620f9aa49a1b967018e19c083c262bfa9ce401724",
+  "tok_emb_fp16.npy": "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d",
+  "type_emb.npy": "d5112eba3678dc06c9d62d11c537fe08297b72e733d5b100a70b32f910ce5afd"
+ },
+ "parity": {
+  "l160": {
+   "items": 12,
+   "max_abs_logit_diff": 4.4756464608219915e-05
+  }
+ },
+ "torch": "2.14.0",
+ "onnxruntime": "1.30.0",
+ "exported_at": "2026-10-09T15:19:54+00:00"
+}
