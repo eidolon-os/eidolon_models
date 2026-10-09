@@ -1,0 +1,25 @@
+{
+  "descriptor": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/release.json",
+  "next": "rerun with --apply to restore this exact snapshot",
+  "outcome": "planned",
+  "plan": {
+    "destructive": "reversible",
+    "host_id": "eidolon-opi5max",
+    "operation": "rollback",
+    "requires_flags": [],
+    "steps": [
+      {
+        "description": "restore one exact release snapshot",
+        "id": "restore"
+      }
+    ],
+    "touches": [
+      "code",
+      "lifecycle"
+    ]
+  },
+  "release_id": "rk3588-laya-c10-20261009-1",
+  "snapshot": "/var/lib/eidolon/deployments/rk3588-laya-c10-20261009-1-11e5b7a2c8e341398c19fb6cad832e08",
+  "status": "rollback_planned",
+  "steps": []
+}

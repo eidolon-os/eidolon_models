@@ -1,0 +1,1499 @@
+{
+  "local": {
+    "install_input_contract": {
+      "host": {
+        "absent": [],
+        "added": {},
+        "added_files": [],
+        "applied": false,
+        "missing": {},
+        "missing_files": [],
+        "redaction": "credential values are never returned",
+        "relationships": {
+          "compared": 0,
+          "declared": 0,
+          "mismatched": [],
+          "redaction": "credential values are compared on this Host and never returned",
+          "status": "not_declared",
+          "unchecked": []
+        },
+        "status": "already_current"
+      }
+    },
+    "install_prerequisites_checked": false,
+    "installed_identity": {
+      "authority": {
+        "contract_version": 1,
+        "owner_domain_generation": 3,
+        "owner_domain_id": "owner-f774cf8e1b667eb0ca7b",
+        "state_id": "authority-state_cVqyDQNNLzncr5yxGqXnuWyD0MhjyKs3"
+      },
+      "descriptor_uri": "https://eidolon-hub-f89c0ecca5d0070a7989.local:9443/api/device-onboarding/v1/descriptor",
+      "host_id": "ehost-f89c0ecca5d0070a7989",
+      "preserved_files": {
+        "authority-bootstrap.json": "8610eb0a146d9b92f09f35b12081caefbaec56d645719d8ad02544fdcf3403f0",
+        "authority-signing-certificate.pem": "fc939b6d2052c194b42a269212ec6f4fa45e58ab29ecc3cb51e69f7d16fdd1e9",
+        "channel.env": "1f78b1cf2b8828b947498359f9ca2441f46dfd6e7fbae20031a3f156c762aaeb",
+        "factory_setup_code": "6fc93e5e63c2563d68ff6f5e4df3fdadac6bd0636224b38ee13dd5b7d4d96405",
+        "host_identity.ed25519": "0835b4284d8985722abcab8f55149109d8473c9efc381e1b5a79ccae4b36af28",
+        "hub.crt": "bcd463234337c4d08c5f118f0d8d84ecc82dcbd55bbbd26bfb567ddf9c6814d7",
+        "hub.key": "09f2ed0d558e2d184e47fd5aa8de8b58650c61db409664641073d6e5b15819f1",
+        "local-api.env": "0e953e440782ad3c84da5fb59947debeed03bac9f7cf645c3a76f27a85bb119b",
+        "owner-domain-descriptor.json": "37cdae99307d7400060291de7524dfc1a0bc38ab72fbe455470d715891ba5f5c",
+        "owner-domain-root-ca.pem": "6ff4326aef93a449a4fa2cf41f526c20de301a0ed53ef1afb24763d09ded12bf"
+      },
+      "status": "observed"
+    },
+    "link": {
+      "endpoint": "169.254.192.66 (wired via en7)",
+      "hostname": "eidolon-opi5max.local",
+      "status": "wired"
+    },
+    "local_uv": "/Users/manson/ai/eidolon/eidolon_ops/.eidolon-ops/toolchain/uv-0.11.15/uv",
+    "local_uv_version": "uv 0.11.15 (3cffe97c2 2026-05-18 aarch64-apple-darwin)",
+    "product_settings_contract": {
+      "refreshed": [],
+      "sources": {
+        "eidolon_agent": "fc9de670356d518eff9213eb0c4caf8147819822",
+        "eidolon_channel": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1",
+        "eidolon_memory": "adcbf2da5a7d0403e0f26d9787fc9fea2bd3ed22"
+      },
+      "status": "exact"
+    },
+    "python_resolver": {
+      "concurrent_downloads": 8,
+      "http_retries": 8,
+      "http_timeout_seconds": 120,
+      "index_url": "https://pypi.org/simple",
+      "locked": true
+    },
+    "release_cli": "/Users/manson/ai/eidolon/eidolon_kernel/.venv/bin/eidolon-release",
+    "release_matrix": {
+      "contract": "fhs-opt-host-profile-v1",
+      "settings": {
+        "/etc/eidolon/generated/hub.yaml": {
+          "legacy_template": false,
+          "path": "config/settings.yaml",
+          "revision": "83cf4bdd1e60216851332d54d14e646adbd47793",
+          "sha256": "43e3b021dce4db206017e516696f34b217487871d05eb35254c8f5b9e20b6396",
+          "source_id": "eidolon_hub"
+        }
+      },
+      "status": "compatible",
+      "units": {
+        "eidolon-admin.service": {
+          "path": "deploy/systemd/eidolon-admin.service",
+          "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+          "sha256": "bdcf0fb96e1c30a670c8c48bf8ce4d827d1e0f5491b6f05dbc1c73de37d43843",
+          "source_id": "eidolon_admin"
+        },
+        "eidolon-agent.service": {
+          "path": "deploy/systemd/eidolon-agent.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "3ec0d8717495c27ebd494a542966b7bfba8c5601cf455deec93b9b9c88ce00d8",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-bootstrapd.service": {
+          "path": "deploy/systemd/eidolon-bootstrapd.service",
+          "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+          "sha256": "755a0474438e4ad19054159f20ce044a0c6ff6682197c6d745e8052738555405",
+          "source_id": "eidolon_admin"
+        },
+        "eidolon-channel-provider.service": {
+          "path": "deploy/systemd/eidolon-channel-provider.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "aad6ae72b2852cadd5c0c94895710b2e7418f9380775353e6a5cd34d9ceb9940",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-channel.service": {
+          "path": "deploy/systemd/eidolon-channel.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "6cee0064f03f5c777b7bdbbb3baf0403a6a66b5309bbc85967272b5dba28fb5d",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-data-workspace.service": {
+          "path": "deploy/systemd/eidolon-data-workspace.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "283c10e60e3d1ebe8cb26b8a7e8b61c6cd537ab181194c79efef5c7f86578877",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-data.service": {
+          "path": "deploy/systemd/eidolon-data.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "91da3d5969ab840c802a3489894f53f48a3e629f3e548753b6a89795ab4d6faa",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-hub.service": {
+          "path": "deploy/systemd/eidolon-hub.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "aafdf0dc6f14d73fcb8b994b71b2a9ddd2dc1c40bd83a4baeb66a5dffea1384d",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-kernel.service": {
+          "path": "deploy/systemd/eidolon-kernel.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "bae0d4d9572a81baf99815d9772e72131c9fca916a8112236fc661136c723f82",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-laya-participation.service": {
+          "path": "deploy/systemd/eidolon-laya-participation.service",
+          "revision": "882fc1fbaa42142277231808837386792db7d2f9",
+          "sha256": "d0b2c07f6103b2c925bf64c3de5626a381e37b55d5b3a0a05e771eb99339b99e",
+          "source_id": "eidolon_models"
+        },
+        "eidolon-laya.service": {
+          "path": "deploy/systemd/eidolon-laya.service",
+          "revision": "882fc1fbaa42142277231808837386792db7d2f9",
+          "sha256": "98d2bf5f5b150cf12b562e4faebc0637a19d52122980d108832e41e502a3db85",
+          "source_id": "eidolon_models"
+        },
+        "eidolon-lifecycle-workflow.service": {
+          "path": "deploy/systemd/eidolon-lifecycle-workflow.service",
+          "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+          "sha256": "ffca3fc1464c70e748ffa633f7f03c39476d2cad7a3f18d37ef29efbb699c8c8",
+          "source_id": "eidolon_admin"
+        },
+        "eidolon-livekit.service": {
+          "path": "deploy/systemd/eidolon-livekit.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "891171427edd91ea8fb8f28f242906844381726f9a2e94bad58a5bca796bfa77",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-local-api.service": {
+          "path": "deploy/systemd/eidolon-local-api.service",
+          "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+          "sha256": "69de495f6717e753989138ac8de981633e7376932eba06c96e7f981715dbbd08",
+          "source_id": "eidolon_admin"
+        },
+        "eidolon-memory-discovery.service": {
+          "path": "deploy/systemd/eidolon-memory-discovery.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "6116d56287831d92c35e8053ca316a1330ecb2eab7b8634d3c20db4fb747734f",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-memory-embedder.service": {
+          "path": "deploy/systemd/eidolon-memory-embedder.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "d2dffdb98d2ebaa9d6a628d49ce1c28fb0dac29e2ee7cc6894acc58e29b20726",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-memory-supervisor.service": {
+          "path": "deploy/systemd/eidolon-memory-supervisor.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "26f3f6752c945516fae555491ee2f37888b904b1bc07f1b3a643e8af82fd0815",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-nats.service": {
+          "path": "deploy/systemd/eidolon-nats.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "6929af33151a0c099fcaf2335baaf3ac785833ebef28010936110699eca1b06c",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-unit-applier.service": {
+          "path": "deploy/systemd/eidolon-unit-applier.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "c8f4f3554be866865ded2cb9f73b8c9a2217eb782a829787a3770adc4850aae4",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolon-unit-applier.socket": {
+          "path": "deploy/systemd/eidolon-unit-applier.socket",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "fee7fe98937f50c16b85c1fdcf1450ae3a0d934931198db20bc676b60618edfc",
+          "source_id": "eidolon_kernel"
+        },
+        "eidolond.service": {
+          "path": "deploy/systemd/eidolond.service",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "sha256": "0fde742f9a6185244a84f7322640f5490c8e56136849bd56bf07cbb352493b94",
+          "source_id": "eidolon_kernel"
+        }
+      }
+    },
+    "release_tool_contract": {
+      "activator_relative_path": ".release/bin/eidolon-release",
+      "bundle_schema_version": 3,
+      "cli_contract_version": 1,
+      "descriptor_schema_version": 2,
+      "interpreter_relative_path": ".release/bin/python",
+      "package_digest": "7b81f473c8b2d89507343bdb67f747569bbc56aa6434bd9828976fb0e2410dec",
+      "snapshot_schema_version": 2,
+      "tool": "eidolon-release"
+    },
+    "source_advance": {
+      "commits": {
+        "eidolon_agent": 1,
+        "eidolon_channel": 2,
+        "eidolon_hub": 1,
+        "eidolon_models": 5,
+        "eidolon_sdk": 1
+      },
+      "note": "these sources advanced since release rk3588-memory-policy-20261008-2, the last one this Host activated. This combination has not run on it before.",
+      "since": "rk3588-memory-policy-20261008-2",
+      "status": "advanced"
+    },
+    "source_provenance": {
+      "eidolon_admin": {
+        "branch": "main",
+        "dirty": false,
+        "head": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+        "pinned": true,
+        "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7"
+      },
+      "eidolon_agent": {
+        "branch": "main",
+        "dirty": true,
+        "head": "fc9de670356d518eff9213eb0c4caf8147819822",
+        "pinned": true,
+        "revision": "fc9de670356d518eff9213eb0c4caf8147819822"
+      },
+      "eidolon_channel": {
+        "branch": "main",
+        "dirty": true,
+        "head": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1",
+        "pinned": true,
+        "revision": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1"
+      },
+      "eidolon_data": {
+        "branch": "main",
+        "dirty": false,
+        "head": "9e25d057abc37b6b85f88d4cf2c57eed51796048",
+        "pinned": true,
+        "revision": "9e25d057abc37b6b85f88d4cf2c57eed51796048"
+      },
+      "eidolon_hub": {
+        "branch": "main",
+        "dirty": false,
+        "head": "83cf4bdd1e60216851332d54d14e646adbd47793",
+        "pinned": true,
+        "revision": "83cf4bdd1e60216851332d54d14e646adbd47793"
+      },
+      "eidolon_kernel": {
+        "branch": "main",
+        "dirty": false,
+        "head": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+        "pinned": true,
+        "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6"
+      },
+      "eidolon_memory": {
+        "branch": "main",
+        "dirty": false,
+        "head": "ec9cdc1248452328190495dfd25b47b1c89a568d",
+        "pinned": true,
+        "revision": "adcbf2da5a7d0403e0f26d9787fc9fea2bd3ed22"
+      },
+      "eidolon_models": {
+        "branch": "main",
+        "dirty": true,
+        "head": "882fc1fbaa42142277231808837386792db7d2f9",
+        "pinned": true,
+        "revision": "882fc1fbaa42142277231808837386792db7d2f9"
+      },
+      "eidolon_sdk": {
+        "branch": "main",
+        "dirty": true,
+        "head": "acf5ce62b546262efe59122992be8c681845dcf9",
+        "pinned": true,
+        "revision": "acf5ce62b546262efe59122992be8c681845dcf9"
+      }
+    },
+    "source_selection": {
+      "mode": "reproduction",
+      "note": "reproduction deployment: an explicit commit was given for 9 of 9 sources, so this release is not what the repositories currently hold (eidolon_admin ships 81e09e64e6e2, 0 behind HEAD, eidolon_agent ships fc9de670356d, 0 behind HEAD, eidolon_channel ships ba5f8cf659ed, 0 behind HEAD, eidolon_data ships 9e25d057abc3, 0 behind HEAD, eidolon_hub ships 83cf4bdd1e60, 0 behind HEAD, eidolon_kernel ships 3ba9616d6041, 0 behind HEAD, eidolon_memory ships adcbf2da5a7d, 2 behind HEAD, eidolon_models ships 882fc1fbaa42, 0 behind HEAD, eidolon_sdk ships acf5ce62b546, 0 behind HEAD). Nothing was written back to any file; drop the pin to ship HEAD again.",
+      "reproduction": {
+        "eidolon_admin": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+          "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7"
+        },
+        "eidolon_agent": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "fc9de670356d518eff9213eb0c4caf8147819822",
+          "revision": "fc9de670356d518eff9213eb0c4caf8147819822"
+        },
+        "eidolon_channel": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1",
+          "revision": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1"
+        },
+        "eidolon_data": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "9e25d057abc37b6b85f88d4cf2c57eed51796048",
+          "revision": "9e25d057abc37b6b85f88d4cf2c57eed51796048"
+        },
+        "eidolon_hub": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "83cf4bdd1e60216851332d54d14e646adbd47793",
+          "revision": "83cf4bdd1e60216851332d54d14e646adbd47793"
+        },
+        "eidolon_kernel": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+          "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6"
+        },
+        "eidolon_memory": {
+          "ahead_of_head": 0,
+          "behind_head": 2,
+          "head": "ec9cdc1248452328190495dfd25b47b1c89a568d",
+          "revision": "adcbf2da5a7d0403e0f26d9787fc9fea2bd3ed22"
+        },
+        "eidolon_models": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "882fc1fbaa42142277231808837386792db7d2f9",
+          "revision": "882fc1fbaa42142277231808837386792db7d2f9"
+        },
+        "eidolon_sdk": {
+          "ahead_of_head": 0,
+          "behind_head": 0,
+          "head": "acf5ce62b546262efe59122992be8c681845dcf9",
+          "revision": "acf5ce62b546262efe59122992be8c681845dcf9"
+        }
+      }
+    },
+    "sources": {
+      "eidolon_admin": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+      "eidolon_agent": "fc9de670356d518eff9213eb0c4caf8147819822",
+      "eidolon_channel": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1",
+      "eidolon_data": "9e25d057abc37b6b85f88d4cf2c57eed51796048",
+      "eidolon_hub": "83cf4bdd1e60216851332d54d14e646adbd47793",
+      "eidolon_kernel": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+      "eidolon_memory": "adcbf2da5a7d0403e0f26d9787fc9fea2bd3ed22",
+      "eidolon_models": "882fc1fbaa42142277231808837386792db7d2f9",
+      "eidolon_sdk": "acf5ce62b546262efe59122992be8c681845dcf9"
+    },
+    "ssh": {
+      "batch_mode": true,
+      "port": 22,
+      "strict_host_key_checking": true,
+      "target": "eidolon-opi5max@eidolon-opi5max.local"
+    }
+  },
+  "outcome": "applied",
+  "phases": [
+    {
+      "phase": "bundle",
+      "result": {
+        "manifest": "/Users/manson/eidolon/release-bundles/rk3588-laya-c10-20261009-1/bundle.json",
+        "sha256": "cf1fe7dad3e2f086bf8f99b0efd43b47b4fb886a0d8253ca6392a4e0891c42b4",
+        "status": "reused_validated_bundle"
+      }
+    },
+    {
+      "phase": "release_reclaim_prepare",
+      "result": {
+        "active_release_ids": [
+          "rk3588-memory-policy-20261008-2"
+        ],
+        "active_targets": {
+          "eidolon_admin": {
+            "link": "/opt/eidolon/current/eidolon_admin",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_admin"
+          },
+          "eidolon_agent": {
+            "link": "/opt/eidolon/current/eidolon_agent",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_agent"
+          },
+          "eidolon_channel": {
+            "link": "/opt/eidolon/current/eidolon_channel",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_channel"
+          },
+          "eidolon_data": {
+            "link": "/opt/eidolon/current/eidolon_data",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_data"
+          },
+          "eidolon_hub": {
+            "link": "/opt/eidolon/current/eidolon_hub",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_hub"
+          },
+          "eidolon_kernel": {
+            "link": "/opt/eidolon/current/eidolon_kernel",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_kernel"
+          },
+          "eidolon_memory": {
+            "link": "/opt/eidolon/current/eidolon_memory",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_memory"
+          },
+          "eidolon_models": {
+            "link": "/opt/eidolon/current/eidolon_models",
+            "release_id": "rk3588-memory-policy-20261008-2",
+            "target": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_models"
+          }
+        },
+        "bytes_reclaimed": 0,
+        "candidate_release_id": "rk3588-laya-c10-20261009-1",
+        "capacity": {
+          "effective_required_bytes": 0,
+          "free_bytes_after": 149189840896,
+          "free_bytes_before": 149189840896,
+          "path": "/opt/eidolon/releases",
+          "requested_bytes": 12807699810,
+          "reserve_bytes": 1073741824,
+          "sufficient": true,
+          "total_bytes": 250903556096
+        },
+        "phase": "prepare",
+        "protected_release_ids": [
+          "rk3588-laya-c10-20261009-1",
+          "rk3588-memory-policy-20261008-2"
+        ],
+        "removed": {
+          "releases": [],
+          "secrets": [],
+          "uploads": []
+        },
+        "retained_running_release_ids": [],
+        "running_releases": {
+          "rk3588-memory-policy-20261008-2": [
+            {
+              "pid": 44262,
+              "unit": "eidolon-admin.service"
+            },
+            {
+              "pid": 44781,
+              "unit": "eidolon-agent.service"
+            },
+            {
+              "pid": 44252,
+              "unit": "eidolon-bootstrapd.service"
+            },
+            {
+              "pid": 44345,
+              "unit": "eidolon-channel-provider.service"
+            },
+            {
+              "pid": 44911,
+              "unit": "eidolon-data-workspace.service"
+            },
+            {
+              "pid": 44537,
+              "unit": "eidolon-data.service"
+            },
+            {
+              "pid": 44346,
+              "unit": "eidolon-hub.service"
+            },
+            {
+              "pid": 44322,
+              "unit": "eidolon-kernel.service"
+            },
+            {
+              "pid": 44377,
+              "unit": "eidolon-laya-participation.service"
+            },
+            {
+              "pid": 44361,
+              "unit": "eidolon-laya.service"
+            },
+            {
+              "pid": 44413,
+              "unit": "eidolon-lifecycle-workflow.service"
+            },
+            {
+              "pid": 44540,
+              "unit": "eidolon-local-api.service"
+            },
+            {
+              "pid": 44571,
+              "unit": "eidolon-memory-discovery.service"
+            },
+            {
+              "pid": 44296,
+              "unit": "eidolon-memory-embedder.service"
+            },
+            {
+              "pid": 44732,
+              "unit": "eidolon-memory-supervisor.service"
+            },
+            {
+              "pid": 44934,
+              "unit": "eidolon-memory-supervisor.service"
+            },
+            {
+              "pid": 44269,
+              "unit": "eidolon-unit-applier.service"
+            },
+            {
+              "pid": 44258,
+              "unit": "eidolond.service"
+            }
+          ]
+        },
+        "scope": {
+          "current": "/opt/eidolon/current",
+          "excluded": [
+            "/var/lib/eidolon",
+            "/var/lib/eidolon-bootstrap",
+            "/var/lib/eidolon-lifecycle",
+            "/var/log/eidolon"
+          ],
+          "releases": "/opt/eidolon/releases",
+          "staging": "/var/tmp"
+        },
+        "status": "ready"
+      }
+    },
+    {
+      "phase": "upload_guard",
+      "result": {
+        "path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1",
+        "status": "already_prepared",
+        "transfer_id": "cf1fe7dad3e2f086bf8f99b0efd43b47b4fb886a0d8253ca6392a4e0891c42b4"
+      }
+    },
+    {
+      "phase": "dry_run",
+      "result": {
+        "cutover_mode": "reversible",
+        "database_migrations": [],
+        "error": null,
+        "persistent_state_mutated": false,
+        "previous_targets": {
+          "eidolon_admin": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_admin",
+          "eidolon_agent": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_agent",
+          "eidolon_channel": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_channel",
+          "eidolon_data": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_data",
+          "eidolon_hub": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_hub",
+          "eidolon_kernel": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_kernel",
+          "eidolon_memory": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_memory",
+          "eidolon_models": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_models"
+        },
+        "release_id": "rk3588-laya-c10-20261009-1",
+        "status": "dry_run",
+        "transaction_id": null
+      }
+    },
+    {
+      "phase": "service_identities",
+      "result": {
+        "owner_trust_group": "eidolon-owner-trust-readers",
+        "owner_trust_readers": [
+          "eidolon",
+          "eidolon-local-api",
+          "eidolon-lifecycle"
+        ],
+        "persistent_socket_group_members": [],
+        "socket_group": "eidolon-lifecycle-client",
+        "status": "service_identities_ready",
+        "uids": {
+          "eidolon": 997,
+          "eidolon-bootstrap": 994,
+          "eidolon-lifecycle": 992,
+          "eidolon-local-api": 993
+        }
+      }
+    },
+    {
+      "phase": "host_cutover_snapshot",
+      "result": {
+        "authority": {
+          "contract_version": 1,
+          "owner_domain_generation": 3,
+          "owner_domain_id": "owner-f774cf8e1b667eb0ca7b",
+          "state_id": "authority-state_cVqyDQNNLzncr5yxGqXnuWyD0MhjyKs3"
+        },
+        "cutover_mode": "reversible",
+        "host_snapshot": "/var/lib/eidolon/deployments/rk3588-laya-c10-20261009-1-host-98835fa5be9f4a78a9ff408bbaf98e67",
+        "host_transaction_id": "98835fa5be9f4a78a9ff408bbaf98e67",
+        "previous_targets": {
+          "eidolon_admin": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_admin",
+          "eidolon_agent": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_agent",
+          "eidolon_channel": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_channel",
+          "eidolon_data": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_data",
+          "eidolon_hub": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_hub",
+          "eidolon_kernel": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_kernel",
+          "eidolon_memory": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_memory"
+        },
+        "release_id": "rk3588-laya-c10-20261009-1",
+        "status": "host_cutover_snapshotted"
+      }
+    },
+    {
+      "phase": "host_application",
+      "result": {
+        "changed": [],
+        "removed": [],
+        "status": "refreshed"
+      }
+    },
+    {
+      "phase": "activate",
+      "result": {
+        "cutover_mode": "reversible",
+        "database_migrations": [],
+        "error": null,
+        "persistent_state_mutated": false,
+        "previous_targets": {
+          "eidolon_admin": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_admin",
+          "eidolon_agent": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_agent",
+          "eidolon_channel": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_channel",
+          "eidolon_data": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_data",
+          "eidolon_hub": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_hub",
+          "eidolon_kernel": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_kernel",
+          "eidolon_memory": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_memory",
+          "eidolon_models": "/opt/eidolon/releases/rk3588-memory-policy-20261008-2/eidolon_models"
+        },
+        "release_id": "rk3588-laya-c10-20261009-1",
+        "status": "activated",
+        "transaction_id": "11e5b7a2c8e341398c19fb6cad832e08"
+      }
+    },
+    {
+      "phase": "converge_running_release",
+      "result": {
+        "release_id": "rk3588-laya-c10-20261009-1",
+        "restarted": [],
+        "running_releases": {
+          "rk3588-laya-c10-20261009-1": [
+            {
+              "pid": 716293,
+              "unit": "eidolon-admin.service"
+            },
+            {
+              "pid": 716728,
+              "unit": "eidolon-agent.service"
+            },
+            {
+              "pid": 716280,
+              "unit": "eidolon-bootstrapd.service"
+            },
+            {
+              "pid": 716377,
+              "unit": "eidolon-channel-provider.service"
+            },
+            {
+              "pid": 716755,
+              "unit": "eidolon-data-workspace.service"
+            },
+            {
+              "pid": 716552,
+              "unit": "eidolon-data.service"
+            },
+            {
+              "pid": 716378,
+              "unit": "eidolon-hub.service"
+            },
+            {
+              "pid": 716354,
+              "unit": "eidolon-kernel.service"
+            },
+            {
+              "pid": 716410,
+              "unit": "eidolon-laya-participation.service"
+            },
+            {
+              "pid": 716393,
+              "unit": "eidolon-laya.service"
+            },
+            {
+              "pid": 716444,
+              "unit": "eidolon-lifecycle-workflow.service"
+            },
+            {
+              "pid": 716571,
+              "unit": "eidolon-local-api.service"
+            },
+            {
+              "pid": 716605,
+              "unit": "eidolon-memory-discovery.service"
+            },
+            {
+              "pid": 716328,
+              "unit": "eidolon-memory-embedder.service"
+            },
+            {
+              "pid": 716593,
+              "unit": "eidolon-memory-supervisor.service"
+            },
+            {
+              "pid": 716680,
+              "unit": "eidolon-memory-supervisor.service"
+            },
+            {
+              "pid": 716300,
+              "unit": "eidolon-unit-applier.service"
+            },
+            {
+              "pid": 716289,
+              "unit": "eidolond.service"
+            }
+          ]
+        },
+        "status": "converged"
+      }
+    },
+    {
+      "phase": "doctor",
+      "result": {
+        "active_targets": {
+          "eidolon_admin": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_admin",
+          "eidolon_agent": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_agent",
+          "eidolon_channel": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_channel",
+          "eidolon_data": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_data",
+          "eidolon_hub": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_hub",
+          "eidolon_kernel": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_kernel",
+          "eidolon_memory": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_memory",
+          "eidolon_models": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_models"
+        },
+        "readiness_checks": [
+          "eidolond",
+          "data",
+          "data-workspace",
+          "hub",
+          "kernel",
+          "admin",
+          "local-api",
+          "lifecycle-workflow",
+          "nats",
+          "livekit",
+          "memory-embedder",
+          "memory",
+          "agent",
+          "channel-provider",
+          "channel",
+          "laya",
+          "laya-participation"
+        ],
+        "release_id": "rk3588-laya-c10-20261009-1",
+        "status": "healthy",
+        "units": [
+          "eidolon-bootstrapd.service",
+          "eidolon-unit-applier.socket",
+          "eidolond.service",
+          "eidolon-data.service",
+          "eidolon-data-workspace.service",
+          "eidolon-hub.service",
+          "eidolon-kernel.service",
+          "eidolon-local-api.service",
+          "eidolon-lifecycle-workflow.service",
+          "eidolon-admin.service",
+          "eidolon-nats.service",
+          "eidolon-livekit.service",
+          "eidolon-memory-embedder.service",
+          "eidolon-memory-supervisor.service",
+          "eidolon-memory-discovery.service",
+          "eidolon-agent.service",
+          "eidolon-channel-provider.service",
+          "eidolon-channel.service"
+        ]
+      }
+    },
+    {
+      "phase": "app_ready",
+      "result": {
+        "channel_worker": {
+          "agent_name": "eidolon",
+          "dispatch_identity": true,
+          "expected_agent_name": "eidolon",
+          "healthy": true,
+          "http_status": 200,
+          "livekit_link": {
+            "healthy": true,
+            "linked_processes": [
+              717471
+            ],
+            "unit_processes": [
+              717471,
+              717825,
+              717826,
+              717969
+            ]
+          },
+          "worker_type": "JT_ROOM"
+        },
+        "checks": {
+          "backend_healthy": true,
+          "bootstrap_control_socket": true,
+          "bootstrap_preflight": true,
+          "channel_worker_dispatch_identity": true,
+          "channel_worker_healthy": true,
+          "channel_worker_livekit_link": true,
+          "claim_window_honored": true,
+          "device_removal_available": true,
+          "foundation_services": true,
+          "host_identity_material": true,
+          "host_setup_completable": true,
+          "hub_admits_devices": true,
+          "hub_descriptor_published": true,
+          "hub_lan_reachable": true,
+          "hub_mdns_service": true,
+          "hub_settings_bound": true,
+          "hub_tls_identity": true,
+          "lan_address_observed": true,
+          "lan_name_resolves": true,
+          "livekit_client_origin": true,
+          "livekit_lan_reachable": true,
+          "livekit_network_current": true,
+          "local_api_mdns_service": true,
+          "local_api_reachable": true,
+          "local_api_targets_hub": true,
+          "participation_model_ready": true
+        },
+        "files": {
+          "authority_signing_certificate": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "0:970",
+            "path": "/etc/eidolon/owner-domain/authority_signing_certificate.pem"
+          },
+          "commissioning_tls": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "994:973",
+            "path": "/var/lib/eidolon-bootstrap/commissioning_tls.pem"
+          },
+          "host_identity": {
+            "healthy": true,
+            "mode": "0600",
+            "owner": "994:973",
+            "path": "/var/lib/eidolon-bootstrap/host_identity.ed25519"
+          },
+          "hub_certificate": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "0:974",
+            "path": "/etc/eidolon/tls/hub.crt"
+          },
+          "hub_private_key": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "0:974",
+            "path": "/etc/eidolon/tls/hub.key"
+          },
+          "hub_settings": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "0:974",
+            "path": "/etc/eidolon/generated/hub.yaml"
+          },
+          "owner_descriptor": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "0:970",
+            "path": "/etc/eidolon/owner-domain/owner_domain_descriptor.json"
+          },
+          "owner_root_certificate": {
+            "healthy": true,
+            "mode": "0640",
+            "owner": "0:970",
+            "path": "/etc/eidolon/owner-domain/owner_domain_root_ca.pem"
+          }
+        },
+        "foundation": {
+          "NetworkManager.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "avahi-daemon.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "bluetooth.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          }
+        },
+        "host_id": "ehost-f89c0ecca5d0070a7989",
+        "hub_health": {
+          "status": "ok"
+        },
+        "lan_ipv4": "192.168.3.230",
+        "livekit_service": {
+          "desired": {
+            "enabled": true,
+            "revision": 1,
+            "service_id": "livekit",
+            "updated_at": "2026-09-08T06:55:14.047159Z"
+          },
+          "detail": null,
+          "endpoints": [
+            {
+              "address": "ws://127.0.0.1:7880",
+              "contract": "livekit.protocol.v1",
+              "endpoint_id": "media.livekit",
+              "operation": "system.service-endpoint",
+              "protocol": "livekit",
+              "service_id": "livekit"
+            }
+          ],
+          "network_current": true,
+          "observed_at": "2026-10-09T03:22:40.053590Z",
+          "operation": "system.service-status",
+          "required": true,
+          "runtime_state": "ready",
+          "service_id": "livekit"
+        },
+        "local_api": {
+          "ble_service_uuid": "f6a147b7-abef-57c3-973f-e3a17c6ef0ab",
+          "bootstrap_status": "running",
+          "health_status": "ok",
+          "healthy": true,
+          "host_id": "ehost-f89c0ecca5d0070a7989",
+          "tls": "loopback self-check only; App pins the BLE-advertised TLS SPKI"
+        },
+        "mdns": {
+          "definition": true,
+          "hub": [
+            "=;wlan0;IPv4;owner-f774cf8e1b667eb0ca7b;_eidolon-owner._tcp;local;eidolon-hub-f89c0ecca5d0070a7989.local;192.168.3.230;9443;\"owner_domain_descriptor_uri=https://eidolon-hub-f89c0ecca5d0070a7989.local:9443/api/device-onboarding/v1/descriptor\" \"owner_domain_id=owner-f774cf8e1b667eb0ca7b\" \"txtvers=1\""
+          ],
+          "local_api": [
+            "=;wlan0;IPv4;Eidolon\\032Local\\032API\\032on\\032eidolon-opi5max;_eidolon-local-api._tcp;local;eidolon-opi5max.local;192.168.3.230;9002;\"scheme=https\" \"contract=1\"",
+            "=;enP3p49s0;IPv4;Eidolon\\032Local\\032API\\032on\\032eidolon-opi5max;_eidolon-local-api._tcp;local;eidolon-opi5max.local;169.254.192.66;9002;\"scheme=https\" \"contract=1\"",
+            "=;lo;IPv4;Eidolon\\032Local\\032API\\032on\\032eidolon-opi5max;_eidolon-local-api._tcp;local;eidolon-opi5max.local;127.0.0.1;9002;\"scheme=https\" \"contract=1\"",
+            "=;wlan0;IPv4;Eidolon\\032Local\\032API;_eidolon-local-api._tcp;local;mansondeMacBook-Pro.local;192.168.3.40;9002;\"scheme=https\" \"contract=1\"",
+            "=;wlan0;IPv6;Eidolon\\032Local\\032API;_eidolon-local-api._tcp;local;mansondeMacBook-Pro.local;192.168.3.40;9002;\"scheme=https\" \"contract=1\"",
+            "=;enP3p49s0;IPv4;Eidolon\\032Local\\032API;_eidolon-local-api._tcp;local;mansondeMacBook-Pro.local;169.254.174.228;9002;\"scheme=https\" \"contract=1\"",
+            "=;enP3p49s0;IPv6;Eidolon\\032Local\\032API;_eidolon-local-api._tcp;local;mansondeMacBook-Pro.local;169.254.174.228;9002;\"scheme=https\" \"contract=1\""
+          ]
+        },
+        "owner_domain_id": "owner-f774cf8e1b667eb0ca7b",
+        "participation_provider": {
+          "model_version": "ae6718a4",
+          "policy_version": "participation-laya-v1/ae6718a4/min0.95",
+          "schema_version": 2,
+          "status": "ready",
+          "task": "ip_team.participation"
+        },
+        "preflight": {
+          "checks": [
+            {
+              "blocking": true,
+              "detail": "aarch64",
+              "name": "architecture",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "Armbian_community 26.11.0-trunk.33 resolute resolute",
+              "name": "os-release",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "active",
+              "name": "service:NetworkManager.service",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "active",
+              "name": "service:bluetooth.service",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "nmcli tool, version 1.54.3",
+              "name": "networkmanager-cli",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "wlan0:wifi:connected",
+              "name": "networkmanager-wifi-device",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "bluetoothctl: 5.85",
+              "name": "bluez-cli",
+              "ok": true
+            },
+            {
+              "blocking": true,
+              "detail": "Controller 40:D9:5A:B0:4D:F5 eidolon-opi5max [default]",
+              "name": "bluez-controller",
+              "ok": true
+            },
+            {
+              "blocking": false,
+              "detail": "inactive",
+              "name": "legacy-network-service:hostapd.service",
+              "ok": true
+            },
+            {
+              "blocking": false,
+              "detail": "inactive",
+              "name": "legacy-network-service:dnsmasq.service",
+              "ok": true
+            }
+          ],
+          "ok": true
+        },
+        "resolution": [
+          "192.168.3.230"
+        ],
+        "scope": "Host-side commissioning readiness only. A real phone must still verify BLE, Host proof, TLS SPKI pinning, Controller claim, Wi-Fi checkpoint and Workspace setup.",
+        "setup": {
+          "healthy": true,
+          "operation_id": "12915368-5f85-5ff3-b206-2301fb3ceda0",
+          "state": "ready"
+        },
+        "status": "app_ready",
+        "units": {
+          "eidolon-admin.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-agent.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-bootstrapd.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-channel-provider.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-channel.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-data-workspace.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-data.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-hub-ingress.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-hub.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-kernel.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-lifecycle-workflow.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-livekit.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-local-api.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-memory-discovery.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-memory-embedder.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-memory-supervisor.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-nats.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-unit-applier.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          },
+          "eidolon-unit-applier.socket": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "SubState": "running"
+          },
+          "eidolond.service": {
+            "ActiveState": "active",
+            "LoadState": "loaded",
+            "NRestarts": 0,
+            "SubState": "running"
+          }
+        },
+        "waiting": {
+          "budget_seconds": 240,
+          "exhausted": false,
+          "spent_on": {
+            "channel_worker": 0.0,
+            "channel_worker_livekit_link": 14.4
+          },
+          "spent_seconds": 14.4
+        }
+      }
+    },
+    {
+      "phase": "cutover_receipt",
+      "result": {
+        "activation_status": "activated",
+        "active_targets": {
+          "eidolon_admin": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_admin",
+          "eidolon_agent": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_agent",
+          "eidolon_channel": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_channel",
+          "eidolon_data": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_data",
+          "eidolon_hub": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_hub",
+          "eidolon_kernel": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_kernel",
+          "eidolon_memory": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_memory"
+        },
+        "authority": {
+          "contract_version": 1,
+          "owner_domain_generation": 3,
+          "owner_domain_id": "owner-f774cf8e1b667eb0ca7b",
+          "state_id": "authority-state_cVqyDQNNLzncr5yxGqXnuWyD0MhjyKs3"
+        },
+        "cutover_mode": "reversible",
+        "host_snapshot": "/var/lib/eidolon/deployments/rk3588-laya-c10-20261009-1-host-98835fa5be9f4a78a9ff408bbaf98e67",
+        "schema_migration": {
+          "database_migrations": [],
+          "state": "not_mutated"
+        },
+        "status": "cutover_recorded"
+      }
+    },
+    {
+      "phase": "release_reclaim_commit",
+      "result": {
+        "active_release_ids": [
+          "rk3588-laya-c10-20261009-1"
+        ],
+        "active_targets": {
+          "eidolon_admin": {
+            "link": "/opt/eidolon/current/eidolon_admin",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_admin"
+          },
+          "eidolon_agent": {
+            "link": "/opt/eidolon/current/eidolon_agent",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_agent"
+          },
+          "eidolon_channel": {
+            "link": "/opt/eidolon/current/eidolon_channel",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_channel"
+          },
+          "eidolon_data": {
+            "link": "/opt/eidolon/current/eidolon_data",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_data"
+          },
+          "eidolon_hub": {
+            "link": "/opt/eidolon/current/eidolon_hub",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_hub"
+          },
+          "eidolon_kernel": {
+            "link": "/opt/eidolon/current/eidolon_kernel",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_kernel"
+          },
+          "eidolon_memory": {
+            "link": "/opt/eidolon/current/eidolon_memory",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_memory"
+          },
+          "eidolon_models": {
+            "link": "/opt/eidolon/current/eidolon_models",
+            "release_id": "rk3588-laya-c10-20261009-1",
+            "target": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_models"
+          }
+        },
+        "bytes_reclaimed": 6634819663,
+        "candidate_release_id": "rk3588-laya-c10-20261009-1",
+        "capacity": {
+          "effective_required_bytes": 0,
+          "free_bytes_after": 154874310656,
+          "free_bytes_before": 149154238464,
+          "path": "/opt/eidolon/releases",
+          "requested_bytes": 0,
+          "reserve_bytes": 1073741824,
+          "sufficient": true,
+          "total_bytes": 250903556096
+        },
+        "phase": "commit",
+        "protected_release_ids": [
+          "rk3588-laya-c10-20261009-1"
+        ],
+        "removed": {
+          "releases": [
+            "/opt/eidolon/releases/rk3588-memory-policy-20261008-2"
+          ],
+          "secrets": [
+            "/var/tmp/eidolon-secrets-rk3588-laya-c10-20261009-1"
+          ],
+          "uploads": [
+            "/var/tmp/eidolon-release-rk3588-laya-c10-20261009-1"
+          ]
+        },
+        "retained_running_release_ids": [],
+        "running_releases": {
+          "rk3588-laya-c10-20261009-1": [
+            {
+              "pid": 716293,
+              "unit": "eidolon-admin.service"
+            },
+            {
+              "pid": 716728,
+              "unit": "eidolon-agent.service"
+            },
+            {
+              "pid": 716280,
+              "unit": "eidolon-bootstrapd.service"
+            },
+            {
+              "pid": 716377,
+              "unit": "eidolon-channel-provider.service"
+            },
+            {
+              "pid": 716755,
+              "unit": "eidolon-data-workspace.service"
+            },
+            {
+              "pid": 716552,
+              "unit": "eidolon-data.service"
+            },
+            {
+              "pid": 716378,
+              "unit": "eidolon-hub.service"
+            },
+            {
+              "pid": 716354,
+              "unit": "eidolon-kernel.service"
+            },
+            {
+              "pid": 716410,
+              "unit": "eidolon-laya-participation.service"
+            },
+            {
+              "pid": 716393,
+              "unit": "eidolon-laya.service"
+            },
+            {
+              "pid": 716444,
+              "unit": "eidolon-lifecycle-workflow.service"
+            },
+            {
+              "pid": 716571,
+              "unit": "eidolon-local-api.service"
+            },
+            {
+              "pid": 716605,
+              "unit": "eidolon-memory-discovery.service"
+            },
+            {
+              "pid": 716328,
+              "unit": "eidolon-memory-embedder.service"
+            },
+            {
+              "pid": 716593,
+              "unit": "eidolon-memory-supervisor.service"
+            },
+            {
+              "pid": 716680,
+              "unit": "eidolon-memory-supervisor.service"
+            },
+            {
+              "pid": 716300,
+              "unit": "eidolon-unit-applier.service"
+            },
+            {
+              "pid": 716289,
+              "unit": "eidolond.service"
+            }
+          ]
+        },
+        "scope": {
+          "current": "/opt/eidolon/current",
+          "excluded": [
+            "/var/lib/eidolon",
+            "/var/lib/eidolon-bootstrap",
+            "/var/lib/eidolon-lifecycle",
+            "/var/log/eidolon"
+          ],
+          "releases": "/opt/eidolon/releases",
+          "staging": "/var/tmp"
+        },
+        "status": "committed"
+      }
+    },
+    {
+      "phase": "unselected_model_cleanup",
+      "result": {
+        "artifacts": 1,
+        "detail": [
+          {
+            "artifact": "qwen3-1.7b-q4_0",
+            "destination": "/var/lib/eidolon/models/qwen3-1.7b",
+            "status": "already_absent"
+          }
+        ],
+        "status": "checked"
+      }
+    },
+    {
+      "phase": "local_bundle_cleanup",
+      "result": {
+        "current": {
+          "bytes": 2561539962,
+          "path": "/Users/manson/eidolon/release-bundles/rk3588-laya-c10-20261009-1",
+          "status": "removed"
+        },
+        "expired": [],
+        "failures": [],
+        "retention_seconds": 172800,
+        "status": "cleaned"
+      }
+    }
+  ],
+  "plan": {
+    "destructive": "reversible",
+    "host_id": "eidolon-opi5max",
+    "operation": "deploy",
+    "requires_flags": [
+      "--activate"
+    ],
+    "steps": [
+      {
+        "description": "seal the commit-pinned release bundle",
+        "id": "bundle"
+      },
+      {
+        "description": "claim or resume the Host's upload directory",
+        "id": "upload_guard"
+      },
+      {
+        "description": "prove the uploaded bundle digest",
+        "id": "upload_finalize"
+      },
+      {
+        "description": "build the release natively on the Host",
+        "id": "prepare"
+      },
+      {
+        "description": "have the Host's own activator rehearse the switch",
+        "id": "dry_run"
+      },
+      {
+        "description": "switch the release atomically",
+        "id": "activate"
+      },
+      {
+        "description": "deliver the derived Host layer",
+        "id": "host_application"
+      },
+      {
+        "description": "require the release's own health gate",
+        "id": "doctor"
+      },
+      {
+        "description": "require every declared App readiness fact",
+        "id": "app_ready"
+      },
+      {
+        "description": "restore the exact snapshot if a gate fails",
+        "id": "health_gate_rollback"
+      },
+      {
+        "description": "remove terminal and expired workstation bundles",
+        "id": "local_bundle_cleanup"
+      }
+    ],
+    "touches": [
+      "code",
+      "lifecycle"
+    ]
+  },
+  "release_id": "rk3588-laya-c10-20261009-1",
+  "status": "activated",
+  "steps": [
+    {
+      "id": "bundle",
+      "outcome": "applied"
+    },
+    {
+      "id": "upload_guard",
+      "outcome": "applied"
+    },
+    {
+      "id": "dry_run",
+      "outcome": "applied"
+    },
+    {
+      "id": "activate",
+      "outcome": "applied"
+    },
+    {
+      "id": "host_application",
+      "outcome": "applied"
+    },
+    {
+      "id": "doctor",
+      "outcome": "applied"
+    },
+    {
+      "id": "app_ready",
+      "outcome": "applied"
+    },
+    {
+      "id": "local_bundle_cleanup",
+      "outcome": "applied"
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "affected_units": [
+    "eidolon-admin.service",
+    "eidolon-local-api.service",
+    "eidolon-lifecycle-workflow.service",
+    "eidolon-bootstrapd.service",
+    "eidolon-unit-applier.socket",
+    "eidolon-unit-applier.service",
+    "eidolon-data.service",
+    "eidolon-data-workspace.service",
+    "eidolon-hub.service",
+    "eidolon-kernel.service",
+    "eidolon-nats.service",
+    "eidolon-livekit.service",
+    "eidolon-memory-embedder.service",
+    "eidolon-memory-supervisor.service",
+    "eidolon-memory-discovery.service",
+    "eidolon-agent.service",
+    "eidolon-channel-provider.service",
+    "eidolon-channel.service",
+    "eidolon-laya.service",
+    "eidolon-laya-participation.service"
+  ],
+  "capabilities": [
+    "local_laya",
+    "local_laya_participation",
+    "rknpu2"
+  ],
+  "components": [
+    {
+      "component_id": "eidolon_kernel",
+      "current_link": "/opt/eidolon/current/eidolon_kernel",
+      "environment_sha256": "a6aadbafeed07fc7681668834fd37b20d2db3c5a27f7232101ee1d86c1db9d7e",
+      "lock_sha256": "975dee44459525aecea75790a397552d6cedac991229e7d90b158ede00d47f54",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_kernel",
+      "required_entrypoints": [
+        ".venv/bin/eidolond",
+        ".venv/bin/eidolon-unit-applier",
+        ".venv/bin/uvicorn"
+      ],
+      "revision": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+      "source_tree_sha256": "831a98fa46399fbba8c301f5d4a3667253a6e6fbe1d378b8fb3443f4cda15196"
+    },
+    {
+      "component_id": "eidolon_data",
+      "current_link": "/opt/eidolon/current/eidolon_data",
+      "environment_sha256": "bafbc91db6b7f65eed29a31ad6823d73459a6ae7111e138d6c87152253d30bd9",
+      "lock_sha256": "16b5ebb3de14c6a2e949df2e184ea5ca7e9ff1bcfcc5a29ab402ac21fb899824",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_data",
+      "required_entrypoints": [
+        ".venv/bin/uvicorn"
+      ],
+      "revision": "9e25d057abc37b6b85f88d4cf2c57eed51796048",
+      "source_tree_sha256": "7408e66263d53b9141aba3b11e8b996f09507c662495bae98a20228ff14e97b9"
+    },
+    {
+      "component_id": "eidolon_hub",
+      "current_link": "/opt/eidolon/current/eidolon_hub",
+      "environment_sha256": "1194975712c6694c3b1c0aa2ce66316ab9dd68b150da06c16bf1c8b0ac9f7eae",
+      "lock_sha256": "eed7a98bced56418822da10621516ed22e6fe95d62fa641308437f566b0ff37a",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_hub",
+      "required_entrypoints": [
+        ".venv/bin/uvicorn"
+      ],
+      "revision": "83cf4bdd1e60216851332d54d14e646adbd47793",
+      "source_tree_sha256": "29b1e7a5ae85ff1ee8f3dbbef8d8659bac7a11f2e24f9557f7e011b5bd21f4bc"
+    },
+    {
+      "component_id": "eidolon_admin",
+      "current_link": "/opt/eidolon/current/eidolon_admin",
+      "environment_sha256": "1249b9e15d3288a962478453361b8030442dc520165746fc6dd64aeede3b0d5c",
+      "lock_sha256": "776f11be03b20b9f19867e11fa570e4666c1d46c268398331b8ce4608b9f7d35",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_admin",
+      "required_entrypoints": [
+        ".venv/bin/eidolon-admin",
+        ".venv/bin/eidolon-bootstrapd",
+        ".venv/bin/eidolon-local-api",
+        ".venv/bin/eidolon-lifecycle-workflow"
+      ],
+      "revision": "81e09e64e6e27c199c8bf5fe27abd989e2cb69f7",
+      "source_tree_sha256": "ab8c105ad0a96cbc48251a5db028738b2afd7ef41237db23064ba05dd83a02e6"
+    },
+    {
+      "component_id": "eidolon_agent",
+      "current_link": "/opt/eidolon/current/eidolon_agent",
+      "environment_sha256": "dfc8dee0b9f37a536f02d3a393a1212ce30f516ea807e906def3abb37d400151",
+      "lock_sha256": "d23271c4758105b94381e81c43a9fc766ca4d8769a587d7e0c9940badd241bc2",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_agent",
+      "required_entrypoints": [
+        ".venv/bin/eidolon-agent"
+      ],
+      "revision": "fc9de670356d518eff9213eb0c4caf8147819822",
+      "source_tree_sha256": "853b809fbb1b5b8950e108cda762eaa1f8720a3a641ca537c4d9d7ab06352f13"
+    },
+    {
+      "component_id": "eidolon_channel",
+      "current_link": "/opt/eidolon/current/eidolon_channel",
+      "environment_sha256": "3f366693f5122b9801b8a7284f54d6933bf7c07341bd1d975c07bd0631c73c02",
+      "lock_sha256": "ce9611795ead8dcfd342f4537330aa17a43205419cde2580c0fc0a076624aa80",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_channel",
+      "required_entrypoints": [
+        ".venv/bin/python",
+        ".venv/bin/eidolon-channel-provider"
+      ],
+      "revision": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1",
+      "source_tree_sha256": "720bb9b10d4c7e20a47c98ca0b8ad8f3d2f84a50e3ddcc1edbb7441824d89693"
+    },
+    {
+      "component_id": "eidolon_memory",
+      "current_link": "/opt/eidolon/current/eidolon_memory",
+      "environment_sha256": "75b2ed8cbb236eb0ae152cca8d9958f87fbef18444b7977e19548a8155ad094f",
+      "lock_sha256": "69012c4caf428a0b0908165b99de9cb90a59bdc32c7f820cdf80e4cb3ef56282",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_memory",
+      "required_entrypoints": [
+        ".venv/bin/eidolon-memory-embedder",
+        ".venv/bin/eidolon-memory-supervisor",
+        ".venv/bin/eidolon-memory-discovery"
+      ],
+      "revision": "adcbf2da5a7d0403e0f26d9787fc9fea2bd3ed22",
+      "source_tree_sha256": "5b5ef6bcbb9d92775073a827f8f3fc08ac7f871eb7d75b5e6e295e0d0485919f"
+    },
+    {
+      "component_id": "eidolon_models",
+      "current_link": "/opt/eidolon/current/eidolon_models",
+      "environment_sha256": "e75cf937301e3f76c5edbf14ecc7c62786eb82c3c8514e8334e093bef9ee6a47",
+      "lock_sha256": "e1ee5f689cf5a70eae85b2fd9b3f647e88cd4f0bd1696fe50779129c11874075",
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_models",
+      "required_entrypoints": [
+        "scripts/eidolon-asr"
+      ],
+      "revision": "882fc1fbaa42142277231808837386792db7d2f9",
+      "source_tree_sha256": "22c789cfb93b672505de608504269133f34e1f835b899d2c37df8d968b2d40c7"
+    }
+  ],
+  "cutover_mode": "reversible",
+  "database_migrations": [],
+  "readiness_checks": [
+    {
+      "check_id": "eidolond",
+      "expected_status": "ready",
+      "kind": "unix_http",
+      "socket": "/run/eidolon/system.sock",
+      "url": "http://eidolond/health"
+    },
+    {
+      "check_id": "data",
+      "expected_status": "ready",
+      "kind": "http",
+      "url": "http://127.0.0.1:8084/health"
+    },
+    {
+      "check_id": "data-workspace",
+      "expected_status": "ready",
+      "kind": "http",
+      "url": "http://127.0.0.1:8085/health"
+    },
+    {
+      "check_id": "hub",
+      "expected_status": "ok",
+      "kind": "http",
+      "url": "http://127.0.0.1:8082/health"
+    },
+    {
+      "check_id": "kernel",
+      "expected_status": "ready",
+      "kind": "http",
+      "url": "http://127.0.0.1:8083/health"
+    },
+    {
+      "check_id": "admin",
+      "expected_status": "ready",
+      "kind": "http",
+      "url": "http://127.0.0.1:9000/healthz"
+    },
+    {
+      "check_id": "local-api",
+      "expected_status": "ok",
+      "kind": "https",
+      "url": "https://127.0.0.1:9002/healthz"
+    },
+    {
+      "check_id": "lifecycle-workflow",
+      "expected_status": "active",
+      "kind": "systemd",
+      "url": "systemd://eidolon-lifecycle-workflow.service"
+    },
+    {
+      "check_id": "nats",
+      "expected_status": "ok",
+      "kind": "http",
+      "url": "http://127.0.0.1:8222/healthz"
+    },
+    {
+      "check_id": "livekit",
+      "expected_status": "open",
+      "kind": "tcp",
+      "url": "tcp://127.0.0.1:7880"
+    },
+    {
+      "check_id": "memory-embedder",
+      "expected_status": "ok",
+      "kind": "http",
+      "url": "http://127.0.0.1:8760/v1/health"
+    },
+    {
+      "check_id": "memory",
+      "expected_status": "http_2xx",
+      "kind": "http",
+      "url": "http://127.0.0.1:8020/api/discovery/agent-routing"
+    },
+    {
+      "check_id": "agent",
+      "expected_status": "ready",
+      "kind": "http",
+      "url": "http://127.0.0.1:8180/readyz"
+    },
+    {
+      "check_id": "channel-provider",
+      "expected_status": "ok",
+      "kind": "http",
+      "url": "http://127.0.0.1:8767/health"
+    },
+    {
+      "check_id": "channel",
+      "expected_status": "active",
+      "kind": "systemd",
+      "url": "systemd://eidolon-channel.service"
+    },
+    {
+      "check_id": "laya",
+      "expected_status": "http_2xx",
+      "kind": "http",
+      "url": "http://127.0.0.1:8771/readyz"
+    },
+    {
+      "check_id": "laya-participation",
+      "expected_status": "http_2xx",
+      "kind": "http",
+      "url": "http://127.0.0.1:8773/participation/readyz"
+    }
+  ],
+  "release_id": "rk3588-laya-c10-20261009-1",
+  "required_secrets": [
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/data.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/hub.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/kernel.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/admin.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/local-api.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/bootstrap.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/var/lib/eidolon-bootstrap/host_identity.ed25519"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/agent.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/channel.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/memory.env"
+    },
+    {
+      "mode": "0600",
+      "path": "/etc/eidolon/livekit.env"
+    }
+  ],
+  "schema_version": 2,
+  "support_sources": [
+    {
+      "release_path": "/opt/eidolon/releases/rk3588-laya-c10-20261009-1/eidolon_sdk",
+      "revision": "acf5ce62b546262efe59122992be8c681845dcf9",
+      "source_id": "eidolon_sdk",
+      "source_tree_sha256": "7ebb8a26cf3d8aea6617e8122f27ccaeabd4c29cf3209274bbf3dd70f118d9c1"
+    }
+  ],
+  "system_assets": [
+    {
+      "destination": "/etc/systemd/system/eidolond.service",
+      "mode": "0644",
+      "sha256": "0fde742f9a6185244a84f7322640f5490c8e56136849bd56bf07cbb352493b94",
+      "source": "deploy/systemd/eidolond.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-data.service",
+      "mode": "0644",
+      "sha256": "91da3d5969ab840c802a3489894f53f48a3e629f3e548753b6a89795ab4d6faa",
+      "source": "deploy/systemd/eidolon-data.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-data-workspace.service",
+      "mode": "0644",
+      "sha256": "283c10e60e3d1ebe8cb26b8a7e8b61c6cd537ab181194c79efef5c7f86578877",
+      "source": "deploy/systemd/eidolon-data-workspace.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-hub.service",
+      "mode": "0644",
+      "sha256": "aafdf0dc6f14d73fcb8b994b71b2a9ddd2dc1c40bd83a4baeb66a5dffea1384d",
+      "source": "deploy/systemd/eidolon-hub.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-kernel.service",
+      "mode": "0644",
+      "sha256": "bae0d4d9572a81baf99815d9772e72131c9fca916a8112236fc661136c723f82",
+      "source": "deploy/systemd/eidolon-kernel.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/eidolon/eidolond.yaml",
+      "mode": "0644",
+      "sha256": "3a78093e4e57793c2463eab5509ef8a2d4cc34e1842966333736ef79071f97b8",
+      "source": "config/eidolond.systemd.example.yaml",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/eidolon/kernel.yaml",
+      "mode": "0644",
+      "sha256": "cf0013f74fa7269600655cee044c65343427e8c68b746cdfee985824c71ac9ae",
+      "source": "config/kernel.systemd.example.yaml",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/eidolon/system-services.yaml",
+      "mode": "0644",
+      "sha256": "e8f8e28ac1cbe37f38ae6d38b27d90a98914a3c71f248277717aaf28e601db66",
+      "source": "config/system-services.yaml",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-unit-applier.socket",
+      "mode": "0644",
+      "sha256": "fee7fe98937f50c16b85c1fdcf1450ae3a0d934931198db20bc676b60618edfc",
+      "source": "deploy/systemd/eidolon-unit-applier.socket",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-unit-applier.service",
+      "mode": "0644",
+      "sha256": "c8f4f3554be866865ded2cb9f73b8c9a2217eb782a829787a3770adc4850aae4",
+      "source": "deploy/systemd/eidolon-unit-applier.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-bootstrapd.service",
+      "mode": "0644",
+      "sha256": "755a0474438e4ad19054159f20ce044a0c6ff6682197c6d745e8052738555405",
+      "source": "deploy/systemd/eidolon-bootstrapd.service",
+      "source_component_id": "eidolon_admin"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-local-api.service",
+      "mode": "0644",
+      "sha256": "69de495f6717e753989138ac8de981633e7376932eba06c96e7f981715dbbd08",
+      "source": "deploy/systemd/eidolon-local-api.service",
+      "source_component_id": "eidolon_admin"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-lifecycle-workflow.service",
+      "mode": "0644",
+      "sha256": "ffca3fc1464c70e748ffa633f7f03c39476d2cad7a3f18d37ef29efbb699c8c8",
+      "source": "deploy/systemd/eidolon-lifecycle-workflow.service",
+      "source_component_id": "eidolon_admin"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-admin.service",
+      "mode": "0644",
+      "sha256": "bdcf0fb96e1c30a670c8c48bf8ce4d827d1e0f5491b6f05dbc1c73de37d43843",
+      "source": "deploy/systemd/eidolon-admin.service",
+      "source_component_id": "eidolon_admin"
+    },
+    {
+      "destination": "/etc/polkit-1/rules.d/60-eidolon-bootstrap-network.rules",
+      "mode": "0644",
+      "sha256": "c5b350805dff15d7efb59ea1284bf97aee9629d20df3b03718b6cac6346b16c3",
+      "source": "deploy/polkit/60-eidolon-bootstrap-network.rules",
+      "source_component_id": "eidolon_admin"
+    },
+    {
+      "destination": "/etc/avahi/services/eidolon-local-api.service",
+      "mode": "0644",
+      "sha256": "99cd4e72a56c5637245bcfcd997efb25260f1230cd2dc0910a47e17b3f885144",
+      "source": "deploy/avahi/eidolon-local-api.service",
+      "source_component_id": "eidolon_admin"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-nats.service",
+      "mode": "0644",
+      "sha256": "6929af33151a0c099fcaf2335baaf3ac785833ebef28010936110699eca1b06c",
+      "source": "deploy/systemd/eidolon-nats.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-livekit.service",
+      "mode": "0644",
+      "sha256": "891171427edd91ea8fb8f28f242906844381726f9a2e94bad58a5bca796bfa77",
+      "source": "deploy/systemd/eidolon-livekit.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-memory-supervisor.service",
+      "mode": "0644",
+      "sha256": "26f3f6752c945516fae555491ee2f37888b904b1bc07f1b3a643e8af82fd0815",
+      "source": "deploy/systemd/eidolon-memory-supervisor.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-memory-embedder.service",
+      "mode": "0644",
+      "sha256": "d2dffdb98d2ebaa9d6a628d49ce1c28fb0dac29e2ee7cc6894acc58e29b20726",
+      "source": "deploy/systemd/eidolon-memory-embedder.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-memory-discovery.service",
+      "mode": "0644",
+      "sha256": "6116d56287831d92c35e8053ca316a1330ecb2eab7b8634d3c20db4fb747734f",
+      "source": "deploy/systemd/eidolon-memory-discovery.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-agent.service",
+      "mode": "0644",
+      "sha256": "3ec0d8717495c27ebd494a542966b7bfba8c5601cf455deec93b9b9c88ce00d8",
+      "source": "deploy/systemd/eidolon-agent.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-channel.service",
+      "mode": "0644",
+      "sha256": "6cee0064f03f5c777b7bdbbb3baf0403a6a66b5309bbc85967272b5dba28fb5d",
+      "source": "deploy/systemd/eidolon-channel.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-channel-provider.service",
+      "mode": "0644",
+      "sha256": "aad6ae72b2852cadd5c0c94895710b2e7418f9380775353e6a5cd34d9ceb9940",
+      "source": "deploy/systemd/eidolon-channel-provider.service",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/usr/local/libexec/eidolon-livekit-launch",
+      "mode": "0644",
+      "sha256": "b0e30921b37c0b544eb2fd2aa349b61558eabadfb71ec1657b42f5490da73d8c",
+      "source": "deploy/systemd/eidolon-livekit-launch",
+      "source_component_id": "eidolon_kernel"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-laya.service",
+      "mode": "0644",
+      "sha256": "98d2bf5f5b150cf12b562e4faebc0637a19d52122980d108832e41e502a3db85",
+      "source": "deploy/systemd/eidolon-laya.service",
+      "source_component_id": "eidolon_models"
+    },
+    {
+      "destination": "/etc/systemd/system/eidolon-laya-participation.service",
+      "mode": "0644",
+      "sha256": "d0b2c07f6103b2c925bf64c3de5626a381e37b55d5b3a0a05e771eb99339b99e",
+      "source": "deploy/systemd/eidolon-laya-participation.service",
+      "source_component_id": "eidolon_models"
+    }
+  ],
+  "target": {
+    "machine": "aarch64",
+    "python": "3.13",
+    "system": "linux"
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "model": {
+    "model": "laya-smart-home",
+    "repo_id": "eidolon-laya-train/laya-smart-home",
+    "revision": "e8254243",
+    "subfolder": "",
+    "service": {
+      "version": "0.1.0",
+      "uptime_s": 49,
+      "served": 0
+    },
+    "engine": {
+      "backend": "rknn",
+      "device": "rk3588-npu",
+      "precision": {
+        "weights": "float16",
+        "compute": "float16"
+      },
+      "buckets": [
+        128,
+        256,
+        384,
+        512
+      ],
+      "placement": {
+        "1": [
+          128,
+          256,
+          384,
+          512
+        ],
+        "2": [
+          128,
+          256
+        ]
+      },
+      "weight_copies": 4,
+      "cpu_blas": [
+        "libscipy_openblas64_-f552eb69.so:scipy_openblas_set_num_threads64_(1)"
+      ],
+      "max_len": 512,
+      "head_max_len": 512
+    },
+    "limits": {
+      "max_pending": 1,
+      "max_questions": 32,
+      "max_body_bytes": 262144
+    }
+  },
+  "agent": {
+    "interpreter": "laya",
+    "context_turns": 3,
+    "source": "/opt/eidolon/current/eidolon_agent/.venv/lib/python3.13/site-packages/eidolon_agent/domain/smarthome/command.py",
+    "command_sha256": "3d4e5b3dd36f1e86bd7b609306b900d04488ff151cc3bdfede1f3f1add92860d"
+  },
+  "sdk_fan_speed_step": {
+    "delta": [
+      "int",
+      -100,
+      100
+    ]
+  },
+  "probes": [
+    {
+      "id": "conversation-0",
+      "elapsed_ms": 455.0,
+      "response": {
+        "contract_version": "eidolon.models.laya.systemone.v1",
+        "features": {
+          "question_state": true
+        },
+        "revision": "e8254243",
+        "model": "laya-smart-home",
+        "answers": {
+          "intent": {
+            "type": "choice",
+            "choice": "控制",
+            "probabilities": {
+              "控制": 0.9904,
+              "查询": 0.0042,
+              "无关": 0.0055
+            },
+            "confidence": 0.9445,
+            "answer_confidence": 0.9904,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "device": {
+            "type": "choice",
+            "choice": "主卧灯",
+            "probabilities": {
+              "客厅主灯": 0.3304,
+              "主卧灯": 0.337,
+              "床头灯": 0.3277,
+              "客厅空调": 0.0002,
+              "主卧空调": 0.0002,
+              "客厅窗帘": 0.0002,
+              "空气净化器": 0.0002,
+              "加湿器": 0.0002,
+              "电视": 0.0002,
+              "智能音箱": 0.0002,
+              "扫地机器人": 0.0002,
+              "洗衣机": 0.0002,
+              "电动晾衣架": 0.0002,
+              "电饭煲": 0.0002,
+              "热水器": 0.0002,
+              "智能门锁": 0.0002,
+              "摄像头": 0.0002,
+              "温湿度计": 0.0002,
+              "多个设备或整屋": 0.0003,
+              "没有对应的设备": 0.002
+            },
+            "confidence": 0.6209,
+            "answer_confidence": 0.337,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "action": {
+            "type": "choice",
+            "choice": "关闭或停止",
+            "probabilities": {
+              "打开或启动": 0.001,
+              "关闭或停止": 0.9931,
+              "调高或增大": 0.0013,
+              "调低或减小": 0.002,
+              "设为指定的数值或模式": 0.0012,
+              "暂停": 0.0007,
+              "上锁": 0.0007
+            },
+            "confidence": 0.9727,
+            "answer_confidence": 0.9931,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 460,
+          "output_tokens": 0
+        },
+        "truncated": [],
+        "backend": "rknn",
+        "timing_ms": {
+          "forward": 444.4,
+          "total": 451.5
+        }
+      }
+    },
+    {
+      "id": "conversation-15",
+      "elapsed_ms": 989.0,
+      "response": {
+        "contract_version": "eidolon.models.laya.systemone.v1",
+        "features": {
+          "question_state": true
+        },
+        "revision": "e8254243",
+        "model": "laya-smart-home",
+        "answers": {
+          "intent": {
+            "type": "choice",
+            "choice": "控制",
+            "probabilities": {
+              "控制": 0.9936,
+              "查询": 0.003,
+              "无关": 0.0034
+            },
+            "confidence": 0.9607,
+            "answer_confidence": 0.9936,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "device": {
+            "type": "choice",
+            "choice": "加湿器",
+            "probabilities": {
+              "客厅主灯": 0.0002,
+              "主卧灯": 0.0002,
+              "床头灯": 0.0002,
+              "客厅空调": 0.0002,
+              "主卧空调": 0.0002,
+              "客厅窗帘": 0.0002,
+              "空气净化器": 0.0002,
+              "加湿器": 0.9961,
+              "电视": 0.0002,
+              "智能音箱": 0.0002,
+              "扫地机器人": 0.0002,
+              "洗衣机": 0.0002,
+              "电动晾衣架": 0.0002,
+              "电饭煲": 0.0002,
+              "热水器": 0.0002,
+              "智能门锁": 0.0002,
+              "摄像头": 0.0002,
+              "温湿度计": 0.0002,
+              "多个设备或整屋": 0.0002,
+              "没有对应的设备": 0.001
+            },
+            "confidence": 0.988,
+            "answer_confidence": 0.9961,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "action": {
+            "type": "choice",
+            "choice": "调低或减小",
+            "probabilities": {
+              "打开或启动": 0.0005,
+              "关闭或停止": 0.0006,
+              "调高或增大": 0.0006,
+              "调低或减小": 0.9965,
+              "设为指定的数值或模式": 0.001,
+              "暂停": 0.0004,
+              "上锁": 0.0004
+            },
+            "confidence": 0.9851,
+            "answer_confidence": 0.9965,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "context_device": {
+            "type": "choice",
+            "choice": "加湿器",
+            "probabilities": {
+              "客厅主灯": 0.0006,
+              "主卧灯": 0.0006,
+              "床头灯": 0.0006,
+              "客厅空调": 0.0005,
+              "主卧空调": 0.0005,
+              "客厅窗帘": 0.0004,
+              "空气净化器": 0.0012,
+              "加湿器": 0.9779,
+              "电视": 0.0008,
+              "智能音箱": 0.0006,
+              "扫地机器人": 0.0012,
+              "洗衣机": 0.0005,
+              "电动晾衣架": 0.0004,
+              "电饭煲": 0.0006,
+              "热水器": 0.0006,
+              "智能门锁": 0.0004,
+              "摄像头": 0.0005,
+              "温湿度计": 0.0008,
+              "多个设备或整屋": 0.0019,
+              "没有对应的设备": 0.0093
+            },
+            "confidence": 0.9476,
+            "answer_confidence": 0.9779,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "follow": {
+            "type": "choice",
+            "choice": "调低或减小",
+            "probabilities": {
+              "打开或启动": 0.0005,
+              "关闭或停止": 0.0005,
+              "调高或增大": 0.0004,
+              "调低或减小": 0.9962,
+              "设为指定的数值或模式": 0.0007,
+              "暂停": 0.0004,
+              "上锁": 0.0004,
+              "重新理解": 0.001
+            },
+            "confidence": 0.9847,
+            "answer_confidence": 0.9962,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1086,
+          "output_tokens": 0
+        },
+        "truncated": [],
+        "backend": "rknn",
+        "timing_ms": {
+          "forward": 982.3,
+          "total": 986.5
+        }
+      }
+    },
+    {
+      "id": "independent-0",
+      "elapsed_ms": 399.53,
+      "response": {
+        "contract_version": "eidolon.models.laya.systemone.v1",
+        "features": {
+          "question_state": true
+        },
+        "revision": "e8254243",
+        "model": "laya-smart-home",
+        "answers": {
+          "intent": {
+            "type": "choice",
+            "choice": "无关",
+            "probabilities": {
+              "控制": 0.0038,
+              "查询": 0.0029,
+              "无关": 0.9934
+            },
+            "confidence": 0.9596,
+            "answer_confidence": 0.9934,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "device": {
+            "type": "choice",
+            "choice": "客厅主灯",
+            "probabilities": {
+              "客厅主灯": 0.9351,
+              "主卧灯": 0.0243,
+              "床头灯": 0.0266,
+              "客厅空调": 0.0004,
+              "主卧空调": 0.0004,
+              "客厅窗帘": 0.0004,
+              "空气净化器": 0.0004,
+              "加湿器": 0.0004,
+              "电视": 0.0004,
+              "智能音箱": 0.0004,
+              "扫地机器人": 0.0005,
+              "洗衣机": 0.0004,
+              "电动晾衣架": 0.0004,
+              "电饭煲": 0.0004,
+              "热水器": 0.0004,
+              "智能门锁": 0.0004,
+              "摄像头": 0.0004,
+              "温湿度计": 0.0005,
+              "多个设备或整屋": 0.0004,
+              "没有对应的设备": 0.0076
+            },
+            "confidence": 0.8876,
+            "answer_confidence": 0.9351,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "action": {
+            "type": "choice",
+            "choice": "关闭或停止",
+            "probabilities": {
+              "打开或启动": 0.0617,
+              "关闭或停止": 0.89,
+              "调高或增大": 0.0049,
+              "调低或减小": 0.0233,
+              "设为指定的数值或模式": 0.014,
+              "暂停": 0.0033,
+              "上锁": 0.0029
+            },
+            "confidence": 0.751,
+            "answer_confidence": 0.89,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 463,
+          "output_tokens": 0
+        },
+        "truncated": [],
+        "backend": "rknn",
+        "timing_ms": {
+          "forward": 396.1,
+          "total": 397.6
+        }
+      }
+    }
+  ]
+}
