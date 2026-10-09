@@ -1,0 +1,79 @@
+{
+  "primary_ms": {
+    "n": 17,
+    "mean": 759.2,
+    "median": 779.0,
+    "min": 472.5,
+    "max": 819.8
+  },
+  "agent_ms": {
+    "n": 17,
+    "mean": 1574.9,
+    "median": 1758,
+    "min": 877,
+    "max": 2038
+  },
+  "channel_ms": {
+    "n": 17,
+    "mean": 1622.2,
+    "median": 1818.1,
+    "min": 911.5,
+    "max": 2083.2
+  },
+  "execution_ms": {
+    "n": 14,
+    "mean": 22.9,
+    "median": 23.0,
+    "min": 15.9,
+    "max": 29.3
+  },
+  "delivery_ms": {
+    "n": 17,
+    "mean": 33.3,
+    "median": 33.5,
+    "min": 20.7,
+    "max": 49.2
+  },
+  "vad_to_handler_ms": {
+    "n": 17,
+    "mean": 237.6,
+    "median": 244.0,
+    "min": 147.0,
+    "max": 318.0
+  },
+  "vad_to_delivery_ms": {
+    "n": 17,
+    "mean": 1859.7,
+    "median": 2000.0,
+    "min": 1109.0,
+    "max": 2392.0
+  },
+  "asr_to_handler_ms": {
+    "n": 17,
+    "mean": 4.2,
+    "median": 4.0,
+    "min": 2.0,
+    "max": 10.0
+  },
+  "primary_channel_ms": {
+    "n": 5,
+    "mean": 976.8,
+    "median": 987.6,
+    "min": 911.5,
+    "max": 1016.2
+  },
+  "llm_channel_ms": {
+    "n": 12,
+    "mean": 1891.1,
+    "median": 1871.9,
+    "min": 1688.7,
+    "max": 2083.2
+  },
+  "llm_added_ms": {
+    "n": 12,
+    "mean": 840.4,
+    "median": 806.8,
+    "min": 695.6,
+    "max": 1019.7
+  }
+}
