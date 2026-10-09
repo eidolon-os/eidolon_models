@@ -1,0 +1,7 @@
+{
+  "model_first_compared": 110,
+  "accepted_fp32": 23,
+  "accepted_npu": 23,
+  "model_first_decision_differences": [],
+  "legacy_frozen_decision_differences": []
+}

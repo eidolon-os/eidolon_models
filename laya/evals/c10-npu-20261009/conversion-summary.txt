@@ -1,0 +1,4 @@
+L=128: hidden_l128.rknn in 72s, 262 MB
+L=256: hidden_l256.rknn in 90s, 263 MB
+L=384: hidden_l384.rknn in 114s, 265 MB
+L=512: hidden_l512.rknn in 136s, 267 MB

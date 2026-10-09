@@ -1,0 +1,5 @@
+c763ffab53b9fc8b6e9894d50f7aabe1a36d8f99bd40b95a4d922d72b0be2870  /home/eidolon-opi5max/c10-validation-20261009/model/npu/hidden_l128.rknn
+7fadff0a2150217ed9f82f70fdc87f1db90d9a0c651256058e89b05d0c99f490  /home/eidolon-opi5max/c10-validation-20261009/model/npu/hidden_l256.rknn
+43dfbad214e7b86fec43a99e067a53c810a38fdcef67e77a1dd127c33c3c5bb4  /home/eidolon-opi5max/c10-validation-20261009/model/npu/hidden_l384.rknn
+91a2eca7af0fd596b59b515474c9fcf23275c543321ba85cc7ed50b8e2e9a6d2  /home/eidolon-opi5max/c10-validation-20261009/model/npu/hidden_l512.rknn
+d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8  /home/eidolon-opi5max/c10-validation-20261009/deploy/rk3588/librknnrt.so

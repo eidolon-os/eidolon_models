@@ -7,6 +7,8 @@ models/*/*/onnx/
 models/*/*/npu/
 !models/laya-smart-home/7b695ba8/torch/
 !models/laya-smart-home/7b695ba8/npu/
+# c10 board-validated candidate; production remains pinned separately.
+!models/laya-smart-home/e8254243/npu/
 !models/laya-participation/ae6718a4/torch/
 !models/laya-participation/ae6718a4/npu/
 # The NPU converter's inputs; the compiled .rknn are what runs.

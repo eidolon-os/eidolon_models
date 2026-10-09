@@ -1,0 +1,14 @@
+{
+  "source_revision": "e8254243",
+  "files": {
+    "laya/models/laya-smart-home/e8254243/torch/model.safetensors": "e825424341b894860ee63cee349420a9d4c245853f95ddd2113964ec5ed8698c",
+    "laya/models/laya-smart-home/e8254243/torch/rl_agent_config.json": "e8bb13def12bc0647cc596326e4d46dbc16b7f253b28c8aa7437b32e852ea208",
+    "laya/deploy/rk3588/librknnrt.so": "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8",
+    "laya/evals/c10-npu-20261009/requests.jsonl": "2c65988ff99ffcdffcf1675473b16585bd0c0ac0c811c53bd9cfc25651dbd04f"
+  },
+  "commits": {
+    "eidolon_models": "ccc56feed412258d5c8215f2ccd06e1a8d9aeb9b",
+    "eidolon_agent": "fc9de670356d518eff9213eb0c4caf8147819822",
+    "eidolon_sdk": "acf5ce62b546262efe59122992be8c681845dcf9"
+  }
+}

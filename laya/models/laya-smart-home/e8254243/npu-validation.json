@@ -1,0 +1,24 @@
+{
+  "revision": "e8254243",
+  "validated_on": "2026-10-09",
+  "board": "OPI5 Max / RK3588",
+  "backend": "rknn",
+  "precision": "float16",
+  "toolkit": "2.3.2",
+  "placement": "1:128,256,384,512|2:128,256",
+  "files": {
+    "hidden_l256.rknn": "7fadff0a2150217ed9f82f70fdc87f1db90d9a0c651256058e89b05d0c99f490",
+    "hidden_l128.rknn": "c763ffab53b9fc8b6e9894d50f7aabe1a36d8f99bd40b95a4d922d72b0be2870",
+    "export.json": "612a17009d2aba2bfcc9387f2c5e4fdc05c42b4ce2adbaff987b7ed2ad341d10",
+    "scorer.npz": "1bf125a92682911add126e5620f9aa49a1b967018e19c083c262bfa9ce401724",
+    "hidden_l512.rknn": "91a2eca7af0fd596b59b515474c9fcf23275c543321ba85cc7ed50b8e2e9a6d2",
+    "act_head.npz": "b593b54b0f5853daf7bdb35f7f45c3549e19718ce202b3274e58e81335027a98",
+    "type_emb.npy": "d5112eba3678dc06c9d62d11c537fe08297b72e733d5b100a70b32f910ce5afd",
+    "tok_emb_fp16.npy": "838c25ac3e9fa4d8040a00b07fd36e40fe4ff523004c0441bb2329a0375be92d",
+    "hidden_l384.rknn": "43dfbad214e7b86fec43a99e067a53c810a38fdcef67e77a1dd127c33c3c5bb4"
+  },
+  "runtime_sha256": "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8",
+  "status": "precision_and_policy_passed_latency_tail_open",
+  "production_changed": false,
+  "report": "../../../evals/c10-npu-20261009/README.md"
+}

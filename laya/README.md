@@ -185,3 +185,5 @@ scripts/eidolon-laya test            # 单测 + 对拍；没有权重/ONNX 时�
 
 checkpoint：Apache-2.0（convaiinnovations/laya）；基座编码器 mmBERT-base：MIT；
 `sequence.py` 移植自 laya 源码（Apache-2.0，文件头注明改动）；`src/eidolon_models_laya/vendor/laya/` 是上游包按 git tag 的原样副本（上游会从 PyPI 删旧版本，所以不依赖 PyPI），用 `scripts/sync-laya-vendor.py <tag>` 升级，升级门槛是 `tests/test_parity.py` 和 `evals/smart-home/run_all.sh` 的数字不动。本目录其余代码随仓库许可。
+
+2026-10-09：c10 已完成 [OPI5 Max NPU 隔离验证](evals/c10-npu-20261009/README.md)。精度与接纳决定通过，长上下文仍有偶发超过 1 秒；尚未切换生产 c4。

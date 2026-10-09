@@ -1,0 +1,9 @@
+ActiveState=active
+MainPID=44361
+
+ActiveState=active
+MainPID=44377
+Linux eidolon-opi5max 6.1.115-vendor-rk35xx #1 SMP Mon Aug 31 19:51:22 UTC 2026 aarch64 GNU/Linux
+               total        used        free      shared  buff/cache   available
+Mem:           15959        5973        2969        2029        9212        9986
+Swap:           7979           5        7974

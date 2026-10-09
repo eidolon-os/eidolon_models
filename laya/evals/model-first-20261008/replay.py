@@ -31,7 +31,17 @@ class RecordingModel:
 
     async def interpret(self, request):
         start = time.perf_counter()
-        result = await self.model.interpret(request)
+        try:
+            result = await self.model.interpret(request)
+        except BaseException as exc:
+            self.records.append(
+                {
+                    "request": request.model_dump(mode="json"),
+                    "error": {"type": type(exc).__name__, "code": getattr(exc, "code", None)},
+                    "elapsed_ms": round((time.perf_counter() - start) * 1000, 2),
+                }
+            )
+            raise
         self.records.append(
             {
                 "request": request.model_dump(mode="json"),
@@ -80,6 +90,8 @@ async def run(args):
     cases = json.loads(Path(args.cases).read_text())
     async with httpx.AsyncClient(trust_env=False) as client:
         info = (await client.get(args.url + "/v1/info")).json()
+    if info["revision"] != args.revision:
+        raise AssertionError(f"wrong service: {info}")
     model = LayaInterpreter(args.url)
     recorder, fallback = RecordingModel(model), OracleFallback()
     directory = FakeDirectory(home_registry())
@@ -90,7 +102,7 @@ async def run(args):
         interpreter=recorder,
         fallback=fallback,
         min_confidence=0.8,
-        interpretation_timeout_ms=10000,
+        interpretation_timeout_ms=args.timeout_ms,
     )
     context = HomeContext(history_limit=args.context_turns)
     result = {
@@ -102,6 +114,8 @@ async def run(args):
     }
     try:
         for case in cases["conversation"]:
+            if args.turn_gap_ms:
+                await asyncio.sleep(args.turn_gap_ms / 1000)
             fallback.case = case
             n, f = len(executor.commands), len(fallback.records)
             voice = await command.handle(OWNER, None, case["id"], case["text"], context=context)
@@ -131,7 +145,7 @@ async def run(args):
                 interpretation_id=case["id"],
                 utterance=case["text"],
                 device_ref=None,
-                timeout_ms=10000,
+                timeout_ms=args.timeout_ms,
             )
             response = await recorder.interpret(req)
             accepted = command._confident(response) and response.proposal is not None
@@ -183,6 +197,10 @@ async def run(args):
                 pending_action="打开" if mode == "pending" else "",
                 outcome="executed" if mode == "focus" else "clarification",
             )
+            # Each negative case starts from the same fresh context; a slow backend
+            # must not silently turn later cases into context-free tests.
+            context_snapshot = ctx.snapshot()
+            assert context_snapshot is not None
             for case in [] if args.conversation_only else cases["independent"]:
                 if not case.get("context_safety_case"):
                     continue
@@ -191,8 +209,8 @@ async def run(args):
                     interpretation_id=mode + case["id"],
                     utterance=case["text"],
                     device_ref=None,
-                    timeout_ms=10000,
-                ).model_copy(update={"context": ctx.snapshot()})
+                    timeout_ms=args.timeout_ms,
+                ).model_copy(update={"context": context_snapshot})
                 response = await recorder.interpret(req)
                 accepted = command._confident(response) and response.proposal is not None
                 p = response.proposal
@@ -206,13 +224,14 @@ async def run(args):
                         "model": recorder.records[-1],
                     }
                 )
-        revisions = {r["result"]["model_version"] for r in recorder.records}
-        if not revisions or any(not v.endswith("@" + args.revision) for v in revisions):
+        revisions = {r["result"]["model_version"] for r in recorder.records if "result" in r}
+        if any(not v.endswith("@" + args.revision) for v in revisions):
             raise AssertionError(f"wrong model: {revisions}")
         times = [r["elapsed_ms"] for r in recorder.records]
         result["summary"] = {
             "revision": args.revision,
             "total_model_calls": len(recorder.records),
+            "model_errors": sum("error" in r for r in recorder.records),
             "conversation_passed": sum(r["passed"] for r in result["conversation"]),
             "conversation_total": len(result["conversation"]),
             "conversation_direct": sum(not r["used_fallback"] for r in result["conversation"]),
@@ -222,7 +241,9 @@ async def run(args):
             "context_safety_total": len(result["context_safety"]),
             "model_ms_median": round(statistics.median(times), 2),
             "model_ms_max": max(times),
-            "notes": "10s offline inference deadline; production deadline 1s. No ASR, real LLM, NPU or device timing.",
+            "timeout_ms": args.timeout_ms,
+            "turn_gap_ms": args.turn_gap_ms,
+            "notes": "Real model service; scripted fallback and in-memory actuator. No ASR or real LLM/device timing.",
         }
         Path(args.output).write_text(json.dumps(result, ensure_ascii=False, indent=2))
         print(json.dumps(result["summary"], ensure_ascii=False, indent=2))
@@ -242,5 +263,7 @@ if __name__ == "__main__":
     p.add_argument("--output", required=True)
     p.add_argument("--context-turns", type=int, default=3, choices=[1, 3, 5])
     p.add_argument("--conversation-only", action="store_true")
+    p.add_argument("--timeout-ms", type=int, default=10000)
+    p.add_argument("--turn-gap-ms", type=int, default=0)
     p.add_argument("--cases", default=str(Path(__file__).with_name("cases.json")))
     raise SystemExit(0 if asyncio.run(run(p.parse_args())) else 1)

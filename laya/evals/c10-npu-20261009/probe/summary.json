@@ -1,0 +1,99 @@
+{
+  "revision": "e8254243",
+  "serial": {
+    "requests": 326,
+    "http_200": 326,
+    "http_503": 0,
+    "p50_ms": 278.83,
+    "p95_ms": 751.76,
+    "max_ms": 1006.01,
+    "over_1000ms": 1
+  },
+  "answers": 778,
+  "choice_differences": [
+    {
+      "id": "context_safety-1",
+      "qid": "context_device",
+      "expected": "客厅窗帘",
+      "actual": "客厅主灯"
+    },
+    {
+      "id": "context_safety-51",
+      "qid": "context_device",
+      "expected": "床头灯",
+      "actual": "没有对应的设备"
+    },
+    {
+      "id": "c5-accept-pick/708c4a08e907",
+      "qid": "pick",
+      "expected": "琴房落地灯",
+      "actual": "备餐间灯带"
+    }
+  ],
+  "max_probability_diff_frozen_acceptance": 0.030299999999999994,
+  "by_set": {
+    "context_safety": {
+      "requests": 54,
+      "http_200": 54,
+      "http_503": 0,
+      "p50_ms": 722.23,
+      "p95_ms": 759.92,
+      "max_ms": 763.28,
+      "over_1000ms": 0
+    },
+    "controls-accept": {
+      "requests": 40,
+      "http_200": 40,
+      "http_503": 0,
+      "p50_ms": 275.71500000000003,
+      "p95_ms": 277.97,
+      "max_ms": 279.85,
+      "over_1000ms": 0
+    },
+    "conversation": {
+      "requests": 20,
+      "http_200": 20,
+      "http_503": 0,
+      "p50_ms": 742.39,
+      "p95_ms": 775.76,
+      "max_ms": 1006.01,
+      "over_1000ms": 1
+    },
+    "independent": {
+      "requests": 36,
+      "http_200": 36,
+      "http_503": 0,
+      "p50_ms": 398.115,
+      "p95_ms": 431.06,
+      "max_ms": 433.84,
+      "over_1000ms": 0
+    },
+    "target-accept": {
+      "requests": 132,
+      "http_200": 132,
+      "http_503": 0,
+      "p50_ms": 275.39,
+      "p95_ms": 279.69,
+      "max_ms": 280.61,
+      "over_1000ms": 0
+    },
+    "target-accept-single": {
+      "requests": 44,
+      "http_200": 44,
+      "http_503": 0,
+      "p50_ms": 391.19500000000005,
+      "p95_ms": 421.59,
+      "max_ms": 423.95,
+      "over_1000ms": 0
+    }
+  },
+  "concurrent": {
+    "requests": 40,
+    "http_200": 20,
+    "http_503": 20,
+    "p50_ms": 716.45,
+    "p95_ms": 758.85,
+    "max_ms": 961.84,
+    "over_1000ms": 0
+  }
+}
