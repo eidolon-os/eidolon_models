@@ -81,8 +81,9 @@ async def main(args):
         print('repeat',repeat,'passed',sum(r['passed'] for r in results),'total',len(results),flush=True)
     print('FINAL',sum(r['passed'] for r in results),len(results),flush=True)
     if model:await model.aclose()
+    return all(row["passed"] for row in results)
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True)
     p.add_argument('--suite',choices=['conversation','negative'],default='conversation')
     p.add_argument('--laya-url')
-    asyncio.run(main(p.parse_args()))
+    raise SystemExit(0 if asyncio.run(main(p.parse_args())) else 1)

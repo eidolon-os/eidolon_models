@@ -1,0 +1,5393 @@
+[
+  {
+    "repeat": 0,
+    "text": "不要关闭音箱。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-0",
+      "utterance": "不要关闭音箱。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-0",
+        "domain": "smarthome",
+        "utterance": "不要关闭音箱。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-0",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9912,
+          "device_p": 0.9534,
+          "action_p": 0.6662,
+          "backend": "rknn",
+          "server_ms": 789.0,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9912],[\"控制\",0.0055],[\"查询\",0.0032]]},\"device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.9534],[\"电视\",0.0318],[\"没有对应的设备\",0.0057]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.6662],[\"打开或启动\",0.1359],[\"调低或减小\",0.0943]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.8799],[\"电视\",0.0741],[\"没有对应的设备\",0.0127]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9972],[\"调低或减小\",0.0006],[\"打开或启动\",0.0005]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 0,
+    "text": "别调高音量。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-1",
+      "utterance": "别调高音量。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-1",
+        "domain": "smarthome",
+        "utterance": "别调高音量。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-1",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9113,
+          "device_p": 0.5244,
+          "action_p": 0.9046,
+          "backend": "rknn",
+          "server_ms": 740.8,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9113],[\"控制\",0.0834],[\"查询\",0.0054]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.5244],[\"智能音箱\",0.4534],[\"没有对应的设备\",0.0048]]},\"action\":{\"choice\":\"调低或减小\",\"top\":[[\"调低或减小\",0.9046],[\"设为指定的数值或模式\",0.0471],[\"调高或增大\",0.0329]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.4693],[\"电视\",0.3464],[\"没有对应的设备\",0.0911]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.986],[\"调低或减小\",0.0096],[\"调高或增大\",0.0016]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 0,
+    "text": "朋友说打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-2",
+      "utterance": "朋友说打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-2",
+        "domain": "smarthome",
+        "utterance": "朋友说打开电视。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-2",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9603,
+          "device_p": 0.97,
+          "action_p": 0.9916,
+          "backend": "rknn",
+          "server_ms": 718.5,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.9603],[\"无关\",0.0353],[\"查询\",0.0043]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.97],[\"没有对应的设备\",0.0229],[\"客厅主灯\",0.0005]]},\"action\":{\"choice\":\"打开或启动\",\"top\":[[\"打开或启动\",0.9916],[\"设为指定的数值或模式\",0.0032],[\"调高或增大\",0.0016]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9295],[\"没有对应的设备\",0.0331],[\"智能音箱\",0.0151]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9985],[\"打开或启动\",0.0005],[\"调低或减小\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 0,
+    "text": "明天帮我打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-3",
+      "utterance": "明天帮我打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-3",
+        "domain": "smarthome",
+        "utterance": "明天帮我打开电视。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-3",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9897,
+          "device_p": 0.9746,
+          "action_p": 0.991,
+          "backend": "rknn",
+          "server_ms": 768.0,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.9897],[\"无关\",0.0062],[\"查询\",0.0041]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9746],[\"没有对应的设备\",0.0188],[\"智能音箱\",0.0005]]},\"action\":{\"choice\":\"打开或启动\",\"top\":[[\"打开或启动\",0.991],[\"设为指定的数值或模式\",0.0042],[\"调高或增大\",0.0019]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9138],[\"没有对应的设备\",0.06],[\"智能音箱\",0.009]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9932],[\"打开或启动\",0.0054],[\"关闭或停止\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 0,
+    "text": "取消刚才的请求。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-4",
+      "utterance": "取消刚才的请求。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-4",
+        "domain": "smarthome",
+        "utterance": "取消刚才的请求。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-4",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9944,
+          "device_p": 0.1297,
+          "action_p": 0.6789,
+          "backend": "rknn",
+          "server_ms": 761.8,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9944],[\"控制\",0.0031],[\"查询\",0.0025]]},\"device\":{\"choice\":\"没有对应的设备\",\"top\":[[\"没有对应的设备\",0.1297],[\"床头灯\",0.1139],[\"客厅主灯\",0.0988]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.6789],[\"调低或减小\",0.1369],[\"上锁\",0.0616]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.6934],[\"电视\",0.1468],[\"没有对应的设备\",0.0333]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.995],[\"关闭或停止\",0.0015],[\"调低或减小\",0.0011]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 0,
+    "text": "如果要关闭电视，应该怎么说？",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-5",
+      "utterance": "如果要关闭电视，应该怎么说？",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-5",
+        "domain": "smarthome",
+        "utterance": "如果要关闭电视，应该怎么说？",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-0-5",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.7172,
+          "device_p": 0.9625,
+          "action_p": 0.9819,
+          "backend": "rknn",
+          "server_ms": 732.1,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.7172],[\"无关\",0.2723],[\"查询\",0.0105]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9625],[\"没有对应的设备\",0.0302],[\"多个设备或整屋\",0.0008]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.9819],[\"设为指定的数值或模式\",0.0095],[\"调低或减小\",0.0041]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9444],[\"没有对应的设备\",0.0283],[\"智能音箱\",0.0131]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9942],[\"关闭或停止\",0.0049],[\"调低或减小\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 1,
+    "text": "不要关闭音箱。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-0",
+      "utterance": "不要关闭音箱。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-0",
+        "domain": "smarthome",
+        "utterance": "不要关闭音箱。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-0",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9912,
+          "device_p": 0.9534,
+          "action_p": 0.6662,
+          "backend": "rknn",
+          "server_ms": 771.6,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9912],[\"控制\",0.0055],[\"查询\",0.0032]]},\"device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.9534],[\"电视\",0.0318],[\"没有对应的设备\",0.0057]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.6662],[\"打开或启动\",0.1359],[\"调低或减小\",0.0943]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.8799],[\"电视\",0.0741],[\"没有对应的设备\",0.0127]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9972],[\"调低或减小\",0.0006],[\"打开或启动\",0.0005]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 1,
+    "text": "别调高音量。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-1",
+      "utterance": "别调高音量。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-1",
+        "domain": "smarthome",
+        "utterance": "别调高音量。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-1",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9113,
+          "device_p": 0.5244,
+          "action_p": 0.9046,
+          "backend": "rknn",
+          "server_ms": 768.3,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9113],[\"控制\",0.0834],[\"查询\",0.0054]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.5244],[\"智能音箱\",0.4534],[\"没有对应的设备\",0.0048]]},\"action\":{\"choice\":\"调低或减小\",\"top\":[[\"调低或减小\",0.9046],[\"设为指定的数值或模式\",0.0471],[\"调高或增大\",0.0329]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.4693],[\"电视\",0.3464],[\"没有对应的设备\",0.0911]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.986],[\"调低或减小\",0.0096],[\"调高或增大\",0.0016]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 1,
+    "text": "朋友说打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-2",
+      "utterance": "朋友说打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-2",
+        "domain": "smarthome",
+        "utterance": "朋友说打开电视。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-2",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9603,
+          "device_p": 0.97,
+          "action_p": 0.9916,
+          "backend": "rknn",
+          "server_ms": 741.7,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.9603],[\"无关\",0.0353],[\"查询\",0.0043]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.97],[\"没有对应的设备\",0.0229],[\"客厅主灯\",0.0005]]},\"action\":{\"choice\":\"打开或启动\",\"top\":[[\"打开或启动\",0.9916],[\"设为指定的数值或模式\",0.0032],[\"调高或增大\",0.0016]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9295],[\"没有对应的设备\",0.0331],[\"智能音箱\",0.0151]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9985],[\"打开或启动\",0.0005],[\"调低或减小\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 1,
+    "text": "明天帮我打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-3",
+      "utterance": "明天帮我打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-3",
+        "domain": "smarthome",
+        "utterance": "明天帮我打开电视。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-3",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9897,
+          "device_p": 0.9746,
+          "action_p": 0.991,
+          "backend": "rknn",
+          "server_ms": 742.8,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.9897],[\"无关\",0.0062],[\"查询\",0.0041]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9746],[\"没有对应的设备\",0.0188],[\"智能音箱\",0.0005]]},\"action\":{\"choice\":\"打开或启动\",\"top\":[[\"打开或启动\",0.991],[\"设为指定的数值或模式\",0.0042],[\"调高或增大\",0.0019]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9138],[\"没有对应的设备\",0.06],[\"智能音箱\",0.009]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9932],[\"打开或启动\",0.0054],[\"关闭或停止\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 1,
+    "text": "取消刚才的请求。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-4",
+      "utterance": "取消刚才的请求。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-4",
+        "domain": "smarthome",
+        "utterance": "取消刚才的请求。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-4",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9944,
+          "device_p": 0.1297,
+          "action_p": 0.6789,
+          "backend": "rknn",
+          "server_ms": 781.2,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9944],[\"控制\",0.0031],[\"查询\",0.0025]]},\"device\":{\"choice\":\"没有对应的设备\",\"top\":[[\"没有对应的设备\",0.1297],[\"床头灯\",0.1139],[\"客厅主灯\",0.0988]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.6789],[\"调低或减小\",0.1369],[\"上锁\",0.0616]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.6934],[\"电视\",0.1468],[\"没有对应的设备\",0.0333]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.995],[\"关闭或停止\",0.0015],[\"调低或减小\",0.0011]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 1,
+    "text": "如果要关闭电视，应该怎么说？",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-5",
+      "utterance": "如果要关闭电视，应该怎么说？",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-5",
+        "domain": "smarthome",
+        "utterance": "如果要关闭电视，应该怎么说？",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-1-5",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.7172,
+          "device_p": 0.9625,
+          "action_p": 0.9819,
+          "backend": "rknn",
+          "server_ms": 751.4,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.7172],[\"无关\",0.2723],[\"查询\",0.0105]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9625],[\"没有对应的设备\",0.0302],[\"多个设备或整屋\",0.0008]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.9819],[\"设为指定的数值或模式\",0.0095],[\"调低或减小\",0.0041]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9444],[\"没有对应的设备\",0.0283],[\"智能音箱\",0.0131]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9942],[\"关闭或停止\",0.0049],[\"调低或减小\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 2,
+    "text": "不要关闭音箱。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-0",
+      "utterance": "不要关闭音箱。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-0",
+        "domain": "smarthome",
+        "utterance": "不要关闭音箱。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-0",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9912,
+          "device_p": 0.9534,
+          "action_p": 0.6662,
+          "backend": "rknn",
+          "server_ms": 772.0,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9912],[\"控制\",0.0055],[\"查询\",0.0032]]},\"device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.9534],[\"电视\",0.0318],[\"没有对应的设备\",0.0057]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.6662],[\"打开或启动\",0.1359],[\"调低或减小\",0.0943]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.8799],[\"电视\",0.0741],[\"没有对应的设备\",0.0127]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9972],[\"调低或减小\",0.0006],[\"打开或启动\",0.0005]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 2,
+    "text": "别调高音量。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-1",
+      "utterance": "别调高音量。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-1",
+        "domain": "smarthome",
+        "utterance": "别调高音量。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-1",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9113,
+          "device_p": 0.5244,
+          "action_p": 0.9046,
+          "backend": "rknn",
+          "server_ms": 768.0,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9113],[\"控制\",0.0834],[\"查询\",0.0054]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.5244],[\"智能音箱\",0.4534],[\"没有对应的设备\",0.0048]]},\"action\":{\"choice\":\"调低或减小\",\"top\":[[\"调低或减小\",0.9046],[\"设为指定的数值或模式\",0.0471],[\"调高或增大\",0.0329]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.4693],[\"电视\",0.3464],[\"没有对应的设备\",0.0911]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.986],[\"调低或减小\",0.0096],[\"调高或增大\",0.0016]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 2,
+    "text": "朋友说打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-2",
+      "utterance": "朋友说打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-2",
+        "domain": "smarthome",
+        "utterance": "朋友说打开电视。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-2",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9603,
+          "device_p": 0.97,
+          "action_p": 0.9916,
+          "backend": "rknn",
+          "server_ms": 752.5,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.9603],[\"无关\",0.0353],[\"查询\",0.0043]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.97],[\"没有对应的设备\",0.0229],[\"客厅主灯\",0.0005]]},\"action\":{\"choice\":\"打开或启动\",\"top\":[[\"打开或启动\",0.9916],[\"设为指定的数值或模式\",0.0032],[\"调高或增大\",0.0016]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9295],[\"没有对应的设备\",0.0331],[\"智能音箱\",0.0151]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9985],[\"打开或启动\",0.0005],[\"调低或减小\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 2,
+    "text": "明天帮我打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-3",
+      "utterance": "明天帮我打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-3",
+        "domain": "smarthome",
+        "utterance": "明天帮我打开电视。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-3",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "on",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9897,
+          "device_p": 0.9746,
+          "action_p": 0.991,
+          "backend": "rknn",
+          "server_ms": 692.0,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.9897],[\"无关\",0.0062],[\"查询\",0.0041]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9746],[\"没有对应的设备\",0.0188],[\"智能音箱\",0.0005]]},\"action\":{\"choice\":\"打开或启动\",\"top\":[[\"打开或启动\",0.991],[\"设为指定的数值或模式\",0.0042],[\"调高或增大\",0.0019]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9138],[\"没有对应的设备\",0.06],[\"智能音箱\",0.009]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9932],[\"打开或启动\",0.0054],[\"关闭或停止\",0.0003]]}}"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 2,
+    "text": "取消刚才的请求。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-4",
+      "utterance": "取消刚才的请求。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-4",
+        "domain": "smarthome",
+        "utterance": "取消刚才的请求。",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-4",
+        "status": "abstained",
+        "proposal": null,
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.9944,
+          "device_p": 0.1297,
+          "action_p": 0.6789,
+          "backend": "rknn",
+          "server_ms": 757.8,
+          "answers_json": "{\"intent\":{\"choice\":\"无关\",\"top\":[[\"无关\",0.9944],[\"控制\",0.0031],[\"查询\",0.0025]]},\"device\":{\"choice\":\"没有对应的设备\",\"top\":[[\"没有对应的设备\",0.1297],[\"床头灯\",0.1139],[\"客厅主灯\",0.0988]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.6789],[\"调低或减小\",0.1369],[\"上锁\",0.0616]]},\"context_device\":{\"choice\":\"智能音箱\",\"top\":[[\"智能音箱\",0.6934],[\"电视\",0.1468],[\"没有对应的设备\",0.0333]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.995],[\"关闭或停止\",0.0015],[\"调低或减小\",0.0011]]}}",
+          "reason": "context_not_resolved"
+        }
+      }
+    }
+  },
+  {
+    "repeat": 2,
+    "text": "如果要关闭电视，应该怎么说？",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-5",
+      "utterance": "如果要关闭电视，应该怎么说？",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true,
+    "primary": {
+      "request": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-5",
+        "domain": "smarthome",
+        "utterance": "如果要关闭电视，应该怎么说？",
+        "origin": {
+          "device_ref": null,
+          "area_id": null
+        },
+        "candidates": [
+          {
+            "ref": "living.main_light",
+            "name": "客厅主灯",
+            "aliases": [
+              "大灯"
+            ],
+            "kind": "light",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.light",
+            "name": "主卧灯",
+            "aliases": [],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "master.bedside",
+            "name": "床头灯",
+            "aliases": [
+              "台灯"
+            ],
+            "kind": "light",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.ac",
+            "name": "客厅空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.ac",
+            "name": "主卧空调",
+            "aliases": [],
+            "kind": "climate",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.curtain",
+            "name": "客厅窗帘",
+            "aliases": [],
+            "kind": "cover",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.purifier",
+            "name": "空气净化器",
+            "aliases": [
+              "净化器"
+            ],
+            "kind": "fan",
+            "area_id": "living"
+          },
+          {
+            "ref": "master.humidifier",
+            "name": "加湿器",
+            "aliases": [],
+            "kind": "fan",
+            "area_id": "master"
+          },
+          {
+            "ref": "living.tv",
+            "name": "电视",
+            "aliases": [],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "living.speaker",
+            "name": "智能音箱",
+            "aliases": [
+              "音箱"
+            ],
+            "kind": "media",
+            "area_id": "living"
+          },
+          {
+            "ref": "whole.vacuum",
+            "name": "扫地机器人",
+            "aliases": [
+              "扫地机"
+            ],
+            "kind": "appliance",
+            "area_id": "whole"
+          },
+          {
+            "ref": "balcony.washer",
+            "name": "洗衣机",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "balcony.rack",
+            "name": "电动晾衣架",
+            "aliases": [
+              "晾衣架"
+            ],
+            "kind": "cover",
+            "area_id": "balcony"
+          },
+          {
+            "ref": "kitchen.rice_cooker",
+            "name": "电饭煲",
+            "aliases": [],
+            "kind": "appliance",
+            "area_id": "kitchen"
+          },
+          {
+            "ref": "bath.water_heater",
+            "name": "热水器",
+            "aliases": [],
+            "kind": "water_heater",
+            "area_id": "bath"
+          },
+          {
+            "ref": "entry.lock",
+            "name": "智能门锁",
+            "aliases": [
+              "门锁"
+            ],
+            "kind": "lock",
+            "area_id": "entry"
+          },
+          {
+            "ref": "entry.camera",
+            "name": "摄像头",
+            "aliases": [],
+            "kind": "camera",
+            "area_id": "entry"
+          },
+          {
+            "ref": "living.thermo",
+            "name": "温湿度计",
+            "aliases": [],
+            "kind": "sensor",
+            "area_id": "living"
+          },
+          {
+            "ref": "scene.home",
+            "name": "回家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.away",
+            "name": "离家",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.movie",
+            "name": "观影",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          },
+          {
+            "ref": "scene.sleep",
+            "name": "睡眠",
+            "aliases": [],
+            "kind": "scene",
+            "area_id": null
+          }
+        ],
+        "areas": [
+          {
+            "area_id": "living",
+            "name": "客厅"
+          },
+          {
+            "area_id": "master",
+            "name": "主卧"
+          },
+          {
+            "area_id": "kitchen",
+            "name": "厨房"
+          },
+          {
+            "area_id": "bath",
+            "name": "卫生间"
+          },
+          {
+            "area_id": "balcony",
+            "name": "阳台"
+          },
+          {
+            "area_id": "entry",
+            "name": "玄关"
+          },
+          {
+            "area_id": "whole",
+            "name": "全屋"
+          }
+        ],
+        "allowed_intents": [
+          "control",
+          "query",
+          "unrelated"
+        ],
+        "timeout_ms": 1000,
+        "context": {
+          "history": [
+            {
+              "utterance": "打开音箱",
+              "response": "已打开智能音箱",
+              "outcome": "executed",
+              "proposal": {
+                "intent": "control",
+                "target_status": "resolved",
+                "targets": [
+                  "living.speaker"
+                ],
+                "action": {
+                  "trait": "on_off",
+                  "command": "on",
+                  "slots": []
+                },
+                "mention": null
+              }
+            }
+          ],
+          "outcome": "executed",
+          "previous_utterance": "打开音箱",
+          "proposal": {
+            "intent": "control",
+            "target_status": "resolved",
+            "targets": [
+              "living.speaker"
+            ],
+            "action": {
+              "trait": "on_off",
+              "command": "on",
+              "slots": []
+            },
+            "mention": null
+          },
+          "pending": false,
+          "question": null,
+          "response": "已打开智能音箱",
+          "pending_action": "",
+          "known_targets": [],
+          "known_action": null
+        }
+      },
+      "result": {
+        "schema_version": 1,
+        "interpretation_id": "isolated-2-5",
+        "status": "decided",
+        "proposal": {
+          "intent": "control",
+          "target_status": "resolved",
+          "targets": [
+            "living.tv"
+          ],
+          "action": {
+            "trait": "on_off",
+            "command": "off",
+            "slots": []
+          },
+          "mention": null
+        },
+        "policy_version": "laya-smarthome-context-v2",
+        "model_version": "laya-smart-home@e8254243",
+        "diagnostics": {
+          "intent_p": 0.7172,
+          "device_p": 0.9625,
+          "action_p": 0.9819,
+          "backend": "rknn",
+          "server_ms": 732.2,
+          "answers_json": "{\"intent\":{\"choice\":\"控制\",\"top\":[[\"控制\",0.7172],[\"无关\",0.2723],[\"查询\",0.0105]]},\"device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9625],[\"没有对应的设备\",0.0302],[\"多个设备或整屋\",0.0008]]},\"action\":{\"choice\":\"关闭或停止\",\"top\":[[\"关闭或停止\",0.9819],[\"设为指定的数值或模式\",0.0095],[\"调低或减小\",0.0041]]},\"context_device\":{\"choice\":\"电视\",\"top\":[[\"电视\",0.9444],[\"没有对应的设备\",0.0283],[\"智能音箱\",0.0131]]},\"follow\":{\"choice\":\"重新理解\",\"top\":[[\"重新理解\",0.9942],[\"关闭或停止\",0.0049],[\"调低或减小\",0.0003]]}}"
+        }
+      }
+    }
+  }
+]

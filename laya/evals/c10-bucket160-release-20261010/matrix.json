@@ -1,0 +1,11 @@
+{
+  "eidolon_kernel": "3ba9616d604109cdd3089c583697bf7825dc40a6",
+  "eidolon_data": "9e25d057abc37b6b85f88d4cf2c57eed51796048",
+  "eidolon_hub": "83cf4bdd1e60216851332d54d14e646adbd47793",
+  "eidolon_admin": "aa8848635bf3b4c5b966bfdd503a3fe74149d20f",
+  "eidolon_agent": "3808351fa7c80a221fba30598ae1653cd05ffc1a",
+  "eidolon_channel": "ba5f8cf659edc8a4bf3826c4a984c44f7d885cb1",
+  "eidolon_memory": "adcbf2da5a7d0403e0f26d9787fc9fea2bd3ed22",
+  "eidolon_models": "29797b8716c0be697f299b9a8f15ebeb50c98c39",
+  "eidolon_sdk": "acf5ce62b546262efe59122992be8c681845dcf9"
+}

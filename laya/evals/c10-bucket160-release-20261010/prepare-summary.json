@@ -1,0 +1,62 @@
+{
+  "release_id": "rk3588-c10-b160-20261010-1",
+  "status": "dry_run",
+  "outcome": "planned",
+  "next": "rerun with --resume --activate after reviewing previous_targets",
+  "plan": {
+    "destructive": "reversible",
+    "host_id": "eidolon-opi5max",
+    "operation": "deploy",
+    "requires_flags": [],
+    "steps": [
+      {
+        "description": "seal the commit-pinned release bundle",
+        "id": "bundle"
+      },
+      {
+        "description": "claim or resume the Host's upload directory",
+        "id": "upload_guard"
+      },
+      {
+        "description": "prove the uploaded bundle digest",
+        "id": "upload_finalize"
+      },
+      {
+        "description": "build the release natively on the Host",
+        "id": "prepare"
+      },
+      {
+        "description": "have the Host's own activator rehearse the switch",
+        "id": "dry_run"
+      },
+      {
+        "description": "switch the release atomically",
+        "id": "activate"
+      },
+      {
+        "description": "deliver the derived Host layer",
+        "id": "host_application"
+      },
+      {
+        "description": "require the release's own health gate",
+        "id": "doctor"
+      },
+      {
+        "description": "require every declared App readiness fact",
+        "id": "app_ready"
+      },
+      {
+        "description": "restore the exact snapshot if a gate fails",
+        "id": "health_gate_rollback"
+      },
+      {
+        "description": "remove terminal and expired workstation bundles",
+        "id": "local_bundle_cleanup"
+      }
+    ],
+    "touches": [
+      "code",
+      "lifecycle"
+    ]
+  }
+}

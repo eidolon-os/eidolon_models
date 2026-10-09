@@ -59,3 +59,9 @@ summary={'soak':stats(rows),'concurrency':stats(concurrent_rows),'coexist_smart_
 (ROOT/'concurrency.json').write_text(json.dumps(concurrent_rows,ensure_ascii=False))
 (ROOT/'coexist.json').write_text(json.dumps(coexist,ensure_ascii=False))
 print(json.dumps({k:v for k,v in summary.items() if k not in ['resources','production_before','production_after','candidate']}),flush=True)
+
+assert summary['soak']['ok'] == 800 and summary['soak']['over_1000'] == 0, 'serial deadline gate'
+assert summary['concurrency']['ok'] == 30 and summary['concurrency']['busy'] == 30, 'overload gate'
+assert max(r['ms'] for r in concurrent_rows if r['status'] == 503) < 100, 'busy response gate'
+assert summary['coexist_smart_home']['ok'] == summary['coexist_participation']['ok'] == 30, 'coexistence gate'
+assert not any(r['response'].get('truncated') for r in rows), 'truncation gate'
