@@ -1,0 +1,1898 @@
+[
+  {
+    "repeat": 0,
+    "text": "打开音箱。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-0",
+      "utterance": "打开音箱。",
+      "outcome": "executed",
+      "message": "已打开智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "调大到音量30%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 30
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 30
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-1",
+      "utterance": "调大到音量30%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 30",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "音量降低10。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-2",
+      "utterance": "音量降低10。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 20",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "关了吧。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-3",
+      "utterance": "关了吧。",
+      "outcome": "executed",
+      "message": "已关闭智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "停止洗衣机。",
+    "expected": [
+      [
+        "balcony.washer",
+        "operational",
+        "stop",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "balcony.washer",
+        "operational",
+        "stop",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-4",
+      "utterance": "停止洗衣机。",
+      "outcome": "executed",
+      "message": "洗衣机 已停止",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "开一下电视。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-5",
+      "utterance": "开一下电视。",
+      "outcome": "executed",
+      "message": "已打开电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "关了电视。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-6",
+      "utterance": "关了电视。",
+      "outcome": "executed",
+      "message": "已关闭电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "电视打开。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-7",
+      "utterance": "电视打开。",
+      "outcome": "executed",
+      "message": "已打开电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "声音小一点。",
+    "expected": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-8",
+      "utterance": "声音小一点。",
+      "outcome": "executed",
+      "message": "电视 音量已调到 10",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "电视的声音小一点。",
+    "expected": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-9",
+      "utterance": "电视的声音小一点。",
+      "outcome": "executed",
+      "message": "电视 音量已调到 0",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "主卧空调打开。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-10",
+      "utterance": "主卧空调打开。",
+      "outcome": "executed",
+      "message": "已打开主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-11",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-12",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "客厅空调打开。",
+    "expected": [
+      [
+        "living.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-13",
+      "utterance": "客厅空调打开。",
+      "outcome": "executed",
+      "message": "已打开客厅空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "living.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-14",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭客厅空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "打开音箱。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-15",
+      "utterance": "打开音箱。",
+      "outcome": "executed",
+      "message": "已打开智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "音量调到40%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 40
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 40
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-16",
+      "utterance": "音量调到40%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 40",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "音量增加10。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": 10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": 10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-17",
+      "utterance": "音量增加10。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 50",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "音量降到20%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 20
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 20
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-18",
+      "utterance": "音量降到20%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 20",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "音量降低5。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -5
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -5
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-19",
+      "utterance": "音量降低5。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 15",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "打开音箱。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-0",
+      "utterance": "打开音箱。",
+      "outcome": "executed",
+      "message": "已打开智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "调大到音量30%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 30
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 30
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-1",
+      "utterance": "调大到音量30%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 30",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "音量降低10。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-2",
+      "utterance": "音量降低10。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 20",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "关了吧。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-3",
+      "utterance": "关了吧。",
+      "outcome": "executed",
+      "message": "已关闭智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "停止洗衣机。",
+    "expected": [
+      [
+        "balcony.washer",
+        "operational",
+        "stop",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "balcony.washer",
+        "operational",
+        "stop",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-4",
+      "utterance": "停止洗衣机。",
+      "outcome": "executed",
+      "message": "洗衣机 已停止",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "开一下电视。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-5",
+      "utterance": "开一下电视。",
+      "outcome": "executed",
+      "message": "已打开电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "关了电视。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-6",
+      "utterance": "关了电视。",
+      "outcome": "executed",
+      "message": "已关闭电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "电视打开。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-7",
+      "utterance": "电视打开。",
+      "outcome": "executed",
+      "message": "已打开电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "声音小一点。",
+    "expected": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-8",
+      "utterance": "声音小一点。",
+      "outcome": "executed",
+      "message": "电视 音量已调到 10",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "电视的声音小一点。",
+    "expected": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-9",
+      "utterance": "电视的声音小一点。",
+      "outcome": "executed",
+      "message": "电视 音量已调到 0",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "主卧空调打开。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-10",
+      "utterance": "主卧空调打开。",
+      "outcome": "executed",
+      "message": "已打开主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-11",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-12",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "客厅空调打开。",
+    "expected": [
+      [
+        "living.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-13",
+      "utterance": "客厅空调打开。",
+      "outcome": "executed",
+      "message": "已打开客厅空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "living.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-14",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭客厅空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "打开音箱。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-15",
+      "utterance": "打开音箱。",
+      "outcome": "executed",
+      "message": "已打开智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "音量调到40%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 40
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 40
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-16",
+      "utterance": "音量调到40%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 40",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "音量增加10。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": 10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": 10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-17",
+      "utterance": "音量增加10。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 50",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "音量降到20%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 20
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 20
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-18",
+      "utterance": "音量降到20%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 20",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "音量降低5。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -5
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -5
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-19",
+      "utterance": "音量降低5。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 15",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "打开音箱。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-0",
+      "utterance": "打开音箱。",
+      "outcome": "executed",
+      "message": "已打开智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "调大到音量30%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 30
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 30
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-1",
+      "utterance": "调大到音量30%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 30",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "音量降低10。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-2",
+      "utterance": "音量降低10。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 20",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "关了吧。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-3",
+      "utterance": "关了吧。",
+      "outcome": "executed",
+      "message": "已关闭智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "停止洗衣机。",
+    "expected": [
+      [
+        "balcony.washer",
+        "operational",
+        "stop",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "balcony.washer",
+        "operational",
+        "stop",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-4",
+      "utterance": "停止洗衣机。",
+      "outcome": "executed",
+      "message": "洗衣机 已停止",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "开一下电视。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-5",
+      "utterance": "开一下电视。",
+      "outcome": "executed",
+      "message": "已打开电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "关了电视。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-6",
+      "utterance": "关了电视。",
+      "outcome": "executed",
+      "message": "已关闭电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "电视打开。",
+    "expected": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-7",
+      "utterance": "电视打开。",
+      "outcome": "executed",
+      "message": "已打开电视",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "声音小一点。",
+    "expected": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-8",
+      "utterance": "声音小一点。",
+      "outcome": "executed",
+      "message": "电视 音量已调到 10",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "电视的声音小一点。",
+    "expected": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.tv",
+        "volume",
+        "step",
+        {
+          "delta": -10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-9",
+      "utterance": "电视的声音小一点。",
+      "outcome": "executed",
+      "message": "电视 音量已调到 0",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "主卧空调打开。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-10",
+      "utterance": "主卧空调打开。",
+      "outcome": "executed",
+      "message": "已打开主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-11",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "master.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-12",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭主卧空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "客厅空调打开。",
+    "expected": [
+      [
+        "living.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.ac",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-13",
+      "utterance": "客厅空调打开。",
+      "outcome": "executed",
+      "message": "已打开客厅空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "关闭空调。",
+    "expected": [
+      [
+        "living.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.ac",
+        "on_off",
+        "off",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-14",
+      "utterance": "关闭空调。",
+      "outcome": "executed",
+      "message": "已关闭客厅空调",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "打开音箱。",
+    "expected": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "on_off",
+        "on",
+        {}
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-15",
+      "utterance": "打开音箱。",
+      "outcome": "executed",
+      "message": "已打开智能音箱",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "音量调到40%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 40
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 40
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-16",
+      "utterance": "音量调到40%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 40",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "音量增加10。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": 10
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": 10
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-17",
+      "utterance": "音量增加10。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 50",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "音量降到20%。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 20
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "set",
+        {
+          "value": 20
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-18",
+      "utterance": "音量降到20%。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 20",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "音量降低5。",
+    "expected": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -5
+        }
+      ]
+    ],
+    "commands": [
+      [
+        "living.speaker",
+        "volume",
+        "step",
+        {
+          "delta": -5
+        }
+      ]
+    ],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-19",
+      "utterance": "音量降低5。",
+      "outcome": "executed",
+      "message": "智能音箱 音量已调到 15",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  }
+]

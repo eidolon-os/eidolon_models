@@ -1,0 +1,290 @@
+[
+  {
+    "repeat": 0,
+    "text": "不要关闭音箱。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-0",
+      "utterance": "不要关闭音箱。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "别调高音量。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-1",
+      "utterance": "别调高音量。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "朋友说打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-2",
+      "utterance": "朋友说打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "明天帮我打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-3",
+      "utterance": "明天帮我打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "取消刚才的请求。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-4",
+      "utterance": "取消刚才的请求。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 0,
+    "text": "如果要关闭电视，应该怎么说？",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-0-5",
+      "utterance": "如果要关闭电视，应该怎么说？",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "不要关闭音箱。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-0",
+      "utterance": "不要关闭音箱。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "别调高音量。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-1",
+      "utterance": "别调高音量。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "朋友说打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-2",
+      "utterance": "朋友说打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "明天帮我打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-3",
+      "utterance": "明天帮我打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "取消刚才的请求。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-4",
+      "utterance": "取消刚才的请求。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 1,
+    "text": "如果要关闭电视，应该怎么说？",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-1-5",
+      "utterance": "如果要关闭电视，应该怎么说？",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "不要关闭音箱。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-0",
+      "utterance": "不要关闭音箱。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "别调高音量。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-1",
+      "utterance": "别调高音量。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "朋友说打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-2",
+      "utterance": "朋友说打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "明天帮我打开电视。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-3",
+      "utterance": "明天帮我打开电视。",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "取消刚才的请求。",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-4",
+      "utterance": "取消刚才的请求。",
+      "outcome": "answered",
+      "message": "上次结果：已打开智能音箱。本次没有新操作，未撤销上次操作",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  },
+  {
+    "repeat": 2,
+    "text": "如果要关闭电视，应该怎么说？",
+    "expected": [],
+    "commands": [],
+    "voice": {
+      "schema_version": 1,
+      "turn_id": "isolated-2-5",
+      "utterance": "如果要关闭电视，应该怎么说？",
+      "outcome": "unrelated",
+      "message": "这里只处理家里的设备",
+      "candidates": [],
+      "command": null
+    },
+    "passed": true
+  }
+]

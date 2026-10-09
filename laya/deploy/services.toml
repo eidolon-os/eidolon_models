@@ -23,12 +23,12 @@ host = "127.0.0.1"
 port = 8771
 
 [smart_home.rknn]
-model_dir = "/var/lib/eidolon/models/laya-smart-home-c10-rknn-e8254243"
+model_dir = "/var/lib/eidolon/models/laya-smart-home-c10-b160-rknn-e8254243"
 # NPU cores 1 and 2; core 0 is the participation service's, so neither queues behind the other.
 # A bucket on two cores is loaded once and shared (rknn_dup_context): the NPU address space is
-# board-wide, about 14 Laya graphs. Measured p50 / p95 454 / 476 ms on cores 1+2 (participation
-# EXPERIMENTS.md, coexistence section).
-placement = "1:128,256,384,512|2:128,256"
+# board-wide. The 160 bucket avoids padding short action questions to 256.
+# 800-request HTTP soak: p50/p95 677/783 ms; evals/c10-bucket160-release-20261010.
+placement = "1:128,160,256,384,512|2:128,160,256"
 speculative = true
 # A second request queued behind the first misses the caller's budget; refusing it at once (503)
 # sends it straight to the Agent's fallback instead.

@@ -1,0 +1,409 @@
+{
+  "soak": {
+    "count": 800,
+    "ok": 800,
+    "busy": 0,
+    "p50": 677.3355910004284,
+    "p95": 782.7618649989745,
+    "max": 864.627486000245,
+    "over_1000": 0
+  },
+  "concurrency": {
+    "count": 60,
+    "ok": 30,
+    "busy": 30,
+    "p50": 818.1984575003298,
+    "p95": 845.2441560002626,
+    "max": 851.7381569999998,
+    "over_1000": 0
+  },
+  "coexist_smart_home": {
+    "count": 30,
+    "ok": 30,
+    "busy": 0,
+    "p50": 728.6658299999544,
+    "p95": 763.4894540005916,
+    "max": 868.7287259999721,
+    "over_1000": 0
+  },
+  "coexist_participation": {
+    "count": 30,
+    "ok": 30,
+    "busy": 0,
+    "p50": 504.49650950031355,
+    "p95": 514.9032440003793,
+    "max": 521.216701999947,
+    "over_1000": 0
+  },
+  "seconds": 578.827272460001,
+  "production_before": {
+    "model": "laya-smart-home",
+    "repo_id": "eidolon-laya-train/laya-smart-home",
+    "revision": "e8254243",
+    "subfolder": "",
+    "service": {
+      "version": "0.1.0",
+      "uptime_s": 39532,
+      "served": 17
+    },
+    "engine": {
+      "backend": "rknn",
+      "device": "rk3588-npu",
+      "precision": {
+        "weights": "float16",
+        "compute": "float16"
+      },
+      "buckets": [
+        128,
+        256,
+        384,
+        512
+      ],
+      "placement": {
+        "1": [
+          128,
+          256,
+          384,
+          512
+        ],
+        "2": [
+          128,
+          256
+        ]
+      },
+      "weight_copies": 4,
+      "cpu_blas": [
+        "libscipy_openblas64_-f552eb69.so:scipy_openblas_set_num_threads64_(1)"
+      ],
+      "max_len": 512,
+      "head_max_len": 512
+    },
+    "limits": {
+      "max_pending": 1,
+      "max_questions": 32,
+      "max_body_bytes": 262144
+    }
+  },
+  "production_after": {
+    "model": "laya-smart-home",
+    "repo_id": "eidolon-laya-train/laya-smart-home",
+    "revision": "e8254243",
+    "subfolder": "",
+    "service": {
+      "version": "0.1.0",
+      "uptime_s": 40111,
+      "served": 17
+    },
+    "engine": {
+      "backend": "rknn",
+      "device": "rk3588-npu",
+      "precision": {
+        "weights": "float16",
+        "compute": "float16"
+      },
+      "buckets": [
+        128,
+        256,
+        384,
+        512
+      ],
+      "placement": {
+        "1": [
+          128,
+          256,
+          384,
+          512
+        ],
+        "2": [
+          128,
+          256
+        ]
+      },
+      "weight_copies": 4,
+      "cpu_blas": [
+        "libscipy_openblas64_-f552eb69.so:scipy_openblas_set_num_threads64_(1)"
+      ],
+      "max_len": 512,
+      "head_max_len": 512
+    },
+    "limits": {
+      "max_pending": 1,
+      "max_questions": 32,
+      "max_body_bytes": 262144
+    }
+  },
+  "candidate": {
+    "model": "laya-smart-home",
+    "repo_id": "eidolon-laya-train/laya-smart-home",
+    "revision": "e8254243",
+    "subfolder": "",
+    "service": {
+      "version": "0.1.0",
+      "uptime_s": 602,
+      "served": 863
+    },
+    "engine": {
+      "backend": "rknn",
+      "device": "rk3588-npu",
+      "precision": {
+        "weights": "float16",
+        "compute": "float16"
+      },
+      "buckets": [
+        128,
+        160,
+        256,
+        384,
+        512
+      ],
+      "placement": {
+        "1": [
+          128,
+          160,
+          256,
+          384,
+          512
+        ],
+        "2": [
+          128,
+          160,
+          256
+        ]
+      },
+      "weight_copies": 5,
+      "cpu_blas": [
+        "libscipy_openblas64_-f552eb69.so:scipy_openblas_set_num_threads64_(1)"
+      ],
+      "max_len": 512,
+      "head_max_len": 512
+    },
+    "limits": {
+      "max_pending": 1,
+      "max_questions": 32,
+      "max_body_bytes": 262144
+    }
+  },
+  "resources": [
+    {
+      "at": 1791561747.3142922,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1789732 kB",
+        "Threads": "1"
+      },
+      "meminfo": {
+        "MemAvailable": "7671044 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561781.9778907,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1820892 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7646964 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561814.9546676,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1820892 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7646888 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561847.5328436,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1820892 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7644692 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561880.7827036,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1820892 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7645108 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561914.1615584,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1820892 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7646620 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561947.4315815,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7642516 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791561980.313949,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7645308 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562014.1834488,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7644472 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562046.9979494,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7637712 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562080.322887,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7635324 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562113.769974,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7443312 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562147.1724002,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7436312 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562179.7471712,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7634112 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562213.2458243,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7438376 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562246.7181191,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7440252 kB",
+        "SwapFree": "8159400 kB"
+      }
+    },
+    {
+      "at": 1791562280.0438814,
+      "pid": 135632,
+      "process": {
+        "VmHWM": "1909332 kB",
+        "VmRSS": "1821156 kB",
+        "Threads": "4"
+      },
+      "meminfo": {
+        "MemAvailable": "7628040 kB",
+        "SwapFree": "8159400 kB"
+      }
+    }
+  ]
+}

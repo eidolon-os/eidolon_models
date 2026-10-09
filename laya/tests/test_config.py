@@ -35,8 +35,8 @@ def test_the_backend_follows_the_hosts_npu_declaration():
 def test_the_product_services_on_an_npu_board():
     home = Settings.for_service("smart_home", capabilities=frozenset({"rknpu2", "local_laya"}))
     assert home.backend == "rknn" and home.port == 8771 and home.max_pending == 1
-    assert home.rknn_placement == "1:128,256,384,512|2:128,256" and home.speculative
-    assert home.model_dir == Path("/var/lib/eidolon/models/laya-smart-home-c10-rknn-e8254243")
+    assert home.rknn_placement == "1:128,160,256,384,512|2:128,160,256" and home.speculative
+    assert home.model_dir == Path("/var/lib/eidolon/models/laya-smart-home-c10-b160-rknn-e8254243")
     assert not home.enable_participation
     team = Settings.for_service("participation", capabilities=frozenset({"rknpu2"}))
     assert team.backend == "rknn" and team.port == 8773 and team.enable_participation

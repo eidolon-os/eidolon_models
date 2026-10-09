@@ -178,13 +178,14 @@ bind = "loopback"
 purpose = "Laya System One decision suggestions, HTTP at /v1/systemone"
 
 # c10 (e8254243), RK3588 FP16; fixed-weight parity and policy validation:
-# laya/evals/c10-npu-20261009. Long-context requests can still exceed the 1s client budget.
+# laya/evals/c10-npu-20261009 and c10-bucket160-release-20261010.
+# Additional 160 bucket reduces padding; original c10 install root stays untouched.
 # The previous c4 release and model root remain available for rollback.
 # Each version uses a separate checksum-verified installation root.
 [[artifacts]]
-id = "laya-smart-home-c10-rknn-e8254243"
+id = "laya-smart-home-c10-b160-rknn-e8254243"
 kind = "model"
-install_root = "/var/lib/eidolon/models/laya-smart-home-c10-rknn-e8254243"
+install_root = "/var/lib/eidolon/models/laya-smart-home-c10-b160-rknn-e8254243"
 requires_capability = "local_laya"
 
 [[artifacts.files]]
@@ -204,13 +205,18 @@ url = "repo://laya/models/laya-smart-home/e8254243/npu/act_head.npz"
 
 [[artifacts.files]]
 path = "npu/export.json"
-sha256 = "612a17009d2aba2bfcc9387f2c5e4fdc05c42b4ce2adbaff987b7ed2ad341d10"
-url = "repo://laya/models/laya-smart-home/e8254243/npu/export.json"
+sha256 = "6e5bba31e41ec1b5fe83eee1a3be9935396b45b979ae1d852b6864560a86db63"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/export-b160.json"
 
 [[artifacts.files]]
 path = "npu/hidden_l128.rknn"
 sha256 = "c763ffab53b9fc8b6e9894d50f7aabe1a36d8f99bd40b95a4d922d72b0be2870"
 url = "repo://laya/models/laya-smart-home/e8254243/npu/hidden_l128.rknn"
+
+[[artifacts.files]]
+path = "npu/hidden_l160.rknn"
+sha256 = "591f6cf439e673f6c94c2630b65fd5b5cbc3e591f8747ad6420051cc6480de45"
+url = "repo://laya/models/laya-smart-home/e8254243/npu/hidden_l160.rknn"
 
 [[artifacts.files]]
 path = "npu/hidden_l256.rknn"
