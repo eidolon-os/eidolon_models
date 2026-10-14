@@ -93,6 +93,25 @@ LiteLLM 官方博客做过同类对比，用的是 80 条英文合成请求，�
 
 **公开基准：** RouterArena（ICLR 2026）的榜单上，MIRT-BERT 67.3、Azure-Router 66.4、CARROT 63.9、vLLM-SR 63.8、GPT-5 62.7、RouteLLM 58.0。论文的总体结论是：开源路由器用更低的成本能做到相近的准确率，但上限比商用的低。榜单各家用的模型池不同，横向比较只能看个大概。
 
+### 商用路由怎么做决定、自报多少
+
+商用路由大都不分“难度档”，而是对候选池里的每个模型预测“它答这条能有多好”，再在质量允许的范围内挑最便宜的。阈值由用户调。
+
+| 方案 | 决策方式 | 用户能调什么 | 自报成绩 | 独立成绩 |
+|---|---|---|---|---|
+| AWS Bedrock IPR | 编码器加每个模型一个小预测头，估计各模型的回答质量；论文说用 150 万条带质量分的请求训练 | “回答质量差”阈值 0–100：强模型预计比兜底模型好过这个比例才升级 | 与家族最强模型同质量时，比全用最强模型省钱：Anthropic 56%、Nova 35%、Meta 16%；论文 43.9%；路由开销 P90 约 85 ms | 无 |
+| Azure Foundry Model Router | 训练过的路由模型，看复杂度、所需推理、任务类型 | 三种模式：Balanced 只在与最佳模型质量差 1%–2% 以内的模型中选最便宜的；Cost 放宽到 5%–6%；Quality 只选质量最高的 | 没有给省钱比例，提供工具让用户拿自己的请求预演分流 | RouterArena 约 66–67，第二名 |
+| Not Diamond | 在大规模评测集上给各模型打分，训练排序模型预测哪个模型最合适 | 质量 / 成本 / 延迟三种取向；可以用自己的请求、各模型回答和评分训练专属路由，候选里可以有自定义模型 | — | RouterArena 57.3；按 OpenRouter 价格约每千次查询 $4.10 |
+| OpenRouter Auto | 原版底层是 Not Diamond，已标记弃用；新的 `auto-beta` 改用平台上全体用户的任务类型排名 | 限定候选的供应商或模型家族 | — | 同 Not Diamond |
+| Martian | 自称“模型映射”：不实际运行就预测模型表现 | — | 在 OpenAI evals 上超过 GPT-4；平均省 20% | 无 |
+| 阿里云百炼 | 未公开 | 效果优先 / 成本优先 | 未公开 | 无 |
+
+**对我们的启发：**
+
+1. **“按难度分档”和“按模型预测质量”是两种思路。** LiteLLM 的 complexity_router 属于前者：档位与具体模型无关，换模型不用重训，但无法利用“这个便宜模型恰好擅长写代码”这类信息。商用路由属于后者，需要每个候选模型的评测数据。
+2. **pplx 的概率输出天然适合做后一种。** 一次调用可以对每个候选模型各问一道是非题：“只用这个模型能否完整答好”。再取概率超过阈值的最便宜模型，这个阈值就相当于 Bedrock 的“质量差”和 Azure 的质量带。零样本时 pplx 只能凭档位描述判断，要真正对准自家模型，需要用自家请求加各模型回答的评分做校准或蒸馏。这正是 Not Diamond 专属路由的做法。
+3. **它们的成绩都是端到端的。** 衡量的是“质量不降时省多少钱”，要实际让各模型作答再评分，不是档位命中率。我们的 93.1% 是档位命中率，两者不能直接比。要和商用方案放在同一把尺子上，需要做一次端到端评测，见第 6 节。
+
 ## 3. 实测
 
 ### 3.1 方法
@@ -343,6 +362,16 @@ LiteLLM 的 jev 通道只问一道档位题，用不上这一点。
 2. **小流量上线。** 写 4.3 的插件，给 9981 加密钥，先对一部分 key 生效。抽 300–500 条真实请求，按结果打标签：便宜档和强档各答一次，由人工或强模型判便宜档是否够用。用这批标签校准置信度门槛和档位描述。
 3. **视流量决定是否蒸馏。** 如果持续 QPS 超过约 10，或长请求多：用 pplx 加 DeepSeek 给真实流量打标签，训练一个 0.6B–1.7B 的生成式小分类器或 ModernBERT 类的编码器，CPU 或便宜 GPU 就能扛住，pplx 退为低置信复核。这正是 laya 走过的路线，训练和部署工具链都是现成的。NVIDIA 的路由 blueprint（DeBERTa / Qwen 1.7B）可作为参照。
 
+**关于和商用路由做对比测试：现在不建议做实机对比。** 原因有三：
+
+- 它们都在自己的模型池里选，比出来的是“模型池加路由”的整体，RouterArena 也把这一点列为横向比较的主要缺陷；
+- 它们都不能在我们自建网关的模型之间路由，比赢比输都不改变选型；
+- 每家都要开账号、付费，请求还要出境。
+
+只有一个例外值得考虑：如果网关的档位模型本来就能在百炼上调到，可以在百炼建一个“便宜加强”的两模型路由，与 pplx 在同一批请求上比“升不升级”的二元决定。
+
+**更值得做的是按商用的口径做一次端到端评测。** 拿网关里真实的便宜档和强档各答一遍，例如 DeepSeek 的 `deepseek-flash` 和 `deepseek-v4-pro`，现有密钥就能调。由强模型或人工判便宜档的回答够不够，再算 pplx 路由在“质量不降”时省多少钱。这样得出的数字可以直接和 Bedrock 的 16%–56%、Martian 的 20% 对照，也能顺带校准第 3.5 节的置信度门槛。
+
 不建议的路线：
 
 - **只用 LiteLLM 默认启发式：** 中文无效。
@@ -365,8 +394,15 @@ LiteLLM 的 jev 通道只问一道档位题，用不上这一点。
   - [LLMRouter](https://github.com/ulab-uiuc/LLMRouter)
 - 商用方案：
   - [AWS Bedrock 价格](https://aws.amazon.com/bedrock/pricing/)
+  - [Bedrock IPR 原理](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html)
+  - [IPR 论文](https://arxiv.org/abs/2509.06274)
+  - [Azure model router 原理](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router-how-it-works)
+  - [Not Diamond 原理](https://docs.notdiamond.ai/docs/how-not-diamond-works)
+  - [Not Diamond 专属路由训练](https://docs.notdiamond.ai/docs/router-training-quickstart)
+  - [OpenRouter Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)
+  - [Martian 路由原理](https://docs.withmartian.com/martian-model-router/model-router/how-the-router-works)
   - [Azure Model Router 价格](https://azure.microsoft.com/en-us/pricing/details/ai-foundry-models/model-router/)
   - [阿里云百炼智能路由](https://help.aliyun.com/en/model-studio/model-routing)
 - 价格与基准：
   - [DeepSeek 价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing)
-  - RouterArena（ICLR 2026）
+  - [RouterArena（ICLR 2026）](https://arxiv.org/abs/2510.00202)
