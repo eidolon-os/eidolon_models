@@ -236,6 +236,33 @@ LiteLLM 怎么用这些字段：
 | 注册成部署 | `model_list` 里加 `pplx-decider`，然后 `router.asystemone(model="pplx-decider", …)` | 正常 |
 | 路由分类器引用部署 | `jev_classifier_config.deployment_name: pplx-decider` | `cause=jev_classifier`，判出 COMPLEX，转到强档 |
 
+### 3.1 升级到 1.107.0.dev1 实测
+
+PyPI 上的 1.107.0.dev1 是 10 月 14 日发布的开发版。测试脚本是 `test_litellm_version.py`，与 1.105.1 对照运行。
+
+| 项目 | 1.107.0.dev1 | 1.105.1 |
+|---|---|---|
+| A 旧写法 `jev` + `jev_classifier_config` | **通过**，自动迁移成新写法，路由正确 | 通过 |
+| B 新写法 `oss_classifier`、`provider: jev`、`api_base` 加 `api_key` | **通过** | 不认识 `oss_classifier`，配置校验失败 |
+| C 新写法 `oss_classifier` 加 `deployment_name`（hosted_vllm 部署） | **通过** | 同上，失败 |
+| D `provider: laya` 指向 pplx | 被拒：laya 只认 english / multilingual / typed-decisions | 不适用 |
+| E `provider: bespoke` 指向 pplx | 被拒：只认 nimble 系列 | 不适用 |
+| F `provider: jev` 只给 `api_base` 不给 `api_key` | 被拒，必须显式给密钥 | 不适用 |
+| G SDK `asystemone`，三种题型一次问 | 通过，146 ms | 通过 |
+| H `Router.asystemone`，用部署名 | 通过 | 通过 |
+| I OpenAI 形 `adecisions`（`input` 加 `predicate` 题）→ hosted_vllm | 通过，LiteLLM 自动转成 System One 形再发给 pplx | 通过 |
+| J DeepSeek 当 `llm` 分类器，不做适配 | **仍会静默退回** | 同样会 |
+| 130 条全量回归：旧写法、新写法各跑一遍 | 两种写法的档位都与 1.105.1 一致（130/130），概率完全相同 | 基线 |
+
+**结论：**
+
+- **升级对 pplx 路由没有影响。** 发给 pplx 的请求逐字相同，判档结果完全一致。
+- **两个版本都能用的写法：** 旧写法在 1.105.1 上能用，到了 1.107 会自动迁移，暂时不用急着改配置。
+- **新写法更规整：** `oss_classifier` 加 `deployment_name` 只在 1.107 及以后能用。
+- **pplx 要用 `hosted_vllm` 部署来接：** 不能把它挂在 `laya` 或 `bespoke` 这两个 provider 下，它们有模型名白名单。
+- **DeepSeek 当分类器的问题没修：** 静默退回依旧，仍要靠插件或格式适配。
+- 1.107 的决策接口还新增了音频、视频输入（`audio`、`videos` 字段），供 Clef-omni 这类多模态决策模型使用。
+
 ## 4. 版本走向
 
 | 版本 | 状态 | 与决策相关的内容 |
