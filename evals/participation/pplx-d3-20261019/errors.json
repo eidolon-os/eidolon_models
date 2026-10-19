@@ -1,0 +1,913 @@
+[
+  {
+    "model": "pplx",
+    "suite": "v7",
+    "id": "val-0-same_name-s1~v0",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M1",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.4125683221568607,
+    "public_state": {
+      "user_request": "今晚炉火归谁添？林秀你说一声。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林秀",
+          "character": "驿站里的老掌柜，话不多，心细，认路认人，待旅伴像家人"
+        },
+        "M1": {
+          "name": "林秀",
+          "character": "年轻的新伙计，性子急，爱打趣，是老掌柜远房侄子，常被唤作小林秀"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M0",
+          "text": "柴房快空了，明早得去背新柴。"
+        },
+        {
+          "author": "M1",
+          "text": "我来背！叔，你歇着。"
+        }
+      ],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v7",
+    "id": "val-0-same_name-s1~v1",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M0",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.4899141030218369,
+    "public_state": {
+      "user_request": "今晚炉火归谁添？林秀你说一声。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林秀",
+          "character": "年轻的新伙计，性子急，爱打趣，是老掌柜远房侄子，常被唤作小林秀"
+        },
+        "M1": {
+          "name": "林秀",
+          "character": "驿站里的老掌柜，话不多，心细，认路认人，待旅伴像家人"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M1",
+          "text": "柴房快空了，明早得去背新柴。"
+        },
+        {
+          "author": "M0",
+          "text": "我来背！叔，你歇着。"
+        }
+      ],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v7",
+    "id": "val-0-unfinished_or_done-s1~v0",
+    "reverse": false,
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M1",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.46601244879274517,
+    "public_state": {
+      "user_request": "小菌别打岔，让苔娘把这段塌方的旧事慢慢讲完，我就爱听她从头讲。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "苔娘",
+          "character": "苔藓园的老园丁，说话慢悠悠，爱讲地下花园旧事，从不急躁"
+        },
+        "M1": {
+          "name": "小菌",
+          "character": "新来的蘑菇学徒，性子急，总想抢话，很敬重苔娘"
+        },
+        "M2": {
+          "name": "石叔",
+          "character": "看守水渠的沉默汉子，只在小菌被水呛到时才多嘴"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M0",
+          "text": "要说这地下花园最早的荧光苔，得从三百年前那次塌方讲起……"
+        },
+        {
+          "author": "M1",
+          "text": "苔娘，您又说这一段！我都听过八遍了。"
+        },
+        {
+          "author": "M0",
+          "text": "好嘞，那我就不急了。那年洞顶塌了半边，黑得伸手不见五指……"
+        }
+      ],
+      "trigger": {
+        "author": "M0",
+        "text": "当时老园长带着大家往深处撤，水漫了上来，眼看就要没过膝盖，苔藓忽然自己亮了起来……"
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "v7",
+    "id": "val-0-unfinished_or_done-s1~v0",
+    "reverse": false,
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M1",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.4778772617530698,
+    "public_state": {
+      "user_request": "小菌别打岔，让苔娘把这段塌方的旧事慢慢讲完，我就爱听她从头讲。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "苔娘",
+          "character": "苔藓园的老园丁，说话慢悠悠，爱讲地下花园旧事，从不急躁"
+        },
+        "M1": {
+          "name": "小菌",
+          "character": "新来的蘑菇学徒，性子急，总想抢话，很敬重苔娘"
+        },
+        "M2": {
+          "name": "石叔",
+          "character": "看守水渠的沉默汉子，只在小菌被水呛到时才多嘴"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M0",
+          "text": "要说这地下花园最早的荧光苔，得从三百年前那次塌方讲起……"
+        },
+        {
+          "author": "M1",
+          "text": "苔娘，您又说这一段！我都听过八遍了。"
+        },
+        {
+          "author": "M0",
+          "text": "好嘞，那我就不急了。那年洞顶塌了半边，黑得伸手不见五指……"
+        }
+      ],
+      "trigger": {
+        "author": "M0",
+        "text": "当时老园长带着大家往深处撤，水漫了上来，眼看就要没过膝盖，苔藓忽然自己亮了起来……"
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "v7",
+    "id": "val-0-unfinished_or_done-s1~v1",
+    "reverse": false,
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M2",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.47833012049689216,
+    "public_state": {
+      "user_request": "沈芦生别打岔，让小鹭把这段塌方的旧事慢慢讲完，我就爱听她从头讲。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "小鹭",
+          "character": "苔藓园的老园丁，说话慢悠悠，爱讲地下花园旧事，从不急躁"
+        },
+        "M1": {
+          "name": "老鳜鱼",
+          "character": "看守水渠的沉默汉子，只在沈芦生被水呛到时才多嘴"
+        },
+        "M2": {
+          "name": "沈芦生",
+          "character": "新来的蘑菇学徒，性子急，总想抢话，很敬重小鹭"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M0",
+          "text": "要说这地下花园最早的荧光苔，得从三百年前那次塌方讲起……"
+        },
+        {
+          "author": "M2",
+          "text": "小鹭，您又说这一段！我都听过八遍了。"
+        },
+        {
+          "author": "M0",
+          "text": "好嘞，那我就不急了。那年洞顶塌了半边，黑得伸手不见五指……"
+        }
+      ],
+      "trigger": {
+        "author": "M0",
+        "text": "当时老园长带着大家往深处撤，水漫了上来，眼看就要没过膝盖，苔藓忽然自己亮了起来……"
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v7",
+    "id": "val-0-unfinished_or_done-s1~v1",
+    "reverse": false,
+    "gold": [
+      "respond:M0"
+    ],
+    "pred": "respond:M2",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.45300324548576426,
+    "public_state": {
+      "user_request": "沈芦生别打岔，让小鹭把这段塌方的旧事慢慢讲完，我就爱听她从头讲。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "小鹭",
+          "character": "苔藓园的老园丁，说话慢悠悠，爱讲地下花园旧事，从不急躁"
+        },
+        "M1": {
+          "name": "老鳜鱼",
+          "character": "看守水渠的沉默汉子，只在沈芦生被水呛到时才多嘴"
+        },
+        "M2": {
+          "name": "沈芦生",
+          "character": "新来的蘑菇学徒，性子急，总想抢话，很敬重小鹭"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [
+        {
+          "author": "M0",
+          "text": "要说这地下花园最早的荧光苔，得从三百年前那次塌方讲起……"
+        },
+        {
+          "author": "M2",
+          "text": "小鹭，您又说这一段！我都听过八遍了。"
+        },
+        {
+          "author": "M0",
+          "text": "好嘞，那我就不急了。那年洞顶塌了半边，黑得伸手不见五指……"
+        }
+      ],
+      "trigger": {
+        "author": "M0",
+        "text": "当时老园长带着大家往深处撤，水漫了上来，眼看就要没过膝盖，苔藓忽然自己亮了起来……"
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "v8",
+    "id": "val-04-s3~v1",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M5",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.6043183323139159,
+    "public_state": {
+      "user_request": "林晚秋，你觉得今年冬天雪下得算大吗？",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚秋",
+          "character": "嗓门洪亮的大婶，爱腌酸菜，冬天总招呼邻居来屋里吃热乎的，关心各家柴火够不够。"
+        },
+        "M1": {
+          "name": "老猫婶",
+          "character": "养了三只猫的老太太，爱唠叨又热心，冬天总揣着热水袋串门。"
+        },
+        "M2": {
+          "name": "陈冬来",
+          "character": "老实憨厚的汉子，会凿冰捕鱼，笑起来憨憨的，谁家搬重物都来帮忙。"
+        },
+        "M3": {
+          "name": "苏白",
+          "character": "安静的书生模样的年轻人，喜欢在湖边写字画画，话少但心细。"
+        },
+        "M4": {
+          "name": "沈砚",
+          "character": "爱讲笑话的教书先生，说话文绉绉，最喜欢在饭桌上给大家出谜语。"
+        },
+        "M5": {
+          "name": "林晚秋",
+          "character": "爱织毛衣的年轻姑娘，说话软糯，总爱蹲在湖边看冰花，谁找她借毛线都乐意。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v8",
+    "id": "val-04-s3~v1",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M5",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.7897161176785161,
+    "public_state": {
+      "user_request": "林晚秋，你觉得今年冬天雪下得算大吗？",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚秋",
+          "character": "嗓门洪亮的大婶，爱腌酸菜，冬天总招呼邻居来屋里吃热乎的，关心各家柴火够不够。"
+        },
+        "M1": {
+          "name": "老猫婶",
+          "character": "养了三只猫的老太太，爱唠叨又热心，冬天总揣着热水袋串门。"
+        },
+        "M2": {
+          "name": "陈冬来",
+          "character": "老实憨厚的汉子，会凿冰捕鱼，笑起来憨憨的，谁家搬重物都来帮忙。"
+        },
+        "M3": {
+          "name": "苏白",
+          "character": "安静的书生模样的年轻人，喜欢在湖边写字画画，话少但心细。"
+        },
+        "M4": {
+          "name": "沈砚",
+          "character": "爱讲笑话的教书先生，说话文绉绉，最喜欢在饭桌上给大家出谜语。"
+        },
+        "M5": {
+          "name": "林晚秋",
+          "character": "爱织毛衣的年轻姑娘，说话软糯，总爱蹲在湖边看冰花，谁找她借毛线都乐意。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v8",
+    "id": "val-05-s3~v1",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M1",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.39457632217944566,
+    "public_state": {
+      "user_request": "林晚萤，你最近睡得还好吗？我这几夜总被窗外的风声扰醒，想听听古城里的邻居们平常是怎样安排就寝的，也顺便取取经。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚萤",
+          "character": "古城里爱说爱笑的采露精灵，总是先笑后开口，走路蹦蹦跳跳，和织网的那位是远亲。"
+        },
+        "M1": {
+          "name": "林晚萤",
+          "character": "苔藓古城里性子安静的织网精灵，说话轻缓含蓄，喜欢在雨后的石桥边修补捕光网。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v8",
+    "id": "val-06-s3~v0",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M0",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.5588993904520567,
+    "public_state": {
+      "user_request": "林晚舟，你平日坐这条渡船往来群岛，一天里你最惬意的时辰是哪一段？随口说说就行，不用讲什么大道理。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "群岛渡船上的老船客，守着一张自记的潮汐簿，遇事先摇头说'不是这样的'，再慢悠悠讲清本意，讲潮汐如数家珍。"
+        },
+        "M1": {
+          "name": "林晚舟",
+          "character": "同船旅伴中的年轻画师，性子急，也惯于先否定误解再亮出真实想法，画本里画满岛上的渔火与桅杆。"
+        },
+        "M2": {
+          "name": "苏聆风",
+          "character": "渡船上的健谈旅伴，热心肠，谁的话题都爱搭一句，善于打圆场。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "v8",
+    "id": "val-06-s3~v0",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M0",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.4796588875243924,
+    "public_state": {
+      "user_request": "林晚舟，你平日坐这条渡船往来群岛，一天里你最惬意的时辰是哪一段？随口说说就行，不用讲什么大道理。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "群岛渡船上的老船客，守着一张自记的潮汐簿，遇事先摇头说'不是这样的'，再慢悠悠讲清本意，讲潮汐如数家珍。"
+        },
+        "M1": {
+          "name": "林晚舟",
+          "character": "同船旅伴中的年轻画师，性子急，也惯于先否定误解再亮出真实想法，画本里画满岛上的渔火与桅杆。"
+        },
+        "M2": {
+          "name": "苏聆风",
+          "character": "渡船上的健谈旅伴，热心肠，谁的话题都爱搭一句，善于打圆场。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "v8",
+    "id": "val-06-s3~v1",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M2",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.48507271938105445,
+    "public_state": {
+      "user_request": "林晚舟，你平日坐这条渡船往来群岛，一天里你最惬意的时辰是哪一段？随口说说就行，不用讲什么大道理。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "同船旅伴中的年轻画师，性子急，也惯于先否定误解再亮出真实想法，画本里画满岛上的渔火与桅杆。"
+        },
+        "M1": {
+          "name": "苏聆风",
+          "character": "渡船上的健谈旅伴，热心肠，谁的话题都爱搭一句，善于打圆场。"
+        },
+        "M2": {
+          "name": "林晚舟",
+          "character": "群岛渡船上的老船客，守着一张自记的潮汐簿，遇事先摇头说'不是这样的'，再慢悠悠讲清本意，讲潮汐如数家珍。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v8",
+    "id": "val-06-s3~v1",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M2",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.5313691643248459,
+    "public_state": {
+      "user_request": "林晚舟，你平日坐这条渡船往来群岛，一天里你最惬意的时辰是哪一段？随口说说就行，不用讲什么大道理。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "同船旅伴中的年轻画师，性子急，也惯于先否定误解再亮出真实想法，画本里画满岛上的渔火与桅杆。"
+        },
+        "M1": {
+          "name": "苏聆风",
+          "character": "渡船上的健谈旅伴，热心肠，谁的话题都爱搭一句，善于打圆场。"
+        },
+        "M2": {
+          "name": "林晚舟",
+          "character": "群岛渡船上的老船客，守着一张自记的潮汐簿，遇事先摇头说'不是这样的'，再慢悠悠讲清本意，讲潮汐如数家珍。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v8",
+    "id": "val-14-s2~v0",
+    "reverse": false,
+    "gold": [
+      "wait"
+    ],
+    "pred": "respond:M4",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.43033677193426956,
+    "public_state": {
+      "user_request": "各位先停一停，谁都先别出声，我在琢磨一件事，想清楚了再叫你们。甲板上的风挺舒服，就让我安静一会儿吧。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "沉默寡言的织网人，说话前总先纠正别人的误会，与陈潮生是多年老友。"
+        },
+        "M1": {
+          "name": "林晚舟",
+          "character": "健谈爱笑的年轻歌者，喜欢在甲板上哼小调，是老崔的外甥女。"
+        },
+        "M2": {
+          "name": "陈潮生",
+          "character": "热心直率的舵手，爱张罗船上大小事，与织网的林晚舟交情深厚。"
+        },
+        "M3": {
+          "name": "老崔",
+          "character": "年长的渡船看舱人，话不多却记性好，格外疼爱外甥女。"
+        },
+        "M4": {
+          "name": "苏纥",
+          "character": "安静的旅人，随身带着一本旧笔记，喜欢观察海面。"
+        },
+        "M5": {
+          "name": "阿蔓",
+          "character": "好奇的少女乘客，总爱问东问西，和歌者林晚舟很谈得来。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "v8",
+    "id": "val-14-s2~v1",
+    "reverse": false,
+    "gold": [
+      "wait"
+    ],
+    "pred": "respond:M4",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.25893991424046514,
+    "public_state": {
+      "user_request": "各位先停一停，谁都先别出声，我在琢磨一件事，想清楚了再叫你们。甲板上的风挺舒服，就让我安静一会儿吧。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "沉默寡言的织网人，说话前总先纠正别人的误会，与陈潮生是多年老友。"
+        },
+        "M1": {
+          "name": "阿蔓",
+          "character": "好奇的少女乘客，总爱问东问西，和歌者林晚舟很谈得来。"
+        },
+        "M2": {
+          "name": "苏纥",
+          "character": "安静的旅人，随身带着一本旧笔记，喜欢观察海面。"
+        },
+        "M3": {
+          "name": "陈潮生",
+          "character": "热心直率的舵手，爱张罗船上大小事，与织网的林晚舟交情深厚。"
+        },
+        "M4": {
+          "name": "老崔",
+          "character": "年长的渡船看舱人，话不多却记性好，格外疼爱外甥女。"
+        },
+        "M5": {
+          "name": "林晚舟",
+          "character": "健谈爱笑的年轻歌者，喜欢在甲板上哼小调，是老崔的外甥女。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "v8",
+    "id": "val-14-s3~v0",
+    "reverse": false,
+    "gold": [
+      "abstain"
+    ],
+    "pred": "respond:M1",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.3984932806765868,
+    "public_state": {
+      "user_request": "林晚舟，问你个事：你晚上睡在船舱里，铺盖是自己带的还是船上备的？住着习惯吗？随便聊聊就好。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "林晚舟",
+          "character": "沉默寡言的织网人，说话前总先纠正别人的误会，与陈潮生是多年老友。"
+        },
+        "M1": {
+          "name": "林晚舟",
+          "character": "健谈爱笑的年轻歌者，喜欢在甲板上哼小调，是老崔的外甥女。"
+        },
+        "M2": {
+          "name": "陈潮生",
+          "character": "热心直率的舵手，爱张罗船上大小事，与织网的林晚舟交情深厚。"
+        },
+        "M3": {
+          "name": "老崔",
+          "character": "年长的渡船看舱人，话不多却记性好，格外疼爱外甥女。"
+        },
+        "M4": {
+          "name": "苏纥",
+          "character": "安静的旅人，随身带着一本旧笔记，喜欢观察海面。"
+        },
+        "M5": {
+          "name": "阿蔓",
+          "character": "好奇的少女乘客，总爱问东问西，和歌者林晚舟很谈得来。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "product_team",
+    "id": "t5:0",
+    "reverse": false,
+    "gold": [
+      "clarify:M0",
+      "clarify:M1"
+    ],
+    "pred": "wait",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.2655745064062633,
+    "public_state": {
+      "user_request": "让他接着说。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "阿舟",
+          "character": "喜欢散步和自然观察，讲话简洁。"
+        },
+        "M1": {
+          "name": "小岚",
+          "character": "喜欢美食与城市探索，善于补充实际细节。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "d3",
+    "suite": "product_team",
+    "id": "t5:0",
+    "reverse": true,
+    "gold": [
+      "clarify:M0",
+      "clarify:M1"
+    ],
+    "pred": "wait",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.28663752612796467,
+    "public_state": {
+      "user_request": "让他接着说。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "阿舟",
+          "character": "喜欢散步和自然观察，讲话简洁。"
+        },
+        "M1": {
+          "name": "小岚",
+          "character": "喜欢美食与城市探索，善于补充实际细节。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  },
+  {
+    "model": "pplx",
+    "suite": "product_team",
+    "id": "t5:0",
+    "reverse": true,
+    "gold": [
+      "clarify:M0",
+      "clarify:M1"
+    ],
+    "pred": "abstain",
+    "valid": true,
+    "error": null,
+    "max_probability": 0.23736410801205762,
+    "public_state": {
+      "user_request": "让他接着说。",
+      "scene_goal": "",
+      "candidates": {
+        "M0": {
+          "name": "阿舟",
+          "character": "喜欢散步和自然观察，讲话简洁。"
+        },
+        "M1": {
+          "name": "小岚",
+          "character": "喜欢美食与城市探索，善于补充实际细节。"
+        }
+      },
+      "allowed_actions": [
+        "respond",
+        "clarify",
+        "wait",
+        "finish"
+      ],
+      "remaining_replies": 8,
+      "prior_public_messages": [],
+      "trigger": {
+        "same_as_user_request": true
+      }
+    }
+  }
+]

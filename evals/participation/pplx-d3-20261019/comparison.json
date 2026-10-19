@@ -1,0 +1,968 @@
+{
+  "current": {
+    "pplx": {
+      "v7": {
+        "planned": 42,
+        "received": 42,
+        "valid": 42,
+        "correct": 38,
+        "accuracy_over_planned": 0.9047619047619048,
+        "accuracy_valid": 0.9047619047619048,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 30,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 6,
+            "correct": 6,
+            "wrong_speech": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": null
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 21,
+        "fully_correct_observed_families": 19,
+        "high_probability_0_8": {
+          "n": 31,
+          "correct": 31,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 42,
+          "p50_ms": 156.47254150826484,
+          "p95_ms": 178.77283299458213,
+          "mean_ms": 162.98996031123568,
+          "min_ms": 122.38854198949412,
+          "max_ms": 291.2768749811221
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 41,
+          "p50_ms": 156.04216701467521,
+          "p95_ms": 178.6722500110045,
+          "mean_ms": 159.86101117294578,
+          "min_ms": 122.38854198949412,
+          "max_ms": 179.41558299935423
+        }
+      },
+      "v8": {
+        "planned": 72,
+        "received": 72,
+        "valid": 72,
+        "correct": 66,
+        "accuracy_over_planned": 0.9166666666666666,
+        "accuracy_valid": 0.9166666666666666,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 24,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 24,
+            "correct": 22,
+            "wrong_speech": 2
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 20,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 12,
+        "fully_correct_observed_families": 8,
+        "high_probability_0_8": {
+          "n": 44,
+          "correct": 44,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 72,
+          "p50_ms": 156.30327099643182,
+          "p95_ms": 182.29029199574143,
+          "mean_ms": 153.53231484631476,
+          "min_ms": 122.1836660115514,
+          "max_ms": 182.87987500661984
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 72,
+          "p50_ms": 156.30327099643182,
+          "p95_ms": 182.29029199574143,
+          "mean_ms": 153.53231484631476,
+          "min_ms": 122.1836660115514,
+          "max_ms": 182.87987500661984
+        }
+      },
+      "product_team": {
+        "planned": 24,
+        "received": 24,
+        "valid": 24,
+        "correct": 22,
+        "accuracy_over_planned": 0.9166666666666666,
+        "accuracy_valid": 0.9166666666666666,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 16,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 4,
+            "correct": 4,
+            "wrong_speech": 0
+          },
+          "clarify": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": null
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 6,
+        "fully_correct_observed_families": 5,
+        "high_probability_0_8": {
+          "n": 18,
+          "correct": 18,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 24,
+          "p50_ms": 155.94637452159077,
+          "p95_ms": 158.24179199989885,
+          "mean_ms": 153.70370478922268,
+          "min_ms": 125.63495899667032,
+          "max_ms": 161.5284160070587
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 24,
+          "p50_ms": 155.94637452159077,
+          "p95_ms": 158.24179199989885,
+          "mean_ms": 153.70370478922268,
+          "min_ms": 125.63495899667032,
+          "max_ms": 161.5284160070587
+        }
+      },
+      "product_orders": {
+        "False": {
+          "planned": 12,
+          "received": 12,
+          "valid": 12,
+          "correct": 11,
+          "accuracy_over_planned": 0.9166666666666666,
+          "accuracy_valid": 0.9166666666666666,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 8,
+              "wrong_speech": null
+            },
+            "stop": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0
+            },
+            "clarify": {
+              "n": 1,
+              "correct": 0,
+              "wrong_speech": null
+            },
+            "abstain": {
+              "n": 1,
+              "correct": 1,
+              "wrong_speech": null
+            }
+          },
+          "observed_families": 6,
+          "fully_correct_observed_families": 5,
+          "high_probability_0_8": {
+            "n": 9,
+            "correct": 9,
+            "errors": 0
+          },
+          "latency_all_attempts": {
+            "n": 12,
+            "p50_ms": 156.00929150241427,
+            "p95_ms": 161.5284160070587,
+            "mean_ms": 154.26939916505944,
+            "min_ms": 126.8434580124449,
+            "max_ms": 161.5284160070587
+          },
+          "latency_valid_excluding_first_model_request": {
+            "n": 12,
+            "p50_ms": 156.00929150241427,
+            "p95_ms": 161.5284160070587,
+            "mean_ms": 154.26939916505944,
+            "min_ms": 126.8434580124449,
+            "max_ms": 161.5284160070587
+          }
+        },
+        "True": {
+          "planned": 12,
+          "received": 12,
+          "valid": 12,
+          "correct": 11,
+          "accuracy_over_planned": 0.9166666666666666,
+          "accuracy_valid": 0.9166666666666666,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 8,
+              "wrong_speech": null
+            },
+            "stop": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0
+            },
+            "clarify": {
+              "n": 1,
+              "correct": 0,
+              "wrong_speech": null
+            },
+            "abstain": {
+              "n": 1,
+              "correct": 1,
+              "wrong_speech": null
+            }
+          },
+          "observed_families": 6,
+          "fully_correct_observed_families": 5,
+          "high_probability_0_8": {
+            "n": 9,
+            "correct": 9,
+            "errors": 0
+          },
+          "latency_all_attempts": {
+            "n": 12,
+            "p50_ms": 155.63287498662248,
+            "p95_ms": 157.73075001197867,
+            "mean_ms": 153.13801041338593,
+            "min_ms": 125.63495899667032,
+            "max_ms": 157.73075001197867
+          },
+          "latency_valid_excluding_first_model_request": {
+            "n": 12,
+            "p50_ms": 155.63287498662248,
+            "p95_ms": 157.73075001197867,
+            "mean_ms": 153.13801041338593,
+            "min_ms": 125.63495899667032,
+            "max_ms": 157.73075001197867
+          }
+        }
+      },
+      "product_stability": {
+        "snapshots": 12,
+        "both_correct": 11,
+        "same_answer": 11
+      },
+      "latency_all": {
+        "n": 138,
+        "p50_ms": 156.16889600642025,
+        "p95_ms": 180.76495800050907,
+        "mean_ms": 156.4405356300573,
+        "min_ms": 122.1836660115514,
+        "max_ms": 291.2768749811221
+      },
+      "latency_excluding_first": {
+        "n": 137,
+        "p50_ms": 156.14429200650193,
+        "p95_ms": 180.41433399775997,
+        "mean_ms": 155.45632877348018,
+        "min_ms": 122.1836660115514,
+        "max_ms": 182.87987500661984
+      },
+      "first_request_ms": [
+        291.2768749811221
+      ],
+      "server_models": [
+        "pplx-decider-v1.1-27b"
+      ],
+      "input_tokens": {
+        "reported_n": 138,
+        "total": 62560,
+        "min": 336,
+        "max": 585
+      }
+    },
+    "d3": {
+      "v7": {
+        "planned": 42,
+        "received": 42,
+        "valid": 42,
+        "correct": 40,
+        "accuracy_over_planned": 0.9523809523809523,
+        "accuracy_valid": 0.9523809523809523,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 30,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 6,
+            "correct": 6,
+            "wrong_speech": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 21,
+        "fully_correct_observed_families": 20,
+        "high_probability_0_8": {
+          "n": 30,
+          "correct": 30,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 42,
+          "p50_ms": 108.07137499796227,
+          "p95_ms": 160.21754100802355,
+          "mean_ms": 116.24824902225684,
+          "min_ms": 94.6728749840986,
+          "max_ms": 213.2082909811288
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 41,
+          "p50_ms": 107.98754199640825,
+          "p95_ms": 157.3724169866182,
+          "mean_ms": 113.88336995008925,
+          "min_ms": 94.6728749840986,
+          "max_ms": 166.76954200374894
+        }
+      },
+      "v8": {
+        "planned": 72,
+        "received": 72,
+        "valid": 72,
+        "correct": 68,
+        "accuracy_over_planned": 0.9444444444444444,
+        "accuracy_valid": 0.9444444444444444,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 24,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 24,
+            "correct": 24,
+            "wrong_speech": 0
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 20,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 12,
+        "fully_correct_observed_families": 9,
+        "high_probability_0_8": {
+          "n": 44,
+          "correct": 44,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 72,
+          "p50_ms": 106.35624999122228,
+          "p95_ms": 122.04712498351,
+          "mean_ms": 107.58760476447706,
+          "min_ms": 93.29029198852368,
+          "max_ms": 125.87779201567173
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 72,
+          "p50_ms": 106.35624999122228,
+          "p95_ms": 122.04712498351,
+          "mean_ms": 107.58760476447706,
+          "min_ms": 93.29029198852368,
+          "max_ms": 125.87779201567173
+        }
+      },
+      "product_team": {
+        "planned": 24,
+        "received": 24,
+        "valid": 24,
+        "correct": 23,
+        "accuracy_over_planned": 0.9583333333333334,
+        "accuracy_valid": 0.9583333333333334,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 16,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 4,
+            "correct": 4,
+            "wrong_speech": 0
+          },
+          "clarify": {
+            "n": 2,
+            "correct": 1,
+            "wrong_speech": null
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 6,
+        "fully_correct_observed_families": 5,
+        "high_probability_0_8": {
+          "n": 14,
+          "correct": 14,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 24,
+          "p50_ms": 105.30854201351758,
+          "p95_ms": 107.27712500374764,
+          "mean_ms": 104.79930558479585,
+          "min_ms": 96.07254201546311,
+          "max_ms": 107.85291600041091
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 24,
+          "p50_ms": 105.30854201351758,
+          "p95_ms": 107.27712500374764,
+          "mean_ms": 104.79930558479585,
+          "min_ms": 96.07254201546311,
+          "max_ms": 107.85291600041091
+        }
+      },
+      "product_orders": {
+        "False": {
+          "planned": 12,
+          "received": 12,
+          "valid": 12,
+          "correct": 12,
+          "accuracy_over_planned": 1.0,
+          "accuracy_valid": 1.0,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 8,
+              "wrong_speech": null
+            },
+            "stop": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0
+            },
+            "clarify": {
+              "n": 1,
+              "correct": 1,
+              "wrong_speech": null
+            },
+            "abstain": {
+              "n": 1,
+              "correct": 1,
+              "wrong_speech": null
+            }
+          },
+          "observed_families": 6,
+          "fully_correct_observed_families": 6,
+          "high_probability_0_8": {
+            "n": 7,
+            "correct": 7,
+            "errors": 0
+          },
+          "latency_all_attempts": {
+            "n": 12,
+            "p50_ms": 105.55862550972961,
+            "p95_ms": 107.85291600041091,
+            "mean_ms": 104.86190633673687,
+            "min_ms": 97.21337500377558,
+            "max_ms": 107.85291600041091
+          },
+          "latency_valid_excluding_first_model_request": {
+            "n": 12,
+            "p50_ms": 105.55862550972961,
+            "p95_ms": 107.85291600041091,
+            "mean_ms": 104.86190633673687,
+            "min_ms": 97.21337500377558,
+            "max_ms": 107.85291600041091
+          }
+        },
+        "True": {
+          "planned": 12,
+          "received": 12,
+          "valid": 12,
+          "correct": 11,
+          "accuracy_over_planned": 0.9166666666666666,
+          "accuracy_valid": 0.9166666666666666,
+          "groups": {
+            "respond": {
+              "n": 8,
+              "correct": 8,
+              "wrong_speech": null
+            },
+            "stop": {
+              "n": 2,
+              "correct": 2,
+              "wrong_speech": 0
+            },
+            "clarify": {
+              "n": 1,
+              "correct": 0,
+              "wrong_speech": null
+            },
+            "abstain": {
+              "n": 1,
+              "correct": 1,
+              "wrong_speech": null
+            }
+          },
+          "observed_families": 6,
+          "fully_correct_observed_families": 5,
+          "high_probability_0_8": {
+            "n": 7,
+            "correct": 7,
+            "errors": 0
+          },
+          "latency_all_attempts": {
+            "n": 12,
+            "p50_ms": 105.10666700429283,
+            "p95_ms": 107.27712500374764,
+            "mean_ms": 104.73670483285484,
+            "min_ms": 96.07254201546311,
+            "max_ms": 107.27712500374764
+          },
+          "latency_valid_excluding_first_model_request": {
+            "n": 12,
+            "p50_ms": 105.10666700429283,
+            "p95_ms": 107.27712500374764,
+            "mean_ms": 104.73670483285484,
+            "min_ms": 96.07254201546311,
+            "max_ms": 107.27712500374764
+          }
+        }
+      },
+      "product_stability": {
+        "snapshots": 12,
+        "both_correct": 11,
+        "same_answer": 11
+      },
+      "latency_all": {
+        "n": 138,
+        "p50_ms": 106.35318749700673,
+        "p95_ms": 124.39820900908671,
+        "mean_ms": 109.73853142037852,
+        "min_ms": 93.29029198852368,
+        "max_ms": 213.2082909811288
+      },
+      "latency_excluding_first": {
+        "n": 137,
+        "p50_ms": 106.24724999070168,
+        "p95_ms": 124.16004200349562,
+        "mean_ms": 108.98327770095699,
+        "min_ms": 93.29029198852368,
+        "max_ms": 166.76954200374894
+      },
+      "first_request_ms": [
+        213.2082909811288
+      ],
+      "server_models": [
+        "d3"
+      ],
+      "input_tokens": {
+        "reported_n": 138,
+        "total": 63250,
+        "min": 341,
+        "max": 590
+      }
+    }
+  },
+  "historical": {
+    "laya": {
+      "v7": {
+        "planned": 42,
+        "received": 42,
+        "valid": 42,
+        "correct": 17,
+        "accuracy_over_planned": 0.40476190476190477,
+        "accuracy_valid": 0.40476190476190477,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 13,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 6,
+            "correct": 2,
+            "wrong_speech": 2
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": null
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 21,
+        "fully_correct_observed_families": 5,
+        "high_probability_0_8": {
+          "n": 8,
+          "correct": 6,
+          "errors": 2
+        },
+        "latency_all_attempts": {
+          "n": 42,
+          "p50_ms": 47.79977101134136,
+          "p95_ms": 56.782458035741,
+          "mean_ms": 49.20877478850473,
+          "min_ms": 31.961250002495944,
+          "max_ms": 150.30354098416865
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 41,
+          "p50_ms": 47.572750016115606,
+          "p95_ms": 56.44970899447799,
+          "mean_ms": 46.74304878373244,
+          "min_ms": 31.961250002495944,
+          "max_ms": 59.162207995541394
+        }
+      },
+      "v8": {
+        "planned": 72,
+        "received": 72,
+        "valid": 72,
+        "correct": 9,
+        "accuracy_over_planned": 0.125,
+        "accuracy_valid": 0.125,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 6,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 24,
+            "correct": 3,
+            "wrong_speech": 20
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 0,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 12,
+        "fully_correct_observed_families": 0,
+        "high_probability_0_8": {
+          "n": 18,
+          "correct": 4,
+          "errors": 14
+        },
+        "latency_all_attempts": {
+          "n": 72,
+          "p50_ms": 47.06883302424103,
+          "p95_ms": 67.92395905358717,
+          "mean_ms": 47.18932808545004,
+          "min_ms": 28.976166038773954,
+          "max_ms": 79.00904095731676
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 72,
+          "p50_ms": 47.06883302424103,
+          "p95_ms": 67.92395905358717,
+          "mean_ms": 47.18932808545004,
+          "min_ms": 28.976166038773954,
+          "max_ms": 79.00904095731676
+        }
+      },
+      "latency_excluding_first": {
+        "n": 113,
+        "p50_ms": 47.572750016115606,
+        "p95_ms": 65.14237500960007,
+        "mean_ms": 47.02740373703923,
+        "min_ms": 28.976166038773954,
+        "max_ms": 79.00904095731676
+      }
+    },
+    "laya-r6": {
+      "v7": {
+        "planned": 42,
+        "received": 42,
+        "valid": 42,
+        "correct": 27,
+        "accuracy_over_planned": 0.6428571428571429,
+        "accuracy_valid": 0.6428571428571429,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 23,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 6,
+            "correct": 2,
+            "wrong_speech": 4
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": null
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 21,
+        "fully_correct_observed_families": 12,
+        "high_probability_0_8": {
+          "n": 4,
+          "correct": 4,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 42,
+          "p50_ms": 65.3721664857585,
+          "p95_ms": 107.09329100791365,
+          "mean_ms": 72.60017955420716,
+          "min_ms": 37.23154199542478,
+          "max_ms": 157.16975001851097
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 41,
+          "p50_ms": 64.9692079750821,
+          "p95_ms": 106.31524998461828,
+          "mean_ms": 70.53750710385829,
+          "min_ms": 37.23154199542478,
+          "max_ms": 109.04191702138633
+        }
+      },
+      "v8": {
+        "planned": 72,
+        "received": 72,
+        "valid": 72,
+        "correct": 12,
+        "accuracy_over_planned": 0.16666666666666666,
+        "accuracy_valid": 0.16666666666666666,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 12,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 24,
+            "correct": 0,
+            "wrong_speech": 24
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 0,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 12,
+        "fully_correct_observed_families": 0,
+        "high_probability_0_8": {
+          "n": 0,
+          "correct": 0,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 72,
+          "p50_ms": 58.98556197644211,
+          "p95_ms": 90.45987500576302,
+          "mean_ms": 60.77492183976574,
+          "min_ms": 38.72799995588139,
+          "max_ms": 106.52349999872968
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 72,
+          "p50_ms": 58.98556197644211,
+          "p95_ms": 90.45987500576302,
+          "mean_ms": 60.77492183976574,
+          "min_ms": 38.72799995588139,
+          "max_ms": 106.52349999872968
+        }
+      },
+      "latency_excluding_first": {
+        "n": 113,
+        "p50_ms": 60.86025002878159,
+        "p95_ms": 99.1877909982577,
+        "mean_ms": 64.317098793994,
+        "min_ms": 37.23154199542478,
+        "max_ms": 109.04191702138633
+      }
+    },
+    "laya-r7": {
+      "v7": {
+        "planned": 42,
+        "received": 42,
+        "valid": 42,
+        "correct": 9,
+        "accuracy_over_planned": 0.21428571428571427,
+        "accuracy_valid": 0.21428571428571427,
+        "groups": {
+          "respond": {
+            "n": 32,
+            "correct": 3,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 6,
+            "correct": 4,
+            "wrong_speech": 0
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0,
+            "wrong_speech": null
+          },
+          "mixed": {
+            "n": 2,
+            "correct": 2,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 21,
+        "fully_correct_observed_families": 4,
+        "high_probability_0_8": {
+          "n": 7,
+          "correct": 4,
+          "errors": 3
+        },
+        "latency_all_attempts": {
+          "n": 42,
+          "p50_ms": 62.202312488807365,
+          "p95_ms": 96.20495903072879,
+          "mean_ms": 65.87460912054493,
+          "min_ms": 37.10995800793171,
+          "max_ms": 183.20408300496638
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 41,
+          "p50_ms": 61.62641599075869,
+          "p95_ms": 91.40358300646767,
+          "mean_ms": 63.01291463555904,
+          "min_ms": 37.10995800793171,
+          "max_ms": 99.33258296223357
+        }
+      },
+      "v8": {
+        "planned": 72,
+        "received": 72,
+        "valid": 72,
+        "correct": 42,
+        "accuracy_over_planned": 0.5833333333333334,
+        "accuracy_valid": 0.5833333333333334,
+        "groups": {
+          "respond": {
+            "n": 24,
+            "correct": 5,
+            "wrong_speech": null
+          },
+          "stop": {
+            "n": 24,
+            "correct": 14,
+            "wrong_speech": 1
+          },
+          "abstain": {
+            "n": 24,
+            "correct": 23,
+            "wrong_speech": null
+          }
+        },
+        "observed_families": 12,
+        "fully_correct_observed_families": 0,
+        "high_probability_0_8": {
+          "n": 6,
+          "correct": 6,
+          "errors": 0
+        },
+        "latency_all_attempts": {
+          "n": 72,
+          "p50_ms": 63.888895499985665,
+          "p95_ms": 101.39195894589648,
+          "mean_ms": 67.242752294179,
+          "min_ms": 33.089666976593435,
+          "max_ms": 124.31712500983849
+        },
+        "latency_valid_excluding_first_model_request": {
+          "n": 72,
+          "p50_ms": 63.888895499985665,
+          "p95_ms": 101.39195894589648,
+          "mean_ms": 67.242752294179,
+          "min_ms": 33.089666976593435,
+          "max_ms": 124.31712500983849
+        }
+      },
+      "latency_excluding_first": {
+        "n": 113,
+        "p50_ms": 61.92916602594778,
+        "p95_ms": 98.85154099902138,
+        "mean_ms": 65.70803243574167,
+        "min_ms": 33.089666976593435,
+        "max_ms": 124.31712500983849
+      }
+    }
+  },
+  "paired_vs_laya": {
+    "pplx vs laya": {
+      "matched": 114,
+      "fixed_old_errors": 80,
+      "broke_old_correct": 2
+    },
+    "d3 vs laya": {
+      "matched": 114,
+      "fixed_old_errors": 84,
+      "broke_old_correct": 2
+    },
+    "pplx vs laya-r6": {
+      "matched": 114,
+      "fixed_old_errors": 67,
+      "broke_old_correct": 2
+    },
+    "d3 vs laya-r6": {
+      "matched": 114,
+      "fixed_old_errors": 71,
+      "broke_old_correct": 2
+    },
+    "pplx vs laya-r7": {
+      "matched": 114,
+      "fixed_old_errors": 60,
+      "broke_old_correct": 7
+    },
+    "d3 vs laya-r7": {
+      "matched": 114,
+      "fixed_old_errors": 63,
+      "broke_old_correct": 6
+    }
+  },
+  "completed_requests": 276,
+  "complete": true,
+  "failures": []
+}

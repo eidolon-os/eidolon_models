@@ -1,0 +1,210 @@
+{
+  "static_correct": 20,
+  "static_total": 32,
+  "families": {
+    "history_missing": {
+      "correct": 0,
+      "n": 4,
+      "predictions": {
+        "original": "abstain",
+        "option_reverse": "abstain",
+        "candidate_reverse": "abstain",
+        "renamed": "abstain"
+      }
+    },
+    "intent_resolved": {
+      "correct": 4,
+      "n": 4,
+      "predictions": {
+        "original": "respond:M0",
+        "option_reverse": "respond:M0",
+        "candidate_reverse": "respond:M0",
+        "renamed": "respond:M0"
+      }
+    },
+    "clarification_wait": {
+      "correct": 0,
+      "n": 4,
+      "predictions": {
+        "original": "respond:M0",
+        "option_reverse": "respond:M0",
+        "candidate_reverse": "respond:M0",
+        "renamed": "clarify:M0"
+      }
+    },
+    "intent_missing": {
+      "correct": 4,
+      "n": 4,
+      "predictions": {
+        "original": "clarify:M1",
+        "option_reverse": "clarify:M0",
+        "candidate_reverse": "clarify:M1",
+        "renamed": "clarify:M1"
+      }
+    },
+    "clarification_answer": {
+      "correct": 4,
+      "n": 4,
+      "predictions": {
+        "original": "respond:M1",
+        "option_reverse": "respond:M1",
+        "candidate_reverse": "respond:M1",
+        "renamed": "respond:M1"
+      }
+    },
+    "pronoun_missing": {
+      "correct": 0,
+      "n": 4,
+      "predictions": {
+        "original": "wait",
+        "option_reverse": "wait",
+        "candidate_reverse": "wait",
+        "renamed": "wait"
+      }
+    },
+    "history_resolved": {
+      "correct": 4,
+      "n": 4,
+      "predictions": {
+        "original": "respond:M1",
+        "option_reverse": "respond:M1",
+        "candidate_reverse": "respond:M1",
+        "renamed": "respond:M1"
+      }
+    },
+    "pronoun_resolved": {
+      "correct": 4,
+      "n": 4,
+      "predictions": {
+        "original": "respond:M0",
+        "option_reverse": "respond:M0",
+        "candidate_reverse": "respond:M0",
+        "renamed": "respond:M0"
+      }
+    }
+  },
+  "all_variants_correct_contexts": 5,
+  "episodes_passed": 10,
+  "episodes_total": 12,
+  "episode_results": [
+    {
+      "id": "named_once",
+      "reverse": false,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "named_once",
+      "reverse": true,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "handoff",
+      "reverse": false,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "handoff",
+      "reverse": true,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "same_speaker",
+      "reverse": false,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "same_speaker",
+      "reverse": true,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "clarify_resume",
+      "reverse": false,
+      "passed": false,
+      "terminals": [
+        "wait"
+      ]
+    },
+    {
+      "id": "clarify_resume",
+      "reverse": true,
+      "passed": false,
+      "terminals": [
+        "wait"
+      ]
+    },
+    {
+      "id": "pause_resume",
+      "reverse": false,
+      "passed": true,
+      "terminals": [
+        "wait",
+        "finish"
+      ]
+    },
+    {
+      "id": "pause_resume",
+      "reverse": true,
+      "passed": true,
+      "terminals": [
+        "wait",
+        "finish"
+      ]
+    },
+    {
+      "id": "explicit_finish",
+      "reverse": false,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    },
+    {
+      "id": "explicit_finish",
+      "reverse": true,
+      "passed": true,
+      "terminals": [
+        "finish"
+      ]
+    }
+  ],
+  "calls": {
+    "d3": 58,
+    "reply": 12
+  },
+  "failed_calls": 0,
+  "timing": {
+    "d3": {
+      "n": 58,
+      "p50_ms": 108.40768749767449,
+      "p95_ms": 129.6884999901522
+    },
+    "reply": {
+      "n": 12,
+      "p50_ms": 821.7168959963601,
+      "p95_ms": 978.1282499898225
+    }
+  },
+  "all_gates_passed": false,
+  "reply_finish_reasons": {
+    "stop": 12
+  }
+}

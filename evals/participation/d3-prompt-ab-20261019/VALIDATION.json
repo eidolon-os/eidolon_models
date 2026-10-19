@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "meaning": "experiment integrity, not product acceptance",
+  "paired_static_cases": 56,
+  "actual_calls": {
+    "d3": 128,
+    "reply": 10
+  },
+  "failed_calls": 0,
+  "only_appended_instructions_changed": true,
+  "raw_sha256": "4fedb00079340df8340f5ed5c8e3e31201f86f83763c0c858f089a42341315a7",
+  "hashes_verified": true
+}

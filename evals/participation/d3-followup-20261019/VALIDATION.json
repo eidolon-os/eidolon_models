@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "meaning": "audit integrity only, not model acceptance",
+  "static_records": 32,
+  "episode_records": 12,
+  "attempts": 70,
+  "calls": {
+    "d3": 58,
+    "reply": 12
+  },
+  "retry": 0,
+  "input_output_hashes_verified": true,
+  "public_payload_fields_verified": true,
+  "raw_calls_sha256": "8dd62224eef87fadd00c6a5138485a0b9fbbe8743cd9a2cea7e9656aa564dfa1",
+  "rollouts_sha256": "8168f403047b4daf19f24536b8d0be4f1ab751d18cf88415a6cc7a88d6bd4d0d"
+}

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "requests": 276,
+  "complete": true,
+  "raw_sha256": "d482b91761f0313e1c77db29ab5c85d9c0c6fe421306320af6d09173ca582d79",
+  "ledger_sha256": "06d5b4636c2b34d94dfe8ee33decf91f7743fd3e6500aae7e4917a2a3c055f4d",
+  "payload_isolation_verified": true,
+  "same_legacy_inputs_verified": true,
+  "laya_rerun": false,
+  "config": {
+    "max_requests": 276,
+    "retries": 0,
+    "timeout_seconds": 30,
+    "concurrency": 1,
+    "endpoint_host": "decider.yangtzeailab.com",
+    "models": {
+      "pplx": "pplx-decider-v1.1-27b",
+      "d3": "d3"
+    },
+    "script_sha256": "19b556a1568a3c87f84556d84e1f0da332406b9ef08f5c1cca7808ce8b0fdc9c",
+    "design_sha256": "42985808615cb5a26dd57569751c3481ddb6e130594594a9ab888e3f0a8331d0",
+    "data_sha256": {
+      "v7": "4a75cb7644ef9b102aceff938486cc61bbbe5fd2c9f7a63b8800d4f9e8573ae4",
+      "v8": "b5347b5de86c3598a82a79ed8518ac941bd10d474cb771c6b1917dcd2601fef5"
+    },
+    "product_sha256": "b9c959fa854ee1c8c074d53dd1868b6bbea326658050405450bda281fb97f274",
+    "api_doc_sha256": "c9a84313f5b9fe09ec17ec3226b32b1fe454beefe01687e9eedef88772464667",
+    "historical_sha256": {
+      "laya": "435e0ada3f9ffd2e30c1c7563d11eb2afc1fcaafb881c8a73b613f4b8ed6b38e",
+      "laya-r6": "fb604299baaeb885de7a2bf86e26f1e4b22114f851f5f85313968cfd4be20033",
+      "laya-r7": "8d60241095ca476142ef8ce9984b77841146432f6fe3359c8f5d0d21e71e33ed"
+    },
+    "timing": "client json encode + HTTP request/read + JSON validation, persistent connections where server permits; includes network",
+    "model_revision": "server-reported names only; weights and hardware not independently verified"
+  }
+}

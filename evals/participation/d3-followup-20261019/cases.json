@@ -1,0 +1,1722 @@
+{
+  "policy": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+  "clarify_instruction": "根据本轮用户请求和公开上下文，询问一个阻碍继续的缺失信息；不要替用户猜测，不回答尚未明确的请求，问完等待用户。",
+  "static": [
+    {
+      "id": "pronoun_missing:original",
+      "family": "pronoun_missing",
+      "variant": "original",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "pronoun_missing:option_reverse",
+      "family": "pronoun_missing",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "pronoun_missing:candidate_reverse",
+      "family": "pronoun_missing",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "pronoun_missing:renamed",
+      "family": "pronoun_missing",
+      "variant": "renamed",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "pronoun_resolved:original",
+      "family": "pronoun_resolved",
+      "variant": "original",
+      "state": {
+        "user_request": "我是说阿舟，继续说一个散步建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "pronoun_resolved:option_reverse",
+      "family": "pronoun_resolved",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "我是说阿舟，继续说一个散步建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "pronoun_resolved:candidate_reverse",
+      "family": "pronoun_resolved",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "我是说阿舟，继续说一个散步建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "pronoun_resolved:renamed",
+      "family": "pronoun_resolved",
+      "variant": "renamed",
+      "state": {
+        "user_request": "我是说青禾，继续说一个散步建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "intent_missing:original",
+      "family": "intent_missing",
+      "variant": "original",
+      "state": {
+        "user_request": "帮我把那个安排一下。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "intent_missing:option_reverse",
+      "family": "intent_missing",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "帮我把那个安排一下。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "intent_missing:candidate_reverse",
+      "family": "intent_missing",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "帮我把那个安排一下。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "intent_missing:renamed",
+      "family": "intent_missing",
+      "variant": "renamed",
+      "state": {
+        "user_request": "帮我把那个安排一下。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "intent_resolved:original",
+      "family": "intent_resolved",
+      "variant": "original",
+      "state": {
+        "user_request": "阿舟，我指的是周末散步，给我一个轻松的路线建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你想安排哪件事？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "intent_resolved:option_reverse",
+      "family": "intent_resolved",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "阿舟，我指的是周末散步，给我一个轻松的路线建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你想安排哪件事？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "intent_resolved:candidate_reverse",
+      "family": "intent_resolved",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "阿舟，我指的是周末散步，给我一个轻松的路线建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你想安排哪件事？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "intent_resolved:renamed",
+      "family": "intent_resolved",
+      "variant": "renamed",
+      "state": {
+        "user_request": "青禾，我指的是周末散步，给我一个轻松的路线建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你想安排哪件事？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M0"
+      ]
+    },
+    {
+      "id": "history_missing:original",
+      "family": "history_missing",
+      "variant": "original",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "history_missing:option_reverse",
+      "family": "history_missing",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "history_missing:candidate_reverse",
+      "family": "history_missing",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "history_missing:renamed",
+      "family": "history_missing",
+      "variant": "renamed",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ]
+    },
+    {
+      "id": "history_resolved:original",
+      "family": "history_resolved",
+      "variant": "original",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "我介绍的是河滨步道，沿途有树荫。"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "history_resolved:option_reverse",
+      "family": "history_resolved",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "我介绍的是河滨步道，沿途有树荫。"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "history_resolved:candidate_reverse",
+      "family": "history_resolved",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "我介绍的是河滨步道，沿途有树荫。"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "history_resolved:renamed",
+      "family": "history_resolved",
+      "variant": "renamed",
+      "state": {
+        "user_request": "请刚才介绍过路线的人继续补充。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M1",
+            "text": "我介绍的是河滨步道，沿途有树荫。"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "clarification_wait:original",
+      "family": "clarification_wait",
+      "variant": "original",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "author": "M0",
+          "text": "你希望哪位成员继续？"
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "wait"
+      ]
+    },
+    {
+      "id": "clarification_wait:option_reverse",
+      "family": "clarification_wait",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "author": "M0",
+          "text": "你希望哪位成员继续？"
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "wait"
+      ]
+    },
+    {
+      "id": "clarification_wait:candidate_reverse",
+      "family": "clarification_wait",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "author": "M0",
+          "text": "你希望哪位成员继续？"
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "wait"
+      ]
+    },
+    {
+      "id": "clarification_wait:renamed",
+      "family": "clarification_wait",
+      "variant": "renamed",
+      "state": {
+        "user_request": "让他接着说。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [],
+        "trigger": {
+          "author": "M0",
+          "text": "你希望哪位成员继续？"
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "wait"
+      ]
+    },
+    {
+      "id": "clarification_answer:original",
+      "family": "clarification_answer",
+      "variant": "original",
+      "state": {
+        "user_request": "让小岚补充一个餐厅建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由阿舟（M0）回应",
+            "respond:M1": "由小岚（M1）回应",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "clarification_answer:option_reverse",
+      "family": "clarification_answer",
+      "variant": "option_reverse",
+      "state": {
+        "user_request": "让小岚补充一个餐厅建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "abstain": "无法可靠作出允许的决策，不产生任何回复",
+            "finish": "本轮请求已完成或用户明确结束",
+            "wait": "暂停发言，等待用户",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "clarification_answer:candidate_reverse",
+      "family": "clarification_answer",
+      "variant": "candidate_reverse",
+      "state": {
+        "user_request": "让小岚补充一个餐厅建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M1": {
+            "name": "小岚",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          },
+          "M0": {
+            "name": "阿舟",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M1": "由小岚（M1）回应",
+            "respond:M0": "由阿舟（M0）回应",
+            "clarify:M1": "由小岚（M1）提出一个澄清问题后等待用户",
+            "clarify:M0": "由阿舟（M0）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    },
+    {
+      "id": "clarification_answer:renamed",
+      "family": "clarification_answer",
+      "variant": "renamed",
+      "state": {
+        "user_request": "让星野补充一个餐厅建议。",
+        "scene_goal": "",
+        "candidates": {
+          "M0": {
+            "name": "青禾",
+            "character": "喜欢散步与自然观察，表达简洁。"
+          },
+          "M1": {
+            "name": "星野",
+            "character": "喜欢美食和城市探索，愿意回应他人的具体观点。"
+          }
+        },
+        "allowed_actions": [
+          "respond",
+          "clarify",
+          "wait",
+          "finish"
+        ],
+        "remaining_replies": 3,
+        "prior_public_messages": [
+          {
+            "author": "M0",
+            "text": "你希望哪位成员继续？"
+          }
+        ],
+        "trigger": {
+          "same_as_user_request": true
+        }
+      },
+      "questions": {
+        "move": {
+          "type": "choice",
+          "instructions": "选择下一步参与决策，只用公开事实。respond选择一位合适角色；开放问题可有多个合适人选，不机械轮换。用户明确要求暂不说话选wait；原请求已完成或明确结束本轮选finish，不能因角色刚说完一句就自动结束。需要补足意图/身份且允许clarify时，选择一位角色澄清；若不能可靠选择且不允许澄清则abstain，不猜人。澄清发出后应wait等用户回答；新用户输入可重新回应。clarify仅决定谁询问缺失信息，问题由其他大模型生成。",
+          "criteria": {
+            "respond:M0": "由青禾（M0）回应",
+            "respond:M1": "由星野（M1）回应",
+            "clarify:M0": "由青禾（M0）提出一个澄清问题后等待用户",
+            "clarify:M1": "由星野（M1）提出一个澄清问题后等待用户",
+            "wait": "暂停发言，等待用户",
+            "finish": "本轮请求已完成或用户明确结束",
+            "abstain": "无法可靠作出允许的决策，不产生任何回复"
+          }
+        }
+      },
+      "gold": [
+        "respond:M1"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "id": "named_once",
+      "turns": [
+        {
+          "user": "只请小岚给一个午餐建议，一句话就够，说完本轮就结束。",
+          "speakers": [
+            "M1"
+          ],
+          "terminal": "finish"
+        }
+      ]
+    },
+    {
+      "id": "handoff",
+      "turns": [
+        {
+          "user": "阿舟先用一句话提出一个散步地点，小岚再用一句话评价他的具体建议，之后结束本轮。",
+          "speakers": [
+            "M0",
+            "M1"
+          ],
+          "terminal": "finish"
+        }
+      ]
+    },
+    {
+      "id": "same_speaker",
+      "turns": [
+        {
+          "user": "只请阿舟分两次回答，每次一句：先建议一个散步地点，再补充要带什么。两次说完结束，不需要小岚发言。",
+          "speakers": [
+            "M0",
+            "M0"
+          ],
+          "terminal": "finish"
+        }
+      ]
+    },
+    {
+      "id": "clarify_resume",
+      "turns": [
+        {
+          "user": "让他接着说。",
+          "speakers": null,
+          "terminal": "clarify"
+        },
+        {
+          "user": "我指的是阿舟，请他给一个散步建议，一句话说完就结束。",
+          "speakers": [
+            "M0"
+          ],
+          "terminal": "finish"
+        }
+      ]
+    },
+    {
+      "id": "pause_resume",
+      "turns": [
+        {
+          "user": "先别说话，我想一想，等我说可以了再开口。",
+          "speakers": [],
+          "terminal": "wait"
+        },
+        {
+          "user": "可以了，只请小岚给一个午餐建议，一句就够，说完结束本轮。",
+          "speakers": [
+            "M1"
+          ],
+          "terminal": "finish"
+        }
+      ]
+    },
+    {
+      "id": "explicit_finish",
+      "turns": [
+        {
+          "user": "这轮就到这里，不需要任何人再回复了。",
+          "speakers": [],
+          "terminal": "finish"
+        }
+      ]
+    }
+  ]
+}

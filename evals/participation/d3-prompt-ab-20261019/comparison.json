@@ -1,0 +1,236 @@
+{
+  "policies": {
+    "baseline": {
+      "old_diagnostic": {
+        "n": 32,
+        "correct": 20,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 16
+          },
+          "clarify": {
+            "n": 12,
+            "correct": 4
+          },
+          "wait": {
+            "n": 4,
+            "correct": 0
+          }
+        },
+        "all_variants_correct": 5,
+        "contexts": 8
+      },
+      "new_diagnostic": {
+        "n": 24,
+        "correct": 20,
+        "groups": {
+          "respond": {
+            "n": 12,
+            "correct": 12
+          },
+          "clarify": {
+            "n": 4,
+            "correct": 2
+          },
+          "wait": {
+            "n": 4,
+            "correct": 4
+          },
+          "finish": {
+            "n": 2,
+            "correct": 2
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0
+          }
+        },
+        "all_variants_correct": 10,
+        "contexts": 12
+      },
+      "static_timing": {
+        "n": 56,
+        "p50_ms": 108.86183299589902,
+        "p95_ms": 112.58475002250634
+      },
+      "static_input_tokens": {
+        "n": 56,
+        "mean": 455.0892857142857,
+        "total": 25485
+      },
+      "episodes": [
+        {
+          "id": "pronoun_clarification",
+          "passed": true,
+          "terminals": [
+            "clarify",
+            "finish"
+          ]
+        },
+        {
+          "id": "missing_options_clarification",
+          "passed": true,
+          "terminals": [
+            "clarify",
+            "finish"
+          ]
+        },
+        {
+          "id": "normal_response",
+          "passed": true,
+          "terminals": [
+            "finish"
+          ]
+        }
+      ]
+    },
+    "enhanced": {
+      "old_diagnostic": {
+        "n": 32,
+        "correct": 23,
+        "groups": {
+          "respond": {
+            "n": 16,
+            "correct": 16
+          },
+          "clarify": {
+            "n": 12,
+            "correct": 7
+          },
+          "wait": {
+            "n": 4,
+            "correct": 0
+          }
+        },
+        "all_variants_correct": 5,
+        "contexts": 8
+      },
+      "new_diagnostic": {
+        "n": 24,
+        "correct": 20,
+        "groups": {
+          "respond": {
+            "n": 12,
+            "correct": 12
+          },
+          "clarify": {
+            "n": 4,
+            "correct": 2
+          },
+          "wait": {
+            "n": 4,
+            "correct": 4
+          },
+          "finish": {
+            "n": 2,
+            "correct": 2
+          },
+          "abstain": {
+            "n": 2,
+            "correct": 0
+          }
+        },
+        "all_variants_correct": 10,
+        "contexts": 12
+      },
+      "static_timing": {
+        "n": 56,
+        "p50_ms": 121.38395851070527,
+        "p95_ms": 128.76637501176447
+      },
+      "static_input_tokens": {
+        "n": 56,
+        "mean": 577.0892857142857,
+        "total": 32317
+      },
+      "episodes": [
+        {
+          "id": "pronoun_clarification",
+          "passed": true,
+          "terminals": [
+            "clarify",
+            "finish"
+          ]
+        },
+        {
+          "id": "missing_options_clarification",
+          "passed": true,
+          "terminals": [
+            "clarify",
+            "finish"
+          ]
+        },
+        {
+          "id": "normal_response",
+          "passed": true,
+          "terminals": [
+            "finish"
+          ]
+        }
+      ]
+    }
+  },
+  "paired_changes": [
+    {
+      "id": "pronoun_missing:original",
+      "suite": "old_diagnostic",
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ],
+      "baseline": "wait",
+      "enhanced": "clarify:M0",
+      "fixed": true,
+      "regressed": false
+    },
+    {
+      "id": "pronoun_missing:candidate_reverse",
+      "suite": "old_diagnostic",
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ],
+      "baseline": "wait",
+      "enhanced": "clarify:M1",
+      "fixed": true,
+      "regressed": false
+    },
+    {
+      "id": "pronoun_missing:renamed",
+      "suite": "old_diagnostic",
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ],
+      "baseline": "wait",
+      "enhanced": "clarify:M0",
+      "fixed": true,
+      "regressed": false
+    },
+    {
+      "id": "intent_missing:candidate_reverse",
+      "suite": "old_diagnostic",
+      "gold": [
+        "clarify:M0",
+        "clarify:M1"
+      ],
+      "baseline": "clarify:M1",
+      "enhanced": "clarify:M0",
+      "fixed": false,
+      "regressed": false
+    }
+  ],
+  "gates": {
+    "both_suites_improve": false,
+    "new_regression_groups_no_net_loss": true,
+    "enhanced_all_three_episodes": true,
+    "automated_keep_signal": false,
+    "manual_content_review_required": true
+  },
+  "actual_calls": {
+    "d3": 128,
+    "reply": 10
+  },
+  "failed_calls": 0
+}
