@@ -38,3 +38,6 @@ laya/models/** export-ignore
 
 # Generated tokenizer copies are byte-identical artifacts; avoid multi-million-line diffs.
 laya/**/tokenizer/tokenizer.json -diff -text
+
+# Delivered once through the component artifact contract, never inside a source archive.
+speaker_verification/** export-ignore

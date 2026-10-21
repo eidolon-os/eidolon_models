@@ -370,3 +370,45 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/tok_emb_fp16.npy"
 path = "npu/type_emb.npy"
 sha256 = "a39bc903d899a9047ec56b86cf4aee504e84b1100a972a7bcf06bece210f78a1"
 url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
+
+# Shared Channel inference; asset availability only, no additional daemon.
+[[artifacts]]
+id = "campplus-zh-16k-624dcb0f"
+kind = "model"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-624dcb0f"
+requires_capability = "local_speaker_verification"
+
+[[artifacts.files]]
+path = "LICENSE"
+sha256 = "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/LICENSE"
+
+[[artifacts.files]]
+path = "README.md"
+sha256 = "ed541662fc73373c100911d1738ca82df7d0e1c05de79a2ba2f9b2450a61f714"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/README.md"
+
+[[artifacts.files]]
+path = "campplus_cn_common.bin"
+sha256 = "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/campplus_cn_common.bin"
+
+[[artifacts.files]]
+path = "config.yaml"
+sha256 = "17342041bd5b22f6fd7e32f6e7a267b0bf65f018c0a721bada6547e3d28fbfc9"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/config.yaml"
+
+[[artifacts.files]]
+path = "configuration.json"
+sha256 = "6f7acaf1e81ca121f4a3c71b6ddb66beec24350a3ef330e2c846f17829176a8f"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/configuration.json"
+
+[[artifacts.files]]
+path = "manifest.json"
+sha256 = "d01a84f33c3118706af67be30ac13ffc59105aa61011801176886adc44f0afce"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/manifest.json"
+
+[[artifacts.files]]
+path = "upstream-README.md"
+sha256 = "747094e5c9a41773a07916ae37fe38c37e5bcb4116fa71db619d16a70b9250b0"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-README.md"

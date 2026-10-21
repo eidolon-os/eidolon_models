@@ -14,10 +14,11 @@ llm/    大语言模型
 tts/    语音合成模型
 laya/   laya 决策模型服务（独立 uv 项目：PyTorch / ONNX 两个后端，HTTP API，见 laya/README.md）
 jevk5/  JevK5 决策模型独立 uv 项目：本地推理、合成数据审核与小规模适配训练
+speaker_verification/  固定版本声纹模型资产（个人声纹不在此仓库）
 evals/  跨模型参与决策评测协议与冻结数据清单
 ```
 
-声纹重做的离线工具与数据规范见 [手机注册跨设备声纹评测](evals/speaker-verification/README.md)。该工具仅做评分与数据隔离校验，不提供生产声纹准入；模型资产迁移仍待完成。
+声纹重做的离线工具与数据规范见 [手机注册跨设备声纹评测](evals/speaker-verification/README.md)。该工具仅做评分与数据隔离校验，不提供生产声纹准入。CAM++ 固定资产已迁至 [版本目录](speaker_verification/campplus_zh_16k_common/624dcb0f/README.md)，通过 `local_speaker_verification` 能力选择并由 Ops 校验交付，不新增服务，也不自动开启 Companion 限制。
 
 建议每个模型使用以下目录结构：
 
