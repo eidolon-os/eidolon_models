@@ -21,9 +21,11 @@ def test_model_files_match_manifest_and_have_fixed_origin():
 
 def test_delivery_uses_only_exact_repository_files_and_includes_license():
     contract = tomllib.loads((ROOT / 'ops/component.toml').read_text())
-    artifact = next(x for x in contract['artifacts'] if x['id'] == 'campplus-zh-16k-624dcb0f')
+    artifact = next(x for x in contract['artifacts'] if x.get('requires_capability') == 'local_speaker_verification')
     assert artifact['requires_capability'] == 'local_speaker_verification'
-    assert artifact['install_root'] == '/var/lib/eidolon/models/campplus-zh-16k-624dcb0f'
+    digest = hashlib.sha256('\n'.join(f"{f['path']} {f['sha256']}" for f in sorted(artifact['files'], key=lambda f: f['path'])).encode()).hexdigest()
+    assert artifact['install_root'] == '/var/lib/eidolon/models/campplus-zh-16k-' + digest[:8]
+    assert artifact['id'] == Path(artifact['install_root']).name
     paths = {x['path'] for x in artifact['files']}
     assert paths >= {'campplus_cn_common.bin', 'config.yaml', 'configuration.json',
                      'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md'}

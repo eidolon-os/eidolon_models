@@ -17,7 +17,7 @@
   },
   "runtime": {
     "auto_download": false,
-    "shared_model_env": "EIDOLON_3DSPEAKER_MODEL_DIR"
+    "shared_model_setting": "voiceprint.model_dir"
   },
   "artifacts": [
     {

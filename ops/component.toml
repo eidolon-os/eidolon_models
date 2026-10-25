@@ -373,9 +373,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-624dcb0f"
+id = "campplus-zh-16k-d4bab7f1"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-624dcb0f"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-d4bab7f1"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -405,10 +405,15 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/configuration
 
 [[artifacts.files]]
 path = "manifest.json"
-sha256 = "d01a84f33c3118706af67be30ac13ffc59105aa61011801176886adc44f0afce"
+sha256 = "5b34132ce98d4ce75caeb3a711f3ff98000727e50e3c685953f561d5bf1365a9"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/manifest.json"
 
 [[artifacts.files]]
 path = "upstream-README.md"
 sha256 = "747094e5c9a41773a07916ae37fe38c37e5bcb4116fa71db619d16a70b9250b0"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-README.md"
+
+[[artifacts.files]]
+path = "admission-controlled-trial.json"
+sha256 = "ec0197d73ba0202903d2466f648c1c257674f7bb28f0cd1162d419d4e80db32c"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/admission-controlled-trial.json"
