@@ -105,7 +105,7 @@ uv run eidolon-speaker-eval /private/path/embeddings.json \
 ### 受控对话制品与交付边界（2026-10-25）
 
 `admission-controlled-trial.json` 随 CAM++ 资产由 `ops/component.toml` 固定并交付，
-显式标记 `controlled_trial`：阈值 0.55、允许 1–5 个声音、完整候选语音 1.5–30 秒。
+显式标记 `controlled_trial`：对话准入阈值 0.4、允许 1–5 个声音、完整候选语音 1.5–30 秒。
 这些是待真机验收的范围，不是准确率保证或正式校准证据；不包含个人档案或设备绑定。
 录入页面每段 3–8 秒是录入体验选择，不决定对话语音上限。
 
@@ -113,3 +113,8 @@ uv run eidolon-speaker-eval /private/path/embeddings.json \
 SHA256 和目录名；测试验证该关系，防止新发布覆盖旧目录而破坏回退。
 Ops 从指定 Git 提交读取唯一能力资产并复用原有 materializer，Channel 只消费交付路径。
 升级制品会改变准入摘要；不迁移或冒用旧授权，用户重新确认后才恢复准入。
+
+2026-10-25：用户反馈新手机匹配 Pad 录入声纹仅 0.4 多，明确选择以 0.4 进行受控测试，
+发布 `campplus-controlled-conversation-v2`。仅调整对话准入阈值；录入样本一致性与录入试说
+下限仍为 0.55。模型权重和特征处理不变，已有声纹可继续使用；本次没有新增校准证据，
+不承诺误接纳率，也不解决本人和电视重叠时的 ASR 内容混入。
