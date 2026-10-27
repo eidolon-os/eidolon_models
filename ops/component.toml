@@ -373,9 +373,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-816e8cf3"
+id = "campplus-zh-16k-7959bae7"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-816e8cf3"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-7959bae7"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -425,5 +425,5 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-c
 
 [[artifacts.files]]
 path = "recognition-policy.md"
-sha256 = "f9d8b4695b6a93e7fe557d923b45f7222fc2f5f96eb4028e86fb8e4268047884"
+sha256 = "61731cc300bec78f8bedf6d1350a38fbbb60698ca2231f314ea2f740c5518a85"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-policy.md"
