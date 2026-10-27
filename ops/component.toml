@@ -373,9 +373,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-dcfd9b3b"
+id = "campplus-zh-16k-235262bc"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-dcfd9b3b"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-235262bc"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -417,3 +417,13 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-READ
 path = "admission-controlled-trial.json"
 sha256 = "99465a43f932528b04dacb2347b4e6b522593c14ab2019cc5514488a556cdedd"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/admission-controlled-trial.json"
+
+[[artifacts.files]]
+path = "recognition-controlled-trial.json"
+sha256 = "f84cfd3b74b94ceab39190d6de6b824c14a00a6d8303876c1148a0b070be1aac"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-controlled-trial.json"
+
+[[artifacts.files]]
+path = "recognition-policy.md"
+sha256 = "8184096e1402f10b99509015b06a66d8461ee2bd142007b999edc5caed9844da"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-policy.md"

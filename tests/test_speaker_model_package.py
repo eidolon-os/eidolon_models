@@ -28,7 +28,8 @@ def test_delivery_uses_only_exact_repository_files_and_includes_license():
     assert artifact['id'] == Path(artifact['install_root']).name
     paths = {x['path'] for x in artifact['files']}
     assert paths >= {'campplus_cn_common.bin', 'config.yaml', 'configuration.json',
-                     'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md'}
+                     'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md',
+                     'recognition-controlled-trial.json', 'recognition-policy.md'}
     for item in artifact['files']:
         assert item['url'].startswith('repo://speaker_verification/campplus_zh_16k_common/624dcb0f/')
         path = ROOT / item['url'].removeprefix('repo://')
