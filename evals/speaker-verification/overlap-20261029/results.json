@@ -1,0 +1,1010 @@
+{
+  "model_sha256": "220ad67ca923bef2fa91f2390c786097bf305bceb5e261d4af67b38e938e1079",
+  "script_sha256": "bf26476146bc4cb6cbe713538ec7fbf2d7fea4169197db147be689496429ca80",
+  "assets_sha256": "10bdbdc617a8abe53866fc77e47ce1abeee4a74496f6c70ba0d203fa6c3b409b",
+  "metadata": {
+    "url_1": "https://huggingface.co/pyannote/segmentation-3.0",
+    "powerset_max_classes": "2",
+    "num_speakers": "3",
+    "sample_rate": "16000",
+    "onnx.quant.pre_process": "onnxruntime.quant",
+    "receptive_field_size": "991",
+    "license": "https://huggingface.co/pyannote/segmentation-3.0/blob/main/LICENSE",
+    "window_size": "160000",
+    "receptive_field_shift": "270",
+    "model_type": "pyannote-segmentation-3.0",
+    "maintainer": "k2-fsa",
+    "num_classes": "7",
+    "model_author": "pyannote",
+    "version": "1",
+    "url_2": "https://huggingface.co/csukuangfj/pyannote-models/tree/main/segmentation-3.0"
+  },
+  "runtime": "1.26.0",
+  "dataset_revision": "bbe295d530192a4cd41644b711c9aecd087df653",
+  "production_ready": false,
+  "limitation": "Synthetic mixtures of public AISHELL train speech; no frame truth; training overlap possible; no release threshold.",
+  "summary": {
+    "mixture_0db_1.5s": {
+      "n": 12,
+      "any_overlap": 10,
+      "overlap_at_least_100ms": 10,
+      "p95_inference_ms": 35.341890034032986
+    },
+    "mixture_0db_3.0s": {
+      "n": 12,
+      "any_overlap": 9,
+      "overlap_at_least_100ms": 9,
+      "p95_inference_ms": 35.84862673887983
+    },
+    "mixture_10db_1.5s": {
+      "n": 12,
+      "any_overlap": 11,
+      "overlap_at_least_100ms": 10,
+      "p95_inference_ms": 35.273044009227306
+    },
+    "mixture_10db_3.0s": {
+      "n": 12,
+      "any_overlap": 9,
+      "overlap_at_least_100ms": 9,
+      "p95_inference_ms": 36.347256059525535
+    },
+    "silence_1.5s": {
+      "n": 1,
+      "any_overlap": 0,
+      "overlap_at_least_100ms": 0,
+      "p95_inference_ms": 34.977291943505406
+    },
+    "silence_3.0s": {
+      "n": 1,
+      "any_overlap": 0,
+      "overlap_at_least_100ms": 0,
+      "p95_inference_ms": 34.974124981090426
+    },
+    "single_1.5s": {
+      "n": 12,
+      "any_overlap": 1,
+      "overlap_at_least_100ms": 0,
+      "p95_inference_ms": 35.690291988430545
+    },
+    "single_3.0s": {
+      "n": 12,
+      "any_overlap": 0,
+      "overlap_at_least_100ms": 0,
+      "p95_inference_ms": 35.263543913606554
+    }
+  },
+  "measurements": [
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0002W0122"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 36.02716699242592
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0002W0122",
+        "BAC009S0003W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 85,
+      "overlap_ms": 1434.375,
+      "inference_ms": 34.9236250622198
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0002W0122",
+        "BAC009S0003W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 61,
+      "overlap_ms": 1029.375,
+      "inference_ms": 35.24549992289394
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0002W0122"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.01891705673188
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0002W0122",
+        "BAC009S0003W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 166,
+      "overlap_ms": 2801.25,
+      "inference_ms": 34.940749988891184
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0002W0122",
+        "BAC009S0003W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 159,
+      "overlap_ms": 2683.125,
+      "inference_ms": 35.34866694826633
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0003W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.40987498126924
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0003W0121",
+        "BAC009S0004W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 80,
+      "overlap_ms": 1350.0,
+      "inference_ms": 35.177208948880434
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0003W0121",
+        "BAC009S0004W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.14437505509704
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0003W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.06183309946209
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0003W0121",
+        "BAC009S0004W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 166,
+      "overlap_ms": 2801.25,
+      "inference_ms": 35.15695803798735
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0003W0121",
+        "BAC009S0004W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 162,
+      "overlap_ms": 2733.75,
+      "inference_ms": 35.305249970406294
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0004W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.12312495149672
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0004W0121",
+        "BAC009S0005W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.93558394256979
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0004W0121",
+        "BAC009S0005W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 1,
+      "overlap_ms": 16.875,
+      "inference_ms": 34.9855829263106
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0004W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 168,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.03341693431139
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0004W0121",
+        "BAC009S0005W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 173,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.891000017523766
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0004W0121",
+        "BAC009S0005W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 169,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.115082981064916
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0005W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.914584015496075
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0005W0121",
+        "BAC009S0010W0122"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 34.97379203327
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0005W0121",
+        "BAC009S0010W0122"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 34.958541044034064
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0005W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 167,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.115999984554946
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0005W0121",
+        "BAC009S0010W0122"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 169,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.866750007495284
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0005W0121",
+        "BAC009S0010W0122"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 167,
+      "overlap_frames": 89,
+      "overlap_ms": 1501.875,
+      "inference_ms": 35.14095803257078
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0010W0122"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.268208011984825
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0010W0122",
+        "BAC009S0011W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.543166915886104
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0010W0122",
+        "BAC009S0011W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.1337919710204
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0010W0122"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 168,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.99279194511473
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0010W0122",
+        "BAC009S0011W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 173,
+      "overlap_ms": 2919.375,
+      "inference_ms": 36.391958012245595
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0010W0122",
+        "BAC009S0011W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 111,
+      "overlap_ms": 1873.125,
+      "inference_ms": 37.246207939460874
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0011W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.98654195573181
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0011W0121",
+        "BAC009S0012W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.92916701361537
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0011W0121",
+        "BAC009S0012W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.05900001619011
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0011W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.07637500297278
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0011W0121",
+        "BAC009S0012W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 71,
+      "overlap_ms": 1198.125,
+      "inference_ms": 35.06454196758568
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0011W0121",
+        "BAC009S0012W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 175,
+      "overlap_ms": 2953.125,
+      "inference_ms": 35.06766690406948
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0012W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.12829204555601
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0012W0121",
+        "BAC009S0013W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 33,
+      "overlap_ms": 556.875,
+      "inference_ms": 34.998832968994975
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0012W0121",
+        "BAC009S0013W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 33,
+      "overlap_ms": 556.875,
+      "inference_ms": 35.30670900363475
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0012W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 172,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.988541970960796
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0012W0121",
+        "BAC009S0013W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 169,
+      "overlap_frames": 165,
+      "overlap_ms": 2784.375,
+      "inference_ms": 35.404082969762385
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0012W0121",
+        "BAC009S0013W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 172,
+      "overlap_frames": 95,
+      "overlap_ms": 1603.125,
+      "inference_ms": 35.035999957472086
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0013W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 1,
+      "overlap_ms": 16.875,
+      "inference_ms": 35.004917066544294
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0013W0121",
+        "BAC009S0018W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 34.99549999833107
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0013W0121",
+        "BAC009S0018W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.037250025197864
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0013W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 172,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.957333002239466
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0013W0121",
+        "BAC009S0018W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 170,
+      "overlap_frames": 167,
+      "overlap_ms": 2818.125,
+      "inference_ms": 35.07920901756734
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0013W0121",
+        "BAC009S0018W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 170,
+      "overlap_frames": 155,
+      "overlap_ms": 2615.625,
+      "inference_ms": 35.009333048947155
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0018W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.00024997629225
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0018W0121",
+        "BAC009S0019W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 34.97191704809666
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0018W0121",
+        "BAC009S0019W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.07566696498543
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0018W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 173,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.100291948765516
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0018W0121",
+        "BAC009S0019W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 169,
+      "overlap_frames": 151,
+      "overlap_ms": 2548.125,
+      "inference_ms": 34.868375048972666
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0018W0121",
+        "BAC009S0019W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 172,
+      "overlap_frames": 147,
+      "overlap_ms": 2480.625,
+      "inference_ms": 35.611749975942075
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0019W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.155957913957536
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0019W0121",
+        "BAC009S0020W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.06366605870426
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0019W0121",
+        "BAC009S0020W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 21,
+      "overlap_ms": 354.375,
+      "inference_ms": 35.02116701565683
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0019W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 154,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.16812506131828
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0019W0121",
+        "BAC009S0020W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 151,
+      "overlap_frames": 146,
+      "overlap_ms": 2463.75,
+      "inference_ms": 34.887999994680285
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0019W0121",
+        "BAC009S0020W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 158,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.054834093898535
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0020W0121"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.99720897525549
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0020W0121",
+        "BAC009S0021W0124"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 78,
+      "overlap_ms": 1316.25,
+      "inference_ms": 34.939458942972124
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0020W0121",
+        "BAC009S0021W0124"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 86,
+      "overlap_ms": 1451.25,
+      "inference_ms": 35.14562488999218
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0020W0121"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 136,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.115874954499304
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0020W0121",
+        "BAC009S0021W0124"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 139,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.01833393238485
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0020W0121",
+        "BAC009S0021W0124"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 135,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.9870000500232
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0021W0124"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.4146669851616
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0021W0124",
+        "BAC009S0002W0122"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 85,
+      "overlap_ms": 1434.375,
+      "inference_ms": 35.15695803798735
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0021W0124",
+        "BAC009S0002W0122"
+      ],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 86,
+      "overlap_frames": 78,
+      "overlap_ms": 1316.25,
+      "inference_ms": 35.03495792392641
+    },
+    {
+      "kind": "single",
+      "sources": [
+        "BAC009S0021W0124"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 134,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 35.380166955292225
+    },
+    {
+      "kind": "mixture_0db",
+      "sources": [
+        "BAC009S0021W0124",
+        "BAC009S0002W0122"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 138,
+      "overlap_ms": 2328.75,
+      "inference_ms": 34.91879103239626
+    },
+    {
+      "kind": "mixture_10db",
+      "sources": [
+        "BAC009S0021W0124",
+        "BAC009S0002W0122"
+      ],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 175,
+      "overlap_frames": 134,
+      "overlap_ms": 2261.25,
+      "inference_ms": 34.98658293392509
+    },
+    {
+      "kind": "silence",
+      "sources": [],
+      "seconds": 1.5,
+      "valid_frames": 86,
+      "speech_frames": 0,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.977291943505406
+    },
+    {
+      "kind": "silence",
+      "sources": [],
+      "seconds": 3.0,
+      "valid_frames": 175,
+      "speech_frames": 0,
+      "overlap_frames": 0,
+      "overlap_ms": 0.0,
+      "inference_ms": 34.974124981090426
+    }
+  ]
+}
