@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+# Local conversation evidence is not source code.
+SESSION-AUDIT-*.md
+session-audit-evidence.json
+*.jsonl
+joined.json
