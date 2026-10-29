@@ -1,0 +1,28 @@
+{
+  "measurements": [
+    {
+      "freeze_ms": 0.0856249826028943,
+      "completion_after_freeze_ms": 311.4151250338182,
+      "delivered_status": "unavailable",
+      "late_status": "identified",
+      "signed_deliveries": 1
+    },
+    {
+      "freeze_ms": 0.062208971939980984,
+      "completion_after_freeze_ms": 304.54624991398305,
+      "delivered_status": "unavailable",
+      "late_status": "identified",
+      "signed_deliveries": 1
+    },
+    {
+      "freeze_ms": 0.04495796747505665,
+      "completion_after_freeze_ms": 307.8149169450626,
+      "delivered_status": "unavailable",
+      "late_status": "identified",
+      "signed_deliveries": 1
+    }
+  ],
+  "sample_sha256": "fd2675f80b9a2a350270765a6f82884cab90c0e1254136df84c8dc0723f17c5c",
+  "script_sha256": "a2523c7ffde2fdf990810ef6f4da1bd81cff394065939838880d14de35da1906",
+  "limitation": "Self-match and fixed in-memory directory; no Data HTTP, gRPC, LLM or Memory. Not accuracy calibration."
+}

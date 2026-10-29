@@ -17,3 +17,11 @@ HF_HUB_OFFLINE=1 MODELSCOPE_OFFLINE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
 ```
 
 results.json 记录逐样本质量/耗时、脚本摘要和模型身份；provenance.json 补充本次 Channel HEAD、VAD 权重、模型清单和输入清单摘要。输出拒绝覆盖。当前公开干净朗读数据可能属于训练集，不是手机远场/多人录音；既有质量输出仍没有可靠 overlap_detected。本验证仅证明实际原提取路径执行及其当前拒绝/延迟表现，不能替代自动识别准确率或完整设备联调。
+
+## 真实推理期间的当轮冻结
+
+`freeze.py` 复用实际 SpeakerInferenceEngine 单线程执行器、ReferenceSpeakerExtractor、SpeakerRecognizer、原 cosine scorer、ConversationSpeaker 和 SDK 签名验签；测试目录是固定内存 SpeakerCandidates，LLM 端仅记录 token。使用公开 S0003 第一份录音同时构造参考和探针，因此只验证控制流，**不是独立识别准确率或注册校准**。阈值 .8 仅在此离线自匹配用例，未写到运行配置。
+
+预热及参考提取后，三次话轮让真实模型任务进入执行器，在其尚未完成时立即冻结并签名。实测冻结/签名 0.045–0.086 ms，后台识别在约 305–311 ms 后完成。逐次断言：当轮 token 不含 Person；迟到反馈 identified；相同话轮仍读到原冻结结果；重复 deliver 只签名一次；未观察的下一轮不继承 Person。结果在 freeze-results.json，脚本摘要可复核。
+
+复现将上方命令的 evaluate.py 改为 freeze.py，并用新输出文件路径。权重/清单与 provenance.json 一致；无 Data HTTP、Provider HTTP、gRPC、真实 LLM 或 Memory，不声称整个分布式链路验收通过。没有硬造 sleep 模拟推理，也没有将提取调用同步放进事件循环；只在测试中等待后台任务完成以核验最终反馈。三次观测不是尾延迟 SLO 或压力测试。
