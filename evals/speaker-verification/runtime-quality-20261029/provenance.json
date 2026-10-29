@@ -1,8 +1,0 @@
-{
-  "channel_head": "ad786962425ac29a853c59080ba82ee3f8002f6d",
-  "assets_sha256": "10bdbdc617a8abe53866fc77e47ce1abeee4a74496f6c70ba0d203fa6c3b409b",
-  "artifacts": {
-    "pvad.onnx": "2114fd3c3fa87b560eaf4cad6a6e1a0a73aefba08da05521a27bfe2382ef4bdd",
-    "manifest.json": "5b34132ce98d4ce75caeb3a711f3ff98000727e50e3c685953f561d5bf1365a9"
-  }
-}
