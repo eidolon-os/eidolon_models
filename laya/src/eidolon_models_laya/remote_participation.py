@@ -50,7 +50,7 @@ def project(r):
     }
     state = {
         "user_request": r.user_request.text,
-        "scene_goal": r.scene_goal,
+        "team_background": r.scene_goal,
         "candidates": cast,
         "allowed_actions": list(r.constraints.allowed_actions),
         "remaining_replies": r.constraints.remaining_replies,
@@ -105,7 +105,7 @@ def convert(r, body, choices, back):
         **{k: getattr(r, k) for k in Snapshot.model_fields},
         status="decided" if proposal else "abstained",
         proposal=proposal,
-        policy_version="d3-original-v1",
+        policy_version="d3-team-concise-v2",
         model_version="d3-http",
     )
     validate_proposal(r, result)
@@ -113,7 +113,7 @@ def convert(r, body, choices, back):
 
 
 class RemoteParticipationAdapter:
-    policy_version = "d3-original-v1"
+    policy_version = "d3-team-concise-v2"
     model_version = "d3-http"
     max_candidates = 16
 
