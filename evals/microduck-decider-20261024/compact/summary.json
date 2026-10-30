@@ -1,0 +1,122 @@
+{
+  "laya": {
+    "requests": 36,
+    "errors": 0,
+    "p50_ms": 165.7512705132831,
+    "p95_ms": 204.1610840242356,
+    "exact": 0.027777777777777776,
+    "fields": {
+      "route": 0.3611111111111111,
+      "action": 0.4166666666666667,
+      "target": 0.5555555555555556,
+      "distance": 0.5,
+      "speed": 0.3333333333333333
+    },
+    "groups": {
+      "ambiguity": 0.0,
+      "basic": 0.0,
+      "context": 0.0,
+      "injection": 0.0,
+      "limits": 0.0,
+      "negative": 0.0,
+      "params": 0.2,
+      "sequence": 0.0,
+      "stop": 0.0,
+      "unsupported": 0.0
+    },
+    "raw": {
+      "emitted": 8,
+      "wrong_emitted": 5,
+      "all_command_exact": 0.5833333333333334,
+      "execution_recall": 0.21428571428571427,
+      "emitted_precision": 0.375
+    },
+    "gated": {
+      "emitted": 0,
+      "wrong_emitted": 0,
+      "all_command_exact": 0.6111111111111112,
+      "execution_recall": 0.0,
+      "emitted_precision": null
+    }
+  },
+  "d3": {
+    "requests": 36,
+    "errors": 0,
+    "p50_ms": 738.4727289900184,
+    "p95_ms": 872.3675420042127,
+    "exact": 0.8333333333333334,
+    "fields": {
+      "route": 0.9722222222222222,
+      "action": 1.0,
+      "target": 0.8611111111111112,
+      "distance": 1.0,
+      "speed": 1.0
+    },
+    "groups": {
+      "ambiguity": 1.0,
+      "basic": 1.0,
+      "context": 1.0,
+      "injection": 1.0,
+      "limits": 1.0,
+      "negative": 0.3333333333333333,
+      "params": 1.0,
+      "sequence": 0.6666666666666666,
+      "stop": 0.75,
+      "unsupported": 1.0
+    },
+    "raw": {
+      "emitted": 13,
+      "wrong_emitted": 0,
+      "all_command_exact": 0.9722222222222222,
+      "execution_recall": 0.9285714285714286,
+      "emitted_precision": 1.0
+    },
+    "gated": {
+      "emitted": 11,
+      "wrong_emitted": 0,
+      "all_command_exact": 0.9166666666666666,
+      "execution_recall": 0.7857142857142857,
+      "emitted_precision": 1.0
+    }
+  },
+  "pplx": {
+    "requests": 36,
+    "errors": 0,
+    "p50_ms": 396.5236044896301,
+    "p95_ms": 487.5635409844108,
+    "exact": 0.8333333333333334,
+    "fields": {
+      "route": 1.0,
+      "action": 0.9444444444444444,
+      "target": 0.8611111111111112,
+      "distance": 1.0,
+      "speed": 1.0
+    },
+    "groups": {
+      "ambiguity": 1.0,
+      "basic": 1.0,
+      "context": 1.0,
+      "injection": 1.0,
+      "limits": 1.0,
+      "negative": 0.3333333333333333,
+      "params": 1.0,
+      "sequence": 1.0,
+      "stop": 0.5,
+      "unsupported": 1.0
+    },
+    "raw": {
+      "emitted": 13,
+      "wrong_emitted": 0,
+      "all_command_exact": 0.9722222222222222,
+      "execution_recall": 0.9285714285714286,
+      "emitted_precision": 1.0
+    },
+    "gated": {
+      "emitted": 13,
+      "wrong_emitted": 0,
+      "all_command_exact": 0.9722222222222222,
+      "execution_recall": 0.9285714285714286,
+      "emitted_precision": 1.0
+    }
+  }
+}

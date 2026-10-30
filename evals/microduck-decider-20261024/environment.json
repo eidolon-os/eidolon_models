@@ -1,0 +1,11 @@
+{
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.13.13",
+  "models_git_head": "0706b7c5ba17b601cf449f178ccd3236858e3483",
+  "cloud_revision": "API response model only; server checkpoint hash not supplied",
+  "scope": "text-only synthetic simulated commands; no ASR, hardware, training, or real robot transport",
+  "laya": "1c5edc17a7acd8701df6fc341c0d179f1c62c982, torch 2.14.0, MPS, float32, 6 threads, max_len 1024, head_max_len 256",
+  "cpu": "Apple M3 Pro",
+  "memory_bytes": "38654705664"
+}

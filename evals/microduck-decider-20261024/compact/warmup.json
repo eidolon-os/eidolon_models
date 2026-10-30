@@ -1,0 +1,249 @@
+{
+  "laya": {
+    "ms": 173.487291962374,
+    "response": {
+      "contract_version": "eidolon.models.laya.systemone.v1",
+      "features": {
+        "question_state": true
+      },
+      "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982",
+      "model": "laya-multilingual",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "none",
+          "probabilities": {
+            "execute": 0.1417,
+            "clarify": 0.0888,
+            "reject": 0.0949,
+            "none": 0.6746
+          },
+          "confidence": 0.2924,
+          "answer_confidence": 0.6746,
+          "action": {
+            "act_probability": 1.0
+          }
+        },
+        "action": {
+          "type": "choice",
+          "choice": "sit",
+          "probabilities": {
+            "forward": 0.0,
+            "backward": 0.0,
+            "sit": 0.9998,
+            "stand": 0.0,
+            "stop": 0.0,
+            "cancel": 0.0,
+            "slower": 0.0,
+            "sequence": 0.0,
+            "other": 0.0
+          },
+          "confidence": 0.9992,
+          "answer_confidence": 0.9998,
+          "action": {
+            "act_probability": 1.0
+          }
+        },
+        "target": {
+          "type": "choice",
+          "choice": "duck_a",
+          "probabilities": {
+            "duck_a": 0.5622,
+            "duck_b": 0.1236,
+            "unknown": 0.3141
+          },
+          "confidence": 0.139,
+          "answer_confidence": 0.5622,
+          "action": {
+            "act_probability": 1.0
+          }
+        },
+        "distance": {
+          "type": "choice",
+          "choice": "none",
+          "probabilities": {
+            "none": 0.4155,
+            "0.1": 0.2488,
+            "0.5": 0.0468,
+            "1": 0.1791,
+            "other": 0.1098
+          },
+          "confidence": 0.1271,
+          "answer_confidence": 0.4155,
+          "action": {
+            "act_probability": 1.0
+          }
+        },
+        "speed": {
+          "type": "choice",
+          "choice": "0.2",
+          "probabilities": {
+            "none": 0.338,
+            "0.1": 0.2061,
+            "0.2": 0.3433,
+            "other": 0.1126
+          },
+          "confidence": 0.0586,
+          "answer_confidence": 0.3433,
+          "action": {
+            "act_probability": 1.0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 849,
+        "output_tokens": 0
+      },
+      "truncated": [],
+      "backend": "torch",
+      "timing_ms": {
+        "forward": 163.2,
+        "total": 164.4
+      }
+    }
+  },
+  "d3": {
+    "ms": 781.2001249985769,
+    "response": {
+      "model": "d3",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "execute",
+          "probabilities": {
+            "execute": 0.9970967535581867,
+            "clarify": 0.001559196585513068,
+            "reject": 0.00017385412821856576,
+            "none": 0.0011701957280816611
+          },
+          "confidence": 0.9961290047442489
+        },
+        "action": {
+          "type": "choice",
+          "choice": "sit",
+          "probabilities": {
+            "forward": 6.724546436405236e-05,
+            "backward": 6.126332464830104e-05,
+            "sit": 0.9956318407122642,
+            "stand": 0.0004603591929287675,
+            "stop": 0.0010811701939839587,
+            "cancel": 8.965134715650141e-05,
+            "slower": 2.46692440920415e-05,
+            "sequence": 0.00022791779221976248,
+            "other": 0.002355882728342401
+          },
+          "confidence": 0.9950858208012971
+        },
+        "target": {
+          "type": "choice",
+          "choice": "duck_a",
+          "probabilities": {
+            "duck_a": 0.9980057877647949,
+            "duck_b": 0.00013025128026347766,
+            "unknown": 0.001863960954941646
+          },
+          "confidence": 0.9970086816471921
+        },
+        "distance": {
+          "type": "choice",
+          "choice": "none",
+          "probabilities": {
+            "none": 0.9821890932495756,
+            "0.1": 0.0015231690670841058,
+            "0.5": 0.0018974331411271096,
+            "1": 0.0017735019329394642,
+            "other": 0.012616802609273723
+          },
+          "confidence": 0.9777363665619695
+        },
+        "speed": {
+          "type": "choice",
+          "choice": "none",
+          "probabilities": {
+            "none": 0.9952919023191923,
+            "0.1": 0.001301841168102,
+            "0.2": 0.0014628397090421799,
+            "other": 0.0019434168036635416
+          },
+          "confidence": 0.9937225364255897
+        }
+      },
+      "usage": {
+        "input_tokens": 1171,
+        "output_tokens": 0
+      }
+    }
+  },
+  "pplx": {
+    "ms": 427.68487497232854,
+    "response": {
+      "model": "pplx-decider-v1.1-27b",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "execute",
+          "confidence": 0.9982617395343981,
+          "probabilities": {
+            "execute": 0.9986963046507986,
+            "clarify": 0.00043242520832064134,
+            "reject": 0.00031722681946758145,
+            "none": 0.0005540433214131662
+          }
+        },
+        "action": {
+          "type": "choice",
+          "choice": "sit",
+          "confidence": 0.9980695577622614,
+          "probabilities": {
+            "forward": 3.010784911331839e-05,
+            "backward": 2.829903007286894e-05,
+            "sit": 0.9982840513442323,
+            "stand": 0.00019316353166210556,
+            "stop": 0.0004598750682927739,
+            "cancel": 3.010784911331839e-05,
+            "slower": 9.277357812119793e-06,
+            "sequence": 0.00011059908022314975,
+            "other": 0.0008545188894780537
+          }
+        },
+        "target": {
+          "type": "choice",
+          "choice": "duck_a",
+          "confidence": 0.9984530795307047,
+          "probabilities": {
+            "duck_a": 0.9989687196871365,
+            "duck_b": 6.336886144621892e-05,
+            "unknown": 0.0009679114514172699
+          }
+        },
+        "distance": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.973422753903812,
+          "probabilities": {
+            "none": 0.9787382031230495,
+            "0.1": 0.0005103504388341728,
+            "0.5": 0.002892660987145512,
+            "1": 0.0014632130171190947,
+            "other": 0.016395572433851632
+          }
+        },
+        "speed": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.9933374119547156,
+          "probabilities": {
+            "none": 0.9950030589660367,
+            "0.1": 0.0007072409292391023,
+            "0.2": 0.0011610016254246908,
+            "other": 0.00312869847929949
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1146,
+        "output_tokens": 0
+      }
+    }
+  }
+}

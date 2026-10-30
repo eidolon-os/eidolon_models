@@ -1,0 +1,8 @@
+schema_version = 1
+[defaults]
+host = "127.0.0.1"
+[systemone]
+port = 18771
+[systemone.torch]
+model_dir = "/Users/manson/ai/eidolon/eidolon_models/laya/models/laya-multilingual/1c5edc17"
+device = "mps"
