@@ -35,6 +35,17 @@ def laya_home() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
+def resolve_model_dir(path: Path) -> Path:
+    """Translate the existing Host state root; code and model lifetimes are independent."""
+    product_root = Path("/var/lib/eidolon")
+    if path.is_relative_to(product_root):
+        state_root = Path(os.environ.get("EIDOLON_STATE_ROOT", str(product_root)))
+        if not state_root.is_absolute():
+            raise ValueError("EIDOLON_STATE_ROOT must be absolute")
+        return state_root / path.relative_to(product_root)
+    return path if path.is_absolute() else laya_home() / path
+
+
 def default_services_file() -> Path:
     return laya_home() / "deploy" / "services.toml"
 
@@ -46,7 +57,7 @@ def host_capabilities(env: Mapping[str, str] = os.environ) -> frozenset[str]:
 
 
 def backend_for(capabilities: frozenset[str]) -> str:
-    """The NPU where the Host declares one; otherwise torch, whose weights only a checkout has.
+    """The NPU where the Host declares one; otherwise torch, with independently prepared Host artifacts.
 
     There is no CPU path for a released Host: ONNX on the RK3588's and the Pi 5's A76 cores
     measured 2.4–3.0 s per request (evals/opi5max-npu-20260929), past every caller's budget.
@@ -141,7 +152,7 @@ class Settings:
             service=service,
             backend=chosen,
             # A relative model directory is one of this checkout's (models/ in the laya project).
-            model_dir=model_dir if model_dir.is_absolute() else laya_home() / model_dir,
+            model_dir=resolve_model_dir(model_dir),
             api_key=api_key,
             rknn_library=Path(library) if library else None,
             **{_FIELD_OF.get(key, key): value for key, value in values.items()},
@@ -167,12 +178,7 @@ class Settings:
             return
         if (self.model_dir / "manifest.json").is_file():
             return
-        hint = (
-            "the Host's pinned artifact is not installed"
-            if self.backend == "rknn"
-            else "torch weights live in a source checkout (git lfs pull); "
-            "a released Host without rknpu2 does not run Laya"
-        )
+        hint = "prepare the Host model artifacts before starting the service"
         raise FileNotFoundError(f"{self.service or 'laya'}: no model at {self.model_dir}: {hint}")
 
 

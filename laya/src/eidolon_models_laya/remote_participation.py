@@ -105,7 +105,7 @@ def convert(r, body, choices, back):
         **{k: getattr(r, k) for k in Snapshot.model_fields},
         status="decided" if proposal else "abstained",
         proposal=proposal,
-        policy_version="d3-team-concise-v2",
+        policy_version="d3-team-discussion-v3",
         model_version="d3-http",
     )
     validate_proposal(r, result)
@@ -113,7 +113,7 @@ def convert(r, body, choices, back):
 
 
 class RemoteParticipationAdapter:
-    policy_version = "d3-team-concise-v2"
+    policy_version = "d3-team-discussion-v3"
     model_version = "d3-http"
     max_candidates = 16
 

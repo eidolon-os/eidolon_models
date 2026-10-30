@@ -46,7 +46,7 @@ def test_the_product_services_on_an_npu_board():
 def test_the_product_services_from_a_source_checkout():
     home = Settings.for_service("smart_home", capabilities=frozenset())
     assert home.backend == "torch" and home.device == "auto"
-    assert home.model_dir == laya_home() / "models" / "laya-smart-home" / "e8254243"
+    assert home.model_dir == Path("/var/lib/eidolon/models/laya-smart-home-c10-torch-e8254243")
     assert home.rknn_placement is None and home.max_pending == 4
 
 
@@ -112,9 +112,9 @@ def test_a_backend_the_service_does_not_describe_is_refused():
 
 def test_a_missing_model_says_why(tmp_path: Path):
     s = Settings(service="smart_home", backend="rknn", model_dir=tmp_path / "absent")
-    with pytest.raises(FileNotFoundError, match="artifact is not installed"):
+    with pytest.raises(FileNotFoundError, match="prepare the Host model artifacts"):
         s.require_model()
-    with pytest.raises(FileNotFoundError, match="does not run Laya"):
+    with pytest.raises(FileNotFoundError, match="prepare the Host model artifacts"):
         Settings(service="smart_home", model_dir=tmp_path / "absent").require_model()
 
 
@@ -143,3 +143,12 @@ def test_the_default_services_file_is_this_checkouts():
 )
 def test_is_loopback(host, expected):
     assert is_loopback(host) is expected
+
+
+def test_host_model_root_is_independent_of_checkout(tmp_path, monkeypatch):
+    from eidolon_models_laya.config import Settings
+    monkeypatch.setenv('EIDOLON_STATE_ROOT', str(tmp_path))
+    settings = Settings.for_service('smart_home', backend='torch')
+    assert settings.model_dir == tmp_path / 'models/laya-smart-home-c10-torch-e8254243'
+    remote = Settings.for_service('participation', backend='remote').with_overrides(upstream_url='http://model/d3/v1/systemone')
+    remote.require_model()

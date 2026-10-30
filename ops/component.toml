@@ -418,3 +418,84 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-READ
 path = "admission-controlled-trial.json"
 sha256 = "99465a43f932528b04dacb2347b4e6b522593c14ab2019cc5514488a556cdedd"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/admission-controlled-trial.json"
+
+# Source/runtime-selected Torch artifact; never carried to an NPU or remote backend.
+[[artifacts]]
+id = "laya-smart-home-c10-torch-e8254243"
+kind = "model"
+activation = "explicit"
+install_root = "/var/lib/eidolon/models/laya-smart-home-c10-torch-e8254243"
+requires_capability = "local_laya"
+
+[[artifacts.files]]
+path = "manifest.json"
+sha256 = "75bc596eb7448708167e079d9a26136176622ffbcfbee2005b0a167402a16f8a"
+url = "repo://laya/models/laya-smart-home/e8254243/manifest.json"
+
+[[artifacts.files]]
+path = "torch/model.safetensors"
+sha256 = "e825424341b894860ee63cee349420a9d4c245853f95ddd2113964ec5ed8698c"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/model.safetensors"
+
+[[artifacts.files]]
+path = "torch/rl_agent_config.json"
+sha256 = "e8bb13def12bc0647cc596326e4d46dbc16b7f253b28c8aa7437b32e852ea208"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/rl_agent_config.json"
+
+[[artifacts.files]]
+path = "torch/encoder/config.json"
+sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/encoder/config.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer.json"
+sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/tokenizer/tokenizer.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer_config.json"
+sha256 = "e8e6a37c189f9dd23976b86b3e1ddb6928472e9f87c94103a1aaff311f45f090"
+url = "repo://laya/models/laya-smart-home/e8254243/torch/tokenizer/tokenizer_config.json"
+
+# Source/runtime-selected Torch artifact; never carried to an NPU or remote backend.
+[[artifacts]]
+id = "laya-participation-p4-torch-ae6718a4"
+kind = "model"
+activation = "explicit"
+install_root = "/var/lib/eidolon/models/laya-participation-p4-torch-ae6718a4"
+requires_capability = "local_laya_participation"
+
+[[artifacts.files]]
+path = "manifest.json"
+sha256 = "ffd02531c3072e8786c1dbd9ad2107caf329615d3a1b2acb652fee225b146213"
+url = "repo://laya/models/laya-participation/ae6718a4/manifest.json"
+
+[[artifacts.files]]
+path = "torch/model.safetensors"
+sha256 = "ae6718a42fc32934d04047bc33bb584f0fab1d1b1f779e4680f5e7f91d7eba98"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/model.safetensors"
+
+[[artifacts.files]]
+path = "torch/rl_agent_config.json"
+sha256 = "f35ba08b343e2729453fc1c712c72eb6cd3c1dae116eedba3484ae499346bc37"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/rl_agent_config.json"
+
+[[artifacts.files]]
+path = "torch/encoder/config.json"
+sha256 = "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/encoder/config.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer.json"
+sha256 = "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/tokenizer/tokenizer.json"
+
+[[artifacts.files]]
+path = "torch/tokenizer/tokenizer_config.json"
+sha256 = "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a"
+url = "repo://laya/models/laya-participation/ae6718a4/torch/tokenizer/tokenizer_config.json"
+
+[[artifacts.files]]
+path = "participation.json"
+sha256 = "85063d9d0f369a8d1d0539ea729c8597a16ae7c6f995e52e5e313dca7f69cf7c"
+url = "repo://laya/models/laya-participation/ae6718a4/participation.json"

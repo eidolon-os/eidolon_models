@@ -5,10 +5,11 @@
 #   - which services run is the Host's capability declaration (Ops: local_laya,
 #     local_laya_participation), which decides the units installed and the artifacts carried;
 #   - the backend follows from `rknpu2` in that same declaration (EIDOLON_HOST_CAPABILITIES): rknn on
-#     an NPU board, torch from a source checkout (the Mac). A released Host without an NPU runs no Laya:
+#     an NPU board, torch on a source Host (the Mac), using independently prepared artifacts. A released Host without an NPU runs no Laya:
 #     ONNX on the A76 cores measured 2.4–3.0 s per request (evals/opi5max-npu-20260929).
 # Ports are the port registry's (ops/component.toml [ports]); rknn model directories are the install
-# roots of the pinned artifacts there. Tests hold both to that file.
+# roots of the pinned artifacts there. Torch uses the same artifact boundary.
+# EIDOLON_STATE_ROOT translates /var/lib/eidolon on a source Host. Tests hold the pins to that file.
 #
 # One-off runs override single values on the command line (--port, --model-dir, --backend); nothing
 # reads an environment variable for these.
@@ -35,7 +36,7 @@ speculative = true
 max_pending = 1
 
 [smart_home.torch]
-model_dir = "models/laya-smart-home/e8254243"
+model_dir = "/var/lib/eidolon/models/laya-smart-home-c10-torch-e8254243"
 device = "auto"
 
 # Companion / role-team participation decisions (/v1/participation/decide, SDK participation v2).
@@ -53,7 +54,7 @@ speculative = false
 max_pending = 1
 
 [participation.torch]
-model_dir = "models/laya-participation/ae6718a4"
+model_dir = "/var/lib/eidolon/models/laya-participation-p4-torch-ae6718a4"
 device = "auto"
 
 # A remote backend has no local weights. Its URL is an explicit Host input.

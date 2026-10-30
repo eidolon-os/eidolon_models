@@ -118,3 +118,11 @@ Copyright © 2026 Li Jinsong.
 本仓库中由 Li Jinsong 持有版权的材料，允许依据 [PolyForm Noncommercial License 1.0.0](LICENSE) 进行许可范围内的非商业使用。商业使用需要另行取得书面授权，请联系 [lijinsong@aimanthor.com](mailto:lijinsong@aimanthor.com)。
 
 第三方模型、权重、配置、词表、代码和其他材料保留其原始许可证；仓库级许可证不会重新许可这些材料。详情见 [LICENSING.md](LICENSING.md) 与 [NOTICE](NOTICE)。
+
+## Host 源码与模型资源的生命周期
+
+Mac 源码运行的 Laya 权重与源码版本分开保存。`ops/component.toml` 声明固定文件、SHA-256 和 `repo://` 来源；`laya/deploy/services.toml` 的实际后端选择独立模型目录。Torch 制品标记 `activation = "explicit"`，仅在运行配置引用时准备，不随普通能力交付带到 NPU Host。远程 D3 不需要本地参与模型。
+
+Ops 复用现有制品准备和完整校验，将所需文件放入 `$EIDOLON_STATE_ROOT/models/<固定版本>`；没有该环境变量时使用 `/var/lib/eidolon/models`。源码中不需要展开权重，切换 prompt/代码不会复制模型；回滚代码仍引用其固定模型版本。单独运行研究工具时可显式使用 `--model-dir`。
+
+准备部署源码检出时使用 `GIT_LFS_SKIP_SMUDGE=1`，避免 Git 自动展开所有 LFS 权重。实际需要的资源由 Ops 从固定提交按需提取和校验，不依赖手工复制目录、软链接旧发布或 macOS 写时复制。不要删除独立模型目录或 LFS 对象缓存来做常规源码清理；先检查当前运行及保留回滚版本的引用。
