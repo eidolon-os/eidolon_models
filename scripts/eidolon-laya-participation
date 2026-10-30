@@ -8,4 +8,13 @@ REPO_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 # question and OpenBLAS's per-core pool only spins (backends.py limits it again once loaded), and
 # the weights never come from the network.
 export OPENBLAS_NUM_THREADS=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
-exec "$REPO_ROOT/.venv/bin/eidolon-laya" --config "$REPO_ROOT/laya/deploy/services.toml" --service participation "$@"
+if [ -x "$REPO_ROOT/.venv/bin/eidolon-laya" ]; then
+    LAYA="$REPO_ROOT/.venv/bin/eidolon-laya"
+else
+    LAYA="$REPO_ROOT/laya/scripts/eidolon-laya"
+fi
+if [ -n "${EIDOLON_PARTICIPATION_UPSTREAM_URL:-}" ]; then
+    # Only an explicit Host input enables public context to leave this Host.
+    exec "$LAYA" --service participation "$@" --backend remote --upstream-url "$EIDOLON_PARTICIPATION_UPSTREAM_URL"
+fi
+exec "$LAYA" --config "$REPO_ROOT/laya/deploy/services.toml" --service participation "$@"

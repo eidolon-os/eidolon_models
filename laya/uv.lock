@@ -211,6 +211,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "aiohttp" },
+    { name = "httpx" },
     { name = "eidolon-sdk" },
     { name = "huggingface-hub" },
     { name = "numpy" },
@@ -255,6 +256,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "aiohttp", specifier = ">=3.11,<4" },
+    { name = "httpx", specifier = ">=0.28,<1" },
     { name = "eidolon-sdk", editable = "../../eidolon_sdk" },
     { name = "huggingface-hub", specifier = ">=0.30,<2" },
     { name = "numpy", specifier = ">=2.1,<3" },

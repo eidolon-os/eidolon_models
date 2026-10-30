@@ -6,8 +6,8 @@
     GET  /v1/info          model, backend, limits                       (auth)
     GET  /v1/participation/readyz  IP-team v2 adapter ready, if configured (auth)
     POST /v1/participation/decide  SDK participation v2, if configured (auth)
-    POST /v1/systemone     {"state": ..., "questions": {...}, "options": {"truncate_left": bool, "ask_if": {...}}}
-                           ask_if: {"device": {"intent": ["控制", "查询"]}} asks device only when intent is one of those
+    POST /v1/systemone     state, questions, options (truncate_left, ask_if)
+                           ask_if asks a question only after a matching earlier answer
                            Jev / laya wire format; extra fields in the reply only  (auth)
 
 Inference runs on one worker thread: a forward pass already uses every core it
@@ -33,6 +33,7 @@ from . import __version__
 from .config import Settings
 from .engine import DecisionEngine
 from .participation import ParticipationAdapter
+from .remote_participation import RemoteParticipationAdapter
 
 log = logging.getLogger("eidolon_laya")
 
@@ -40,7 +41,9 @@ ENGINE = web.AppKey("engine", DecisionEngine)
 SETTINGS = web.AppKey("settings", Settings)
 INFO = web.AppKey("info", dict)
 STATE = web.AppKey("state", dict)
-PARTICIPATION = web.AppKey("participation", ParticipationAdapter | None)
+PARTICIPATION = web.AppKey(
+    "participation", ParticipationAdapter | RemoteParticipationAdapter | None
+)
 
 # Labels and messages are mostly Chinese: send them as UTF-8, not \uXXXX escapes.
 _json = functools.partial(
@@ -75,6 +78,8 @@ async def healthz(_: web.Request) -> web.Response:
 
 
 async def readyz(request: web.Request) -> web.Response:
+    if request.app[SETTINGS].backend == "remote":
+        return await participation_readyz(request)
     return _json({"status": "ready", "backend": request.app[ENGINE].backend.name})
 
 
@@ -88,7 +93,9 @@ async def info(request: web.Request) -> web.Response:
                 "uptime_s": round(time.time() - state["started"]),
                 "served": state["served"],
             },
-            "engine": request.app[ENGINE].describe(),
+            "engine": request.app[ENGINE].describe()
+            if request.app[ENGINE]
+            else {"backend": "remote"},
             "limits": {
                 "max_pending": settings.max_pending,
                 "max_questions": settings.max_questions,
@@ -102,13 +109,22 @@ async def participation_readyz(request: web.Request) -> web.Response:
     adapter = request.app[PARTICIPATION]
     if adapter is None:
         return _error(503, "not_configured", "IP-team decision model is not configured")
-    return _json({
-        "status": "ready",
-        "task": "ip_team.participation",
-        "schema_version": 2,
-        "policy_version": adapter.policy_version,
-        "model_version": adapter.model_version,
-    })
+    if isinstance(adapter, RemoteParticipationAdapter):
+        try:
+            await asyncio.wait_for(asyncio.to_thread(adapter.readiness), timeout=2.5)
+        except Exception:
+            return _error(503, "upstream_unavailable", "participation upstream is unavailable")
+    return _json(
+        {
+            "max_candidates": getattr(adapter, "max_candidates", 16),
+            "supports_summary": False if isinstance(adapter, RemoteParticipationAdapter) else True,
+            "status": "ready",
+            "task": "ip_team.participation",
+            "schema_version": 2,
+            "policy_version": adapter.policy_version,
+            "model_version": adapter.model_version,
+        }
+    )
 
 
 async def participation_decide(request: web.Request) -> web.Response:
@@ -130,6 +146,7 @@ async def participation_decide(request: web.Request) -> web.Response:
     loop = asyncio.get_running_loop()
     started = time.perf_counter()
     future = loop.run_in_executor(state["executor"], adapter.decide_explained, decision)
+
     # A request deadline cannot stop a running inference thread. Count it as
     # pending until the worker actually exits, so timed-out callers cannot
     # enqueue work without bound.
@@ -153,7 +170,8 @@ async def participation_decide(request: web.Request) -> web.Response:
     response, why = response
     # Correlation id, versions, action, reason and time only — never the public dialogue.
     log.info(
-        "participation decision=%s status=%s action=%s reason=%s confidence=%s detail=%s ms=%.0f policy=%s model=%s",
+        "participation decision=%s status=%s action=%s reason=%s confidence=%s "
+        "detail=%s ms=%.0f policy=%s model=%s",
         decision.decision_id,
         response.status,
         response.proposal.action if response.proposal else "-",
@@ -169,6 +187,8 @@ async def participation_decide(request: web.Request) -> web.Response:
 
 async def systemone(request: web.Request) -> web.Response:
     settings, state, engine = request.app[SETTINGS], request.app[STATE], request.app[ENGINE]
+    if engine is None:
+        return _error(404, "not_configured", "this service exposes participation only")
     try:
         body = await request.json()
     except web.HTTPRequestEntityTooLarge:
@@ -222,20 +242,22 @@ async def systemone(request: web.Request) -> web.Response:
         prediction.total_ms,
         prediction.truncated or "-",
     )
-    return _json({
-        "contract_version": "eidolon.models.laya.systemone.v1",
-        "features": {"question_state": True},
-        "revision": request.app[INFO].get("revision"),
-        **prediction.as_response(engine.name, engine.backend.name),
-    })
+    return _json(
+        {
+            "contract_version": "eidolon.models.laya.systemone.v1",
+            "features": {"question_state": True},
+            "revision": request.app[INFO].get("revision"),
+            **prediction.as_response(engine.name, engine.backend.name),
+        }
+    )
 
 
 def create_app(
-    engine: DecisionEngine,
+    engine: DecisionEngine | None,
     settings: Settings,
     model_info: dict,
     *,
-    participation: ParticipationAdapter | None = None,
+    participation: ParticipationAdapter | RemoteParticipationAdapter | None = None,
 ) -> web.Application:
     app = web.Application(client_max_size=settings.max_body_bytes, middlewares=[_auth])
     app[ENGINE] = engine
@@ -251,6 +273,8 @@ def create_app(
 
     async def _shutdown(app: web.Application) -> None:
         app[STATE]["executor"].shutdown(wait=False, cancel_futures=True)
+        if isinstance(app[PARTICIPATION], RemoteParticipationAdapter):
+            app[PARTICIPATION].close()
 
     app.on_cleanup.append(_shutdown)
     app.router.add_get("/healthz", healthz)

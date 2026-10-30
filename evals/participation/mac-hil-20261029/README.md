@@ -1,5 +1,7 @@
 # Mac 两角色实机测试：2026-10-29
 
+> 历史记录。2026-10-30 已将协议投影、结果验证和可选审计迁入正式 `laya/src/eidolon_models_laya/remote_participation.py` 与 `participation_audit.py`，测试迁入 `laya/tests/test_remote_participation.py`。临时 gateway HTTP 入口已退役；历史结论和审计分析器保留。部署请使用 Models 原有 participation 服务与 Ops 生命周期，不再按下文历史步骤启动网关。
+
 目的：验证真实 PTT 输入 → ASR → d3 决策 → 独立回复大模型 → 指定设备播报。
 决策模型只决定回应、澄清、等待、结束以及谁回应，不生成角色回复。
 

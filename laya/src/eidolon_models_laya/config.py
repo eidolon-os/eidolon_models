@@ -18,7 +18,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass, replace
 from pathlib import Path
 
-BACKENDS = ("torch", "onnx", "rknn")
+BACKENDS = ("torch", "onnx", "rknn", "remote")
 DEVICES = ("auto", "cpu", "mps", "cuda")
 
 DEFAULT_MODEL = Path("models") / "laya-multilingual" / "1c5edc17"
@@ -100,6 +100,7 @@ class Settings:
     max_body_bytes: int = 256 * 1024
     #: A task-qualified profile in the pinned model root is required to expose participation v2.
     enable_participation: bool = False
+    upstream_url: str = ""
 
     @classmethod
     def for_service(
@@ -128,7 +129,7 @@ class Settings:
                 f"it describes {', '.join(table['backends']) or 'none'}"
             )
         values = {**document["defaults"], **table["common"], **table["backends"][chosen]}
-        model_dir = Path(values.pop("model_dir"))
+        model_dir = Path(values.pop("model_dir", str(DEFAULT_MODEL)))
         api_key_file = values.pop("api_key_file", None)
         api_key = None
         if api_key_file is not None:
@@ -160,6 +161,10 @@ class Settings:
 
     def require_model(self) -> None:
         """Fail on a missing pinned model before loading anything, saying why it is missing."""
+        if self.backend == "remote":
+            if self.service != "participation" or not self.upstream_url:
+                raise ValueError("remote backend requires participation and explicit upstream_url")
+            return
         if (self.model_dir / "manifest.json").is_file():
             return
         hint = (
@@ -175,6 +180,7 @@ class Settings:
 _FIELD_OF = {"placement": "rknn_placement", "participation": "enable_participation"}
 _VALUE_KEYS = {
     "model_dir": (str,),
+    "upstream_url": (str,),
     "host": (str,),
     "port": (int,),
     "device": (str,),
@@ -236,7 +242,7 @@ def load_services(path: Path) -> dict:
         common = values(table, name)
         backends = {b: values(table[b], f"{name}.{b}") for b in BACKENDS if b in table}
         for backend, chosen in backends.items():
-            if "model_dir" not in {**common, **chosen}:
+            if backend != "remote" and "model_dir" not in {**common, **chosen}:
                 raise ValueError(f"{path}: {name}.{backend} names no model_dir")
         services[name] = {"common": common, "backends": backends}
     return {"defaults": defaults, "services": services}

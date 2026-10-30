@@ -9,6 +9,7 @@ requires-python = ">=3.13,<3.14"
 # extras so an ONNX-only host never installs torch.
 dependencies = [
   "aiohttp>=3.11,<4",
+  "httpx>=0.28,<1",
   "eidolon-sdk",
   "huggingface-hub>=0.30,<2",
   "numpy>=2.1,<3",

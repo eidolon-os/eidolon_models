@@ -187,3 +187,28 @@ checkpoint：Apache-2.0（convaiinnovations/laya）；基座编码器 mmBERT-bas
 `sequence.py` 移植自 laya 源码（Apache-2.0，文件头注明改动）；`src/eidolon_models_laya/vendor/laya/` 是上游包按 git tag 的原样副本（上游会从 PyPI 删旧版本，所以不依赖 PyPI），用 `scripts/sync-laya-vendor.py <tag>` 升级，升级门槛是 `tests/test_parity.py` 和 `evals/smart-home/run_all.sh` 的数字不动。本目录其余代码随仓库许可。
 
 2026-10-09：c10 已完成 [OPI5 Max NPU 隔离验证](evals/c10-npu-20261009/README.md)，并已[切换生产](evals/c10-production-20261009/README.md)。默认权重为 `e8254243`；长上下文仍可能偶发超过 1 秒，由现有路径兜底。
+
+
+### Remote participation backend
+
+The existing participation service also supports an explicitly configured remote
+SystemOne d3 endpoint. It serves the same SDK v2 decision and readiness routes;
+it does not run an additional gateway or load local weights. The Host input
+`EIDOLON_PARTICIPATION_UPSTREAM_URL` selects this backend through the existing
+`scripts/eidolon-laya-participation serve` launcher. Without it, local backend
+selection is unchanged. Only configure a reviewed endpoint with authorization to
+send public team transcripts/context; audio, private memory and credentials are
+not included. Redirects and environment proxies are disabled.
+
+`GET /participation/readyz` probes the upstream `/health` without dialogue or a
+model inference. `/healthz` is process liveness only. Decisions enforce deadlines,
+bounded pending work and bounded responses. The service supports 1–16 candidates
+and full recent public messages; summaries and pending requirements are explicitly
+rejected rather than truncated. The original d3 policy is packaged as
+`participation_d3_policy.txt`, independent of evaluation datasets. The opt-in
+`EIDOLON_PARTICIPATION_AUDIT_DIR` retains the prior private local JSONL audit format.
+
+Mac source Hosts declare `local_laya_participation` and `[participation].upstream_url`
+in their Ops profile. The existing supervisor owns restart/stop/logging and the
+normal Host health check includes participation readiness. NPU artifacts require
+both participation capability and `rknpu2`; a remote-only Host installs none.

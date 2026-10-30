@@ -55,3 +55,7 @@ max_pending = 1
 [participation.torch]
 model_dir = "models/laya-participation/ae6718a4"
 device = "auto"
+
+# A remote backend has no local weights. Its URL is an explicit Host input.
+[participation.remote]
+upstream_url = ""

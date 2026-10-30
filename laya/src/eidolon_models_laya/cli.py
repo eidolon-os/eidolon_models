@@ -19,7 +19,8 @@ def _settings(args: argparse.Namespace) -> Settings:
     model_dir = Path(args.model_dir).resolve() if getattr(args, "model_dir", None) else None
     if args.service:
         settings = Settings.for_service(
-            args.service, path=Path(args.config) if args.config else None,
+            args.service,
+            path=Path(args.config) if args.config else None,
             backend=getattr(args, "backend", None),
         )
     elif model_dir is not None:
@@ -28,6 +29,7 @@ def _settings(args: argparse.Namespace) -> Settings:
         raise ValueError("name a --service (deploy/services.toml) or a --model-dir")
     return settings.with_overrides(
         backend=getattr(args, "backend", None),
+        upstream_url=getattr(args, "upstream_url", None),
         host=getattr(args, "host", None),
         port=getattr(args, "port", None),
         device=getattr(args, "device", None),
@@ -64,7 +66,9 @@ def cmd_export_npu(args: argparse.Namespace) -> int:
     manifest = Manifest.load(_settings(args).model_dir)
     problems = verify_torch(manifest, checksums=False)
     if problems:
-        print("PyTorch weights missing; run `eidolon-laya fetch` first:\n  " + "\n  ".join(problems))
+        print(
+            "PyTorch weights missing; run `eidolon-laya fetch` first:\n  " + "\n  ".join(problems)
+        )
         return 2
     buckets = tuple(sorted(int(x) for x in args.buckets.split(","))) if args.buckets else None
     out = export_npu(manifest, force=args.force, **({"buckets": buckets} if buckets else {}))
@@ -74,6 +78,18 @@ def cmd_export_npu(args: argparse.Namespace) -> int:
 
 def cmd_doctor(args: argparse.Namespace) -> int:
     settings = _settings(args)
+    if settings.backend == "remote":
+        from .remote_participation import RemoteParticipationAdapter
+
+        settings.validate_exposure()
+        settings.require_model()
+        adapter = RemoteParticipationAdapter(settings.upstream_url)
+        try:
+            adapter.readiness()
+            print("ready: remote participation v2")
+            return 0
+        finally:
+            adapter.close()
     manifest = Manifest.load(settings.model_dir)
     source = f"{manifest.repo_id}@{manifest.revision[:8]}/{manifest.subfolder}"
     threads = settings.threads or "auto"
@@ -130,6 +146,16 @@ def cmd_serve(args: argparse.Namespace) -> int:
     settings = _settings(args)
     settings.validate_exposure()
     settings.require_model()
+    if settings.backend == "remote":
+        from .remote_participation import RemoteParticipationAdapter
+
+        adapter = RemoteParticipationAdapter(settings.upstream_url)
+        web.run_app(
+            create_app(None, settings, {"model": "d3", "backend": "remote"}, participation=adapter),
+            host=settings.host,
+            port=settings.port,
+        )
+        return 0
     engine, manifest = load_engine(settings, log=logging.getLogger("eidolon_laya").info)
     model_info = {
         "model": manifest.name,
@@ -148,7 +174,8 @@ def cmd_serve(args: argparse.Namespace) -> int:
             model_revision=manifest.revision,
             expected_sha256=profile_digest,
         )
-        if settings.enable_participation else None
+        if settings.enable_participation
+        else None
     )
     web.run_app(
         create_app(engine, settings, model_info, participation=participation),
@@ -181,6 +208,7 @@ def cmd_predict(args: argparse.Namespace) -> int:
 
 def _runtime_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--backend", choices=BACKENDS)
+    p.add_argument("--upstream-url", help="explicit remote participation SystemOne endpoint")
     p.add_argument("--device", choices=DEVICES, help="torch backend only")
     p.add_argument("--threads", type=int, help="intra-op threads (0 = runtime default)")
     p.add_argument("--max-len", type=int, help="token budget per question (default: checkpoint's)")
@@ -192,7 +220,8 @@ def _runtime_args(p: argparse.ArgumentParser) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="eidolon-laya", description=__doc__)
     parser.add_argument(
-        "--service", choices=SERVICES,
+        "--service",
+        choices=SERVICES,
         help="the service's table in the services file (required by serve)",
     )
     parser.add_argument(
@@ -219,7 +248,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser(
         "export-npu",
-        help="static-shape ONNX per sequence bucket + CPU-side tables, for NPU converters (export extra)",
+        help=(
+            "static-shape ONNX per sequence bucket + CPU-side tables, "
+            "for NPU converters (export extra)"
+        ),
     )
     p.add_argument("--force", action="store_true")
     p.add_argument("--buckets", help="comma-separated sequence lengths (default 128,256,384,512)")

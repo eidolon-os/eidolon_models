@@ -1,13 +1,15 @@
 """Opt-in local HIL audit. Callers pass public scene facts, never credentials/audio."""
+
 import json
 import logging
 import os
 import stat
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 failures = 0
+
 
 def record(event, *, source="agent", **facts):
     global failures
@@ -20,12 +22,28 @@ def record(event, *, source="agent", **facts):
         info = root.lstat()
         if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
             raise PermissionError("audit directory must be owned and private")
-        stamp = datetime.now(timezone.utc)
-        data = (json.dumps(dict(schema_version=1, source=source, event=event,
-                               timestamp=stamp.isoformat(), monotonic_ns=time.monotonic_ns(),
-                               pid=os.getpid(), **facts), ensure_ascii=False, allow_nan=False)+"\n").encode()
-        fd = os.open(root / f"{source}-{stamp:%Y%m%d}-{os.getpid()}.jsonl",
-                     os.O_WRONLY | os.O_APPEND | os.O_CREAT | os.O_NOFOLLOW, 0o600)
+        stamp = datetime.now(UTC)
+        data = (
+            json.dumps(
+                dict(
+                    schema_version=1,
+                    source=source,
+                    event=event,
+                    timestamp=stamp.isoformat(),
+                    monotonic_ns=time.monotonic_ns(),
+                    pid=os.getpid(),
+                    **facts,
+                ),
+                ensure_ascii=False,
+                allow_nan=False,
+            )
+            + "\n"
+        ).encode()
+        fd = os.open(
+            root / f"{source}-{stamp:%Y%m%d}-{os.getpid()}.jsonl",
+            os.O_WRONLY | os.O_APPEND | os.O_CREAT | os.O_NOFOLLOW,
+            0o600,
+        )
         try:
             info = os.fstat(fd)
             if not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
@@ -40,4 +58,6 @@ def record(event, *, source="agent", **facts):
             os.close(fd)
     except Exception as error:
         failures += 1
-        logging.getLogger(__name__).warning("participation audit write failed type=%s failures=%d", type(error).__name__, failures)
+        logging.getLogger(__name__).warning(
+            "participation audit write failed type=%s failures=%d", type(error).__name__, failures
+        )

@@ -295,6 +295,7 @@ id = "laya-participation-p4-rknn-ae6718a4"
 kind = "model"
 install_root = "/var/lib/eidolon/models/laya-participation-p4-rknn-ae6718a4"
 requires_capability = "local_laya_participation"
+requires_capabilities = ["rknpu2"]
 
 [[artifacts.files]]
 path = "librknnrt.so"
