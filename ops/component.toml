@@ -374,9 +374,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-f272d6e8"
+id = "campplus-zh-16k-a7a8074b"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-f272d6e8"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-a7a8074b"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -386,7 +386,7 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/LICENSE"
 
 [[artifacts.files]]
 path = "README.md"
-sha256 = "cfd6c0fe9663e982833f9a44838342cdf2d9ed8562e8ee1cdf988b21d717160c"
+sha256 = "9e2a6f67e4d4fa0ff93f1766bc687bc6589237488a88d13c880e44844f4517e7"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/README.md"
 
 [[artifacts.files]]
@@ -415,24 +415,24 @@ sha256 = "747094e5c9a41773a07916ae37fe38c37e5bcb4116fa71db619d16a70b9250b0"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-README.md"
 
 [[artifacts.files]]
-path = "recognition-controlled-trial.json"
-sha256 = "be0368ba38112d24de86c023f85cdd1f90695521474841905b05e4edf7f31e47"
-url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-controlled-trial.json"
+path = "identity-policy.json"
+sha256 = "3a2b7902489f515b86ab17c355b280c309709c6a6d52952c028207eba1db530f"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-policy.json"
 
 [[artifacts.files]]
-path = "recognition-policy.md"
-sha256 = "4002b03c30d19f8e5f30c5607b5c9225bda26fb12e5102d483e101b424452b7f"
-url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-policy.md"
+path = "identity-policy.md"
+sha256 = "63ea33dfd6f5ea3425b013365d5fac1d2fcbcc6566679d5385775f872561347c"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-policy.md"
 
 [[artifacts.files]]
-path = "impostor-cohort.npz"
-sha256 = "9459cc2b7f1a8f7b29639cb9bddfed4725aec8a7aaf38566105cf55a5b3e1a1b"
-url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/impostor-cohort.npz"
+path = "identity-backend.json"
+sha256 = "7201fea308045dc3751a86d2349c3e9da04eb5c7b518f83e6f133a105a93f217"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-backend.json"
 
 [[artifacts.files]]
-path = "impostor-cohort.json"
-sha256 = "afefa60ec76e39df3aa233568f7dd9b12f1c16656349a7d04ba5d278fbee334a"
-url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/impostor-cohort.json"
+path = "identity-cohort.npz"
+sha256 = "52aee499c7df0536efc82573919661237bdf9732f398186ffb1bf59d738dde53"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-cohort.npz"
 
 # Source/runtime-selected Torch artifact; never carried to an NPU or remote backend.
 [[artifacts]]

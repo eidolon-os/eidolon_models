@@ -16,4 +16,4 @@ profiles and Companion allowlists. No model asset contains personal voice data.
 
 For local development set `EIDOLON_3DSPEAKER_MODEL_DIR` to this directory.
 The numerical reference accepts contiguous mono PCM16 at 16 kHz. How scores become
-identity decisions is described in `recognition-policy.md`.
+identity decisions is described in `identity-policy.md`.
