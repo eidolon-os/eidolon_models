@@ -1,0 +1,209 @@
+{
+ "policy": "campplus-person-recognition-calibrated-v4",
+ "speakers": 30,
+ "households": 15,
+ "cohort_vectors": 3833,
+ "calibrated": {
+  "genuine/all": {
+   "n": 836,
+   "below": 0.0048,
+   "correct": 0.945,
+   "not_direct": 0.0502
+  },
+  "genuine/ge_1s": {
+   "n": 680,
+   "below": 0.0029,
+   "correct": 0.9603,
+   "not_direct": 0.0368
+  },
+  "genuine/long": {
+   "n": 332,
+   "correct": 0.9458,
+   "not_direct": 0.0542
+  },
+  "genuine/lt_1s": {
+   "n": 156,
+   "below": 0.0128,
+   "correct": 0.8782,
+   "not_direct": 0.109
+  },
+  "genuine/medium": {
+   "n": 264,
+   "correct": 1.0
+  },
+  "genuine/short": {
+   "n": 240,
+   "below": 0.0167,
+   "correct": 0.8833,
+   "not_direct": 0.1
+  },
+  "stranger/all": {
+   "n": 23394,
+   "below": 0.9979,
+   "not_direct": 0.0003,
+   "wrong_person": 0.0018
+  },
+  "stranger/ge_1s": {
+   "n": 18914,
+   "below": 0.9977,
+   "not_direct": 0.0003,
+   "wrong_person": 0.002
+  },
+  "stranger/long": {
+   "n": 9184,
+   "below": 0.9974,
+   "not_direct": 0.0007,
+   "wrong_person": 0.002
+  },
+  "stranger/lt_1s": {
+   "n": 4480,
+   "below": 0.9989,
+   "not_direct": 0.0002,
+   "wrong_person": 0.0009
+  },
+  "stranger/medium": {
+   "n": 7434,
+   "below": 0.9974,
+   "wrong_person": 0.0026
+  },
+  "stranger/short": {
+   "n": 6776,
+   "below": 0.9993,
+   "not_direct": 0.0001,
+   "wrong_person": 0.0006
+  },
+  "stranger_false_accepts": {
+   "trials": 41,
+   "voice_pairs": 7,
+   "pairs_compared": 840,
+   "top_pairs_share": 0.951,
+   "top_pairs": [
+    [
+     "S0069<-S0041",
+     16
+    ],
+    [
+     "S0041<-S0069",
+     14
+    ],
+    [
+     "S0076<-S0032",
+     7
+    ],
+    [
+     "S0064<-S0082",
+     1
+    ],
+    [
+     "S0072<-S0064",
+     1
+    ]
+   ]
+  }
+ },
+ "legacy": {
+  "genuine/all": {
+   "n": 836,
+   "below": 0.0036,
+   "correct": 0.9964
+  },
+  "genuine/ge_1s": {
+   "n": 680,
+   "below": 0.0015,
+   "correct": 0.9985
+  },
+  "genuine/long": {
+   "n": 332,
+   "correct": 1.0
+  },
+  "genuine/lt_1s": {
+   "n": 156,
+   "below": 0.0128,
+   "correct": 0.9872
+  },
+  "genuine/medium": {
+   "n": 264,
+   "correct": 1.0
+  },
+  "genuine/short": {
+   "n": 240,
+   "below": 0.0125,
+   "correct": 0.9875
+  },
+  "stranger/all": {
+   "n": 23394,
+   "below": 0.9931,
+   "wrong_person": 0.0069
+  },
+  "stranger/ge_1s": {
+   "n": 18914,
+   "below": 0.9918,
+   "wrong_person": 0.0082
+  },
+  "stranger/long": {
+   "n": 9184,
+   "below": 0.9888,
+   "wrong_person": 0.0112
+  },
+  "stranger/lt_1s": {
+   "n": 4480,
+   "below": 0.9984,
+   "wrong_person": 0.0016
+  },
+  "stranger/medium": {
+   "n": 7434,
+   "below": 0.9933,
+   "wrong_person": 0.0067
+  },
+  "stranger/short": {
+   "n": 6776,
+   "below": 0.9987,
+   "wrong_person": 0.0013
+  },
+  "stranger_false_accepts": {
+   "trials": 162,
+   "voice_pairs": 15,
+   "pairs_compared": 840,
+   "top_pairs_share": 0.611,
+   "top_pairs": [
+    [
+     "S0041<-S0069",
+     30
+    ],
+    [
+     "S0069<-S0041",
+     24
+    ],
+    [
+     "S0076<-S0032",
+     17
+    ],
+    [
+     "S0032<-S0076",
+     14
+    ],
+    [
+     "S0064<-S0072",
+     14
+    ]
+   ]
+  }
+ },
+ "thresholds": {
+  "short": {
+   "median": 0.55,
+   "p90": 0.597,
+   "direct": 0.9
+  },
+  "medium": {
+   "median": 0.58,
+   "p90": 0.629,
+   "direct": 1.0
+  },
+  "long": {
+   "median": 0.58,
+   "p90": 0.631,
+   "direct": 0.933
+  }
+ }
+}

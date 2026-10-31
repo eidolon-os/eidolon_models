@@ -29,6 +29,18 @@ A cohort budget of 0.005 measured 0.53 % (0.59 % at ≥ 1 s) on held-out strange
 
 **Not shown by this evaluation.** Genuine probes here come from the same recording session and microphone as registration, so own-voice recognition is optimistic; real conversations on another device score lower (10-30: 0.37–0.53). Coverage on real devices is what observation templates per device channel (design §3.2, stage 3) are for. The extractor's voiced-speech measure depends on input level (it saturates near RMS 0.06); quiet speech is measured shorter and lands in a shorter band.
 
+## v4: band floors, because the cohort does not travel across channels
+
+On the Mac Host (2026-10-31), two Persons registered on a phone. Against their templates the cohort scored a median of 0.03 / −0.04 with a 99.85 % tail of 0.10–0.32, whereas against held-out AISHELL templates the cohort median is about 0.2 and the tail about 0.5. The microphone, room and device path move every embedding, so a cohort recorded elsewhere looks far less like a household voice than a stranger in the same room would. The two household Persons (different genders) scored 0.46 against each other's template, well above typical different-speaker scores within AISHELL. Under v3 both Persons' thresholds fell to the household guard (0.36–0.44), below the fixed 0.55 of v2, and the per-turn false-accept target no longer held on the household's channel.
+
+v4 keeps the derivation and sets each band's floor from matched-channel evidence instead: on the acceptance set, floors alone (no cohort) of 0.55 / 0.58 / 0.58 keep strangers at 0.13 % / 0.34 % / 0.25 % per band, while 0.55 for the long band admits 0.85 %. Wherever the cohort is mismatched these floors decide. They bound the risk only as far as the household channel is no worse than AISHELL's own, which the 0.46 cross score above suggests it may be; a channel-matched impostor set is what would calibrate it (design §3.3).
+
+| | v4 (floors 0.55 / 0.58 / 0.58) | v3 | v2 fixed 0.55 / 0.10 |
+|---|---|---|---|
+| strangers identified as a household Person, all probes | 0.18 % | 0.38 % | 0.69 % |
+| … voiced ≥ 1 s | 0.20 % | 0.42 % | 0.82 % |
+| own probes identified correctly, voiced ≥ 1 s | 96.0 % | 96.2 % | 99.9 % |
+
 ## Unchanged
 
 Below `min_speech_ms` the result is insufficient speech. A probe below threshold stays uncertain/short_speech_inconclusive until it has `min_unknown_speech_ms` of voiced speech; a weak short probe is not evidence of an unregistered speaker. Neither silence padding nor audio from previous turns counts as new identity evidence. All positive decisions remain controlled_trial. Missing assets, a missing or mismatched cohort, model mismatch, ambiguous candidates, dependency failure and expired evidence never produce a Person. Recognition owns the acceptance decision; evaluation labels remain diagnostic metadata. Memory separately verifies the current signed Person and Data authorization for an explicitly enabled Realm. The UI consumes the recognition status; unknown and unavailable remain normal conversation states.
