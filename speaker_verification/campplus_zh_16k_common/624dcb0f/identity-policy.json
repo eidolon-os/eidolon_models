@@ -1,5 +1,5 @@
 {
-  "version": "campplus-identity-policy-v2",
+  "version": "campplus-identity-policy-v3",
   "model_id": "campplus_zh_16k_common",
   "weights_hash": "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
   "preprocessing_version": "reference-contiguous-pcm16-v1",
@@ -7,9 +7,9 @@
   "min_speech_ms": 600,
   "min_unknown_speech_ms": 1500,
   "prior_unknown": 0.5,
-  "personal_memory": 0.99,
+  "personal_memory": null,
   "addressing": 0.9,
   "speaker_label": 0.9,
-  "candidate_evidence": 0.95,
-  "discovery": 0.99
+  "candidate_evidence": null,
+  "discovery": null
 }

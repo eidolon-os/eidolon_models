@@ -12,8 +12,10 @@ Recognition returns advisory identity evidence, never admission, authentication 
   The cohort is 1074 utterance embeddings of 69 public AISHELL-1 speakers, each recording passed through a phone channel and a simulated far-field device channel. It holds embeddings only: no audio, transcripts or names.
 - **`identity-policy.json`**: how the evidence becomes decisions.
   - Every compared Person gets an open-set posterior; someone not enrolled has prior 0.5.
-  - Each use has its own threshold: `personal_memory` 0.99, `addressing` 0.90, `speaker_label` 0.90, `candidate_evidence` 0.95, and `discovery` 0.99 on the posterior of someone not enrolled.
+  - Each use has its own threshold. A use without one is off: nothing is ever decided for it.
   - Consumers read the decision for their own use and never set a threshold of their own.
+
+  Policy v3 turns on `addressing` 0.90 and `speaker_label` 0.90 only. `personal_memory`, `candidate_evidence` and `discovery` stay off until the calibration has been checked on the household's own channel (design §8.2 1c): on that channel the public-corpus calibration is over-confident (see *Not shown*), and those three uses write lasting records, while a wrong name is corrected in the next turn. Policy v2 used 0.99 / 0.90 / 0.90 / 0.95 / 0.99 for the five uses; the evidence below is for those thresholds.
 
 A registration template is the mean of three samples, and its voiced speech is their sum. Its channel is `mobile`, because registration captures only through the phone app. A probe's channel is its device kind; every phone app counts as one channel. The calibration was trained under exactly these conventions.
 

@@ -56,8 +56,9 @@ def test_the_policy_and_calibration_name_the_delivered_weights_and_cohort():
     assert policy['preprocessing_version'] == backend['identity'][2]
     assert policy['backend_version'] == backend['version']
     assert policy['min_speech_ms'] <= policy['min_unknown_speech_ms']
-    assert 0.5 <= min(policy[u] for u in ('personal_memory', 'addressing', 'speaker_label',
-                                          'candidate_evidence', 'discovery'))
+    uses = ('personal_memory', 'addressing', 'speaker_label', 'candidate_evidence', 'discovery')
+    assert set(uses) <= policy.keys()  # a use is switched off explicitly, never by omission
+    assert all(0.5 <= policy[u] < 1 for u in uses if policy[u] is not None)
     cohort = backend['cohort']
     assert declared[cohort['path']] == cohort['sha256']
     assert len(backend['weights']) == len(backend['features'])
