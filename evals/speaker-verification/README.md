@@ -95,28 +95,6 @@ uv run eidolon-speaker-eval /private/path/embeddings.json \
 
 2026-10-25 已取得 Mac + Pad 的少量匹配数值：本人 0.736、实际未录入者 0.161、本人+电视 0.742、仅电视 0.166；另两轮电视因有效语音不足未评分。详见工作区 `docs/跨系统/Companion声纹准入开发与真机验收记录.md`。这些结果支持继续使用现有模型验证，但不构成完整对照集、稳定阈值或误受率证据；未保存音频或向量，不能重算并冒充独立评测。
 
-## 运行时校准制品消费契约
+## 运行时识别策略
 
-共享格式在 SDK `biz/speaker_calibration.py`，Channel Provider 与独立会话 worker 复用它。制品需要明确：模型与权重摘要、前处理/评分版本、数值阈值、支持的允许人数与音频范围、三段录入一致性和独立试说要求、评测证据 SHA256。所有准入标准均须显式提供，无默认阈值；完整内容摘要用于版本绑定。它不能含 Owner、Companion、device 或个人向量。
-
-两进程统一读取 Ops 生成的 `channel.yaml:voiceprint.calibration_path`；Provider 只加载共享声纹节，不加载 worker 的其他策略。Host 通过既有 `settings.overlay` 选择制品，包内相对路径在 Ops 交付的 `voiceprint.model_dir` 下解析；默认空，停用时通过标准重启生效。旧 `EIDOLON_SPEAKER_CALIBRATION_PATH` 不再参与选择。Provider 只有在已加载模型身份与制品一致时才报告 `admission_ready=true`；worker 每轮检查 Provider 摘要，版本变化后不能继续使用缓存的旧许可。运行时不自动下载或生成制品。
-
-评测报告仍保留 `production_ready=false`，不能直接改一个字段当成发布文件。格式校验无法替代评测真实性和发布审核；目前尚无真实校准制品，也没有根据上述四个分数生成阈值。Data 只接收受信任管理链路的数值确认，并在事务中绑定当前个人授权；Models 不决定某个 Companion 允许谁讲话。
-
-
-### 受控对话制品与交付边界（2026-10-25）
-
-`admission-controlled-trial.json` 随 CAM++ 资产由 `ops/component.toml` 固定并交付，
-显式标记 `controlled_trial`：对话准入阈值 0.4、允许 1–5 个声音、完整候选语音 1.5–30 秒。
-这些是待真机验收的范围，不是准确率保证或正式校准证据；不包含个人档案或设备绑定。
-录入页面每段 3–8 秒是录入体验选择，不决定对话语音上限。
-
-模型包的安装目录名包含完整文件清单摘要前缀。修改任一交付文件（包括制品）时同步更新其
-SHA256 和目录名；测试验证该关系，防止新发布覆盖旧目录而破坏回退。
-Ops 从指定 Git 提交读取唯一能力资产并复用原有 materializer，Channel 只消费交付路径。
-升级制品会改变准入摘要；不迁移或冒用旧授权，用户重新确认后才恢复准入。
-
-2026-10-25：用户反馈新手机匹配 Pad 录入声纹仅 0.4 多，明确选择以 0.4 进行受控测试，
-发布 `campplus-controlled-conversation-v2`。仅调整对话准入阈值；录入样本一致性与录入试说
-下限仍为 0.55。模型权重和特征处理不变，已有声纹可继续使用；本次没有新增校准证据，
-不承诺误接纳率，也不解决本人和电视重叠时的 ASR 内容混入。
+旧的准入校准制品（`admission-controlled-trial.json`、SDK `speaker_calibration.py`）已于 2026-10-31 删除。识别改为输出校准后的身份证据，再按用途判定，见工作区 `docs/跨系统/Person识别与按人数据-复盘与纠偏-20261031.md` §3.3、§8。

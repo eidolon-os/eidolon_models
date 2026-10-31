@@ -15,7 +15,5 @@ Channel owns inference; Admin orchestrates mobile enrollment; Data owns personal
 profiles and Companion allowlists. No model asset contains personal voice data.
 
 For local development set `EIDOLON_3DSPEAKER_MODEL_DIR` to this directory.
-The numerical reference accepts contiguous mono PCM16 at 16 kHz. Upstream's 0.31
-and the withdrawn feature's 0.65 are not calibrated product authorization thresholds.
-This migration changes asset ownership and delivery, not matching quality or policy.
-Cross-device positive/negative evaluation remains required before enabling admission.
+The numerical reference accepts contiguous mono PCM16 at 16 kHz. How scores become
+identity decisions is described in `recognition-policy.md`.

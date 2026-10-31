@@ -39,14 +39,14 @@ def test_delivery_uses_only_exact_repository_files_and_includes_license():
 
 
 def test_delivered_policies_name_the_delivered_weights():
-    # Channel reads both policies from voiceprint.model_dir by file name. A
-    # declaration that drops one turns that feature off on every Host that
+    # Channel reads the policy from voiceprint.model_dir by file name. A
+    # declaration that drops it turns recognition off on every Host that
     # selects it, silently (10-30: the recognition policy went missing this way).
     contract = tomllib.loads((ROOT / 'ops/component.toml').read_text())
     artifact = next(x for x in contract['artifacts'] if x.get('requires_capability') == 'local_speaker_verification')
     declared = {x['path'] for x in artifact['files']}
     weights = next(x['sha256'] for x in artifact['files'] if x['path'] == 'campplus_cn_common.bin')
-    for name in ('admission-controlled-trial.json', 'recognition-controlled-trial.json'):
+    for name in ('recognition-controlled-trial.json',):
         assert name in declared
         policy = json.loads((PACKAGE / name).read_text())
         assert policy['model_id'] == 'campplus_zh_16k_common'
