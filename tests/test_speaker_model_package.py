@@ -29,7 +29,8 @@ def test_delivery_uses_only_exact_repository_files_and_includes_license():
     paths = {x['path'] for x in artifact['files']}
     assert paths >= {'campplus_cn_common.bin', 'config.yaml', 'configuration.json',
                      'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md',
-                     'recognition-controlled-trial.json', 'recognition-policy.md'}
+                     'recognition-controlled-trial.json', 'recognition-policy.md',
+                     'impostor-cohort.npz', 'impostor-cohort.json'}
     for item in artifact['files']:
         assert item['url'].startswith('repo://speaker_verification/campplus_zh_16k_common/624dcb0f/')
         path = ROOT / item['url'].removeprefix('repo://')
@@ -54,6 +55,39 @@ def test_delivered_policies_name_the_delivered_weights():
     recognition = json.loads((PACKAGE / 'recognition-controlled-trial.json').read_text())
     assert recognition['version'].startswith('campplus-person-recognition-')
     assert recognition['min_speech_ms'] > 0
+
+
+def test_the_policy_names_the_delivered_cohort_made_by_the_delivered_weights():
+    # Channel turns recognition off when the cohort the policy names is not
+    # beside it; the cohort must also come from these exact weights.
+    import numpy as np
+
+    contract = tomllib.loads((ROOT / 'ops/component.toml').read_text())
+    artifact = next(x for x in contract['artifacts'] if x.get('requires_capability') == 'local_speaker_verification')
+    declared = {x['path']: x['sha256'] for x in artifact['files']}
+    policy = json.loads((PACKAGE / 'recognition-controlled-trial.json').read_text())
+    calibration = policy['calibration']
+    cohort = calibration['cohort']
+    assert declared[cohort['path']] == cohort['sha256']
+    assert hashlib.sha256((PACKAGE / cohort['path']).read_bytes()).hexdigest() == cohort['sha256']
+    with np.load(PACKAGE / cohort['path'], allow_pickle=False) as npz:
+        assert str(npz['weights_hash']) == declared['campplus_cn_common.bin'] == policy['weights_hash']
+        assert str(npz['model_id']) == policy['model_id']
+        assert str(npz['preprocessing_version']) == policy['preprocessing_version']
+        vectors, speech_ms = npz['vectors'], npz['speech_ms']
+        assert len(vectors) == len(speech_ms) == len(npz['speakers'])
+        assert len(set(npz['speakers'].tolist())) == cohort['speakers']
+    norms = np.linalg.norm(vectors, axis=1)
+    assert np.allclose(norms, 1, atol=1e-3)
+    starts = [b['min_speech_ms'] for b in calibration['bands']]
+    assert starts[0] == policy['min_speech_ms'] and starts == sorted(set(starts))
+    # Every band has impostors to calibrate against.
+    edges = starts + [10 ** 9]
+    for low, high in zip(edges, edges[1:]):
+        assert ((speech_ms >= low) & (speech_ms < high)).sum() >= 500
+    record = json.loads((PACKAGE / 'impostor-cohort.json').read_text())
+    assert record['sha256'] == cohort['sha256'] and record['speakers'] == cohort['speakers']
+    assert 'no audio' in record['contains']
 
 
 def test_weights_are_not_duplicated_in_release_source_archive():

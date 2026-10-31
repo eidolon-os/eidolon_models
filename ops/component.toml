@@ -374,9 +374,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-7959bae7"
+id = "campplus-zh-16k-1e631322"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-7959bae7"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-1e631322"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -421,13 +421,23 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/admission-con
 
 [[artifacts.files]]
 path = "recognition-controlled-trial.json"
-sha256 = "72aed621ddac7f82cc24ca760e74797f0c8e8ba32065733c14e9a6e840470fde"
+sha256 = "fbb4fd10bd3c25e3b4ec8294db5f5005d2007758882960a7b187771289b66266"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-controlled-trial.json"
 
 [[artifacts.files]]
 path = "recognition-policy.md"
-sha256 = "61731cc300bec78f8bedf6d1350a38fbbb60698ca2231f314ea2f740c5518a85"
+sha256 = "073df08b35a8ce27b0b816894dd6da871569be38cd2d6199927a5ed95ac17dba"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-policy.md"
+
+[[artifacts.files]]
+path = "impostor-cohort.npz"
+sha256 = "9459cc2b7f1a8f7b29639cb9bddfed4725aec8a7aaf38566105cf55a5b3e1a1b"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/impostor-cohort.npz"
+
+[[artifacts.files]]
+path = "impostor-cohort.json"
+sha256 = "afefa60ec76e39df3aa233568f7dd9b12f1c16656349a7d04ba5d278fbee334a"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/impostor-cohort.json"
 
 # Source/runtime-selected Torch artifact; never carried to an NPU or remote backend.
 [[artifacts]]

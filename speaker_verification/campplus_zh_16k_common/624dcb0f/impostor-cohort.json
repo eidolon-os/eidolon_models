@@ -1,0 +1,32 @@
+{
+ "dataset": "AISHELL/AISHELL-1",
+ "dataset_revision": "bbe295d530192a4cd41644b711c9aecd087df653",
+ "dataset_license": "apache-2.0 (dataset card)",
+ "contains": "speaker embeddings only; no audio, transcripts or speaker names",
+ "model_id": "campplus_zh_16k_common",
+ "weights_hash": "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
+ "preprocessing_version": "reference-contiguous-pcm16-v1",
+ "codec": {
+  "name": "opus",
+  "sample_rate": 48000,
+  "bitrates": [
+   24000,
+   32000
+  ]
+ },
+ "level_rms": [
+  0.04,
+  0.06,
+  0.08
+ ],
+ "speakers": 69,
+ "held_out_speakers": 30,
+ "vectors": 3833,
+ "voiced_ms": {
+  "lt_1200": 1112,
+  "1200_2500": 1232,
+  "ge_2500": 1489
+ },
+ "sha256": "9459cc2b7f1a8f7b29639cb9bddfed4725aec8a7aaf38566105cf55a5b3e1a1b",
+ "built_by": "evals/speaker-verification/cohort-20261031/build_cohort.py"
+}
