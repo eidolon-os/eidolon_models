@@ -374,9 +374,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-a7a8074b"
+id = "campplus-zh-16k-4c31e58c"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-a7a8074b"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-4c31e58c"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -416,17 +416,17 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-READ
 
 [[artifacts.files]]
 path = "identity-policy.json"
-sha256 = "3a2b7902489f515b86ab17c355b280c309709c6a6d52952c028207eba1db530f"
+sha256 = "dc744e7132e7af98e920852aa428ad17c1a5caad2d4488d2c600fc6446afc130"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-policy.json"
 
 [[artifacts.files]]
 path = "identity-policy.md"
-sha256 = "63ea33dfd6f5ea3425b013365d5fac1d2fcbcc6566679d5385775f872561347c"
+sha256 = "f9e76e54c22ccc0ad85ec07fa190843db2cfeb0bc0e6020f01de7703fd1dfdcb"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-policy.md"
 
 [[artifacts.files]]
 path = "identity-backend.json"
-sha256 = "7201fea308045dc3751a86d2349c3e9da04eb5c7b518f83e6f133a105a93f217"
+sha256 = "6095875c7c507275b3c2e2bac7a72e3e68a349e337748bb81310aec8cf00f897"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/identity-backend.json"
 
 [[artifacts.files]]

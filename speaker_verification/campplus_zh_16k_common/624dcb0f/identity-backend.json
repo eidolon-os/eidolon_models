@@ -1,5 +1,5 @@
 {
- "version": "campplus-identity-evidence-v1",
+ "version": "campplus-identity-evidence-v2",
  "identity": [
   "campplus_zh_16k_common",
   "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
@@ -9,29 +9,44 @@
  "max_speech_ms": 20000,
  "features": [
   "asnorm_score",
-  "speech_min_s",
-  "speech_max_s",
-  "speech_diff_s",
-  "speech_ratio",
+  "duration_min_s",
+  "duration_max_s",
+  "duration_diff_s",
+  "duration_ratio",
+  "magnitude_min",
+  "magnitude_max",
+  "magnitude_diff",
+  "magnitude_ratio",
   "cohort_mean_min",
   "cohort_mean_max",
   "cohort_mean_diff",
+  "cohort_mean_ratio",
   "cross_channel",
   "cross_channel_x_asnorm_score"
  ],
  "weights": [
-  2.681905,
-  -0.678991,
-  -0.498432,
-  0.280559,
-  0.144546,
-  38.471046,
-  35.137972,
-  -3.233074,
-  13.178444,
-  -0.979274
+  2.807661,
+  -0.803816,
+  -0.515365,
+  0.355117,
+  0.156454,
+  -10.698723,
+  -4.724958,
+  6.040432,
+  -0.952356,
+  31.96714,
+  41.097141,
+  9.196668,
+  -4.13771,
+  13.536258,
+  -1.045567
  ],
- "bias": -26.094009,
+ "bias": -8.303106,
+ "trained_with": {
+  "wespeaker": "9fecd6cb4f47475d01761d87c826298dff4ef18c",
+  "trials": 59776,
+  "targets": 4576
+ },
  "cohort": {
   "path": "identity-cohort.npz",
   "sha256": "52aee499c7df0536efc82573919661237bdf9732f398186ffb1bf59d738dde53",
@@ -69,10 +84,5 @@
     ]
    }
   }
- },
- "trained_on": {
-  "trials": 59776,
-  "targets": 4576,
-  "cllr": 0.0543
  }
 }
