@@ -1,24 +1,27 @@
-"""Embed public speakers exactly as the Host embeds a conversation probe.
+"""Embed public speakers exactly as the Host embeds registration and probes.
 
-Every recording goes through an Opus round trip (what LiveKit does to
-microphone audio), then through Channel's own ReferenceSpeakerExtractor:
-the whole utterance plus the same windows a registration gets. Speakers are
-split once, by a hash of their id, into the cohort that ships with the model
-and a held-out set that only the acceptance evaluation uses.
+Every recording is passed through two simulated channels, then through
+Channel's own ReferenceSpeakerExtractor (``extract_enrollment``: the
+utterance plus the same windows a registration gets):
 
-Run with the Channel environment (it owns the extractor):
+- ``phone``: the registration path; device-like level, Opus 32 kbps.
+- ``device``: a far-field board; 150–4000 Hz band, a synthetic room
+  impulse response (exponentially decaying noise, RT60 0.3–0.6 s), light
+  background noise, lower level, Opus 16 kbps.
+
+Speakers are split once, by a hash of their id, into the cohort pool
+(which may ship with the model) and a held-out set used only for
+evaluation. Codec, level and channel noise are seeded per recording, so a
+rebuild is identical.
 
     eidolon_channel/.venv/bin/python -I \
         eidolon_models/evals/speaker-verification/cohort-20261031/build_cohort.py \
-        --model-dir .eidolon/mac-product/state/models/campplus-zh-16k-7959bae7 \
+        --model-dir .eidolon/mac-product/state/models/<campplus artifact> \
         --corpus .eidolon/speaker-cohort-20261031 \
-        --corpus .eidolon/anonymous-speaker-eval-20261028 \
         --out .eidolon/speaker-cohort-20261031/build
 
-Outputs (the corpus audio never leaves .eidolon/):
-    impostor-cohort.npz    cohort speakers' vectors, voiced lengths, speaker index
-    impostor-cohort.json   provenance and per-band counts
-    held-out.json          held-out speakers' samples and windows, for evaluate.py
+Output (audio never leaves .eidolon/): ``embeddings.json`` with the model
+identity, the split and every speaker's samples per channel.
 """
 
 from __future__ import annotations
@@ -33,6 +36,7 @@ from pathlib import Path
 
 import av
 import numpy as np
+from scipy import signal
 
 from eidolon.livekit.plugins.speaker_verification.reference_extractor import (
     InvalidSpeakerAudio,
@@ -41,13 +45,11 @@ from eidolon.livekit.plugins.speaker_verification.reference_extractor import (
 
 PER_SPEAKER = 8
 COHORT_SHARE = 0.7
-# Microphone audio reaches the Host as Opus at 48 kHz; bitrates span what
-# WebRTC voice and the boards' encoders use.
-CODEC_BITRATES = (24000, 32000)
 # AISHELL is recorded quiet (RMS ~0.015); device microphones run AGC. The
-# extractor's voiced-speech measure depends on level (it saturates near 0.06),
-# so recordings are brought to device-like levels before the codec.
-LEVELS_RMS = (0.04, 0.06, 0.08)
+# extractor's voiced-speech measure depends on level (it saturates near 0.06).
+PHONE = {"levels": (0.04, 0.06, 0.08), "bitrate": 32000}
+DEVICE = {"levels": (0.02, 0.04, 0.06), "bitrate": 16000, "band": (150, 4000),
+          "rt60": (0.3, 0.6), "snr_db": (20, 30)}
 
 
 def corpus(roots: list[Path]) -> dict[str, list[Path]]:
@@ -55,8 +57,7 @@ def corpus(roots: list[Path]) -> dict[str, list[Path]]:
     for root in roots:
         record = json.loads((root / "assets.json").read_text())
         for row in record["samples"]:
-            seconds = row.get("seconds", row.get("duration_s", 0))
-            if seconds < 4.0:
+            if row.get("seconds", row.get("duration_s", 0)) < 4.0:
                 continue
             files = speakers.setdefault(row["speaker"], [])
             if len(files) < PER_SPEAKER and (root / row["path"]).is_file():
@@ -76,12 +77,26 @@ def read_pcm(path: Path) -> np.ndarray:
         return np.frombuffer(audio.readframes(audio.getnframes()), dtype="<i2")
 
 
-def level(pcm: np.ndarray, rms: float) -> np.ndarray:
+def level(samples: np.ndarray, rms: float) -> np.ndarray:
     """Scale to the target RMS without letting the peak pass 90% of full scale."""
-    samples = pcm.astype(np.float64)
-    gain = rms * 32768 / max(float(np.sqrt(np.mean(samples * samples))), 1.0)
-    gain = min(gain, 0.9 * 32767 / max(float(np.abs(samples).max()), 1.0))
-    return np.clip(samples * gain, -32768, 32767).astype("<i2")
+    x = samples.astype(np.float64)
+    gain = rms * 32768 / max(float(np.sqrt(np.mean(x * x))), 1.0)
+    gain = min(gain, 0.9 * 32767 / max(float(np.abs(x).max()), 1.0))
+    return np.clip(x * gain, -32768, 32767).astype("<i2")
+
+
+def far_field(samples: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+    x = samples.astype(np.float64)
+    low, high = DEVICE["band"]
+    x = signal.sosfilt(signal.butter(2, [low, high], btype="band", fs=16000, output="sos"), x)
+    rt60 = rng.uniform(*DEVICE["rt60"])
+    n = int(rt60 * 16000)
+    rir = rng.standard_normal(n) * np.exp(-6.9 * np.arange(n) / n)  # -60 dB at rt60
+    rir[0] = 4.0 * np.abs(rir).max()  # keep a direct path
+    wet = signal.fftconvolve(x, rir / np.abs(rir).sum() * 4)[: len(x)]
+    snr = rng.uniform(*DEVICE["snr_db"])
+    wet += rng.standard_normal(len(x)) * np.sqrt(np.mean(wet * wet) / 10 ** (snr / 10))
+    return np.clip(wet, -32768, 32767).astype("<i2")
 
 
 def opus_round_trip(pcm: np.ndarray, bitrate: int) -> np.ndarray:
@@ -114,12 +129,11 @@ def opus_round_trip(pcm: np.ndarray, bitrate: int) -> np.ndarray:
     return np.pad(aligned, (0, len(pcm) - len(aligned)))
 
 
-def embed(extractor, pcm: np.ndarray) -> dict | None:
-    try:
-        sample = extractor.extract_enrollment(pcm.tobytes(), min_speech_ms=1500)
-    except InvalidSpeakerAudio:
-        return None
-    return sample.model_dump(mode="json")
+def channel(raw: np.ndarray, name: str, seed: int) -> np.ndarray:
+    rng = np.random.default_rng(seed)
+    if name == "phone":
+        return opus_round_trip(level(raw, rng.choice(PHONE["levels"])), PHONE["bitrate"])
+    return opus_round_trip(level(far_field(raw, rng), rng.choice(DEVICE["levels"])), DEVICE["bitrate"])
 
 
 _EXTRACTOR = None
@@ -132,15 +146,17 @@ def _start(model_dir):
 
 
 def _speaker(job):
-    n, speaker, paths = job
+    speaker, paths = job
     rows = []
-    for i, path in enumerate(paths):
-        # Codec and level vary deterministically, so a rebuild is identical.
-        bitrate = CODEC_BITRATES[(n + i) % len(CODEC_BITRATES)]
-        rms = LEVELS_RMS[(n + i) % len(LEVELS_RMS)]
-        sample = embed(_EXTRACTOR, opus_round_trip(level(read_pcm(path), rms), bitrate))
-        if sample is not None:
-            rows.append(dict(file=path.name, bitrate=bitrate, rms=rms, sample=sample))
+    for path in paths:
+        raw = read_pcm(path)
+        for name in ("phone", "device"):
+            seed = int(hashlib.sha256(f"{path.name}:{name}".encode()).hexdigest()[:8], 16)
+            try:
+                sample = _EXTRACTOR.extract_enrollment(channel(raw, name, seed).tobytes(), 1500)
+            except InvalidSpeakerAudio:
+                continue
+            rows.append(dict(file=path.name, channel=name, sample=sample.model_dump(mode="json")))
     return speaker, rows, _EXTRACTOR.model_identity
 
 
@@ -149,58 +165,26 @@ def main():
     parser.add_argument("--model-dir", type=Path, required=True)
     parser.add_argument("--corpus", type=Path, action="append", required=True)
     parser.add_argument("--out", type=Path, required=True)
-    parser.add_argument("--jobs", type=int, default=4)
+    parser.add_argument("--jobs", type=int, default=6)
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     speakers = corpus(args.corpus)
     cohort_ids, held_ids = split(speakers)
     print(f"{len(speakers)} speakers: {len(cohort_ids)} cohort, {len(held_ids)} held out", flush=True)
-
-    embedded: dict[str, list[dict]] = {}
-    identities = set()
-    jobs = [(n, s, speakers[s]) for n, s in enumerate(sorted(speakers))]
+    embedded, identities = {}, set()
+    jobs = [(s, speakers[s]) for s in sorted(speakers)]
     with ProcessPoolExecutor(args.jobs, initializer=_start, initargs=(args.model_dir,)) as pool:
         for speaker, rows, identity in pool.map(_speaker, jobs):
             embedded[speaker] = rows
             identities.add(identity)
             print(speaker, len(rows), flush=True)
     (identity,) = identities
-
-    vectors, speech_ms, owners = [], [], []
-    for index, speaker in enumerate(cohort_ids):
-        for row in embedded[speaker]:
-            windows = [row["sample"]] + row["sample"]["crops"]
-            for w in windows:
-                vectors.append(w["vector"])
-                speech_ms.append(w["speech_ms"])
-                owners.append(index)
-    npz = args.out / "impostor-cohort.npz"
-    with open(npz, "wb") as f:
-        np.savez(f, vectors=np.asarray(vectors, dtype=np.float32),
-                 speech_ms=np.asarray(speech_ms, dtype=np.int32),
-                 speakers=np.asarray(owners, dtype=np.int16),
-                 model_id=np.array(identity[0]), weights_hash=np.array(identity[1]),
-                 preprocessing_version=np.array(identity[2]))
-    lengths = np.asarray(speech_ms)
-    record = {
+    (args.out / "embeddings.json").write_text(json.dumps({
         "dataset": "AISHELL/AISHELL-1",
         "dataset_revision": "bbe295d530192a4cd41644b711c9aecd087df653",
-        "dataset_license": "apache-2.0 (dataset card)",
-        "contains": "speaker embeddings only; no audio, transcripts or speaker names",
-        "model_id": identity[0], "weights_hash": identity[1], "preprocessing_version": identity[2],
-        "codec": {"name": "opus", "sample_rate": 48000, "bitrates": list(CODEC_BITRATES)},
-        "level_rms": list(LEVELS_RMS),
-        "speakers": len(cohort_ids), "held_out_speakers": len(held_ids),
-        "vectors": len(vectors),
-        "voiced_ms": {"lt_1200": int((lengths < 1200).sum()),
-                      "1200_2500": int(((lengths >= 1200) & (lengths < 2500)).sum()),
-                      "ge_2500": int((lengths >= 2500).sum())},
-        "sha256": hashlib.sha256(npz.read_bytes()).hexdigest(),
-    }
-    (args.out / "impostor-cohort.json").write_text(json.dumps(record, indent=1))
-    (args.out / "held-out.json").write_text(json.dumps(
-        {"identity": list(identity), "speakers": {s: embedded[s] for s in held_ids}}))
-    print(json.dumps(record, indent=1))
+        "identity": list(identity), "phone": PHONE, "device": DEVICE,
+        "cohort": cohort_ids, "held_out": held_ids, "speakers": embedded,
+    }))
 
 
 if __name__ == "__main__":

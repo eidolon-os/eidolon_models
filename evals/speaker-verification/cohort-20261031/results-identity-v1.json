@@ -1,0 +1,342 @@
+{
+ "backend": {
+  "version": "campplus-identity-evidence-v1",
+  "identity": [
+   "campplus_zh_16k_common",
+   "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
+   "reference-contiguous-pcm16-v1"
+  ],
+  "top_n": 100,
+  "max_speech_ms": 20000,
+  "features": [
+   "asnorm_score",
+   "speech_min_s",
+   "speech_max_s",
+   "speech_diff_s",
+   "speech_ratio",
+   "cohort_mean_min",
+   "cohort_mean_max",
+   "cohort_mean_diff",
+   "cross_channel",
+   "cross_channel_x_asnorm_score"
+  ],
+  "weights": [
+   2.681905,
+   -0.678991,
+   -0.498432,
+   0.280559,
+   0.144546,
+   38.471046,
+   35.137972,
+   -3.233074,
+   13.178444,
+   -0.979274
+  ],
+  "bias": -26.094009,
+  "cohort": {
+   "path": "identity-cohort.npz",
+   "sha256": "52aee499c7df0536efc82573919661237bdf9732f398186ffb1bf59d738dde53",
+   "speakers": 69,
+   "vectors": 1074,
+   "dataset": "AISHELL/AISHELL-1",
+   "dataset_revision": "bbe295d530192a4cd41644b711c9aecd087df653",
+   "channels": {
+    "phone": {
+     "levels": [
+      0.04,
+      0.06,
+      0.08
+     ],
+     "bitrate": 32000
+    },
+    "device": {
+     "levels": [
+      0.02,
+      0.04,
+      0.06
+     ],
+     "bitrate": 16000,
+     "band": [
+      150,
+      4000
+     ],
+     "rt60": [
+      0.3,
+      0.6
+     ],
+     "snr_db": [
+      20,
+      30
+     ]
+    }
+   }
+  },
+  "trained_on": {
+   "trials": 59776,
+   "targets": 4576,
+   "cllr": 0.0543
+  }
+ },
+ "verification": {
+  "all": {
+   "targets": 1962,
+   "nontargets": 56898,
+   "eer": 0.0107,
+   "cllr": 0.0673,
+   "act_dcf_0.01": 0.2046,
+   "min_dcf_0.01": 0.1674
+  },
+  "phone_probe": {
+   "targets": 1037,
+   "nontargets": 30073,
+   "eer": 0.001,
+   "cllr": 0.0049,
+   "act_dcf_0.01": 0.0162,
+   "min_dcf_0.01": 0.0147
+  },
+  "device_probe": {
+   "targets": 925,
+   "nontargets": 26825,
+   "eer": 0.0216,
+   "cllr": 0.1373,
+   "act_dcf_0.01": 0.4157,
+   "min_dcf_0.01": 0.3292
+  },
+  "lt_1s": {
+   "targets": 430,
+   "nontargets": 12470,
+   "eer": 0.0256,
+   "cllr": 0.1364,
+   "act_dcf_0.01": 0.4399,
+   "min_dcf_0.01": 0.2868
+  },
+  "ge_2.5s": {
+   "targets": 639,
+   "nontargets": 18531,
+   "eer": 0.0017,
+   "cllr": 0.0215,
+   "act_dcf_0.01": 0.0364,
+   "min_dcf_0.01": 0.0348
+  }
+ },
+ "household": {
+  "genuine/all/all": {
+   "n": 1962,
+   "addressing:correct": 0.9704,
+   "addressing:none": 0.0296,
+   "personal_memory:correct": 0.8965,
+   "personal_memory:none": 0.1035,
+   "speaker_label:correct": 0.9704,
+   "speaker_label:none": 0.0296,
+   "v2_fixed:correct": 0.6437,
+   "v2_fixed:none": 0.3563,
+   "v4_floors:correct": 0.6121,
+   "v4_floors:none": 0.3879
+  },
+  "genuine/device/1_2.5s": {
+   "n": 461,
+   "addressing:correct": 0.9544,
+   "addressing:none": 0.0456,
+   "personal_memory:correct": 0.833,
+   "personal_memory:none": 0.167,
+   "speaker_label:correct": 0.9544,
+   "speaker_label:none": 0.0456,
+   "v2_fixed:correct": 0.2755,
+   "v2_fixed:none": 0.7245,
+   "v4_floors:correct": 0.1974,
+   "v4_floors:none": 0.8026
+  },
+  "genuine/device/all": {
+   "n": 925,
+   "addressing:correct": 0.9405,
+   "addressing:none": 0.0595,
+   "personal_memory:correct": 0.8,
+   "personal_memory:none": 0.2,
+   "speaker_label:correct": 0.9405,
+   "speaker_label:none": 0.0595,
+   "v2_fixed:correct": 0.2508,
+   "v2_fixed:none": 0.7492,
+   "v4_floors:correct": 0.1838,
+   "v4_floors:none": 0.8162
+  },
+  "genuine/device/ge_2.5s": {
+   "n": 231,
+   "addressing:correct": 0.9827,
+   "addressing:none": 0.0173,
+   "personal_memory:correct": 0.8615,
+   "personal_memory:none": 0.1385,
+   "speaker_label:correct": 0.9827,
+   "speaker_label:none": 0.0173,
+   "v2_fixed:correct": 0.3766,
+   "v2_fixed:none": 0.6234,
+   "v4_floors:correct": 0.2641,
+   "v4_floors:none": 0.7359
+  },
+  "genuine/device/lt_1s": {
+   "n": 233,
+   "addressing:correct": 0.8712,
+   "addressing:none": 0.1288,
+   "personal_memory:correct": 0.6738,
+   "personal_memory:none": 0.3262,
+   "speaker_label:correct": 0.8712,
+   "speaker_label:none": 0.1288,
+   "v2_fixed:correct": 0.0773,
+   "v2_fixed:none": 0.9227,
+   "v4_floors:correct": 0.0773,
+   "v4_floors:none": 0.9227
+  },
+  "genuine/phone/1_2.5s": {
+   "n": 432,
+   "addressing:correct": 0.9977,
+   "addressing:none": 0.0023,
+   "personal_memory:correct": 0.9907,
+   "personal_memory:none": 0.0093,
+   "speaker_label:correct": 0.9977,
+   "speaker_label:none": 0.0023,
+   "v2_fixed:correct": 0.9977,
+   "v2_fixed:none": 0.0023,
+   "v4_floors:correct": 0.9977,
+   "v4_floors:none": 0.0023
+  },
+  "genuine/phone/all": {
+   "n": 1037,
+   "addressing:correct": 0.9971,
+   "addressing:none": 0.0029,
+   "personal_memory:correct": 0.9826,
+   "personal_memory:none": 0.0174,
+   "speaker_label:correct": 0.9971,
+   "speaker_label:none": 0.0029,
+   "v2_fixed:correct": 0.9942,
+   "v2_fixed:none": 0.0058,
+   "v4_floors:correct": 0.9942,
+   "v4_floors:none": 0.0058
+  },
+  "genuine/phone/ge_2.5s": {
+   "n": 408,
+   "addressing:correct": 1.0,
+   "personal_memory:correct": 1.0,
+   "speaker_label:correct": 1.0,
+   "v2_fixed:correct": 1.0,
+   "v4_floors:correct": 1.0
+  },
+  "genuine/phone/lt_1s": {
+   "n": 197,
+   "addressing:correct": 0.9898,
+   "addressing:none": 0.0102,
+   "personal_memory:correct": 0.9289,
+   "personal_memory:none": 0.0711,
+   "speaker_label:correct": 0.9898,
+   "speaker_label:none": 0.0102,
+   "v2_fixed:correct": 0.9746,
+   "v2_fixed:none": 0.0254,
+   "v4_floors:correct": 0.9746,
+   "v4_floors:none": 0.0254
+  },
+  "stranger/all/all": {
+   "n": 27468,
+   "addressing:none": 0.9924,
+   "addressing:wrong": 0.0076,
+   "personal_memory:none": 0.9988,
+   "personal_memory:wrong": 0.0012,
+   "speaker_label:none": 0.9924,
+   "speaker_label:wrong": 0.0076,
+   "v2_fixed:none": 0.9962,
+   "v2_fixed:wrong": 0.0038,
+   "v4_floors:none": 0.9986,
+   "v4_floors:wrong": 0.0014
+  },
+  "stranger/device/1_2.5s": {
+   "n": 6454,
+   "addressing:none": 0.9848,
+   "addressing:wrong": 0.0152,
+   "personal_memory:none": 0.9966,
+   "personal_memory:wrong": 0.0034,
+   "speaker_label:none": 0.9848,
+   "speaker_label:wrong": 0.0152,
+   "v2_fixed:none": 0.9998,
+   "v2_fixed:wrong": 0.0002,
+   "v4_floors:none": 1.0
+  },
+  "stranger/device/all": {
+   "n": 12950,
+   "addressing:none": 0.9839,
+   "addressing:wrong": 0.0161,
+   "personal_memory:none": 0.9975,
+   "personal_memory:wrong": 0.0025,
+   "speaker_label:none": 0.9839,
+   "speaker_label:wrong": 0.0161,
+   "v2_fixed:none": 0.9998,
+   "v2_fixed:wrong": 0.0002,
+   "v4_floors:none": 1.0
+  },
+  "stranger/device/ge_2.5s": {
+   "n": 3234,
+   "addressing:none": 0.9938,
+   "addressing:wrong": 0.0062,
+   "personal_memory:none": 0.9997,
+   "personal_memory:wrong": 0.0003,
+   "speaker_label:none": 0.9938,
+   "speaker_label:wrong": 0.0062,
+   "v2_fixed:none": 0.9997,
+   "v2_fixed:wrong": 0.0003,
+   "v4_floors:none": 1.0
+  },
+  "stranger/device/lt_1s": {
+   "n": 3262,
+   "addressing:none": 0.9724,
+   "addressing:wrong": 0.0276,
+   "personal_memory:none": 0.9969,
+   "personal_memory:wrong": 0.0031,
+   "speaker_label:none": 0.9724,
+   "speaker_label:wrong": 0.0276,
+   "v2_fixed:none": 1.0,
+   "v4_floors:none": 1.0
+  },
+  "stranger/phone/1_2.5s": {
+   "n": 6048,
+   "addressing:none": 0.9998,
+   "addressing:wrong": 0.0002,
+   "personal_memory:none": 1.0,
+   "speaker_label:none": 0.9998,
+   "speaker_label:wrong": 0.0002,
+   "v2_fixed:none": 0.995,
+   "v2_fixed:wrong": 0.005,
+   "v4_floors:none": 0.9979,
+   "v4_floors:wrong": 0.0021
+  },
+  "stranger/phone/all": {
+   "n": 14518,
+   "addressing:none": 0.9999,
+   "addressing:wrong": 0.0001,
+   "personal_memory:none": 1.0,
+   "speaker_label:none": 0.9999,
+   "speaker_label:wrong": 0.0001,
+   "v2_fixed:none": 0.993,
+   "v2_fixed:wrong": 0.007,
+   "v4_floors:none": 0.9973,
+   "v4_floors:wrong": 0.0027
+  },
+  "stranger/phone/ge_2.5s": {
+   "n": 5712,
+   "addressing:none": 0.9998,
+   "addressing:wrong": 0.0002,
+   "personal_memory:none": 1.0,
+   "speaker_label:none": 0.9998,
+   "speaker_label:wrong": 0.0002,
+   "v2_fixed:none": 0.9881,
+   "v2_fixed:wrong": 0.0119,
+   "v4_floors:none": 0.9961,
+   "v4_floors:wrong": 0.0039
+  },
+  "stranger/phone/lt_1s": {
+   "n": 2758,
+   "addressing:none": 1.0,
+   "personal_memory:none": 1.0,
+   "speaker_label:none": 1.0,
+   "v2_fixed:none": 0.9985,
+   "v2_fixed:wrong": 0.0015,
+   "v4_floors:none": 0.9985,
+   "v4_floors:wrong": 0.0015
+  }
+ }
+}
