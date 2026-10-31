@@ -28,12 +28,32 @@ def test_delivery_uses_only_exact_repository_files_and_includes_license():
     assert artifact['id'] == Path(artifact['install_root']).name
     paths = {x['path'] for x in artifact['files']}
     assert paths >= {'campplus_cn_common.bin', 'config.yaml', 'configuration.json',
-                     'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md'}
+                     'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md',
+                     'recognition-controlled-trial.json', 'recognition-policy.md'}
     for item in artifact['files']:
         assert item['url'].startswith('repo://speaker_verification/campplus_zh_16k_common/624dcb0f/')
         path = ROOT / item['url'].removeprefix('repo://')
         assert hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256']
     assert 'Apache' in (PACKAGE / 'LICENSE').read_text()
+
+
+def test_delivered_policies_name_the_delivered_weights():
+    # Channel reads both policies from voiceprint.model_dir by file name. A
+    # declaration that drops one turns that feature off on every Host that
+    # selects it, silently (10-30: the recognition policy went missing this way).
+    contract = tomllib.loads((ROOT / 'ops/component.toml').read_text())
+    artifact = next(x for x in contract['artifacts'] if x.get('requires_capability') == 'local_speaker_verification')
+    declared = {x['path'] for x in artifact['files']}
+    weights = next(x['sha256'] for x in artifact['files'] if x['path'] == 'campplus_cn_common.bin')
+    for name in ('admission-controlled-trial.json', 'recognition-controlled-trial.json'):
+        assert name in declared
+        policy = json.loads((PACKAGE / name).read_text())
+        assert policy['model_id'] == 'campplus_zh_16k_common'
+        assert policy['weights_hash'] == weights
+        assert 0 < policy['threshold'] < 1
+    recognition = json.loads((PACKAGE / 'recognition-controlled-trial.json').read_text())
+    assert recognition['version'].startswith('campplus-person-recognition-')
+    assert recognition['min_speech_ms'] > 0
 
 
 def test_weights_are_not_duplicated_in_release_source_archive():

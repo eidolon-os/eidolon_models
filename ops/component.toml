@@ -374,9 +374,9 @@ url = "repo://laya/models/laya-participation/ae6718a4/npu/type_emb.npy"
 
 # Shared Channel inference; asset availability only, no additional daemon.
 [[artifacts]]
-id = "campplus-zh-16k-dcfd9b3b"
+id = "campplus-zh-16k-7959bae7"
 kind = "model"
-install_root = "/var/lib/eidolon/models/campplus-zh-16k-dcfd9b3b"
+install_root = "/var/lib/eidolon/models/campplus-zh-16k-7959bae7"
 requires_capability = "local_speaker_verification"
 
 [[artifacts.files]]
@@ -418,6 +418,16 @@ url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/upstream-READ
 path = "admission-controlled-trial.json"
 sha256 = "99465a43f932528b04dacb2347b4e6b522593c14ab2019cc5514488a556cdedd"
 url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/admission-controlled-trial.json"
+
+[[artifacts.files]]
+path = "recognition-controlled-trial.json"
+sha256 = "72aed621ddac7f82cc24ca760e74797f0c8e8ba32065733c14e9a6e840470fde"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-controlled-trial.json"
+
+[[artifacts.files]]
+path = "recognition-policy.md"
+sha256 = "61731cc300bec78f8bedf6d1350a38fbbb60698ca2231f314ea2f740c5518a85"
+url = "repo://speaker_verification/campplus_zh_16k_common/624dcb0f/recognition-policy.md"
 
 # Source/runtime-selected Torch artifact; never carried to an NPU or remote backend.
 [[artifacts]]
