@@ -1,8 +1,10 @@
 """Replay public speakers through this computer's speaker (design §8.2, 1c-a).
 
-The phone, next to the speaker, records through the app's own capture path
-("声纹环境校准"), so the embeddings are of public voices as the household's
-phone channel hears them. Speakers play one block each (their eight recordings
+The phone, next to the speaker, recorded through the app's own capture path
+(the "声纹环境校准" page, withdrawn after the 11-01 run), so the embeddings
+are of public voices in a real recorded channel. Both sides of a trial must
+be replayed: against live registrations, replayed voices carry the
+loudspeaker's colouring and are not representative strangers. Speakers play one block each (their eight recordings
 back to back, short gaps), with silence between blocks; every block's
 wall-clock span is logged so captures can be assigned to a single speaker
 and captures straddling two speakers dropped.
