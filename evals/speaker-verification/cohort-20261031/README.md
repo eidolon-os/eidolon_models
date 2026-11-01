@@ -1,4 +1,7 @@
-# Identity evidence: cohort, calibration and acceptance set
+# Identity evidence on AISHELL and simulated channels (superseded)
+
+**Superseded on 2026-11-01** by `../identity-20261101` (back-end v4, trained and accepted on live multi-device speech). The scripts were removed with back-end v2's runtime; they run at Models `fb47ef8`. The results files stay as the evidence the design's retrospective cites (docs `跨系统/Person识别-声纹工作完整复盘-20261101.md`): the public corpus with simulated channels and the loudspeaker replay both proved to be proxies that live speech did not bear out.
+
 
 Design §3.3 and §8.2. Calibrated per-Person evidence with WeSpeaker's own back-end (`/Users/manson/ai/thirdpart/wespeaker` at `9fecd6c`, loaded by `wespeaker_ref.py`): domain mean, AS-norm, QMF trained with its `train_calibration_model`, plus a channel condition.
 

@@ -30,7 +30,7 @@ def test_delivery_uses_only_exact_repository_files_and_includes_license():
     assert paths >= {'campplus_cn_common.bin', 'config.yaml', 'configuration.json',
                      'manifest.json', 'LICENSE', 'README.md', 'upstream-README.md',
                      'identity-policy.json', 'identity-policy.md',
-                     'identity-backend.json', 'identity-cohort.npz'}
+                     'identity-backend.json', 'identity-backend.npz'}
     for item in artifact['files']:
         assert item['url'].startswith('repo://speaker_verification/campplus_zh_16k_common/624dcb0f/')
         path = ROOT / item['url'].removeprefix('repo://')
@@ -38,7 +38,7 @@ def test_delivery_uses_only_exact_repository_files_and_includes_license():
     assert 'Apache' in (PACKAGE / 'LICENSE').read_text()
 
 
-def test_the_policy_and_calibration_name_the_delivered_weights_and_cohort():
+def test_the_policy_and_calibration_name_the_delivered_weights_and_arrays():
     # Channel reads these by file name from voiceprint.model_dir. A declaration
     # that drops one turns recognition off on every Host that selects it,
     # silently (10-30: the recognition policy went missing this way).
@@ -50,21 +50,23 @@ def test_the_policy_and_calibration_name_the_delivered_weights_and_cohort():
     weights = declared['campplus_cn_common.bin']
     policy = json.loads((PACKAGE / 'identity-policy.json').read_text())
     backend = json.loads((PACKAGE / 'identity-backend.json').read_text())
-    assert {'identity-policy.json', 'identity-backend.json', 'identity-cohort.npz'} <= declared.keys()
+    assert {'identity-policy.json', 'identity-backend.json', 'identity-backend.npz'} <= declared.keys()
     assert policy['weights_hash'] == weights == backend['identity'][1]
     assert policy['model_id'] == backend['identity'][0] == 'campplus_zh_16k_common'
     assert policy['preprocessing_version'] == backend['identity'][2]
     assert policy['backend_version'] == backend['version']
     assert policy['min_speech_ms'] <= policy['min_unknown_speech_ms']
+    conditions = ('near_same', 'far_same', 'far_cross')
     uses = ('personal_memory', 'addressing', 'speaker_label', 'candidate_evidence', 'discovery')
-    assert set(uses) <= policy.keys()  # a use is switched off explicitly, never by omission
-    assert all(0.5 <= policy[u] < 1 for u in uses if policy[u] is not None)
-    cohort = backend['cohort']
-    assert declared[cohort['path']] == cohort['sha256']
-    assert len(backend['weights']) == len(backend['features'])
-    with np.load(PACKAGE / cohort['path'], allow_pickle=False) as npz:
-        assert npz['cohort'].shape == (cohort['vectors'], npz['mean'].shape[0])
-        assert backend['top_n'] < cohort['vectors']
+    assert set(policy['conditions']) == set(backend['conditions']) == set(conditions)
+    for thresholds in policy['conditions'].values():
+        assert set(uses) <= thresholds.keys()  # a use is switched off explicitly, never by omission
+        assert all(0.5 <= thresholds[u] < 1 for u in uses if thresholds[u] is not None)
+    arrays = backend['arrays']
+    assert declared[arrays['path']] == arrays['sha256']
+    with np.load(PACKAGE / arrays['path'], allow_pickle=False) as npz:
+        assert npz['projection'].shape == (npz['mean'].shape[0], arrays['lda_dim'])
+    assert all(len(c['weights']) == len(backend['features']) for c in backend['conditions'].values())
 
 
 def test_weights_are_not_duplicated_in_release_source_archive():

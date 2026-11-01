@@ -1,0 +1,513 @@
+{
+ "corpus": {
+  "utterances": 17828,
+  "speakers": 240,
+  "places": [
+   "far:ANDROID@1.0",
+   "far:ANDROID@1.5",
+   "far:ANDROID@2.0",
+   "far:ANDROID@3.0",
+   "far:ANDROID@4.0",
+   "far:ARRAY-CH1@1.0",
+   "far:ARRAY-CH1@2.0",
+   "far:ARRAY-CH1@3.0",
+   "far:ARRAY-CH1@4.0",
+   "far:IPAD@1.0",
+   "far:IPAD@2.0",
+   "far:IPAD@2.5",
+   "far:IPAD@3.0",
+   "far:IPAD@4.0",
+   "far:IPHONE@1.0",
+   "far:IPHONE@2.0",
+   "far:IPHONE@3.0",
+   "far:IPHONE@4.0",
+   "far:RP@3.0",
+   "far:RP@3.5",
+   "near:DIRECTIONAL",
+   "near:PC"
+  ],
+  "folds": 20,
+  "lda_dim": 128
+ },
+ "held_out": {
+  "near_same": {
+   "k1": {
+    "targets": 11765,
+    "nontargets": 412125,
+    "eer": 0.0133,
+    "cllr": 0.0543,
+    "act_dcf_0.01": 0.1405,
+    "min_dcf_0.01": 0.1365
+   },
+   "k2": {
+    "targets": 5675,
+    "nontargets": 198585,
+    "eer": 0.0056,
+    "cllr": 0.0238,
+    "act_dcf_0.01": 0.0694,
+    "min_dcf_0.01": 0.0688
+   }
+  },
+  "far_same": {
+   "k1": {
+    "targets": 14754,
+    "nontargets": 207454,
+    "eer": 0.0439,
+    "cllr": 0.184,
+    "act_dcf_0.01": 1.1943,
+    "min_dcf_0.01": 0.9228
+   },
+   "k2": {
+    "targets": 7162,
+    "nontargets": 100444,
+    "eer": 0.0285,
+    "cllr": 0.1247,
+    "act_dcf_0.01": 0.9888,
+    "min_dcf_0.01": 0.8252
+   },
+   "k3": {
+    "targets": 4636,
+    "nontargets": 64556,
+    "eer": 0.024,
+    "cllr": 0.1012,
+    "act_dcf_0.01": 0.7902,
+    "min_dcf_0.01": 0.7122
+   },
+   "k5": {
+    "targets": 2630,
+    "nontargets": 36188,
+    "eer": 0.0212,
+    "cllr": 0.0891,
+    "act_dcf_0.01": 0.6841,
+    "min_dcf_0.01": 0.6307
+   }
+  },
+  "far_cross": {
+   "k1": {
+    "targets": 14618,
+    "nontargets": 610524,
+    "eer": 0.1118,
+    "cllr": 0.8716,
+    "act_dcf_0.01": 0.7273,
+    "min_dcf_0.01": 0.7218
+   },
+   "k2": {
+    "targets": 7130,
+    "nontargets": 297434,
+    "eer": 0.0938,
+    "cllr": 0.8574,
+    "act_dcf_0.01": 0.6317,
+    "min_dcf_0.01": 0.6284
+   },
+   "k3": {
+    "targets": 4668,
+    "nontargets": 193513,
+    "eer": 0.0874,
+    "cllr": 0.9318,
+    "act_dcf_0.01": 0.6046,
+    "min_dcf_0.01": 0.5784
+   },
+   "k5": {
+    "targets": 2670,
+    "nontargets": 110619,
+    "eer": 0.0861,
+    "cllr": 1.2222,
+    "act_dcf_0.01": 0.6435,
+    "min_dcf_0.01": 0.5596
+   }
+  }
+ },
+ "households": {
+  "near_same": {
+   "own/all": {
+    "n": 17010,
+    "addressing:correct": 0.95091,
+    "addressing:member_as_stranger": 0.01546,
+    "addressing:wrong": 0.00041,
+    "personal_memory:correct": 0.79453,
+    "personal_memory:member_as_stranger": 0.00429,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.95091,
+    "speaker_label:member_as_stranger": 0.01546,
+    "speaker_label:wrong": 0.00041
+   },
+   "own/k1": {
+    "n": 11475,
+    "addressing:correct": 0.94266,
+    "addressing:member_as_stranger": 0.01961,
+    "addressing:wrong": 0.00061,
+    "personal_memory:correct": 0.77142,
+    "personal_memory:member_as_stranger": 0.00488,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.94266,
+    "speaker_label:member_as_stranger": 0.01961,
+    "speaker_label:wrong": 0.00061
+   },
+   "own/k2": {
+    "n": 5535,
+    "addressing:correct": 0.96802,
+    "addressing:member_as_stranger": 0.00687,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.84246,
+    "personal_memory:member_as_stranger": 0.00307,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.96802,
+    "speaker_label:member_as_stranger": 0.00687,
+    "speaker_label:wrong": 0.0
+   },
+   "stranger/all": {
+    "n": 292685,
+    "addressing:wrong": 0.00132,
+    "personal_memory:wrong": 8e-05,
+    "speaker_label:wrong": 0.00132
+   },
+   "stranger/k1": {
+    "n": 197515,
+    "addressing:wrong": 0.00168,
+    "personal_memory:wrong": 0.0001,
+    "speaker_label:wrong": 0.00168
+   },
+   "stranger/k2": {
+    "n": 95170,
+    "addressing:wrong": 0.00057,
+    "personal_memory:wrong": 4e-05,
+    "speaker_label:wrong": 0.00057
+   }
+  },
+  "far_same": {
+   "own/all": {
+    "n": 21338,
+    "addressing:correct": 0.31798,
+    "addressing:member_as_stranger": 0.01561,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.10554,
+    "personal_memory:member_as_stranger": 0.00389,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.31798,
+    "speaker_label:member_as_stranger": 0.01561,
+    "speaker_label:wrong": 0.0
+   },
+   "own/k1": {
+    "n": 10814,
+    "addressing:correct": 0.29342,
+    "addressing:member_as_stranger": 0.01923,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.10375,
+    "personal_memory:member_as_stranger": 0.00499,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.29342,
+    "speaker_label:member_as_stranger": 0.01923,
+    "speaker_label:wrong": 0.0
+   },
+   "own/k2": {
+    "n": 5236,
+    "addressing:correct": 0.35542,
+    "addressing:member_as_stranger": 0.01509,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.11574,
+    "personal_memory:member_as_stranger": 0.00477,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.35542,
+    "speaker_label:member_as_stranger": 0.01509,
+    "speaker_label:wrong": 0.0
+   },
+   "own/k3": {
+    "n": 3380,
+    "addressing:correct": 0.32899,
+    "addressing:member_as_stranger": 0.00858,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.09112,
+    "personal_memory:member_as_stranger": 0.00059,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.32899,
+    "speaker_label:member_as_stranger": 0.00858,
+    "speaker_label:wrong": 0.0
+   },
+   "own/k5": {
+    "n": 1908,
+    "addressing:correct": 0.33491,
+    "addressing:member_as_stranger": 0.00891,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.11321,
+    "personal_memory:member_as_stranger": 0.00105,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.33491,
+    "speaker_label:member_as_stranger": 0.00891,
+    "speaker_label:wrong": 0.0
+   },
+   "stranger/all": {
+    "n": 161482,
+    "addressing:wrong": 0.00035,
+    "personal_memory:wrong": 2e-05,
+    "speaker_label:wrong": 0.00035
+   },
+   "stranger/k1": {
+    "n": 82084,
+    "addressing:wrong": 0.0004,
+    "personal_memory:wrong": 5e-05,
+    "speaker_label:wrong": 0.0004
+   },
+   "stranger/k2": {
+    "n": 39702,
+    "addressing:wrong": 0.0003,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:wrong": 0.0003
+   },
+   "stranger/k3": {
+    "n": 25468,
+    "addressing:wrong": 0.00031,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:wrong": 0.00031
+   },
+   "stranger/k5": {
+    "n": 14228,
+    "addressing:wrong": 0.00021,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:wrong": 0.00021
+   }
+  },
+  "far_cross": {
+   "own/all": {
+    "n": 28478,
+    "addressing:correct": 0.55071,
+    "addressing:member_as_stranger": 0.0053,
+    "addressing:wrong": 7e-05,
+    "personal_memory:correct": 0.38244,
+    "personal_memory:member_as_stranger": 0.00084,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.55071,
+    "speaker_label:member_as_stranger": 0.0053,
+    "speaker_label:wrong": 7e-05
+   },
+   "own/k1": {
+    "n": 14315,
+    "addressing:correct": 0.5402,
+    "addressing:member_as_stranger": 0.00747,
+    "addressing:wrong": 0.00014,
+    "personal_memory:correct": 0.36752,
+    "personal_memory:member_as_stranger": 0.00119,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.5402,
+    "speaker_label:member_as_stranger": 0.00747,
+    "speaker_label:wrong": 0.00014
+   },
+   "own/k2": {
+    "n": 6981,
+    "addressing:correct": 0.57943,
+    "addressing:member_as_stranger": 0.00415,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.41441,
+    "personal_memory:member_as_stranger": 0.00072,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.57943,
+    "speaker_label:member_as_stranger": 0.00415,
+    "speaker_label:wrong": 0.0
+   },
+   "own/k3": {
+    "n": 4569,
+    "addressing:correct": 0.57102,
+    "addressing:member_as_stranger": 0.00306,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.40665,
+    "personal_memory:member_as_stranger": 0.00044,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.57102,
+    "speaker_label:member_as_stranger": 0.00306,
+    "speaker_label:wrong": 0.0
+   },
+   "own/k5": {
+    "n": 2613,
+    "addressing:correct": 0.49598,
+    "addressing:member_as_stranger": 0.00038,
+    "addressing:wrong": 0.0,
+    "personal_memory:correct": 0.33639,
+    "personal_memory:member_as_stranger": 0.0,
+    "personal_memory:wrong": 0.0,
+    "speaker_label:correct": 0.49598,
+    "speaker_label:member_as_stranger": 0.00038,
+    "speaker_label:wrong": 0.0
+   },
+   "stranger/all": {
+    "n": 583483,
+    "addressing:wrong": 0.00572,
+    "personal_memory:wrong": 0.00122,
+    "speaker_label:wrong": 0.00572
+   },
+   "stranger/k1": {
+    "n": 293911,
+    "addressing:wrong": 0.00796,
+    "personal_memory:wrong": 0.00167,
+    "speaker_label:wrong": 0.00796
+   },
+   "stranger/k2": {
+    "n": 143184,
+    "addressing:wrong": 0.00465,
+    "personal_memory:wrong": 0.001,
+    "speaker_label:wrong": 0.00465
+   },
+   "stranger/k3": {
+    "n": 93144,
+    "addressing:wrong": 0.00289,
+    "personal_memory:wrong": 0.00063,
+    "speaker_label:wrong": 0.00289
+   },
+   "stranger/k5": {
+    "n": 53244,
+    "addressing:wrong": 0.0012,
+    "personal_memory:wrong": 0.00034,
+    "speaker_label:wrong": 0.0012
+   }
+  }
+ },
+ "policy": {
+  "near_same": {
+   "personal_memory": 0.998158,
+   "addressing": 0.952449,
+   "speaker_label": 0.952449,
+   "candidate_evidence": null,
+   "discovery": null
+  },
+  "far_same": {
+   "personal_memory": 0.998882,
+   "addressing": 0.995019,
+   "speaker_label": 0.995019,
+   "candidate_evidence": null,
+   "discovery": null
+  },
+  "far_cross": {
+   "personal_memory": 0.99,
+   "addressing": 0.9,
+   "speaker_label": 0.9,
+   "candidate_evidence": null,
+   "discovery": null
+  }
+ },
+ "binding": {
+  "near_same": {
+   "personal_memory": {
+    "rejected_threshold": 0.997965,
+    "by": "own/k1:member_as_stranger",
+    "rate": 0.00505
+   },
+   "addressing": {
+    "rejected_threshold": 0.947709,
+    "by": "own/k1:member_as_stranger",
+    "rate": 0.02039
+   },
+   "speaker_label": {
+    "rejected_threshold": 0.947709,
+    "by": "own/k1:member_as_stranger",
+    "rate": 0.02039
+   }
+  },
+  "far_same": {
+   "personal_memory": {
+    "rejected_threshold": 0.998765,
+    "by": "own/k1:member_as_stranger",
+    "rate": 0.00573
+   },
+   "addressing": {
+    "rejected_threshold": 0.994499,
+    "by": "own/k1:member_as_stranger",
+    "rate": 0.02044
+   },
+   "speaker_label": {
+    "rejected_threshold": 0.994499,
+    "by": "own/k1:member_as_stranger",
+    "rate": 0.02044
+   }
+  },
+  "far_cross": {}
+ },
+ "delivered": {
+  "backend": {
+   "version": "campplus-identity-evidence-v4",
+   "identity": [
+    "campplus_zh_16k_common",
+    "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
+    "reference-contiguous-pcm16-v1"
+   ],
+   "max_speech_ms": 20000,
+   "features": [
+    "score",
+    "duration_min_s",
+    "duration_max_s",
+    "duration_diff_s",
+    "duration_ratio"
+   ],
+   "conditions": {
+    "near_same": {
+     "weights": [
+      28.711448,
+      -0.615547,
+      -0.167538,
+      0.026327,
+      0.07449
+     ],
+     "bias": -9.448994,
+     "trials": 12128,
+     "targets": 3488
+    },
+    "far_same": {
+     "weights": [
+      20.464856,
+      -0.465717,
+      -0.406918,
+      0.200703,
+      0.183415
+     ],
+     "bias": -6.766745,
+     "trials": 40811,
+     "targets": 14591
+    },
+    "far_cross": {
+     "weights": [
+      32.464727,
+      -0.377458,
+      -0.327983,
+      0.072317,
+      0.087378
+     ],
+     "bias": -3.552685,
+     "trials": 37726,
+     "targets": 29086
+    }
+   },
+   "arrays": {
+    "path": "identity-backend.npz",
+    "sha256": "78b92152ea8ccecf11620e616b3c76d5400efffee6d8e98a7e312acec3cc99e1",
+    "lda_dim": 128
+   },
+   "trained_with": {
+    "wespeaker": "9fecd6cb4f47475d01761d87c826298dff4ef18c",
+    "dataset": "3D-Speaker test set (CC BY-SA 4.0)",
+    "speakers": 240,
+    "places": [
+     "far:ANDROID@1.0",
+     "far:ANDROID@1.5",
+     "far:ANDROID@2.0",
+     "far:ANDROID@3.0",
+     "far:ANDROID@4.0",
+     "far:ARRAY-CH1@1.0",
+     "far:ARRAY-CH1@2.0",
+     "far:ARRAY-CH1@3.0",
+     "far:ARRAY-CH1@4.0",
+     "far:IPAD@1.0",
+     "far:IPAD@2.0",
+     "far:IPAD@2.5",
+     "far:IPAD@3.0",
+     "far:IPAD@4.0",
+     "far:IPHONE@1.0",
+     "far:IPHONE@2.0",
+     "far:IPHONE@3.0",
+     "far:IPHONE@4.0",
+     "far:RP@3.0",
+     "far:RP@3.5",
+     "near:DIRECTIONAL",
+     "near:PC"
+    ]
+   }
+  },
+  "runtime_vs_wespeaker_max_llr_diff": 1.1e-05
+ }
+}

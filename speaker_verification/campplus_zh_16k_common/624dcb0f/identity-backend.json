@@ -1,88 +1,88 @@
 {
- "version": "campplus-identity-evidence-v2",
+ "version": "campplus-identity-evidence-v4",
  "identity": [
   "campplus_zh_16k_common",
   "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
   "reference-contiguous-pcm16-v1"
  ],
- "top_n": 100,
  "max_speech_ms": 20000,
  "features": [
-  "asnorm_score",
+  "score",
   "duration_min_s",
   "duration_max_s",
   "duration_diff_s",
-  "duration_ratio",
-  "magnitude_min",
-  "magnitude_max",
-  "magnitude_diff",
-  "magnitude_ratio",
-  "cohort_mean_min",
-  "cohort_mean_max",
-  "cohort_mean_diff",
-  "cohort_mean_ratio",
-  "cross_channel",
-  "cross_channel_x_asnorm_score"
+  "duration_ratio"
  ],
- "weights": [
-  2.807661,
-  -0.803816,
-  -0.515365,
-  0.355117,
-  0.156454,
-  -10.698723,
-  -4.724958,
-  6.040432,
-  -0.952356,
-  31.96714,
-  41.097141,
-  9.196668,
-  -4.13771,
-  13.536258,
-  -1.045567
- ],
- "bias": -8.303106,
+ "conditions": {
+  "near_same": {
+   "weights": [
+    28.711448,
+    -0.615547,
+    -0.167538,
+    0.026327,
+    0.07449
+   ],
+   "bias": -9.448994,
+   "trials": 12128,
+   "targets": 3488
+  },
+  "far_same": {
+   "weights": [
+    20.464856,
+    -0.465717,
+    -0.406918,
+    0.200703,
+    0.183415
+   ],
+   "bias": -6.766745,
+   "trials": 40811,
+   "targets": 14591
+  },
+  "far_cross": {
+   "weights": [
+    32.464727,
+    -0.377458,
+    -0.327983,
+    0.072317,
+    0.087378
+   ],
+   "bias": -3.552685,
+   "trials": 37726,
+   "targets": 29086
+  }
+ },
+ "arrays": {
+  "path": "identity-backend.npz",
+  "sha256": "78b92152ea8ccecf11620e616b3c76d5400efffee6d8e98a7e312acec3cc99e1",
+  "lda_dim": 128
+ },
  "trained_with": {
   "wespeaker": "9fecd6cb4f47475d01761d87c826298dff4ef18c",
-  "trials": 59776,
-  "targets": 4576
- },
- "cohort": {
-  "path": "identity-cohort.npz",
-  "sha256": "52aee499c7df0536efc82573919661237bdf9732f398186ffb1bf59d738dde53",
-  "speakers": 69,
-  "vectors": 1074,
-  "dataset": "AISHELL/AISHELL-1",
-  "dataset_revision": "bbe295d530192a4cd41644b711c9aecd087df653",
-  "channels": {
-   "phone": {
-    "levels": [
-     0.04,
-     0.06,
-     0.08
-    ],
-    "bitrate": 32000
-   },
-   "device": {
-    "levels": [
-     0.02,
-     0.04,
-     0.06
-    ],
-    "bitrate": 16000,
-    "band": [
-     150,
-     4000
-    ],
-    "rt60": [
-     0.3,
-     0.6
-    ],
-    "snr_db": [
-     20,
-     30
-    ]
-   }
-  }
+  "dataset": "3D-Speaker test set (CC BY-SA 4.0)",
+  "speakers": 240,
+  "places": [
+   "far:ANDROID@1.0",
+   "far:ANDROID@1.5",
+   "far:ANDROID@2.0",
+   "far:ANDROID@3.0",
+   "far:ANDROID@4.0",
+   "far:ARRAY-CH1@1.0",
+   "far:ARRAY-CH1@2.0",
+   "far:ARRAY-CH1@3.0",
+   "far:ARRAY-CH1@4.0",
+   "far:IPAD@1.0",
+   "far:IPAD@2.0",
+   "far:IPAD@2.5",
+   "far:IPAD@3.0",
+   "far:IPAD@4.0",
+   "far:IPHONE@1.0",
+   "far:IPHONE@2.0",
+   "far:IPHONE@3.0",
+   "far:IPHONE@4.0",
+   "far:RP@3.0",
+   "far:RP@3.5",
+   "near:DIRECTIONAL",
+   "near:PC"
+  ]
  }
 }

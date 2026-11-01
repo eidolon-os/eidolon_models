@@ -20,14 +20,10 @@ identity decisions is described in `identity-policy.md`.
 
 ## Calibration data and its terms
 
-`identity-cohort.npz` and the weights in `identity-backend.json` are derived from
-AISHELL-1 (Beijing Shell Shell Technology Co., Ltd.; OpenSLR SLR33, Hugging Face
-`AISHELL/AISHELL-1` at `bbe295d`). Its license is stated as the Apache License
-2.0 (the OpenSLR license line and the dataset card's metadata), and its OpenSLR
-description adds "The data is free for academic use." That sentence neither
-grants nor excludes commercial use; confirm with the publisher before any
-commercial distribution of these two files. The cohort holds speaker embeddings
-only: no audio, transcripts or names. Citation: Bu et al., "AISHELL-1: An
-Open-Source Mandarin Speech Corpus and A Speech Recognition Baseline", Oriental
-COCOSDA 2017.
-
+`identity-backend.npz` and the weights in `identity-backend.json` are derived from
+the 3D-Speaker dataset (Alibaba DAMO Academy, https://3dspeaker.github.io),
+licensed CC BY-SA 4.0, and are distributed under CC BY-SA 4.0 with that
+attribution. They hold a mean vector, a projection matrix and calibration
+weights: no audio, transcripts, names or per-speaker embeddings. Citation:
+Zheng et al., "3D-Speaker: A Large-Scale Multi-Device, Multi-Distance, and
+Multi-Dialect Corpus for Speech Representation Disentanglement", 2023.

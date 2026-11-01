@@ -1,15 +1,34 @@
 {
-  "version": "campplus-identity-policy-v3",
+  "version": "campplus-identity-policy-v5",
   "model_id": "campplus_zh_16k_common",
   "weights_hash": "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
   "preprocessing_version": "reference-contiguous-pcm16-v1",
-  "backend_version": "campplus-identity-evidence-v2",
+  "backend_version": "campplus-identity-evidence-v4",
   "min_speech_ms": 600,
   "min_unknown_speech_ms": 1500,
   "prior_unknown": 0.5,
-  "personal_memory": null,
-  "addressing": 0.9,
-  "speaker_label": 0.9,
-  "candidate_evidence": null,
-  "discovery": null
+  "household_margin_llr": 1.0,
+  "conditions": {
+    "near_same": {
+      "personal_memory": 0.998158,
+      "addressing": 0.952449,
+      "speaker_label": 0.952449,
+      "candidate_evidence": null,
+      "discovery": null
+    },
+    "far_same": {
+      "personal_memory": 0.998882,
+      "addressing": 0.995019,
+      "speaker_label": 0.995019,
+      "candidate_evidence": null,
+      "discovery": null
+    },
+    "far_cross": {
+      "personal_memory": 0.99,
+      "addressing": 0.9,
+      "speaker_label": 0.9,
+      "candidate_evidence": null,
+      "discovery": null
+    }
+  }
 }
