@@ -62,10 +62,10 @@ def wespeaker():
     return module.load(), module.REVISION
 
 
-def registrations(rows):
+def registrations(rows, enroll_channel=ENROLL_CHANNEL):
     """(template vector, speech_ms) and probes [(vector, speech_ms, channel)]."""
     files = sorted({r["file"] for r in rows})
-    enroll = [r for r in rows if r["file"] in files[:ENROLL_FILES] and r["channel"] == "phone"]
+    enroll = [r for r in rows if r["file"] in files[:ENROLL_FILES] and r["channel"] == enroll_channel]
     if len(enroll) < ENROLL_FILES:
         return None
     template = unit(np.mean([r["sample"]["vector"] for r in enroll], axis=0))[0]
@@ -89,9 +89,10 @@ def cohort_pool(data, ids):
     return np.asarray(vectors, dtype=np.float64), np.asarray(owners)
 
 
-def trial_rows(score_norm, data, ids, mean, pool, owners, cohort_ids, *, leave_out, rng, per):
+def trial_rows(score_norm, data, ids, mean, pool, owners, cohort_ids, *, leave_out, rng, per,
+               enroll_channel=ENROLL_CHANNEL):
     """Score-norm rows built with WeSpeaker's get_mean_std and AS-norm formula."""
-    regs = {s: registrations(data["speakers"][s]) for s in ids}
+    regs = {s: registrations(data["speakers"][s], enroll_channel) for s in ids}
     regs = {s: r for s, r in regs.items() if r}
     index = {s: cohort_ids.index(s) for s in ids if s in cohort_ids}
     centred_pool = pool - mean
@@ -121,7 +122,8 @@ def trial_rows(score_norm, data, ids, mean, pool, owners, cohort_ids, *, leave_o
                     label=a == b, normed=normed, e_ms=e_ms, p_ms=ms,
                     e_mag=float(np.linalg.norm(e_raw)), p_mag=float(np.linalg.norm(p_raw[j])),
                     e_mean=float(e_mean[0]), p_mean=float(p_mean[j]),
-                    cross=float(channel != ENROLL_CHANNEL), template=template, probe=vec, channel=channel,
+                    cross=float(channel != enroll_channel), template=template, probe=vec, channel=channel,
+                    enroll_channel=enroll_channel,
                 ))
     return rows
 
@@ -142,6 +144,33 @@ def factor_file(calibration, rows, work: Path, name: str) -> Path:
             score = float(line.split()[3])
             fout.write(f"{line.rstrip()} {r['cross']:.4f} {r['cross'] * score:.5f}\n")
     return out
+
+
+def train_qmf(calibration, rows, work: Path, name: str):
+    """WeSpeaker's train_calibration_model on these rows: (weights, bias, model file)."""
+    model = work / f"{name}.pt"
+    calibration.train_calibration_model(str(factor_file(calibration, rows, work, name)), str(model))
+    state = torch.load(model)
+    return state["linear.weight"].reshape(-1).tolist(), float(state["linear.bias"].reshape(-1)[0]), model
+
+
+def save_backend(out: Path, identity, mean, pool, weights, bias, *, trained_with, cohort,
+                 version=VERSION) -> dict:
+    """identity-backend.json + identity-cohort.npz, the files Channel loads."""
+    out.mkdir(parents=True, exist_ok=True)
+    npz = out / "identity-cohort.npz"
+    with open(npz, "wb") as f:
+        np.savez(f, mean=mean.astype(np.float32), cohort=pool.astype(np.float32))
+    spec = {
+        "version": version,
+        "identity": identity,
+        "top_n": TOP_N, "max_speech_ms": MAX_SPEECH_MS,
+        "features": list(FEATURES), "weights": [round(w, 6) for w in weights], "bias": round(bias, 6),
+        "trained_with": trained_with,
+        "cohort": {"path": npz.name, "sha256": hashlib.sha256(npz.read_bytes()).hexdigest(), **cohort},
+    }
+    (out / "identity-backend.json").write_text(json.dumps(spec, indent=1) + "\n")
+    return spec
 
 
 def cllr(llr, y):
@@ -225,28 +254,13 @@ def main():
 
     train = trial_rows(score_norm, data, cohort_ids, mean, pool, owners, cohort_ids,
                        leave_out=True, rng=rng, per=800)
-    model = work / "qmf.pt"
-    calibration.train_calibration_model(str(factor_file(calibration, train, work, "train")), str(model))
-    state = torch.load(model)
-    weights = state["linear.weight"].reshape(-1).tolist()
-    bias = float(state["linear.bias"].reshape(-1)[0])
-
-    npz = args.out / "identity-cohort.npz"
-    with open(npz, "wb") as f:
-        np.savez(f, mean=mean.astype(np.float32), cohort=pool.astype(np.float32))
-    spec = {
-        "version": VERSION,
-        "identity": data["identity"],
-        "top_n": TOP_N, "max_speech_ms": MAX_SPEECH_MS,
-        "features": list(FEATURES), "weights": [round(w, 6) for w in weights], "bias": round(bias, 6),
-        "trained_with": {"wespeaker": revision, "trials": len(train),
-                         "targets": sum(r["label"] for r in train)},
-        "cohort": {"path": npz.name, "sha256": hashlib.sha256(npz.read_bytes()).hexdigest(),
-                   "speakers": len(cohort_ids), "vectors": int(len(pool)),
-                   "dataset": data["dataset"], "dataset_revision": data["dataset_revision"],
-                   "channels": {"phone": data["phone"], "device": data["device"]}},
-    }
-    (args.out / "identity-backend.json").write_text(json.dumps(spec, indent=1) + "\n")
+    weights, bias, model = train_qmf(calibration, train, work, "train")
+    spec = save_backend(
+        args.out, data["identity"], mean, pool, weights, bias,
+        trained_with={"wespeaker": revision, "trials": len(train), "targets": sum(r["label"] for r in train)},
+        cohort={"speakers": len(cohort_ids), "vectors": int(len(pool)), "dataset": data["dataset"],
+                "dataset_revision": data["dataset_revision"],
+                "channels": {"phone": data["phone"], "device": data["device"]}})
     backend = load_backend(args.out)
 
     test = trial_rows(score_norm, data, held, mean, pool, owners, cohort_ids,
@@ -257,7 +271,7 @@ def main():
     y = np.array([r["label"] for r in test])
 
     # Channel's runtime must give WeSpeaker's LLRs (factors are written at 4-5 decimals).
-    runtime = np.array([backend.llr(backend.side(r["template"], r["e_ms"], ENROLL_CHANNEL),
+    runtime = np.array([backend.llr(backend.side(r["template"], r["e_ms"], r["enroll_channel"]),
                                     backend.side(r["probe"], r["p_ms"], r["channel"]))
                         for r in test[:2000]])
     drift = float(np.max(np.abs(runtime - llr[:2000])))

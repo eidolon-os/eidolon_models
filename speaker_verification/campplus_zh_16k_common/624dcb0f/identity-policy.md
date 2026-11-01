@@ -2,36 +2,48 @@
 
 Recognition returns advisory identity evidence, never admission, authentication or a memory grant on its own. Channel reads three files beside the CAM++ weights:
 
-- **`identity-backend.json` + `identity-cohort.npz`**: the calibration. It follows WeSpeaker's back-end:
+- **`identity-backend.json` + `identity-cohort.npz`** (back-end v3): the calibration. It follows WeSpeaker's back-end:
   - subtract a domain mean;
   - AS-norm over each side's 100 highest cohort scores;
   - an affine quality-measure function (QMF) over WeSpeaker's own factors — the normalised score and min / max / difference / ratio of the two sides' voiced speech, embedding magnitude after mean subtraction and cohort mean — plus the **condition**: whether the probe comes through a different channel from the one the template was built on (an indicator, plus its product with the score).
 
   Every step is WeSpeaker's own code at `9fecd6c` (`get_mean_std`, `gather_calibration_factors`, `train_calibration_model`); Channel's runtime reproduces its LLRs to 0.005.
 
-  The cohort is 1074 utterance embeddings of 69 public AISHELL-1 speakers, each recording passed through a phone channel and a simulated far-field device channel. It holds embeddings only: no audio, transcripts or names.
-- **`identity-policy.json`**: how the evidence becomes decisions.
+  The cohort and the QMF's training trials come from 69 public AISHELL-1 speakers in three channels:
+  - a simulated phone channel and a simulated far-field device channel (1074 utterance embeddings);
+  - **a real recorded channel**: the same speakers replayed through a laptop speaker and captured by the phone app's own path (275 segment embeddings). Both sides of these trials are replayed.
+
+  It holds embeddings only: no audio, transcripts or names, and no household member's voice.
+- **`identity-policy.json`** (policy v4): how the evidence becomes decisions.
   - Every compared Person gets an open-set posterior; someone not enrolled has prior 0.5.
   - Each use has its own threshold. A use without one is off: nothing is ever decided for it.
   - Consumers read the decision for their own use and never set a threshold of their own.
 
-  Policy v3 turns on `addressing` 0.90 and `speaker_label` 0.90 only. `personal_memory`, `candidate_evidence` and `discovery` stay off until the calibration has been checked on the household's own channel (design §8.2 1c): on that channel the public-corpus calibration is over-confident (see *Not shown*), and those three uses write lasting records, while a wrong name is corrected in the next turn. Policy v2 used 0.99 / 0.90 / 0.90 / 0.95 / 0.99 for the five uses; the evidence below is for those thresholds.
+  Policy v4 turns on `addressing` 0.90 and `speaker_label` 0.90 only. `personal_memory`, `candidate_evidence` and `discovery` write lasting records and stay off until the calibration passes a check with live, in-room impostors across households (design §8.2 1c): so far there is one live impostor pair. When switched on, their thresholds start at 0.99 / 0.95 / 0.99.
 
 A registration template is the mean of three samples, and its voiced speech is their sum. Its channel is `mobile`, because registration captures only through the phone app. A probe's channel is its device kind; every phone app counts as one channel. The calibration was trained under exactly these conventions.
 
-## Evidence (2026-10-31, `evals/speaker-verification/cohort-20261031`, `results-identity-v2.json`)
+## Evidence (2026-11-01, `evals/speaker-verification/cohort-20261031`, `results-household-replay.json`)
 
-30 held-out speakers (never in the cohort), two-person households, registration through Channel's own `evaluate_enrollment`:
+Back-end v2 was trained on the two simulated channels only. On a channel it had never seen — enrollment and probes both from the replay recording, 30 held-out speakers — it was badly over-confident. Adding the replayed channel to the cohort and to the QMF's training trials fixed that. It cost little on the simulated channels.
 
-| | own, same channel | own, other channel | stranger accepted, same / other channel |
-|---|---|---|---|
-| `personal_memory` | 98.6 % | 78.2 % | 0.00 % / 0.19 % |
-| `addressing` | 99.6 % | 93.6 % | 0.01 % / 1.30 % |
-| previous fixed cosine 0.55 | 99.4 % | 25.1 % | 0.70 % / 0.02 % |
+| | replayed channel, held-out speakers | public corpus, held-out (all / device probes) |
+|---|---|---|
+| v2 | EER 5.36 %, Cllr 0.684, actDCF 7.62 | Cllr 0.059 / 0.120, EER 1.02 % / 2.06 % |
+| **v3** | EER 1.05 %, Cllr 0.038, actDCF 0.20 | Cllr 0.067 / 0.139, EER 1.22 % / 2.39 % |
 
-Verification: EER 1.02 %, Cllr 0.059 overall; same channel actDCF 0.011 (min 0.010), other channel 0.40 (min 0.34).
+One household's phone, live speech (2 registered members; registration windows, one recording left out of the template in turn, plus the trial recording):
 
-**Not shown.** The other channel is simulated (band limit, synthetic room response, noise, Opus 16 kbps), not a real board. Household adaptation (design §8.2 1c) checks real devices before it is switched on. A cohort recorded elsewhere does not describe a household's own channel: on the first real phone registrations, two household members scored each other up to LLR 12 (design §3.3), so strict uses on a real household's channel need in-domain data this calibration does not have.
+| | own, `addressing` / `personal_memory` | each member as a stranger to a household where only the other is enrolled |
+|---|---|---|
+| v2 | 100 % / 100 % (42 probes) | LLR max 12.2; named in 25 % / 13.6 % of probes |
+| **v3** | 100 % / 100 % | LLR max 0.24; never named |
+
+**Not shown.**
+- The replayed recording and the household share the phone and the room, so the household figures do not show how v3 does in other homes.
+- Replayed voices carry the loudspeaker's colouring. Against live registrations they are not representative strangers, so they are not used to estimate a household's false acceptance.
+- The far-field device channel is still simulated, not a real board.
+- One live impostor pair cannot bound false acceptance at 0.5 %. That needs live impostors across households and devices (design §8.2 1c).
 
 ## Unchanged
 
