@@ -67,6 +67,9 @@ def test_the_policy_and_calibration_name_the_delivered_weights_and_arrays():
     with np.load(PACKAGE / arrays['path'], allow_pickle=False) as npz:
         assert npz['projection'].shape == (npz['mean'].shape[0], arrays['lda_dim'])
     assert all(len(c['weights']) == len(backend['features']) for c in backend['conditions'].values())
+    # Channel never scores a track longer than its condition was calibrated on (design §3.2).
+    assert all(c['max_track_segments'] >= 1 for c in backend['conditions'].values())
+    assert policy['track_continuation_llr'] >= 0
 
 
 def test_weights_are_not_duplicated_in_release_source_archive():

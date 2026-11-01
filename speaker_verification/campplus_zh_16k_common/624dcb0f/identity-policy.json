@@ -1,5 +1,5 @@
 {
-  "version": "campplus-identity-policy-v5",
+  "version": "campplus-identity-policy-v6",
   "model_id": "campplus_zh_16k_common",
   "weights_hash": "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
   "preprocessing_version": "reference-contiguous-pcm16-v1",
@@ -8,6 +8,7 @@
   "min_unknown_speech_ms": 1500,
   "prior_unknown": 0.5,
   "household_margin_llr": 1.0,
+  "track_continuation_llr": 6.936,
   "conditions": {
     "near_same": {
       "personal_memory": 0.998158,

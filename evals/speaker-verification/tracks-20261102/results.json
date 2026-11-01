@@ -1,0 +1,263 @@
+{
+ "setup": {
+  "folds": 20,
+  "session_segments": 6,
+  "max_sessions": 4,
+  "attribution_speech_ms": 8000,
+  "policy": "campplus-identity-policy-v5"
+ },
+ "events": {
+  "not_attributed": 620,
+  "attributed": 53
+ },
+ "own": {
+  "cold/k1": {
+   "n": 616,
+   "addressing:correct": 0.31169,
+   "addressing:wrong": 0.00162,
+   "personal_memory:correct": 0.14935,
+   "speaker_label:correct": 0.31169,
+   "speaker_label:wrong": 0.00162
+  },
+  "cold/k2": {
+   "n": 616,
+   "addressing:correct": 0.30682,
+   "personal_memory:correct": 0.17045,
+   "speaker_label:correct": 0.30682
+  },
+  "cold/k3+": {
+   "n": 2464,
+   "addressing:correct": 0.26989,
+   "personal_memory:correct": 0.12987,
+   "speaker_label:correct": 0.26989
+  },
+  "session1/k1": {
+   "n": 174,
+   "addressing:correct": 0.37356,
+   "personal_memory:correct": 0.21839,
+   "speaker_label:correct": 0.37356
+  },
+  "session1/k2": {
+   "n": 174,
+   "addressing:correct": 0.3908,
+   "personal_memory:correct": 0.24713,
+   "speaker_label:correct": 0.3908
+  },
+  "session1/k3+": {
+   "n": 696,
+   "addressing:correct": 0.34339,
+   "personal_memory:correct": 0.19397,
+   "speaker_label:correct": 0.34339
+  },
+  "session2/k1": {
+   "n": 171,
+   "addressing:correct": 0.33333,
+   "personal_memory:correct": 0.16374,
+   "speaker_label:correct": 0.33333
+  },
+  "session2/k2": {
+   "n": 171,
+   "addressing:correct": 0.33918,
+   "personal_memory:correct": 0.19298,
+   "speaker_label:correct": 0.33918
+  },
+  "session2/k3+": {
+   "n": 684,
+   "addressing:correct": 0.31725,
+   "personal_memory:correct": 0.15936,
+   "speaker_label:correct": 0.31725
+  },
+  "session3/k1": {
+   "n": 171,
+   "addressing:correct": 0.36842,
+   "addressing:wrong": 0.00585,
+   "personal_memory:correct": 0.19883,
+   "speaker_label:correct": 0.36842,
+   "speaker_label:wrong": 0.00585
+  },
+  "session3/k2": {
+   "n": 171,
+   "addressing:correct": 0.33918,
+   "personal_memory:correct": 0.19883,
+   "speaker_label:correct": 0.33918
+  },
+  "session3/k3+": {
+   "n": 684,
+   "addressing:correct": 0.29094,
+   "personal_memory:correct": 0.17105,
+   "speaker_label:correct": 0.29094
+  },
+  "session4/k1": {
+   "n": 157,
+   "addressing:correct": 0.34395,
+   "personal_memory:correct": 0.15924,
+   "speaker_label:correct": 0.34395
+  },
+  "session4/k2": {
+   "n": 157,
+   "addressing:correct": 0.34395,
+   "personal_memory:correct": 0.17834,
+   "speaker_label:correct": 0.34395
+  },
+  "session4/k3+": {
+   "n": 628,
+   "addressing:correct": 0.28981,
+   "personal_memory:correct": 0.1449,
+   "speaker_label:correct": 0.28981
+  },
+  "warm/k1": {
+   "n": 57,
+   "addressing:correct": 0.82456,
+   "personal_memory:correct": 0.57895,
+   "speaker_label:correct": 0.82456
+  },
+  "warm/k2": {
+   "n": 57,
+   "addressing:correct": 0.85965,
+   "personal_memory:correct": 0.57895,
+   "speaker_label:correct": 0.85965
+  },
+  "warm/k3+": {
+   "n": 228,
+   "addressing:correct": 0.75439,
+   "personal_memory:correct": 0.57895,
+   "speaker_label:correct": 0.75439
+  }
+ },
+ "stranger": {
+  "cold/k1": {
+   "n": 3220,
+   "addressing:wrong": 0.00248,
+   "personal_memory:wrong": 0.00031,
+   "speaker_label:wrong": 0.00248
+  },
+  "cold/k2": {
+   "n": 3220,
+   "addressing:wrong": 0.00155,
+   "personal_memory:wrong": 0.00062,
+   "speaker_label:wrong": 0.00155
+  },
+  "cold/k3+": {
+   "n": 12880,
+   "addressing:wrong": 0.00062,
+   "speaker_label:wrong": 0.00062
+  },
+  "warm/k1": {
+   "n": 3220,
+   "addressing:wrong": 0.00248,
+   "personal_memory:wrong": 0.00031,
+   "speaker_label:wrong": 0.00248
+  },
+  "warm/k2": {
+   "n": 3220,
+   "addressing:wrong": 0.00155,
+   "personal_memory:wrong": 0.00062,
+   "speaker_label:wrong": 0.00155
+  },
+  "warm/k3+": {
+   "n": 12880,
+   "addressing:wrong": 0.00062,
+   "speaker_label:wrong": 0.00062
+  }
+ },
+ "member_as_stranger": {
+  "cold/k1": {
+   "n": 673,
+   "addressing:wrong": 0.00297,
+   "speaker_label:wrong": 0.00297
+  },
+  "cold/k2": {
+   "n": 673,
+   "addressing:wrong": 0.00149,
+   "speaker_label:wrong": 0.00149
+  },
+  "cold/k3+": {
+   "n": 2692
+  },
+  "warm/k1": {
+   "n": 673,
+   "addressing:wrong": 0.00297,
+   "speaker_label:wrong": 0.00297
+  },
+  "warm/k2": {
+   "n": 673,
+   "addressing:wrong": 0.00149,
+   "speaker_label:wrong": 0.00149
+  },
+  "warm/k3+": {
+   "n": 2692
+  }
+ },
+ "cold_start_accumulation": {
+  "k1-1": {
+   "own_n": 174,
+   "stranger_n": 839,
+   "member_n": 174,
+   "personal_memory:policy_coverage": 0.2184,
+   "personal_memory:best_coverage": 0.3563,
+   "addressing:policy_coverage": 0.3736,
+   "addressing:best_coverage": 0.5977
+  },
+  "k2-2": {
+   "own_n": 174,
+   "stranger_n": 839,
+   "member_n": 174,
+   "personal_memory:policy_coverage": 0.2471,
+   "personal_memory:best_coverage": 0.3736,
+   "addressing:policy_coverage": 0.3908,
+   "addressing:best_coverage": 0.7299
+  },
+  "k3-5": {
+   "own_n": 522,
+   "stranger_n": 2517,
+   "member_n": 522,
+   "personal_memory:policy_coverage": 0.205,
+   "personal_memory:best_coverage": 0.6188,
+   "addressing:policy_coverage": 0.3582,
+   "addressing:best_coverage": 0.7701
+  },
+  "k6-11": {
+   "own_n": 1029,
+   "stranger_n": 4969,
+   "member_n": 1029,
+   "personal_memory:policy_coverage": 0.1487,
+   "personal_memory:best_coverage": 0.6297,
+   "addressing:policy_coverage": 0.2935,
+   "addressing:best_coverage": 0.7619
+  },
+  "k12-17": {
+   "own_n": 1026,
+   "stranger_n": 4956,
+   "member_n": 1026,
+   "personal_memory:policy_coverage": 0.1374,
+   "personal_memory:best_coverage": 0.6511,
+   "addressing:policy_coverage": 0.2856,
+   "addressing:best_coverage": 0.7427
+  },
+  "k18+": {
+   "own_n": 1113,
+   "stranger_n": 5200,
+   "member_n": 1113,
+   "personal_memory:policy_coverage": 0.1473,
+   "personal_memory:best_coverage": 0.4924,
+   "addressing:policy_coverage": 0.2911,
+   "addressing:best_coverage": 0.7574
+  }
+ },
+ "track_continuation": {
+  "same_n": 3365,
+  "other_n": 3365,
+  "other_joins_0.01": {
+   "llr": 6.997,
+   "own_continues": 0.2012
+  },
+  "other_joins_0.005": {
+   "llr": 8.097,
+   "own_continues": 0.0972
+  },
+  "other_joins_0.001": {
+   "llr": 9.235,
+   "own_continues": 0.0339
+  }
+ }
+}

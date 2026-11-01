@@ -23,6 +23,7 @@
     0.07449
    ],
    "bias": -9.448994,
+   "max_track_segments": 2,
    "trials": 12128,
    "targets": 3488
   },
@@ -35,6 +36,7 @@
     0.183415
    ],
    "bias": -6.766745,
+   "max_track_segments": 5,
    "trials": 40811,
    "targets": 14591
   },
@@ -47,6 +49,7 @@
     0.087378
    ],
    "bias": -3.552685,
+   "max_track_segments": 5,
    "trials": 37726,
    "targets": 29086
   }

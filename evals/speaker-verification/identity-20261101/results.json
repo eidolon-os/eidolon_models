@@ -419,6 +419,30 @@
   },
   "far_cross": {}
  },
+ "track_continuation": {
+  "llr": 6.936,
+  "near_same": {
+   "own_continues": 0.5324,
+   "own_continues_by_track_length": {
+    "1": 0.4462,
+    "2": 0.6185
+   },
+   "other_joins": 0.00058,
+   "other_trials": 5190
+  },
+  "far_same": {
+   "own_continues": 0.203,
+   "own_continues_by_track_length": {
+    "1": 0.1084,
+    "2": 0.1842,
+    "3": 0.2357,
+    "4": 0.2305,
+    "5": 0.2569
+   },
+   "other_joins": 0.001,
+   "other_trials": 13062
+  }
+ },
  "delivered": {
   "backend": {
    "version": "campplus-identity-evidence-v4",
@@ -445,6 +469,7 @@
       0.07449
      ],
      "bias": -9.448994,
+     "max_track_segments": 2,
      "trials": 12128,
      "targets": 3488
     },
@@ -457,6 +482,7 @@
       0.183415
      ],
      "bias": -6.766745,
+     "max_track_segments": 5,
      "trials": 40811,
      "targets": 14591
     },
@@ -469,6 +495,7 @@
       0.087378
      ],
      "bias": -3.552685,
+     "max_track_segments": 5,
      "trials": 37726,
      "targets": 29086
     }

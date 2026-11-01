@@ -13,7 +13,17 @@ CC BY-SA 4.0) stands in for the product's three comparison conditions:
 - ``far_cross``: a close-device registration against a far device (>= 1 m).
 
 Probes are single segments or tracks of k segments (their mean vector, voiced
-speech summed), as a conversation track accumulates them.
+speech summed), as a conversation track accumulates them. The back-end records
+the longest track each condition was calibrated on; Channel scores a longer
+track on its latest segments within it (design §3.2), as beyond it the
+duration factors extrapolate.
+
+The policy also sets how strongly a segment must match a conversation track
+of its own voice on the same device to continue it, measured as the runtime
+does it: a held-out segment against a track of one to the longest calibrated
+number of segments, of its own voice or of another voice on the same device,
+another voice joining at most once in a thousand, in either same-device
+condition.
 
 The back-end (Channel's ``evidence.py``): subtract the mean of live speech;
 far_cross is scored after an LDA projection; each condition has an affine QMF
@@ -60,7 +70,7 @@ from eidolon_sdk.biz.speaker_identity import IDENTITY_CONDITIONS
 
 HERE = Path(__file__).resolve().parent
 VERSION = "campplus-identity-evidence-v4"
-POLICY_VERSION = "campplus-identity-policy-v5"
+POLICY_VERSION = "campplus-identity-policy-v6"
 MAX_SPEECH_MS = 20000
 LDA_DIM = 128
 REGISTRATION_SEGMENTS = 10
@@ -77,6 +87,7 @@ GRID_STEP, GRID_TOP = 0.1, 0.99999
 HOUSEHOLD_MARGIN_LLR = 1.0
 MIN_SPEECH_MS = 600
 MIN_UNKNOWN_SPEECH_MS = 1500
+CONTINUATION_FALSE_RATE = 0.001
 
 
 def wespeaker():
@@ -197,6 +208,27 @@ def structures(utts, speakers, places, rng):
                 for k in TRACKS["far_same"]:
                     out["far_same"][1].extend([(s, k, v, ms, p) for v, ms in tracks(rest, k, rng)])
     return out
+
+
+def continuation_trials(space, weights, bias, condition, by_place, rng, others=3):
+    """(own voice, LLR) of a segment against a track of 1..longest segments on its own device."""
+    trials = []
+    for speakers in by_place.values():
+        names = sorted(speakers)
+        for s in names:
+            us = [speakers[s][i] for i in rng.permutation(len(speakers[s]))]
+            strangers = [o for o in names if o != s]
+            for j in range(1, min(max(TRACKS[condition]), len(us) - 1) + 1):
+                tv, tms = template(us[:j])
+                track = space.side(tv, tms, "track")
+                probes = [(True, us[j])] + [
+                    (False, speakers[o][rng.integers(len(speakers[o]))])
+                    for o in rng.choice(strangers, size=min(others, len(strangers)), replace=False)]
+                for own, u in probes:
+                    segment = space.side(u["vector"], u["speech_ms"], "segment")
+                    trials.append((own, j, float(trial_features(track, segment, condition, MAX_SPEECH_MS)
+                                                 @ weights + bias)))
+    return trials
 
 
 def pairs(condition, t_place, p_place):
@@ -410,6 +442,7 @@ def main():
 
     # Held out twice: speaker halves, and one close and one far device per fold.
     held = {c: {"llr": [], "y": [], "k": []} for c in IDENTITY_CONDITIONS}
+    joins = {"near_same": [], "far_same": []}
     household_rows = {c: [] for c in IDENTITY_CONDITIONS}
     fold = 0
     for train_spk, test_spk in (halves, halves[::-1]):
@@ -425,6 +458,13 @@ def main():
                 for c in IDENTITY_CONDITIONS:
                     rows = feature_rows(space, c, *train[c], rng)
                     w, b, _, _ = train_qmf(calibration, rows, work, f"fold{fold}-{c}")
+                    if c in joins:
+                        by_place = defaultdict(lambda: defaultdict(list))
+                        for u in utts:
+                            p = place(u)
+                            if u["speaker"] in test_spk and p in unseen and (p.startswith("near:") == (c == "near_same")):
+                                by_place[p][u["speaker"]].append(u)
+                        joins[c] += continuation_trials(space, w, b, c, by_place, np.random.default_rng(1000 + fold))
                     templates, probes = test[c]
                     flat = [(tv, tms, tp) for s in sorted(templates) for tv, tms, tp in templates[s]]
                     owner = [s for s in sorted(templates) for _ in templates[s]]
@@ -465,6 +505,22 @@ def main():
         report["policy"][c] = policy_conditions[c]
         print(c, json.dumps(report["held_out"][c]), json.dumps(chosen), flush=True)
 
+    # Track continuation (design §3.2): another voice joins a track at most
+    # CONTINUATION_FALSE_RATE of the time on either kind of device.
+    split = {c: (np.array([v for own, _, v in rows if own]), np.sort([v for own, _, v in rows if not own]))
+             for c, rows in joins.items()}
+    track_continuation_llr = round(max(
+        float(other[min(len(other) - 1, math.ceil((1 - CONTINUATION_FALSE_RATE) * len(other)))])
+        for _, other in split.values()), 3)
+    report["track_continuation"] = {"llr": track_continuation_llr, **{
+        c: {"own_continues": round(float(np.mean(own >= track_continuation_llr)), 4),
+            "own_continues_by_track_length": {
+                j: round(float(np.mean([v >= track_continuation_llr for o, jj, v in joins[c] if o and jj == j])), 4)
+                for j in sorted({jj for _, jj, _ in joins[c]})},
+            "other_joins": round(float(np.mean(other >= track_continuation_llr)), 5),
+            "other_trials": int(len(other))}
+        for c, (own, other) in split.items()}}
+
     # The delivered back-end: every speaker, every device.
     rng = np.random.default_rng(0)
     space = fit_space([u for u in utts if place(u)])
@@ -474,6 +530,7 @@ def main():
         rows = feature_rows(space, c, *full[c], rng)
         w, b, factors, model = train_qmf(calibration, rows, work, f"final-{c}")
         conditions[c] = {"weights": [round(float(x), 6) for x in w], "bias": round(b, 6),
+                         "max_track_segments": max(TRACKS[c]),
                          "trials": len(rows), "targets": int(sum(r[0] for r in rows))}
         checks.append((c, factors, model, rows))
     identity_spec = json.loads((args.model / "identity-policy.json").read_text())
@@ -495,6 +552,7 @@ def main():
         "preprocessing_version": identity[2], "backend_version": VERSION,
         "min_speech_ms": MIN_SPEECH_MS, "min_unknown_speech_ms": MIN_UNKNOWN_SPEECH_MS,
         "prior_unknown": PRIOR_UNKNOWN, "household_margin_llr": HOUSEHOLD_MARGIN_LLR,
+        "track_continuation_llr": track_continuation_llr,
         "conditions": policy_conditions,
     }
     (args.out / "identity-policy.json").write_text(json.dumps(policy, indent=2) + "\n")
