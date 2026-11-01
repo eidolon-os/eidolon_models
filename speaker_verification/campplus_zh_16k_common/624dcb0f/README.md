@@ -17,3 +17,17 @@ profiles and Companion allowlists. No model asset contains personal voice data.
 For local development set `EIDOLON_3DSPEAKER_MODEL_DIR` to this directory.
 The numerical reference accepts contiguous mono PCM16 at 16 kHz. How scores become
 identity decisions is described in `identity-policy.md`.
+
+## Calibration data and its terms
+
+`identity-cohort.npz` and the weights in `identity-backend.json` are derived from
+AISHELL-1 (Beijing Shell Shell Technology Co., Ltd.; OpenSLR SLR33, Hugging Face
+`AISHELL/AISHELL-1` at `bbe295d`). Its license is stated as the Apache License
+2.0 (the OpenSLR license line and the dataset card's metadata), and its OpenSLR
+description adds "The data is free for academic use." That sentence neither
+grants nor excludes commercial use; confirm with the publisher before any
+commercial distribution of these two files. The cohort holds speaker embeddings
+only: no audio, transcripts or names. Citation: Bu et al., "AISHELL-1: An
+Open-Source Mandarin Speech Corpus and A Speech Recognition Baseline", Oriental
+COCOSDA 2017.
+
