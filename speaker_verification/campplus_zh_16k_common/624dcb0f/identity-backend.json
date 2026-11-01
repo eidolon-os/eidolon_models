@@ -1,5 +1,5 @@
 {
- "version": "campplus-identity-evidence-v3",
+ "version": "campplus-identity-evidence-v2",
  "identity": [
   "campplus_zh_16k_common",
   "3388cf5fd3493c9ac9c69851d8e7a8badcfb4f3dc631020c4961371646d5ada8",
@@ -25,33 +25,33 @@
   "cross_channel_x_asnorm_score"
  ],
  "weights": [
-  3.230727,
-  -0.718383,
-  -0.50295,
-  0.282099,
-  0.076618,
-  -8.889822,
-  -4.788916,
-  4.167572,
-  2.000806,
-  8.164267,
-  20.713263,
-  12.615662,
-  -4.07259,
-  17.087201,
-  -1.754665
+  2.807661,
+  -0.803816,
+  -0.515365,
+  0.355117,
+  0.156454,
+  -10.698723,
+  -4.724958,
+  6.040432,
+  -0.952356,
+  31.96714,
+  41.097141,
+  9.196668,
+  -4.13771,
+  13.536258,
+  -1.045567
  ],
- "bias": -3.366032,
+ "bias": -8.303106,
  "trained_with": {
   "wespeaker": "9fecd6cb4f47475d01761d87c826298dff4ef18c",
-  "trials": 90688,
-  "targets": 5024
+  "trials": 59776,
+  "targets": 4576
  },
  "cohort": {
   "path": "identity-cohort.npz",
-  "sha256": "56a53e97ee5f506f586b7d7141029c3d69447ab389fb629868df0d900fc75017",
+  "sha256": "52aee499c7df0536efc82573919661237bdf9732f398186ffb1bf59d738dde53",
   "speakers": 69,
-  "vectors": 1349,
+  "vectors": 1074,
   "dataset": "AISHELL/AISHELL-1",
   "dataset_revision": "bbe295d530192a4cd41644b711c9aecd087df653",
   "channels": {
@@ -82,12 +82,6 @@
      20,
      30
     ]
-   },
-   "replay": {
-    "capture": "AISHELL speakers replayed through a laptop speaker, recorded by the phone app",
-    "segments_s": 8,
-    "speakers": 69,
-    "vectors": 275
    }
   }
  }

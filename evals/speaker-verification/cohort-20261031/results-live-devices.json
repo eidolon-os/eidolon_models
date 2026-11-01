@@ -1,0 +1,833 @@
+{
+ "corpus": {
+  "utterances": 18782,
+  "embedded": 17876,
+  "speakers": 240,
+  "registered": {
+   "phone": 176,
+   "near": 98
+  },
+  "devices": [
+   "ANDROID",
+   "ARRAY-CH1",
+   "DIRECTIONAL",
+   "IPAD",
+   "IPHONE",
+   "PC",
+   "PHONE",
+   "RP"
+  ],
+  "speech_ms_median": 1650.0
+ },
+ "backends": {
+  "v3": {
+   "version": "campplus-identity-evidence-v3",
+   "official_cross_device": {
+    "all": {
+     "targets": 26826,
+     "nontargets": 136572,
+     "eer": 0.1872,
+     "cllr": 3.4666,
+     "act_dcf_0.01": 47.5967,
+     "min_dcf_0.01": 0.9995
+    },
+    "cross_channel": {
+     "targets": 26405,
+     "nontargets": 129824,
+     "eer": 0.1888,
+     "cllr": 3.6072,
+     "act_dcf_0.01": 49.707,
+     "min_dcf_0.01": 0.994
+    },
+    "same_channel": {
+     "targets": 421,
+     "nontargets": 6748,
+     "eer": 0.1664,
+     "cllr": 0.9977,
+     "act_dcf_0.01": 7.2338,
+     "min_dcf_0.01": 0.9739
+    }
+   },
+   "official_cross_distance": {
+    "all": {
+     "targets": 22750,
+     "nontargets": 140026,
+     "eer": 0.2066,
+     "cllr": 3.293,
+     "act_dcf_0.01": 46.6632,
+     "min_dcf_0.01": 0.9931
+    },
+    "cross_channel": {
+     "targets": 21798,
+     "nontargets": 120212,
+     "eer": 0.2133,
+     "cllr": 3.7148,
+     "act_dcf_0.01": 53.2111,
+     "min_dcf_0.01": 0.99
+    },
+    "same_channel": {
+     "targets": 952,
+     "nontargets": 19814,
+     "eer": 0.1701,
+     "cllr": 0.9894,
+     "act_dcf_0.01": 7.1557,
+     "min_dcf_0.01": 0.9577
+    }
+   },
+   "household_phone_registration": {
+    "own/all": {
+     "n": 13400,
+     "addressing:correct": 0.88448,
+     "addressing:none": 0.10642,
+     "addressing:wrong": 0.0091,
+     "discovery:no": 0.99769,
+     "discovery:yes": 0.00231,
+     "personal_memory:correct": 0.7441,
+     "personal_memory:none": 0.25313,
+     "personal_memory:wrong": 0.00276
+    },
+    "own/channel:mobile": {
+     "n": 4157,
+     "addressing:correct": 0.87058,
+     "addressing:none": 0.12028,
+     "addressing:wrong": 0.00914,
+     "discovery:no": 0.99254,
+     "discovery:yes": 0.00746,
+     "personal_memory:correct": 0.80443,
+     "personal_memory:none": 0.19004,
+     "personal_memory:wrong": 0.00553
+    },
+    "own/channel:other": {
+     "n": 9243,
+     "addressing:correct": 0.89073,
+     "addressing:none": 0.10018,
+     "addressing:wrong": 0.00909,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.71698,
+     "personal_memory:none": 0.28151,
+     "personal_memory:wrong": 0.00151
+    },
+    "own/distance:far": {
+     "n": 7657,
+     "addressing:correct": 0.86979,
+     "addressing:none": 0.12355,
+     "addressing:wrong": 0.00666,
+     "discovery:no": 0.99595,
+     "discovery:yes": 0.00405,
+     "personal_memory:correct": 0.73985,
+     "personal_memory:none": 0.25911,
+     "personal_memory:wrong": 0.00104
+    },
+    "own/distance:near": {
+     "n": 3612,
+     "addressing:correct": 0.88732,
+     "addressing:none": 0.10382,
+     "addressing:wrong": 0.00886,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.69795,
+     "personal_memory:none": 0.30122,
+     "personal_memory:wrong": 0.00083
+    },
+    "own/distance:unknown": {
+     "n": 2131,
+     "addressing:correct": 0.93243,
+     "addressing:none": 0.04927,
+     "addressing:wrong": 0.0183,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.83763,
+     "personal_memory:none": 0.15016,
+     "personal_memory:wrong": 0.0122
+    },
+    "own/speech:1_2.5s": {
+     "n": 10704,
+     "addressing:correct": 0.88621,
+     "addressing:none": 0.10538,
+     "addressing:wrong": 0.00841,
+     "discovery:no": 0.99776,
+     "discovery:yes": 0.00224,
+     "personal_memory:correct": 0.74841,
+     "personal_memory:none": 0.24907,
+     "personal_memory:wrong": 0.00252
+    },
+    "own/speech:ge_2.5s": {
+     "n": 1153,
+     "addressing:correct": 0.88638,
+     "addressing:none": 0.10755,
+     "addressing:wrong": 0.00607,
+     "discovery:no": 0.99393,
+     "discovery:yes": 0.00607,
+     "personal_memory:correct": 0.74241,
+     "personal_memory:none": 0.25585,
+     "personal_memory:wrong": 0.00173
+    },
+    "own/speech:lt_1s": {
+     "n": 1543,
+     "addressing:correct": 0.87103,
+     "addressing:none": 0.11277,
+     "addressing:wrong": 0.0162,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.71549,
+     "personal_memory:none": 0.27933,
+     "personal_memory:wrong": 0.00518
+    },
+    "stranger/all": {
+     "n": 261772,
+     "addressing:none": 0.75358,
+     "addressing:wrong": 0.24642,
+     "discovery:no": 0.87357,
+     "discovery:yes": 0.12643,
+     "personal_memory:none": 0.92446,
+     "personal_memory:wrong": 0.07554
+    },
+    "stranger/channel:mobile": {
+     "n": 81277,
+     "addressing:none": 0.88652,
+     "addressing:wrong": 0.11348,
+     "discovery:no": 0.61397,
+     "discovery:yes": 0.38603,
+     "personal_memory:none": 0.93655,
+     "personal_memory:wrong": 0.06345
+    },
+    "stranger/channel:other": {
+     "n": 180495,
+     "addressing:none": 0.69371,
+     "addressing:wrong": 0.30629,
+     "discovery:no": 0.99046,
+     "discovery:yes": 0.00954,
+     "personal_memory:none": 0.91902,
+     "personal_memory:wrong": 0.08098
+    },
+    "stranger/distance:far": {
+     "n": 148293,
+     "addressing:none": 0.749,
+     "addressing:wrong": 0.251,
+     "discovery:no": 0.81748,
+     "discovery:yes": 0.18252,
+     "personal_memory:none": 0.92325,
+     "personal_memory:wrong": 0.07675
+    },
+    "stranger/distance:near": {
+     "n": 69888,
+     "addressing:none": 0.79128,
+     "addressing:wrong": 0.20872,
+     "discovery:no": 0.98181,
+     "discovery:yes": 0.01819,
+     "personal_memory:none": 0.948,
+     "personal_memory:wrong": 0.052
+    },
+    "stranger/distance:unknown": {
+     "n": 43591,
+     "addressing:none": 0.70872,
+     "addressing:wrong": 0.29128,
+     "discovery:no": 0.89083,
+     "discovery:yes": 0.10917,
+     "personal_memory:none": 0.89085,
+     "personal_memory:wrong": 0.10915
+    },
+    "stranger/speech:1_2.5s": {
+     "n": 209446,
+     "addressing:none": 0.75611,
+     "addressing:wrong": 0.24389,
+     "discovery:no": 0.866,
+     "discovery:yes": 0.134,
+     "personal_memory:none": 0.9249,
+     "personal_memory:wrong": 0.0751
+    },
+    "stranger/speech:ge_2.5s": {
+     "n": 22193,
+     "addressing:none": 0.82503,
+     "addressing:wrong": 0.17497,
+     "discovery:no": 0.77331,
+     "discovery:yes": 0.22669,
+     "personal_memory:none": 0.9485,
+     "personal_memory:wrong": 0.0515
+    },
+    "stranger/speech:lt_1s": {
+     "n": 30133,
+     "addressing:none": 0.68337,
+     "addressing:wrong": 0.31663,
+     "discovery:no": 1.0,
+     "personal_memory:none": 0.90373,
+     "personal_memory:wrong": 0.09627
+    },
+    "members_as_strangers": {
+     "n": 13400,
+     "llr_p50": 3.61,
+     "llr_p99": 24.17,
+     "llr_max": 62.0,
+     "named_personal_memory": 0.43948,
+     "named_addressing": 0.58343
+    }
+   },
+   "household_near_registration": {
+    "own/all": {
+     "n": 11163,
+     "addressing:correct": 0.81089,
+     "addressing:none": 0.18723,
+     "addressing:wrong": 0.00188,
+     "discovery:no": 0.94957,
+     "discovery:yes": 0.05043,
+     "personal_memory:correct": 0.70608,
+     "personal_memory:none": 0.29347,
+     "personal_memory:wrong": 0.00045
+    },
+    "own/channel:mobile": {
+     "n": 3425,
+     "addressing:correct": 0.52759,
+     "addressing:none": 0.47066,
+     "addressing:wrong": 0.00175,
+     "discovery:no": 0.83562,
+     "discovery:yes": 0.16438,
+     "personal_memory:correct": 0.44409,
+     "personal_memory:none": 0.55533,
+     "personal_memory:wrong": 0.00058
+    },
+    "own/channel:other": {
+     "n": 7738,
+     "addressing:correct": 0.93629,
+     "addressing:none": 0.06177,
+     "addressing:wrong": 0.00194,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.82205,
+     "personal_memory:none": 0.17757,
+     "personal_memory:wrong": 0.00039
+    },
+    "own/distance:far": {
+     "n": 7556,
+     "addressing:correct": 0.73518,
+     "addressing:none": 0.26257,
+     "addressing:wrong": 0.00225,
+     "discovery:no": 0.92549,
+     "discovery:yes": 0.07451,
+     "personal_memory:correct": 0.6027,
+     "personal_memory:none": 0.39664,
+     "personal_memory:wrong": 0.00066
+    },
+    "own/distance:near": {
+     "n": 3607,
+     "addressing:correct": 0.9695,
+     "addressing:none": 0.02939,
+     "addressing:wrong": 0.00111,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.92265,
+     "personal_memory:none": 0.07735
+    },
+    "own/speech:1_2.5s": {
+     "n": 8910,
+     "addressing:correct": 0.80976,
+     "addressing:none": 0.18833,
+     "addressing:wrong": 0.00191,
+     "discovery:no": 0.9459,
+     "discovery:yes": 0.0541,
+     "personal_memory:correct": 0.70572,
+     "personal_memory:none": 0.29371,
+     "personal_memory:wrong": 0.00056
+    },
+    "own/speech:ge_2.5s": {
+     "n": 981,
+     "addressing:correct": 0.83996,
+     "addressing:none": 0.158,
+     "addressing:wrong": 0.00204,
+     "discovery:no": 0.91743,
+     "discovery:yes": 0.08257,
+     "personal_memory:correct": 0.76453,
+     "personal_memory:none": 0.23547
+    },
+    "own/speech:lt_1s": {
+     "n": 1272,
+     "addressing:correct": 0.79638,
+     "addressing:none": 0.20204,
+     "addressing:wrong": 0.00157,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.66352,
+     "personal_memory:none": 0.33648
+    },
+    "stranger/all": {
+     "n": 219705,
+     "addressing:none": 0.7257,
+     "addressing:wrong": 0.2743,
+     "discovery:no": 0.82918,
+     "discovery:yes": 0.17082,
+     "personal_memory:none": 0.89336,
+     "personal_memory:wrong": 0.10664
+    },
+    "stranger/channel:mobile": {
+     "n": 67557,
+     "addressing:none": 0.96178,
+     "addressing:wrong": 0.03822,
+     "discovery:no": 0.46669,
+     "discovery:yes": 0.53331,
+     "personal_memory:none": 0.97877,
+     "personal_memory:wrong": 0.02123
+    },
+    "stranger/channel:other": {
+     "n": 152148,
+     "addressing:none": 0.62087,
+     "addressing:wrong": 0.37913,
+     "discovery:no": 0.99013,
+     "discovery:yes": 0.00987,
+     "personal_memory:none": 0.85544,
+     "personal_memory:wrong": 0.14456
+    },
+    "stranger/distance:far": {
+     "n": 149182,
+     "addressing:none": 0.79827,
+     "addressing:wrong": 0.20173,
+     "discovery:no": 0.75564,
+     "discovery:yes": 0.24436,
+     "personal_memory:none": 0.9327,
+     "personal_memory:wrong": 0.0673
+    },
+    "stranger/distance:near": {
+     "n": 70523,
+     "addressing:none": 0.57218,
+     "addressing:wrong": 0.42782,
+     "discovery:no": 0.98473,
+     "discovery:yes": 0.01527,
+     "personal_memory:none": 0.81015,
+     "personal_memory:wrong": 0.18985
+    },
+    "stranger/speech:1_2.5s": {
+     "n": 175541,
+     "addressing:none": 0.72821,
+     "addressing:wrong": 0.27179,
+     "discovery:no": 0.81822,
+     "discovery:yes": 0.18178,
+     "personal_memory:none": 0.89373,
+     "personal_memory:wrong": 0.10627
+    },
+    "stranger/speech:ge_2.5s": {
+     "n": 19586,
+     "addressing:none": 0.75171,
+     "addressing:wrong": 0.24829,
+     "discovery:no": 0.71301,
+     "discovery:yes": 0.28699,
+     "personal_memory:none": 0.89855,
+     "personal_memory:wrong": 0.10145
+    },
+    "stranger/speech:lt_1s": {
+     "n": 24578,
+     "addressing:none": 0.68704,
+     "addressing:wrong": 0.31296,
+     "discovery:no": 1.0,
+     "personal_memory:none": 0.88657,
+     "personal_memory:wrong": 0.11343
+    },
+    "members_as_strangers": {
+     "n": 11163,
+     "llr_p50": 0.5,
+     "llr_p99": 15.75,
+     "llr_max": 29.23,
+     "named_personal_memory": 0.2476,
+     "named_addressing": 0.39192
+    }
+   }
+  },
+  "v2": {
+   "version": "campplus-identity-evidence-v2",
+   "official_cross_device": {
+    "all": {
+     "targets": 26826,
+     "nontargets": 136572,
+     "eer": 0.1945,
+     "cllr": 1.4466,
+     "act_dcf_0.01": 15.0462,
+     "min_dcf_0.01": 0.989
+    },
+    "cross_channel": {
+     "targets": 26405,
+     "nontargets": 129824,
+     "eer": 0.1959,
+     "cllr": 1.496,
+     "act_dcf_0.01": 15.7329,
+     "min_dcf_0.01": 0.9887
+    },
+    "same_channel": {
+     "targets": 421,
+     "nontargets": 6748,
+     "eer": 0.15,
+     "cllr": 1.0158,
+     "act_dcf_0.01": 2.1013,
+     "min_dcf_0.01": 0.9739
+    }
+   },
+   "official_cross_distance": {
+    "all": {
+     "targets": 22750,
+     "nontargets": 140026,
+     "eer": 0.217,
+     "cllr": 1.5496,
+     "act_dcf_0.01": 15.6663,
+     "min_dcf_0.01": 0.9813
+    },
+    "cross_channel": {
+     "targets": 21798,
+     "nontargets": 120212,
+     "eer": 0.2249,
+     "cllr": 1.7161,
+     "act_dcf_0.01": 17.9009,
+     "min_dcf_0.01": 0.9841
+    },
+    "same_channel": {
+     "targets": 952,
+     "nontargets": 19814,
+     "eer": 0.165,
+     "cllr": 1.0826,
+     "act_dcf_0.01": 2.3396,
+     "min_dcf_0.01": 0.9383
+    }
+   },
+   "household_phone_registration": {
+    "own/all": {
+     "n": 13400,
+     "addressing:correct": 0.82127,
+     "addressing:none": 0.16948,
+     "addressing:wrong": 0.00925,
+     "discovery:no": 0.99254,
+     "discovery:yes": 0.00746,
+     "personal_memory:correct": 0.67918,
+     "personal_memory:none": 0.31784,
+     "personal_memory:wrong": 0.00299
+    },
+    "own/channel:mobile": {
+     "n": 4157,
+     "addressing:correct": 0.82439,
+     "addressing:none": 0.16791,
+     "addressing:wrong": 0.0077,
+     "discovery:no": 0.98027,
+     "discovery:yes": 0.01973,
+     "personal_memory:correct": 0.74669,
+     "personal_memory:none": 0.24898,
+     "personal_memory:wrong": 0.00433
+    },
+    "own/channel:other": {
+     "n": 9243,
+     "addressing:correct": 0.81986,
+     "addressing:none": 0.17018,
+     "addressing:wrong": 0.00995,
+     "discovery:no": 0.99805,
+     "discovery:yes": 0.00195,
+     "personal_memory:correct": 0.64882,
+     "personal_memory:none": 0.3488,
+     "personal_memory:wrong": 0.00238
+    },
+    "own/distance:far": {
+     "n": 7657,
+     "addressing:correct": 0.84602,
+     "addressing:none": 0.1451,
+     "addressing:wrong": 0.00888,
+     "discovery:no": 0.98929,
+     "discovery:yes": 0.01071,
+     "personal_memory:correct": 0.73057,
+     "personal_memory:none": 0.26812,
+     "personal_memory:wrong": 0.00131
+    },
+    "own/distance:near": {
+     "n": 3612,
+     "addressing:correct": 0.7093,
+     "addressing:none": 0.28544,
+     "addressing:wrong": 0.00526,
+     "discovery:no": 0.99502,
+     "discovery:yes": 0.00498,
+     "personal_memory:correct": 0.48976,
+     "personal_memory:none": 0.50997,
+     "personal_memory:wrong": 0.00028
+    },
+    "own/distance:unknown": {
+     "n": 2131,
+     "addressing:correct": 0.9221,
+     "addressing:none": 0.06053,
+     "addressing:wrong": 0.01736,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.81558,
+     "personal_memory:none": 0.17081,
+     "personal_memory:wrong": 0.01361
+    },
+    "own/speech:1_2.5s": {
+     "n": 10704,
+     "addressing:correct": 0.82371,
+     "addressing:none": 0.16769,
+     "addressing:wrong": 0.00859,
+     "discovery:no": 0.99253,
+     "discovery:yes": 0.00747,
+     "personal_memory:correct": 0.68077,
+     "personal_memory:none": 0.3168,
+     "personal_memory:wrong": 0.00243
+    },
+    "own/speech:ge_2.5s": {
+     "n": 1153,
+     "addressing:correct": 0.77016,
+     "addressing:none": 0.22029,
+     "addressing:wrong": 0.00954,
+     "discovery:no": 0.98265,
+     "discovery:yes": 0.01735,
+     "personal_memory:correct": 0.6314,
+     "personal_memory:none": 0.36513,
+     "personal_memory:wrong": 0.00347
+    },
+    "own/speech:lt_1s": {
+     "n": 1543,
+     "addressing:correct": 0.84251,
+     "addressing:none": 0.14388,
+     "addressing:wrong": 0.01361,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.70382,
+     "personal_memory:none": 0.2897,
+     "personal_memory:wrong": 0.00648
+    },
+    "stranger/all": {
+     "n": 261772,
+     "addressing:none": 0.85284,
+     "addressing:wrong": 0.14716,
+     "discovery:no": 0.74248,
+     "discovery:yes": 0.25752,
+     "personal_memory:none": 0.94991,
+     "personal_memory:wrong": 0.05009
+    },
+    "stranger/channel:mobile": {
+     "n": 81277,
+     "addressing:none": 0.94225,
+     "addressing:wrong": 0.05775,
+     "discovery:no": 0.53335,
+     "discovery:yes": 0.46665,
+     "personal_memory:none": 0.97277,
+     "personal_memory:wrong": 0.02723
+    },
+    "stranger/channel:other": {
+     "n": 180495,
+     "addressing:none": 0.81258,
+     "addressing:wrong": 0.18742,
+     "discovery:no": 0.83665,
+     "discovery:yes": 0.16335,
+     "personal_memory:none": 0.93962,
+     "personal_memory:wrong": 0.06038
+    },
+    "stranger/distance:far": {
+     "n": 148293,
+     "addressing:none": 0.81659,
+     "addressing:wrong": 0.18341,
+     "discovery:no": 0.75702,
+     "discovery:yes": 0.24298,
+     "personal_memory:none": 0.93751,
+     "personal_memory:wrong": 0.06249
+    },
+    "stranger/distance:near": {
+     "n": 69888,
+     "addressing:none": 0.94458,
+     "addressing:wrong": 0.05542,
+     "discovery:no": 0.69158,
+     "discovery:yes": 0.30842,
+     "personal_memory:none": 0.98385,
+     "personal_memory:wrong": 0.01615
+    },
+    "stranger/distance:unknown": {
+     "n": 43591,
+     "addressing:none": 0.82907,
+     "addressing:wrong": 0.17093,
+     "discovery:no": 0.77463,
+     "discovery:yes": 0.22537,
+     "personal_memory:none": 0.93772,
+     "personal_memory:wrong": 0.06228
+    },
+    "stranger/speech:1_2.5s": {
+     "n": 209446,
+     "addressing:none": 0.85836,
+     "addressing:wrong": 0.14164,
+     "discovery:no": 0.73493,
+     "discovery:yes": 0.26507,
+     "personal_memory:none": 0.95202,
+     "personal_memory:wrong": 0.04798
+    },
+    "stranger/speech:ge_2.5s": {
+     "n": 22193,
+     "addressing:none": 0.92403,
+     "addressing:wrong": 0.07597,
+     "discovery:no": 0.46407,
+     "discovery:yes": 0.53593,
+     "personal_memory:none": 0.97603,
+     "personal_memory:wrong": 0.02397
+    },
+    "stranger/speech:lt_1s": {
+     "n": 30133,
+     "addressing:none": 0.76202,
+     "addressing:wrong": 0.23798,
+     "discovery:no": 1.0,
+     "personal_memory:none": 0.91604,
+     "personal_memory:wrong": 0.08396
+    },
+    "members_as_strangers": {
+     "n": 13400,
+     "llr_p50": 0.12,
+     "llr_p99": 17.22,
+     "llr_max": 46.35,
+     "named_personal_memory": 0.28433,
+     "named_addressing": 0.39575
+    }
+   },
+   "household_near_registration": {
+    "own/all": {
+     "n": 11163,
+     "addressing:correct": 0.69632,
+     "addressing:none": 0.30225,
+     "addressing:wrong": 0.00143,
+     "discovery:no": 0.93183,
+     "discovery:yes": 0.06817,
+     "personal_memory:correct": 0.58819,
+     "personal_memory:none": 0.41163,
+     "personal_memory:wrong": 0.00018
+    },
+    "own/channel:mobile": {
+     "n": 3425,
+     "addressing:correct": 0.36,
+     "addressing:none": 0.63971,
+     "addressing:wrong": 0.00029,
+     "discovery:no": 0.78307,
+     "discovery:yes": 0.21693,
+     "personal_memory:correct": 0.2727,
+     "personal_memory:none": 0.72701,
+     "personal_memory:wrong": 0.00029
+    },
+    "own/channel:other": {
+     "n": 7738,
+     "addressing:correct": 0.84518,
+     "addressing:none": 0.15288,
+     "addressing:wrong": 0.00194,
+     "discovery:no": 0.99767,
+     "discovery:yes": 0.00233,
+     "personal_memory:correct": 0.72784,
+     "personal_memory:none": 0.27203,
+     "personal_memory:wrong": 0.00013
+    },
+    "own/distance:far": {
+     "n": 7556,
+     "addressing:correct": 0.58669,
+     "addressing:none": 0.41159,
+     "addressing:wrong": 0.00172,
+     "discovery:no": 0.90008,
+     "discovery:yes": 0.09992,
+     "personal_memory:correct": 0.45183,
+     "personal_memory:none": 0.54791,
+     "personal_memory:wrong": 0.00026
+    },
+    "own/distance:near": {
+     "n": 3607,
+     "addressing:correct": 0.92598,
+     "addressing:none": 0.07319,
+     "addressing:wrong": 0.00083,
+     "discovery:no": 0.99834,
+     "discovery:yes": 0.00166,
+     "personal_memory:correct": 0.87386,
+     "personal_memory:none": 0.12614
+    },
+    "own/speech:1_2.5s": {
+     "n": 8910,
+     "addressing:correct": 0.69181,
+     "addressing:none": 0.30651,
+     "addressing:wrong": 0.00168,
+     "discovery:no": 0.92694,
+     "discovery:yes": 0.07306,
+     "personal_memory:correct": 0.58103,
+     "personal_memory:none": 0.41874,
+     "personal_memory:wrong": 0.00022
+    },
+    "own/speech:ge_2.5s": {
+     "n": 981,
+     "addressing:correct": 0.737,
+     "addressing:none": 0.26198,
+     "addressing:wrong": 0.00102,
+     "discovery:no": 0.88787,
+     "discovery:yes": 0.11213,
+     "personal_memory:correct": 0.66259,
+     "personal_memory:none": 0.33741
+    },
+    "own/speech:lt_1s": {
+     "n": 1272,
+     "addressing:correct": 0.69654,
+     "addressing:none": 0.30346,
+     "discovery:no": 1.0,
+     "personal_memory:correct": 0.58097,
+     "personal_memory:none": 0.41903
+    },
+    "stranger/all": {
+     "n": 219705,
+     "addressing:none": 0.89204,
+     "addressing:wrong": 0.10796,
+     "discovery:no": 0.70775,
+     "discovery:yes": 0.29225,
+     "personal_memory:none": 0.95963,
+     "personal_memory:wrong": 0.04037
+    },
+    "stranger/channel:mobile": {
+     "n": 67557,
+     "addressing:none": 0.99104,
+     "addressing:wrong": 0.00896,
+     "discovery:no": 0.40449,
+     "discovery:yes": 0.59551,
+     "personal_memory:none": 0.99549,
+     "personal_memory:wrong": 0.00451
+    },
+    "stranger/channel:other": {
+     "n": 152148,
+     "addressing:none": 0.84808,
+     "addressing:wrong": 0.15192,
+     "discovery:no": 0.84241,
+     "discovery:yes": 0.15759,
+     "personal_memory:none": 0.94371,
+     "personal_memory:wrong": 0.05629
+    },
+    "stranger/distance:far": {
+     "n": 149182,
+     "addressing:none": 0.9271,
+     "addressing:wrong": 0.0729,
+     "discovery:no": 0.6612,
+     "discovery:yes": 0.3388,
+     "personal_memory:none": 0.97699,
+     "personal_memory:wrong": 0.02301
+    },
+    "stranger/distance:near": {
+     "n": 70523,
+     "addressing:none": 0.81786,
+     "addressing:wrong": 0.18214,
+     "discovery:no": 0.80623,
+     "discovery:yes": 0.19377,
+     "personal_memory:none": 0.92289,
+     "personal_memory:wrong": 0.07711
+    },
+    "stranger/speech:1_2.5s": {
+     "n": 175541,
+     "addressing:none": 0.89478,
+     "addressing:wrong": 0.10522,
+     "discovery:no": 0.69334,
+     "discovery:yes": 0.30666,
+     "personal_memory:none": 0.96055,
+     "personal_memory:wrong": 0.03945
+    },
+    "stranger/speech:ge_2.5s": {
+     "n": 19586,
+     "addressing:none": 0.91724,
+     "addressing:wrong": 0.08276,
+     "discovery:no": 0.47023,
+     "discovery:yes": 0.52977,
+     "personal_memory:none": 0.96773,
+     "personal_memory:wrong": 0.03227
+    },
+    "stranger/speech:lt_1s": {
+     "n": 24578,
+     "addressing:none": 0.85239,
+     "addressing:wrong": 0.14761,
+     "discovery:no": 1.0,
+     "personal_memory:none": 0.94658,
+     "personal_memory:wrong": 0.05342
+    },
+    "members_as_strangers": {
+     "n": 11163,
+     "llr_p50": -4.28,
+     "llr_p99": 11.98,
+     "llr_max": 22.37,
+     "named_personal_memory": 0.0851,
+     "named_addressing": 0.15632
+    }
+   }
+  }
+ }
+}

@@ -9,6 +9,7 @@ Design §3.3 and §8.2. Calibrated per-Person evidence with WeSpeaker's own back
 | `identity_eval.py` | Builds trials with WeSpeaker's `get_mean_std` (each training trial's speakers left out of the cohort), gathers factors with `gather_calibration_factors` (plus the two condition columns), trains with `train_calibration_model`, writes `identity-backend.json` and `identity-cohort.npz`, checks Channel's runtime LLRs against WeSpeaker's `infer_calibration`, and evaluates held-out speakers: EER, Cllr, act/min DCF, and two-person households per use against the fixed 0.55 threshold and the v4 band floors. |
 | `replay_corpus.py` | Plays the 99 speakers through the Mac's speaker in level-matched blocks of eight recordings and logs each block's wall-clock span. The phone records them through the app's own capture path (11-01, design §8.2 1c-a). |
 | `household_replay.py` | Assigns captured segments to replayed speakers by the block log (a segment touching two blocks is dropped; the nearest public speaker confirms it). Trains the back-end with the replayed channel added to the cohort, to the QMF trials, or both, through `identity_eval.py`. Compares them on the replayed channel's held-out speakers, the public held-out trials and the household: own registrations left out in turn, and each member as a stranger to the other. Also compares cross-speaker similarity by source. |
+| `live_devices_eval.py` | The 3D-Speaker test set (240 speakers recorded live and simultaneously on phones, a tablet, a PC, a recording pen, a directional microphone and arrays, 0.1–4 m), embedded by Channel's own extractor after levelling. Scores the official cross-device and cross-distance trials, and two-person households registered from the nearest phone or from a close device standing in for the handheld phone. |
 | `wespeaker_ref.py` | Loads WeSpeaker's two scoring scripts by file at the pinned revision; their small dependencies (fire, kaldiio, termcolor) sit in `/Users/manson/ai/thirdpart/wespeaker-deps`. |
 
 `results-identity-v2.json` is the run behind backend v2. Held-out speakers, prior of someone not enrolled 0.5:
@@ -22,7 +23,7 @@ Design §3.3 and §8.2. Calibrated per-Person evidence with WeSpeaker's own back
 
 Channel's runtime LLRs match WeSpeaker's `infer_calibration` to 0.005 (its factor files keep 4–5 decimals). Without the channel condition, same-channel strangers are over-trusted. The `device` channel is simulated.
 
-`results-household-replay.json` is the run behind backend v3 (variant `cohort+qmf`; `delivered` there is v2). 395 of 452 captured segments kept, all 99 speakers, every kept segment's nearest public speaker the assigned one.
+`results-household-replay.json` is the run behind backend v3 (variant `cohort+qmf`; `delivered` there is v2). **v3 was withdrawn on 11-01** after the live multi-device run below. 395 of 452 captured segments kept, all 99 speakers, every kept segment's nearest public speaker the assigned one.
 
 | | replayed channel, held-out | public held-out, all / device probes | household live pair: LLR max, named for `personal_memory` |
 |---|---|---|---|
@@ -53,3 +54,19 @@ eidolon_channel/.venv/bin/python -I eidolon_models/evals/speaker-verification/co
 The replay segments were exported from Data before migration 0030 dropped their table; they are public speakers' embeddings only. The household's registrations are read from Data read-only and never leave it: the results hold aggregates only.
 
 Every step is deterministic (codec, level and channel noise are seeded per recording; the calibration starts from WeSpeaker's fixed initialisation).
+
+## Live speech across devices (`results-live-devices.json`, 11-01)
+
+3D-Speaker test set (Alibaba DAMO Academy, CC BY-SA 4.0; downloaded to `/Users/manson/ai/data/speaker-corpora/3d-speaker`, MD5 checked): 17,876 of 18,782 utterances have at least 0.6 s of voiced speech, median 1.65 s. Registration from a close device, standing in for the handheld phone; the criteria were fixed before the run (design §8.2 1c).
+
+| | v2 | v3 |
+|---|---|---|
+| official cross-device trials: EER, Cllr, actDCF | 19.5 %, 1.45, 15.0 | 18.7 %, 3.47, 47.6 |
+| raw cosine EER, same trials | 19.6 % | |
+| strangers named for `personal_memory` (all probes / phone probes) | 4.0 % / 0.45 % | 10.7 % / 2.1 % |
+| strangers named for `addressing` | 10.8 % | 27.4 % |
+| member as a stranger, named for `personal_memory` | 8.5 % | 24.8 % |
+| own, `personal_memory` / `addressing` | 58.8 % / 69.6 % | 70.6 % / 81.1 % |
+
+Both fail the criteria for switching personal memory on (≤ 0.5 %). v3 is the more over-confident: the replayed channel it added improved only that channel and the household sharing its phone and room. Raw cosine separates speakers no better than the calibrated scores do, so on short, distant, cross-device speech the limit is the embedding and per-utterance evidence, not calibration alone.
+
