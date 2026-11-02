@@ -1,0 +1,311 @@
+{
+ "criteria": {
+  "far_cold_track_min": {
+   "personal_memory": 0.5,
+   "addressing": 0.7
+  },
+  "far_stranger_max": {
+   "personal_memory": 0.005,
+   "addressing": 0.02
+  },
+  "phone": "no worse than the delivered model by more than 1 point"
+ },
+ "models": {
+  "delivered": {
+   "eer_k1": {
+    "near_same": 0.0133,
+    "far_same": 0.0439,
+    "far_cross": 0.1118
+   },
+   "cllr_k1": {
+    "near_same": 0.0543,
+    "far_same": 0.184,
+    "far_cross": 0.8716
+   },
+   "policy": {
+    "near_same": {
+     "personal_memory": 0.998158,
+     "addressing": 0.952449
+    },
+    "far_same": {
+     "personal_memory": 0.998882,
+     "addressing": 0.995019
+    },
+    "far_cross": {
+     "personal_memory": 0.99,
+     "addressing": 0.9
+    }
+   },
+   "phone_single_turn": {
+    "personal_memory": 0.77142,
+    "addressing": 0.94266
+   },
+   "phone_stranger": {
+    "personal_memory": 8e-05,
+    "addressing": 0.00132
+   },
+   "far_cold_track": {
+    "personal_memory": 0.12987,
+    "addressing": 0.26989
+   },
+   "far_cold_single_turn": {
+    "personal_memory": 0.14935,
+    "addressing": 0.31169
+   },
+   "far_warm_single_turn": {
+    "personal_memory": 0.57895,
+    "addressing": 0.82456
+   },
+   "far_stranger": {
+    "personal_memory": 0.00062,
+    "addressing": 0.00297
+   },
+   "attributed_conversations": 53,
+   "conversations": 673,
+   "best_coverage_k3_17": {
+    "personal_memory": [
+     0.6188,
+     0.6297,
+     0.6511
+    ],
+    "addressing": [
+     0.7701,
+     0.7619,
+     0.7427
+    ]
+   },
+   "continuation_at_1pct": 0.2012,
+   "checks": {
+    "far_cold_personal_memory": false,
+    "far_cold_addressing": false,
+    "far_stranger_personal_memory": true,
+    "far_stranger_addressing": true,
+    "phone_personal_memory": true,
+    "phone_addressing": true
+   },
+   "passes": false
+  },
+  "campplus_3dspeaker": {
+   "eer_k1": {
+    "near_same": 0.0172,
+    "far_same": 0.0229,
+    "far_cross": 0.0861
+   },
+   "cllr_k1": {
+    "near_same": 0.0757,
+    "far_same": 0.0922,
+    "far_cross": 1.0443
+   },
+   "policy": {
+    "near_same": {
+     "personal_memory": 0.995009,
+     "addressing": 0.96073
+    },
+    "far_same": {
+     "personal_memory": 0.99,
+     "addressing": 0.9
+    },
+    "far_cross": {
+     "personal_memory": 0.99,
+     "addressing": 0.9
+    }
+   },
+   "phone_single_turn": {
+    "personal_memory": 0.80471,
+    "addressing": 0.91939
+   },
+   "phone_stranger": {
+    "personal_memory": 0.00054,
+    "addressing": 0.00289
+   },
+   "far_cold_track": {
+    "personal_memory": 0.08229,
+    "addressing": 0.221
+   },
+   "far_cold_single_turn": {
+    "personal_memory": 0.13009,
+    "addressing": 0.27116
+   },
+   "far_warm_single_turn": {
+    "personal_memory": 1.0,
+    "addressing": 1.0
+   },
+   "far_stranger": {
+    "personal_memory": 0.00404,
+    "addressing": 0.01118
+   },
+   "attributed_conversations": 47,
+   "conversations": 673,
+   "best_coverage_k3_17": {
+    "personal_memory": [
+     0.3774,
+     0.3586,
+     0.4298
+    ],
+    "addressing": [
+     0.6437,
+     0.7162,
+     0.6725
+    ]
+   },
+   "continuation_at_1pct": 0.8814,
+   "checks": {
+    "far_cold_personal_memory": false,
+    "far_cold_addressing": false,
+    "far_stranger_personal_memory": true,
+    "far_stranger_addressing": true,
+    "phone_personal_memory": true,
+    "phone_addressing": false
+   },
+   "passes": false
+  },
+  "eres2net_large_3dspeaker": {
+   "eer_k1": {
+    "near_same": 0.0149,
+    "far_same": 0.0203,
+    "far_cross": 0.0822
+   },
+   "cllr_k1": {
+    "near_same": 0.0601,
+    "far_same": 0.0839,
+    "far_cross": 1.1954
+   },
+   "policy": {
+    "near_same": {
+     "personal_memory": 0.992573,
+     "addressing": 0.930683
+    },
+    "far_same": {
+     "personal_memory": 0.99,
+     "addressing": 0.9
+    },
+    "far_cross": {
+     "personal_memory": 0.99,
+     "addressing": 0.9
+    }
+   },
+   "phone_single_turn": {
+    "personal_memory": 0.8495,
+    "addressing": 0.94632
+   },
+   "phone_stranger": {
+    "personal_memory": 0.00079,
+    "addressing": 0.00328
+   },
+   "far_cold_track": {
+    "personal_memory": 0.06735,
+    "addressing": 0.20959
+   },
+   "far_cold_single_turn": {
+    "personal_memory": 0.08875,
+    "addressing": 0.23296
+   },
+   "far_warm_single_turn": {
+    "personal_memory": 0.92857,
+    "addressing": 1.0
+   },
+   "far_stranger": {
+    "personal_memory": 0.00093,
+    "addressing": 0.00466
+   },
+   "attributed_conversations": 52,
+   "conversations": 673,
+   "best_coverage_k3_17": {
+    "personal_memory": [
+     0.3602,
+     0.4363,
+     0.422
+    ],
+    "addressing": [
+     0.6743,
+     0.6958,
+     0.7212
+    ]
+   },
+   "continuation_at_1pct": 0.8681,
+   "checks": {
+    "far_cold_personal_memory": false,
+    "far_cold_addressing": false,
+    "far_stranger_personal_memory": true,
+    "far_stranger_addressing": true,
+    "phone_personal_memory": true,
+    "phone_addressing": true
+   },
+   "passes": false
+  },
+  "eres2netv2_common": {
+   "eer_k1": {
+    "near_same": 0.0143,
+    "far_same": 0.0343,
+    "far_cross": 0.0978
+   },
+   "cllr_k1": {
+    "near_same": 0.0595,
+    "far_same": 0.1607,
+    "far_cross": 0.6647
+   },
+   "policy": {
+    "near_same": {
+     "personal_memory": 0.993275,
+     "addressing": 0.9
+    },
+    "far_same": {
+     "personal_memory": 0.999445,
+     "addressing": 0.995919
+    },
+    "far_cross": {
+     "personal_memory": 0.99,
+     "addressing": 0.9
+    }
+   },
+   "phone_single_turn": {
+    "personal_memory": 0.86789,
+    "addressing": 0.96122
+   },
+   "phone_stranger": {
+    "personal_memory": 0.00063,
+    "addressing": 0.00387
+   },
+   "far_cold_track": {
+    "personal_memory": 0.13673,
+    "addressing": 0.34142
+   },
+   "far_cold_single_turn": {
+    "personal_memory": 0.16828,
+    "addressing": 0.33657
+   },
+   "far_warm_single_turn": {
+    "personal_memory": 0.41818,
+    "addressing": 0.76364
+   },
+   "far_stranger": {
+    "personal_memory": 0.0,
+    "addressing": 0.00311
+   },
+   "attributed_conversations": 48,
+   "conversations": 673,
+   "best_coverage_k3_17": {
+    "personal_memory": [
+     0.7031,
+     0.7444,
+     0.7105
+    ],
+    "addressing": [
+     0.7989,
+     0.8319,
+     0.7982
+    ]
+   },
+   "continuation_at_1pct": 0.1147,
+   "checks": {
+    "far_cold_personal_memory": false,
+    "far_cold_addressing": false,
+    "far_stranger_personal_memory": true,
+    "far_stranger_addressing": true,
+    "phone_personal_memory": true,
+    "phone_addressing": true
+   },
+   "passes": false
+  }
+ }
+}
