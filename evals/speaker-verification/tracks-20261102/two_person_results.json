@@ -1,0 +1,186 @@
+{
+ "setup": {
+  "folds": 20,
+  "households": 76,
+  "warm_sessions": 2,
+  "mixed_conversations": 2,
+  "policy": "campplus-identity-policy-v6"
+ },
+ "by_continuation_threshold": {
+  "6.936": {
+   "turns": {
+    "mixed1/cold": {
+     "n": 696,
+     "addressing:correct": 0.30316,
+     "personal_memory:correct": 0.14511,
+     "speaker_label:correct": 0.30316
+    },
+    "mixed1/warm": {
+     "n": 216,
+     "addressing:correct": 0.55093,
+     "personal_memory:correct": 0.38426,
+     "speaker_label:correct": 0.55093
+    },
+    "mixed2/cold": {
+     "n": 696,
+     "addressing:correct": 0.27011,
+     "addressing:wrong": 0.00144,
+     "personal_memory:correct": 0.11782,
+     "speaker_label:correct": 0.27011,
+     "speaker_label:wrong": 0.00144
+    },
+    "mixed2/warm": {
+     "n": 216,
+     "addressing:correct": 0.53704,
+     "personal_memory:correct": 0.37963,
+     "speaker_label:correct": 0.53704
+    }
+   },
+   "templates_from_mixed_tracks": {
+    "n": 0,
+    "impure": 0,
+    "min_purity": null
+   }
+  },
+  "8.0": {
+   "turns": {
+    "mixed1/cold": {
+     "n": 696,
+     "addressing:correct": 0.30891,
+     "personal_memory:correct": 0.14511,
+     "speaker_label:correct": 0.30891
+    },
+    "mixed1/warm": {
+     "n": 216,
+     "addressing:correct": 0.55093,
+     "personal_memory:correct": 0.38426,
+     "speaker_label:correct": 0.55093
+    },
+    "mixed2/cold": {
+     "n": 696,
+     "addressing:correct": 0.27874,
+     "addressing:wrong": 0.00144,
+     "personal_memory:correct": 0.12644,
+     "speaker_label:correct": 0.27874,
+     "speaker_label:wrong": 0.00144
+    },
+    "mixed2/warm": {
+     "n": 216,
+     "addressing:correct": 0.55093,
+     "personal_memory:correct": 0.38889,
+     "speaker_label:correct": 0.55093
+    }
+   },
+   "templates_from_mixed_tracks": {
+    "n": 0,
+    "impure": 0,
+    "min_purity": null
+   }
+  },
+  "9.0": {
+   "turns": {
+    "mixed1/cold": {
+     "n": 696,
+     "addressing:correct": 0.31322,
+     "personal_memory:correct": 0.14799,
+     "speaker_label:correct": 0.31322
+    },
+    "mixed1/warm": {
+     "n": 216,
+     "addressing:correct": 0.5463,
+     "personal_memory:correct": 0.38426,
+     "speaker_label:correct": 0.5463
+    },
+    "mixed2/cold": {
+     "n": 696,
+     "addressing:correct": 0.28017,
+     "addressing:wrong": 0.00144,
+     "personal_memory:correct": 0.12644,
+     "speaker_label:correct": 0.28017,
+     "speaker_label:wrong": 0.00144
+    },
+    "mixed2/warm": {
+     "n": 216,
+     "addressing:correct": 0.55093,
+     "personal_memory:correct": 0.38889,
+     "speaker_label:correct": 0.55093
+    }
+   },
+   "templates_from_mixed_tracks": {
+    "n": 0,
+    "impure": 0,
+    "min_purity": null
+   }
+  },
+  "10.0": {
+   "turns": {
+    "mixed1/cold": {
+     "n": 696,
+     "addressing:correct": 0.31322,
+     "personal_memory:correct": 0.14799,
+     "speaker_label:correct": 0.31322
+    },
+    "mixed1/warm": {
+     "n": 216,
+     "addressing:correct": 0.5463,
+     "personal_memory:correct": 0.38426,
+     "speaker_label:correct": 0.5463
+    },
+    "mixed2/cold": {
+     "n": 696,
+     "addressing:correct": 0.28161,
+     "addressing:wrong": 0.00144,
+     "personal_memory:correct": 0.12644,
+     "speaker_label:correct": 0.28161,
+     "speaker_label:wrong": 0.00144
+    },
+    "mixed2/warm": {
+     "n": 216,
+     "addressing:correct": 0.55093,
+     "personal_memory:correct": 0.38889,
+     "speaker_label:correct": 0.55093
+    }
+   },
+   "templates_from_mixed_tracks": {
+    "n": 0,
+    "impure": 0,
+    "min_purity": null
+   }
+  },
+  "inf": {
+   "turns": {
+    "mixed1/cold": {
+     "n": 696,
+     "addressing:correct": 0.31322,
+     "personal_memory:correct": 0.14799,
+     "speaker_label:correct": 0.31322
+    },
+    "mixed1/warm": {
+     "n": 216,
+     "addressing:correct": 0.5463,
+     "personal_memory:correct": 0.38426,
+     "speaker_label:correct": 0.5463
+    },
+    "mixed2/cold": {
+     "n": 696,
+     "addressing:correct": 0.28161,
+     "addressing:wrong": 0.00144,
+     "personal_memory:correct": 0.12644,
+     "speaker_label:correct": 0.28161,
+     "speaker_label:wrong": 0.00144
+    },
+    "mixed2/warm": {
+     "n": 216,
+     "addressing:correct": 0.55093,
+     "personal_memory:correct": 0.38889,
+     "speaker_label:correct": 0.55093
+    }
+   },
+   "templates_from_mixed_tracks": {
+    "n": 0,
+    "impure": 0,
+    "min_purity": null
+   }
+  }
+ }
+}

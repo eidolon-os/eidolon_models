@@ -1,0 +1,55 @@
+{
+ "setup": {
+  "folds": 20,
+  "min_segments": 24,
+  "conversation": 6,
+  "continuation_llr": 6.936,
+  "policy": "campplus-identity-policy-v6"
+ },
+ "pools": {
+  "segments": 792,
+  "other_voice": 0,
+  "members": 152,
+  "with_templates": 44,
+  "templates": 81
+ },
+ "own": {
+  "cold/no_template_yet": {
+   "n": 1489,
+   "addressing:correct": 0.16521,
+   "personal_memory:correct": 0.05507,
+   "speaker_label:correct": 0.16521
+  },
+  "cold/warm": {
+   "n": 653,
+   "addressing:correct": 0.79479,
+   "personal_memory:correct": 0.56355,
+   "speaker_label:correct": 0.79479
+  },
+  "no_template_yet": {
+   "n": 1489,
+   "addressing:correct": 0.16387,
+   "personal_memory:correct": 0.05507,
+   "speaker_label:correct": 0.16387
+  },
+  "warm": {
+   "n": 653,
+   "addressing:correct": 0.75191,
+   "personal_memory:correct": 0.53292,
+   "speaker_label:correct": 0.75191
+  }
+ },
+ "stranger": {
+  "warm": {
+   "n": 4398,
+   "addressing:wrong": 0.00318,
+   "personal_memory:wrong": 0.00045,
+   "speaker_label:wrong": 0.00318
+  }
+ },
+ "member_as_stranger": {
+  "warm": {
+   "n": 912
+  }
+ }
+}

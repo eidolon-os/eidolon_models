@@ -35,3 +35,20 @@ eidolon_channel/.venv/bin/python -I \
 - Continuation on a far device is weak: holding another member's voice to joining a track 1 % of the time lets a voice continue its own track only 20 % of the time (3 % at 0.1 %). A segment that joins the wrong track takes that track's identity, so the policy's continuation threshold is strict (`identity-20261101`).
 
 Calibrating each range of track length separately was tried (one QMF for 1, 2–3 and 4–8 segments): on held-out devices it was badly overconfident (Cllr 2.4–3.7), switched `far_same` off altogether and cut the phone's single-turn `personal_memory` coverage from 77 % to 20 %. It was not adopted.
+
+## Under Channel's real continuation (A1, 11-03)
+
+The tables above take each conversation as one track. Channel continues a track only on the segment's own acoustic evidence, and on a far device a voice continues its own track about a fifth of the time, so tracks there are mostly one or two segments: per turn, far cold start is nearer the single-turn row (`cold/k1`: 15 % / 31 %) than the track row.
+
+**Two members in one conversation** (`two_person_eval.py`, `two_person_results.json`; 76 households, device templates from earlier single-speaker conversations, segments interleaved at random, tracked as Channel tracks them). Nobody was named wrongly for `personal_memory` at any continuation threshold; `addressing` wrongly at most 0.14 %. The threshold barely matters (tracks rarely continue). No mixed conversation made a template: no track reached 8 s.
+
+**Templates pooled from attributed turns** (`pooled_eval.py`, `pooled_results.json`; speakers with at least 24 segments on the held-out far device; two thirds as use, one third as test). Every pooled segment was the member's own (792 of 792); 44 of 152 members formed templates.
+
+| Per turn (`personal_memory` / `addressing`) | Phone template only | With pooled templates |
+|---|---|---|
+| Members who formed templates (same test turns) | 56 % / 79 % | 53 % / 75 % |
+| Members who did not | 5.5 % / 17 % | — |
+
+Strangers named with the pooled templates: 0.05 % / 0.32 %.
+
+Templates made from segments that met the bar add nothing: those segments are the ones the phone template already recognises, and the members who need a device template never produce one (selection). A device template that helps needs a label that does not come from the voice match itself (the Owner, an explicit confirmation, a face).
