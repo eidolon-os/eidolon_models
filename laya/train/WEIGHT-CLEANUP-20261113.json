@@ -1,0 +1,204 @@
+{
+ "created_at": "2026-11-13T14:42:55.700014+00:00",
+ "method": "移到废纸篓（/usr/bin/trash），清空废纸篓后才真正释放",
+ "status": "moved_to_trash",
+ "purpose": "释放磁盘空间（用户 2026-11-13 确认可删除 laya-smart-home 的旧权重）",
+ "kept": {
+  "laya/models/laya-smart-home/e8254243": "家居 c10，现役（deploy/services.toml）",
+  "laya/models/laya-smart-home/7b695ba8 的入库文件": "家居 c4，上一版；torch 与 rknn 已入库，deploy/rk3588/concurrency.py 仍引用其 continuation.json",
+  "laya/models/laya-smart-home/45f3dedb/torch": "家居 r14，c 系列的初始化与评测基线",
+  "laya/models/laya-smart-home/e8254243/npu/*.onnx": "现役版本的中间导出，本次未动"
+ },
+ "removed_bytes": 8577088603,
+ "entries": [
+  {
+   "path": "laya/models/laya-smart-home/edb8e2c7/torch/model.safetensors",
+   "kind": "failed_candidate",
+   "reason": "家居 r15：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "edb8e2c70e099587706ba85b87238a0fded474aa66f40edc90b668790cd7f541",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/edb8e2c7/torch/rl_agent_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r15：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "95aa3614e68e3eb6ec06b8bd4ddc584c513907bce0033d7990bf9234e609f229",
+   "bytes": 1094
+  },
+  {
+   "path": "laya/models/laya-smart-home/edb8e2c7/torch/encoder/config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r15：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+   "bytes": 1939
+  },
+  {
+   "path": "laya/models/laya-smart-home/edb8e2c7/torch/tokenizer/tokenizer.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r15：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+   "bytes": 34363188
+  },
+  {
+   "path": "laya/models/laya-smart-home/edb8e2c7/torch/tokenizer/tokenizer_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r15：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a",
+   "bytes": 624
+  },
+  {
+   "path": "laya/models/laya-smart-home/0052ba00/torch/model.safetensors",
+   "kind": "failed_candidate",
+   "reason": "家居 r16：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "0052ba00306037e788405e14fc18764a161f86ee0579333f21f3b87ca21d4622",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/0052ba00/torch/rl_agent_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r16：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "7f21bc25e308cc723103541c8f12538f5fb3635edc07f2b38268e111118dda9b",
+   "bytes": 1181
+  },
+  {
+   "path": "laya/models/laya-smart-home/0052ba00/torch/encoder/config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r16：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+   "bytes": 1939
+  },
+  {
+   "path": "laya/models/laya-smart-home/0052ba00/torch/tokenizer/tokenizer.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r16：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+   "bytes": 34363188
+  },
+  {
+   "path": "laya/models/laya-smart-home/0052ba00/torch/tokenizer/tokenizer_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r16：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a",
+   "bytes": 624
+  },
+  {
+   "path": "laya/models/laya-smart-home/685f6c7c/torch/model.safetensors",
+   "kind": "failed_candidate",
+   "reason": "家居 r17：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "685f6c7c38fff14a45eaba491c3e7cca2d176127c750d55c1d595baf89fb3130",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/685f6c7c/torch/rl_agent_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r17：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "09d7888bb6f656956da604536dea62d13b3550e4a435d5a973c6419d80232909",
+   "bytes": 1092
+  },
+  {
+   "path": "laya/models/laya-smart-home/685f6c7c/torch/encoder/config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r17：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+   "bytes": 1939
+  },
+  {
+   "path": "laya/models/laya-smart-home/685f6c7c/torch/tokenizer/tokenizer.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r17：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+   "bytes": 34363188
+  },
+  {
+   "path": "laya/models/laya-smart-home/685f6c7c/torch/tokenizer/tokenizer_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r17：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a",
+   "bytes": 624
+  },
+  {
+   "path": "laya/models/laya-smart-home/3e1a31d1/torch/model.safetensors",
+   "kind": "failed_candidate",
+   "reason": "家居 r18：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "3e1a31d10dc083517d34140d801a1d1f038867b2f303a792118e7eed58c00bb5",
+   "bytes": 1287653720
+  },
+  {
+   "path": "laya/models/laya-smart-home/3e1a31d1/torch/rl_agent_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r18：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "d88c674d1a4c782fda3dbf47fc3966d367dca6797a10bbf9553cd35e5b1afba1",
+   "bytes": 1092
+  },
+  {
+   "path": "laya/models/laya-smart-home/3e1a31d1/torch/encoder/config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r18：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "fad4076bcae03044a509e35a2d36c1cdff482fd4c2d6e7c5d187bbc7d8b91590",
+   "bytes": 1939
+  },
+  {
+   "path": "laya/models/laya-smart-home/3e1a31d1/torch/tokenizer/tokenizer.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r18：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+   "bytes": 34363188
+  },
+  {
+   "path": "laya/models/laya-smart-home/3e1a31d1/torch/tokenizer/tokenizer_config.json",
+   "kind": "failed_candidate",
+   "reason": "家居 r18：开发集门槛未过，未做 NPU 对拍，从未部署（train/EXPERIMENTS.md）；现役为 c10 e8254243，r14 45f3dedb 仍保留作基线。manifest.json 保留",
+   "sha256": "f2ff584a8f78ac9f3b6fd0afcf9ab310e41c2d445ef628f9ab4b0d594e992b7a",
+   "bytes": 624
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/onnx/model.onnx.data",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "54ae804aa93d6c4921faaed41968b03bd6149a095b498793bc9ee87b45edbc51",
+   "bytes": 1287651328
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/onnx/model.onnx",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "32a0cc7ebd1f3bfd53ebc7bca81bc0669a6793a0c3ed90e91d84d278f8497f5d",
+   "bytes": 3254716
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/onnx/export.json",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "0b80ae767ad8714ec975f355992662fcd5dc0ba6c12cadcf4e6130537e837ba0",
+   "bytes": 720
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/npu/hidden_l128.onnx",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "a7cae0d1bab1c167df4867636c82c592485c69c6b1f881f2039961334ca97aa1",
+   "bytes": 498667529
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/npu/hidden_l256.onnx",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "953fba533d25ec0d6fdc83492fcbf4b8db54d6ebf5543d5ac4c78e363a41e497",
+   "bytes": 499064329
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/npu/hidden_l384.onnx",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "38ee50d80e56132b98728ec69178855d60c01f3a252cc34957f1fd1d532a1c52",
+   "bytes": 499723273
+  },
+  {
+   "path": "laya/models/laya-smart-home/7b695ba8/npu/hidden_l512.onnx",
+   "kind": "obsolete_c4_onnx_export",
+   "reason": "家居 c4（上一版，已被 c10 取代）的 ONNX 中间导出，未入库；可由同目录 torch/ 重新导出，入库的 rknn 与 torch 文件未动",
+   "sha256": "2b4888f6279201052aa224264a5a1f40905fa39cca3d8cfe128a5637b6117f39",
+   "bytes": 500644365
+  }
+ ]
+}
