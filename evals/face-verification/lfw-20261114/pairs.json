@@ -1,0 +1,82 @@
+{
+ "model_id": "sface_2021dec_yunet_2023mar",
+ "preprocessing_version": "yunet2023mar-s0.6-n0.3-edge1024-sface-align112-v1",
+ "dataset": "LFW funneled, pairs.txt (10 folds, 6000 pairs)",
+ "one_side": false,
+ "runs": [
+  {
+   "scale": 1.0,
+   "pairs_scored": 6000,
+   "pairs_without_a_detected_face": 0,
+   "genuine": 3000,
+   "impostor": 3000,
+   "probe_face_px_median": 96.4,
+   "probe_face_px_p5": 86.3,
+   "accuracy_10fold_mean": 0.994,
+   "accuracy_10fold_std": 0.0038,
+   "genuine_percentiles": {
+    "1": 0.3362,
+    "5": 0.4615,
+    "25": 0.593,
+    "50": 0.6674
+   },
+   "impostor_percentiles": {
+    "50": 0.0818,
+    "95": 0.2329,
+    "99": 0.2883,
+    "99.9": 0.3504
+   },
+   "impostor_top5": [
+    0.4122,
+    0.3686,
+    0.3683,
+    0.3504,
+    0.3485
+   ],
+   "at_thresholds": [
+    {
+     "threshold": 0.3,
+     "false_accept": 22,
+     "false_accept_rate": 0.00733,
+     "true_accept_rate": 0.994
+    },
+    {
+     "threshold": 0.363,
+     "false_accept": 3,
+     "false_accept_rate": 0.001,
+     "true_accept_rate": 0.9853
+    },
+    {
+     "threshold": 0.4,
+     "false_accept": 1,
+     "false_accept_rate": 0.00033,
+     "true_accept_rate": 0.9763
+    },
+    {
+     "threshold": 0.45,
+     "false_accept": 0,
+     "false_accept_rate": 0.0,
+     "true_accept_rate": 0.957
+    },
+    {
+     "threshold": 0.5,
+     "false_accept": 0,
+     "false_accept_rate": 0.0,
+     "true_accept_rate": 0.924
+    },
+    {
+     "threshold": 0.55,
+     "false_accept": 0,
+     "false_accept_rate": 0.0,
+     "true_accept_rate": 0.847
+    },
+    {
+     "threshold": 0.6,
+     "false_accept": 0,
+     "false_accept_rate": 0.0,
+     "true_accept_rate": 0.7357
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "sface-face-policy-v1",
+  "model_id": "sface_2021dec_yunet_2023mar",
+  "preprocessing_version": "yunet2023mar-s0.6-n0.3-edge1024-sface-align112-v1",
+  "thresholds": {
+    "strong": 0.5,
+    "weak": 0.363
+  },
+  "margin": 0.08,
+  "min_enroll_face_px": 80,
+  "min_probe_face_px": 28,
+  "min_enroll_score": 0.8,
+  "min_probe_score": 0.7,
+  "max_faces": 8,
+  "confidence": "unvalidated"
+}

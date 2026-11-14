@@ -1,0 +1,469 @@
+{
+ "model_id": "sface_2021dec_yunet_2023mar",
+ "preprocessing_version": "yunet2023mar-s0.6-n0.3-edge1024-sface-align112-v1",
+ "dataset": "LFW funneled, first image of every identity as the enrolled photo",
+ "identities": 5749,
+ "identities_with_a_second_image": 1680,
+ "runs": [
+  {
+   "probe_scale": 1.0,
+   "probes": 1680,
+   "probes_without_a_detected_face": 0,
+   "stranger_pairs": 9656640,
+   "probe_face_px": {
+    "5": 86.1,
+    "50": 96.2,
+    "95": 108.8
+   },
+   "probe_detector_score_p5": 0.915,
+   "genuine_percentiles": {
+    "1": 0.3489,
+    "5": 0.4755,
+    "10": 0.5235,
+    "25": 0.6039,
+    "50": 0.6814
+   },
+   "stranger_percentiles": {
+    "50": 0.0875,
+    "99": 0.293,
+    "99.9": 0.3606,
+    "99.99": 0.4162,
+    "99.999": 0.4685
+   },
+   "stranger_max": 0.9495,
+   "at_thresholds": [
+    {
+     "threshold": 0.3,
+     "stranger_pairs_accepted": 77679,
+     "stranger_pair_rate": 0.00804,
+     "own_photo_accepted_rate": 0.994,
+     "stranger_named_in_household_of_1": 0.0107,
+     "stranger_named_in_household_of_4": 0.0345,
+     "stranger_named_in_household_of_8": 0.0589
+    },
+    {
+     "threshold": 0.363,
+     "stranger_pairs_accepted": 8845,
+     "stranger_pair_rate": 0.000916,
+     "own_photo_accepted_rate": 0.9881,
+     "stranger_named_in_household_of_1": 0.00119,
+     "stranger_named_in_household_of_4": 0.00417,
+     "stranger_named_in_household_of_8": 0.00774
+    },
+    {
+     "threshold": 0.4,
+     "stranger_pairs_accepted": 1926,
+     "stranger_pair_rate": 0.000199,
+     "own_photo_accepted_rate": 0.9839,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.000595
+    },
+    {
+     "threshold": 0.45,
+     "stranger_pairs_accepted": 207,
+     "stranger_pair_rate": 2.14e-05,
+     "own_photo_accepted_rate": 0.9655,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.5,
+     "stranger_pairs_accepted": 34,
+     "stranger_pair_rate": 3.52e-06,
+     "own_photo_accepted_rate": 0.9333,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.55,
+     "stranger_pairs_accepted": 16,
+     "stranger_pair_rate": 1.66e-06,
+     "own_photo_accepted_rate": 0.8702,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.6,
+     "stranger_pairs_accepted": 12,
+     "stranger_pair_rate": 1.24e-06,
+     "own_photo_accepted_rate": 0.7607,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    }
+   ]
+  },
+  {
+   "probe_scale": 0.6,
+   "probes": 1680,
+   "probes_without_a_detected_face": 0,
+   "stranger_pairs": 9656640,
+   "probe_face_px": {
+    "5": 53.2,
+    "50": 59.4,
+    "95": 66.4
+   },
+   "probe_detector_score_p5": 0.914,
+   "genuine_percentiles": {
+    "1": 0.3582,
+    "5": 0.4718,
+    "10": 0.5323,
+    "25": 0.6026,
+    "50": 0.6825
+   },
+   "stranger_percentiles": {
+    "50": 0.0896,
+    "99": 0.2944,
+    "99.9": 0.362,
+    "99.99": 0.4173,
+    "99.999": 0.4709
+   },
+   "stranger_max": 0.9355,
+   "at_thresholds": [
+    {
+     "threshold": 0.3,
+     "stranger_pairs_accepted": 81407,
+     "stranger_pair_rate": 0.00843,
+     "own_photo_accepted_rate": 0.9952,
+     "stranger_named_in_household_of_1": 0.00952,
+     "stranger_named_in_household_of_4": 0.0393,
+     "stranger_named_in_household_of_8": 0.0619
+    },
+    {
+     "threshold": 0.363,
+     "stranger_pairs_accepted": 9278,
+     "stranger_pair_rate": 0.000961,
+     "own_photo_accepted_rate": 0.9893,
+     "stranger_named_in_household_of_1": 0.000595,
+     "stranger_named_in_household_of_4": 0.00238,
+     "stranger_named_in_household_of_8": 0.00536
+    },
+    {
+     "threshold": 0.4,
+     "stranger_pairs_accepted": 2061,
+     "stranger_pair_rate": 0.000213,
+     "own_photo_accepted_rate": 0.9845,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.000595,
+     "stranger_named_in_household_of_8": 0.000595
+    },
+    {
+     "threshold": 0.45,
+     "stranger_pairs_accepted": 238,
+     "stranger_pair_rate": 2.46e-05,
+     "own_photo_accepted_rate": 0.9649,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.5,
+     "stranger_pairs_accepted": 35,
+     "stranger_pair_rate": 3.62e-06,
+     "own_photo_accepted_rate": 0.9333,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.55,
+     "stranger_pairs_accepted": 17,
+     "stranger_pair_rate": 1.76e-06,
+     "own_photo_accepted_rate": 0.8667,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.6,
+     "stranger_pairs_accepted": 13,
+     "stranger_pair_rate": 1.35e-06,
+     "own_photo_accepted_rate": 0.7548,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    }
+   ]
+  },
+  {
+   "probe_scale": 0.4,
+   "probes": 1680,
+   "probes_without_a_detected_face": 0,
+   "stranger_pairs": 9656640,
+   "probe_face_px": {
+    "5": 36.0,
+    "50": 40.0,
+    "95": 44.5
+   },
+   "probe_detector_score_p5": 0.905,
+   "genuine_percentiles": {
+    "1": 0.3268,
+    "5": 0.4489,
+    "10": 0.5089,
+    "25": 0.588,
+    "50": 0.6629
+   },
+   "stranger_percentiles": {
+    "50": 0.0843,
+    "99": 0.2906,
+    "99.9": 0.3588,
+    "99.99": 0.4151,
+    "99.999": 0.4681
+   },
+   "stranger_max": 0.9059,
+   "at_thresholds": [
+    {
+     "threshold": 0.3,
+     "stranger_pairs_accepted": 72493,
+     "stranger_pair_rate": 0.00751,
+     "own_photo_accepted_rate": 0.994,
+     "stranger_named_in_household_of_1": 0.0101,
+     "stranger_named_in_household_of_4": 0.028,
+     "stranger_named_in_household_of_8": 0.0512
+    },
+    {
+     "threshold": 0.363,
+     "stranger_pairs_accepted": 8147,
+     "stranger_pair_rate": 0.000844,
+     "own_photo_accepted_rate": 0.9857,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.00357,
+     "stranger_named_in_household_of_8": 0.00655
+    },
+    {
+     "threshold": 0.4,
+     "stranger_pairs_accepted": 1841,
+     "stranger_pair_rate": 0.000191,
+     "own_photo_accepted_rate": 0.9714,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.45,
+     "stranger_pairs_accepted": 197,
+     "stranger_pair_rate": 2.04e-05,
+     "own_photo_accepted_rate": 0.9488,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.5,
+     "stranger_pairs_accepted": 32,
+     "stranger_pair_rate": 3.31e-06,
+     "own_photo_accepted_rate": 0.9065,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.55,
+     "stranger_pairs_accepted": 17,
+     "stranger_pair_rate": 1.76e-06,
+     "own_photo_accepted_rate": 0.8369,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.6,
+     "stranger_pairs_accepted": 11,
+     "stranger_pair_rate": 1.14e-06,
+     "own_photo_accepted_rate": 0.7095,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    }
+   ]
+  },
+  {
+   "probe_scale": 0.3,
+   "probes": 1680,
+   "probes_without_a_detected_face": 0,
+   "stranger_pairs": 9656640,
+   "probe_face_px": {
+    "5": 26.7,
+    "50": 29.7,
+    "95": 33.7
+   },
+   "probe_detector_score_p5": 0.889,
+   "genuine_percentiles": {
+    "1": 0.2475,
+    "5": 0.3942,
+    "10": 0.4562,
+    "25": 0.544,
+    "50": 0.6235
+   },
+   "stranger_percentiles": {
+    "50": 0.0734,
+    "99": 0.2823,
+    "99.9": 0.3514,
+    "99.99": 0.4095,
+    "99.999": 0.4611
+   },
+   "stranger_max": 0.8673,
+   "at_thresholds": [
+    {
+     "threshold": 0.3,
+     "stranger_pairs_accepted": 56372,
+     "stranger_pair_rate": 0.00584,
+     "own_photo_accepted_rate": 0.9845,
+     "stranger_named_in_household_of_1": 0.00476,
+     "stranger_named_in_household_of_4": 0.0256,
+     "stranger_named_in_household_of_8": 0.0393
+    },
+    {
+     "threshold": 0.363,
+     "stranger_pairs_accepted": 6241,
+     "stranger_pair_rate": 0.000646,
+     "own_photo_accepted_rate": 0.9667,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.00179,
+     "stranger_named_in_household_of_8": 0.00238
+    },
+    {
+     "threshold": 0.4,
+     "stranger_pairs_accepted": 1419,
+     "stranger_pair_rate": 0.000147,
+     "own_photo_accepted_rate": 0.9476,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.00119
+    },
+    {
+     "threshold": 0.45,
+     "stranger_pairs_accepted": 170,
+     "stranger_pair_rate": 1.76e-05,
+     "own_photo_accepted_rate": 0.9107,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.5,
+     "stranger_pairs_accepted": 31,
+     "stranger_pair_rate": 3.21e-06,
+     "own_photo_accepted_rate": 0.8327,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.55,
+     "stranger_pairs_accepted": 12,
+     "stranger_pair_rate": 1.24e-06,
+     "own_photo_accepted_rate": 0.7333,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.6,
+     "stranger_pairs_accepted": 10,
+     "stranger_pair_rate": 1.04e-06,
+     "own_photo_accepted_rate": 0.5851,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    }
+   ]
+  },
+  {
+   "probe_scale": 0.2,
+   "probes": 1664,
+   "probes_without_a_detected_face": 16,
+   "stranger_pairs": 9564672,
+   "probe_face_px": {
+    "5": 18.2,
+    "50": 20.2,
+    "95": 23.6
+   },
+   "probe_detector_score_p5": 0.817,
+   "genuine_percentiles": {
+    "1": 0.1826,
+    "5": 0.2835,
+    "10": 0.3555,
+    "25": 0.4462,
+    "50": 0.5343
+   },
+   "stranger_percentiles": {
+    "50": 0.0669,
+    "99": 0.2786,
+    "99.9": 0.3483,
+    "99.99": 0.4073,
+    "99.999": 0.4585
+   },
+   "stranger_max": 0.7574,
+   "at_thresholds": [
+    {
+     "threshold": 0.3,
+     "stranger_pairs_accepted": 49949,
+     "stranger_pair_rate": 0.00522,
+     "own_photo_accepted_rate": 0.9417,
+     "stranger_named_in_household_of_1": 0.00421,
+     "stranger_named_in_household_of_4": 0.0234,
+     "stranger_named_in_household_of_8": 0.0312
+    },
+    {
+     "threshold": 0.363,
+     "stranger_pairs_accepted": 5391,
+     "stranger_pair_rate": 0.000564,
+     "own_photo_accepted_rate": 0.8882,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.00361,
+     "stranger_named_in_household_of_8": 0.0024
+    },
+    {
+     "threshold": 0.4,
+     "stranger_pairs_accepted": 1255,
+     "stranger_pair_rate": 0.000131,
+     "own_photo_accepted_rate": 0.8371,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0018,
+     "stranger_named_in_household_of_8": 0.0012
+    },
+    {
+     "threshold": 0.45,
+     "stranger_pairs_accepted": 146,
+     "stranger_pair_rate": 1.53e-05,
+     "own_photo_accepted_rate": 0.7428,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.000601,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.5,
+     "stranger_pairs_accepted": 19,
+     "stranger_pair_rate": 1.99e-06,
+     "own_photo_accepted_rate": 0.6136,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.55,
+     "stranger_pairs_accepted": 7,
+     "stranger_pair_rate": 7.32e-07,
+     "own_photo_accepted_rate": 0.4561,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    },
+    {
+     "threshold": 0.6,
+     "stranger_pairs_accepted": 5,
+     "stranger_pair_rate": 5.23e-07,
+     "own_photo_accepted_rate": 0.2849,
+     "stranger_named_in_household_of_1": 0.0,
+     "stranger_named_in_household_of_4": 0.0,
+     "stranger_named_in_household_of_8": 0.0
+    }
+   ]
+  }
+ ]
+}
