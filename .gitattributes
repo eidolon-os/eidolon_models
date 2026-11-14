@@ -41,3 +41,4 @@ laya/**/tokenizer/tokenizer.json -diff -text
 
 # Delivered once through the component artifact contract, never inside a source archive.
 speaker_verification/** export-ignore
+face_recognition/** export-ignore
